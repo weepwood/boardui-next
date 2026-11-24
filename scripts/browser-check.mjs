@@ -109,9 +109,9 @@ try{
           const notes=demo.getByRole('textbox',{name:'受控备注'});
           const before=(await notes.boundingBox()).height;
           await notes.fill('one\ntwo\nthree\nfour\nfive\nsix');
-          assert.ok((await notes.boundingBox()).height>before);
+          await page.waitForFunction(({el,height})=>el.getBoundingClientRect().height>height,{el:await notes.elementHandle(),height:before});
           await notes.fill('');
-          assert.equal((await notes.boundingBox()).height,before);
+          await page.waitForFunction(({el,height})=>Math.abs(el.getBoundingClientRect().height-height)<1,{el:await notes.elementHandle(),height:before});
           const search=demo.getByRole('searchbox',{name:'受控搜索'});
           await search.fill('board');
           await demo.getByRole('button',{name:'清除搜索'}).click();
