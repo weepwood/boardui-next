@@ -6,7 +6,7 @@
  * 演示内容用 JSX 直接定义，保证可交互。
  */
 import { useState } from "react";
-import { RiAddLine as AddGlyph, RiEditLine as EditGlyph, RiArrowRightLine as ArrowGlyph } from "@remixicon/react";
+import { RiMailLine, RiSearchLine, RiAddLine as AddGlyph, RiEditLine as EditGlyph, RiArrowRightLine as ArrowGlyph } from "@remixicon/react";
 import type { ReactNode } from "react";
 
 import { Button } from "@/app/components/ui/Button";
@@ -188,6 +188,17 @@ function ButtonFamilyDemo() {
   return <div className="flex flex-col gap-3" data-testid="button-family"><CoreButtonGroup aria-label="对齐方式"><ButtonGroupItem selected={selection==="left"} onClick={()=>setSelection("left")}>左</ButtonGroupItem><ButtonGroupItem selected={selection==="center"} onClick={()=>setSelection("center")}>中</ButtonGroupItem><ButtonGroupItem selected={selection==="right"} onClick={()=>setSelection("right")}>右</ButtonGroupItem></CoreButtonGroup><div className="flex items-center gap-2"><CoreIconButton icon={AddGlyph} aria-label="增加计数" onClick={()=>setCount(n=>n+1)}/><CoreCloseButton aria-label="重置计数" onClick={()=>setCount(0)}/><output aria-live="polite">{selection} / {count}</output></div></div>;
 }
 
+function ControlledFormDemo() {
+  const [value,setValue]=useState("");
+  const [notes,setNotes]=useState("");
+  const [search,setSearch]=useState("");
+  return <div data-testid="form-fields" className="flex w-full max-w-sm flex-col gap-4">
+    <Input label="受控邮箱" type="email" value={value} onChange={setValue} isRequired leadingIcon={RiMailLine} description="输入有效邮箱" />
+    <Textarea label="受控备注" value={notes} onChange={setNotes} rows={2} autoResize maxRows={5} maxLength={100} showCount />
+    <SearchField aria-label="受控搜索" value={search} onChange={setSearch} />
+    <output aria-live="polite">{value} / {notes.length} / {search}</output>
+  </div>;
+}
 export const docs: Record<string, Doc> = {
   button: {
     title: "按钮",
@@ -248,59 +259,32 @@ export const docs: Record<string, Doc> = {
 
   input: {
     title: "输入框",
-    description: "单行文本输入。浅灰底无边框，聚焦时切换为白底加描边。",
-    install: "npx boardui@latest add input",
-    preview: (
-      <div className="flex w-full max-w-sm flex-col gap-3">
-        <Input
-          label="电子邮箱"
-          placeholder="输入您的电子邮箱"
-          icon={<Icon name="mail-line" className="size-4" />}
-        />
-        <Input label="搜索" placeholder="搜索组件…" icon={<Icon name="search-line" className="size-4" />} />
-      </div>
-    ),
+    description: "原版 React Aria 输入框：统一 32/36px 灰底容器、标签、辅助说明与语义状态，聚焦时使用内描边。",
+    preview: <div className="flex w-full max-w-sm flex-col gap-3">
+      <Input label="电子邮箱" placeholder="输入您的电子邮箱" type="email" leadingIcon={RiMailLine} isRequired description="请输入有效的邮箱地址"/>
+      <Input label="搜索" placeholder="搜索组件…" leadingIcon={RiSearchLine} size="small"/>
+    </div>,
     demos: [
-      {
-        id: "states",
-        title: "状态",
-        node: (
-          <div className="flex w-full max-w-sm flex-col gap-3">
-            <Input label="默认" placeholder="请输入" />
-            <Input label="禁用" placeholder="不可编辑" isDisabled />
-            <Input
-              label="带说明"
-              placeholder="请输入"
-              description="这行是辅助说明文字"
-            />
-          </div>
-        ),
-      },
+      {id:"states",title:"状态",node:<div className="flex w-full max-w-sm flex-col gap-4"><Input label="默认" placeholder="请输入"/><Input label="禁用" defaultValue="不可编辑" isDisabled/><Input label="错误" placeholder="请输入邮箱" isInvalid invalidMessage="邮箱格式有误"/><Input label="只读" defaultValue="只读内容" isReadOnly/></div>},
+      {id:"controlled",title:"受控表单",node:<ControlledFormDemo/>},
     ],
   },
 
   textarea: {
     title: "多行文本框",
-    description: "多行文本输入，支持自适应高度。",
-    install: "npx boardui@latest add textarea",
-    preview: (
-      <div className="w-full max-w-sm">
-        <Textarea label="备注" placeholder="输入备注…" description="最多 500 字" />
-      </div>
-    ),
-    demos: [],
+    description: "复用 Input 的标签、辅助文字、语义状态与灰底容器。支持自动增高、最大行数、字符统计及原生调整高度。",
+    preview: <div className="w-full max-w-sm"><Textarea label="备注" placeholder="输入备注…" rows={3} maxLength={500} showCount description="填写补充说明"/></div>,
+    demos: [
+      {id:"auto-resize",title:"自动增高",node:<div className="w-full max-w-sm"><Textarea label="自适应文本域" rows={2} autoResize maxRows={5} maxLength={200} showCount placeholder="输入多行文本…"/></div>},
+      {id:"states",title:"状态",node:<div className="flex w-full max-w-sm flex-col gap-4"><Textarea label="禁用" isDisabled defaultValue="不可编辑" rows={2}/><Textarea label="错误" isInvalid hint="请填写备注" rows={2}/></div>},
+    ],
   },
 
   "search-field": {
     title: "搜索框",
-    description: "带清除按钮的搜索输入，遵循 iOS 风格圆角胶囊。",
-    install: "npx boardui@latest add search-field",
-    preview: (
-      <div className="w-full max-w-sm">
-        <SearchField placeholder="搜索组件…" />
-      </div>
-    ),
-    demos: [],
+    description: "沿用 BoardUI 输入框的语义令牌与交互节奏，保留胶囊形态、搜索图标及可访问的清除按钮。此项为本地扩展。",
+    preview: <div className="w-full max-w-sm"><SearchField placeholder="搜索组件…"/></div>,
+    demos: [{id:"states",title:"状态",node:<div className="flex w-full max-w-sm flex-col gap-4"><SearchField aria-label="已有搜索内容" defaultValue="BoardUI"/><SearchField aria-label="禁用搜索" defaultValue="不可编辑" isDisabled/></div>}],
   },
 
   switch: {

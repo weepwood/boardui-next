@@ -21,3 +21,7 @@ PR #6 已通过专项检查，本地 Edge 实测详情页与总览页双主题�
 采用与上游一致的 @remixicon/react 4.9.0，按已使用名称生成静态导入表（避免引入整个库）。旧 Icon name/size/className 保留；两个历史无效日历名称映射到相近原版 glyph，未知名称使用问号 SVG。新增图标名后运行 npm run icons:generate；外部组件可直接传入任意 Remix SVG 组件。方向镜像仅针对导航箭头、侧栏折叠，不翻转商标、媒体或趋势。
 
 Button 按压反馈兼容原生 :active 与 React Aria data-pressed；使用浏览器验证原版约 0.98 缩放及回弹，并尊重 reduced motion。
+
+### 输入控件
+
+Input 与 Textarea 接入固定上游 MIT React Aria 组件，复用 Label/HintText、TextFieldContext 和语义状态。旧 icon/suffix/description 与四行默认 textarea 保留。SearchField 为本地扩展，修复非空清除按钮不可见问题，使用同一套灰底与状态反馈。新增受控输入、说明关联、自动增高和清除搜索专项检查。

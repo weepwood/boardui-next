@@ -312,7 +312,7 @@
       "tier": "free",
       "upstreamStatus": "shipped",
       "localRoute": "/zh-hans/components/input",
-      "implementation": "existing-unverified",
+      "implementation": "ported-unverified",
       "sourcePolicy": "verify-public-source",
       "verification": {
         "visual": "pending",
@@ -321,7 +321,18 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "sourcePaths": [
+        "components/base/input/input.tsx",
+        "components/base/input/label.tsx",
+        "components/base/input/hint-text.tsx"
+      ],
+      "localPaths": [
+        "packages/react/input.tsx",
+        "packages/react/label.tsx",
+        "packages/react/hint-text.tsx"
+      ],
+      "notes": "原版 MIT 组件与视觉状态已接入，兼容既有接口；专项风格、交互及无障碍验收待完成。"
     },
     {
       "slug": "input-otp",
@@ -534,7 +545,7 @@
       "tier": "free",
       "upstreamStatus": "shipped",
       "localRoute": "/zh-hans/components/textarea",
-      "implementation": "existing-unverified",
+      "implementation": "ported-unverified",
       "sourcePolicy": "verify-public-source",
       "verification": {
         "visual": "pending",
@@ -543,7 +554,16 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "sourcePaths": [
+        "components/base/textarea/textarea.tsx"
+      ],
+      "localPaths": [
+        "packages/react/textarea.tsx",
+        "packages/react/label.tsx",
+        "packages/react/hint-text.tsx"
+      ],
+      "notes": "原版 MIT 组件与视觉状态已接入，兼容既有接口；专项风格、交互及无障碍验收待完成。"
     },
     {
       "slug": "tree-view",
@@ -1327,7 +1347,8 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "notes": "本地扩展，复用原版输入语义令牌和 React Aria SearchField；非原版公开源码移植。"
     },
     {
       "slug": "badge",

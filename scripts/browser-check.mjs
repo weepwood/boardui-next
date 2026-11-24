@@ -99,6 +99,36 @@ try{
           await link.waitFor({state:'visible'});
           assert.ok((await link.getAttribute('href')).startsWith(base+'/'));
         }
+        if(route==='/zh-hans/components/input/'){
+          const demo=page.getByTestId('form-fields');
+          const input=demo.getByRole('textbox',{name:'受控邮箱'});
+          await input.fill('demo@example.com');
+          assert.equal(await input.inputValue(),'demo@example.com');
+          assert.equal(await input.getAttribute('aria-required'),'true');
+          assert.ok(await input.getAttribute('aria-describedby'));
+          const notes=demo.getByRole('textbox',{name:'受控备注'});
+          const before=(await notes.boundingBox()).height;
+          await notes.fill('one\ntwo\nthree\nfour\nfive\nsix');
+          assert.ok((await notes.boundingBox()).height>before);
+          await notes.fill('');
+          assert.equal((await notes.boundingBox()).height,before);
+          const search=demo.getByRole('searchbox',{name:'受控搜索'});
+          await search.fill('board');
+          await demo.getByRole('button',{name:'清除搜索'}).click();
+          assert.equal(await search.inputValue(),'');
+          assert.equal(await demo.locator('output').textContent(),'demo@example.com / 0 / ');
+          assert.ok(await page.getByRole('textbox',{name:'禁用',exact:true}).isDisabled());
+          assert.equal(await page.getByRole('textbox',{name:'错误',exact:true}).getAttribute('aria-invalid'),'true');
+        }
+        if(route==='/zh-hans/components/search-field/'){
+          const search=page.getByRole('searchbox',{name:'搜索组件…'});
+          await search.fill('demo');
+          const clear=page.locator('#preview').getByRole('button',{name:'清除搜索'});
+          await clear.waitFor({state:'visible'});
+          await clear.click();
+          assert.equal(await search.inputValue(),'');
+          assert.ok(await clear.isHidden());
+        }
         if(route==='/zh-hans/components/checkbox/'){
           const demo=page.getByTestId('controlled-selection');
           if(await demo.count()){
