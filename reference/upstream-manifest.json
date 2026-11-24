@@ -1,0 +1,1625 @@
+{
+  "upstream": {
+    "repository": "BoardUI/boardui",
+    "commit": "ec5c5eb3e29c2441be63b9422cd54f411ef23466",
+    "catalog": "components/application/docs/components-index.ts",
+    "license": "MIT",
+    "note": "目录的 free/pro 不是单个文件的授权证明；仅允许复用已确认位于公开 MIT 源码树中的文件。"
+  },
+  "components": [
+    {
+      "slug": "color",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/color",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "typography",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/typography",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "announcement",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/announcement",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "avatar",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/avatar",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "breadcrumb",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/breadcrumb",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "button",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/button",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "button-group",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/button-group",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "carousel",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/carousel",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "checkbox",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/checkbox",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "chip",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/chip",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "close-button",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/close-button",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "date-picker",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/date-picker",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "divider",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/divider",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "dropdown",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/dropdown",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "file-upload",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/file-upload",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "icon-button",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/icon-button",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "input",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/input",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "input-otp",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/input-otp",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "link-button",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/link-button",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "notification",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/notification",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "pagination",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/pagination",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "radio",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/radio",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "segmented-control",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/segmented-control",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "select",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/select",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "slider",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/slider",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "social-button",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/social-button",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "switch",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/switch",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "table",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/table",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "tabs",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/tabs",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "textarea",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/textarea",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "tree-view",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/tree-view",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "tooltip",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/tooltip",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "agent-thinking",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/agent-thinking",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "composer-loader",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/composer-loader",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "composer-panel",
+      "tier": "pro",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/composer-panel",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "independent-or-authorized",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "composer-attachments",
+      "tier": "pro",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/composer-attachments",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "independent-or-authorized",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "auth-card",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/auth-card",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "web-search",
+      "tier": "pro",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/web-search",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "independent-or-authorized",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "task-list",
+      "tier": "pro",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/task-list",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "independent-or-authorized",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "agent-limits-card",
+      "tier": "pro",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/agent-limits-card",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "independent-or-authorized",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "questionnaire",
+      "tier": "pro",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/questionnaire",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "independent-or-authorized",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "agent-creator",
+      "tier": "pro",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/agent-creator",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "independent-or-authorized",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "agent-progress",
+      "tier": "pro",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/agent-progress",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "independent-or-authorized",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "calendar",
+      "tier": "pro",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/calendar",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "independent-or-authorized",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "data-grid",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/data-grid",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "data-table",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/data-table",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "notification-center",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/notification-center",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "settings-modal",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/settings-modal",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "sidebar",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/sidebar",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "stat-cards",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/stat-cards",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "revenue-chart-card",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/revenue-chart-card",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "activity-rings-card",
+      "tier": "pro",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/activity-rings-card",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "independent-or-authorized",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "area-chart-card",
+      "tier": "pro",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/area-chart-card",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "independent-or-authorized",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "bar-list-card",
+      "tier": "pro",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/bar-list-card",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "independent-or-authorized",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "combo-chart-card",
+      "tier": "pro",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/combo-chart-card",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "independent-or-authorized",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "contributions-card",
+      "tier": "pro",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/contributions-card",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "independent-or-authorized",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "earnings-chart-card",
+      "tier": "pro",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/earnings-chart-card",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "independent-or-authorized",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "funnel-chart-card",
+      "tier": "pro",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/funnel-chart-card",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "independent-or-authorized",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "heatmap-chart-card",
+      "tier": "pro",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/heatmap-chart-card",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "independent-or-authorized",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "most-active-days-card",
+      "tier": "pro",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/most-active-days-card",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "independent-or-authorized",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "radar-chart-card",
+      "tier": "pro",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/radar-chart-card",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "independent-or-authorized",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "radial-chart-card",
+      "tier": "pro",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/radial-chart-card",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "independent-or-authorized",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "line-chart-card",
+      "tier": "pro",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/line-chart-card",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "independent-or-authorized",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "sankey-chart-card",
+      "tier": "pro",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/sankey-chart-card",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "independent-or-authorized",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "scatter-chart-card",
+      "tier": "pro",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/scatter-chart-card",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "independent-or-authorized",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "sleep-score-card",
+      "tier": "pro",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/sleep-score-card",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "independent-or-authorized",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "stage-bars-card",
+      "tier": "pro",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/stage-bars-card",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "independent-or-authorized",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "steps-card",
+      "tier": "pro",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/components/steps-card",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "independent-or-authorized",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "chat-starter",
+      "tier": "free",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/templates/chat-starter",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "verify-public-source",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "multi-agent-chat",
+      "tier": "pro",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/templates/multi-agent-chat",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "independent-or-authorized",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "ai-chat",
+      "tier": "pro",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/templates/ai-chat",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "independent-or-authorized",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "ai-image-generation",
+      "tier": "pro",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/templates/ai-image-generation",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "independent-or-authorized",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "ai-profile",
+      "tier": "pro",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/templates/ai-profile",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "independent-or-authorized",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "finance-dashboard",
+      "tier": "pro",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/templates/finance",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "independent-or-authorized",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "home-dashboard",
+      "tier": "pro",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/templates/dashboard",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "independent-or-authorized",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "marketing-dashboard",
+      "tier": "pro",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/templates/marketing",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "independent-or-authorized",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "medical-profile",
+      "tier": "pro",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/templates/medical-profile",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "independent-or-authorized",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "project-board",
+      "tier": "pro",
+      "upstreamStatus": "shipped",
+      "localRoute": "/zh-hans/templates/project-board",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "independent-or-authorized",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    }
+  ],
+  "localOnly": [
+    {
+      "slug": "search-field",
+      "localRoute": "/zh-hans/components/search-field",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "review-required",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "badge",
+      "localRoute": "/zh-hans/components/badge",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "review-required",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "progress",
+      "localRoute": "/zh-hans/components/progress",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "review-required",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "spinner",
+      "localRoute": "/zh-hans/components/spinner",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "review-required",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "skeleton",
+      "localRoute": "/zh-hans/components/skeleton",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "review-required",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "accordion",
+      "localRoute": "/zh-hans/components/accordion",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "review-required",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "toggle-button",
+      "localRoute": "/zh-hans/components/toggle-button",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "review-required",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "tag-group",
+      "localRoute": "/zh-hans/components/tag-group",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "review-required",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "modal",
+      "localRoute": "/zh-hans/components/modal",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "review-required",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "popover",
+      "localRoute": "/zh-hans/components/popover",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "review-required",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "counter",
+      "localRoute": "/zh-hans/components/counter",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "review-required",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "toast",
+      "localRoute": "/zh-hans/components/toast",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "review-required",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "drawer",
+      "localRoute": "/zh-hans/components/drawer",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "review-required",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "number-field",
+      "localRoute": "/zh-hans/components/number-field",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "review-required",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "combobox",
+      "localRoute": "/zh-hans/components/combobox",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "review-required",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "meter",
+      "localRoute": "/zh-hans/components/meter",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "review-required",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "time-field",
+      "localRoute": "/zh-hans/components/time-field",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "review-required",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "context-menu",
+      "localRoute": "/zh-hans/components/context-menu",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "review-required",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "date-calendar",
+      "localRoute": "/zh-hans/components/date-calendar",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "review-required",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "color-picker",
+      "localRoute": "/zh-hans/components/color-picker",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "review-required",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "token-input",
+      "localRoute": "/zh-hans/components/token-input",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "review-required",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "command-palette",
+      "localRoute": "/zh-hans/components/command-palette",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "review-required",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "composer",
+      "localRoute": "/zh-hans/components/composer",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "review-required",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "orders-chart-card",
+      "localRoute": "/zh-hans/components/orders-chart-card",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "review-required",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "template:calendar",
+      "localRoute": "/zh-hans/templates/calendar",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "review-required",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    },
+    {
+      "slug": "template:hr",
+      "localRoute": "/zh-hans/templates/hr",
+      "implementation": "existing-unverified",
+      "sourcePolicy": "review-required",
+      "verification": {
+        "visual": "pending",
+        "interaction": "pending",
+        "accessibility": "pending",
+        "api": "pending",
+        "rtl": "pending"
+      },
+      "evidence": []
+    }
+  ]
+}
