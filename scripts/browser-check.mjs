@@ -52,6 +52,26 @@ try{
           await link.waitFor({state:'visible'});
           assert.ok((await link.getAttribute('href')).startsWith(base+'/'));
         }
+        if(route==='/zh-hans/components/checkbox/'){
+          const demo=page.getByTestId('controlled-selection');
+          if(await demo.count()){
+            const checkbox=demo.getByRole('checkbox',{name:'受控复选框'});
+            const toggle=demo.getByRole('switch',{name:'受控开关'});
+            const radioA=demo.getByRole('radio',{name:'选项 A'});
+            const radioB=demo.getByRole('radio',{name:'选项 B'});
+            await checkbox.press('Space');
+            await toggle.press('Space');
+            await radioA.press('ArrowDown');
+            await page.waitForFunction(()=>document.querySelector('[data-testid="controlled-selection"] output')?.textContent==='true / true / b');
+            assert.ok(await checkbox.isChecked(),'controlled checkbox');
+            assert.ok(await toggle.isChecked(),'controlled switch');
+            assert.ok(await radioB.isChecked(),'radio keyboard selection');
+            await checkbox.press('Space');
+            await toggle.press('Space');
+            await radioB.press('ArrowUp');
+            await page.waitForFunction(()=>document.querySelector('[data-testid="controlled-selection"] output')?.textContent==='false / false / a');
+          }
+        }
         let violations=[];
         if(full){
           await page.addScriptTag({path:resolve('node_modules/axe-core/axe.min.js')});

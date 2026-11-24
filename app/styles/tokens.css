@@ -297,8 +297,8 @@
   --color-status-yellow-text: var(--color-yellow-800);
   --color-switch-off-chip-end: var(--color-neutral-100);
   --color-switch-off-chip-start: var(--color-white);
-  --color-switch-on-chip-end: #144be9;
-  --color-switch-on-chip-start: #2673fe;
+  --color-switch-on-chip-end: color-mix(in oklab, var(--color-accent-600) 16%, var(--color-accent-700));
+  --color-switch-on-chip-start: color-mix(in oklab, var(--color-accent-500) 63%, var(--color-accent-600));
   --color-tab-count-selected-background: var(--color-accent-100);
   --color-teal-200: #96f7e4;
   --color-teal-400: #00d3bd;

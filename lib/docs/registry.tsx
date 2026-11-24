@@ -174,6 +174,13 @@ function SelectDemo() {
 
 /* ---------------- 文档注册表 ---------------- */
 
+function ControlledSelectionDemo() {
+  const [checked,setChecked]=useState(false);
+  const [enabled,setEnabled]=useState(false);
+  const [choice,setChoice]=useState("a");
+  return <div className="flex flex-col gap-3" data-testid="controlled-selection"><Checkbox isSelected={checked} onChange={setChecked}>受控复选框</Checkbox><Switch isSelected={enabled} onChange={setEnabled}>受控开关</Switch><RadioGroup value={choice} onChange={setChoice} label="受控单选"><Radio value="a">选项 A</Radio><Radio value="b">选项 B</Radio></RadioGroup><output aria-live="polite">{String(checked)} / {String(enabled)} / {choice}</output></div>;
+}
+
 export const docs: Record<string, Doc> = {
   button: {
     title: "按钮",
@@ -343,7 +350,7 @@ export const docs: Record<string, Doc> = {
       {
         id: "rect",
         title: "矩形",
-        description: "6px 圆角轨道，圆钮 2px 圆角，内芯 1px 圆角。",
+        description: "按尺寸缩放圆角：轨道 3 / 4.5 / 6px，圆钮 1 / 1.5 / 2px。",
         node: (
           <>
             <ShapeColumn label="大" shape="rect" size="lg" />
@@ -374,9 +381,11 @@ export const docs: Record<string, Doc> = {
         <Checkbox defaultSelected>已选中</Checkbox>
         <Checkbox>未选中</Checkbox>
         <Checkbox isIndeterminate>部分选中</Checkbox>
+        <Checkbox size="sm" defaultSelected>小尺寸</Checkbox>
       </>
     ),
     demos: [
+      { id: "controlled", title: "受控状态", node: <ControlledSelectionDemo /> },
       {
         id: "disabled",
         title: "禁用",
@@ -398,7 +407,7 @@ export const docs: Record<string, Doc> = {
       <RadioGroup defaultValue="a" label="选择方案">
         <Radio value="a">方案 A</Radio>
         <Radio value="b">方案 B</Radio>
-        <Radio value="c">方案 C</Radio>
+        <Radio value="c" size="sm">方案 C</Radio>
       </RadioGroup>
     ),
     demos: [],
