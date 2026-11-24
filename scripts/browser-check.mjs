@@ -400,6 +400,17 @@ try{
           await trigger.click();
           const dialog=page.getByRole('dialog',{name:'命令面板'});
           const input=dialog.getByRole('combobox',{name:'搜索命令'});
+          const enabled=dialog.locator('[role="option"][aria-disabled="false"]');
+          await enabled.first().waitFor();
+          const firstId=await enabled.first().getAttribute('id');
+          const lastId=await enabled.last().getAttribute('id');
+          await input.press('ArrowUp');
+          assert.equal(await input.getAttribute('aria-activedescendant'),lastId);
+          await input.press('ArrowDown');
+          assert.equal(await input.getAttribute('aria-activedescendant'),firstId);
+          await input.fill('不存在的匹配项XYZ');
+          assert.equal(await dialog.getByRole('option').count(),0);
+          assert.equal(await input.getAttribute('aria-activedescendant'),null);
           await input.fill('设置');await input.press('Enter');
           await dialog.waitFor({state:'hidden'});
           await page.getByText('上次执行：打开设置',{exact:true}).waitFor();

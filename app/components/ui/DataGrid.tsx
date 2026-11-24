@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { Icon } from "./Icon";
 import { Checkbox } from "./Checkbox";
 import { Badge } from "./Badge";
+import { sortGridRows } from "./grid-sort";
 
 export type Column = {
   id: string;
@@ -42,20 +43,15 @@ export function DataGrid({
 }) {
   const [sort, setSort] = useState<{ col: string; dir: "asc" | "desc" } | null>(null);
   const [inner, setInner] = useState<string[]>([]);
-  const rowIds=new Set(rows.map(r=>r.id));
-  const selected=(selectedIds??inner).filter(id=>rowIds.has(id));
+  const rowIds=useMemo(()=>new Set(rows.map(r=>r.id)),[rows]);
+  const selectedSet=useMemo(()=>new Set((selectedIds??inner).filter(id=>rowIds.has(id))),[selectedIds,inner,rowIds]);
+  const selected=useMemo(()=>[...selectedSet],[selectedSet]);
   const setSelected=(next:string[]|((prev:string[])=>string[]))=>{const ids=typeof next==="function"?next(selected):next;const unique=[...new Set(ids)];if(selectedIds===undefined)setInner(unique);onSelectionChange?.(unique)};
 
   const sorted = useMemo(() => {
     if (!sort) return rows;
-    const copy = [...rows];
-    copy.sort((a, b) => {
-      const accessor=columns.find(c=>c.id===sort.col)?.sortValue;
-      const av=accessor?accessor(a):a.cells[sort.col]; const bv=accessor?accessor(b):b.cells[sort.col];
-      const r=typeof av==="number"&&typeof bv==="number"?av-bv:String(typeof av==="object"?"":av??"").localeCompare(String(typeof bv==="object"?"":bv??""),"zh",{numeric:true});
-      return sort.dir === "asc" ? r : -r;
-    });
-    return copy;
+    const accessor=columns.find(c=>c.id===sort.col)?.sortValue;
+    return sortGridRows(rows,accessor??(row=>row.cells[sort.col]),sort.dir);
   }, [rows, sort, columns]);
 
   const allChecked = selected.length === rows.length && rows.length > 0;
@@ -139,7 +135,7 @@ export function DataGrid({
               </tr>
             ) : (
               sorted.map((r) => {
-                const on = selected.includes(r.id);
+                const on = selectedSet.has(r.id);
                 return (
                   <tr
                     key={r.id}

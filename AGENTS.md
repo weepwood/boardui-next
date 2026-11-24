@@ -57,3 +57,10 @@
 - Noto Sans SC 使用原有固定 Fontsource 版本，构建时通过 subset-font@2.9.0 为静态界面字符生成小型可变字体并拆分互斥 unicode-range；其他字符仍走原完整子集。生成资源不提交、不进入独立组件包。字体许可随站点导出。npm run dev/build/build:pages 自动执行 fonts:prepare；直接使用 Next CLI 前需手动准备。源码字符集/锁文件/脚本签名变化重新生成。
 - 冷启动证据 reference/evidence/cold-start-20261124.json；按钮页字体 953240→368316 bytes、压缩 JS 472105→457770 bytes，目录字体 1074924→383112 bytes。FCP 有波动，非稳定速度结论。Edge 抽样常用/回退字符加载与 400/700 字重宽度一致。复现命令 node scripts/benchmark-cold-start.mjs /tmp/cold.json（需要 Playwright，可设 BROWSER_EXECUTABLE）。
 - 导航/字体类高风险 PR 加入专用 Chromium、Firefox、WebKit 快速竞态/字体回退测试，不扩大全量日常检查。完整发布门禁不变，后续优先真实跨浏览器回归和低性能设备测量。
+
+### 文档渲染与搜索性能专项
+
+- 基于 #25 的字体/文档数据优化分支，模板目录不再引入演示注册表：基础 CatalogCard/ComponentCatalog 与 LiveComponentCatalog 分离，组件目录仍保留完整实时预览。模板实际冷启动压缩 JS 453747→213540 bytes。静态 HTML 引用脚本 gzip 估算 253013 bytes，test:export 新增 350 KiB 门禁；包含 polyfills，区别于浏览器实际下载量。
+- CommandPalette 预计算检索文本，分组线性构造，缓存可选项索引，Memo 结果行与稳定回调，保留全部 109 条结果、键盘循环、无匹配状态和 ARIA。三次本地 Edge 降速测量 20 次方向键的脚本时间中位数 60→44ms，端到端操作时间有波动。复现 node scripts/benchmark-search.mjs /tmp/search.json（Playwright，可设 BROWSER_EXECUTABLE）。
+- DataGrid/DataTable 预计算排序键、复用 Intl.Collator、Set 选择查询；千行测试取值 17130→1000 次，数值/自然排序/稳定性回归通过。未增加虚拟列表，也不把取值次数减少等同整体渲染加速。
+- 已撤销静态 API 表格服务端 slot 候选：压缩 HTML 增大且测量收益不稳定。长文档整体优化与复杂组件首屏初始化仍待继续测量，保留共享文档缓存和原有 API 内容。证据 reference/evidence/docs-render-performance-20261124.json。不要为了拆包或架构指标盲目引入性能回归。

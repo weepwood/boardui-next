@@ -1,0 +1,975 @@
+{
+  "baseline": "e3163bf530746e58d1f51d45ad109486b82b09d0",
+  "environment": "Local Edge Chromium production static export, 1440x1000; route measurements fresh contexts, gzip, 120ms network latency, 750000 bytes/s, 4x CPU slowdown. Search: three fresh contexts, 4x CPU, 20 ArrowDown presses, CDP ScriptDuration delta. Timings have noise. Resource bytes, accessor counts and result counts are deterministic observations of the tested scenarios.",
+  "before": [
+    {
+      "path": "/zh-hans/templates/",
+      "stats": {
+        "css": {
+          "count": 1,
+          "encoded": 59835,
+          "decoded": 277099
+        },
+        "js": {
+          "count": 32,
+          "encoded": 453747,
+          "decoded": 1517832
+        },
+        "font": {
+          "count": 16,
+          "encoded": 363080,
+          "decoded": 363080
+        },
+        "other": {
+          "count": 1,
+          "encoded": 0,
+          "decoded": 0
+        }
+      },
+      "htmlEncoded": 13972,
+      "domContentLoaded": 490,
+      "longTasks": 2,
+      "longTaskMs": 119,
+      "fcp": 516,
+      "fontFiles": [
+        {
+          "name": "noto-sans-sc-latin-wght-normal.47cf7aa1.woff2",
+          "bytes": 24880
+        },
+        {
+          "name": "noto-sans-sc-117-wght-normal.7ccc6c8e.woff2",
+          "bytes": 52228
+        },
+        {
+          "name": "ui-noto-sans-sc-116-wght-normal.9361e6de.woff2",
+          "bytes": 38496
+        },
+        {
+          "name": "jetbrains-mono-latin-wght-normal.a865edea.woff2",
+          "bytes": 40404
+        },
+        {
+          "name": "noto-sans-sc-118-wght-normal.1c305adf.woff2",
+          "bytes": 45992
+        },
+        {
+          "name": "ui-noto-sans-sc-115-wght-normal.86a988bd.woff2",
+          "bytes": 36524
+        },
+        {
+          "name": "ui-noto-sans-sc-119-wght-normal.b85868a5.woff2",
+          "bytes": 3884
+        },
+        {
+          "name": "ui-noto-sans-sc-113-wght-normal.ea761f56.woff2",
+          "bytes": 21228
+        },
+        {
+          "name": "ui-noto-sans-sc-109-wght-normal.8df7e370.woff2",
+          "bytes": 8204
+        },
+        {
+          "name": "ui-noto-sans-sc-103-wght-normal.735fb157.woff2",
+          "bytes": 2596
+        },
+        {
+          "name": "ui-noto-sans-sc-108-wght-normal.4dbd96cd.woff2",
+          "bytes": 10904
+        },
+        {
+          "name": "ui-noto-sans-sc-110-wght-normal.1e103276.woff2",
+          "bytes": 11772
+        },
+        {
+          "name": "ui-noto-sans-sc-112-wght-normal.6fe6dc5e.woff2",
+          "bytes": 19240
+        },
+        {
+          "name": "ui-noto-sans-sc-101-wght-normal.f151b46a.woff2",
+          "bytes": 2524
+        },
+        {
+          "name": "ui-noto-sans-sc-114-wght-normal.03087008.woff2",
+          "bytes": 26764
+        },
+        {
+          "name": "ui-noto-sans-sc-111-wght-normal.cdbacef0.woff2",
+          "bytes": 17440
+        }
+      ]
+    },
+    {
+      "path": "/zh-hans/components/button/",
+      "stats": {
+        "css": {
+          "count": 1,
+          "encoded": 59835,
+          "decoded": 277099
+        },
+        "js": {
+          "count": 32,
+          "encoded": 457770,
+          "decoded": 1530097
+        },
+        "font": {
+          "count": 17,
+          "encoded": 368316,
+          "decoded": 368316
+        }
+      },
+      "htmlEncoded": 18619,
+      "domContentLoaded": 499,
+      "longTasks": 3,
+      "longTaskMs": 184,
+      "fcp": 512,
+      "fontFiles": [
+        {
+          "name": "noto-sans-sc-latin-wght-normal.47cf7aa1.woff2",
+          "bytes": 24880
+        },
+        {
+          "name": "noto-sans-sc-117-wght-normal.7ccc6c8e.woff2",
+          "bytes": 52228
+        },
+        {
+          "name": "ui-noto-sans-sc-116-wght-normal.9361e6de.woff2",
+          "bytes": 38496
+        },
+        {
+          "name": "jetbrains-mono-latin-wght-normal.a865edea.woff2",
+          "bytes": 40404
+        },
+        {
+          "name": "noto-sans-sc-118-wght-normal.1c305adf.woff2",
+          "bytes": 45992
+        },
+        {
+          "name": "ui-noto-sans-sc-115-wght-normal.86a988bd.woff2",
+          "bytes": 36524
+        },
+        {
+          "name": "ui-noto-sans-sc-119-wght-normal.b85868a5.woff2",
+          "bytes": 3884
+        },
+        {
+          "name": "ui-noto-sans-sc-113-wght-normal.ea761f56.woff2",
+          "bytes": 21228
+        },
+        {
+          "name": "ui-noto-sans-sc-109-wght-normal.8df7e370.woff2",
+          "bytes": 8204
+        },
+        {
+          "name": "ui-noto-sans-sc-103-wght-normal.735fb157.woff2",
+          "bytes": 2596
+        },
+        {
+          "name": "ui-noto-sans-sc-108-wght-normal.4dbd96cd.woff2",
+          "bytes": 10904
+        },
+        {
+          "name": "ui-noto-sans-sc-110-wght-normal.1e103276.woff2",
+          "bytes": 11772
+        },
+        {
+          "name": "ui-noto-sans-sc-112-wght-normal.6fe6dc5e.woff2",
+          "bytes": 19240
+        },
+        {
+          "name": "ui-noto-sans-sc-101-wght-normal.f151b46a.woff2",
+          "bytes": 2524
+        },
+        {
+          "name": "ui-noto-sans-sc-114-wght-normal.03087008.woff2",
+          "bytes": 26764
+        },
+        {
+          "name": "ui-noto-sans-sc-111-wght-normal.cdbacef0.woff2",
+          "bytes": 17440
+        },
+        {
+          "name": "ui-noto-sans-sc-107-wght-normal.dac58988.woff2",
+          "bytes": 5236
+        }
+      ]
+    },
+    {
+      "path": "/zh-hans/components/input/",
+      "stats": {
+        "js": {
+          "count": 32,
+          "encoded": 457770,
+          "decoded": 1530097
+        },
+        "css": {
+          "count": 1,
+          "encoded": 59835,
+          "decoded": 277099
+        },
+        "font": {
+          "count": 16,
+          "encoded": 363080,
+          "decoded": 363080
+        }
+      },
+      "htmlEncoded": 19713,
+      "domContentLoaded": 532,
+      "longTasks": 3,
+      "longTaskMs": 257,
+      "fcp": 524,
+      "fontFiles": [
+        {
+          "name": "noto-sans-sc-latin-wght-normal.47cf7aa1.woff2",
+          "bytes": 24880
+        },
+        {
+          "name": "noto-sans-sc-117-wght-normal.7ccc6c8e.woff2",
+          "bytes": 52228
+        },
+        {
+          "name": "ui-noto-sans-sc-116-wght-normal.9361e6de.woff2",
+          "bytes": 38496
+        },
+        {
+          "name": "jetbrains-mono-latin-wght-normal.a865edea.woff2",
+          "bytes": 40404
+        },
+        {
+          "name": "noto-sans-sc-118-wght-normal.1c305adf.woff2",
+          "bytes": 45992
+        },
+        {
+          "name": "ui-noto-sans-sc-115-wght-normal.86a988bd.woff2",
+          "bytes": 36524
+        },
+        {
+          "name": "ui-noto-sans-sc-119-wght-normal.b85868a5.woff2",
+          "bytes": 3884
+        },
+        {
+          "name": "ui-noto-sans-sc-113-wght-normal.ea761f56.woff2",
+          "bytes": 21228
+        },
+        {
+          "name": "ui-noto-sans-sc-109-wght-normal.8df7e370.woff2",
+          "bytes": 8204
+        },
+        {
+          "name": "ui-noto-sans-sc-103-wght-normal.735fb157.woff2",
+          "bytes": 2596
+        },
+        {
+          "name": "ui-noto-sans-sc-108-wght-normal.4dbd96cd.woff2",
+          "bytes": 10904
+        },
+        {
+          "name": "ui-noto-sans-sc-110-wght-normal.1e103276.woff2",
+          "bytes": 11772
+        },
+        {
+          "name": "ui-noto-sans-sc-112-wght-normal.6fe6dc5e.woff2",
+          "bytes": 19240
+        },
+        {
+          "name": "ui-noto-sans-sc-101-wght-normal.f151b46a.woff2",
+          "bytes": 2524
+        },
+        {
+          "name": "ui-noto-sans-sc-114-wght-normal.03087008.woff2",
+          "bytes": 26764
+        },
+        {
+          "name": "ui-noto-sans-sc-111-wght-normal.cdbacef0.woff2",
+          "bytes": 17440
+        }
+      ]
+    },
+    {
+      "path": "/zh-hans/components/data-grid/",
+      "stats": {
+        "css": {
+          "count": 1,
+          "encoded": 59835,
+          "decoded": 277099
+        },
+        "js": {
+          "count": 32,
+          "encoded": 457770,
+          "decoded": 1530097
+        },
+        "font": {
+          "count": 17,
+          "encoded": 367268,
+          "decoded": 367268
+        }
+      },
+      "htmlEncoded": 14885,
+      "domContentLoaded": 505,
+      "longTasks": 2,
+      "longTaskMs": 120,
+      "fcp": 520,
+      "fontFiles": [
+        {
+          "name": "noto-sans-sc-latin-wght-normal.47cf7aa1.woff2",
+          "bytes": 24880
+        },
+        {
+          "name": "noto-sans-sc-117-wght-normal.7ccc6c8e.woff2",
+          "bytes": 52228
+        },
+        {
+          "name": "ui-noto-sans-sc-116-wght-normal.9361e6de.woff2",
+          "bytes": 38496
+        },
+        {
+          "name": "jetbrains-mono-latin-wght-normal.a865edea.woff2",
+          "bytes": 40404
+        },
+        {
+          "name": "noto-sans-sc-118-wght-normal.1c305adf.woff2",
+          "bytes": 45992
+        },
+        {
+          "name": "ui-noto-sans-sc-115-wght-normal.86a988bd.woff2",
+          "bytes": 36524
+        },
+        {
+          "name": "ui-noto-sans-sc-119-wght-normal.b85868a5.woff2",
+          "bytes": 3884
+        },
+        {
+          "name": "ui-noto-sans-sc-113-wght-normal.ea761f56.woff2",
+          "bytes": 21228
+        },
+        {
+          "name": "ui-noto-sans-sc-109-wght-normal.8df7e370.woff2",
+          "bytes": 8204
+        },
+        {
+          "name": "ui-noto-sans-sc-103-wght-normal.735fb157.woff2",
+          "bytes": 2596
+        },
+        {
+          "name": "ui-noto-sans-sc-108-wght-normal.4dbd96cd.woff2",
+          "bytes": 10904
+        },
+        {
+          "name": "ui-noto-sans-sc-110-wght-normal.1e103276.woff2",
+          "bytes": 11772
+        },
+        {
+          "name": "ui-noto-sans-sc-112-wght-normal.6fe6dc5e.woff2",
+          "bytes": 19240
+        },
+        {
+          "name": "ui-noto-sans-sc-101-wght-normal.f151b46a.woff2",
+          "bytes": 2524
+        },
+        {
+          "name": "ui-noto-sans-sc-114-wght-normal.03087008.woff2",
+          "bytes": 26764
+        },
+        {
+          "name": "ui-noto-sans-sc-111-wght-normal.cdbacef0.woff2",
+          "bytes": 17440
+        },
+        {
+          "name": "ui-noto-sans-sc-106-wght-normal.0a31832f.woff2",
+          "bytes": 4188
+        }
+      ]
+    }
+  ],
+  "after": [
+    {
+      "path": "/zh-hans/templates/",
+      "stats": {
+        "css": {
+          "count": 1,
+          "encoded": 59835,
+          "decoded": 277099
+        },
+        "js": {
+          "count": 17,
+          "encoded": 213540,
+          "decoded": 697798
+        },
+        "font": {
+          "count": 16,
+          "encoded": 363080,
+          "decoded": 363080
+        },
+        "other": {
+          "count": 1,
+          "encoded": 0,
+          "decoded": 0
+        }
+      },
+      "htmlEncoded": 13378,
+      "domContentLoaded": 499,
+      "longTasks": 1,
+      "longTaskMs": 55,
+      "fcp": 524,
+      "fontFiles": [
+        {
+          "name": "noto-sans-sc-latin-wght-normal.47cf7aa1.woff2",
+          "bytes": 24880
+        },
+        {
+          "name": "noto-sans-sc-117-wght-normal.7ccc6c8e.woff2",
+          "bytes": 52228
+        },
+        {
+          "name": "ui-noto-sans-sc-116-wght-normal.9361e6de.woff2",
+          "bytes": 38496
+        },
+        {
+          "name": "jetbrains-mono-latin-wght-normal.a865edea.woff2",
+          "bytes": 40404
+        },
+        {
+          "name": "noto-sans-sc-118-wght-normal.1c305adf.woff2",
+          "bytes": 45992
+        },
+        {
+          "name": "ui-noto-sans-sc-115-wght-normal.86a988bd.woff2",
+          "bytes": 36524
+        },
+        {
+          "name": "ui-noto-sans-sc-119-wght-normal.b85868a5.woff2",
+          "bytes": 3884
+        },
+        {
+          "name": "ui-noto-sans-sc-113-wght-normal.ea761f56.woff2",
+          "bytes": 21228
+        },
+        {
+          "name": "ui-noto-sans-sc-109-wght-normal.8df7e370.woff2",
+          "bytes": 8204
+        },
+        {
+          "name": "ui-noto-sans-sc-103-wght-normal.735fb157.woff2",
+          "bytes": 2596
+        },
+        {
+          "name": "ui-noto-sans-sc-108-wght-normal.4dbd96cd.woff2",
+          "bytes": 10904
+        },
+        {
+          "name": "ui-noto-sans-sc-110-wght-normal.1e103276.woff2",
+          "bytes": 11772
+        },
+        {
+          "name": "ui-noto-sans-sc-112-wght-normal.6fe6dc5e.woff2",
+          "bytes": 19240
+        },
+        {
+          "name": "ui-noto-sans-sc-101-wght-normal.f151b46a.woff2",
+          "bytes": 2524
+        },
+        {
+          "name": "ui-noto-sans-sc-114-wght-normal.03087008.woff2",
+          "bytes": 26764
+        },
+        {
+          "name": "ui-noto-sans-sc-111-wght-normal.cdbacef0.woff2",
+          "bytes": 17440
+        }
+      ]
+    },
+    {
+      "path": "/zh-hans/components/button/",
+      "stats": {
+        "css": {
+          "count": 1,
+          "encoded": 59835,
+          "decoded": 277099
+        },
+        "js": {
+          "count": 32,
+          "encoded": 457857,
+          "decoded": 1530661
+        },
+        "font": {
+          "count": 17,
+          "encoded": 368316,
+          "decoded": 368316
+        }
+      },
+      "htmlEncoded": 18618,
+      "domContentLoaded": 553,
+      "longTasks": 2,
+      "longTaskMs": 128,
+      "fcp": 552,
+      "fontFiles": [
+        {
+          "name": "noto-sans-sc-latin-wght-normal.47cf7aa1.woff2",
+          "bytes": 24880
+        },
+        {
+          "name": "noto-sans-sc-117-wght-normal.7ccc6c8e.woff2",
+          "bytes": 52228
+        },
+        {
+          "name": "ui-noto-sans-sc-116-wght-normal.9361e6de.woff2",
+          "bytes": 38496
+        },
+        {
+          "name": "jetbrains-mono-latin-wght-normal.a865edea.woff2",
+          "bytes": 40404
+        },
+        {
+          "name": "noto-sans-sc-118-wght-normal.1c305adf.woff2",
+          "bytes": 45992
+        },
+        {
+          "name": "ui-noto-sans-sc-115-wght-normal.86a988bd.woff2",
+          "bytes": 36524
+        },
+        {
+          "name": "ui-noto-sans-sc-119-wght-normal.b85868a5.woff2",
+          "bytes": 3884
+        },
+        {
+          "name": "ui-noto-sans-sc-113-wght-normal.ea761f56.woff2",
+          "bytes": 21228
+        },
+        {
+          "name": "ui-noto-sans-sc-109-wght-normal.8df7e370.woff2",
+          "bytes": 8204
+        },
+        {
+          "name": "ui-noto-sans-sc-103-wght-normal.735fb157.woff2",
+          "bytes": 2596
+        },
+        {
+          "name": "ui-noto-sans-sc-108-wght-normal.4dbd96cd.woff2",
+          "bytes": 10904
+        },
+        {
+          "name": "ui-noto-sans-sc-110-wght-normal.1e103276.woff2",
+          "bytes": 11772
+        },
+        {
+          "name": "ui-noto-sans-sc-101-wght-normal.f151b46a.woff2",
+          "bytes": 2524
+        },
+        {
+          "name": "ui-noto-sans-sc-112-wght-normal.6fe6dc5e.woff2",
+          "bytes": 19240
+        },
+        {
+          "name": "ui-noto-sans-sc-114-wght-normal.03087008.woff2",
+          "bytes": 26764
+        },
+        {
+          "name": "ui-noto-sans-sc-111-wght-normal.cdbacef0.woff2",
+          "bytes": 17440
+        },
+        {
+          "name": "ui-noto-sans-sc-107-wght-normal.dac58988.woff2",
+          "bytes": 5236
+        }
+      ]
+    },
+    {
+      "path": "/zh-hans/components/input/",
+      "stats": {
+        "css": {
+          "count": 1,
+          "encoded": 59835,
+          "decoded": 277099
+        },
+        "js": {
+          "count": 32,
+          "encoded": 457857,
+          "decoded": 1530661
+        },
+        "font": {
+          "count": 16,
+          "encoded": 363080,
+          "decoded": 363080
+        }
+      },
+      "htmlEncoded": 19712,
+      "domContentLoaded": 526,
+      "longTasks": 3,
+      "longTaskMs": 253,
+      "fcp": 532,
+      "fontFiles": [
+        {
+          "name": "noto-sans-sc-latin-wght-normal.47cf7aa1.woff2",
+          "bytes": 24880
+        },
+        {
+          "name": "noto-sans-sc-117-wght-normal.7ccc6c8e.woff2",
+          "bytes": 52228
+        },
+        {
+          "name": "ui-noto-sans-sc-116-wght-normal.9361e6de.woff2",
+          "bytes": 38496
+        },
+        {
+          "name": "jetbrains-mono-latin-wght-normal.a865edea.woff2",
+          "bytes": 40404
+        },
+        {
+          "name": "noto-sans-sc-118-wght-normal.1c305adf.woff2",
+          "bytes": 45992
+        },
+        {
+          "name": "ui-noto-sans-sc-115-wght-normal.86a988bd.woff2",
+          "bytes": 36524
+        },
+        {
+          "name": "ui-noto-sans-sc-119-wght-normal.b85868a5.woff2",
+          "bytes": 3884
+        },
+        {
+          "name": "ui-noto-sans-sc-113-wght-normal.ea761f56.woff2",
+          "bytes": 21228
+        },
+        {
+          "name": "ui-noto-sans-sc-109-wght-normal.8df7e370.woff2",
+          "bytes": 8204
+        },
+        {
+          "name": "ui-noto-sans-sc-103-wght-normal.735fb157.woff2",
+          "bytes": 2596
+        },
+        {
+          "name": "ui-noto-sans-sc-108-wght-normal.4dbd96cd.woff2",
+          "bytes": 10904
+        },
+        {
+          "name": "ui-noto-sans-sc-110-wght-normal.1e103276.woff2",
+          "bytes": 11772
+        },
+        {
+          "name": "ui-noto-sans-sc-101-wght-normal.f151b46a.woff2",
+          "bytes": 2524
+        },
+        {
+          "name": "ui-noto-sans-sc-112-wght-normal.6fe6dc5e.woff2",
+          "bytes": 19240
+        },
+        {
+          "name": "ui-noto-sans-sc-114-wght-normal.03087008.woff2",
+          "bytes": 26764
+        },
+        {
+          "name": "ui-noto-sans-sc-111-wght-normal.cdbacef0.woff2",
+          "bytes": 17440
+        }
+      ]
+    },
+    {
+      "path": "/zh-hans/components/data-grid/",
+      "stats": {
+        "css": {
+          "count": 1,
+          "encoded": 59835,
+          "decoded": 277099
+        },
+        "js": {
+          "count": 32,
+          "encoded": 457857,
+          "decoded": 1530661
+        },
+        "font": {
+          "count": 17,
+          "encoded": 367268,
+          "decoded": 367268
+        }
+      },
+      "htmlEncoded": 14884,
+      "domContentLoaded": 540,
+      "longTasks": 3,
+      "longTaskMs": 198,
+      "fcp": 560,
+      "fontFiles": [
+        {
+          "name": "noto-sans-sc-latin-wght-normal.47cf7aa1.woff2",
+          "bytes": 24880
+        },
+        {
+          "name": "noto-sans-sc-117-wght-normal.7ccc6c8e.woff2",
+          "bytes": 52228
+        },
+        {
+          "name": "ui-noto-sans-sc-116-wght-normal.9361e6de.woff2",
+          "bytes": 38496
+        },
+        {
+          "name": "jetbrains-mono-latin-wght-normal.a865edea.woff2",
+          "bytes": 40404
+        },
+        {
+          "name": "noto-sans-sc-118-wght-normal.1c305adf.woff2",
+          "bytes": 45992
+        },
+        {
+          "name": "ui-noto-sans-sc-115-wght-normal.86a988bd.woff2",
+          "bytes": 36524
+        },
+        {
+          "name": "ui-noto-sans-sc-119-wght-normal.b85868a5.woff2",
+          "bytes": 3884
+        },
+        {
+          "name": "ui-noto-sans-sc-113-wght-normal.ea761f56.woff2",
+          "bytes": 21228
+        },
+        {
+          "name": "ui-noto-sans-sc-109-wght-normal.8df7e370.woff2",
+          "bytes": 8204
+        },
+        {
+          "name": "ui-noto-sans-sc-103-wght-normal.735fb157.woff2",
+          "bytes": 2596
+        },
+        {
+          "name": "ui-noto-sans-sc-108-wght-normal.4dbd96cd.woff2",
+          "bytes": 10904
+        },
+        {
+          "name": "ui-noto-sans-sc-110-wght-normal.1e103276.woff2",
+          "bytes": 11772
+        },
+        {
+          "name": "ui-noto-sans-sc-112-wght-normal.6fe6dc5e.woff2",
+          "bytes": 19240
+        },
+        {
+          "name": "ui-noto-sans-sc-101-wght-normal.f151b46a.woff2",
+          "bytes": 2524
+        },
+        {
+          "name": "ui-noto-sans-sc-114-wght-normal.03087008.woff2",
+          "bytes": 26764
+        },
+        {
+          "name": "ui-noto-sans-sc-111-wght-normal.cdbacef0.woff2",
+          "bytes": 17440
+        },
+        {
+          "name": "ui-noto-sans-sc-106-wght-normal.0a31832f.woff2",
+          "bytes": 4188
+        }
+      ]
+    }
+  ],
+  "searchBefore": [
+    {
+      "open": 265,
+      "count": 109,
+      "arrows": 275,
+      "scriptMs": 60,
+      "typing": [
+        {
+          "q": "date-picker",
+          "ms": 49,
+          "results": 1
+        },
+        {
+          "q": "button",
+          "ms": 31,
+          "results": 6
+        },
+        {
+          "q": "select",
+          "ms": 30,
+          "results": 1
+        },
+        {
+          "q": "not-a-match",
+          "ms": 31,
+          "results": 0
+        },
+        {
+          "q": "",
+          "ms": 48,
+          "results": 109
+        }
+      ]
+    },
+    {
+      "open": 246,
+      "count": 109,
+      "arrows": 303,
+      "scriptMs": 60,
+      "typing": [
+        {
+          "q": "date-picker",
+          "ms": 34,
+          "results": 1
+        },
+        {
+          "q": "button",
+          "ms": 30,
+          "results": 6
+        },
+        {
+          "q": "select",
+          "ms": 30,
+          "results": 1
+        },
+        {
+          "q": "not-a-match",
+          "ms": 32,
+          "results": 0
+        },
+        {
+          "q": "",
+          "ms": 47,
+          "results": 109
+        }
+      ]
+    },
+    {
+      "open": 232,
+      "count": 109,
+      "arrows": 244,
+      "scriptMs": 51,
+      "typing": [
+        {
+          "q": "date-picker",
+          "ms": 49,
+          "results": 1
+        },
+        {
+          "q": "button",
+          "ms": 31,
+          "results": 6
+        },
+        {
+          "q": "select",
+          "ms": 30,
+          "results": 1
+        },
+        {
+          "q": "not-a-match",
+          "ms": 30,
+          "results": 0
+        },
+        {
+          "q": "",
+          "ms": 47,
+          "results": 109
+        }
+      ]
+    }
+  ],
+  "searchAfter": [
+    {
+      "open": 247,
+      "count": 109,
+      "arrows": 265,
+      "scriptMs": 43,
+      "typing": [
+        {
+          "q": "date-picker",
+          "ms": 33,
+          "results": 1
+        },
+        {
+          "q": "button",
+          "ms": 31,
+          "results": 6
+        },
+        {
+          "q": "select",
+          "ms": 31,
+          "results": 1
+        },
+        {
+          "q": "not-a-match",
+          "ms": 31,
+          "results": 0
+        },
+        {
+          "q": "",
+          "ms": 47,
+          "results": 109
+        }
+      ]
+    },
+    {
+      "open": 249,
+      "count": 109,
+      "arrows": 279,
+      "scriptMs": 44,
+      "typing": [
+        {
+          "q": "date-picker",
+          "ms": 50,
+          "results": 1
+        },
+        {
+          "q": "button",
+          "ms": 31,
+          "results": 6
+        },
+        {
+          "q": "select",
+          "ms": 31,
+          "results": 1
+        },
+        {
+          "q": "not-a-match",
+          "ms": 30,
+          "results": 0
+        },
+        {
+          "q": "",
+          "ms": 47,
+          "results": 109
+        }
+      ]
+    },
+    {
+      "open": 325,
+      "count": 109,
+      "arrows": 298,
+      "scriptMs": 46,
+      "typing": [
+        {
+          "q": "date-picker",
+          "ms": 49,
+          "results": 1
+        },
+        {
+          "q": "button",
+          "ms": 30,
+          "results": 6
+        },
+        {
+          "q": "select",
+          "ms": 30,
+          "results": 1
+        },
+        {
+          "q": "not-a-match",
+          "ms": 31,
+          "results": 0
+        },
+        {
+          "q": "",
+          "ms": 47,
+          "results": 109
+        }
+      ]
+    }
+  ],
+  "gridSort": {
+    "rows": 1000,
+    "beforeAccessorCalls": 17130,
+    "afterAccessorCalls": 1000,
+    "sameResult": true
+  },
+  "templateStaticGzipBudget": {
+    "actual": 253013,
+    "maximum": 358400
+  },
+  "rejectedCandidate": "Server-rendered API table slot increased compressed HTML by 2170 bytes on button and 2725 bytes on input; mixed long-task measurements. Reverted before final route measurements. Shared registry intentionally retained on actual component pages."
+}
