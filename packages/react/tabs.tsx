@@ -79,7 +79,7 @@ export function TabList<T extends object>({ className, ref, ...props }: TabListP
     const measure = () => {
       const selected = el.querySelector<HTMLElement>("[role='tab'][data-selected]");
       if (selected) {
-        setUnderline({ left: selected.offsetLeft, width: selected.offsetWidth });
+        setUnderline(previous=>previous?.left===selected.offsetLeft&&previous.width===selected.offsetWidth?previous:{left:selected.offsetLeft,width:selected.offsetWidth});
       }
     };
     measure();
@@ -139,8 +139,9 @@ export function Tab({ className, children, icon: Icon, count, ref, ...props }: T
       className={(state) =>
         cx(
           "group relative inline-flex cursor-pointer items-center gap-2.5 px-2.5 py-2 whitespace-nowrap",
-          "outline-none transition-colors duration-150 ease",
-          "focus-visible:rounded-sm focus-visible:ring-2 focus-visible:ring-border-focus-ring",
+          "outline-none transition-colors duration-150 ease motion-reduce:transition-none",
+          !state.isDisabled && !state.isSelected && "rounded-sm hover:bg-background-secondary-hover",
+          "focus-visible:rounded-sm focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-border-focus-ring",
           state.isDisabled && "cursor-not-allowed opacity-50",
           typeof className === "function" ? className(state) : className,
         )
@@ -165,7 +166,7 @@ export function Tab({ className, children, icon: Icon, count, ref, ...props }: T
                 "inline-flex items-center justify-center rounded-sm px-1 py-px text-caption-1-medium whitespace-nowrap",
                 isSelected
                   ? "bg-tab-count-selected-background text-accent-600"
-                  : "bg-black/10 text-text-primary opacity-50",
+                  : "bg-background-tertiary-default text-text-secondary",
               )}
             >
               {count}
@@ -188,7 +189,7 @@ export function TabPanel({ className, ref, ...props }: TabPanelProps) {
       {...props}
       className={(state) =>
         cx(
-          "outline-none focus-visible:rounded-sm focus-visible:ring-2 focus-visible:ring-border-focus-ring",
+          "outline-none focus-visible:rounded-sm focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-border-focus-ring",
           typeof className === "function" ? className(state) : className,
         )
       }

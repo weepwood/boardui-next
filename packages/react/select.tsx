@@ -103,6 +103,8 @@ export function Select<T extends object>({
               "text-text-primary",
               "transition-[background-color,border-color,box-shadow] duration-200 ease motion-reduce:transition-none",
               "hover:bg-background-primary-hover hover:border-border-button-hover",
+              "data-[pressed]:bg-background-primary-active data-[pressed]:border-border-button-active",
+              isOpen && "bg-background-primary-hover border-border-button-active",
               "outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-border-focus-ring",
               "disabled:cursor-not-allowed disabled:bg-background-primary-disabled disabled:text-text-tertiary disabled:shadow-none",
               size === "sm"
@@ -165,7 +167,8 @@ export function SelectItem({ className, children, ...props }: SelectItemProps) {
         cx(
           MENU_ITEM,
           size === "sm" ? "px-2 py-1.5 text-body-2-medium" : "text-body-medium",
-          (state.isFocused || state.isSelected) && MENU_ITEM_ACTIVE,
+          !state.isDisabled && (state.isHovered || state.isFocused || state.isSelected) && MENU_ITEM_ACTIVE,
+          !state.isDisabled && state.isFocusVisible && "ring-2 ring-inset ring-border-focus-ring",
           state.isDisabled && "cursor-not-allowed text-text-disabled",
           typeof className === "function" ? className(state) : className,
         )

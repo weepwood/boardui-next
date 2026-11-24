@@ -6,9 +6,9 @@ export const fieldText="min-w-0 flex-1 bg-transparent p-0 text-body-regular text
 export const fieldLabel="text-body-medium text-text-primary";
 export function fieldVisualState({isHovered,isFocusWithin,isDisabled,isInvalid}:FieldVisualState){
  if(isDisabled)return "bg-input-disabled-background text-input-disabled-foreground cursor-not-allowed";
- if(isInvalid)return cx("bg-background-tertiary-error text-foreground-icon-error",isFocusWithin&&"ring-border-error-default");
- if(isFocusWithin)return "ring-border-button-active";
- if(isHovered)return "ring-border-button-hover";
+ if(isInvalid)return cx("bg-background-tertiary-error text-foreground-icon-error","ring-border-error-default",!isFocusWithin&&"ring-1");
+ if(isFocusWithin)return "ring-border-focus-ring";
+ if(isHovered)return "ring-1 ring-border-button-hover";
  return "";
 }
 export function fieldState(state:FieldVisualState){return cx(fieldSurface,fieldVisualState(state));}

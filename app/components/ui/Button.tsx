@@ -45,7 +45,7 @@ const variants: Record<ButtonVariant, string> = {
     "bg-background-primary-default text-text-primary",
     "border border-border-button-default",
     "shadow-[0_1px_2px_0_rgb(0_0_0/0.05)]",
-    "hover:bg-background-primary-hover"
+    "hover:bg-background-primary-hover pressed:bg-background-primary-active hover:border-border-button-hover pressed:border-border-button-active"
   ),
   // 浅色强调
   ghost: cn(
@@ -93,15 +93,15 @@ export function Button({
         "select-none whitespace-nowrap",
         // 全状态过渡，与原站 duration-150 ease 一致
         "transition-[background,background-color,border-color,box-shadow,color,scale]",
-        "duration-150 ease-out",
+        "duration-150 ease-out motion-reduce:transition-none motion-reduce:pressed:scale-100",
         // 按压缩放反馈
         "pressed:scale-[0.98]",
         // 焦点环
-        "outline-none focus-visible:ring-2 focus-visible:ring-accent-500 focus-visible:ring-offset-2 focus-visible:ring-offset-background-full",
+        "outline-none focus-visible:ring-2 focus-visible:ring-border-focus-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background-full",
         // 禁用态
         "disabled:cursor-not-allowed disabled:opacity-100",
         "disabled:bg-none disabled:bg-background-primary-disabled",
-        "disabled:text-text-tertiary disabled:shadow-none",
+        "disabled:text-text-disabled disabled:shadow-none",
         "disabled:border-border-button-default",
         sizes[size],
         variants[variant],
