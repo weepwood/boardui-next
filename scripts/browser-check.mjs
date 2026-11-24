@@ -203,11 +203,15 @@ try{
         if(route==='/zh-hans/components/button/'){
           stage='button: table of contents navigation';
           const toc=page.getByRole('navigation',{name:'在此页面上'});
+          stage='button: TOC API hash';
           await toc.getByRole('link',{name:'组件 API',exact:true}).click();
           await page.waitForFunction(()=>location.hash==='#api');
+          stage='button: TOC API selection';
           await page.waitForFunction(()=>document.querySelector('nav[aria-label="在此页面上"] a[href="#api"]')?.getAttribute('aria-current')==='location');
+          stage='button: TOC preview hash';
           await toc.getByRole('link',{name:'预览',exact:true}).click();
           await page.waitForFunction(()=>location.hash==='#preview');
+          stage='button: TOC preview selection';
           await page.waitForFunction(()=>document.querySelector('nav[aria-label="在此页面上"] a[href="#preview"]')?.getAttribute('aria-current')==='location');
           const api=page.locator('#api');
           await api.getByRole('heading',{name:'组件 API'}).waitFor();

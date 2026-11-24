@@ -140,3 +140,4 @@
 - 四个独立工作区共享单行桌面顶栏，移动端导航换行，复用主题切换组件、语义令牌和焦点环。未重构各模板业务内部。
 - 最终本地 Edge：22/22 页面主题专项、14/14 触摸/交互态、20/20 双主题双视口布局与截图；120 静态 HTML，最大 gzip JS 506471B、HTML 26491B，模板目录 253422B；类型检查通过。初次候选单测通过，最终 CI 尚待执行。证据 reference/evidence/orders-workspace-polish-20261124.json 与六张代表实际截图；复现 node scripts/audit-workspace-visual.mjs [输出目录]（Playwright，可设 BROWSER_EXECUTABLE）。
 - 实际截图仍显示深色次级文字/去年柱对比偏弱；应先测量具体对比度再做令牌兼容治理，不擅自整体改色。正式三浏览器、RTL、人工无障碍和五维门禁不变。
+- #33 run 45412098773：Xvfb Firefox hover 不再报错，浅色 Button 页目录跳转超时。目录显式锚点意图不再被延迟布局的 IntersectionObserver 竞争覆盖，用户主动滚动后恢复跟踪；细分 hash/选中断言，保留测试严格性。新 CI 待验证根因。

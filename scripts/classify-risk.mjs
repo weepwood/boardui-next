@@ -40,7 +40,7 @@ if(matrix){
   for(const e of [...m.components,...m.localOnly])if(selected.has(e.slug)||e.localRoute.includes("/templates/")||e.slug.endsWith("-card")&&/chart|rings|contributions|active-days|stage-bars|steps|sleep-score|bar-list/.test(e.slug))routes.add(e.localRoute+"/");
   routes.add("/zh-hans/rtl/");
 }
-const navRisk=files.some(p=>/^(app\/(layout\.tsx|globals\.css|components\/docs\/(DocsShell|Sidebar|navigation-context|CatalogCard|catalog-observers))|scripts\/(prepare-fonts|check-navigation-compat)|package(-lock)?\.json)/.test(p))||FORCE_RISK==='true';
+const navRisk=files.some(p=>/^(app\/(layout\.tsx|globals\.css|components\/docs\/(DocsShell|Sidebar|TableOfContents|navigation-context|CatalogCard|catalog-observers))|scripts\/(prepare-fonts|check-navigation-compat)|package(-lock)?\.json)/.test(p))||FORCE_RISK==='true';
 const risk=FORCE_RISK==='true'||!BASE_SHA||!HEAD_SHA||risky.length>0;
 console.log(JSON.stringify({risk,files:risky},null,2));
 if(GITHUB_OUTPUT) appendFileSync(GITHUB_OUTPUT,'risk='+risk+'\n'+'navigation='+navRisk+'\n'+'matrix='+matrix+'\n'+'responsive='+responsive+'\n'+'rtlCompat='+rtlCompat+'\n'+'routes='+JSON.stringify([...routes])+'\n');
