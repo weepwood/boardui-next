@@ -171,3 +171,10 @@
 - #37 run 45419854225 通过，Squash 合并 bf0a009；Pages 45420799872 成功，线上 320×420 弹窗边界、Escape 与焦点恢复实际通过，但发现 slot description 未生成 aria-describedby。候选使用稳定 ID 显式关联描述并增加真实 DOM 断言，已本地通过，尚未部署。#38 同步经文件树核对一致的主分支，head 397c26c，需复验 45420833631。
 - ChartArea 使用容器 ResizeObserver 调整绘图宽度、端点保留与刻度抽稀（最终检测文字不重叠），主动选择与临时 hover 分离；触摸点选保留，范围标签改变重置。统一 ChartArea/ChartDataInspector 数据提示位置、键盘选择样式；图例响应式排列与隐藏删除线，保持文字对比。未增加依赖，不更换图表库。
 - 最终本地 Edge 28/28 双主题交互（含 RTL、弹窗描述关联）、16/16 双主题双视口布局和选点、120 静态页与预算、类型、单测全部通过。六张真实截图、reference/evidence/chart-responsive-20261124.json 与 scripts/audit-chart-responsive.mjs。正式 Firefox/WebKit、真机触摸、逐状态无障碍和五维门禁未完成。
+
+### Project Board / AI Chat 交互与视觉专项（2026-11-24）
+
+- #38 run 45420833631 通过并合并 3d321c4，Pages 45421694004 成功，线上 Finance 年度指标说明已核对。#39 run 45421729759 通过并合并 f245a59，Pages 45423533654 成功，线上弹窗 aria-describedby 实际关联、图表真实宽度均经浏览器复验。
+- 看板：同列编辑保持顺序，原生桌面跨列拖放复用同一移动函数，落点高亮与清理；键盘/触摸仍可通过编辑状态移动。不承诺列内排序或触摸拖放。状态点、进度语义、搜索清除、卡片标题换行与列表适配。
+- 聊天：参考固定上游公开 agent-chat、agent-chat-history、agent-chat-message 的独立面板和消息排版，按会话保留内存草稿、搜索历史、区分用户气泡与助手正文、保留多行文本，复用现有 Composer。不增加依赖、模型调用或持久化。
+- 最终 Edge 22/22 页面主题专项（含真实桌面跨列拖放、同列编辑、草稿隔离、RTL）、16/16 双主题双视口布局与操作、类型、单测、120 页导出和预算通过；首次图标检查失败已重新生成并通过。六张实际截图、报告 reference/evidence/board-chat-polish-20261124.json 和 scripts/audit-board-chat-visual.mjs。正式三浏览器、真机触摸、读屏和五维门禁待执行。

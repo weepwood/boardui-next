@@ -1,0 +1,127 @@
+{
+  "base": "f245a59",
+  "browser": "Microsoft Edge (Chromium), macOS",
+  "scope": "看板及聊天文档与独立工作区；双主题双视口布局、编辑移动与会话草稿；桌面跨列拖拽",
+  "visual": [
+    {
+      "theme": "light",
+      "width": 1440,
+      "route": "/zh-hans/templates/project-board/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "route": "/zh-hans/templates/ai-chat/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "route": "/workspace/project-board/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "route": "/workspace/ai-chat/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "route": "/zh-hans/templates/project-board/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "route": "/zh-hans/templates/ai-chat/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "route": "/workspace/project-board/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "route": "/workspace/ai-chat/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "route": "/zh-hans/templates/project-board/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "route": "/zh-hans/templates/ai-chat/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "route": "/workspace/project-board/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "route": "/workspace/ai-chat/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "route": "/zh-hans/templates/project-board/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "route": "/zh-hans/templates/ai-chat/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "route": "/workspace/project-board/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "route": "/workspace/ai-chat/",
+      "status": "passed"
+    }
+  ],
+  "browserTargeted": {
+    "count": 22,
+    "failures": 0
+  },
+  "export": {
+    "pages": 120,
+    "maxGzipJs": 509057,
+    "maxGzipHtml": 26534,
+    "templateCatalogGzipJs": 253837
+  },
+  "screenshots": [
+    "reference/evidence/screenshots/20261124-board-chat-polish/light-1440-_workspace_project-board_.jpg",
+    "reference/evidence/screenshots/20261124-board-chat-polish/dark-1440-_workspace_project-board_.jpg",
+    "reference/evidence/screenshots/20261124-board-chat-polish/light-390-_workspace_project-board_edit.jpg",
+    "reference/evidence/screenshots/20261124-board-chat-polish/light-1440-_workspace_ai-chat_sent.jpg",
+    "reference/evidence/screenshots/20261124-board-chat-polish/dark-1440-_workspace_ai-chat_sent.jpg",
+    "reference/evidence/screenshots/20261124-board-chat-polish/dark-390-_workspace_ai-chat_sent.jpg"
+  ],
+  "limitations": [
+    "原生 HTML 拖放只承诺桌面跨列移动，移动端和键盘通过编辑状态移动；未实现列内拖拽排序",
+    "草稿与会话数据仅保留在当前运行实例，刷新仍恢复演示数据，未接 AI 服务",
+    "截图不是逐像素还原；正式 Firefox/WebKit、读屏和真机触摸待验收",
+    "首次单测因新增拖拽图标注册表过期失败，运行 icons:generate 后重跑通过"
+  ]
+}
