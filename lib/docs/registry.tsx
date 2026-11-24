@@ -22,7 +22,7 @@ import { Switch } from "@/app/components/ui/Switch";
 import { Checkbox } from "@/app/components/ui/Checkbox";
 import { Radio, RadioGroup } from "@/app/components/ui/Radio";
 import { Select } from "@/app/components/ui/Select";
-import { Slider } from "@/app/components/ui/Slider";
+import { Slider, RangeSlider } from "@/app/components/ui/Slider";
 import { Badge } from "@/app/components/ui/Badge";
 import { Avatar } from "@/app/components/ui/Avatar";
 import { Progress } from "@/app/components/ui/Progress";
@@ -411,11 +411,11 @@ export const docs: Record<string, Doc> = {
     demos: [
       {
         id: "range",
-        title: "分段",
+        title: "范围滑块",
         node: (
           <div className="flex w-full max-w-sm flex-col gap-4">
-            <Slider label="亮度" defaultValue={30} />
-            <Slider label="对比度" defaultValue={85} />
+            <RangeSlider label="价格区间" defaultValue={[20,80]} minValue={0} maxValue={100} thumbLabels={["最低值","最高值"]} className="w-full"/>
+            <Slider label="禁用" defaultValue={50} isDisabled/>
           </div>
         ),
       },
@@ -910,7 +910,7 @@ export const docs: Record<string, Doc> = {
 
   "time-field": {
     title: "时间输入框",
-    description: "时/分双格输入，支持方向键步进。",
+    description: "基于 React Aria 时间分段输入，支持受控时分、键盘步进和本地化。",
     install: "npx boardui@latest add time-field",
     preview: <TimeDemo />,
     demos: [],
@@ -949,7 +949,7 @@ export const docs: Record<string, Doc> = {
 
   "date-picker": {
     title: "日期选择器",
-    description: "输入框 + 弹出日历，点击外部或 Esc 关闭。",
+    description: "原版日期弹层，支持月导航、日期编辑、取消和应用。未应用时不修改已选值。",
     install: "npx boardui@latest add date-picker",
     preview: <DatePickerDemo />,
     demos: [],
@@ -957,7 +957,7 @@ export const docs: Record<string, Doc> = {
 
   "color-picker": {
     title: "颜色选择器",
-    description: "预设色板 + HEX 输入，实时预览。",
+    description: "预设色板与 HEX 草稿；只提交有效六位颜色，支持键盘操作。",
     install: "npx boardui@latest add color-picker",
     preview: <ColorDemo />,
     demos: [],
@@ -965,7 +965,7 @@ export const docs: Record<string, Doc> = {
 
   "token-input": {
     title: "Token 输入框",
-    description: "多值标签输入，Enter 添加、Backspace 删除末项、支持格式校验。",
+    description: "多值标签输入，支持 Enter、逗号、批量粘贴、去重与校验；输入法组词期间不会误提交。",
     install: "npx boardui@latest add token-input",
     preview: <TokenDemo />,
     demos: [],
@@ -1597,7 +1597,7 @@ function TimeDemo() {
   const [t, setT] = useState({ hour: 9, minute: 30 });
   return (
     <div className="flex flex-col gap-1">
-      <TimeField label="会议时间" defaultValue={t} onChange={setT} />
+      <TimeField label="会议时间" value={t} onChange={setT} />
       <span className="text-caption-2-regular text-text-tertiary">
         {String(t.hour).padStart(2, "0")}:{String(t.minute).padStart(2, "0")}
       </span>
@@ -1628,7 +1628,7 @@ function ContextMenuDemo() {
 }
 
 function CalendarDemo() {
-  const [d, setD] = useState<Date | undefined>(new Date());
+  const [d, setD] = useState<Date | undefined>(new Date(2026,10,24));
   return (
     <div className="flex flex-wrap items-start gap-3">
       <DateCalendar value={d} onChange={setD} />
@@ -1643,13 +1643,13 @@ function CalendarDemo() {
 }
 
 function DatePickerDemo() {
-  const [d, setD] = useState<Date | undefined>(new Date());
-  return <DatePicker label="开始日期" value={d} onChange={setD} />;
+  const [d, setD] = useState<Date | undefined>(new Date(2026,10,24));
+  return <div className="flex flex-col items-start gap-2"><DatePicker label="开始日期" value={d} onChange={setD}/><output data-testid="date-committed">{formatDate(d)}</output></div>;
 }
 
 function ColorDemo() {
   const [c, setC] = useState("#3080ff");
-  return <ColorPicker label="主题色" value={c} onChange={setC} />;
+  return <div className="flex flex-col gap-2"><ColorPicker label="主题色" value={c} onChange={setC}/><output data-testid="color-committed">{c}</output></div>;
 }
 
 function TokenDemo() {

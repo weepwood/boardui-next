@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useId, useState } from "react";
 import { cn } from "@/lib/utils";
 import { Icon } from "./Icon";
+import { fieldLabel,fieldSurface,fieldText } from "@/packages/react/field-styles";
 
 const PRESETS = [
   "#3080ff", "#155dfc", "#9810fa", "#fb2c36",
@@ -28,15 +29,21 @@ export function ColorPicker({
 }) {
   const [inner, setInner] = useState(defaultValue);
   const color = value ?? inner;
+  const id=useId();
+  const [draft,setDraft]=useState(color.replace(/^#/,"").toUpperCase());
+  useEffect(()=>setDraft(color.replace(/^#/,"").toUpperCase()),[color]);
+  const valid=/^[0-9a-f]{6}$/i.test(draft);
 
   const commit = (hex: string) => {
+    if(!/^#[0-9a-f]{6}$/i.test(hex))return;
+    setDraft(hex.slice(1).toUpperCase());
     if (value === undefined) setInner(hex);
     onChange?.(hex);
   };
 
   return (
     <div className={cn("flex w-full max-w-[220px] flex-col gap-2", className)}>
-      {label && <span className="text-body-2-medium text-text-primary">{label}</span>}
+      {label && <label htmlFor={id} className={fieldLabel}>{label}</label>}
 
       <div className="flex items-center gap-2">
         <span
@@ -45,20 +52,21 @@ export function ColorPicker({
         />
         <div
           className={cn(
-            "flex h-9 flex-1 items-center gap-1 rounded-2lg px-2.5",
-            "border border-border-button-default bg-background-primary-default shadow-xs",
-            "focus-within:ring-2 focus-within:ring-accent-500/30"
+            fieldSurface,"flex-1 focus-within:ring-border-button-active",!valid&&"bg-background-tertiary-error"
           )}
         >
           <span className="text-caption-1-medium text-text-tertiary">#</span>
           <input
-            value={color.replace("#", "").toUpperCase()}
+            id={id} value={draft} aria-invalid={!valid}
             onChange={(e) => {
               const v = e.target.value.replace(/[^0-9a-fA-F]/g, "").slice(0, 6);
-              commit("#" + v.toLowerCase());
+              setDraft(v.toUpperCase());
+              if(v.length===6)commit("#"+v.toLowerCase());
             }}
-            aria-label="颜色十六进制值"
-            className="min-w-0 flex-1 bg-transparent font-mono text-caption-1-medium uppercase text-text-primary outline-none"
+            aria-label={label??"颜色十六进制值"}
+            onBlur={()=>{if(!valid)setDraft(color.slice(1).toUpperCase())}}
+            onKeyDown={e=>{if(e.key==="Escape")setDraft(color.slice(1).toUpperCase())}}
+            className={cn(fieldText,"font-mono uppercase")}
           />
         </div>
       </div>
@@ -68,11 +76,11 @@ export function ColorPicker({
           <button
             key={c}
             type="button"
-            aria-label={c}
+            aria-label={c} aria-pressed={color.toLowerCase()===c}
             onClick={() => commit(c)}
             className={cn(
               "size-6 cursor-pointer rounded-md border transition-[scale,box-shadow] duration-150 ease-out",
-              "hover:scale-110",
+              "hover:scale-105 motion-reduce:transition-none outline-none focus-visible:ring-2 focus-visible:ring-border-focus-ring",
               color.toLowerCase() === c
                 ? "border-accent-500 ring-2 ring-accent-500/30"
                 : "border-border-primary"

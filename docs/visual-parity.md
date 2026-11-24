@@ -33,3 +33,7 @@ Input 与 Textarea 接入固定上游 MIT React Aria 组件，复用 Label/HintT
 ### 第四批：反馈与模态组件
 
 Notification/Announcement 移植上游 MIT 源与 Motion，保留历史调用；Dialog/Drawer/Accordion/Collapsible/Toast 为独立本地扩展，采用原版主题、关闭控件与过渡风格。Drawer 迁移至 React Aria 模态管理；折叠内容关闭时 inert，避免键盘访问不可见内容。新增单选折叠、关闭和焦点测试。Avatar 暂时使用兼容适配器，后续单独迁移。
+
+### 第五批：日期与数值输入
+
+DatePicker、Slider、InputOtp 直接移植公开 MIT 实现；DateCalendar 复用上游 MonthPanel/DayCell，TimeField、NumberField、ColorPicker、TokenInput 为本地扩展。增加共享 field-styles、CalendarDate/Date 转换，保留已有调用方式。日期选择支持草稿/应用/取消、范围约束，滑块增加双端范围，颜色仅提交完整 HEX，标签支持中文逗号与批量粘贴。新增八组专项测试。

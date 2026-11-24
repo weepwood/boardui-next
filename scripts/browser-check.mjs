@@ -99,6 +99,76 @@ try{
           await link.waitFor({state:'visible'});
           assert.ok((await link.getAttribute('href')).startsWith(base+'/'));
         }
+        if(route==='/zh-hans/components/date-picker/'){
+          const trigger=page.locator('#preview').getByRole('button',{name:'开始日期'});
+          const committed=page.getByTestId('date-committed');
+          assert.equal(await committed.textContent(),'2026-11-24');
+          await trigger.click();
+          const dialog=page.getByRole('dialog',{name:'开始日期'});
+          await dialog.waitFor();
+          const date=dialog.getByRole('textbox',{name:'日期'});
+          await date.fill('25/11/2026');await date.press('Tab');
+          await dialog.getByRole('button',{name:'取消'}).click();
+          await dialog.waitFor({state:'hidden'});
+          assert.equal(await committed.textContent(),'2026-11-24');
+          await trigger.click();await dialog.waitFor();
+          await date.fill('25/11/2026');await date.press('Tab');
+          await dialog.getByRole('button',{name:'应用'}).click();
+          await dialog.waitFor({state:'hidden'});
+          assert.equal(await committed.textContent(),'2026-11-25');
+        }
+        if(route==='/zh-hans/components/date-calendar/'){
+          const calendar=page.locator('#preview');
+          const grid=calendar.getByRole('grid');
+          await grid.waitFor();
+          await calendar.getByRole('button',{name:'下个月'}).click();
+          assert.ok((await grid.getAttribute('aria-label')||await grid.textContent()).length>0);
+          await calendar.getByRole('button',{name:'上个月'}).click();
+          await grid.getByRole('button').filter({hasText:/^25$/}).first().click();
+          assert.ok((await calendar.textContent()).includes('2026-11-25'));
+        }
+        if(route==='/zh-hans/components/time-field/'){
+          const segment=page.locator('#preview').getByRole('spinbutton').first();
+          await segment.press('ArrowUp');
+          assert.ok((await page.locator('#preview').textContent()).includes('10:30'));
+        }
+        if(route==='/zh-hans/components/number-field/'){
+          const field=page.locator('#preview').getByRole('spinbutton');
+          await field.press('ArrowUp');
+          assert.equal(await field.inputValue(),'4');
+        }
+        if(route==='/zh-hans/components/slider/'){
+          const thumb=page.locator('#preview').getByRole('slider');
+          await thumb.press('ArrowRight');
+          assert.equal(await thumb.inputValue(),'61');
+          assert.equal(await page.getByRole('slider',{name:'最低值'}).inputValue(),'20');
+          assert.equal(await page.getByRole('slider',{name:'最高值'}).inputValue(),'80');
+        }
+        if(route==='/zh-hans/components/input-otp/'){
+          const demo=page.locator('#preview');
+          const first=demo.getByRole('textbox',{name:'第 1 位',exact:true});
+          await first.fill('123456');
+          await page.waitForFunction(()=>document.querySelector('#preview').textContent.includes('已输入 6 / 6'));
+          assert.equal(await demo.getByRole('textbox',{name:'第 6 位',exact:true}).inputValue(),'6');
+        }
+        if(route==='/zh-hans/components/color-picker/'){
+          const field=page.locator('#preview').getByRole('textbox',{name:'主题色'});
+          const output=page.getByTestId('color-committed');
+          await field.fill('abc');
+          assert.equal(await output.textContent(),'#3080ff');
+          await field.fill('123456');
+          assert.equal(await output.textContent(),'#123456');
+          await page.locator('#preview').getByRole('button',{name:'#fb2c36'}).click();
+          assert.equal(await output.textContent(),'#fb2c36');
+        }
+        if(route==='/zh-hans/components/token-input/'){
+          const field=page.locator('#preview').getByRole('textbox',{name:'收件人'});
+          await field.fill('invalid');await field.press('Enter');
+          assert.equal(await field.getAttribute('aria-invalid'),'true');
+          await field.fill('test@example.com');await field.press('Enter');
+          const remove=page.locator('#preview').getByRole('button',{name:'移除 test@example.com'});
+          await remove.click();await remove.waitFor({state:'hidden'});
+        }
         if(route==='/zh-hans/components/modal/'){
           const trigger=page.getByRole('button',{name:'打开弹窗'});
           await trigger.click();

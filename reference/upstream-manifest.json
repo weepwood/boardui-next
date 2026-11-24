@@ -232,7 +232,7 @@
       "tier": "free",
       "upstreamStatus": "shipped",
       "localRoute": "/zh-hans/components/date-picker",
-      "implementation": "existing-unverified",
+      "implementation": "ported-unverified",
       "sourcePolicy": "verify-public-source",
       "verification": {
         "visual": "pending",
@@ -241,7 +241,16 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "sourcePaths": [
+        "components/base/date-picker/date-picker.tsx",
+        "components/base/date-picker/shared.tsx"
+      ],
+      "localPaths": [
+        "packages/react/date-picker.tsx",
+        "packages/react/calendar-shared.tsx"
+      ],
+      "notes": "已移植固定上游公开 MIT 实现，兼容历史接口；专项验收待完成。"
     },
     {
       "slug": "divider",
@@ -353,7 +362,7 @@
       "tier": "free",
       "upstreamStatus": "shipped",
       "localRoute": "/zh-hans/components/input-otp",
-      "implementation": "existing-unverified",
+      "implementation": "ported-unverified",
       "sourcePolicy": "verify-public-source",
       "verification": {
         "visual": "pending",
@@ -362,7 +371,14 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "sourcePaths": [
+        "components/base/input-otp/input-otp.tsx"
+      ],
+      "localPaths": [
+        "packages/react/input-otp.tsx"
+      ],
+      "notes": "已移植固定上游公开 MIT 实现，兼容历史接口；专项验收待完成。"
     },
     {
       "slug": "link-button",
@@ -493,7 +509,7 @@
       "tier": "free",
       "upstreamStatus": "shipped",
       "localRoute": "/zh-hans/components/slider",
-      "implementation": "existing-unverified",
+      "implementation": "ported-unverified",
       "sourcePolicy": "verify-public-source",
       "verification": {
         "visual": "pending",
@@ -502,7 +518,14 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "sourcePaths": [
+        "components/base/slider/slider.tsx"
+      ],
+      "localPaths": [
+        "packages/react/slider.tsx"
+      ],
+      "notes": "已移植固定上游公开 MIT 实现，兼容历史接口；专项验收待完成。"
     },
     {
       "slug": "social-button",
@@ -1584,7 +1607,8 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "notes": "本地扩展，复用原版日历共享面板或语义表单配方，未宣称直接上游源码移植。"
     },
     {
       "slug": "combobox",
@@ -1627,7 +1651,8 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "notes": "本地扩展，复用原版日历共享面板或语义表单配方，未宣称直接上游源码移植。"
     },
     {
       "slug": "context-menu",
@@ -1655,7 +1680,8 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "notes": "本地扩展，复用原版日历共享面板或语义表单配方，未宣称直接上游源码移植。"
     },
     {
       "slug": "color-picker",
@@ -1669,7 +1695,8 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "notes": "本地扩展，复用原版日历共享面板或语义表单配方，未宣称直接上游源码移植。"
     },
     {
       "slug": "token-input",
@@ -1683,7 +1710,8 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "notes": "本地扩展，复用原版日历共享面板或语义表单配方，未宣称直接上游源码移植。"
     },
     {
       "slug": "command-palette",
