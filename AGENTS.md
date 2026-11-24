@@ -206,3 +206,5 @@
 
 - 集中 PR #43 继续使用同一分支。e51f61b 日常 run 45437113841 全部通过；正式 run 45437101528 构建、Chromium/Firefox/WebKit、报告通过，各 238/238 共 714/714，release-gate 仅逐组件五维未闭合。下载原始报告及正式汇总至 reference/evidence/formal-45437101528，证据仍绑定 e51f61b。
 - 同 PR 新修复 DataGrid/DataTable 键盘滚动区域、排序焦点、空表禁用全选、清除选择恢复焦点及数量播报；ChartArea/ChartDataInspector 分离视觉悬停和稳定主动选择 aria-live。无新依赖/公共接口变更。本地 Edge 32/32 页面专项、28/28 响应式和局部 axe、类型、单测、120 HTML 导出及预算通过；报告 reference/evidence/consolidated-data-chart-20261125.json。未进行人工读屏，不自动标记正式五维通过。
+
+- 集中 PR #43 最新 821784d 日常 45439560094 通过，正式 45439538959 构建成功但三浏览器仍在执行（本次检查时）。新候选增加显式首次加载 URL ?audit-direction=rtl，真实 Arabic I18nProvider 和根 dir 一致；正常中文仍 LTR。新增全 104 条目 RTL 初始态双配置审计；首次 122/208，86 个窄屏 scrollable-region-focusable，定位到公共安装/代码块及营销数据表。集中补齐 tabindex、名称、焦点环，代码保持 LTR；最终 208/208（1440 浅色、390 深色）及普通 LTR 专项 24/24。色板恢复 Tailwind 动态引用所需 primitive，实际 4 配置×69 色阶有效，类型、单测、120 HTML 导出及资源预算通过。报告 reference/evidence/consolidated-rtl-20261125.json，8 张真实截图。加入正式 Chromium 审计；新增 report-acceptance-gaps.mjs 生成逐维缺口，不变更任何 verification 状态，不将初始态自动化等同人工完整五维。

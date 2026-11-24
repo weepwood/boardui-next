@@ -1,0 +1,4346 @@
+{
+  "base": "821784d3aa9c8d0a9b41825dd60022116807d64c",
+  "scope": "explicit RTL audit mode, initial-state layout and axe; not full keyboard, translation or manual screen-reader acceptance",
+  "profiles": [
+    {
+      "theme": "light",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "results": [
+    {
+      "slug": "typography",
+      "route": "/zh-hans/components/typography/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "color",
+      "route": "/zh-hans/components/color/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "swatches": 69,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "avatar",
+      "route": "/zh-hans/components/avatar/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "announcement",
+      "route": "/zh-hans/components/announcement/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "button-group",
+      "route": "/zh-hans/components/button-group/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "carousel",
+      "route": "/zh-hans/components/carousel/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "breadcrumb",
+      "route": "/zh-hans/components/breadcrumb/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "button",
+      "route": "/zh-hans/components/button/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "file": "light-1440-button.png",
+      "errors": []
+    },
+    {
+      "slug": "checkbox",
+      "route": "/zh-hans/components/checkbox/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "chip",
+      "route": "/zh-hans/components/chip/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "close-button",
+      "route": "/zh-hans/components/close-button/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "date-picker",
+      "route": "/zh-hans/components/date-picker/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "divider",
+      "route": "/zh-hans/components/divider/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "file-upload",
+      "route": "/zh-hans/components/file-upload/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "dropdown",
+      "route": "/zh-hans/components/dropdown/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "icon-button",
+      "route": "/zh-hans/components/icon-button/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "notification",
+      "route": "/zh-hans/components/notification/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "input-otp",
+      "route": "/zh-hans/components/input-otp/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "link-button",
+      "route": "/zh-hans/components/link-button/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "input",
+      "route": "/zh-hans/components/input/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "file": "light-1440-input.png",
+      "errors": []
+    },
+    {
+      "slug": "pagination",
+      "route": "/zh-hans/components/pagination/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "segmented-control",
+      "route": "/zh-hans/components/segmented-control/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "radio",
+      "route": "/zh-hans/components/radio/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "select",
+      "route": "/zh-hans/components/select/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "file": "light-1440-select.png",
+      "errors": []
+    },
+    {
+      "slug": "social-button",
+      "route": "/zh-hans/components/social-button/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "slider",
+      "route": "/zh-hans/components/slider/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "switch",
+      "route": "/zh-hans/components/switch/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "table",
+      "route": "/zh-hans/components/table/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "tabs",
+      "route": "/zh-hans/components/tabs/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "textarea",
+      "route": "/zh-hans/components/textarea/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "tooltip",
+      "route": "/zh-hans/components/tooltip/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "tree-view",
+      "route": "/zh-hans/components/tree-view/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "file": "light-1440-tree-view.png",
+      "errors": []
+    },
+    {
+      "slug": "composer-panel",
+      "route": "/zh-hans/components/composer-panel/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "composer-attachments",
+      "route": "/zh-hans/components/composer-attachments/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "composer-loader",
+      "route": "/zh-hans/components/composer-loader/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "agent-thinking",
+      "route": "/zh-hans/components/agent-thinking/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "auth-card",
+      "route": "/zh-hans/components/auth-card/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "web-search",
+      "route": "/zh-hans/components/web-search/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "agent-limits-card",
+      "route": "/zh-hans/components/agent-limits-card/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "task-list",
+      "route": "/zh-hans/components/task-list/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "questionnaire",
+      "route": "/zh-hans/components/questionnaire/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "agent-progress",
+      "route": "/zh-hans/components/agent-progress/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "agent-creator",
+      "route": "/zh-hans/components/agent-creator/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "calendar",
+      "route": "/zh-hans/components/calendar/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "notification-center",
+      "route": "/zh-hans/components/notification-center/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "data-table",
+      "route": "/zh-hans/components/data-table/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "settings-modal",
+      "route": "/zh-hans/components/settings-modal/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "data-grid",
+      "route": "/zh-hans/components/data-grid/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "file": "light-1440-data-grid.png",
+      "errors": []
+    },
+    {
+      "slug": "revenue-chart-card",
+      "route": "/zh-hans/components/revenue-chart-card/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "sidebar",
+      "route": "/zh-hans/components/sidebar/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "activity-rings-card",
+      "route": "/zh-hans/components/activity-rings-card/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "stat-cards",
+      "route": "/zh-hans/components/stat-cards/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "bar-list-card",
+      "route": "/zh-hans/components/bar-list-card/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "combo-chart-card",
+      "route": "/zh-hans/components/combo-chart-card/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "contributions-card",
+      "route": "/zh-hans/components/contributions-card/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "area-chart-card",
+      "route": "/zh-hans/components/area-chart-card/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "file": "light-1440-area-chart-card.png",
+      "errors": []
+    },
+    {
+      "slug": "earnings-chart-card",
+      "route": "/zh-hans/components/earnings-chart-card/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "funnel-chart-card",
+      "route": "/zh-hans/components/funnel-chart-card/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "most-active-days-card",
+      "route": "/zh-hans/components/most-active-days-card/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "heatmap-chart-card",
+      "route": "/zh-hans/components/heatmap-chart-card/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "radar-chart-card",
+      "route": "/zh-hans/components/radar-chart-card/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "line-chart-card",
+      "route": "/zh-hans/components/line-chart-card/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "radial-chart-card",
+      "route": "/zh-hans/components/radial-chart-card/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "sankey-chart-card",
+      "route": "/zh-hans/components/sankey-chart-card/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "sleep-score-card",
+      "route": "/zh-hans/components/sleep-score-card/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "stage-bars-card",
+      "route": "/zh-hans/components/stage-bars-card/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "scatter-chart-card",
+      "route": "/zh-hans/components/scatter-chart-card/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "steps-card",
+      "route": "/zh-hans/components/steps-card/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "multi-agent-chat",
+      "route": "/zh-hans/templates/multi-agent-chat/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 1076,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "chat-starter",
+      "route": "/zh-hans/templates/chat-starter/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 1076,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "ai-image-generation",
+      "route": "/zh-hans/templates/ai-image-generation/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 1076,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "ai-chat",
+      "route": "/zh-hans/templates/ai-chat/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 1076,
+      "violations": [],
+      "status": "passed",
+      "file": "light-1440-ai-chat.png",
+      "errors": []
+    },
+    {
+      "slug": "ai-profile",
+      "route": "/zh-hans/templates/ai-profile/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 1076,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "marketing-dashboard",
+      "route": "/zh-hans/templates/marketing/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 1076,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "finance-dashboard",
+      "route": "/zh-hans/templates/finance/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 1076,
+      "violations": [],
+      "status": "passed",
+      "file": "light-1440-finance-dashboard.png",
+      "errors": []
+    },
+    {
+      "slug": "home-dashboard",
+      "route": "/zh-hans/templates/dashboard/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 1076,
+      "violations": [],
+      "status": "passed",
+      "file": "light-1440-home-dashboard.png",
+      "errors": []
+    },
+    {
+      "slug": "medical-profile",
+      "route": "/zh-hans/templates/medical-profile/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 1076,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "search-field",
+      "route": "/zh-hans/components/search-field/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "badge",
+      "route": "/zh-hans/components/badge/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "project-board",
+      "route": "/zh-hans/templates/project-board/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 1076,
+      "violations": [],
+      "status": "passed",
+      "file": "light-1440-project-board.png",
+      "errors": []
+    },
+    {
+      "slug": "progress",
+      "route": "/zh-hans/components/progress/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "skeleton",
+      "route": "/zh-hans/components/skeleton/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "spinner",
+      "route": "/zh-hans/components/spinner/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "accordion",
+      "route": "/zh-hans/components/accordion/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "toggle-button",
+      "route": "/zh-hans/components/toggle-button/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "tag-group",
+      "route": "/zh-hans/components/tag-group/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "popover",
+      "route": "/zh-hans/components/popover/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "modal",
+      "route": "/zh-hans/components/modal/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "counter",
+      "route": "/zh-hans/components/counter/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "toast",
+      "route": "/zh-hans/components/toast/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "drawer",
+      "route": "/zh-hans/components/drawer/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "number-field",
+      "route": "/zh-hans/components/number-field/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "time-field",
+      "route": "/zh-hans/components/time-field/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "combobox",
+      "route": "/zh-hans/components/combobox/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "meter",
+      "route": "/zh-hans/components/meter/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "context-menu",
+      "route": "/zh-hans/components/context-menu/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "color-picker",
+      "route": "/zh-hans/components/color-picker/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "token-input",
+      "route": "/zh-hans/components/token-input/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "command-palette",
+      "route": "/zh-hans/components/command-palette/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "date-calendar",
+      "route": "/zh-hans/components/date-calendar/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "orders-chart-card",
+      "route": "/zh-hans/components/orders-chart-card/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "template:calendar",
+      "route": "/zh-hans/templates/calendar/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 1076,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "composer",
+      "route": "/zh-hans/components/composer/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 808,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "template:hr",
+      "route": "/zh-hans/templates/hr/",
+      "theme": "light",
+      "width": 1440,
+      "height": 1000,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 1076,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "color",
+      "route": "/zh-hans/components/color/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "swatches": 69,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "typography",
+      "route": "/zh-hans/components/typography/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "avatar",
+      "route": "/zh-hans/components/avatar/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "announcement",
+      "route": "/zh-hans/components/announcement/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "breadcrumb",
+      "route": "/zh-hans/components/breadcrumb/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "carousel",
+      "route": "/zh-hans/components/carousel/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "button-group",
+      "route": "/zh-hans/components/button-group/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "button",
+      "route": "/zh-hans/components/button/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "file": "dark-390-button.png",
+      "errors": []
+    },
+    {
+      "slug": "checkbox",
+      "route": "/zh-hans/components/checkbox/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "chip",
+      "route": "/zh-hans/components/chip/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "close-button",
+      "route": "/zh-hans/components/close-button/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "date-picker",
+      "route": "/zh-hans/components/date-picker/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "divider",
+      "route": "/zh-hans/components/divider/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "file-upload",
+      "route": "/zh-hans/components/file-upload/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "dropdown",
+      "route": "/zh-hans/components/dropdown/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "icon-button",
+      "route": "/zh-hans/components/icon-button/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "input-otp",
+      "route": "/zh-hans/components/input-otp/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "notification",
+      "route": "/zh-hans/components/notification/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "link-button",
+      "route": "/zh-hans/components/link-button/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "input",
+      "route": "/zh-hans/components/input/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "file": "dark-390-input.png",
+      "errors": []
+    },
+    {
+      "slug": "pagination",
+      "route": "/zh-hans/components/pagination/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "segmented-control",
+      "route": "/zh-hans/components/segmented-control/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "radio",
+      "route": "/zh-hans/components/radio/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "select",
+      "route": "/zh-hans/components/select/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "file": "dark-390-select.png",
+      "errors": []
+    },
+    {
+      "slug": "social-button",
+      "route": "/zh-hans/components/social-button/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "slider",
+      "route": "/zh-hans/components/slider/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "switch",
+      "route": "/zh-hans/components/switch/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "table",
+      "route": "/zh-hans/components/table/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "tabs",
+      "route": "/zh-hans/components/tabs/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "textarea",
+      "route": "/zh-hans/components/textarea/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "tooltip",
+      "route": "/zh-hans/components/tooltip/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "tree-view",
+      "route": "/zh-hans/components/tree-view/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "file": "dark-390-tree-view.png",
+      "errors": []
+    },
+    {
+      "slug": "agent-thinking",
+      "route": "/zh-hans/components/agent-thinking/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "composer-loader",
+      "route": "/zh-hans/components/composer-loader/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "composer-attachments",
+      "route": "/zh-hans/components/composer-attachments/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "composer-panel",
+      "route": "/zh-hans/components/composer-panel/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "auth-card",
+      "route": "/zh-hans/components/auth-card/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "web-search",
+      "route": "/zh-hans/components/web-search/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "task-list",
+      "route": "/zh-hans/components/task-list/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "agent-limits-card",
+      "route": "/zh-hans/components/agent-limits-card/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "questionnaire",
+      "route": "/zh-hans/components/questionnaire/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "agent-creator",
+      "route": "/zh-hans/components/agent-creator/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "agent-progress",
+      "route": "/zh-hans/components/agent-progress/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "calendar",
+      "route": "/zh-hans/components/calendar/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "data-table",
+      "route": "/zh-hans/components/data-table/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "notification-center",
+      "route": "/zh-hans/components/notification-center/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "settings-modal",
+      "route": "/zh-hans/components/settings-modal/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "data-grid",
+      "route": "/zh-hans/components/data-grid/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "file": "dark-390-data-grid.png",
+      "errors": []
+    },
+    {
+      "slug": "revenue-chart-card",
+      "route": "/zh-hans/components/revenue-chart-card/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "stat-cards",
+      "route": "/zh-hans/components/stat-cards/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "sidebar",
+      "route": "/zh-hans/components/sidebar/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "activity-rings-card",
+      "route": "/zh-hans/components/activity-rings-card/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "bar-list-card",
+      "route": "/zh-hans/components/bar-list-card/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "combo-chart-card",
+      "route": "/zh-hans/components/combo-chart-card/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "contributions-card",
+      "route": "/zh-hans/components/contributions-card/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "area-chart-card",
+      "route": "/zh-hans/components/area-chart-card/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "file": "dark-390-area-chart-card.png",
+      "errors": []
+    },
+    {
+      "slug": "earnings-chart-card",
+      "route": "/zh-hans/components/earnings-chart-card/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "funnel-chart-card",
+      "route": "/zh-hans/components/funnel-chart-card/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "most-active-days-card",
+      "route": "/zh-hans/components/most-active-days-card/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "heatmap-chart-card",
+      "route": "/zh-hans/components/heatmap-chart-card/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "radar-chart-card",
+      "route": "/zh-hans/components/radar-chart-card/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "radial-chart-card",
+      "route": "/zh-hans/components/radial-chart-card/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "line-chart-card",
+      "route": "/zh-hans/components/line-chart-card/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "sankey-chart-card",
+      "route": "/zh-hans/components/sankey-chart-card/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "stage-bars-card",
+      "route": "/zh-hans/components/stage-bars-card/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "sleep-score-card",
+      "route": "/zh-hans/components/sleep-score-card/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "scatter-chart-card",
+      "route": "/zh-hans/components/scatter-chart-card/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "steps-card",
+      "route": "/zh-hans/components/steps-card/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "multi-agent-chat",
+      "route": "/zh-hans/templates/multi-agent-chat/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "chat-starter",
+      "route": "/zh-hans/templates/chat-starter/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "ai-image-generation",
+      "route": "/zh-hans/templates/ai-image-generation/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "ai-chat",
+      "route": "/zh-hans/templates/ai-chat/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "file": "dark-390-ai-chat.png",
+      "errors": []
+    },
+    {
+      "slug": "ai-profile",
+      "route": "/zh-hans/templates/ai-profile/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "marketing-dashboard",
+      "route": "/zh-hans/templates/marketing/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "finance-dashboard",
+      "route": "/zh-hans/templates/finance/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "file": "dark-390-finance-dashboard.png",
+      "errors": []
+    },
+    {
+      "slug": "home-dashboard",
+      "route": "/zh-hans/templates/dashboard/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "file": "dark-390-home-dashboard.png",
+      "errors": []
+    },
+    {
+      "slug": "medical-profile",
+      "route": "/zh-hans/templates/medical-profile/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "search-field",
+      "route": "/zh-hans/components/search-field/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "badge",
+      "route": "/zh-hans/components/badge/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "project-board",
+      "route": "/zh-hans/templates/project-board/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "file": "dark-390-project-board.png",
+      "errors": []
+    },
+    {
+      "slug": "progress",
+      "route": "/zh-hans/components/progress/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "spinner",
+      "route": "/zh-hans/components/spinner/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "skeleton",
+      "route": "/zh-hans/components/skeleton/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "accordion",
+      "route": "/zh-hans/components/accordion/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "toggle-button",
+      "route": "/zh-hans/components/toggle-button/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "tag-group",
+      "route": "/zh-hans/components/tag-group/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "modal",
+      "route": "/zh-hans/components/modal/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "popover",
+      "route": "/zh-hans/components/popover/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "counter",
+      "route": "/zh-hans/components/counter/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "drawer",
+      "route": "/zh-hans/components/drawer/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "toast",
+      "route": "/zh-hans/components/toast/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "number-field",
+      "route": "/zh-hans/components/number-field/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "combobox",
+      "route": "/zh-hans/components/combobox/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "meter",
+      "route": "/zh-hans/components/meter/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "context-menu",
+      "route": "/zh-hans/components/context-menu/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "time-field",
+      "route": "/zh-hans/components/time-field/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "token-input",
+      "route": "/zh-hans/components/token-input/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "color-picker",
+      "route": "/zh-hans/components/color-picker/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "command-palette",
+      "route": "/zh-hans/components/command-palette/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "date-calendar",
+      "route": "/zh-hans/components/date-calendar/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "template:hr",
+      "route": "/zh-hans/templates/hr/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "composer",
+      "route": "/zh-hans/components/composer/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "orders-chart-card",
+      "route": "/zh-hans/components/orders-chart-card/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "template:calendar",
+      "route": "/zh-hans/templates/calendar/",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "documentDirection": "rtl",
+      "previewDirection": "rtl",
+      "overflow": false,
+      "previewWidth": 342,
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    }
+  ],
+  "initialFailures": {
+    "count": 86,
+    "rule": "scrollable-region-focusable",
+    "routes": [
+      "typography",
+      "color",
+      "announcement",
+      "avatar",
+      "breadcrumb",
+      "carousel",
+      "checkbox",
+      "chip",
+      "date-picker",
+      "divider",
+      "file-upload",
+      "dropdown",
+      "input-otp",
+      "link-button",
+      "notification",
+      "pagination",
+      "radio",
+      "segmented-control",
+      "select",
+      "slider",
+      "social-button",
+      "switch",
+      "table",
+      "tabs",
+      "tree-view",
+      "tooltip",
+      "composer-loader",
+      "composer-panel",
+      "agent-thinking",
+      "composer-attachments",
+      "auth-card",
+      "task-list",
+      "web-search",
+      "agent-limits-card",
+      "questionnaire",
+      "agent-creator",
+      "agent-progress",
+      "calendar",
+      "data-grid",
+      "data-table",
+      "settings-modal",
+      "notification-center",
+      "sidebar",
+      "stat-cards",
+      "activity-rings-card",
+      "revenue-chart-card",
+      "area-chart-card",
+      "bar-list-card",
+      "combo-chart-card",
+      "contributions-card",
+      "earnings-chart-card",
+      "funnel-chart-card",
+      "heatmap-chart-card",
+      "most-active-days-card",
+      "radar-chart-card",
+      "line-chart-card",
+      "radial-chart-card",
+      "sankey-chart-card",
+      "scatter-chart-card",
+      "sleep-score-card",
+      "stage-bars-card",
+      "steps-card",
+      "marketing-dashboard",
+      "badge",
+      "spinner",
+      "skeleton",
+      "progress",
+      "accordion",
+      "tag-group",
+      "toggle-button",
+      "modal",
+      "popover",
+      "counter",
+      "toast",
+      "drawer",
+      "number-field",
+      "meter",
+      "time-field",
+      "combobox",
+      "context-menu",
+      "token-input",
+      "color-picker",
+      "command-palette",
+      "date-calendar",
+      "orders-chart-card",
+      "composer"
+    ]
+  },
+  "ltrTargeted": {
+    "browser": "chromium",
+    "results": [
+      {
+        "theme": "light",
+        "route": "/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/button/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/select/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/modal/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/templates/dashboard/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/color/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/typography/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/templates/marketing/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/rtl/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/workspace/dashboard/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/workspace/ai-chat/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/button/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/select/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/modal/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/templates/dashboard/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/color/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/typography/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/templates/marketing/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/rtl/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/workspace/dashboard/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/workspace/ai-chat/",
+        "violations": [],
+        "status": "checked"
+      }
+    ],
+    "errors": []
+  },
+  "paletteProfiles": [
+    {
+      "theme": "light",
+      "dir": "ltr",
+      "swatches": [
+        {
+          "token": "--color-accent-50",
+          "background": "oklch(0.97 0.014 254.604)"
+        },
+        {
+          "token": "--color-accent-100",
+          "background": "oklch(0.932 0.032 255.585)"
+        },
+        {
+          "token": "--color-accent-200",
+          "background": "oklch(0.882 0.059 254.128)"
+        },
+        {
+          "token": "--color-accent-300",
+          "background": "oklch(0.809 0.105 251.813)"
+        },
+        {
+          "token": "--color-accent-400",
+          "background": "rgb(51, 146, 255)"
+        },
+        {
+          "token": "--color-accent-500",
+          "background": "oklch(0.623 0.214 259.815)"
+        },
+        {
+          "token": "--color-accent-600",
+          "background": "oklch(0.546 0.245 262.881)"
+        },
+        {
+          "token": "--color-accent-700",
+          "background": "oklch(0.488 0.243 264.376)"
+        },
+        {
+          "token": "--color-accent-800",
+          "background": "oklch(0.424 0.199 265.638)"
+        },
+        {
+          "token": "--color-accent-900",
+          "background": "oklch(0.379 0.146 265.522)"
+        },
+        {
+          "token": "--color-accent-950",
+          "background": "oklch(0.282 0.091 267.935)"
+        },
+        {
+          "token": "--color-neutral-50",
+          "background": "oklch(0.985 0 none)"
+        },
+        {
+          "token": "--color-neutral-100",
+          "background": "rgb(247, 247, 247)"
+        },
+        {
+          "token": "--color-neutral-200",
+          "background": "rgb(235, 235, 235)"
+        },
+        {
+          "token": "--color-neutral-300",
+          "background": "oklch(0.87 0 none)"
+        },
+        {
+          "token": "--color-neutral-400",
+          "background": "oklch(0.708 0 none)"
+        },
+        {
+          "token": "--color-neutral-500",
+          "background": "oklch(0.556 0 none)"
+        },
+        {
+          "token": "--color-neutral-600",
+          "background": "oklch(0.439 0 none)"
+        },
+        {
+          "token": "--color-neutral-700",
+          "background": "oklch(0.371 0 none)"
+        },
+        {
+          "token": "--color-neutral-800",
+          "background": "oklch(0.269 0 none)"
+        },
+        {
+          "token": "--color-neutral-900",
+          "background": "oklch(0.205 0 none)"
+        },
+        {
+          "token": "--color-neutral-950",
+          "background": "oklch(0.145 0 none)"
+        },
+        {
+          "token": "--color-red-100",
+          "background": "oklch(0.936 0.032 17.717)"
+        },
+        {
+          "token": "--color-red-200",
+          "background": "oklch(0.885 0.062 18.334)"
+        },
+        {
+          "token": "--color-red-300",
+          "background": "oklch(0.808 0.114 19.571)"
+        },
+        {
+          "token": "--color-red-400",
+          "background": "oklch(0.704 0.191 22.216)"
+        },
+        {
+          "token": "--color-red-500",
+          "background": "oklch(0.637 0.237 25.331)"
+        },
+        {
+          "token": "--color-red-600",
+          "background": "oklch(0.577 0.245 27.325)"
+        },
+        {
+          "token": "--color-red-700",
+          "background": "oklch(0.505 0.213 27.518)"
+        },
+        {
+          "token": "--color-red-900",
+          "background": "oklch(0.396 0.141 25.723)"
+        },
+        {
+          "token": "--color-red-950",
+          "background": "oklch(0.258 0.092 26.042)"
+        },
+        {
+          "token": "--color-lime-100",
+          "background": "oklch(0.967 0.067 122.328)"
+        },
+        {
+          "token": "--color-lime-200",
+          "background": "oklch(0.938 0.127 124.321)"
+        },
+        {
+          "token": "--color-lime-300",
+          "background": "oklch(0.897 0.196 126.665)"
+        },
+        {
+          "token": "--color-lime-400",
+          "background": "oklch(0.841 0.238 128.85)"
+        },
+        {
+          "token": "--color-lime-500",
+          "background": "oklch(0.768 0.233 130.85)"
+        },
+        {
+          "token": "--color-lime-600",
+          "background": "oklch(0.648 0.2 131.684)"
+        },
+        {
+          "token": "--color-lime-700",
+          "background": "oklch(0.532 0.157 131.589)"
+        },
+        {
+          "token": "--color-lime-800",
+          "background": "oklch(0.453 0.124 130.933)"
+        },
+        {
+          "token": "--color-lime-950",
+          "background": "oklch(0.274 0.072 132.109)"
+        },
+        {
+          "token": "--color-amber-200",
+          "background": "oklch(0.924 0.12 95.746)"
+        },
+        {
+          "token": "--color-amber-300",
+          "background": "oklch(0.879 0.169 91.605)"
+        },
+        {
+          "token": "--color-amber-400",
+          "background": "oklch(0.828 0.189 84.429)"
+        },
+        {
+          "token": "--color-amber-500",
+          "background": "oklch(0.769 0.188 70.08)"
+        },
+        {
+          "token": "--color-amber-600",
+          "background": "oklch(0.666 0.179 58.318)"
+        },
+        {
+          "token": "--color-amber-800",
+          "background": "oklch(0.473 0.137 46.201)"
+        },
+        {
+          "token": "--color-amber-950",
+          "background": "oklch(0.279 0.077 45.635)"
+        },
+        {
+          "token": "--color-blue-50",
+          "background": "oklch(0.97 0.014 254.604)"
+        },
+        {
+          "token": "--color-blue-100",
+          "background": "oklch(0.932 0.032 255.585)"
+        },
+        {
+          "token": "--color-blue-200",
+          "background": "oklch(0.882 0.059 254.128)"
+        },
+        {
+          "token": "--color-blue-300",
+          "background": "oklch(0.809 0.105 251.813)"
+        },
+        {
+          "token": "--color-blue-400",
+          "background": "rgb(51, 146, 255)"
+        },
+        {
+          "token": "--color-blue-500",
+          "background": "oklch(0.623 0.214 259.815)"
+        },
+        {
+          "token": "--color-blue-600",
+          "background": "oklch(0.546 0.245 262.881)"
+        },
+        {
+          "token": "--color-blue-700",
+          "background": "oklch(0.488 0.243 264.376)"
+        },
+        {
+          "token": "--color-blue-800",
+          "background": "oklch(0.424 0.199 265.638)"
+        },
+        {
+          "token": "--color-blue-900",
+          "background": "oklch(0.379 0.146 265.522)"
+        },
+        {
+          "token": "--color-blue-950",
+          "background": "oklch(0.282 0.091 267.935)"
+        },
+        {
+          "token": "--color-purple-50",
+          "background": "oklch(0.977 0.014 308.299)"
+        },
+        {
+          "token": "--color-purple-100",
+          "background": "oklch(0.946 0.033 307.174)"
+        },
+        {
+          "token": "--color-purple-200",
+          "background": "oklch(0.902 0.063 306.703)"
+        },
+        {
+          "token": "--color-purple-300",
+          "background": "oklch(0.827 0.119 306.383)"
+        },
+        {
+          "token": "--color-purple-400",
+          "background": "oklch(0.714 0.203 305.504)"
+        },
+        {
+          "token": "--color-purple-500",
+          "background": "oklch(0.627 0.265 303.9)"
+        },
+        {
+          "token": "--color-purple-600",
+          "background": "oklch(0.558 0.288 302.321)"
+        },
+        {
+          "token": "--color-purple-700",
+          "background": "oklch(0.496 0.265 301.924)"
+        },
+        {
+          "token": "--color-purple-800",
+          "background": "oklch(0.438 0.218 303.724)"
+        },
+        {
+          "token": "--color-purple-900",
+          "background": "oklch(0.381 0.176 304.987)"
+        },
+        {
+          "token": "--color-purple-950",
+          "background": "oklch(0.291 0.149 302.717)"
+        }
+      ]
+    },
+    {
+      "theme": "light",
+      "dir": "rtl",
+      "swatches": [
+        {
+          "token": "--color-accent-50",
+          "background": "oklch(0.97 0.014 254.604)"
+        },
+        {
+          "token": "--color-accent-100",
+          "background": "oklch(0.932 0.032 255.585)"
+        },
+        {
+          "token": "--color-accent-200",
+          "background": "oklch(0.882 0.059 254.128)"
+        },
+        {
+          "token": "--color-accent-300",
+          "background": "oklch(0.809 0.105 251.813)"
+        },
+        {
+          "token": "--color-accent-400",
+          "background": "rgb(51, 146, 255)"
+        },
+        {
+          "token": "--color-accent-500",
+          "background": "oklch(0.623 0.214 259.815)"
+        },
+        {
+          "token": "--color-accent-600",
+          "background": "oklch(0.546 0.245 262.881)"
+        },
+        {
+          "token": "--color-accent-700",
+          "background": "oklch(0.488 0.243 264.376)"
+        },
+        {
+          "token": "--color-accent-800",
+          "background": "oklch(0.424 0.199 265.638)"
+        },
+        {
+          "token": "--color-accent-900",
+          "background": "oklch(0.379 0.146 265.522)"
+        },
+        {
+          "token": "--color-accent-950",
+          "background": "oklch(0.282 0.091 267.935)"
+        },
+        {
+          "token": "--color-neutral-50",
+          "background": "oklch(0.985 0 none)"
+        },
+        {
+          "token": "--color-neutral-100",
+          "background": "rgb(247, 247, 247)"
+        },
+        {
+          "token": "--color-neutral-200",
+          "background": "rgb(235, 235, 235)"
+        },
+        {
+          "token": "--color-neutral-300",
+          "background": "oklch(0.87 0 none)"
+        },
+        {
+          "token": "--color-neutral-400",
+          "background": "oklch(0.708 0 none)"
+        },
+        {
+          "token": "--color-neutral-500",
+          "background": "oklch(0.556 0 none)"
+        },
+        {
+          "token": "--color-neutral-600",
+          "background": "oklch(0.439 0 none)"
+        },
+        {
+          "token": "--color-neutral-700",
+          "background": "oklch(0.371 0 none)"
+        },
+        {
+          "token": "--color-neutral-800",
+          "background": "oklch(0.269 0 none)"
+        },
+        {
+          "token": "--color-neutral-900",
+          "background": "oklch(0.205 0 none)"
+        },
+        {
+          "token": "--color-neutral-950",
+          "background": "oklch(0.145 0 none)"
+        },
+        {
+          "token": "--color-red-100",
+          "background": "oklch(0.936 0.032 17.717)"
+        },
+        {
+          "token": "--color-red-200",
+          "background": "oklch(0.885 0.062 18.334)"
+        },
+        {
+          "token": "--color-red-300",
+          "background": "oklch(0.808 0.114 19.571)"
+        },
+        {
+          "token": "--color-red-400",
+          "background": "oklch(0.704 0.191 22.216)"
+        },
+        {
+          "token": "--color-red-500",
+          "background": "oklch(0.637 0.237 25.331)"
+        },
+        {
+          "token": "--color-red-600",
+          "background": "oklch(0.577 0.245 27.325)"
+        },
+        {
+          "token": "--color-red-700",
+          "background": "oklch(0.505 0.213 27.518)"
+        },
+        {
+          "token": "--color-red-900",
+          "background": "oklch(0.396 0.141 25.723)"
+        },
+        {
+          "token": "--color-red-950",
+          "background": "oklch(0.258 0.092 26.042)"
+        },
+        {
+          "token": "--color-lime-100",
+          "background": "oklch(0.967 0.067 122.328)"
+        },
+        {
+          "token": "--color-lime-200",
+          "background": "oklch(0.938 0.127 124.321)"
+        },
+        {
+          "token": "--color-lime-300",
+          "background": "oklch(0.897 0.196 126.665)"
+        },
+        {
+          "token": "--color-lime-400",
+          "background": "oklch(0.841 0.238 128.85)"
+        },
+        {
+          "token": "--color-lime-500",
+          "background": "oklch(0.768 0.233 130.85)"
+        },
+        {
+          "token": "--color-lime-600",
+          "background": "oklch(0.648 0.2 131.684)"
+        },
+        {
+          "token": "--color-lime-700",
+          "background": "oklch(0.532 0.157 131.589)"
+        },
+        {
+          "token": "--color-lime-800",
+          "background": "oklch(0.453 0.124 130.933)"
+        },
+        {
+          "token": "--color-lime-950",
+          "background": "oklch(0.274 0.072 132.109)"
+        },
+        {
+          "token": "--color-amber-200",
+          "background": "oklch(0.924 0.12 95.746)"
+        },
+        {
+          "token": "--color-amber-300",
+          "background": "oklch(0.879 0.169 91.605)"
+        },
+        {
+          "token": "--color-amber-400",
+          "background": "oklch(0.828 0.189 84.429)"
+        },
+        {
+          "token": "--color-amber-500",
+          "background": "oklch(0.769 0.188 70.08)"
+        },
+        {
+          "token": "--color-amber-600",
+          "background": "oklch(0.666 0.179 58.318)"
+        },
+        {
+          "token": "--color-amber-800",
+          "background": "oklch(0.473 0.137 46.201)"
+        },
+        {
+          "token": "--color-amber-950",
+          "background": "oklch(0.279 0.077 45.635)"
+        },
+        {
+          "token": "--color-blue-50",
+          "background": "oklch(0.97 0.014 254.604)"
+        },
+        {
+          "token": "--color-blue-100",
+          "background": "oklch(0.932 0.032 255.585)"
+        },
+        {
+          "token": "--color-blue-200",
+          "background": "oklch(0.882 0.059 254.128)"
+        },
+        {
+          "token": "--color-blue-300",
+          "background": "oklch(0.809 0.105 251.813)"
+        },
+        {
+          "token": "--color-blue-400",
+          "background": "rgb(51, 146, 255)"
+        },
+        {
+          "token": "--color-blue-500",
+          "background": "oklch(0.623 0.214 259.815)"
+        },
+        {
+          "token": "--color-blue-600",
+          "background": "oklch(0.546 0.245 262.881)"
+        },
+        {
+          "token": "--color-blue-700",
+          "background": "oklch(0.488 0.243 264.376)"
+        },
+        {
+          "token": "--color-blue-800",
+          "background": "oklch(0.424 0.199 265.638)"
+        },
+        {
+          "token": "--color-blue-900",
+          "background": "oklch(0.379 0.146 265.522)"
+        },
+        {
+          "token": "--color-blue-950",
+          "background": "oklch(0.282 0.091 267.935)"
+        },
+        {
+          "token": "--color-purple-50",
+          "background": "oklch(0.977 0.014 308.299)"
+        },
+        {
+          "token": "--color-purple-100",
+          "background": "oklch(0.946 0.033 307.174)"
+        },
+        {
+          "token": "--color-purple-200",
+          "background": "oklch(0.902 0.063 306.703)"
+        },
+        {
+          "token": "--color-purple-300",
+          "background": "oklch(0.827 0.119 306.383)"
+        },
+        {
+          "token": "--color-purple-400",
+          "background": "oklch(0.714 0.203 305.504)"
+        },
+        {
+          "token": "--color-purple-500",
+          "background": "oklch(0.627 0.265 303.9)"
+        },
+        {
+          "token": "--color-purple-600",
+          "background": "oklch(0.558 0.288 302.321)"
+        },
+        {
+          "token": "--color-purple-700",
+          "background": "oklch(0.496 0.265 301.924)"
+        },
+        {
+          "token": "--color-purple-800",
+          "background": "oklch(0.438 0.218 303.724)"
+        },
+        {
+          "token": "--color-purple-900",
+          "background": "oklch(0.381 0.176 304.987)"
+        },
+        {
+          "token": "--color-purple-950",
+          "background": "oklch(0.291 0.149 302.717)"
+        }
+      ]
+    },
+    {
+      "theme": "dark",
+      "dir": "ltr",
+      "swatches": [
+        {
+          "token": "--color-accent-50",
+          "background": "oklch(0.97 0.014 254.604)"
+        },
+        {
+          "token": "--color-accent-100",
+          "background": "oklch(0.932 0.032 255.585)"
+        },
+        {
+          "token": "--color-accent-200",
+          "background": "oklch(0.882 0.059 254.128)"
+        },
+        {
+          "token": "--color-accent-300",
+          "background": "oklch(0.809 0.105 251.813)"
+        },
+        {
+          "token": "--color-accent-400",
+          "background": "rgb(51, 146, 255)"
+        },
+        {
+          "token": "--color-accent-500",
+          "background": "oklch(0.623 0.214 259.815)"
+        },
+        {
+          "token": "--color-accent-600",
+          "background": "oklch(0.546 0.245 262.881)"
+        },
+        {
+          "token": "--color-accent-700",
+          "background": "oklch(0.488 0.243 264.376)"
+        },
+        {
+          "token": "--color-accent-800",
+          "background": "oklch(0.424 0.199 265.638)"
+        },
+        {
+          "token": "--color-accent-900",
+          "background": "oklch(0.379 0.146 265.522)"
+        },
+        {
+          "token": "--color-accent-950",
+          "background": "oklch(0.282 0.091 267.935)"
+        },
+        {
+          "token": "--color-neutral-50",
+          "background": "oklch(0.985 0 none)"
+        },
+        {
+          "token": "--color-neutral-100",
+          "background": "rgb(247, 247, 247)"
+        },
+        {
+          "token": "--color-neutral-200",
+          "background": "rgb(235, 235, 235)"
+        },
+        {
+          "token": "--color-neutral-300",
+          "background": "oklch(0.87 0 none)"
+        },
+        {
+          "token": "--color-neutral-400",
+          "background": "oklch(0.708 0 none)"
+        },
+        {
+          "token": "--color-neutral-500",
+          "background": "oklch(0.556 0 none)"
+        },
+        {
+          "token": "--color-neutral-600",
+          "background": "oklch(0.439 0 none)"
+        },
+        {
+          "token": "--color-neutral-700",
+          "background": "oklch(0.371 0 none)"
+        },
+        {
+          "token": "--color-neutral-800",
+          "background": "oklch(0.269 0 none)"
+        },
+        {
+          "token": "--color-neutral-900",
+          "background": "oklch(0.205 0 none)"
+        },
+        {
+          "token": "--color-neutral-950",
+          "background": "oklch(0.145 0 none)"
+        },
+        {
+          "token": "--color-red-100",
+          "background": "oklch(0.936 0.032 17.717)"
+        },
+        {
+          "token": "--color-red-200",
+          "background": "oklch(0.885 0.062 18.334)"
+        },
+        {
+          "token": "--color-red-300",
+          "background": "oklch(0.808 0.114 19.571)"
+        },
+        {
+          "token": "--color-red-400",
+          "background": "oklch(0.704 0.191 22.216)"
+        },
+        {
+          "token": "--color-red-500",
+          "background": "oklch(0.637 0.237 25.331)"
+        },
+        {
+          "token": "--color-red-600",
+          "background": "oklch(0.577 0.245 27.325)"
+        },
+        {
+          "token": "--color-red-700",
+          "background": "oklch(0.505 0.213 27.518)"
+        },
+        {
+          "token": "--color-red-900",
+          "background": "oklch(0.396 0.141 25.723)"
+        },
+        {
+          "token": "--color-red-950",
+          "background": "oklch(0.258 0.092 26.042)"
+        },
+        {
+          "token": "--color-lime-100",
+          "background": "oklch(0.967 0.067 122.328)"
+        },
+        {
+          "token": "--color-lime-200",
+          "background": "oklch(0.938 0.127 124.321)"
+        },
+        {
+          "token": "--color-lime-300",
+          "background": "oklch(0.897 0.196 126.665)"
+        },
+        {
+          "token": "--color-lime-400",
+          "background": "oklch(0.841 0.238 128.85)"
+        },
+        {
+          "token": "--color-lime-500",
+          "background": "oklch(0.768 0.233 130.85)"
+        },
+        {
+          "token": "--color-lime-600",
+          "background": "oklch(0.648 0.2 131.684)"
+        },
+        {
+          "token": "--color-lime-700",
+          "background": "oklch(0.532 0.157 131.589)"
+        },
+        {
+          "token": "--color-lime-800",
+          "background": "oklch(0.453 0.124 130.933)"
+        },
+        {
+          "token": "--color-lime-950",
+          "background": "oklch(0.274 0.072 132.109)"
+        },
+        {
+          "token": "--color-amber-200",
+          "background": "oklch(0.924 0.12 95.746)"
+        },
+        {
+          "token": "--color-amber-300",
+          "background": "oklch(0.879 0.169 91.605)"
+        },
+        {
+          "token": "--color-amber-400",
+          "background": "oklch(0.828 0.189 84.429)"
+        },
+        {
+          "token": "--color-amber-500",
+          "background": "oklch(0.769 0.188 70.08)"
+        },
+        {
+          "token": "--color-amber-600",
+          "background": "oklch(0.666 0.179 58.318)"
+        },
+        {
+          "token": "--color-amber-800",
+          "background": "oklch(0.473 0.137 46.201)"
+        },
+        {
+          "token": "--color-amber-950",
+          "background": "oklch(0.279 0.077 45.635)"
+        },
+        {
+          "token": "--color-blue-50",
+          "background": "oklch(0.97 0.014 254.604)"
+        },
+        {
+          "token": "--color-blue-100",
+          "background": "oklch(0.932 0.032 255.585)"
+        },
+        {
+          "token": "--color-blue-200",
+          "background": "oklch(0.882 0.059 254.128)"
+        },
+        {
+          "token": "--color-blue-300",
+          "background": "oklch(0.809 0.105 251.813)"
+        },
+        {
+          "token": "--color-blue-400",
+          "background": "rgb(51, 146, 255)"
+        },
+        {
+          "token": "--color-blue-500",
+          "background": "oklch(0.623 0.214 259.815)"
+        },
+        {
+          "token": "--color-blue-600",
+          "background": "oklch(0.546 0.245 262.881)"
+        },
+        {
+          "token": "--color-blue-700",
+          "background": "oklch(0.488 0.243 264.376)"
+        },
+        {
+          "token": "--color-blue-800",
+          "background": "oklch(0.424 0.199 265.638)"
+        },
+        {
+          "token": "--color-blue-900",
+          "background": "oklch(0.379 0.146 265.522)"
+        },
+        {
+          "token": "--color-blue-950",
+          "background": "oklch(0.282 0.091 267.935)"
+        },
+        {
+          "token": "--color-purple-50",
+          "background": "oklch(0.977 0.014 308.299)"
+        },
+        {
+          "token": "--color-purple-100",
+          "background": "oklch(0.946 0.033 307.174)"
+        },
+        {
+          "token": "--color-purple-200",
+          "background": "oklch(0.902 0.063 306.703)"
+        },
+        {
+          "token": "--color-purple-300",
+          "background": "oklch(0.827 0.119 306.383)"
+        },
+        {
+          "token": "--color-purple-400",
+          "background": "oklch(0.714 0.203 305.504)"
+        },
+        {
+          "token": "--color-purple-500",
+          "background": "oklch(0.627 0.265 303.9)"
+        },
+        {
+          "token": "--color-purple-600",
+          "background": "oklch(0.558 0.288 302.321)"
+        },
+        {
+          "token": "--color-purple-700",
+          "background": "oklch(0.496 0.265 301.924)"
+        },
+        {
+          "token": "--color-purple-800",
+          "background": "oklch(0.438 0.218 303.724)"
+        },
+        {
+          "token": "--color-purple-900",
+          "background": "oklch(0.381 0.176 304.987)"
+        },
+        {
+          "token": "--color-purple-950",
+          "background": "oklch(0.291 0.149 302.717)"
+        }
+      ]
+    },
+    {
+      "theme": "dark",
+      "dir": "rtl",
+      "swatches": [
+        {
+          "token": "--color-accent-50",
+          "background": "oklch(0.97 0.014 254.604)"
+        },
+        {
+          "token": "--color-accent-100",
+          "background": "oklch(0.932 0.032 255.585)"
+        },
+        {
+          "token": "--color-accent-200",
+          "background": "oklch(0.882 0.059 254.128)"
+        },
+        {
+          "token": "--color-accent-300",
+          "background": "oklch(0.809 0.105 251.813)"
+        },
+        {
+          "token": "--color-accent-400",
+          "background": "rgb(51, 146, 255)"
+        },
+        {
+          "token": "--color-accent-500",
+          "background": "oklch(0.623 0.214 259.815)"
+        },
+        {
+          "token": "--color-accent-600",
+          "background": "oklch(0.546 0.245 262.881)"
+        },
+        {
+          "token": "--color-accent-700",
+          "background": "oklch(0.488 0.243 264.376)"
+        },
+        {
+          "token": "--color-accent-800",
+          "background": "oklch(0.424 0.199 265.638)"
+        },
+        {
+          "token": "--color-accent-900",
+          "background": "oklch(0.379 0.146 265.522)"
+        },
+        {
+          "token": "--color-accent-950",
+          "background": "oklch(0.282 0.091 267.935)"
+        },
+        {
+          "token": "--color-neutral-50",
+          "background": "oklch(0.985 0 none)"
+        },
+        {
+          "token": "--color-neutral-100",
+          "background": "rgb(247, 247, 247)"
+        },
+        {
+          "token": "--color-neutral-200",
+          "background": "rgb(235, 235, 235)"
+        },
+        {
+          "token": "--color-neutral-300",
+          "background": "oklch(0.87 0 none)"
+        },
+        {
+          "token": "--color-neutral-400",
+          "background": "oklch(0.708 0 none)"
+        },
+        {
+          "token": "--color-neutral-500",
+          "background": "oklch(0.556 0 none)"
+        },
+        {
+          "token": "--color-neutral-600",
+          "background": "oklch(0.439 0 none)"
+        },
+        {
+          "token": "--color-neutral-700",
+          "background": "oklch(0.371 0 none)"
+        },
+        {
+          "token": "--color-neutral-800",
+          "background": "oklch(0.269 0 none)"
+        },
+        {
+          "token": "--color-neutral-900",
+          "background": "oklch(0.205 0 none)"
+        },
+        {
+          "token": "--color-neutral-950",
+          "background": "oklch(0.145 0 none)"
+        },
+        {
+          "token": "--color-red-100",
+          "background": "oklch(0.936 0.032 17.717)"
+        },
+        {
+          "token": "--color-red-200",
+          "background": "oklch(0.885 0.062 18.334)"
+        },
+        {
+          "token": "--color-red-300",
+          "background": "oklch(0.808 0.114 19.571)"
+        },
+        {
+          "token": "--color-red-400",
+          "background": "oklch(0.704 0.191 22.216)"
+        },
+        {
+          "token": "--color-red-500",
+          "background": "oklch(0.637 0.237 25.331)"
+        },
+        {
+          "token": "--color-red-600",
+          "background": "oklch(0.577 0.245 27.325)"
+        },
+        {
+          "token": "--color-red-700",
+          "background": "oklch(0.505 0.213 27.518)"
+        },
+        {
+          "token": "--color-red-900",
+          "background": "oklch(0.396 0.141 25.723)"
+        },
+        {
+          "token": "--color-red-950",
+          "background": "oklch(0.258 0.092 26.042)"
+        },
+        {
+          "token": "--color-lime-100",
+          "background": "oklch(0.967 0.067 122.328)"
+        },
+        {
+          "token": "--color-lime-200",
+          "background": "oklch(0.938 0.127 124.321)"
+        },
+        {
+          "token": "--color-lime-300",
+          "background": "oklch(0.897 0.196 126.665)"
+        },
+        {
+          "token": "--color-lime-400",
+          "background": "oklch(0.841 0.238 128.85)"
+        },
+        {
+          "token": "--color-lime-500",
+          "background": "oklch(0.768 0.233 130.85)"
+        },
+        {
+          "token": "--color-lime-600",
+          "background": "oklch(0.648 0.2 131.684)"
+        },
+        {
+          "token": "--color-lime-700",
+          "background": "oklch(0.532 0.157 131.589)"
+        },
+        {
+          "token": "--color-lime-800",
+          "background": "oklch(0.453 0.124 130.933)"
+        },
+        {
+          "token": "--color-lime-950",
+          "background": "oklch(0.274 0.072 132.109)"
+        },
+        {
+          "token": "--color-amber-200",
+          "background": "oklch(0.924 0.12 95.746)"
+        },
+        {
+          "token": "--color-amber-300",
+          "background": "oklch(0.879 0.169 91.605)"
+        },
+        {
+          "token": "--color-amber-400",
+          "background": "oklch(0.828 0.189 84.429)"
+        },
+        {
+          "token": "--color-amber-500",
+          "background": "oklch(0.769 0.188 70.08)"
+        },
+        {
+          "token": "--color-amber-600",
+          "background": "oklch(0.666 0.179 58.318)"
+        },
+        {
+          "token": "--color-amber-800",
+          "background": "oklch(0.473 0.137 46.201)"
+        },
+        {
+          "token": "--color-amber-950",
+          "background": "oklch(0.279 0.077 45.635)"
+        },
+        {
+          "token": "--color-blue-50",
+          "background": "oklch(0.97 0.014 254.604)"
+        },
+        {
+          "token": "--color-blue-100",
+          "background": "oklch(0.932 0.032 255.585)"
+        },
+        {
+          "token": "--color-blue-200",
+          "background": "oklch(0.882 0.059 254.128)"
+        },
+        {
+          "token": "--color-blue-300",
+          "background": "oklch(0.809 0.105 251.813)"
+        },
+        {
+          "token": "--color-blue-400",
+          "background": "rgb(51, 146, 255)"
+        },
+        {
+          "token": "--color-blue-500",
+          "background": "oklch(0.623 0.214 259.815)"
+        },
+        {
+          "token": "--color-blue-600",
+          "background": "oklch(0.546 0.245 262.881)"
+        },
+        {
+          "token": "--color-blue-700",
+          "background": "oklch(0.488 0.243 264.376)"
+        },
+        {
+          "token": "--color-blue-800",
+          "background": "oklch(0.424 0.199 265.638)"
+        },
+        {
+          "token": "--color-blue-900",
+          "background": "oklch(0.379 0.146 265.522)"
+        },
+        {
+          "token": "--color-blue-950",
+          "background": "oklch(0.282 0.091 267.935)"
+        },
+        {
+          "token": "--color-purple-50",
+          "background": "oklch(0.977 0.014 308.299)"
+        },
+        {
+          "token": "--color-purple-100",
+          "background": "oklch(0.946 0.033 307.174)"
+        },
+        {
+          "token": "--color-purple-200",
+          "background": "oklch(0.902 0.063 306.703)"
+        },
+        {
+          "token": "--color-purple-300",
+          "background": "oklch(0.827 0.119 306.383)"
+        },
+        {
+          "token": "--color-purple-400",
+          "background": "oklch(0.714 0.203 305.504)"
+        },
+        {
+          "token": "--color-purple-500",
+          "background": "oklch(0.627 0.265 303.9)"
+        },
+        {
+          "token": "--color-purple-600",
+          "background": "oklch(0.558 0.288 302.321)"
+        },
+        {
+          "token": "--color-purple-700",
+          "background": "oklch(0.496 0.265 301.924)"
+        },
+        {
+          "token": "--color-purple-800",
+          "background": "oklch(0.438 0.218 303.724)"
+        },
+        {
+          "token": "--color-purple-900",
+          "background": "oklch(0.381 0.176 304.987)"
+        },
+        {
+          "token": "--color-purple-950",
+          "background": "oklch(0.291 0.149 302.717)"
+        }
+      ]
+    }
+  ],
+  "export": {
+    "pages": 120,
+    "peakGzipJs": 510246,
+    "peakGzipHtml": 26530,
+    "templateCatalogGzipJs": 253900
+  },
+  "limitations": [
+    "仅 Edge 初始态 RTL：桌面浅色及窄屏深色，并非四种主题视口笛卡尔积",
+    "真实 React Aria Arabic locale 与 CSS dir，中文文档未翻译，不代表阿语排版完成",
+    "仅首次加载显式 audit-direction=rtl 时激活，刷新无参数恢复 LTR；当前页面生命周期内保持",
+    "人工读屏及逐组件全部状态、API、RTL 操作仍待验收"
+  ],
+  "screenshots": [
+    "reference/evidence/screenshots/20261125-rtl-palette/dark-390-ai-chat.png",
+    "reference/evidence/screenshots/20261125-rtl-palette/dark-390-button.png",
+    "reference/evidence/screenshots/20261125-rtl-palette/dark-390-tree-view.png",
+    "reference/evidence/screenshots/20261125-rtl-palette/light-1440-button.png",
+    "reference/evidence/screenshots/20261125-rtl-palette/light-1440-data-grid.png",
+    "reference/evidence/screenshots/20261125-rtl-palette/light-1440-finance-dashboard.png",
+    "reference/evidence/screenshots/20261125-rtl-palette/palette-dark-rtl.png",
+    "reference/evidence/screenshots/20261125-rtl-palette/palette-light-ltr.png"
+  ]
+}

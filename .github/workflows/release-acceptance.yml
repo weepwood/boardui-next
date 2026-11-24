@@ -86,6 +86,9 @@ jobs:
       - name: 基础按钮双主题方向与状态专项
         if: matrix.browser == 'chromium'
         run: node scripts/audit-button-family.mjs acceptance/button-family
+      - name: 全组件 RTL 初始布局与 axe 审计
+        if: matrix.browser == 'chromium'
+        run: node scripts/audit-all-rtl.mjs acceptance/all-rtl
       - name: 图表与工作区触摸状态
         if: matrix.browser == 'chromium'
         run: node scripts/check-chart-workspace.mjs acceptance/chart-workspace

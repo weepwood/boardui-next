@@ -85,7 +85,7 @@ export default function TypographyPage() {
       <section id="usage" className="flex scroll-mt-14 flex-col gap-3">
         <h2 className="text-title-3-semibold text-text-primary">使用方式</h2>
         <div className="overflow-hidden rounded-2lg border border-border-button-default bg-background-primary-default">
-          <pre className="overflow-x-auto p-3 font-mono text-body-2-regular text-text-primary">
+          <pre tabIndex={0} dir="ltr" aria-label="代码示例" className="outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-border-focus-ring overflow-x-auto p-3 font-mono text-body-2-regular text-text-primary">
             <code>{`/* 一个类同时设定字号、行高、字重、字距 */
 <h1 className="text-title-1-medium">标题</h1>
 <p className="text-body-regular">正文</p>

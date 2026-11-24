@@ -1,4 +1,4 @@
-import { DirectionProvider } from "@/packages/react/direction";
+import { AuditDirectionProvider } from "./components/AuditDirectionProvider";
 import type { Metadata } from "next";
 import "./globals.css";
 import { DocsShell } from "./components/docs/DocsShell";
@@ -27,7 +27,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full antialiased">
-        <ThemeProvider><DirectionProvider locale="zh-CN"><DocsShell>{children}</DocsShell></DirectionProvider></ThemeProvider>
+        <ThemeProvider><AuditDirectionProvider><DocsShell>{children}</DocsShell></AuditDirectionProvider></ThemeProvider>
       </body>
     </html>
   );

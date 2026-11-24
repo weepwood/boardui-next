@@ -863,6 +863,12 @@ try{
           assert.equal(await table.locator('tbody tr').count(),1);
 
         }
+        if(route==='/zh-hans/components/color/'){
+          stage='palette: runtime primitive values';
+          const swatches=await page.locator('#palette [title^="--color-"]').evaluateAll(es=>es.map(e=>({token:e.title,background:getComputedStyle(e).backgroundColor})));
+          assert.equal(swatches.length,69);
+          assert.ok(swatches.every(s=>s.background!=='rgba(0, 0, 0, 0)'),JSON.stringify(swatches.filter(s=>s.background==='rgba(0, 0, 0, 0)')));
+        }
         if(route==='/zh-hans/components/data-grid/'){
           const demo=page.locator('#preview');
           await demo.getByRole('button',{name:'数量'}).click();

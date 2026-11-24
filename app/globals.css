@@ -3,6 +3,7 @@
 @import "@fontsource-variable/inter/opsz.css";
 @import "@fontsource-variable/jetbrains-mono";
 @import "./styles/tokens.css";
+@import "./styles/palette-primitives.css";
 @import "./styles/keyframes.css";
 @import "./styles/typography.css";
 @import "../packages/styles/button.css";

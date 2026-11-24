@@ -1,0 +1,5156 @@
+{
+  "total": 104,
+  "formalComplete": 0,
+  "counts": {
+    "visual": {
+      "missing": [
+        "announcement",
+        "avatar",
+        "chip",
+        "notification",
+        "stat-cards",
+        "badge",
+        "progress",
+        "meter"
+      ],
+      "formal": 0,
+      "scoped": 96
+    },
+    "interaction": {
+      "missing": [
+        "color",
+        "typography",
+        "announcement",
+        "avatar",
+        "chip",
+        "divider",
+        "link-button",
+        "notification",
+        "agent-limits-card",
+        "stat-cards",
+        "activity-rings-card",
+        "contributions-card",
+        "funnel-chart-card",
+        "most-active-days-card",
+        "sankey-chart-card",
+        "sleep-score-card",
+        "stage-bars-card",
+        "steps-card",
+        "badge",
+        "progress",
+        "meter"
+      ],
+      "formal": 0,
+      "scoped": 83
+    },
+    "accessibility": {
+      "missing": [],
+      "formal": 0,
+      "scoped": 104
+    },
+    "api": {
+      "missing": [
+        "color",
+        "typography",
+        "carousel",
+        "divider",
+        "file-upload",
+        "link-button",
+        "social-button",
+        "composer-panel",
+        "composer-attachments",
+        "auth-card",
+        "web-search",
+        "task-list",
+        "agent-limits-card",
+        "questionnaire",
+        "agent-creator",
+        "calendar",
+        "data-grid",
+        "data-table",
+        "notification-center",
+        "settings-modal",
+        "sidebar",
+        "revenue-chart-card",
+        "activity-rings-card",
+        "bar-list-card",
+        "combo-chart-card",
+        "contributions-card",
+        "earnings-chart-card",
+        "heatmap-chart-card",
+        "most-active-days-card",
+        "sankey-chart-card",
+        "scatter-chart-card",
+        "sleep-score-card",
+        "stage-bars-card",
+        "steps-card",
+        "chat-starter",
+        "multi-agent-chat",
+        "ai-chat",
+        "ai-image-generation",
+        "ai-profile",
+        "finance-dashboard",
+        "home-dashboard",
+        "marketing-dashboard",
+        "medical-profile",
+        "project-board",
+        "search-field",
+        "spinner",
+        "skeleton",
+        "accordion",
+        "toggle-button",
+        "tag-group",
+        "modal",
+        "popover",
+        "counter",
+        "toast",
+        "drawer",
+        "number-field",
+        "combobox",
+        "time-field",
+        "context-menu",
+        "date-calendar",
+        "color-picker",
+        "token-input",
+        "command-palette",
+        "orders-chart-card",
+        "template:calendar",
+        "template:hr"
+      ],
+      "formal": 0,
+      "scoped": 38
+    },
+    "rtl": {
+      "missing": [],
+      "formal": 0,
+      "scoped": 104
+    }
+  },
+  "entries": [
+    {
+      "slug": "color",
+      "route": "/zh-hans/components/color",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "responsive-visual-color-20261124",
+            "palette-runtime-colors-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "responsive-accessibility-color-20261124",
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "typography",
+      "route": "/zh-hans/components/typography",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "responsive-visual-typography-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "responsive-accessibility-typography-20261124",
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "announcement",
+      "route": "/zh-hans/components/announcement",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [
+            "api-extraction-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "avatar",
+      "route": "/zh-hans/components/avatar",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [
+            "api-extraction-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "breadcrumb",
+      "route": "/zh-hans/components/breadcrumb",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-breadcrumb-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-breadcrumb-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [
+            "api-extraction-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "button",
+      "route": "/zh-hans/components/button",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "basic-visual-button-20261124",
+            "formal-candidate-visual-20261124",
+            "button-family-visual-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "basic-interaction-button-20261124",
+            "button-family-interaction-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "button-family-accessibility-20261125",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [
+            "api-extraction-20261124",
+            "button-family-api-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "direction-lab-20261124",
+            "button-family-rtl-20261125",
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "button-group",
+      "route": "/zh-hans/components/button-group",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "basic-visual-button-group-20261124",
+            "button-family-visual-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "basic-interaction-button-group-20261124",
+            "button-family-interaction-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "button-family-accessibility-20261125",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [
+            "api-extraction-20261124",
+            "button-family-api-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "button-family-rtl-20261125",
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "carousel",
+      "route": "/zh-hans/components/carousel",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "responsive-visual-carousel-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "responsive-interaction-carousel-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "responsive-accessibility-carousel-20261124",
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "checkbox",
+      "route": "/zh-hans/components/checkbox",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "visual-sample-20261124",
+            "basic-visual-checkbox-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "basic-interaction-checkbox-20261124",
+            "consolidated-consumer-interaction-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [
+            "api-extraction-20261124",
+            "consolidated-consumer-api-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "chip",
+      "route": "/zh-hans/components/chip",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [
+            "api-extraction-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "close-button",
+      "route": "/zh-hans/components/close-button",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "basic-visual-close-button-20261124",
+            "close-button-visual-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "basic-interaction-close-button-20261124",
+            "close-button-interaction-20261125",
+            "button-family-interaction-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "close-button-accessibility-20261125",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [
+            "api-extraction-20261124",
+            "close-button-api-20261125",
+            "button-family-api-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "close-button-rtl-20261125",
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "date-picker",
+      "route": "/zh-hans/components/date-picker",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-date-picker-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-date-picker-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [
+            "api-extraction-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "divider",
+      "route": "/zh-hans/components/divider",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "responsive-visual-divider-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "responsive-accessibility-divider-20261124",
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "dropdown",
+      "route": "/zh-hans/components/dropdown",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-dropdown-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-dropdown-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [
+            "api-extraction-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "direction-lab-20261124",
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "file-upload",
+      "route": "/zh-hans/components/file-upload",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-file-upload-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-file-upload-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "icon-button",
+      "route": "/zh-hans/components/icon-button",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "basic-visual-icon-button-20261124",
+            "button-family-visual-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "basic-interaction-icon-button-20261124",
+            "button-family-interaction-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "button-family-accessibility-20261125",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [
+            "api-extraction-20261124",
+            "button-family-api-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "button-family-rtl-20261125",
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "input",
+      "route": "/zh-hans/components/input",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "visual-sample-20261124",
+            "basic-visual-input-20261124",
+            "formal-candidate-visual-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "basic-interaction-input-20261124",
+            "consolidated-consumer-interaction-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [
+            "api-extraction-20261124",
+            "consolidated-consumer-api-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "direction-lab-20261124",
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "input-otp",
+      "route": "/zh-hans/components/input-otp",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-input-otp-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-input-otp-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [
+            "api-extraction-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "link-button",
+      "route": "/zh-hans/components/link-button",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "responsive-visual-link-button-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "responsive-accessibility-link-button-20261124",
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "notification",
+      "route": "/zh-hans/components/notification",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [
+            "api-extraction-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "pagination",
+      "route": "/zh-hans/components/pagination",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-pagination-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-pagination-20261124",
+            "consolidated-consumer-interaction-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [
+            "api-extraction-20261124",
+            "consolidated-consumer-api-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "direction-lab-20261124",
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "radio",
+      "route": "/zh-hans/components/radio",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "basic-visual-radio-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "basic-interaction-radio-20261124",
+            "consolidated-consumer-interaction-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [
+            "api-extraction-20261124",
+            "consolidated-consumer-api-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "direction-lab-20261124",
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "segmented-control",
+      "route": "/zh-hans/components/segmented-control",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "basic-visual-segmented-control-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "basic-interaction-segmented-control-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [
+            "api-extraction-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "direction-lab-20261124",
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "select",
+      "route": "/zh-hans/components/select",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "visual-sample-20261124",
+            "basic-visual-select-20261124",
+            "formal-candidate-visual-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "basic-interaction-select-20261124",
+            "consolidated-consumer-interaction-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [
+            "api-extraction-20261124",
+            "consolidated-consumer-api-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "direction-lab-20261124",
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "slider",
+      "route": "/zh-hans/components/slider",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-slider-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-slider-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [
+            "api-extraction-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "direction-lab-20261124",
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "social-button",
+      "route": "/zh-hans/components/social-button",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "responsive-visual-social-button-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "responsive-interaction-social-button-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "responsive-accessibility-social-button-20261124",
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "switch",
+      "route": "/zh-hans/components/switch",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "basic-visual-switch-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "basic-interaction-switch-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [
+            "api-extraction-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "table",
+      "route": "/zh-hans/components/table",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-table-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-table-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [
+            "api-extraction-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "tabs",
+      "route": "/zh-hans/components/tabs",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "basic-visual-tabs-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "basic-interaction-tabs-20261124",
+            "consolidated-consumer-interaction-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [
+            "api-extraction-20261124",
+            "consolidated-consumer-api-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "direction-lab-20261124",
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "textarea",
+      "route": "/zh-hans/components/textarea",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "basic-visual-textarea-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "basic-interaction-textarea-20261124",
+            "consolidated-consumer-interaction-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [
+            "api-extraction-20261124",
+            "consolidated-consumer-api-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "tree-view",
+      "route": "/zh-hans/components/tree-view",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-tree-view-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-tree-view-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [
+            "api-extraction-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "tooltip",
+      "route": "/zh-hans/components/tooltip",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-tooltip-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-tooltip-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [
+            "api-extraction-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "agent-thinking",
+      "route": "/zh-hans/components/agent-thinking",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-agent-thinking-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-agent-thinking-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [
+            "api-extraction-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "composer-loader",
+      "route": "/zh-hans/components/composer-loader",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-composer-loader-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-composer-loader-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [
+            "api-extraction-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "composer-panel",
+      "route": "/zh-hans/components/composer-panel",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-composer-panel-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-composer-panel-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "composer-attachments",
+      "route": "/zh-hans/components/composer-attachments",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-composer-attachments-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-composer-attachments-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "auth-card",
+      "route": "/zh-hans/components/auth-card",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "responsive-visual-auth-card-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "responsive-interaction-auth-card-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "responsive-accessibility-auth-card-20261124",
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "web-search",
+      "route": "/zh-hans/components/web-search",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "responsive-visual-web-search-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "responsive-interaction-web-search-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "responsive-accessibility-web-search-20261124",
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "task-list",
+      "route": "/zh-hans/components/task-list",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "responsive-visual-task-list-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "responsive-interaction-task-list-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "responsive-accessibility-task-list-20261124",
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "agent-limits-card",
+      "route": "/zh-hans/components/agent-limits-card",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-agent-limits-card-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "questionnaire",
+      "route": "/zh-hans/components/questionnaire",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "responsive-visual-questionnaire-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "responsive-interaction-questionnaire-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "responsive-accessibility-questionnaire-20261124",
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "agent-creator",
+      "route": "/zh-hans/components/agent-creator",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-agent-creator-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-agent-creator-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "agent-progress",
+      "route": "/zh-hans/components/agent-progress",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-agent-progress-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-agent-progress-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [
+            "api-extraction-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "calendar",
+      "route": "/zh-hans/components/calendar",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-calendar-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-calendar-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "data-grid",
+      "route": "/zh-hans/components/data-grid",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-data-grid-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-data-grid-20261124",
+            "consolidated-data-chart-interaction-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-data-chart-accessibility-20261125",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "data-table",
+      "route": "/zh-hans/components/data-table",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-data-table-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-data-table-20261124",
+            "consolidated-data-chart-interaction-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-data-chart-accessibility-20261125",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "notification-center",
+      "route": "/zh-hans/components/notification-center",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-notification-center-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-notification-center-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "settings-modal",
+      "route": "/zh-hans/components/settings-modal",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "responsive-visual-settings-modal-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "responsive-interaction-settings-modal-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "responsive-accessibility-settings-modal-20261124",
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "sidebar",
+      "route": "/zh-hans/components/sidebar",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-sidebar-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-sidebar-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "stat-cards",
+      "route": "/zh-hans/components/stat-cards",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [
+            "api-extraction-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "revenue-chart-card",
+      "route": "/zh-hans/components/revenue-chart-card",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-revenue-chart-card-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-revenue-chart-card-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "activity-rings-card",
+      "route": "/zh-hans/components/activity-rings-card",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-activity-rings-card-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "area-chart-card",
+      "route": "/zh-hans/components/area-chart-card",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-area-chart-card-20261124",
+            "formal-candidate-visual-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-area-chart-card-20261124",
+            "consolidated-data-chart-interaction-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-recent-accessibility-20261124",
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-data-chart-accessibility-20261125",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [
+            "api-extraction-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "bar-list-card",
+      "route": "/zh-hans/components/bar-list-card",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-bar-list-card-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-bar-list-card-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "combo-chart-card",
+      "route": "/zh-hans/components/combo-chart-card",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-combo-chart-card-20261124",
+            "chart-workspace-visual-combo-chart-card-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "chart-workspace-interaction-combo-chart-card-20261124",
+            "consolidated-data-chart-interaction-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "chart-workspace-accessibility-combo-chart-card-20261124",
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-data-chart-accessibility-20261125",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "contributions-card",
+      "route": "/zh-hans/components/contributions-card",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-contributions-card-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "earnings-chart-card",
+      "route": "/zh-hans/components/earnings-chart-card",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-earnings-chart-card-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-earnings-chart-card-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "funnel-chart-card",
+      "route": "/zh-hans/components/funnel-chart-card",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-funnel-chart-card-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [
+            "api-extraction-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "heatmap-chart-card",
+      "route": "/zh-hans/components/heatmap-chart-card",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-heatmap-chart-card-20261124",
+            "chart-workspace-visual-heatmap-chart-card-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "chart-workspace-interaction-heatmap-chart-card-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "chart-workspace-accessibility-heatmap-chart-card-20261124",
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "most-active-days-card",
+      "route": "/zh-hans/components/most-active-days-card",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-most-active-days-card-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "radar-chart-card",
+      "route": "/zh-hans/components/radar-chart-card",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-radar-chart-card-20261124",
+            "chart-workspace-visual-radar-chart-card-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "chart-workspace-interaction-radar-chart-card-20261124",
+            "consolidated-data-chart-interaction-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "chart-workspace-accessibility-radar-chart-card-20261124",
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-data-chart-accessibility-20261125",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [
+            "api-extraction-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "radial-chart-card",
+      "route": "/zh-hans/components/radial-chart-card",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-radial-chart-card-20261124",
+            "chart-workspace-visual-radial-chart-card-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "chart-workspace-interaction-radial-chart-card-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "chart-workspace-accessibility-radial-chart-card-20261124",
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [
+            "api-extraction-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "line-chart-card",
+      "route": "/zh-hans/components/line-chart-card",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-line-chart-card-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-line-chart-card-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [
+            "api-extraction-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "sankey-chart-card",
+      "route": "/zh-hans/components/sankey-chart-card",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-sankey-chart-card-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "scatter-chart-card",
+      "route": "/zh-hans/components/scatter-chart-card",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-scatter-chart-card-20261124",
+            "chart-workspace-visual-scatter-chart-card-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "chart-workspace-interaction-scatter-chart-card-20261124",
+            "consolidated-data-chart-interaction-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "chart-workspace-accessibility-scatter-chart-card-20261124",
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-data-chart-accessibility-20261125",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "sleep-score-card",
+      "route": "/zh-hans/components/sleep-score-card",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-sleep-score-card-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "stage-bars-card",
+      "route": "/zh-hans/components/stage-bars-card",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-stage-bars-card-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "steps-card",
+      "route": "/zh-hans/components/steps-card",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-steps-card-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "chat-starter",
+      "route": "/zh-hans/templates/chat-starter",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-chat-starter-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-chat-starter-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "multi-agent-chat",
+      "route": "/zh-hans/templates/multi-agent-chat",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-multi-agent-chat-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-multi-agent-chat-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "ai-chat",
+      "route": "/zh-hans/templates/ai-chat",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-ai-chat-20261124",
+            "chart-workspace-visual-ai-chat-20261124",
+            "formal-candidate-visual-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-ai-chat-20261124",
+            "chart-workspace-interaction-ai-chat-20261124",
+            "formal-production-interaction-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "chart-workspace-accessibility-ai-chat-20261124",
+            "formal-recent-accessibility-20261124",
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "ai-image-generation",
+      "route": "/zh-hans/templates/ai-image-generation",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-ai-image-generation-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-ai-image-generation-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "ai-profile",
+      "route": "/zh-hans/templates/ai-profile",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-ai-profile-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-ai-profile-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "finance-dashboard",
+      "route": "/zh-hans/templates/finance",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-finance-dashboard-20261124",
+            "chart-workspace-visual-finance-dashboard-20261124",
+            "formal-candidate-visual-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-finance-dashboard-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "home-dashboard",
+      "route": "/zh-hans/templates/dashboard",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-home-dashboard-20261124",
+            "chart-workspace-visual-home-dashboard-20261124",
+            "formal-candidate-visual-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-home-dashboard-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "marketing-dashboard",
+      "route": "/zh-hans/templates/marketing",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-marketing-dashboard-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-marketing-dashboard-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "medical-profile",
+      "route": "/zh-hans/templates/medical-profile",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-medical-profile-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-medical-profile-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "project-board",
+      "route": "/zh-hans/templates/project-board",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-project-board-20261124",
+            "chart-workspace-visual-project-board-20261124",
+            "formal-candidate-visual-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-project-board-20261124",
+            "chart-workspace-interaction-project-board-20261124",
+            "formal-production-interaction-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "chart-workspace-accessibility-project-board-20261124",
+            "formal-recent-accessibility-20261124",
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "search-field",
+      "route": "/zh-hans/components/search-field",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "responsive-visual-search-field-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "responsive-interaction-search-field-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "responsive-accessibility-search-field-20261124",
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "badge",
+      "route": "/zh-hans/components/badge",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [
+            "api-extraction-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "progress",
+      "route": "/zh-hans/components/progress",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [
+            "api-extraction-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "spinner",
+      "route": "/zh-hans/components/spinner",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "responsive-visual-spinner-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "responsive-interaction-spinner-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "responsive-accessibility-spinner-20261124",
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "skeleton",
+      "route": "/zh-hans/components/skeleton",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "responsive-visual-skeleton-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "responsive-interaction-skeleton-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "responsive-accessibility-skeleton-20261124",
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "accordion",
+      "route": "/zh-hans/components/accordion",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-accordion-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-accordion-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "toggle-button",
+      "route": "/zh-hans/components/toggle-button",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "responsive-visual-toggle-button-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "responsive-interaction-toggle-button-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "responsive-accessibility-toggle-button-20261124",
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "tag-group",
+      "route": "/zh-hans/components/tag-group",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "responsive-visual-tag-group-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "responsive-interaction-tag-group-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "responsive-accessibility-tag-group-20261124",
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "modal",
+      "route": "/zh-hans/components/modal",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-modal-20261124",
+            "formal-candidate-visual-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-modal-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-recent-accessibility-20261124",
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "popover",
+      "route": "/zh-hans/components/popover",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-popover-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-popover-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "counter",
+      "route": "/zh-hans/components/counter",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "responsive-visual-counter-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "responsive-interaction-counter-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "responsive-accessibility-counter-20261124",
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "toast",
+      "route": "/zh-hans/components/toast",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "responsive-visual-toast-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "responsive-interaction-toast-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "responsive-accessibility-toast-20261124",
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "drawer",
+      "route": "/zh-hans/components/drawer",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-drawer-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-drawer-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "number-field",
+      "route": "/zh-hans/components/number-field",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-number-field-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-number-field-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "combobox",
+      "route": "/zh-hans/components/combobox",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "responsive-visual-combobox-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "responsive-interaction-combobox-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "responsive-accessibility-combobox-20261124",
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "meter",
+      "route": "/zh-hans/components/meter",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [
+            "api-extraction-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "time-field",
+      "route": "/zh-hans/components/time-field",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-time-field-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-time-field-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "context-menu",
+      "route": "/zh-hans/components/context-menu",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-context-menu-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-context-menu-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "date-calendar",
+      "route": "/zh-hans/components/date-calendar",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-date-calendar-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-date-calendar-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "color-picker",
+      "route": "/zh-hans/components/color-picker",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-color-picker-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-color-picker-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "token-input",
+      "route": "/zh-hans/components/token-input",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "responsive-visual-token-input-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "responsive-interaction-token-input-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "responsive-accessibility-token-input-20261124",
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "command-palette",
+      "route": "/zh-hans/components/command-palette",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-command-palette-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-command-palette-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "composer",
+      "route": "/zh-hans/components/composer",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-composer-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-composer-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [
+            "api-extraction-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "orders-chart-card",
+      "route": "/zh-hans/components/orders-chart-card",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-orders-chart-card-20261124",
+            "chart-workspace-visual-orders-chart-card-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-orders-chart-card-20261124",
+            "chart-workspace-interaction-orders-chart-card-20261124",
+            "consolidated-data-chart-interaction-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "chart-workspace-accessibility-orders-chart-card-20261124",
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-data-chart-accessibility-20261125",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "template:calendar",
+      "route": "/zh-hans/templates/calendar",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-template-calendar-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-template-calendar-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    },
+    {
+      "slug": "template:hr",
+      "route": "/zh-hans/templates/hr",
+      "dimensions": {
+        "visual": {
+          "status": "pending",
+          "partial": [
+            "compound-visual-template-hr-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "interaction": {
+          "status": "pending",
+          "partial": [
+            "compound-interaction-template-hr-20261124"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "accessibility": {
+          "status": "pending",
+          "partial": [
+            "formal-full-edge-accessibility-20261124",
+            "formal-three-browser-accessibility-45426162052",
+            "formal-three-browser-45437101528",
+            "consolidated-full-rtl-accessibility-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        },
+        "api": {
+          "status": "pending",
+          "partial": [],
+          "passed": [],
+          "failed": []
+        },
+        "rtl": {
+          "status": "pending",
+          "partial": [
+            "consolidated-full-rtl-rtl-20261125"
+          ],
+          "passed": [],
+          "failed": []
+        }
+      }
+    }
+  ]
+}
