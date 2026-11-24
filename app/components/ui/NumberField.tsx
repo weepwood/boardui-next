@@ -10,6 +10,7 @@ import {
 } from "react-aria-components";
 import { cn } from "@/lib/utils";
 import { Icon } from "./Icon";
+import { fieldLabel,fieldState,fieldText } from "@/packages/react/field-styles";
 
 export interface BNumberFieldProps extends Omit<NumberFieldProps, "className" | "children"> {
   label?: string;
@@ -19,34 +20,24 @@ export interface BNumberFieldProps extends Omit<NumberFieldProps, "className" | 
 /** 数字输入：带上下步进按钮 */
 export function NumberField({ label, className, ...props }: BNumberFieldProps) {
   return (
-    <RACNumberField {...props} className={cn("flex w-full flex-col gap-1.5", className)}>
-      {label && <Label className="text-body-2-medium text-text-primary">{label}</Label>}
+    <RACNumberField {...props} aria-label={props["aria-label"]??(!label?"数值":undefined)} className={cn("flex w-full flex-col gap-1", className)}>
+      {label && <Label className={fieldLabel}>{label}</Label>}
       <Group
-        className={cn(
-          "flex h-9 w-full items-center gap-1 rounded-2lg px-2",
-          "bg-background-tertiary-default",
-          "ring-2 ring-inset ring-transparent",
-          "transition-[background-color,box-shadow] duration-150 ease-out",
-          "hover:bg-background-tertiary-hover",
-          "focus-within:ring-border-focus-ring"
-        )}
+        className={fieldState}
       >
         <Input
-          className={cn(
-            "min-w-0 flex-1 bg-transparent text-body-medium text-text-primary tabular-nums outline-none",
-            "placeholder:text-text-placeholder"
-          )}
+          className={cn(fieldText,"tabular-nums")}
         />
         <div className="flex flex-col">
           <Button
-            slot="increment"
-            className="flex h-3.5 w-5 cursor-pointer items-center justify-center rounded text-foreground-icon-secondary hover:bg-background-secondary-hover"
+            slot="increment" aria-label="增加"
+            className="flex h-3.5 w-5 cursor-pointer items-center justify-center rounded text-foreground-icon-secondary hover:bg-background-secondary-hover outline-none focus-visible:ring-2 focus-visible:ring-border-focus-ring disabled:opacity-40 disabled:cursor-not-allowed"
           >
             <Icon name="arrow-up-s-line" className="size-3" />
           </Button>
           <Button
-            slot="decrement"
-            className="flex h-3.5 w-5 cursor-pointer items-center justify-center rounded text-foreground-icon-secondary hover:bg-background-secondary-hover"
+            slot="decrement" aria-label="减少"
+            className="flex h-3.5 w-5 cursor-pointer items-center justify-center rounded text-foreground-icon-secondary hover:bg-background-secondary-hover outline-none focus-visible:ring-2 focus-visible:ring-border-focus-ring disabled:opacity-40 disabled:cursor-not-allowed"
           >
             <Icon name="arrow-down-s-line" className="size-3" />
           </Button>

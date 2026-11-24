@@ -6,7 +6,9 @@
  * 演示内容用 JSX 直接定义，保证可交互。
  */
 import { useState } from "react";
-import { RiAddLine as AddGlyph, RiEditLine as EditGlyph, RiArrowRightLine as ArrowGlyph } from "@remixicon/react";
+import { DialogTrigger, Dialog } from "react-aria-components";
+import { Dropdown, DropdownTrigger, DropdownPopover, DropdownGroup, DropdownItem, DropdownDivider } from "@/packages/react/dropdown";
+import { RiMailLine, RiSearchLine, RiAddLine as AddGlyph, RiEditLine as EditGlyph, RiArrowRightLine as ArrowGlyph } from "@remixicon/react";
 import type { ReactNode } from "react";
 
 import { Button } from "@/app/components/ui/Button";
@@ -20,7 +22,7 @@ import { Switch } from "@/app/components/ui/Switch";
 import { Checkbox } from "@/app/components/ui/Checkbox";
 import { Radio, RadioGroup } from "@/app/components/ui/Radio";
 import { Select } from "@/app/components/ui/Select";
-import { Slider } from "@/app/components/ui/Slider";
+import { Slider, RangeSlider } from "@/app/components/ui/Slider";
 import { Badge } from "@/app/components/ui/Badge";
 import { Avatar } from "@/app/components/ui/Avatar";
 import { Progress } from "@/app/components/ui/Progress";
@@ -29,6 +31,9 @@ import { Skeleton } from "@/app/components/ui/Skeleton";
 import { Divider } from "@/app/components/ui/Divider";
 import { Icon } from "@/app/components/ui/Icon";
 import { Tabs, TabList, Tab, TabPanel, TabCount } from "@/app/components/ui/Tabs";
+import { Collapsible } from "@/app/components/ui/Collapsible";
+import { Notification as CoreNotification } from "@/packages/react/notification";
+import { Announcement as CoreAnnouncement } from "@/packages/react/announcement";
 import { Accordion, AccordionItem } from "@/app/components/ui/Accordion";
 import { Tooltip, TooltipTrigger } from "@/app/components/ui/Tooltip";
 import { ToggleButtonGroup, ToggleButton } from "@/app/components/ui/ToggleButton";
@@ -119,9 +124,7 @@ function ModalDemo() {
         description="他们会收到一封电子邮件，其中包含加入工作区的链接。"
       >
         <DialogBody>
-          <div className="flex h-9 items-center rounded-2lg bg-background-secondary-default px-3 text-body-medium text-text-placeholder">
-            输入邮箱地址…
-          </div>
+          <Input label="邮箱地址" type="email" placeholder="输入邮箱地址…"/>
         </DialogBody>
         <DialogFooter>
           <Button variant="secondary" onClick={() => setOpen(false)}>
@@ -144,7 +147,7 @@ function MenuDemo() {
         操作菜单
       </Button>
       <Popover>
-        <Menu>
+        <Menu aria-label="操作菜单">
           <BMenuItem id="edit" label="编辑" icon="edit-line" shortcut="⌘E" />
           <BMenuItem id="copy" label="复制链接" icon="link" shortcut="⌘C" />
           <BMenuItem id="share" label="分享" icon="share-line" />
@@ -161,8 +164,8 @@ function SelectDemo() {
     <div className="w-full max-w-xs">
       <Select
         label="框架"
-        value={v}
-        onChange={(x) => setV(String(x))}
+        selectedKey={v}
+        onSelectionChange={(x) => setV(String(x))}
         options={[
           { id: "react", label: "React", icon: "reactjs-line" },
           { id: "vue", label: "Vue", icon: "vuejs-line" },
@@ -188,6 +191,28 @@ function ButtonFamilyDemo() {
   return <div className="flex flex-col gap-3" data-testid="button-family"><CoreButtonGroup aria-label="对齐方式"><ButtonGroupItem selected={selection==="left"} onClick={()=>setSelection("left")}>左</ButtonGroupItem><ButtonGroupItem selected={selection==="center"} onClick={()=>setSelection("center")}>中</ButtonGroupItem><ButtonGroupItem selected={selection==="right"} onClick={()=>setSelection("right")}>右</ButtonGroupItem></CoreButtonGroup><div className="flex items-center gap-2"><CoreIconButton icon={AddGlyph} aria-label="增加计数" onClick={()=>setCount(n=>n+1)}/><CoreCloseButton aria-label="重置计数" onClick={()=>setCount(0)}/><output aria-live="polite">{selection} / {count}</output></div></div>;
 }
 
+function ControlledFormDemo() {
+  const [value,setValue]=useState("");
+  const [notes,setNotes]=useState("");
+  const [search,setSearch]=useState("");
+  return <div data-testid="form-fields" className="flex w-full max-w-sm flex-col gap-4">
+    <Input label="受控邮箱" type="email" value={value} onChange={setValue} isRequired leadingIcon={RiMailLine} description="输入有效邮箱" />
+    <Textarea label="受控备注" value={notes} onChange={setNotes} rows={2} autoResize maxRows={5} maxLength={100} showCount />
+    <SearchField aria-label="受控搜索" value={search} onChange={setSearch} />
+    <output aria-live="polite">{value} / {notes.length} / {search}</output>
+  </div>;
+}
+function DropdownSurfaceDemo(){
+  const [open,setOpen]=useState(false);
+  const [action,setAction]=useState("尚未操作");
+  return <div className="flex flex-col items-center gap-3"><Dropdown isOpen={open} onOpenChange={setOpen}>
+    <DropdownTrigger className="rounded-2lg border border-border-button-default bg-background-primary-default px-3 py-2 text-body-medium shadow-xs">打开分组菜单</DropdownTrigger>
+    <DropdownPopover aria-label="分组操作"><DropdownGroup label="项目"><DropdownItem onSelect={()=>{setAction("编辑");setOpen(false)}}><Icon name="edit-line" className="size-5"/>编辑</DropdownItem><DropdownItem onSelect={()=>{setAction("分享");setOpen(false)}}><Icon name="share-line" className="size-5"/>分享</DropdownItem></DropdownGroup><DropdownDivider/><DropdownItem onSelect={()=>{setAction("删除");setOpen(false)}} className="text-text-error-primary">删除</DropdownItem></DropdownPopover>
+  </Dropdown><output aria-live="polite">{action}</output></div>;
+}
+function PopoverDemo(){
+  return <DialogTrigger><Button variant="secondary">打开浮层</Button><Popover className="w-64"><Dialog aria-label="设置浮层" className="flex flex-col gap-3 outline-none"><p className="text-body-medium">快速设置</p><Input label="名称" placeholder="输入名称"/><Button slot="close" variant="secondary">关闭</Button></Dialog></Popover></DialogTrigger>;
+}
 export const docs: Record<string, Doc> = {
   button: {
     title: "按钮",
@@ -248,59 +273,32 @@ export const docs: Record<string, Doc> = {
 
   input: {
     title: "输入框",
-    description: "单行文本输入。浅灰底无边框，聚焦时切换为白底加描边。",
-    install: "npx boardui@latest add input",
-    preview: (
-      <div className="flex w-full max-w-sm flex-col gap-3">
-        <Input
-          label="电子邮箱"
-          placeholder="输入您的电子邮箱"
-          icon={<Icon name="mail-line" className="size-4" />}
-        />
-        <Input label="搜索" placeholder="搜索组件…" icon={<Icon name="search-line" className="size-4" />} />
-      </div>
-    ),
+    description: "原版 React Aria 输入框：统一 32/36px 灰底容器、标签、辅助说明与语义状态，聚焦时使用内描边。",
+    preview: <div className="flex w-full max-w-sm flex-col gap-3">
+      <Input label="电子邮箱" placeholder="输入您的电子邮箱" type="email" leadingIcon={RiMailLine} isRequired description="请输入有效的邮箱地址"/>
+      <Input label="搜索" placeholder="搜索组件…" leadingIcon={RiSearchLine} size="small"/>
+    </div>,
     demos: [
-      {
-        id: "states",
-        title: "状态",
-        node: (
-          <div className="flex w-full max-w-sm flex-col gap-3">
-            <Input label="默认" placeholder="请输入" />
-            <Input label="禁用" placeholder="不可编辑" isDisabled />
-            <Input
-              label="带说明"
-              placeholder="请输入"
-              description="这行是辅助说明文字"
-            />
-          </div>
-        ),
-      },
+      {id:"states",title:"状态",node:<div className="flex w-full max-w-sm flex-col gap-4"><Input label="默认" placeholder="请输入"/><Input label="禁用" defaultValue="不可编辑" isDisabled/><Input label="错误" placeholder="请输入邮箱" isInvalid invalidMessage="邮箱格式有误"/><Input label="只读" defaultValue="只读内容" isReadOnly/></div>},
+      {id:"controlled",title:"受控表单",node:<ControlledFormDemo/>},
     ],
   },
 
   textarea: {
     title: "多行文本框",
-    description: "多行文本输入，支持自适应高度。",
-    install: "npx boardui@latest add textarea",
-    preview: (
-      <div className="w-full max-w-sm">
-        <Textarea label="备注" placeholder="输入备注…" description="最多 500 字" />
-      </div>
-    ),
-    demos: [],
+    description: "复用 Input 的标签、辅助文字、语义状态与灰底容器。支持自动增高、最大行数、字符统计及原生调整高度。",
+    preview: <div className="w-full max-w-sm"><Textarea label="备注" placeholder="输入备注…" rows={3} maxLength={500} showCount description="填写补充说明"/></div>,
+    demos: [
+      {id:"auto-resize",title:"自动增高",node:<div className="w-full max-w-sm"><Textarea label="自适应文本域" rows={2} autoResize maxRows={5} maxLength={200} showCount placeholder="输入多行文本…"/></div>},
+      {id:"states",title:"状态",node:<div className="flex w-full max-w-sm flex-col gap-4"><Textarea label="禁用" isDisabled defaultValue="不可编辑" rows={2}/><Textarea label="错误" isInvalid hint="请填写备注" rows={2}/></div>},
+    ],
   },
 
   "search-field": {
     title: "搜索框",
-    description: "带清除按钮的搜索输入，遵循 iOS 风格圆角胶囊。",
-    install: "npx boardui@latest add search-field",
-    preview: (
-      <div className="w-full max-w-sm">
-        <SearchField placeholder="搜索组件…" />
-      </div>
-    ),
-    demos: [],
+    description: "沿用 BoardUI 输入框的语义令牌与交互节奏，保留胶囊形态、搜索图标及可访问的清除按钮。此项为本地扩展。",
+    preview: <div className="w-full max-w-sm"><SearchField placeholder="搜索组件…"/></div>,
+    demos: [{id:"states",title:"状态",node:<div className="flex w-full max-w-sm flex-col gap-4"><SearchField aria-label="已有搜索内容" defaultValue="BoardUI"/><SearchField aria-label="禁用搜索" defaultValue="不可编辑" isDisabled/></div>}],
   },
 
   switch: {
@@ -395,7 +393,7 @@ export const docs: Record<string, Doc> = {
 
   select: {
     title: "选择器",
-    description: "下拉单选，触发按钮白底描边，面板带选中对勾。",
+    description: "原版单选触发器与共享浮层，支持旋转箭头、键盘选择和外部点击关闭。",
     install: "npx boardui@latest add select",
     preview: <SelectDemo />,
     demos: [],
@@ -413,11 +411,11 @@ export const docs: Record<string, Doc> = {
     demos: [
       {
         id: "range",
-        title: "分段",
+        title: "范围滑块",
         node: (
           <div className="flex w-full max-w-sm flex-col gap-4">
-            <Slider label="亮度" defaultValue={30} />
-            <Slider label="对比度" defaultValue={85} />
+            <RangeSlider label="价格区间" defaultValue={[20,80]} minValue={0} maxValue={100} thumbLabels={["最低值","最高值"]} className="w-full"/>
+            <Slider label="禁用" defaultValue={50} isDisabled/>
           </div>
         ),
       },
@@ -537,7 +535,7 @@ export const docs: Record<string, Doc> = {
 
   tabs: {
     title: "标签页",
-    description: "分段式切换视图，选中项白底带细阴影，切换时内容淡入。",
+    description: "原版下划线标签页，动态测量选中项并平滑移动指示线。",
     install: "npx boardui@latest add tabs",
     preview: <TabsDemo />,
     demos: [],
@@ -548,16 +546,16 @@ export const docs: Record<string, Doc> = {
     description: "把内容折叠进原地展开的面板，使用 grid 行高动画。",
     install: "npx boardui@latest add accordion",
     preview: <AccordionDemo />,
-    demos: [],
+    demos: [{id:"single",title:"单项展开与禁用",node:<div className="w-full max-w-sm"><Accordion allowsMultiple={false} defaultExpandedKeys={["first"]}><AccordionItem id="first" title="第一项">第一项内容</AccordionItem><AccordionItem id="second" title="第二项">第二项内容</AccordionItem><AccordionItem id="disabled" title="禁用项" isDisabled>不可展开</AccordionItem></Accordion><Collapsible title="更多设置"><Input label="折叠内输入框"/></Collapsible></div>}],
   },
 
   tooltip: {
     title: "提示气泡",
-    description: "悬停或聚焦时显示的简短说明。",
+    description: "原版浅色语义卡片、方向感知箭头、淡入缩放及模糊过渡。",
     install: "npx boardui@latest add tooltip",
     preview: (
-      <TooltipTrigger>
-        <Button variant="secondary">悬停查看提示</Button>
+      <TooltipTrigger delay={120}>
+        <AriaButton variant="secondary">悬停查看提示</AriaButton>
         <Tooltip>这是一个提示气泡</Tooltip>
       </TooltipTrigger>
     ),
@@ -604,7 +602,7 @@ export const docs: Record<string, Doc> = {
     description: "触发式操作菜单，支持图标、快捷键与危险项。",
     install: "npx boardui@latest add dropdown",
     preview: <MenuDemo />,
-    demos: [],
+    demos: [{id:"grouped",title:"分组菜单",node:<DropdownSurfaceDemo/>}],
   },
 
   modal: {
@@ -619,7 +617,7 @@ export const docs: Record<string, Doc> = {
     title: "弹出层",
     description: "锚定于触发元素的浮层面板。",
     install: "npx boardui@latest add popover",
-    preview: <MenuDemo />,
+    preview: <PopoverDemo />,
     demos: [],
   },
 
@@ -657,7 +655,7 @@ export const docs: Record<string, Doc> = {
 
   announcement: {
     title: "公告",
-    description: "页面级提示条，四种语义变体，可关闭。",
+    description: "原版紧凑卡片结构，支持语义图标、操作和柔和关闭动画。",
     install: "npx boardui@latest add announcement",
     preview: (
       <div className="flex w-full flex-col gap-2">
@@ -667,7 +665,7 @@ export const docs: Record<string, Doc> = {
         <Announcement variant="error" title="同步失败" description="无法连接到远端仓库，请检查网络。" />
       </div>
     ),
-    demos: [],
+    demos: [{id:"dismiss",title:"操作与关闭",node:<div className="w-full max-w-xs"><CoreAnnouncement title="完善工作区" description="管理工作区设置。" actionLabel="查看设置" dismissible closeLabel="关闭示例公告"/></div>}],
   },
 
   notification: {
@@ -681,7 +679,7 @@ export const docs: Record<string, Doc> = {
         <Notification variant="error" title="上传失败" description="文件大小超过限制，请压缩后重试。" />
       </div>
     ),
-    demos: [],
+    demos: [{id:"dismiss",title:"关闭与操作",node:<div className="w-full max-w-sm"><CoreNotification title="任务已完成" description="可手动关闭通知。" status="success" closeLabel="关闭示例通知" actions={[{label:"查看详情",variant:"secondary"}]}/></div>}],
   },
 
   toast: {
@@ -912,7 +910,7 @@ export const docs: Record<string, Doc> = {
 
   "time-field": {
     title: "时间输入框",
-    description: "时/分双格输入，支持方向键步进。",
+    description: "基于 React Aria 时间分段输入，支持受控时分、键盘步进和本地化。",
     install: "npx boardui@latest add time-field",
     preview: <TimeDemo />,
     demos: [],
@@ -951,7 +949,7 @@ export const docs: Record<string, Doc> = {
 
   "date-picker": {
     title: "日期选择器",
-    description: "输入框 + 弹出日历，点击外部或 Esc 关闭。",
+    description: "原版日期弹层，支持月导航、日期编辑、取消和应用。未应用时不修改已选值。",
     install: "npx boardui@latest add date-picker",
     preview: <DatePickerDemo />,
     demos: [],
@@ -959,7 +957,7 @@ export const docs: Record<string, Doc> = {
 
   "color-picker": {
     title: "颜色选择器",
-    description: "预设色板 + HEX 输入，实时预览。",
+    description: "预设色板与 HEX 草稿；只提交有效六位颜色，支持键盘操作。",
     install: "npx boardui@latest add color-picker",
     preview: <ColorDemo />,
     demos: [],
@@ -967,7 +965,7 @@ export const docs: Record<string, Doc> = {
 
   "token-input": {
     title: "Token 输入框",
-    description: "多值标签输入，Enter 添加、Backspace 删除末项、支持格式校验。",
+    description: "多值标签输入，支持 Enter、逗号、批量粘贴、去重与校验；输入法组词期间不会误提交。",
     install: "npx boardui@latest add token-input",
     preview: <TokenDemo />,
     demos: [],
@@ -1479,7 +1477,7 @@ function TabsDemo() {
             id={it.id}
             className="rounded-2lg border border-border-primary p-4 text-body-regular text-text-secondary"
           >
-            {it.label}面板内容。切换标签时内容淡入，底部指示线随选中项移动。
+            {it.label}面板内容。底部指示线随选中项移动。
           </TabPanel>
         ))}
       </Tabs>
@@ -1599,7 +1597,7 @@ function TimeDemo() {
   const [t, setT] = useState({ hour: 9, minute: 30 });
   return (
     <div className="flex flex-col gap-1">
-      <TimeField label="会议时间" defaultValue={t} onChange={setT} />
+      <TimeField label="会议时间" value={t} onChange={setT} />
       <span className="text-caption-2-regular text-text-tertiary">
         {String(t.hour).padStart(2, "0")}:{String(t.minute).padStart(2, "0")}
       </span>
@@ -1630,7 +1628,7 @@ function ContextMenuDemo() {
 }
 
 function CalendarDemo() {
-  const [d, setD] = useState<Date | undefined>(new Date());
+  const [d, setD] = useState<Date | undefined>(new Date(2026,10,24));
   return (
     <div className="flex flex-wrap items-start gap-3">
       <DateCalendar value={d} onChange={setD} />
@@ -1645,13 +1643,13 @@ function CalendarDemo() {
 }
 
 function DatePickerDemo() {
-  const [d, setD] = useState<Date | undefined>(new Date());
-  return <DatePicker label="开始日期" value={d} onChange={setD} />;
+  const [d, setD] = useState<Date | undefined>(new Date(2026,10,24));
+  return <div className="flex flex-col items-start gap-2"><DatePicker label="开始日期" value={d} onChange={setD}/><output data-testid="date-committed">{formatDate(d)}</output></div>;
 }
 
 function ColorDemo() {
   const [c, setC] = useState("#3080ff");
-  return <ColorPicker label="主题色" value={c} onChange={setC} />;
+  return <div className="flex flex-col gap-2"><ColorPicker label="主题色" value={c} onChange={setC}/><output data-testid="color-committed">{c}</output></div>;
 }
 
 function TokenDemo() {

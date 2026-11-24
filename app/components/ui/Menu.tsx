@@ -11,6 +11,7 @@ import {
   type MenuProps,
 } from "react-aria-components";
 import { cn } from "@/lib/utils";
+import { MENU_ITEM, MENU_ITEMS_CONTAINER } from "@/packages/react/menu-styles";
 import { Icon } from "./Icon";
 
 export { MenuTrigger, MenuItem, MenuSection, MenuSeparator };
@@ -30,7 +31,7 @@ export function Menu({
   return (
     <RACMenu
       {...props}
-      className={cn("flex flex-col gap-0.5 outline-none", className)}
+      className={cn(MENU_ITEMS_CONTAINER, className)}
     >
       {children}
     </RACMenu>
@@ -60,13 +61,13 @@ export function BMenuItem({
     <MenuItem
       {...props}
       className={cn(
-        "group flex cursor-pointer items-center gap-2 rounded-md px-2 py-1.5",
-        "text-body-2-medium outline-none select-none",
+        "group", MENU_ITEM,
+        "text-body-medium outline-none select-none",
         "transition-colors duration-150 ease-out",
-        danger ? "text-red-600" : "text-text-primary",
+        danger ? "text-text-error-primary" : "text-text-primary",
         danger
           ? "hovered:bg-red-50 focus:bg-red-50 dark:hovered:bg-red-950/40 dark:focus:bg-red-950/40"
-          : "hovered:bg-background-secondary-hover focus:bg-background-secondary-hover",
+          : "hovered:bg-dropdown-item-hover-background focus:bg-dropdown-item-hover-background",
         "disabled:cursor-not-allowed disabled:text-text-tertiary",
         className
       )}
@@ -75,7 +76,7 @@ export function BMenuItem({
         <Icon
           name={icon}
           className={cn(
-            "size-4 shrink-0",
+            "size-5 shrink-0",
             danger ? "text-red-500" : "text-foreground-icon-secondary"
           )}
         />

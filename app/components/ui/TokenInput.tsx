@@ -1,8 +1,9 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useId, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
-import { Icon } from "./Icon";
+import { CloseButton } from "@/packages/react/close-button";
+import { fieldSurface,fieldText,fieldLabel } from "@/packages/react/field-styles";
 
 /**
  * Token 输入框：多值标签输入。
@@ -25,6 +26,7 @@ export function TokenInput({
   validate?: (v: string) => boolean;
   className?: string;
 }) {
+  const id=useId();
   const [inner, setInner] = useState<string[]>(defaultValue);
   const tokens = value ?? inner;
   const [draft, setDraft] = useState("");
@@ -41,30 +43,29 @@ export function TokenInput({
     if (!v) return;
     if (validate && !validate(v)) {
       setInvalid(true);
-      setTimeout(() => setInvalid(false), 1200);
+
       return;
     }
     if (tokens.includes(v)) {
       setDraft("");
       return;
     }
+    setInvalid(false);
     commit([...tokens, v]);
     setDraft("");
   };
 
   return (
     <div className={cn("flex w-full flex-col gap-1.5", className)}>
-      {label && <span className="text-body-2-medium text-text-primary">{label}</span>}
+      {label && <label htmlFor={id} className={fieldLabel}>{label}</label>}
 
       <div
         onClick={() => inputRef.current?.focus()}
         className={cn(
-          "flex min-h-9 w-full cursor-text flex-wrap items-center gap-1 rounded-2lg px-2 py-1",
-          "border bg-background-primary-default shadow-xs",
-          "transition-[border-color,box-shadow] duration-150 ease-out",
+          fieldSurface,"w-full cursor-text flex-wrap gap-1",
           invalid
-            ? "border-red-500 ring-2 ring-red-500/25"
-            : "border-border-button-default focus-within:ring-2 focus-within:ring-accent-500/30"
+            ? "bg-background-tertiary-error ring-border-error-default"
+            : "focus-within:ring-border-button-active"
         )}
       >
         {tokens.map((t) => (
@@ -73,26 +74,18 @@ export function TokenInput({
             className="inline-flex items-center gap-1 rounded-md bg-background-secondary-default px-1.5 py-0.5 text-caption-1-medium text-text-primary"
           >
             {t}
-            <button
-              type="button"
-              aria-label={`移除 ${t}`}
-              onClick={(e) => {
-                e.stopPropagation();
-                commit(tokens.filter((x) => x !== t));
-              }}
-              className="flex size-3.5 cursor-pointer items-center justify-center rounded-full text-text-tertiary hover:bg-black/10 hover:text-text-primary"
-            >
-              <Icon name="close-line" className="size-2.5" />
-            </button>
+            <CloseButton size="2xs" aria-label={`移除 ${t}`} onClick={e=>{e.stopPropagation();commit(tokens.filter(x=>x!==t));inputRef.current?.focus();}}/>
           </span>
         ))}
 
         <input
-          ref={inputRef}
+          ref={inputRef} id={id} aria-label={label??"标签输入"} aria-invalid={invalid} aria-describedby={invalid?id+"-error":undefined}
           value={draft}
-          onChange={(e) => setDraft(e.target.value)}
+          onChange={(e) => {setDraft(e.target.value);setInvalid(false)}}
+          onPaste={e=>{const raw=e.clipboardData.getData("text");if(!/[,，;\n]/.test(raw))return;e.preventDefault();const parts=raw.split(/[,，;\n]+/).map(s=>s.trim()).filter(Boolean);const accepted=parts.filter(t=>!validate||validate(t));const rejected=parts.filter(t=>validate&&!validate(t));commit([...new Set([...tokens,...accepted])]);setDraft(rejected.join(", "));setInvalid(!!rejected.length);}}
           onKeyDown={(e) => {
-            if (e.key === "Enter" || e.key === ",") {
+            if(e.nativeEvent.isComposing)return;
+            if (e.key === "Enter" || e.key === "," || e.key==="，") {
               e.preventDefault();
               add();
             }
@@ -103,11 +96,11 @@ export function TokenInput({
           }}
           onBlur={add}
           placeholder={tokens.length ? "" : placeholder}
-          className="min-w-[100px] flex-1 bg-transparent px-1 text-body-medium text-text-primary outline-none placeholder:text-text-placeholder"
+          className={cn(fieldText,"min-w-[100px]")}
         />
       </div>
       {invalid && (
-        <span className="text-caption-2-regular text-red-500">格式不正确，请检查后重试</span>
+        <span id={id+"-error"} role="alert" className="text-caption-2-regular text-text-error-primary">格式不正确，请检查后重试</span>
       )}
     </div>
   );

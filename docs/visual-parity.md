@@ -21,3 +21,23 @@ PR #6 已通过专项检查，本地 Edge 实测详情页与总览页双主题�
 采用与上游一致的 @remixicon/react 4.9.0，按已使用名称生成静态导入表（避免引入整个库）。旧 Icon name/size/className 保留；两个历史无效日历名称映射到相近原版 glyph，未知名称使用问号 SVG。新增图标名后运行 npm run icons:generate；外部组件可直接传入任意 Remix SVG 组件。方向镜像仅针对导航箭头、侧栏折叠，不翻转商标、媒体或趋势。
 
 Button 按压反馈兼容原生 :active 与 React Aria data-pressed；使用浏览器验证原版约 0.98 缩放及回弹，并尊重 reduced motion。
+
+### 输入控件
+
+Input 与 Textarea 接入固定上游 MIT React Aria 组件，复用 Label/HintText、TextFieldContext 和语义状态。旧 icon/suffix/description 与四行默认 textarea 保留。SearchField 为本地扩展，修复非空清除按钮不可见问题，使用同一套灰底与状态反馈。新增受控输入、说明关联、自动增高和清除搜索专项检查。
+
+### 批量导航与浮层重构
+
+移植 Tabs、PillTab、SegmentedControl、Select、Dropdown、Tooltip 及方向/chevron/菜单配方；Combobox 与 Popover 为本地扩展，复用原版共享配方。保留现有数组式适配器及原有 Menu 语义，补齐键盘、过滤、关闭与选中状态测试。
+
+### 第四批：反馈与模态组件
+
+Notification/Announcement 移植上游 MIT 源与 Motion，保留历史调用；Dialog/Drawer/Accordion/Collapsible/Toast 为独立本地扩展，采用原版主题、关闭控件与过渡风格。Drawer 迁移至 React Aria 模态管理；折叠内容关闭时 inert，避免键盘访问不可见内容。新增单选折叠、关闭和焦点测试。Avatar 暂时使用兼容适配器，后续单独迁移。
+
+### 第五批：日期与数值输入
+
+DatePicker、Slider、InputOtp 直接移植公开 MIT 实现；DateCalendar 复用上游 MonthPanel/DayCell，TimeField、NumberField、ColorPicker、TokenInput 为本地扩展。增加共享 field-styles、CalendarDate/Date 转换，保留已有调用方式。日期选择支持草稿/应用/取消、范围约束，滑块增加双端范围，颜色仅提交完整 HEX，标签支持中文逗号与批量粘贴。新增八组专项测试。
+
+### 集中验收与积压清理
+
+将 #9–#12 的依赖链汇总到同一份 main 候选变更，使用单次构建覆盖四个批次，不再等待每个中间分支重复构建。Textarea 自动测量时禁止 height 过渡，避免 reduced-motion 全局规则影响 scrollHeight；Dropdown 交给 React Aria 管理开关、外部关闭和焦点恢复，保留上游视觉配方；NumberField 的键盘测试按实际本地化文本框语义定位。保留原有专项断言及正式发布完整验收。旧 PR 在汇总变更合并前保留，不提前关闭。

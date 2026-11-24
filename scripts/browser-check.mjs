@@ -25,11 +25,12 @@ if(!full)for(const route of JSON.parse(process.env.TARGET_ROUTES||'[]'))if(!rout
 const report=[],errors=[];
 let browser;
 try{
-  browser=await ({chromium,firefox,webkit}[browserName]).launch();
+  browser=await ({chromium,firefox,webkit}[browserName]).launch(process.env.BROWSER_EXECUTABLE?{executablePath:process.env.BROWSER_EXECUTABLE}:{});
   if(full)mkdirSync('acceptance',{recursive:true});
   for(const theme of full?['light','dark']:['light']){
     const context=await browser.newContext({viewport:{width:1440,height:1000},colorScheme:theme,reducedMotion:'reduce'});
     const page=await context.newPage();
+    page.setDefaultTimeout(10000);
     const failures=[];
     page.on('pageerror',e=>failures.push(e.message));
     page.on('response',r=>{if(r.url().startsWith(origin)&&r.status()>=400)failures.push(r.status()+' '+r.url());});
@@ -63,9 +64,9 @@ try{
           const arrow=page.locator('#preview button').filter({hasText:'继续'}).locator('svg').first();
           assert.equal(await arrow.evaluate(e=>e.getAttribute('viewBox')),'0 0 24 24');
           assert.ok((await arrow.evaluate(e=>getComputedStyle(e).rotate))==='none');
-          await page.locator('html').evaluate(e=>e.dir='rtl');
+          await arrow.evaluate(e=>e.closest('[dir]').dir='rtl');
           assert.ok((await arrow.evaluate(e=>getComputedStyle(e).rotate)).includes('180deg'));
-          await page.locator('html').evaluate(e=>e.dir='ltr');
+          await arrow.evaluate(e=>e.closest('[dir]').dir='ltr');
           const geometry=await page.evaluate(()=>{const r=s=>{const e=document.querySelector(s);const b=e.getBoundingClientRect();return [b.x,b.y,b.width,b.height].map(Math.round)};return {main:r('main'),heading:r('main h1'),sidebar:r('aside'),toc:r('main+aside'),canvas:r('#preview > div > div:last-child'),shadow:getComputedStyle(document.documentElement).getPropertyValue('--shadow-sidebar').trim(),font:document.fonts.check('14px "Noto Sans SC Variable"','按钮')}});
           const near=(actual,expected,tolerance=12)=>assert.ok(actual.every((n,i)=>Math.abs(n-expected[i])<=tolerance), JSON.stringify({actual,expected,tolerance}));
           near(geometry.main.slice(0,3),[324,40,808]);
@@ -98,6 +99,194 @@ try{
           const link=page.getByRole('link',{name:'查看组件',exact:true});
           await link.waitFor({state:'visible'});
           assert.ok((await link.getAttribute('href')).startsWith(base+'/'));
+        }
+        if(route==='/zh-hans/components/date-picker/'){
+          const trigger=page.locator('#preview').getByRole('button',{name:'开始日期'});
+          const committed=page.getByTestId('date-committed');
+          assert.equal(await committed.textContent(),'2026-11-24');
+          await trigger.click();
+          const dialog=page.getByRole('dialog',{name:'开始日期'});
+          await dialog.waitFor();
+          const date=dialog.getByRole('textbox',{name:'日期'});
+          await date.fill('25/11/2026');await date.press('Tab');
+          await dialog.getByRole('button',{name:'取消'}).click();
+          await dialog.waitFor({state:'hidden'});
+          assert.equal(await committed.textContent(),'2026-11-24');
+          await trigger.click();await dialog.waitFor();
+          await date.fill('25/11/2026');await date.press('Tab');
+          await dialog.getByRole('button',{name:'应用'}).click();
+          await dialog.waitFor({state:'hidden'});
+          assert.equal(await committed.textContent(),'2026-11-25');
+        }
+        if(route==='/zh-hans/components/date-calendar/'){
+          const calendar=page.locator('#preview');
+          const grid=calendar.getByRole('grid');
+          await grid.waitFor();
+          await calendar.getByRole('button',{name:'下个月'}).click();
+          assert.ok((await grid.getAttribute('aria-label')||await grid.textContent()).length>0);
+          await calendar.getByRole('button',{name:'上个月'}).click();
+          await grid.getByRole('button').filter({hasText:/^25$/}).first().click();
+          assert.ok((await calendar.textContent()).includes('2026-11-25'));
+        }
+        if(route==='/zh-hans/components/time-field/'){
+          const segment=page.locator('#preview').getByRole('spinbutton').first();
+          await segment.press('ArrowUp');
+          assert.ok((await page.locator('#preview').textContent()).includes('10:30'));
+        }
+        if(route==='/zh-hans/components/number-field/'){
+          const field=page.locator('#preview').getByRole('textbox',{name:'数量'});
+          await field.press('ArrowUp');
+          assert.equal(await field.inputValue(),'4');
+        }
+        if(route==='/zh-hans/components/slider/'){
+          const thumb=page.locator('#preview').getByRole('slider');
+          await thumb.press('ArrowRight');
+          assert.equal(await thumb.inputValue(),'61');
+          assert.equal(await page.getByRole('slider',{name:'最低值'}).inputValue(),'20');
+          assert.equal(await page.getByRole('slider',{name:'最高值'}).inputValue(),'80');
+        }
+        if(route==='/zh-hans/components/input-otp/'){
+          const demo=page.locator('#preview');
+          const first=demo.getByRole('textbox',{name:'第 1 位',exact:true});
+          await first.fill('123456');
+          await page.waitForFunction(()=>document.querySelector('#preview').textContent.includes('已输入 6 / 6'));
+          assert.equal(await demo.getByRole('textbox',{name:'第 6 位',exact:true}).inputValue(),'6');
+        }
+        if(route==='/zh-hans/components/color-picker/'){
+          const field=page.locator('#preview').getByRole('textbox',{name:'主题色'});
+          const output=page.getByTestId('color-committed');
+          await field.fill('abc');
+          assert.equal(await output.textContent(),'#3080ff');
+          await field.fill('123456');
+          assert.equal(await output.textContent(),'#123456');
+          await page.locator('#preview').getByRole('button',{name:'#fb2c36'}).click();
+          assert.equal(await output.textContent(),'#fb2c36');
+        }
+        if(route==='/zh-hans/components/token-input/'){
+          const field=page.locator('#preview').getByRole('textbox',{name:'收件人'});
+          await field.fill('invalid');await field.press('Enter');
+          assert.equal(await field.getAttribute('aria-invalid'),'true');
+          await field.fill('test@example.com');await field.press('Enter');
+          const remove=page.locator('#preview').getByRole('button',{name:'移除 test@example.com'});
+          await remove.click();await remove.waitFor({state:'hidden'});
+        }
+        if(route==='/zh-hans/components/modal/'){
+          const trigger=page.getByRole('button',{name:'打开弹窗'});
+          await trigger.click();
+          const dialog=page.getByRole('dialog',{name:'邀请团队成员'});
+          await dialog.waitFor();
+          await dialog.getByRole('textbox',{name:'邮箱地址'}).fill('demo@example.com');
+          await page.keyboard.press('Escape');
+          await dialog.waitFor({state:'hidden'});
+          assert.ok(await trigger.evaluate(e=>document.activeElement===e));
+        }
+        if(route==='/zh-hans/components/drawer/'){
+          await page.getByRole('button',{name:'打开抽屉'}).click();
+          const dialog=page.getByRole('dialog',{name:'项目设置'});
+          await dialog.waitFor();
+          await dialog.getByRole('button',{name:'关闭',exact:true}).click();
+          await dialog.waitFor({state:'hidden'});
+        }
+        if(route==='/zh-hans/components/accordion/'){
+          const first=page.getByRole('button',{name:'第一项',exact:true});
+          const second=page.getByRole('button',{name:'第二项',exact:true});
+          await second.click();
+          assert.equal(await first.getAttribute('aria-expanded'),'false');
+          assert.equal(await second.getAttribute('aria-expanded'),'true');
+          assert.ok(await page.getByRole('button',{name:'禁用项'}).isDisabled());
+          const more=page.getByRole('button',{name:'更多设置'});
+          await more.click();await page.getByRole('textbox',{name:'折叠内输入框'}).fill('test');
+          await more.click();assert.equal(await more.getAttribute('aria-expanded'),'false');
+        }
+        if(route==='/zh-hans/components/notification/'){
+          await page.getByRole('button',{name:'关闭示例通知'}).click();
+          await page.getByText('任务已完成',{exact:true}).waitFor({state:'hidden'});
+        }
+        if(route==='/zh-hans/components/announcement/'){
+          await page.getByRole('button',{name:'关闭示例公告'}).click();
+          await page.getByText('完善工作区',{exact:true}).waitFor({state:'hidden'});
+        }
+        if(route==='/zh-hans/components/tabs/'){
+          const tab=page.locator('#preview').getByRole('tab',{name:/横幅/});
+          await tab.press('ArrowRight');
+          assert.equal(await page.locator('#preview').getByRole('tab',{name:/帖子/}).getAttribute('aria-selected'),'true');
+        }
+        if(route==='/zh-hans/components/segmented-control/'){
+          const demo=page.locator('#preview');
+          await demo.getByRole('radio',{name:'月',exact:true}).click();
+          assert.equal(await demo.getByRole('radio',{name:'月',exact:true}).getAttribute('aria-checked'),'true');
+        }
+        if(route==='/zh-hans/components/select/'){
+          const trigger=page.locator('#preview').getByRole('button',{name:/框架/});
+          await trigger.click();
+          await page.getByRole('option',{name:'Vue',exact:true}).click();
+          assert.ok((await trigger.textContent()).includes('Vue'));
+          await trigger.click();
+          await page.keyboard.press('Escape');
+          await page.getByRole('listbox').waitFor({state:'hidden'});
+        }
+        if(route==='/zh-hans/components/combobox/'){
+          const field=page.locator('#preview').getByRole('combobox',{name:'城市'});
+          await field.fill('北京');
+          await page.getByRole('option',{name:'北京',exact:true}).waitFor();
+          assert.equal(await page.getByRole('option',{name:'上海',exact:true}).count(),0);
+          await page.getByRole('option',{name:'北京',exact:true}).click();
+          assert.equal(await field.inputValue(),'北京');
+        }
+        if(route==='/zh-hans/components/dropdown/'){
+          const trigger=page.getByRole('button',{name:'打开分组菜单'});
+          await trigger.scrollIntoViewIfNeeded();
+          await trigger.press('Enter');
+          const dialog=page.getByRole('dialog',{name:'分组操作'});
+          await dialog.waitFor();
+          await dialog.getByRole('button',{name:'编辑',exact:true}).click();
+          assert.ok((await page.locator('main output').allTextContents()).includes('编辑'));
+          await page.getByRole('dialog',{name:'分组操作'}).waitFor({state:'hidden'});
+        }
+        if(route==='/zh-hans/components/tooltip/'){
+          const trigger=page.getByRole('button',{name:'悬停查看提示'});
+          await trigger.scrollIntoViewIfNeeded();
+          await page.mouse.move(0,0);
+          await trigger.hover();
+          await page.getByRole('tooltip').waitFor({state:'visible'});
+          await page.mouse.move(0,0);
+          await page.getByRole('tooltip').waitFor({state:'hidden'});
+        }
+        if(route==='/zh-hans/components/popover/'){
+          await page.getByRole('button',{name:'打开浮层'}).click();
+          await page.getByRole('dialog',{name:'设置浮层'}).waitFor({state:'visible'});
+          await page.keyboard.press('Escape');
+          await page.getByRole('dialog',{name:'设置浮层'}).waitFor({state:'hidden'});
+        }
+        if(route==='/zh-hans/components/input/'){
+          const demo=page.getByTestId('form-fields');
+          const input=demo.getByRole('textbox',{name:'受控邮箱'});
+          await input.fill('demo@example.com');
+          assert.equal(await input.inputValue(),'demo@example.com');
+          assert.ok(await input.evaluate(e=>e.required || e.getAttribute('aria-required')==='true'),'required field semantics');
+          assert.ok(await input.getAttribute('aria-describedby'));
+          const notes=demo.getByRole('textbox',{name:'受控备注'});
+          const before=await notes.evaluate(e=>parseFloat(getComputedStyle(e).lineHeight)*2);
+          await notes.fill('one\ntwo\nthree\nfour\nfive\nsix');
+          await page.waitForFunction(({el,height})=>el.getBoundingClientRect().height>=height*2,{el:await notes.elementHandle(),height:before});
+          await notes.fill('');
+          await page.waitForFunction(({el,height})=>Math.abs(el.getBoundingClientRect().height-height)<1,{el:await notes.elementHandle(),height:before});
+          const search=demo.getByRole('searchbox',{name:'受控搜索'});
+          await search.fill('board');
+          await demo.getByRole('button',{name:'清除搜索'}).click();
+          assert.equal(await search.inputValue(),'');
+          assert.equal(await demo.locator('output').textContent(),'demo@example.com / 0 / ');
+          assert.ok(await page.getByRole('textbox',{name:'禁用',exact:true}).isDisabled());
+          assert.equal(await page.getByRole('textbox',{name:'错误',exact:true}).getAttribute('aria-invalid'),'true');
+        }
+        if(route==='/zh-hans/components/search-field/'){
+          const search=page.getByRole('searchbox',{name:'搜索组件…'});
+          await search.fill('demo');
+          const clear=page.locator('#preview').getByRole('button',{name:'清除搜索'});
+          await clear.waitFor({state:'visible'});
+          await clear.click();
+          assert.equal(await search.inputValue(),'');
+          assert.ok(await clear.isHidden());
         }
         if(route==='/zh-hans/components/checkbox/'){
           const demo=page.getByTestId('controlled-selection');
