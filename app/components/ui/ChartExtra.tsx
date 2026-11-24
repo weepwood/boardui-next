@@ -18,78 +18,30 @@ export function SankeyChart({
   links: { from: string; to: string; value: number }[];
   height?: number;
 }) {
-  const layers = [0, 1, 2] as const;
-  const layerX = { 0: 6, 1: 50, 2: 94 };
-  const colors = [
-    "var(--color-accent-500)",
-    "var(--color-purple-500)",
-    "var(--color-lime-500)",
-    "var(--color-amber-500)",
-    "var(--color-teal-500)",
-    "var(--color-pink-500)",
-  ];
-
-  // 计算每个节点的纵向位置
-  const nodeById=new Map(nodes.map(n=>[n.id,n]));
-  const pos = new Map<string, { y: number; h: number }>();
-  layers.forEach((l) => {
-    const inLayer = nodes.filter((n) => n.layer === l);
-    const total = inLayer.reduce((s, n) => s + n.value, 0) || 1;
-    let cursor = 3;
-    inLayer.forEach((n) => {
-      const h = (n.value / total) * (H - 6);
-      pos.set(n.id, { y: cursor, h });
-      cursor += h + 2;
-    });
+  const layers=[0,1,2] as const,layerX={0:5,1:50,2:95};
+  const colors=["var(--color-emerald-500)","var(--color-accent-500)","var(--color-purple-500)","var(--color-lime-500)"];
+  const byId=new Map(nodes.map(n=>[n.id,n]));
+  const valid=links.filter(l=>byId.has(l.from)&&byId.has(l.to)&&byId.get(l.from)!.layer<byId.get(l.to)!.layer&&Number.isFinite(l.value)&&l.value>0);
+  const incoming=new Map<string,number>(),outgoing=new Map<string,number>();
+  valid.forEach(l=>{incoming.set(l.to,(incoming.get(l.to)??0)+l.value);outgoing.set(l.from,(outgoing.get(l.from)??0)+l.value)});
+  const weights=new Map(nodes.map(n=>[n.id,Math.max(Number.isFinite(n.value)?n.value:0,incoming.get(n.id)??0,outgoing.get(n.id)??0,0)]));
+  const groups=layers.map(layer=>nodes.filter(n=>n.layer===layer&&weights.get(n.id)!>0));
+  const gap=2;
+  const scale=Math.min(...groups.filter(g=>g.length).map(g=>Math.max(1,H-6-gap*(g.length-1))/g.reduce((n,v)=>n+weights.get(v.id)!,0)));
+  if(!valid.length||!Number.isFinite(scale))return <div role="status" className="flex items-center justify-center text-body-2-regular text-text-secondary" style={{height}}>暂无流向数据</div>;
+  const pos=new Map<string,{y:number;h:number}>();
+  for(const g of groups){let y=3;for(const n of g){const h=weights.get(n.id)!*scale;pos.set(n.id,{y,h});y+=h+gap}}
+  const usedOut=new Map<string,number>(),usedIn=new Map<string,number>();
+  const bands=valid.map(l=>{const a=pos.get(l.from)!,b=pos.get(l.to)!,h=l.value*scale;
+   const y1=a.y+(usedOut.get(l.from)??0),y2=b.y+(usedIn.get(l.to)??0);
+   usedOut.set(l.from,y1-a.y+h);usedIn.set(l.to,y2-b.y+h);
+   const x1=layerX[byId.get(l.from)!.layer]+1,x2=layerX[byId.get(l.to)!.layer]-1,m=(x1+x2)/2;
+   return {...l,d:`M${x1},${y1} C${m},${y1} ${m},${y2} ${x2},${y2} L${x2},${y2+h} C${m},${y2+h} ${m},${y1+h} ${x1},${y1+h} Z`};
   });
-
-  return (
-    <svg
-      viewBox={`0 0 ${W} ${H}`}
-      preserveAspectRatio="none"
-      style={{ height, width: "100%" }}
-      aria-hidden="true"
-    >
-      {links.map((lk, i) => {
-        const a = pos.get(lk.from);
-        const b = pos.get(lk.to);
-        if (!a || !b) return null;
-        const fromNode = nodeById.get(lk.from)!;
-        const toNode = nodeById.get(lk.to)!;
-        const x1 = layerX[fromNode.layer];
-        const x2 = layerX[toNode.layer];
-        const y1 = a.y + a.h / 2;
-        const y2 = b.y + b.h / 2;
-        const mx = (x1 + x2) / 2;
-        return (
-          <path
-            key={i}
-            d={`M${x1},${y1} C${mx},${y1} ${mx},${y2} ${x2},${y2}`}
-            fill="none"
-            stroke={colors[i % colors.length]}
-            strokeWidth={Math.max(1.2, (lk.value / 100) * 3)}
-            strokeOpacity="0.35"
-            strokeLinecap="round"
-            vectorEffect="non-scaling-stroke"
-          />
-        );
-      })}
-      {nodes.map((n, i) => {
-        const p = pos.get(n.id)!;
-        return (
-          <rect
-            key={n.id}
-            x={layerX[n.layer] - 1.5}
-            y={p.y}
-            width="3"
-            height={p.h}
-            rx="0.6"
-            fill={colors[i % colors.length]}
-          />
-        );
-      })}
-    </svg>
-  );
+  return <svg viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="none" style={{height,width:"100%"}} role="img" aria-label={valid.map(l=>byId.get(l.from)!.label+"至"+byId.get(l.to)!.label+" "+l.value).join("；")}>
+   {bands.map((b,i)=><path key={i} d={b.d} fill={colors[nodes.findIndex(n=>n.id===b.from)%colors.length]} fillOpacity=".35"><title>{byId.get(b.from)!.label+" → "+byId.get(b.to)!.label+"："+b.value}</title></path>)}
+   {nodes.map((n,i)=>{const p=pos.get(n.id);return p&&<rect key={n.id} x={layerX[n.layer]-1} y={p.y} width="2" height={p.h} rx=".4" fill={colors[i%colors.length]}><title>{n.label+"："+weights.get(n.id)}</title></rect>})}
+  </svg>;
 }
 
 /** 散点图：含 XY 轴刻度与网格线 */

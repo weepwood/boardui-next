@@ -36,11 +36,13 @@ const ORDERS = [
 export function DashboardTemplate() {
   const [active, setActive] = useState("概览");
   const [count, setCount] = useState(3);
+  const [hirePage,setHirePage]=useState(0),[range,setRange]=useState<"周"|"月"|"年">("周");
+  const hires=[["李四","前端工程师"],["王五","产品经理"],["赵六","设计师"],["钱七","测试工程师"],["孙八","后端工程师"],["周九","运营"]];
 
   return (
     <div className="flex min-h-[720px] w-full overflow-hidden bui-template-shell rounded-3xl border border-border-component-detail-container bg-background-full">
       {/* 侧边导航 */}
-      <aside className="hidden w-[60px] shrink-0 flex-col items-center gap-1 bg-background-secondary-default p-2 @sm:flex">
+      <aside className="hidden w-[60px] shrink-0 flex-col items-stretch gap-1 bg-background-secondary-default p-2 @sm:flex">
         <span className="mb-2 flex size-7 items-center justify-center rounded-lg bg-text-primary text-[12px] font-bold text-background-full">
           A
         </span>
@@ -52,7 +54,7 @@ export function DashboardTemplate() {
         {/* 顶栏 */}
         <header className="flex flex-wrap items-center justify-between gap-3 border-b border-separator-border px-4 py-3">
           <div className="flex flex-col">
-            <h3 className="text-body-large-medium text-text-primary">{active}</h3>
+            <h3 className="text-headline-medium text-text-primary">{active}</h3><select className="max-w-full rounded-lg border border-border-button-default bg-background-primary-default p-1 text-body-2-regular @sm:hidden" aria-label="切换仪表盘视图" value={active} onChange={e=>setActive(e.target.value)}>{NAV.map(n=><option key={n.label}>{n.label}</option>)}</select>
             <span className="text-caption-2-regular text-text-tertiary">2026 年 11 月 · 演示数据</span>
           </div>
           <div className="flex items-center gap-2">
@@ -65,6 +67,10 @@ export function DashboardTemplate() {
         </header>
 
         <div className="flex min-w-0 flex-col gap-3 p-3 @lg:p-4">
+          <div className="grid min-w-0 grid-cols-1 gap-3 @2xl:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]">
+            <section className="flex min-w-0 flex-col gap-3 rounded-2xl bg-background-secondary-default p-4"><div><p className="text-body-medium text-text-secondary">最近的招聘</p><p className="text-title-1-medium text-text-primary">{hires.length}</p></div><div className="grid grid-cols-1 gap-2 @lg:grid-cols-2">{hires.slice(hirePage*2,hirePage*2+2).map(([name,role])=><div key={name} className="flex min-w-0 flex-col gap-2 rounded-xl bg-background-primary-default p-3"><div className="flex items-center gap-2"><Avatar name={name} size="md"/><span className="text-body-medium text-text-primary">{name}</span></div><span className="rounded-md bg-background-secondary-default p-1 text-center text-caption-1-regular text-text-secondary">{role}</span></div>)}</div><div className="flex gap-2"><Button size="sm" variant="secondary" className="flex-1" isDisabled={hirePage===0} onPress={()=>setHirePage(p=>p-1)}>上一批</Button><Button size="sm" variant="secondary" className="flex-1" isDisabled={hirePage>=2} onPress={()=>setHirePage(p=>p+1)}>下一批</Button></div></section>
+            <section className="flex min-w-0 flex-col gap-3 rounded-2xl bg-background-secondary-default p-4"><div className="flex flex-wrap items-start justify-between gap-2"><div><p className="text-body-medium text-text-secondary">至今已赚到</p><p className="text-title-1-medium text-text-primary">¥{(REVENUE.slice(range==="周"?-4:range==="月"?-8:-12).reduce((a,b)=>a+b,0)*1000).toLocaleString("en-US")}</p></div><TemplateSegments values={["周","月","年"] as const} value={range} onChange={setRange}/></div><BarChart color="var(--color-lime-500)" data={REVENUE.slice(range==="周"?-4:range==="月"?-8:-12)} height={150}/></section>
+          </div>
           {/* 统计卡 */}
           <div className="grid min-w-0 grid-cols-1 gap-3 @sm:grid-cols-2 @3xl:grid-cols-4">
             <StatCard className="border-transparent bg-background-secondary-default shadow-none" label="总收入" value="¥128,430" delta="+12.5%" trend="up" icon="money-dollar-circle-line" spark={REVENUE} />

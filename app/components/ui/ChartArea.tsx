@@ -13,7 +13,7 @@
  * 实现上用手写 SVG，但严格按 recharts 的布局比例，保证视觉一致。
  */
 
-import {useId} from "react";
+import {useId,useState,useRef} from "react";
 import {stackSeries} from "./chart-stacking";
 const PAD = { left: 36, right: 8, top: 9, bottom: 30 };
 
@@ -67,8 +67,12 @@ export function ChartArea({
   showFill?: boolean;
 }) {
   const uid=useId().replace(/[^a-zA-Z0-9_-]/g,"");
+  const svgRef=useRef<SVGSVGElement>(null);
+  const [activeIndex,setActiveIndex]=useState<number|null>(null);
+  const point=activeIndex===null?null:Math.max(0,Math.min(activeIndex,labels.length-1));
+  const valid=labels.length>0&&series.some(s=>s.data.slice(0,labels.length).some(Number.isFinite));
   const W = 544;
-  const H = height;
+  const H = Math.max(80,Number.isFinite(height)?height:196);
   const innerW = W - PAD.left - PAD.right;
   const innerH = H - PAD.top - PAD.bottom;
 
@@ -107,11 +111,22 @@ export function ChartArea({
     return d;
   };
 
+  if(!valid)return <div role="status" className="flex min-w-0 items-center justify-center rounded-xl text-body-2-regular text-text-secondary" style={{height:H}}>暂无可展示数据</div>;
+  const onPointer=(event:React.PointerEvent<SVGSVGElement>)=>{
+    const svg=svgRef.current, matrix=svg?.getScreenCTM();
+    if(!svg||!matrix)return;
+    const p=new DOMPoint(event.clientX,event.clientY).matrixTransform(matrix.inverse());
+    if(p.x<PAD.left||p.x>W-PAD.right||p.y<PAD.top||p.y>H-PAD.bottom){setActiveIndex(null);return}
+    setActiveIndex(Math.round((p.x-PAD.left)/innerW*(labels.length-1)));
+  };
   return (
-    <svg
+    <div className="relative min-w-0" onMouseLeave={()=>setActiveIndex(null)}>
+    <svg ref={svgRef}
       viewBox={`0 0 ${W} ${H}`}
       className="w-full"
-      style={{ height }}
+      style={{ height:H }}
+      onPointerMove={onPointer} onPointerDown={onPointer}
+      onPointerLeave={()=>setActiveIndex(null)}
       role="img"
       aria-label={`${series.map((s) => s.name).join("、")}趋势图`}
     >
@@ -186,6 +201,7 @@ export function ChartArea({
           );
         })}
 
+      {point!==null&&<g pointerEvents="none" aria-hidden="true"><line x1={xAt(point)} x2={xAt(point)} y1={PAD.top} y2={H-PAD.bottom} stroke="var(--color-text-tertiary)" strokeDasharray="3 3"/>{normalized.map((s,i)=><circle key={i} cx={xAt(point)} cy={yAt(cumulative[i][point]+s.data[point])} r={4} stroke="var(--color-background-primary-default)" strokeWidth={2} fill={s.color}/>)}</g>}
       {/* X 轴标签 */}
       {showAxis &&
         labels.map((l, i) => (
@@ -201,6 +217,11 @@ export function ChartArea({
           </text>
         ))}
     </svg>
+    <div className="flex items-center justify-end gap-1 text-caption-2-regular text-text-secondary">
+      <label htmlFor={uid+"-point"}>数据点</label><select id={uid+"-point"} aria-label="查看图表数据点" value={point??""} onChange={e=>setActiveIndex(e.target.value===""?null:Number(e.target.value))} className="max-w-full rounded-md border border-border-button-default bg-background-primary-default px-1 py-0.5 text-text-primary focus-visible:outline-2 focus-visible:outline-border-focus-ring"><option value="">选择</option>{labels.map((label,i)=><option key={i} value={i}>{label||String(i+1)}</option>)}</select>
+    </div>
+    {point!==null&&<div role="status" data-chart-tooltip className="pointer-events-none absolute top-2 z-10 max-w-[min(180px,100%)] rounded-xl border border-border-button-default bg-background-primary-default p-2.5 text-body-2-regular text-text-primary shadow-dropdown" style={point<labels.length/2?{insetInlineEnd:4}:{insetInlineStart:4}}><p className="mb-1 font-medium">{labels[point]||String(point+1)}</p>{normalized.map((s,i)=><div key={i} className="flex items-center justify-between gap-3"><span className="flex min-w-0 items-center gap-1"><span className="size-2 shrink-0 rounded-sm" style={{backgroundColor:s.color}}/>{s.name}</span><span className="tabular-nums">{Number.isFinite(series[i].data[point])?s.data[point].toLocaleString("en-US"):"—"}</span></div>)}</div>}
+    </div>
   );
 }
 
@@ -209,16 +230,18 @@ export function ChartArea({
  * 色点为 12px 圆角 4px 的方块（非圆形）
  */
 export function ChartLegend({
-  items,
+  items,hidden=[],onToggle,
 }: {
   items: { name: string; value: string; color: string }[];
+  hidden?:string[];onToggle?:(name:string)=>void;
 }) {
   return (
     <div className="grid grid-cols-3 gap-2">
-      {items.map((it) => (
-        <div
+      {items.map((it) => {const Tag=onToggle?"button":"div";return (
+        <Tag
           key={it.name}
-          className="flex min-w-0 flex-col items-start gap-px rounded-2lg bg-background-primary-default px-2.5 py-2"
+          {...(onToggle?{type:"button" as const,"aria-label":it.name,"aria-pressed":!hidden.includes(it.name),onClick:()=>onToggle(it.name)}:{})}
+          className={"flex min-w-0 flex-col items-start gap-px rounded-2lg bg-background-primary-default px-2.5 py-2 "+(onToggle?"cursor-pointer text-start hover:bg-background-primary-hover focus-visible:outline-2 focus-visible:outline-border-focus-ring ":"")+(hidden.includes(it.name)?"opacity-60":"")}
         >
           <span className="flex min-w-0 max-w-full items-center gap-1.5">
             <span
@@ -230,8 +253,8 @@ export function ChartLegend({
             </span>
           </span>
           <span className="text-body-medium tabular-nums text-text-primary">{it.value}</span>
-        </div>
-      ))}
+        </Tag>
+      )})}
     </div>
   );
 }

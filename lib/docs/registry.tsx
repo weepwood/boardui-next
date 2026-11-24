@@ -577,11 +577,7 @@ import { RiArrowRightLine } from "@remixicon/react";
     install: "npx boardui@latest add tag-group",
     preview: () => ((
       <div className="w-full max-w-md">
-        <TagGroup label="技术栈">
-          <Tag>React</Tag>
-          <Tag>TypeScript</Tag>
-          <Tag>Tailwind</Tag>
-        </TagGroup>
+        <RemovableTagsDemo/>
       </div>
     )),
     demos: () => ([]),
@@ -765,13 +761,13 @@ import { RiArrowRightLine } from "@remixicon/react";
 
   carousel: {
     title: "轮播",
-    description: "横向切换的卡片容器，带箭头与指示点。",
+    description: "基于原生滚动捕捉的卡片容器，支持触摸滑动、方向键与指示点。",
     install: "npx boardui@latest add carousel",
     preview: () => ((
       <div className="w-full max-w-md">
         <Carousel
           items={[
-            { id: "1", title: "第一张", description: "使用 transform 过渡", hue: 215 },
+            { id: "1", title: "第一张", description: "原生滚动捕捉", hue: 215 },
             { id: "2", title: "第二张", description: "缓动对齐原站", hue: 280 },
             { id: "3", title: "第三张", description: "指示点可点击", hue: 160 },
           ]}
@@ -896,12 +892,7 @@ import { RiArrowRightLine } from "@remixicon/react";
     description: "内置 Google、GitHub、Apple、X、微信的品牌图形。",
     install: "npx boardui@latest add social-button",
     preview: () => ((
-      <div className="flex w-full max-w-[260px] flex-col gap-2">
-        <SocialButton provider="google" />
-        <SocialButton provider="github" />
-        <SocialButton provider="apple" />
-        <SocialButton provider="wechat" />
-      </div>
+      <SocialDemo/>
     )),
     demos: () => ([]),
   },
@@ -1176,8 +1167,8 @@ import { RiArrowRightLine } from "@remixicon/react";
         <WebSearch
           query="React Aria Components 如何实现可访问的下拉菜单"
           sources={[
-            { id: "1", title: "React Aria 官方文档", url: "#", snippet: "使用 Select 与 Popover 组合，内置键盘导航与焦点管理。" },
-            { id: "2", title: "无障碍设计指南", url: "#", snippet: "下拉菜单需要正确处理 aria-expanded 与 aria-activedescendant。" },
+            { id: "1", title: "React Aria 官方文档", url: "https://react-spectrum.adobe.com/react-aria/Select.html", snippet: "使用 Select 与 Popover 组合，内置键盘导航与焦点管理。" },
+            { id: "2", title: "无障碍设计指南", url: "https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/", snippet: "下拉菜单需要正确处理 aria-expanded 与 aria-activedescendant。" },
           ]}
         />
       </div>
@@ -1207,7 +1198,7 @@ import { RiArrowRightLine } from "@remixicon/react";
         <ChartCard periodFilter kind="area" title="访客" value="94,700" delta="+8.2%" height={180} />
       </div>
     )),
-    demos: () => ([]),
+    demos: () => ([{id:"dynamic",title:"动态数据与空状态",node:<DynamicChartDemo/>}]),
   },
 
   "bar-list-card": {
@@ -1756,6 +1747,12 @@ function NoticeDemo(){
  ]);
  return <div className="flex w-full flex-col items-center gap-2"><NotificationCenter items={items}/><Button size="sm" variant="secondary" onClick={()=>setItems(p=>[{id:"new-"+p.length,title:"新通知 "+p.length,body:"本地模拟通知",time:"刚刚",unread:true,category:"system"},...p])}>添加示例通知</Button></div>;
 }
+
+function SocialDemo(){const [last,setLast]=useState("尚未选择");return <div className="flex w-full max-w-[300px] flex-col gap-2">{(["google","github","apple","wechat"] as const).map(provider=><SocialButton key={provider} provider={provider} onClick={()=>setLast(provider+" · 本地演示，未连接认证")}/>)}<output aria-live="polite" className="text-center text-caption-1-regular text-text-secondary">{last}</output></div>}
+
+function DynamicChartDemo(){const [mode,setMode]=useState("normal");const labels=mode==="empty"?[]:["周一","周二","周三"];const series=[{name:"访问",color:"var(--color-accent-500)",data:mode==="updated"?[12,25,36]:[10,20,30]}];return <div className="flex w-full max-w-[420px] flex-col gap-2"><SegmentedControl value={mode} onChange={setMode} options={[{id:"normal",label:"初始"},{id:"updated",label:"更新数据"},{id:"empty",label:"空数据"}]}/><ChartCard kind="area" title="动态示例" data={{labels,series}} height={160}/></div>}
+
+function RemovableTagsDemo(){const [items,setItems]=useState(["React","TypeScript","Tailwind"]);return <><TagGroup label="技术栈" onRemove={keys=>setItems(p=>p.filter(x=>!keys.has(x)))}>{items.map(item=><Tag key={item} id={item} textValue={item}>{item}</Tag>)}</TagGroup><Button size="sm" variant="secondary" onPress={()=>setItems(["React","TypeScript","Tailwind"])}>重置标签</Button></>}
 
 function QuestionnaireDemo() {
   const [done, setDone] = useState(false);

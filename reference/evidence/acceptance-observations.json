@@ -1596,6 +1596,622 @@
       "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
       "source": "reference/evidence/compound-visual-interaction-20261124.json",
       "route": "/zh-hans/components/tree-view/"
+    },
+    {
+      "id": "responsive-visual-color-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "color"
+      ],
+      "scope": "本地双主题桌面截图与 320/390/2560px 页面级布局采样；官网可访问条目另有公开对照，非完整视觉验收。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/color/"
+    },
+    {
+      "id": "responsive-accessibility-color-20261124",
+      "dimension": "accessibility",
+      "result": "partial",
+      "components": [
+        "color"
+      ],
+      "scope": "本地 Edge 桌面双主题初始状态 axe WCAG 2A/AA 与 2.1AA 检查，无该规则集报告的违规；不等同完整无障碍或人工读屏。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/color/"
+    },
+    {
+      "id": "responsive-visual-typography-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "typography"
+      ],
+      "scope": "本地双主题桌面截图与 320/390/2560px 页面级布局采样；官网可访问条目另有公开对照，非完整视觉验收。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/typography/"
+    },
+    {
+      "id": "responsive-accessibility-typography-20261124",
+      "dimension": "accessibility",
+      "result": "partial",
+      "components": [
+        "typography"
+      ],
+      "scope": "本地 Edge 桌面双主题初始状态 axe WCAG 2A/AA 与 2.1AA 检查，无该规则集报告的违规；不等同完整无障碍或人工读屏。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/typography/"
+    },
+    {
+      "id": "responsive-visual-carousel-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "carousel"
+      ],
+      "scope": "本地双主题桌面截图与 320/390/2560px 页面级布局采样；官网可访问条目另有公开对照，非完整视觉验收。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/carousel/"
+    },
+    {
+      "id": "responsive-accessibility-carousel-20261124",
+      "dimension": "accessibility",
+      "result": "partial",
+      "components": [
+        "carousel"
+      ],
+      "scope": "本地 Edge 桌面双主题初始状态 axe WCAG 2A/AA 与 2.1AA 检查，无该规则集报告的违规；不等同完整无障碍或人工读屏。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/carousel/"
+    },
+    {
+      "id": "responsive-interaction-carousel-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "carousel"
+      ],
+      "scope": "本地双主题指定操作、状态或加载动效断言；未覆盖所有变体与跨浏览器完整操作。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/carousel/"
+    },
+    {
+      "id": "responsive-visual-divider-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "divider"
+      ],
+      "scope": "本地双主题桌面截图与 320/390/2560px 页面级布局采样；官网可访问条目另有公开对照，非完整视觉验收。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/divider/"
+    },
+    {
+      "id": "responsive-accessibility-divider-20261124",
+      "dimension": "accessibility",
+      "result": "partial",
+      "components": [
+        "divider"
+      ],
+      "scope": "本地 Edge 桌面双主题初始状态 axe WCAG 2A/AA 与 2.1AA 检查，无该规则集报告的违规；不等同完整无障碍或人工读屏。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/divider/"
+    },
+    {
+      "id": "responsive-visual-link-button-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "link-button"
+      ],
+      "scope": "本地双主题桌面截图与 320/390/2560px 页面级布局采样；官网可访问条目另有公开对照，非完整视觉验收。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/link-button/"
+    },
+    {
+      "id": "responsive-accessibility-link-button-20261124",
+      "dimension": "accessibility",
+      "result": "partial",
+      "components": [
+        "link-button"
+      ],
+      "scope": "本地 Edge 桌面双主题初始状态 axe WCAG 2A/AA 与 2.1AA 检查，无该规则集报告的违规；不等同完整无障碍或人工读屏。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/link-button/"
+    },
+    {
+      "id": "responsive-visual-social-button-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "social-button"
+      ],
+      "scope": "本地双主题桌面截图与 320/390/2560px 页面级布局采样；官网可访问条目另有公开对照，非完整视觉验收。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/social-button/"
+    },
+    {
+      "id": "responsive-accessibility-social-button-20261124",
+      "dimension": "accessibility",
+      "result": "partial",
+      "components": [
+        "social-button"
+      ],
+      "scope": "本地 Edge 桌面双主题初始状态 axe WCAG 2A/AA 与 2.1AA 检查，无该规则集报告的违规；不等同完整无障碍或人工读屏。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/social-button/"
+    },
+    {
+      "id": "responsive-interaction-social-button-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "social-button"
+      ],
+      "scope": "本地双主题指定操作、状态或加载动效断言；未覆盖所有变体与跨浏览器完整操作。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/social-button/"
+    },
+    {
+      "id": "responsive-visual-auth-card-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "auth-card"
+      ],
+      "scope": "本地双主题桌面截图与 320/390/2560px 页面级布局采样；官网可访问条目另有公开对照，非完整视觉验收。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/auth-card/"
+    },
+    {
+      "id": "responsive-accessibility-auth-card-20261124",
+      "dimension": "accessibility",
+      "result": "partial",
+      "components": [
+        "auth-card"
+      ],
+      "scope": "本地 Edge 桌面双主题初始状态 axe WCAG 2A/AA 与 2.1AA 检查，无该规则集报告的违规；不等同完整无障碍或人工读屏。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/auth-card/"
+    },
+    {
+      "id": "responsive-interaction-auth-card-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "auth-card"
+      ],
+      "scope": "本地双主题指定操作、状态或加载动效断言；未覆盖所有变体与跨浏览器完整操作。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/auth-card/"
+    },
+    {
+      "id": "responsive-visual-web-search-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "web-search"
+      ],
+      "scope": "本地双主题桌面截图与 320/390/2560px 页面级布局采样；官网可访问条目另有公开对照，非完整视觉验收。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/web-search/"
+    },
+    {
+      "id": "responsive-accessibility-web-search-20261124",
+      "dimension": "accessibility",
+      "result": "partial",
+      "components": [
+        "web-search"
+      ],
+      "scope": "本地 Edge 桌面双主题初始状态 axe WCAG 2A/AA 与 2.1AA 检查，无该规则集报告的违规；不等同完整无障碍或人工读屏。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/web-search/"
+    },
+    {
+      "id": "responsive-interaction-web-search-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "web-search"
+      ],
+      "scope": "本地双主题指定操作、状态或加载动效断言；未覆盖所有变体与跨浏览器完整操作。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/web-search/"
+    },
+    {
+      "id": "responsive-visual-task-list-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "task-list"
+      ],
+      "scope": "本地双主题桌面截图与 320/390/2560px 页面级布局采样；官网可访问条目另有公开对照，非完整视觉验收。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/task-list/"
+    },
+    {
+      "id": "responsive-accessibility-task-list-20261124",
+      "dimension": "accessibility",
+      "result": "partial",
+      "components": [
+        "task-list"
+      ],
+      "scope": "本地 Edge 桌面双主题初始状态 axe WCAG 2A/AA 与 2.1AA 检查，无该规则集报告的违规；不等同完整无障碍或人工读屏。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/task-list/"
+    },
+    {
+      "id": "responsive-interaction-task-list-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "task-list"
+      ],
+      "scope": "本地双主题指定操作、状态或加载动效断言；未覆盖所有变体与跨浏览器完整操作。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/task-list/"
+    },
+    {
+      "id": "responsive-visual-questionnaire-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "questionnaire"
+      ],
+      "scope": "本地双主题桌面截图与 320/390/2560px 页面级布局采样；官网可访问条目另有公开对照，非完整视觉验收。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/questionnaire/"
+    },
+    {
+      "id": "responsive-accessibility-questionnaire-20261124",
+      "dimension": "accessibility",
+      "result": "partial",
+      "components": [
+        "questionnaire"
+      ],
+      "scope": "本地 Edge 桌面双主题初始状态 axe WCAG 2A/AA 与 2.1AA 检查，无该规则集报告的违规；不等同完整无障碍或人工读屏。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/questionnaire/"
+    },
+    {
+      "id": "responsive-interaction-questionnaire-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "questionnaire"
+      ],
+      "scope": "本地双主题指定操作、状态或加载动效断言；未覆盖所有变体与跨浏览器完整操作。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/questionnaire/"
+    },
+    {
+      "id": "responsive-visual-settings-modal-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "settings-modal"
+      ],
+      "scope": "本地双主题桌面截图与 320/390/2560px 页面级布局采样；官网可访问条目另有公开对照，非完整视觉验收。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/settings-modal/"
+    },
+    {
+      "id": "responsive-accessibility-settings-modal-20261124",
+      "dimension": "accessibility",
+      "result": "partial",
+      "components": [
+        "settings-modal"
+      ],
+      "scope": "本地 Edge 桌面双主题初始状态 axe WCAG 2A/AA 与 2.1AA 检查，无该规则集报告的违规；不等同完整无障碍或人工读屏。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/settings-modal/"
+    },
+    {
+      "id": "responsive-interaction-settings-modal-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "settings-modal"
+      ],
+      "scope": "本地双主题指定操作、状态或加载动效断言；未覆盖所有变体与跨浏览器完整操作。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/settings-modal/"
+    },
+    {
+      "id": "responsive-visual-search-field-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "search-field"
+      ],
+      "scope": "本地双主题桌面截图与 320/390/2560px 页面级布局采样；官网可访问条目另有公开对照，非完整视觉验收。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/search-field/"
+    },
+    {
+      "id": "responsive-accessibility-search-field-20261124",
+      "dimension": "accessibility",
+      "result": "partial",
+      "components": [
+        "search-field"
+      ],
+      "scope": "本地 Edge 桌面双主题初始状态 axe WCAG 2A/AA 与 2.1AA 检查，无该规则集报告的违规；不等同完整无障碍或人工读屏。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/search-field/"
+    },
+    {
+      "id": "responsive-interaction-search-field-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "search-field"
+      ],
+      "scope": "本地双主题指定操作、状态或加载动效断言；未覆盖所有变体与跨浏览器完整操作。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/search-field/"
+    },
+    {
+      "id": "responsive-visual-spinner-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "spinner"
+      ],
+      "scope": "本地双主题桌面截图与 320/390/2560px 页面级布局采样；官网可访问条目另有公开对照，非完整视觉验收。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/spinner/"
+    },
+    {
+      "id": "responsive-accessibility-spinner-20261124",
+      "dimension": "accessibility",
+      "result": "partial",
+      "components": [
+        "spinner"
+      ],
+      "scope": "本地 Edge 桌面双主题初始状态 axe WCAG 2A/AA 与 2.1AA 检查，无该规则集报告的违规；不等同完整无障碍或人工读屏。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/spinner/"
+    },
+    {
+      "id": "responsive-interaction-spinner-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "spinner"
+      ],
+      "scope": "本地双主题指定操作、状态或加载动效断言；未覆盖所有变体与跨浏览器完整操作。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/spinner/"
+    },
+    {
+      "id": "responsive-visual-skeleton-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "skeleton"
+      ],
+      "scope": "本地双主题桌面截图与 320/390/2560px 页面级布局采样；官网可访问条目另有公开对照，非完整视觉验收。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/skeleton/"
+    },
+    {
+      "id": "responsive-accessibility-skeleton-20261124",
+      "dimension": "accessibility",
+      "result": "partial",
+      "components": [
+        "skeleton"
+      ],
+      "scope": "本地 Edge 桌面双主题初始状态 axe WCAG 2A/AA 与 2.1AA 检查，无该规则集报告的违规；不等同完整无障碍或人工读屏。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/skeleton/"
+    },
+    {
+      "id": "responsive-interaction-skeleton-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "skeleton"
+      ],
+      "scope": "本地双主题指定操作、状态或加载动效断言；未覆盖所有变体与跨浏览器完整操作。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/skeleton/"
+    },
+    {
+      "id": "responsive-visual-toggle-button-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "toggle-button"
+      ],
+      "scope": "本地双主题桌面截图与 320/390/2560px 页面级布局采样；官网可访问条目另有公开对照，非完整视觉验收。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/toggle-button/"
+    },
+    {
+      "id": "responsive-accessibility-toggle-button-20261124",
+      "dimension": "accessibility",
+      "result": "partial",
+      "components": [
+        "toggle-button"
+      ],
+      "scope": "本地 Edge 桌面双主题初始状态 axe WCAG 2A/AA 与 2.1AA 检查，无该规则集报告的违规；不等同完整无障碍或人工读屏。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/toggle-button/"
+    },
+    {
+      "id": "responsive-interaction-toggle-button-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "toggle-button"
+      ],
+      "scope": "本地双主题指定操作、状态或加载动效断言；未覆盖所有变体与跨浏览器完整操作。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/toggle-button/"
+    },
+    {
+      "id": "responsive-visual-tag-group-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "tag-group"
+      ],
+      "scope": "本地双主题桌面截图与 320/390/2560px 页面级布局采样；官网可访问条目另有公开对照，非完整视觉验收。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/tag-group/"
+    },
+    {
+      "id": "responsive-accessibility-tag-group-20261124",
+      "dimension": "accessibility",
+      "result": "partial",
+      "components": [
+        "tag-group"
+      ],
+      "scope": "本地 Edge 桌面双主题初始状态 axe WCAG 2A/AA 与 2.1AA 检查，无该规则集报告的违规；不等同完整无障碍或人工读屏。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/tag-group/"
+    },
+    {
+      "id": "responsive-interaction-tag-group-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "tag-group"
+      ],
+      "scope": "本地双主题指定操作、状态或加载动效断言；未覆盖所有变体与跨浏览器完整操作。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/tag-group/"
+    },
+    {
+      "id": "responsive-visual-counter-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "counter"
+      ],
+      "scope": "本地双主题桌面截图与 320/390/2560px 页面级布局采样；官网可访问条目另有公开对照，非完整视觉验收。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/counter/"
+    },
+    {
+      "id": "responsive-accessibility-counter-20261124",
+      "dimension": "accessibility",
+      "result": "partial",
+      "components": [
+        "counter"
+      ],
+      "scope": "本地 Edge 桌面双主题初始状态 axe WCAG 2A/AA 与 2.1AA 检查，无该规则集报告的违规；不等同完整无障碍或人工读屏。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/counter/"
+    },
+    {
+      "id": "responsive-interaction-counter-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "counter"
+      ],
+      "scope": "本地双主题指定操作、状态或加载动效断言；未覆盖所有变体与跨浏览器完整操作。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/counter/"
+    },
+    {
+      "id": "responsive-visual-toast-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "toast"
+      ],
+      "scope": "本地双主题桌面截图与 320/390/2560px 页面级布局采样；官网可访问条目另有公开对照，非完整视觉验收。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/toast/"
+    },
+    {
+      "id": "responsive-accessibility-toast-20261124",
+      "dimension": "accessibility",
+      "result": "partial",
+      "components": [
+        "toast"
+      ],
+      "scope": "本地 Edge 桌面双主题初始状态 axe WCAG 2A/AA 与 2.1AA 检查，无该规则集报告的违规；不等同完整无障碍或人工读屏。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/toast/"
+    },
+    {
+      "id": "responsive-interaction-toast-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "toast"
+      ],
+      "scope": "本地双主题指定操作、状态或加载动效断言；未覆盖所有变体与跨浏览器完整操作。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/toast/"
+    },
+    {
+      "id": "responsive-visual-combobox-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "combobox"
+      ],
+      "scope": "本地双主题桌面截图与 320/390/2560px 页面级布局采样；官网可访问条目另有公开对照，非完整视觉验收。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/combobox/"
+    },
+    {
+      "id": "responsive-accessibility-combobox-20261124",
+      "dimension": "accessibility",
+      "result": "partial",
+      "components": [
+        "combobox"
+      ],
+      "scope": "本地 Edge 桌面双主题初始状态 axe WCAG 2A/AA 与 2.1AA 检查，无该规则集报告的违规；不等同完整无障碍或人工读屏。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/combobox/"
+    },
+    {
+      "id": "responsive-interaction-combobox-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "combobox"
+      ],
+      "scope": "本地双主题指定操作、状态或加载动效断言；未覆盖所有变体与跨浏览器完整操作。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/combobox/"
+    },
+    {
+      "id": "responsive-visual-token-input-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "token-input"
+      ],
+      "scope": "本地双主题桌面截图与 320/390/2560px 页面级布局采样；官网可访问条目另有公开对照，非完整视觉验收。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/token-input/"
+    },
+    {
+      "id": "responsive-accessibility-token-input-20261124",
+      "dimension": "accessibility",
+      "result": "partial",
+      "components": [
+        "token-input"
+      ],
+      "scope": "本地 Edge 桌面双主题初始状态 axe WCAG 2A/AA 与 2.1AA 检查，无该规则集报告的违规；不等同完整无障碍或人工读屏。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/token-input/"
+    },
+    {
+      "id": "responsive-interaction-token-input-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "token-input"
+      ],
+      "scope": "本地双主题指定操作、状态或加载动效断言；未覆盖所有变体与跨浏览器完整操作。",
+      "source": "reference/evidence/responsive-accessibility-20261124.json",
+      "route": "/zh-hans/components/token-input/"
     }
   ]
 }

@@ -18,17 +18,17 @@ export type Task = {
  * 完成项自动变灰划线。
  */
 export function TaskList({
-  tasks: initial,
+  tasks: initial,onChange,
   className,
 }: {
   tasks: Task[];
   className?: string;
+  onChange?:(tasks:Task[])=>void;
 }) {
   const [tasks, setTasks] = useState(initial);
   const done = tasks.filter((t) => t.done).length;
 
-  const toggle = (id: string) =>
-    setTasks((prev) => prev.map((t) => (t.id === id ? { ...t, done: !t.done } : t)));
+  const toggle = (id:string)=>{const next=tasks.map(t=>t.id===id?{...t,done:!t.done}:t);setTasks(next);onChange?.(next)};
 
   const prioVariant = { 高: "danger", 中: "warning", 低: "neutral" } as const;
 
@@ -42,7 +42,7 @@ export function TaskList({
     >
       <div className="flex items-center justify-between gap-2 border-b border-separator-border px-3 py-2">
         <span className="text-body-2-medium text-text-primary">任务</span>
-        <span className="text-caption-2-regular tabular-nums text-text-tertiary">
+        <span role="status" className="text-caption-2-regular tabular-nums text-text-tertiary">
           {done} / {tasks.length} 已完成
         </span>
       </div>
@@ -63,7 +63,7 @@ export function TaskList({
               aria-label={t.title}
               onClick={() => toggle(t.id)}
               className={cn(
-                "flex size-[18px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border",
+                "flex size-[18px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-border-focus-ring",
                 "transition-[background-color,border-color] duration-150 ease-out",
                 t.done
                   ? "border-transparent bg-[linear-gradient(180deg,var(--color-accent-500),var(--color-accent-600))]"

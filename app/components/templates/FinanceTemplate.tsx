@@ -4,6 +4,7 @@ import { useState } from "react";
 import { DemoNotice, TemplateSegments, downloadCsv } from "./TemplateShared";
 import { StatCard } from "@/app/components/ui/StatCard";
 import { AreaChart, BarChart, RadialChart, BarList } from "@/app/components/ui/Chart";
+import {SankeyChart} from "@/app/components/ui/ChartExtra";
 import { Badge } from "@/app/components/ui/Badge";
 import { Icon } from "@/app/components/ui/Icon";
 import { Button } from "@/app/components/ui/Button";
@@ -23,6 +24,9 @@ const TRANSACTIONS = [
 export function FinanceTemplate() {
   const [range, setRange] = useState<"月" | "季" | "年">("月");
 
+  const source=range==="月"?CASH_FLOW.slice(-4):range==="季"?CASH_FLOW.filter((_,i)=>i%3===2):CASH_FLOW;
+  const amount=source.reduce((a,b)=>a+b,0);
+  const flow=[{from:"收入",to:"运营",value:Math.round(amount*.46)},{from:"收入",to:"投资",value:Math.round(amount*.24)},{from:"收入",to:"留存",value:amount-Math.round(amount*.46)-Math.round(amount*.24)}];
   return (
     <div className="flex min-h-[680px] w-full flex-col overflow-hidden bui-template-shell rounded-3xl border border-border-component-detail-container bg-background-full">
       <header className="flex flex-wrap items-center justify-between gap-2 border-b border-separator-border px-4 py-3">
@@ -46,22 +50,11 @@ export function FinanceTemplate() {
           <StatCard className="border-transparent bg-background-secondary-default shadow-none" label="应收账款" value="¥384,200" delta="-4.1%" trend="down" icon="file-list-3-line" spark={[45, 43, 44, 41, 40, 38, 36]} />
         </div>
 
-        <div className="grid min-w-0 grid-cols-1 gap-3 @3xl:grid-cols-3">
-          <div className="flex flex-col gap-2 min-w-0 rounded-2xl bg-background-secondary-default p-4 @3xl:col-span-2">
-            <div className="flex items-center justify-between">
-              <span className="text-body-2-medium text-text-primary">现金流趋势</span>
-              <span className="text-caption-2-regular text-text-tertiary">{range==="月"?"月度样本":range==="季"?"季度样本":"年度样本"}</span>
-            </div>
-            <AreaChart data={range==="月"?CASH_FLOW.slice(-4):range==="季"?CASH_FLOW.filter((_,i)=>i%3===2):CASH_FLOW} height={150} gradientId="fin-cash" />
-          </div>
-
-          <div className="flex flex-col items-center justify-center gap-2 min-w-0 rounded-2xl bg-background-secondary-default p-4">
-            <span className="self-start text-body-2-medium text-text-primary">毛利率</span>
-            <RadialChart value={54} size={110} label="54%" color="var(--color-lime-500)" />
-            <span className="text-caption-2-regular text-text-tertiary">行业平均 42%</span>
-          </div>
+        <div className="flex min-w-0 flex-col gap-3 rounded-2xl bg-background-secondary-default p-4">
+          <div className="flex flex-wrap items-center justify-between gap-2"><div><p className="text-body-medium text-text-secondary">现金流量</p><p className="text-title-1-medium tabular-nums text-text-primary">¥{(amount*1000).toLocaleString("en-US")}</p></div><span className="text-caption-1-regular text-text-secondary">{range==="月"?"月度样本":range==="季"?"季度样本":"年度样本"}</span></div>
+          <SankeyChart height={240} nodes={[{id:"收入",label:"收入",layer:0,value:amount},...flow.map(f=>({id:f.to,label:f.to,layer:2 as const,value:f.value}))]} links={flow}/>
+          <div className="grid grid-cols-1 gap-2 @sm:grid-cols-3">{flow.map(f=><div key={f.to} className="rounded-xl bg-background-primary-default p-3"><span className="text-body-2-regular text-text-secondary">{f.to}</span><p className="text-body-medium tabular-nums text-text-primary">¥{(f.value*1000).toLocaleString("en-US")}</p></div>)}</div>
         </div>
-
         <div className="grid min-w-0 grid-cols-1 gap-3 @2xl:grid-cols-2">
           <div className="flex flex-col gap-2 min-w-0 rounded-2xl bg-background-secondary-default p-4">
             <span className="text-body-2-medium text-text-primary">月度收支</span>

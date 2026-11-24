@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  Button as RACButton,
   TagGroup as RACTagGroup,
   TagList as RACTagList,
   Tag as RACTag,
@@ -22,10 +23,11 @@ export function TagGroup({
   return (
     <RACTagGroup
       {...props}
+      aria-label={props["aria-label"]??label??"标签"}
       className={cn("flex flex-col gap-2", className)}
     >
       {label && <span className="text-body-2-medium text-text-primary">{label}</span>}
-      <RACTagList className="flex flex-wrap gap-1.5 outline-none">{children}</RACTagList>
+      <RACTagList aria-label={label??"标签"} className="flex flex-wrap gap-1.5 outline-none">{children}</RACTagList>
     </RACTagGroup>
   );
 }
@@ -53,9 +55,9 @@ export function Tag({
         className
       )}
     >
-      {children}
-      {(
-        <button
+      {({allowsRemoving})=><>{children}
+      {allowsRemoving&& (
+        <RACButton
           type="button"
           slot="remove"
           className={cn(
@@ -65,8 +67,8 @@ export function Tag({
           aria-label="移除"
         >
           <Icon name="close-line" className="size-3" />
-        </button>
-      )}
+        </RACButton>
+      )}</>}
     </RACTag>
   );
 }
