@@ -1,0 +1,3237 @@
+{
+  "baseline": "e937c0dba0ab02b7f940d47f8d491ba058bd306c",
+  "upstreamSourceRef": "ec5c5eb3e29c2441be63b9422cd54f411ef23466",
+  "environment": "Local Edge Chromium, 1440x1000, public live BoardUI light screenshot/DOM comparison (not fixed deployed SHA); local light/dark screenshot layout sampling. No pixel parity or exhaustive interaction claim. Some native inputs are visually hidden so their measured 13px boxes are not actual checkbox/radio/switch glyph dimensions.",
+  "before": [
+    {
+      "slug": "button",
+      "upstream": {
+        "title": "按钮",
+        "main": [
+          324,
+          40,
+          808,
+          2689
+        ],
+        "heading": [
+          324,
+          108,
+          808,
+          34
+        ],
+        "canvas": {
+          "rect": [
+            324,
+            282,
+            808,
+            327
+          ],
+          "radius": "24px",
+          "font": "16px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "control": {
+          "rect": [
+            552,
+            427,
+            80,
+            36
+          ],
+          "radius": "10px",
+          "font": "14px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "text": "开始使用\n继续\n标记为已完成\n删除",
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "text": "开始使用",
+            "aria": null,
+            "placeholder": null,
+            "box": [
+              552,
+              427,
+              80,
+              36
+            ]
+          },
+          {
+            "tag": "BUTTON",
+            "text": "继续",
+            "aria": null,
+            "placeholder": null,
+            "box": [
+              644,
+              427,
+              76,
+              36
+            ]
+          },
+          {
+            "tag": "BUTTON",
+            "text": "标记为已完成",
+            "aria": null,
+            "placeholder": null,
+            "box": [
+              732,
+              427,
+              108,
+              36
+            ]
+          },
+          {
+            "tag": "BUTTON",
+            "text": "删除",
+            "aria": null,
+            "placeholder": null,
+            "box": [
+              852,
+              427,
+              52,
+              36
+            ]
+          }
+        ]
+      },
+      "local": {
+        "title": "按钮",
+        "main": [
+          324,
+          40,
+          808,
+          3851
+        ],
+        "heading": [
+          324,
+          108,
+          808,
+          34
+        ],
+        "canvas": {
+          "rect": [
+            324,
+            288,
+            808,
+            327
+          ],
+          "radius": "24px",
+          "font": "16px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "control": {
+          "rect": [
+            552,
+            434,
+            80,
+            36
+          ],
+          "radius": "10px",
+          "font": "14px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "text": "开始使用\n继续\n标记为已完成\n删除",
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "text": "开始使用",
+            "aria": null,
+            "placeholder": null,
+            "box": [
+              552,
+              434,
+              80,
+              36
+            ]
+          },
+          {
+            "tag": "BUTTON",
+            "text": "继续",
+            "aria": null,
+            "placeholder": null,
+            "box": [
+              644,
+              434,
+              76,
+              36
+            ]
+          },
+          {
+            "tag": "BUTTON",
+            "text": "标记为已完成",
+            "aria": null,
+            "placeholder": null,
+            "box": [
+              732,
+              434,
+              108,
+              36
+            ]
+          },
+          {
+            "tag": "BUTTON",
+            "text": "删除",
+            "aria": null,
+            "placeholder": null,
+            "box": [
+              852,
+              434,
+              52,
+              36
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "slug": "icon-button",
+      "upstream": {
+        "title": "图标按钮",
+        "main": [
+          324,
+          40,
+          808,
+          1609
+        ],
+        "heading": [
+          324,
+          108,
+          808,
+          34
+        ],
+        "canvas": {
+          "rect": [
+            324,
+            286,
+            808,
+            327
+          ],
+          "radius": "24px",
+          "font": "16px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "control": {
+          "rect": [
+            642,
+            432,
+            36,
+            36
+          ],
+          "radius": "10px",
+          "font": "16px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "text": "",
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "text": "",
+            "aria": "通知",
+            "placeholder": null,
+            "box": [
+              642,
+              432,
+              36,
+              36
+            ]
+          },
+          {
+            "tag": "BUTTON",
+            "text": "",
+            "aria": "编辑",
+            "placeholder": null,
+            "box": [
+              690,
+              432,
+              36,
+              36
+            ]
+          },
+          {
+            "tag": "BUTTON",
+            "text": "",
+            "aria": "更多",
+            "placeholder": null,
+            "box": [
+              738,
+              434,
+              32,
+              32
+            ]
+          },
+          {
+            "tag": "BUTTON",
+            "text": "",
+            "aria": "删除",
+            "placeholder": null,
+            "box": [
+              782,
+              434,
+              32,
+              32
+            ]
+          }
+        ]
+      },
+      "local": {
+        "title": "图标按钮",
+        "main": [
+          324,
+          40,
+          808,
+          2502
+        ],
+        "heading": [
+          324,
+          108,
+          808,
+          34
+        ],
+        "canvas": {
+          "rect": [
+            324,
+            266,
+            808,
+            327
+          ],
+          "radius": "24px",
+          "font": "16px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "control": {
+          "rect": [
+            664,
+            412,
+            36,
+            36
+          ],
+          "radius": "10px",
+          "font": "16px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "text": "",
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "text": "",
+            "aria": "新建",
+            "placeholder": null,
+            "box": [
+              664,
+              412,
+              36,
+              36
+            ]
+          },
+          {
+            "tag": "BUTTON",
+            "text": "",
+            "aria": "编辑",
+            "placeholder": null,
+            "box": [
+              712,
+              414,
+              32,
+              32
+            ]
+          },
+          {
+            "tag": "BUTTON",
+            "text": "",
+            "aria": "禁用新建",
+            "placeholder": null,
+            "box": [
+              756,
+              412,
+              36,
+              36
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "slug": "close-button",
+      "upstream": {
+        "title": "关闭按钮",
+        "main": [
+          324,
+          40,
+          808,
+          1839
+        ],
+        "heading": [
+          324,
+          108,
+          808,
+          34
+        ],
+        "canvas": {
+          "rect": [
+            324,
+            286,
+            808,
+            327
+          ],
+          "radius": "24px",
+          "font": "16px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "control": {
+          "rect": [
+            646,
+            438,
+            16,
+            16
+          ],
+          "radius": "3.35544e+07px",
+          "font": "16px",
+          "background": "rgb(235, 235, 235)"
+        },
+        "text": "2xs\nxs\nSM\nMD",
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "text": "",
+            "aria": "关闭",
+            "placeholder": null,
+            "box": [
+              646,
+              438,
+              16,
+              16
+            ]
+          },
+          {
+            "tag": "BUTTON",
+            "text": "",
+            "aria": "关闭",
+            "placeholder": null,
+            "box": [
+              688,
+              434,
+              20,
+              20
+            ]
+          },
+          {
+            "tag": "BUTTON",
+            "text": "",
+            "aria": "关闭",
+            "placeholder": null,
+            "box": [
+              732,
+              430,
+              24,
+              24
+            ]
+          },
+          {
+            "tag": "BUTTON",
+            "text": "",
+            "aria": "关闭",
+            "placeholder": null,
+            "box": [
+              780,
+              422,
+              32,
+              32
+            ]
+          }
+        ]
+      },
+      "local": {
+        "title": "关闭按钮",
+        "main": [
+          324,
+          40,
+          808,
+          2003
+        ],
+        "heading": [
+          324,
+          108,
+          808,
+          34
+        ],
+        "canvas": {
+          "rect": [
+            324,
+            266,
+            808,
+            327
+          ],
+          "radius": "24px",
+          "font": "16px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "control": {
+          "rect": [
+            664,
+            422,
+            16,
+            16
+          ],
+          "radius": "3.35544e+07px",
+          "font": "16px",
+          "background": "rgb(235, 235, 235)"
+        },
+        "text": "",
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "text": "",
+            "aria": "关闭 16",
+            "placeholder": null,
+            "box": [
+              664,
+              422,
+              16,
+              16
+            ]
+          },
+          {
+            "tag": "BUTTON",
+            "text": "",
+            "aria": "关闭 20",
+            "placeholder": null,
+            "box": [
+              692,
+              420,
+              20,
+              20
+            ]
+          },
+          {
+            "tag": "BUTTON",
+            "text": "",
+            "aria": "关闭 24",
+            "placeholder": null,
+            "box": [
+              724,
+              418,
+              24,
+              24
+            ]
+          },
+          {
+            "tag": "BUTTON",
+            "text": "",
+            "aria": "关闭 32",
+            "placeholder": null,
+            "box": [
+              760,
+              414,
+              32,
+              32
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "slug": "button-group",
+      "upstream": {
+        "title": "按钮组",
+        "main": [
+          324,
+          40,
+          808,
+          2212
+        ],
+        "heading": [
+          324,
+          108,
+          808,
+          34
+        ],
+        "canvas": {
+          "rect": [
+            324,
+            286,
+            808,
+            327
+          ],
+          "radius": "24px",
+          "font": "16px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "control": {
+          "rect": [
+            637,
+            433,
+            39,
+            34
+          ],
+          "radius": "0px",
+          "font": "14px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "text": "日\n周\n月份\n年份",
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "text": "日",
+            "aria": null,
+            "placeholder": null,
+            "box": [
+              637,
+              433,
+              39,
+              34
+            ]
+          },
+          {
+            "tag": "BUTTON",
+            "text": "周",
+            "aria": null,
+            "placeholder": null,
+            "box": [
+              676,
+              433,
+              39,
+              34
+            ]
+          },
+          {
+            "tag": "BUTTON",
+            "text": "月份",
+            "aria": null,
+            "placeholder": null,
+            "box": [
+              715,
+              433,
+              53,
+              34
+            ]
+          },
+          {
+            "tag": "BUTTON",
+            "text": "年份",
+            "aria": null,
+            "placeholder": null,
+            "box": [
+              768,
+              433,
+              52,
+              34
+            ]
+          }
+        ]
+      },
+      "local": {
+        "title": "按钮组",
+        "main": [
+          324,
+          40,
+          808,
+          2144
+        ],
+        "heading": [
+          324,
+          108,
+          808,
+          34
+        ],
+        "canvas": {
+          "rect": [
+            324,
+            266,
+            808,
+            327
+          ],
+          "radius": "24px",
+          "font": "16px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "control": {
+          "rect": [
+            670,
+            389,
+            39,
+            34
+          ],
+          "radius": "0px",
+          "font": "14px",
+          "background": "rgb(247, 247, 247)"
+        },
+        "text": "左\n中\n右\nleft / 0",
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "text": "左",
+            "aria": null,
+            "placeholder": null,
+            "box": [
+              670,
+              389,
+              39,
+              34
+            ]
+          },
+          {
+            "tag": "BUTTON",
+            "text": "中",
+            "aria": null,
+            "placeholder": null,
+            "box": [
+              709,
+              389,
+              39,
+              34
+            ]
+          },
+          {
+            "tag": "BUTTON",
+            "text": "右",
+            "aria": null,
+            "placeholder": null,
+            "box": [
+              748,
+              389,
+              38,
+              34
+            ]
+          },
+          {
+            "tag": "BUTTON",
+            "text": "",
+            "aria": "增加计数",
+            "placeholder": null,
+            "box": [
+              669,
+              436,
+              36,
+              36
+            ]
+          },
+          {
+            "tag": "BUTTON",
+            "text": "",
+            "aria": "重置计数",
+            "placeholder": null,
+            "box": [
+              713,
+              444,
+              20,
+              20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "slug": "checkbox",
+      "upstream": {
+        "title": "复选框",
+        "main": [
+          324,
+          40,
+          808,
+          2607
+        ],
+        "heading": [
+          324,
+          108,
+          808,
+          34
+        ],
+        "canvas": {
+          "rect": [
+            324,
+            286,
+            808,
+            327
+          ],
+          "radius": "24px",
+          "font": "16px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "control": {
+          "rect": [
+            639,
+            455,
+            13,
+            13
+          ],
+          "radius": "0px",
+          "font": "16px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "text": "",
+        "controls": [
+          {
+            "tag": "INPUT",
+            "text": "",
+            "aria": "未选中",
+            "placeholder": null,
+            "box": [
+              639,
+              455,
+              13,
+              13
+            ]
+          },
+          {
+            "tag": "INPUT",
+            "text": "",
+            "aria": "已检查",
+            "placeholder": null,
+            "box": [
+              679,
+              455,
+              13,
+              13
+            ]
+          },
+          {
+            "tag": "INPUT",
+            "text": "",
+            "aria": "不确定",
+            "placeholder": null,
+            "box": [
+              719,
+              455,
+              13,
+              13
+            ]
+          },
+          {
+            "tag": "INPUT",
+            "text": "",
+            "aria": "禁用",
+            "placeholder": null,
+            "box": [
+              759,
+              455,
+              13,
+              13
+            ]
+          },
+          {
+            "tag": "INPUT",
+            "text": "",
+            "aria": "已禁用选中",
+            "placeholder": null,
+            "box": [
+              799,
+              455,
+              13,
+              13
+            ]
+          }
+        ]
+      },
+      "local": {
+        "title": "复选框",
+        "main": [
+          324,
+          40,
+          808,
+          3207
+        ],
+        "heading": [
+          324,
+          108,
+          808,
+          34
+        ],
+        "canvas": {
+          "rect": [
+            324,
+            266,
+            808,
+            327
+          ],
+          "radius": "24px",
+          "font": "16px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "control": {
+          "rect": [
+            639,
+            435,
+            13,
+            13
+          ],
+          "radius": "0px",
+          "font": "16px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "text": "",
+        "controls": [
+          {
+            "tag": "INPUT",
+            "text": "",
+            "aria": "未选中",
+            "placeholder": null,
+            "box": [
+              639,
+              435,
+              13,
+              13
+            ]
+          },
+          {
+            "tag": "INPUT",
+            "text": "",
+            "aria": "已选中",
+            "placeholder": null,
+            "box": [
+              679,
+              435,
+              13,
+              13
+            ]
+          },
+          {
+            "tag": "INPUT",
+            "text": "",
+            "aria": "不确定",
+            "placeholder": null,
+            "box": [
+              719,
+              435,
+              13,
+              13
+            ]
+          },
+          {
+            "tag": "INPUT",
+            "text": "",
+            "aria": "禁用",
+            "placeholder": null,
+            "box": [
+              759,
+              435,
+              13,
+              13
+            ]
+          },
+          {
+            "tag": "INPUT",
+            "text": "",
+            "aria": "禁用且选中",
+            "placeholder": null,
+            "box": [
+              799,
+              435,
+              13,
+              13
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "slug": "radio",
+      "upstream": {
+        "title": "单选框",
+        "main": [
+          324,
+          40,
+          808,
+          2736
+        ],
+        "heading": [
+          324,
+          108,
+          808,
+          34
+        ],
+        "canvas": {
+          "rect": [
+            324,
+            286,
+            808,
+            327
+          ],
+          "radius": "24px",
+          "font": "16px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "control": {
+          "rect": [
+            673,
+            427,
+            13,
+            13
+          ],
+          "radius": "50%",
+          "font": "16px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "text": "按月计费\n按年计费\n基于使用情况",
+        "controls": [
+          {
+            "tag": "INPUT",
+            "text": "",
+            "aria": null,
+            "placeholder": null,
+            "box": [
+              673,
+              427,
+              13,
+              13
+            ]
+          },
+          {
+            "tag": "INPUT",
+            "text": "",
+            "aria": null,
+            "placeholder": null,
+            "box": [
+              673,
+              455,
+              13,
+              13
+            ]
+          },
+          {
+            "tag": "INPUT",
+            "text": "",
+            "aria": null,
+            "placeholder": null,
+            "box": [
+              673,
+              483,
+              13,
+              13
+            ]
+          }
+        ]
+      },
+      "local": {
+        "title": "单选框",
+        "main": [
+          324,
+          40,
+          808,
+          2077
+        ],
+        "heading": [
+          324,
+          108,
+          808,
+          34
+        ],
+        "canvas": {
+          "rect": [
+            324,
+            266,
+            808,
+            327
+          ],
+          "radius": "24px",
+          "font": "16px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "control": {
+          "rect": [
+            695,
+            421,
+            13,
+            13
+          ],
+          "radius": "50%",
+          "font": "16px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "text": "选择方案\n方案 A\n方案 B\n方案 C",
+        "controls": [
+          {
+            "tag": "INPUT",
+            "text": "",
+            "aria": null,
+            "placeholder": null,
+            "box": [
+              695,
+              421,
+              13,
+              13
+            ]
+          },
+          {
+            "tag": "INPUT",
+            "text": "",
+            "aria": null,
+            "placeholder": null,
+            "box": [
+              695,
+              449,
+              13,
+              13
+            ]
+          },
+          {
+            "tag": "INPUT",
+            "text": "",
+            "aria": null,
+            "placeholder": null,
+            "box": [
+              695,
+              476,
+              13,
+              13
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "slug": "switch",
+      "upstream": {
+        "title": "开关",
+        "main": [
+          324,
+          40,
+          808,
+          2869
+        ],
+        "heading": [
+          324,
+          108,
+          808,
+          34
+        ],
+        "canvas": {
+          "rect": [
+            324,
+            286,
+            808,
+            327
+          ],
+          "radius": "24px",
+          "font": "16px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "control": {
+          "rect": [
+            632,
+            397,
+            13,
+            13
+          ],
+          "radius": "0px",
+          "font": "16px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "text": "丸\n\n大\n中\n小\n\n矩形\n\n大\n中\n小",
+        "controls": [
+          {
+            "tag": "INPUT",
+            "text": "",
+            "aria": "Pill Large",
+            "placeholder": null,
+            "box": [
+              632,
+              397,
+              13,
+              13
+            ]
+          },
+          {
+            "tag": "INPUT",
+            "text": "",
+            "aria": "Pill Medium",
+            "placeholder": null,
+            "box": [
+              720,
+              401,
+              13,
+              13
+            ]
+          },
+          {
+            "tag": "INPUT",
+            "text": "",
+            "aria": "Pill Small",
+            "placeholder": null,
+            "box": [
+              794,
+              405,
+              13,
+              13
+            ]
+          },
+          {
+            "tag": "INPUT",
+            "text": "",
+            "aria": "Rectangle Large",
+            "placeholder": null,
+            "box": [
+              632,
+              517,
+              13,
+              13
+            ]
+          },
+          {
+            "tag": "INPUT",
+            "text": "",
+            "aria": "Rectangle Medium",
+            "placeholder": null,
+            "box": [
+              720,
+              521,
+              13,
+              13
+            ]
+          },
+          {
+            "tag": "INPUT",
+            "text": "",
+            "aria": "Rectangle Small",
+            "placeholder": null,
+            "box": [
+              794,
+              525,
+              13,
+              13
+            ]
+          }
+        ]
+      },
+      "local": {
+        "title": "开关",
+        "main": [
+          324,
+          40,
+          808,
+          3761
+        ],
+        "heading": [
+          324,
+          108,
+          808,
+          34
+        ],
+        "canvas": {
+          "rect": [
+            324,
+            266,
+            808,
+            327
+          ],
+          "radius": "24px",
+          "font": "16px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "control": {
+          "rect": [
+            643,
+            435,
+            13,
+            13
+          ],
+          "radius": "0px",
+          "font": "16px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "text": "开启\n关闭",
+        "controls": [
+          {
+            "tag": "INPUT",
+            "text": "",
+            "aria": null,
+            "placeholder": null,
+            "box": [
+              643,
+              435,
+              13,
+              13
+            ]
+          },
+          {
+            "tag": "INPUT",
+            "text": "",
+            "aria": null,
+            "placeholder": null,
+            "box": [
+              733,
+              435,
+              13,
+              13
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "slug": "input",
+      "upstream": {
+        "title": "输入框",
+        "main": [
+          324,
+          40,
+          808,
+          2874
+        ],
+        "heading": [
+          324,
+          108,
+          808,
+          34
+        ],
+        "canvas": {
+          "rect": [
+            324,
+            286,
+            808,
+            327
+          ],
+          "radius": "24px",
+          "font": "16px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "control": {
+          "rect": [
+            633,
+            441,
+            184,
+            20
+          ],
+          "radius": "0px",
+          "font": "14px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "text": "电子邮箱\n*\nThis is a hint about this input.",
+        "controls": [
+          {
+            "tag": "INPUT",
+            "text": "",
+            "aria": null,
+            "placeholder": "输入您的电子邮件",
+            "box": [
+              633,
+              441,
+              184,
+              20
+            ]
+          }
+        ]
+      },
+      "local": {
+        "title": "输入框",
+        "main": [
+          324,
+          40,
+          808,
+          3670
+        ],
+        "heading": [
+          324,
+          108,
+          808,
+          34
+        ],
+        "canvas": {
+          "rect": [
+            324,
+            266,
+            808,
+            327
+          ],
+          "radius": "24px",
+          "font": "16px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "control": {
+          "rect": [
+            633,
+            421,
+            212,
+            20
+          ],
+          "radius": "0px",
+          "font": "14px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "text": "电子邮箱\n*\n请输入有效的邮箱地址",
+        "controls": [
+          {
+            "tag": "INPUT",
+            "text": "",
+            "aria": null,
+            "placeholder": "输入您的电子邮件",
+            "box": [
+              633,
+              421,
+              212,
+              20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "slug": "textarea",
+      "upstream": {
+        "title": "多行文本框",
+        "main": [
+          324,
+          40,
+          808,
+          3181
+        ],
+        "heading": [
+          324,
+          108,
+          808,
+          34
+        ],
+        "canvas": {
+          "rect": [
+            324,
+            283,
+            808,
+            327
+          ],
+          "radius": "24px",
+          "font": "16px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "control": {
+          "rect": [
+            526,
+            408,
+            404,
+            80
+          ],
+          "radius": "0px",
+          "font": "14px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "text": "发行说明\n*\nMarkdown is supported.",
+        "controls": [
+          {
+            "tag": "TEXTAREA",
+            "text": "",
+            "aria": null,
+            "placeholder": "这个版本有什么变化？",
+            "box": [
+              526,
+              408,
+              404,
+              80
+            ]
+          }
+        ]
+      },
+      "local": {
+        "title": "多行文本框",
+        "main": [
+          324,
+          40,
+          808,
+          3444
+        ],
+        "heading": [
+          324,
+          108,
+          808,
+          34
+        ],
+        "canvas": {
+          "rect": [
+            324,
+            266,
+            808,
+            327
+          ],
+          "radius": "24px",
+          "font": "16px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "control": {
+          "rect": [
+            544,
+            401,
+            368,
+            60
+          ],
+          "radius": "0px",
+          "font": "14px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "text": "备注\n填写补充说明\n0/500",
+        "controls": [
+          {
+            "tag": "TEXTAREA",
+            "text": "",
+            "aria": null,
+            "placeholder": "输入备注…",
+            "box": [
+              544,
+              401,
+              368,
+              60
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "slug": "select",
+      "upstream": {
+        "title": "选择框",
+        "main": [
+          324,
+          40,
+          808,
+          2993
+        ],
+        "heading": [
+          324,
+          108,
+          808,
+          34
+        ],
+        "canvas": {
+          "rect": [
+            324,
+            286,
+            808,
+            327
+          ],
+          "radius": "24px",
+          "font": "16px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "control": {
+          "rect": [
+            622,
+            431,
+            100,
+            38
+          ],
+          "radius": "10px",
+          "font": "14px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "text": "所有价格\n \nAll prices\nUnder $100\nOver $100\n所有地区\n \nAll regions\nEurope\nAmericas",
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "text": "所有价格",
+            "aria": "按价格过滤",
+            "placeholder": null,
+            "box": [
+              622,
+              431,
+              100,
+              38
+            ]
+          },
+          {
+            "tag": "BUTTON",
+            "text": "所有地区",
+            "aria": "按地区过滤",
+            "placeholder": null,
+            "box": [
+              734,
+              431,
+              100,
+              38
+            ]
+          }
+        ]
+      },
+      "local": {
+        "title": "选择器",
+        "main": [
+          324,
+          40,
+          808,
+          3134
+        ],
+        "heading": [
+          324,
+          108,
+          808,
+          34
+        ],
+        "canvas": {
+          "rect": [
+            324,
+            266,
+            808,
+            327
+          ],
+          "radius": "24px",
+          "font": "16px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "control": {
+          "rect": [
+            622,
+            411,
+            100,
+            38
+          ],
+          "radius": "10px",
+          "font": "14px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "text": "所有价格\n \n所有价格\n100 元以内\n100 元以上\n所有地区\n \n所有地区\n欧洲\n美洲",
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "text": "所有价格",
+            "aria": "按价格过滤",
+            "placeholder": null,
+            "box": [
+              622,
+              411,
+              100,
+              38
+            ]
+          },
+          {
+            "tag": "BUTTON",
+            "text": "所有地区",
+            "aria": "按地区过滤",
+            "placeholder": null,
+            "box": [
+              734,
+              411,
+              100,
+              38
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "slug": "tabs",
+      "upstream": {
+        "title": "选项卡",
+        "main": [
+          324,
+          40,
+          808,
+          2227
+        ],
+        "heading": [
+          324,
+          108,
+          808,
+          34
+        ],
+        "canvas": {
+          "rect": [
+            368,
+            476,
+            720,
+            0
+          ],
+          "radius": "0px",
+          "font": "16px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "control": null,
+        "text": "",
+        "controls": []
+      },
+      "local": {
+        "title": "标签页",
+        "main": [
+          324,
+          40,
+          808,
+          2251
+        ],
+        "heading": [
+          324,
+          108,
+          808,
+          34
+        ],
+        "canvas": {
+          "rect": [
+            324,
+            266,
+            808,
+            327
+          ],
+          "radius": "24px",
+          "font": "16px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "control": null,
+        "text": "横幅\n152\n帖子\n32\n二维码\n14\n会员\n横幅面板内容。底部指示线随选中项移动。",
+        "controls": []
+      }
+    },
+    {
+      "slug": "segmented-control",
+      "upstream": {
+        "title": "分段控件",
+        "main": [
+          324,
+          40,
+          808,
+          1542
+        ],
+        "heading": [
+          324,
+          108,
+          808,
+          34
+        ],
+        "canvas": {
+          "rect": [
+            324,
+            286,
+            808,
+            327
+          ],
+          "radius": "24px",
+          "font": "16px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "control": {
+          "rect": [
+            654,
+            436,
+            48,
+            28
+          ],
+          "radius": "6px",
+          "font": "14px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "text": "每周\n每月\n每年",
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "text": "每周",
+            "aria": null,
+            "placeholder": null,
+            "box": [
+              654,
+              436,
+              48,
+              28
+            ]
+          },
+          {
+            "tag": "BUTTON",
+            "text": "每月",
+            "aria": null,
+            "placeholder": null,
+            "box": [
+              704,
+              436,
+              48,
+              28
+            ]
+          },
+          {
+            "tag": "BUTTON",
+            "text": "每年",
+            "aria": null,
+            "placeholder": null,
+            "box": [
+              754,
+              436,
+              48,
+              28
+            ]
+          }
+        ]
+      },
+      "local": {
+        "title": "分段控件",
+        "main": [
+          324,
+          40,
+          808,
+          2488
+        ],
+        "heading": [
+          324,
+          108,
+          808,
+          34
+        ],
+        "canvas": {
+          "rect": [
+            324,
+            266,
+            808,
+            327
+          ],
+          "radius": "24px",
+          "font": "16px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "control": {
+          "rect": [
+            645,
+            416,
+            54,
+            28
+          ],
+          "radius": "6px",
+          "font": "14px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "text": "日\n周\n月",
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "text": "日",
+            "aria": null,
+            "placeholder": null,
+            "box": [
+              645,
+              416,
+              54,
+              28
+            ]
+          },
+          {
+            "tag": "BUTTON",
+            "text": "周",
+            "aria": null,
+            "placeholder": null,
+            "box": [
+              701,
+              416,
+              54,
+              28
+            ]
+          },
+          {
+            "tag": "BUTTON",
+            "text": "月",
+            "aria": null,
+            "placeholder": null,
+            "box": [
+              757,
+              416,
+              54,
+              28
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "after": [
+    {
+      "slug": "button",
+      "theme": "light",
+      "canvas": [
+        324,
+        288,
+        808,
+        327
+      ],
+      "controls": [
+        {
+          "text": "开始使用",
+          "aria": null,
+          "rect": [
+            552,
+            434,
+            80,
+            36
+          ],
+          "radius": "10px",
+          "font": "14px"
+        },
+        {
+          "text": "继续",
+          "aria": null,
+          "rect": [
+            644,
+            434,
+            76,
+            36
+          ],
+          "radius": "10px",
+          "font": "14px"
+        },
+        {
+          "text": "标记为已完成",
+          "aria": null,
+          "rect": [
+            732,
+            434,
+            108,
+            36
+          ],
+          "radius": "10px",
+          "font": "14px"
+        },
+        {
+          "text": "删除",
+          "aria": null,
+          "rect": [
+            852,
+            434,
+            52,
+            36
+          ],
+          "radius": "10px",
+          "font": "14px"
+        }
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "icon-button",
+      "theme": "light",
+      "canvas": [
+        324,
+        266,
+        808,
+        327
+      ],
+      "controls": [
+        {
+          "text": "",
+          "aria": "通知",
+          "rect": [
+            642,
+            412,
+            36,
+            36
+          ],
+          "radius": "10px",
+          "font": "16px"
+        },
+        {
+          "text": "",
+          "aria": "编辑",
+          "rect": [
+            690,
+            412,
+            36,
+            36
+          ],
+          "radius": "10px",
+          "font": "16px"
+        },
+        {
+          "text": "",
+          "aria": "更多",
+          "rect": [
+            738,
+            414,
+            32,
+            32
+          ],
+          "radius": "10px",
+          "font": "16px"
+        },
+        {
+          "text": "",
+          "aria": "删除",
+          "rect": [
+            782,
+            414,
+            32,
+            32
+          ],
+          "radius": "10px",
+          "font": "16px"
+        }
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "close-button",
+      "theme": "light",
+      "canvas": [
+        324,
+        266,
+        808,
+        327
+      ],
+      "controls": [
+        {
+          "text": "",
+          "aria": "关闭 16",
+          "rect": [
+            652,
+            418,
+            16,
+            16
+          ],
+          "radius": "3.35544e+07px",
+          "font": "16px"
+        },
+        {
+          "text": "",
+          "aria": "关闭 20",
+          "rect": [
+            689,
+            414,
+            20,
+            20
+          ],
+          "radius": "3.35544e+07px",
+          "font": "16px"
+        },
+        {
+          "text": "",
+          "aria": "关闭 24",
+          "rect": [
+            729,
+            410,
+            24,
+            24
+          ],
+          "radius": "3.35544e+07px",
+          "font": "16px"
+        },
+        {
+          "text": "",
+          "aria": "关闭 32",
+          "rect": [
+            773,
+            402,
+            32,
+            32
+          ],
+          "radius": "3.35544e+07px",
+          "font": "16px"
+        }
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "button-group",
+      "theme": "light",
+      "canvas": [
+        324,
+        266,
+        808,
+        327
+      ],
+      "controls": [
+        {
+          "text": "日",
+          "aria": null,
+          "rect": [
+            637,
+            413,
+            39,
+            34
+          ],
+          "radius": "0px",
+          "font": "14px"
+        },
+        {
+          "text": "周",
+          "aria": null,
+          "rect": [
+            676,
+            413,
+            39,
+            34
+          ],
+          "radius": "0px",
+          "font": "14px"
+        },
+        {
+          "text": "月份",
+          "aria": null,
+          "rect": [
+            715,
+            413,
+            53,
+            34
+          ],
+          "radius": "0px",
+          "font": "14px"
+        },
+        {
+          "text": "年份",
+          "aria": null,
+          "rect": [
+            768,
+            413,
+            52,
+            34
+          ],
+          "radius": "0px",
+          "font": "14px"
+        }
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "checkbox",
+      "theme": "light",
+      "canvas": [
+        324,
+        266,
+        808,
+        327
+      ],
+      "controls": [
+        {
+          "text": "",
+          "aria": "未选中",
+          "rect": [
+            639,
+            435,
+            13,
+            13
+          ],
+          "radius": "0px",
+          "font": "16px"
+        },
+        {
+          "text": "",
+          "aria": "已选中",
+          "rect": [
+            679,
+            435,
+            13,
+            13
+          ],
+          "radius": "0px",
+          "font": "16px"
+        },
+        {
+          "text": "",
+          "aria": "不确定",
+          "rect": [
+            719,
+            435,
+            13,
+            13
+          ],
+          "radius": "0px",
+          "font": "16px"
+        },
+        {
+          "text": "",
+          "aria": "禁用",
+          "rect": [
+            759,
+            435,
+            13,
+            13
+          ],
+          "radius": "0px",
+          "font": "16px"
+        },
+        {
+          "text": "",
+          "aria": "禁用且选中",
+          "rect": [
+            799,
+            435,
+            13,
+            13
+          ],
+          "radius": "0px",
+          "font": "16px"
+        }
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "radio",
+      "theme": "light",
+      "canvas": [
+        324,
+        266,
+        808,
+        327
+      ],
+      "controls": [
+        {
+          "text": "",
+          "aria": null,
+          "rect": [
+            673,
+            407,
+            13,
+            13
+          ],
+          "radius": "50%",
+          "font": "16px"
+        },
+        {
+          "text": "",
+          "aria": null,
+          "rect": [
+            673,
+            435,
+            13,
+            13
+          ],
+          "radius": "50%",
+          "font": "16px"
+        },
+        {
+          "text": "",
+          "aria": null,
+          "rect": [
+            673,
+            463,
+            13,
+            13
+          ],
+          "radius": "50%",
+          "font": "16px"
+        }
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "switch",
+      "theme": "light",
+      "canvas": [
+        324,
+        266,
+        808,
+        327
+      ],
+      "controls": [
+        {
+          "text": "",
+          "aria": "胶囊大",
+          "rect": [
+            640,
+            384,
+            13,
+            13
+          ],
+          "radius": "0px",
+          "font": "16px"
+        },
+        {
+          "text": "",
+          "aria": "胶囊中",
+          "rect": [
+            720,
+            384,
+            13,
+            13
+          ],
+          "radius": "0px",
+          "font": "16px"
+        },
+        {
+          "text": "",
+          "aria": "胶囊小",
+          "rect": [
+            786,
+            384,
+            13,
+            13
+          ],
+          "radius": "0px",
+          "font": "16px"
+        },
+        {
+          "text": "",
+          "aria": "矩形大",
+          "rect": [
+            640,
+            489,
+            13,
+            13
+          ],
+          "radius": "0px",
+          "font": "16px"
+        },
+        {
+          "text": "",
+          "aria": "矩形中",
+          "rect": [
+            720,
+            489,
+            13,
+            13
+          ],
+          "radius": "0px",
+          "font": "16px"
+        },
+        {
+          "text": "",
+          "aria": "矩形小",
+          "rect": [
+            786,
+            489,
+            13,
+            13
+          ],
+          "radius": "0px",
+          "font": "16px"
+        }
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "input",
+      "theme": "light",
+      "canvas": [
+        324,
+        266,
+        808,
+        327
+      ],
+      "controls": [
+        {
+          "text": "",
+          "aria": null,
+          "rect": [
+            633,
+            421,
+            212,
+            20
+          ],
+          "radius": "0px",
+          "font": "14px"
+        }
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "textarea",
+      "theme": "light",
+      "canvas": [
+        324,
+        266,
+        808,
+        327
+      ],
+      "controls": [
+        {
+          "text": "",
+          "aria": null,
+          "rect": [
+            526,
+            391,
+            404,
+            80
+          ],
+          "radius": "0px",
+          "font": "14px"
+        }
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "select",
+      "theme": "light",
+      "canvas": [
+        324,
+        266,
+        808,
+        327
+      ],
+      "controls": [
+        {
+          "text": "所有价格",
+          "aria": "按价格过滤",
+          "rect": [
+            622,
+            411,
+            100,
+            38
+          ],
+          "radius": "10px",
+          "font": "14px"
+        },
+        {
+          "text": "所有地区",
+          "aria": "按地区过滤",
+          "rect": [
+            734,
+            411,
+            100,
+            38
+          ],
+          "radius": "10px",
+          "font": "14px"
+        }
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "tabs",
+      "theme": "light",
+      "canvas": [
+        324,
+        266,
+        808,
+        327
+      ],
+      "controls": [
+        {
+          "text": "横幅152",
+          "aria": null,
+          "rect": [
+            472,
+            375,
+            107,
+            38
+          ],
+          "radius": "0px",
+          "font": "16px"
+        },
+        {
+          "text": "帖子32",
+          "aria": null,
+          "rect": [
+            583,
+            375,
+            101,
+            38
+          ],
+          "radius": "0px",
+          "font": "16px"
+        },
+        {
+          "text": "二维码14",
+          "aria": null,
+          "rect": [
+            687,
+            375,
+            115,
+            38
+          ],
+          "radius": "0px",
+          "font": "16px"
+        },
+        {
+          "text": "会员",
+          "aria": null,
+          "rect": [
+            806,
+            376,
+            70,
+            36
+          ],
+          "radius": "0px",
+          "font": "16px"
+        }
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "segmented-control",
+      "theme": "light",
+      "canvas": [
+        324,
+        266,
+        808,
+        327
+      ],
+      "controls": [
+        {
+          "text": "每周",
+          "aria": null,
+          "rect": [
+            654,
+            416,
+            48,
+            28
+          ],
+          "radius": "6px",
+          "font": "14px"
+        },
+        {
+          "text": "每月",
+          "aria": null,
+          "rect": [
+            704,
+            416,
+            48,
+            28
+          ],
+          "radius": "6px",
+          "font": "14px"
+        },
+        {
+          "text": "每年",
+          "aria": null,
+          "rect": [
+            754,
+            416,
+            48,
+            28
+          ],
+          "radius": "6px",
+          "font": "14px"
+        }
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "button",
+      "theme": "dark",
+      "canvas": [
+        324,
+        288,
+        808,
+        327
+      ],
+      "controls": [
+        {
+          "text": "开始使用",
+          "aria": null,
+          "rect": [
+            552,
+            434,
+            80,
+            36
+          ],
+          "radius": "10px",
+          "font": "14px"
+        },
+        {
+          "text": "继续",
+          "aria": null,
+          "rect": [
+            644,
+            434,
+            76,
+            36
+          ],
+          "radius": "10px",
+          "font": "14px"
+        },
+        {
+          "text": "标记为已完成",
+          "aria": null,
+          "rect": [
+            732,
+            434,
+            108,
+            36
+          ],
+          "radius": "10px",
+          "font": "14px"
+        },
+        {
+          "text": "删除",
+          "aria": null,
+          "rect": [
+            852,
+            434,
+            52,
+            36
+          ],
+          "radius": "10px",
+          "font": "14px"
+        }
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "icon-button",
+      "theme": "dark",
+      "canvas": [
+        324,
+        266,
+        808,
+        327
+      ],
+      "controls": [
+        {
+          "text": "",
+          "aria": "通知",
+          "rect": [
+            642,
+            412,
+            36,
+            36
+          ],
+          "radius": "10px",
+          "font": "16px"
+        },
+        {
+          "text": "",
+          "aria": "编辑",
+          "rect": [
+            690,
+            412,
+            36,
+            36
+          ],
+          "radius": "10px",
+          "font": "16px"
+        },
+        {
+          "text": "",
+          "aria": "更多",
+          "rect": [
+            738,
+            414,
+            32,
+            32
+          ],
+          "radius": "10px",
+          "font": "16px"
+        },
+        {
+          "text": "",
+          "aria": "删除",
+          "rect": [
+            782,
+            414,
+            32,
+            32
+          ],
+          "radius": "10px",
+          "font": "16px"
+        }
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "close-button",
+      "theme": "dark",
+      "canvas": [
+        324,
+        266,
+        808,
+        327
+      ],
+      "controls": [
+        {
+          "text": "",
+          "aria": "关闭 16",
+          "rect": [
+            652,
+            418,
+            16,
+            16
+          ],
+          "radius": "3.35544e+07px",
+          "font": "16px"
+        },
+        {
+          "text": "",
+          "aria": "关闭 20",
+          "rect": [
+            689,
+            414,
+            20,
+            20
+          ],
+          "radius": "3.35544e+07px",
+          "font": "16px"
+        },
+        {
+          "text": "",
+          "aria": "关闭 24",
+          "rect": [
+            729,
+            410,
+            24,
+            24
+          ],
+          "radius": "3.35544e+07px",
+          "font": "16px"
+        },
+        {
+          "text": "",
+          "aria": "关闭 32",
+          "rect": [
+            773,
+            402,
+            32,
+            32
+          ],
+          "radius": "3.35544e+07px",
+          "font": "16px"
+        }
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "button-group",
+      "theme": "dark",
+      "canvas": [
+        324,
+        266,
+        808,
+        327
+      ],
+      "controls": [
+        {
+          "text": "日",
+          "aria": null,
+          "rect": [
+            637,
+            413,
+            39,
+            34
+          ],
+          "radius": "0px",
+          "font": "14px"
+        },
+        {
+          "text": "周",
+          "aria": null,
+          "rect": [
+            676,
+            413,
+            39,
+            34
+          ],
+          "radius": "0px",
+          "font": "14px"
+        },
+        {
+          "text": "月份",
+          "aria": null,
+          "rect": [
+            715,
+            413,
+            53,
+            34
+          ],
+          "radius": "0px",
+          "font": "14px"
+        },
+        {
+          "text": "年份",
+          "aria": null,
+          "rect": [
+            768,
+            413,
+            52,
+            34
+          ],
+          "radius": "0px",
+          "font": "14px"
+        }
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "checkbox",
+      "theme": "dark",
+      "canvas": [
+        324,
+        266,
+        808,
+        327
+      ],
+      "controls": [
+        {
+          "text": "",
+          "aria": "未选中",
+          "rect": [
+            639,
+            435,
+            13,
+            13
+          ],
+          "radius": "0px",
+          "font": "16px"
+        },
+        {
+          "text": "",
+          "aria": "已选中",
+          "rect": [
+            679,
+            435,
+            13,
+            13
+          ],
+          "radius": "0px",
+          "font": "16px"
+        },
+        {
+          "text": "",
+          "aria": "不确定",
+          "rect": [
+            719,
+            435,
+            13,
+            13
+          ],
+          "radius": "0px",
+          "font": "16px"
+        },
+        {
+          "text": "",
+          "aria": "禁用",
+          "rect": [
+            759,
+            435,
+            13,
+            13
+          ],
+          "radius": "0px",
+          "font": "16px"
+        },
+        {
+          "text": "",
+          "aria": "禁用且选中",
+          "rect": [
+            799,
+            435,
+            13,
+            13
+          ],
+          "radius": "0px",
+          "font": "16px"
+        }
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "radio",
+      "theme": "dark",
+      "canvas": [
+        324,
+        266,
+        808,
+        327
+      ],
+      "controls": [
+        {
+          "text": "",
+          "aria": null,
+          "rect": [
+            673,
+            407,
+            13,
+            13
+          ],
+          "radius": "50%",
+          "font": "16px"
+        },
+        {
+          "text": "",
+          "aria": null,
+          "rect": [
+            673,
+            435,
+            13,
+            13
+          ],
+          "radius": "50%",
+          "font": "16px"
+        },
+        {
+          "text": "",
+          "aria": null,
+          "rect": [
+            673,
+            463,
+            13,
+            13
+          ],
+          "radius": "50%",
+          "font": "16px"
+        }
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "switch",
+      "theme": "dark",
+      "canvas": [
+        324,
+        266,
+        808,
+        327
+      ],
+      "controls": [
+        {
+          "text": "",
+          "aria": "胶囊大",
+          "rect": [
+            640,
+            384,
+            13,
+            13
+          ],
+          "radius": "0px",
+          "font": "16px"
+        },
+        {
+          "text": "",
+          "aria": "胶囊中",
+          "rect": [
+            720,
+            384,
+            13,
+            13
+          ],
+          "radius": "0px",
+          "font": "16px"
+        },
+        {
+          "text": "",
+          "aria": "胶囊小",
+          "rect": [
+            786,
+            384,
+            13,
+            13
+          ],
+          "radius": "0px",
+          "font": "16px"
+        },
+        {
+          "text": "",
+          "aria": "矩形大",
+          "rect": [
+            640,
+            489,
+            13,
+            13
+          ],
+          "radius": "0px",
+          "font": "16px"
+        },
+        {
+          "text": "",
+          "aria": "矩形中",
+          "rect": [
+            720,
+            489,
+            13,
+            13
+          ],
+          "radius": "0px",
+          "font": "16px"
+        },
+        {
+          "text": "",
+          "aria": "矩形小",
+          "rect": [
+            786,
+            489,
+            13,
+            13
+          ],
+          "radius": "0px",
+          "font": "16px"
+        }
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "input",
+      "theme": "dark",
+      "canvas": [
+        324,
+        266,
+        808,
+        327
+      ],
+      "controls": [
+        {
+          "text": "",
+          "aria": null,
+          "rect": [
+            633,
+            421,
+            212,
+            20
+          ],
+          "radius": "0px",
+          "font": "14px"
+        }
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "textarea",
+      "theme": "dark",
+      "canvas": [
+        324,
+        266,
+        808,
+        327
+      ],
+      "controls": [
+        {
+          "text": "",
+          "aria": null,
+          "rect": [
+            526,
+            391,
+            404,
+            80
+          ],
+          "radius": "0px",
+          "font": "14px"
+        }
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "select",
+      "theme": "dark",
+      "canvas": [
+        324,
+        266,
+        808,
+        327
+      ],
+      "controls": [
+        {
+          "text": "所有价格",
+          "aria": "按价格过滤",
+          "rect": [
+            622,
+            411,
+            100,
+            38
+          ],
+          "radius": "10px",
+          "font": "14px"
+        },
+        {
+          "text": "所有地区",
+          "aria": "按地区过滤",
+          "rect": [
+            734,
+            411,
+            100,
+            38
+          ],
+          "radius": "10px",
+          "font": "14px"
+        }
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "tabs",
+      "theme": "dark",
+      "canvas": [
+        324,
+        266,
+        808,
+        327
+      ],
+      "controls": [
+        {
+          "text": "横幅152",
+          "aria": null,
+          "rect": [
+            472,
+            375,
+            107,
+            38
+          ],
+          "radius": "0px",
+          "font": "16px"
+        },
+        {
+          "text": "帖子32",
+          "aria": null,
+          "rect": [
+            583,
+            375,
+            101,
+            38
+          ],
+          "radius": "0px",
+          "font": "16px"
+        },
+        {
+          "text": "二维码14",
+          "aria": null,
+          "rect": [
+            687,
+            375,
+            115,
+            38
+          ],
+          "radius": "0px",
+          "font": "16px"
+        },
+        {
+          "text": "会员",
+          "aria": null,
+          "rect": [
+            806,
+            376,
+            70,
+            36
+          ],
+          "radius": "0px",
+          "font": "16px"
+        }
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "segmented-control",
+      "theme": "dark",
+      "canvas": [
+        324,
+        266,
+        808,
+        327
+      ],
+      "controls": [
+        {
+          "text": "每周",
+          "aria": null,
+          "rect": [
+            654,
+            416,
+            48,
+            28
+          ],
+          "radius": "6px",
+          "font": "14px"
+        },
+        {
+          "text": "每月",
+          "aria": null,
+          "rect": [
+            704,
+            416,
+            48,
+            28
+          ],
+          "radius": "6px",
+          "font": "14px"
+        },
+        {
+          "text": "每年",
+          "aria": null,
+          "rect": [
+            754,
+            416,
+            48,
+            28
+          ],
+          "radius": "6px",
+          "font": "14px"
+        }
+      ],
+      "overflow": false,
+      "errors": []
+    }
+  ],
+  "notes": {
+    "button": "四种变体尺寸和主预览排列与上游测量一致；按下缩放、键盘预览切换。",
+    "icon-button": "主预览由三项改为四项，36/36/32/32px 方形尺寸；图标操作的受控回调另见按钮组示例。",
+    "close-button": "16/20/24/32px 四尺寸和文字标签；关闭操作回调在按钮组受控示例检查。",
+    "button-group": "时间范围四项与官网尺寸排列相符，受控对齐/计数演示保留在独立章节。",
+    "checkbox": "五种主状态的排列保留；受控选择、开关及单选联动的键盘回归。",
+    "radio": "三种计费选项，方向键互斥选择；小尺寸仍可由公开 API 使用。",
+    "switch": "胶囊/矩形各三尺寸，六项键盘往返和禁用检查；原站原生隐藏输入尺寸不是轨道尺寸。",
+    "input": "250px 容器保留，实际内部文本区宽度与官网仍有差异；必填、描述、禁用、错误、受控输入。",
+    "textarea": "主预览404×80px文本区，与原站测量一致；必填输入、自动增高和收缩、容器宽度变化。",
+    "select": "两个100×38px触发器、10px圆角一致；选择、受控值、Escape关闭。",
+    "tabs": "本地双主题截图与方向键选中验证；官网选择器定位到空占位，几何对照尚未确认。",
+    "segmented-control": "三项48×28px、6px圆角；每周/月/年主预览和单选状态切换。"
+  },
+  "priorFullAcceptance": {
+    "run": 45399678321,
+    "sha": "eca31488a1e5ad7a8179079c1a56313c1cfdae79",
+    "expectedPerBrowser": 230,
+    "results": [
+      {
+        "browser": "chromium",
+        "pass": 230,
+        "failed": 0,
+        "missing": 0
+      },
+      {
+        "browser": "firefox",
+        "pass": 230,
+        "failed": 0,
+        "missing": 0
+      },
+      {
+        "browser": "webkit",
+        "pass": 226,
+        "failed": 4,
+        "missing": 0
+      }
+    ],
+    "failures": [
+      {
+        "browser": "webkit",
+        "theme": "light",
+        "route": "/zh-hans/components/accordion/",
+        "status": "failed",
+        "error": "Expected values to be strictly equal:\n\n'true' !== 'false'\n"
+      },
+      {
+        "browser": "webkit",
+        "theme": "light",
+        "route": "/zh-hans/rtl/",
+        "status": "failed",
+        "error": "Minified React error #418; visit https://react.dev/errors/418?args[]=text&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+      },
+      {
+        "browser": "webkit",
+        "theme": "dark",
+        "route": "/zh-hans/components/accordion/",
+        "status": "failed",
+        "error": "Expected values to be strictly equal:\n\n'true' !== 'false'\n"
+      },
+      {
+        "browser": "webkit",
+        "theme": "dark",
+        "route": "/zh-hans/rtl/",
+        "status": "failed",
+        "error": "Expected values to be strictly equal:\n\nfalse !== true\n"
+      }
+    ]
+  },
+  "interaction": {
+    "browser": "Edge Chromium",
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "targetedCombinations": 32,
+    "passed": 32,
+    "scope": "12 basic component routes plus four default targeted routes, including cross-page button-family controlled callback tests.",
+    "script": "scripts/browser-check.mjs",
+    "checks": {
+      "button": "按下缩放恢复、键盘预览切换、按钮尺寸。",
+      "icon-button": "四主预览尺寸，受控按钮操作的增加计数在按钮组页验证。",
+      "close-button": "四主预览尺寸，受控关闭重置回调在按钮组页验证。",
+      "button-group": "受控选中、键盘激活、计数及重置。",
+      "checkbox": "受控复选、键盘切换、选中状态联动。",
+      "radio": "方向键互斥选择、受控选择联动。",
+      "switch": "两种形状三尺寸的 Space 往返及禁用。",
+      "input": "受控必填/描述、禁用/错误、清除搜索。",
+      "textarea": "必填输入、自动增高收缩及容器宽度变化。",
+      "select": "选择价格和框架、受控值、Escape 关闭。",
+      "tabs": "方向键选择下一选项。",
+      "segmented-control": "点击选择每月，选中语义。"
+    }
+  }
+}

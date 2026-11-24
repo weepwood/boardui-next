@@ -5,7 +5,11 @@
       "id": "visual-sample-20261124",
       "dimension": "visual",
       "result": "partial",
-      "components": ["button", "input", "checkbox", "select"],
+      "components": [
+        "input",
+        "checkbox",
+        "select"
+      ],
       "scope": "1440×1000 浅色 Chromium 实测：公共画布与代表控件几何；主预览调整前的数据，不代表像素或完整视觉验收。",
       "source": "reference/evidence/visual-sample-20261124.json"
     },
@@ -13,7 +17,17 @@
       "id": "direction-lab-20261124",
       "dimension": "rtl",
       "result": "partial",
-      "components": ["button", "tabs", "segmented-control", "slider", "select", "dropdown", "input", "radio", "pagination"],
+      "components": [
+        "button",
+        "tabs",
+        "segmented-control",
+        "slider",
+        "select",
+        "dropdown",
+        "input",
+        "radio",
+        "pagination"
+      ],
       "scope": "本地 Edge 浅色：实际阿拉伯语 I18nProvider、方向键、指示器、图标、浮层与受控状态切换检查；尚未覆盖全部变体和跨浏览器。",
       "source": "scripts/browser-check.mjs",
       "route": "/zh-hans/rtl/"
@@ -22,9 +36,312 @@
       "id": "api-extraction-20261124",
       "dimension": "api",
       "result": "partial",
-      "components": ["button", "icon-button", "button-group", "close-button", "checkbox", "radio", "switch", "input", "textarea", "tabs", "segmented-control", "select", "dropdown", "tooltip", "notification", "announcement", "date-picker", "slider", "input-otp", "avatar", "badge", "chip", "pagination", "table", "tree-view", "breadcrumb", "agent-thinking", "composer-loader", "composer", "agent-progress", "progress", "meter", "stat-cards", "area-chart-card", "line-chart-card", "radar-chart-card", "radial-chart-card", "funnel-chart-card"],
+      "components": [
+        "button",
+        "icon-button",
+        "button-group",
+        "close-button",
+        "checkbox",
+        "radio",
+        "switch",
+        "input",
+        "textarea",
+        "tabs",
+        "segmented-control",
+        "select",
+        "dropdown",
+        "tooltip",
+        "notification",
+        "announcement",
+        "date-picker",
+        "slider",
+        "input-otp",
+        "avatar",
+        "badge",
+        "chip",
+        "pagination",
+        "table",
+        "tree-view",
+        "breadcrumb",
+        "agent-thinking",
+        "composer-loader",
+        "composer",
+        "agent-progress",
+        "progress",
+        "meter",
+        "stat-cards",
+        "area-chart-card",
+        "line-chart-card",
+        "radar-chart-card",
+        "radial-chart-card",
+        "funnel-chart-card"
+      ],
       "scope": "生成公共入口 API 参考并检查漂移；不代表全部兼容适配器、受控模式及导出签名已经验收。",
       "source": "lib/docs/api-reference.generated.json"
+    },
+    {
+      "id": "basic-visual-button-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "button"
+      ],
+      "scope": "1440×1000 本地 Edge 双主题截图和官网浅色主预览抽样。四种变体尺寸和主预览排列与上游测量一致；按下缩放、键盘预览切换。 不代表全部状态视觉验收。",
+      "source": "reference/evidence/basic-components-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/button/"
+    },
+    {
+      "id": "basic-visual-icon-button-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "icon-button"
+      ],
+      "scope": "1440×1000 本地 Edge 双主题截图和官网浅色主预览抽样。主预览由三项改为四项，36/36/32/32px 方形尺寸；图标操作的受控回调另见按钮组示例。 不代表全部状态视觉验收。",
+      "source": "reference/evidence/basic-components-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/icon-button/"
+    },
+    {
+      "id": "basic-visual-close-button-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "close-button"
+      ],
+      "scope": "1440×1000 本地 Edge 双主题截图和官网浅色主预览抽样。16/20/24/32px 四尺寸和文字标签；关闭操作回调在按钮组受控示例检查。 不代表全部状态视觉验收。",
+      "source": "reference/evidence/basic-components-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/close-button/"
+    },
+    {
+      "id": "basic-visual-button-group-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "button-group"
+      ],
+      "scope": "1440×1000 本地 Edge 双主题截图和官网浅色主预览抽样。时间范围四项与官网尺寸排列相符，受控对齐/计数演示保留在独立章节。 不代表全部状态视觉验收。",
+      "source": "reference/evidence/basic-components-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/button-group/"
+    },
+    {
+      "id": "basic-visual-checkbox-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "checkbox"
+      ],
+      "scope": "1440×1000 本地 Edge 双主题截图和官网浅色主预览抽样。五种主状态的排列保留；受控选择、开关及单选联动的键盘回归。 不代表全部状态视觉验收。",
+      "source": "reference/evidence/basic-components-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/checkbox/"
+    },
+    {
+      "id": "basic-visual-radio-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "radio"
+      ],
+      "scope": "1440×1000 本地 Edge 双主题截图和官网浅色主预览抽样。三种计费选项，方向键互斥选择；小尺寸仍可由公开 API 使用。 不代表全部状态视觉验收。",
+      "source": "reference/evidence/basic-components-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/radio/"
+    },
+    {
+      "id": "basic-visual-switch-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "switch"
+      ],
+      "scope": "1440×1000 本地 Edge 双主题截图和官网浅色主预览抽样。胶囊/矩形各三尺寸，六项键盘往返和禁用检查；原站原生隐藏输入尺寸不是轨道尺寸。 不代表全部状态视觉验收。",
+      "source": "reference/evidence/basic-components-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/switch/"
+    },
+    {
+      "id": "basic-visual-input-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "input"
+      ],
+      "scope": "1440×1000 本地 Edge 双主题截图和官网浅色主预览抽样。250px 容器保留，实际内部文本区宽度与官网仍有差异；必填、描述、禁用、错误、受控输入。 不代表全部状态视觉验收。",
+      "source": "reference/evidence/basic-components-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/input/"
+    },
+    {
+      "id": "basic-visual-textarea-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "textarea"
+      ],
+      "scope": "1440×1000 本地 Edge 双主题截图和官网浅色主预览抽样。主预览404×80px文本区，与原站测量一致；必填输入、自动增高和收缩、容器宽度变化。 不代表全部状态视觉验收。",
+      "source": "reference/evidence/basic-components-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/textarea/"
+    },
+    {
+      "id": "basic-visual-select-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "select"
+      ],
+      "scope": "1440×1000 本地 Edge 双主题截图和官网浅色主预览抽样。两个100×38px触发器、10px圆角一致；选择、受控值、Escape关闭。 不代表全部状态视觉验收。",
+      "source": "reference/evidence/basic-components-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/select/"
+    },
+    {
+      "id": "basic-visual-tabs-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "tabs"
+      ],
+      "scope": "1440×1000 本地 Edge 双主题截图和官网浅色主预览抽样。本地双主题截图与方向键选中验证；官网选择器定位到空占位，几何对照尚未确认。 不代表全部状态视觉验收。",
+      "source": "reference/evidence/basic-components-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/tabs/"
+    },
+    {
+      "id": "basic-visual-segmented-control-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "segmented-control"
+      ],
+      "scope": "1440×1000 本地 Edge 双主题截图和官网浅色主预览抽样。三项48×28px、6px圆角；每周/月/年主预览和单选状态切换。 不代表全部状态视觉验收。",
+      "source": "reference/evidence/basic-components-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/segmented-control/"
+    },
+    {
+      "id": "basic-interaction-button-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "button"
+      ],
+      "scope": "本地 Edge 1440×1000 浅色/深色专项通过。按下缩放恢复、键盘预览切换、按钮尺寸。 尚未覆盖全部变体、指针与跨浏览器。",
+      "source": "scripts/browser-check.mjs",
+      "route": "/zh-hans/components/button/"
+    },
+    {
+      "id": "basic-interaction-icon-button-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "icon-button"
+      ],
+      "scope": "本地 Edge 1440×1000 浅色/深色专项通过。四主预览尺寸，受控按钮操作的增加计数在按钮组页验证。 尚未覆盖全部变体、指针与跨浏览器。",
+      "source": "scripts/browser-check.mjs",
+      "route": "/zh-hans/components/icon-button/"
+    },
+    {
+      "id": "basic-interaction-close-button-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "close-button"
+      ],
+      "scope": "本地 Edge 1440×1000 浅色/深色专项通过。四主预览尺寸，受控关闭重置回调在按钮组页验证。 尚未覆盖全部变体、指针与跨浏览器。",
+      "source": "scripts/browser-check.mjs",
+      "route": "/zh-hans/components/close-button/"
+    },
+    {
+      "id": "basic-interaction-button-group-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "button-group"
+      ],
+      "scope": "本地 Edge 1440×1000 浅色/深色专项通过。受控选中、键盘激活、计数及重置。 尚未覆盖全部变体、指针与跨浏览器。",
+      "source": "scripts/browser-check.mjs",
+      "route": "/zh-hans/components/button-group/"
+    },
+    {
+      "id": "basic-interaction-checkbox-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "checkbox"
+      ],
+      "scope": "本地 Edge 1440×1000 浅色/深色专项通过。受控复选、键盘切换、选中状态联动。 尚未覆盖全部变体、指针与跨浏览器。",
+      "source": "scripts/browser-check.mjs",
+      "route": "/zh-hans/components/checkbox/"
+    },
+    {
+      "id": "basic-interaction-radio-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "radio"
+      ],
+      "scope": "本地 Edge 1440×1000 浅色/深色专项通过。方向键互斥选择、受控选择联动。 尚未覆盖全部变体、指针与跨浏览器。",
+      "source": "scripts/browser-check.mjs",
+      "route": "/zh-hans/components/radio/"
+    },
+    {
+      "id": "basic-interaction-switch-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "switch"
+      ],
+      "scope": "本地 Edge 1440×1000 浅色/深色专项通过。两种形状三尺寸的 Space 往返及禁用。 尚未覆盖全部变体、指针与跨浏览器。",
+      "source": "scripts/browser-check.mjs",
+      "route": "/zh-hans/components/switch/"
+    },
+    {
+      "id": "basic-interaction-input-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "input"
+      ],
+      "scope": "本地 Edge 1440×1000 浅色/深色专项通过。受控必填/描述、禁用/错误、清除搜索。 尚未覆盖全部变体、指针与跨浏览器。",
+      "source": "scripts/browser-check.mjs",
+      "route": "/zh-hans/components/input/"
+    },
+    {
+      "id": "basic-interaction-textarea-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "textarea"
+      ],
+      "scope": "本地 Edge 1440×1000 浅色/深色专项通过。必填输入、自动增高收缩及容器宽度变化。 尚未覆盖全部变体、指针与跨浏览器。",
+      "source": "scripts/browser-check.mjs",
+      "route": "/zh-hans/components/textarea/"
+    },
+    {
+      "id": "basic-interaction-select-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "select"
+      ],
+      "scope": "本地 Edge 1440×1000 浅色/深色专项通过。选择价格和框架、受控值、Escape 关闭。 尚未覆盖全部变体、指针与跨浏览器。",
+      "source": "scripts/browser-check.mjs",
+      "route": "/zh-hans/components/select/"
+    },
+    {
+      "id": "basic-interaction-tabs-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "tabs"
+      ],
+      "scope": "本地 Edge 1440×1000 浅色/深色专项通过。方向键选择下一选项。 尚未覆盖全部变体、指针与跨浏览器。",
+      "source": "scripts/browser-check.mjs",
+      "route": "/zh-hans/components/tabs/"
+    },
+    {
+      "id": "basic-interaction-segmented-control-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "segmented-control"
+      ],
+      "scope": "本地 Edge 1440×1000 浅色/深色专项通过。点击选择每月，选中语义。 尚未覆盖全部变体、指针与跨浏览器。",
+      "source": "scripts/browser-check.mjs",
+      "route": "/zh-hans/components/segmented-control/"
     }
   ]
 }

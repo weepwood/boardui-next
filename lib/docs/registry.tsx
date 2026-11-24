@@ -1,4 +1,7 @@
 "use client";
+import { RiDeleteBinLine } from "@remixicon/react";
+import { RiMoreLine } from "@remixicon/react";
+import { RiNotification3Line } from "@remixicon/react";
 
 /**
  * 组件文档注册表。
@@ -191,6 +194,10 @@ function ControlledSelectionDemo() {
   return <div className="flex flex-col gap-3" data-testid="controlled-selection"><Checkbox isSelected={checked} onChange={setChecked}>受控复选框</Checkbox><Switch isSelected={enabled} onChange={setEnabled}>受控开关</Switch><RadioGroup value={choice} onChange={setChoice} label="受控单选"><Radio value="a">选项 A</Radio><Radio value="b">选项 B</Radio></RadioGroup><output aria-live="polite">{String(checked)} / {String(enabled)} / {choice}</output></div>;
 }
 
+function PeriodButtonGroupDemo(){
+ const [value,setValue]=useState("month");
+ return <CoreButtonGroup aria-label="时间范围">{[["day","日"],["week","周"],["month","月份"],["year","年份"]].map(([id,label])=><ButtonGroupItem key={id} selected={value===id} onClick={()=>setValue(id)}>{label}</ButtonGroupItem>)}</CoreButtonGroup>;
+}
 function ButtonFamilyDemo() {
   const [selection,setSelection]=useState("left");
   const [count,setCount]=useState(0);
@@ -259,7 +266,7 @@ import { RiArrowRightLine } from "@remixicon/react";
   "icon-button": {
     title: "图标按钮",
     description: "原版 secondary 样式，36 / 32px 方形容器，10px 圆角，20 / 16px 图标。旧版扩展变体保留在兼容示例。",
-    preview: () => (<><CoreIconButton icon={AddGlyph} aria-label="新建"/><CoreIconButton icon={EditGlyph} aria-label="编辑" size="small"/><CoreIconButton icon={AddGlyph} aria-label="禁用新建" disabled/></>),
+    preview: () => (<div className="flex items-center gap-3"><CoreIconButton icon={RiNotification3Line} aria-label="通知"/><CoreIconButton icon={EditGlyph} aria-label="编辑"/><CoreIconButton icon={RiMoreLine} aria-label="更多" size="small"/><CoreIconButton icon={RiDeleteBinLine} aria-label="删除" size="small"/></div>),
     demos: () => ([
       {id:"sizes",title:"原版尺寸",node:<><CoreIconButton icon={AddGlyph} aria-label="中尺寸" size="medium"/><CoreIconButton icon={AddGlyph} aria-label="小尺寸" size="small"/></>},
       {id:"legacy",title:"旧版兼容变体",node:<><IconButton icon="settings-3-line" label="设置" variant="ghost"/><IconButton icon="settings-3-line" label="设置" variant="outline"/><IconButton icon="settings-3-line" label="设置" variant="filled"/></>},
@@ -300,7 +307,7 @@ import { RiArrowRightLine } from "@remixicon/react";
   textarea: {
     title: "多行文本框",
     description: "复用 Input 的标签、辅助文字、语义状态与灰底容器。支持自动增高、最大行数、字符统计及原生调整高度。",
-    preview: () => (<div className="w-full max-w-sm"><Textarea label="备注" placeholder="输入备注…" rows={3} maxLength={500} showCount description="填写补充说明"/></div>),
+    preview: () => (<div className="w-[420px] max-w-full"><Textarea label="发行说明" placeholder="输入发行说明…" rows={4} isRequired hint="支持 Markdown 格式。"/></div>),
     demos: () => ([
       {id:"auto-resize",title:"自动增高",node:<div className="w-full max-w-sm"><Textarea label="自适应文本域" rows={2} autoResize maxRows={5} maxLength={200} showCount placeholder="输入多行文本…"/></div>},
       {id:"states",title:"状态",node:<div className="flex w-full max-w-sm flex-col gap-4"><Textarea label="禁用" isDisabled defaultValue="不可编辑" rows={2}/><Textarea label="错误" isInvalid hint="请填写备注" rows={2}/></div>},
@@ -319,12 +326,7 @@ import { RiArrowRightLine } from "@remixicon/react";
     description:
       "二元状态切换控件。三层结构：渐变轨道 + 白灰渐变圆钮 + 蓝色内芯，支持胶囊与矩形两种形状。",
     install: "npx boardui@latest add switch",
-    preview: () => ((
-      <>
-        <Switch defaultSelected>开启</Switch>
-        <Switch>关闭</Switch>
-      </>
-    )),
+    preview: () => (<div className="flex flex-col gap-6">{(["pill","rect"] as const).map(shape=><div key={shape} className="flex flex-col gap-2"><span className="text-body-2-medium text-text-secondary">{shape==="pill"?"胶囊":"矩形"}</span><div className="flex items-center gap-6">{(["lg","md","sm"] as const).map((size,index)=><div key={size} className="flex flex-col items-center gap-2"><Switch defaultSelected shape={shape} size={size} aria-label={(shape==="pill"?"胶囊":"矩形")+["大","中","小"][index]}/><span className="text-caption-2-regular text-text-secondary">{["大","中","小"][index]}</span></div>)}</div></div>)}</div>),
     demos: () => ([
       {
         id: "sizes",
@@ -388,10 +390,10 @@ import { RiArrowRightLine } from "@remixicon/react";
     description: "互斥单选控件，配合单选组使用。",
     install: "npx boardui@latest add radio",
     preview: () => ((
-      <RadioGroup defaultValue="a" label="选择方案">
-        <Radio value="a">方案 A</Radio>
-        <Radio value="b">方案 B</Radio>
-        <Radio value="c" size="sm">方案 C</Radio>
+      <RadioGroup defaultValue="a" aria-label="计费方式">
+        <Radio value="a">按月计费</Radio>
+        <Radio value="b">按年计费</Radio>
+        <Radio value="c">基于使用情况</Radio>
       </RadioGroup>
     )),
     demos: () => ([]),
@@ -846,8 +848,9 @@ import { RiArrowRightLine } from "@remixicon/react";
   "button-group": {
     title: "按钮组",
     description: "原版共用边框、阴影和分隔线；支持独立操作、受控选中、图标及键盘焦点。",
-    preview: () => (<ButtonFamilyDemo/>),
+    preview: () => (<PeriodButtonGroupDemo/>),
     demos: () => ([
+      {id:"controlled",title:"受控操作",node:<ButtonFamilyDemo/>},
       {id:"small",title:"小尺寸",node:<CoreButtonGroup size="small" aria-label="小按钮组"><ButtonGroupItem size="small">复制</ButtonGroupItem><ButtonGroupItem size="small" leadingIcon={EditGlyph}>编辑</ButtonGroupItem><ButtonGroupItem size="small" disabled>删除</ButtonGroupItem></CoreButtonGroup>},
       {id:"vertical",title:"旧版垂直扩展",node:<ButtonGroup orientation="vertical"><Button variant="secondary">复制</Button><Button variant="secondary">移动</Button><Button variant="secondary">删除</Button></ButtonGroup>},
     ]),
@@ -856,7 +859,7 @@ import { RiArrowRightLine } from "@remixicon/react";
   "close-button": {
     title: "关闭按钮",
     description: "原版独立 SVG 路径：16 / 20 / 24 / 32px 容器及各自精确线宽。",
-    preview: () => (<><CoreCloseButton size="2xs" aria-label="关闭 16"/><CoreCloseButton size="xs" aria-label="关闭 20"/><CoreCloseButton size="sm" aria-label="关闭 24"/><CoreCloseButton size="md" aria-label="关闭 32"/></>),
+    preview: () => (<div className="flex items-end gap-5">{([{size:"2xs",label:"2xs",px:16},{size:"xs",label:"xs",px:20},{size:"sm",label:"SM",px:24},{size:"md",label:"MD",px:32}] as const).map(({size,label,px})=><div key={size} className="flex flex-col items-center gap-2"><CoreCloseButton size={size} aria-label={"关闭 "+px}/><span className="text-caption-2-regular text-text-secondary">{label}</span></div>)}</div>),
     demos: () => ([{id:"legacy",title:"旧版兼容样式",node:<><CloseButton size="sm"/><CloseButton size="lg"/><CloseButton variant="filled"/></>}]),
   },
 
@@ -1584,9 +1587,9 @@ function SegmentedDemo() {
       value={v}
       onChange={setV}
       options={[
-        { id: "day", label: "日", icon: "calendar-line" },
-        { id: "week", label: "周", icon: "calendar-week-line" },
-        { id: "month", label: "月", icon: "calendar-todo-line" },
+        { id: "week", label: "每周" },
+        { id: "month", label: "每月" },
+        { id: "year", label: "每年" },
       ]}
     />
   );

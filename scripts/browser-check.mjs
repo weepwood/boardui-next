@@ -28,7 +28,7 @@ let browser;
 try{
   browser=await ({chromium,firefox,webkit}[browserName]).launch(process.env.BROWSER_EXECUTABLE?{executablePath:process.env.BROWSER_EXECUTABLE}:{});
   if(full)mkdirSync('acceptance',{recursive:true});
-  for(const theme of full?['light','dark']:['light']){
+  for(const theme of full||process.argv.includes('--both-themes')?['light','dark']:['light']){
     const context=await browser.newContext({viewport:{width:1440,height:1000},colorScheme:theme,reducedMotion:'reduce'});
     const page=await context.newPage();
     page.setDefaultTimeout(10000);
@@ -691,8 +691,8 @@ try{
         }
         if(route==='/zh-hans/components/segmented-control/'){
           const demo=page.locator('#preview');
-          await demo.getByRole('radio',{name:'月',exact:true}).click();
-          assert.equal(await demo.getByRole('radio',{name:'月',exact:true}).getAttribute('aria-checked'),'true');
+          await demo.getByRole('radio',{name:'每月',exact:true}).click();
+          assert.equal(await demo.getByRole('radio',{name:'每月',exact:true}).getAttribute('aria-checked'),'true');
         }
         if(route==='/zh-hans/components/select/'){
           const filter=page.locator('#preview').getByRole('button',{name:/按价格过滤/});
@@ -775,6 +775,18 @@ try{
           assert.ok(await page.getByRole('textbox',{name:'禁用',exact:true}).isDisabled());
           assert.equal(await page.getByRole('textbox',{name:'错误',exact:true}).getAttribute('aria-invalid'),'true');
         }
+        if(route==='/zh-hans/components/textarea/'){
+          const main=page.locator('#preview').getByRole('textbox',{name:'发行说明'});
+          assert.ok(await main.evaluate(e=>e.required||e.getAttribute('aria-required')==='true'));
+          await main.fill('Markdown **文本**');assert.equal(await main.inputValue(),'Markdown **文本**');
+          const demo=page.locator('#auto-resize').getByRole('textbox',{name:'自适应文本域'});
+          await demo.scrollIntoViewIfNeeded();
+          const baseHeight=await demo.evaluate(e=>e.getBoundingClientRect().height);
+          await demo.fill('one\ntwo\nthree\nfour');
+          await page.waitForFunction(({e,h})=>e.getBoundingClientRect().height>h,{e:await demo.elementHandle(),h:baseHeight});
+          await demo.fill('');
+          await page.waitForFunction(({e,h})=>Math.abs(e.getBoundingClientRect().height-h)<1,{e:await demo.elementHandle(),h:baseHeight});
+        }
         if(route==='/zh-hans/components/search-field/'){
           const search=page.getByRole('searchbox',{name:'搜索组件…'});
           await search.fill('demo');
@@ -783,6 +795,24 @@ try{
           await clear.click();
           assert.equal(await search.inputValue(),'');
           assert.ok(await clear.isHidden());
+        }
+        if(route==='/zh-hans/components/switch/'){
+          const preview=page.locator('#preview');
+          const switches=preview.getByRole('switch');
+          assert.equal(await switches.count(),6);
+          for(const name of ['胶囊大','胶囊中','胶囊小','矩形大','矩形中','矩形小']){
+            const control=preview.getByRole('switch',{name,exact:true});
+            assert.ok(await control.isChecked());
+            await control.press('Space');assert.equal(await control.isChecked(),false);
+            await control.press('Space');assert.ok(await control.isChecked());
+          }
+          for(const control of await page.locator('#disabled').getByRole('switch').all())assert.ok(await control.isDisabled());
+        }
+        if(route==='/zh-hans/components/radio/'){
+          const preview=page.locator('#preview');
+          const first=preview.getByRole('radio',{name:'按月计费'}),second=preview.getByRole('radio',{name:'按年计费'});
+          assert.ok(await first.isChecked());await first.press('ArrowDown');
+          assert.ok(await second.isChecked());assert.equal(await first.isChecked(),false);
         }
         if(route==='/zh-hans/components/checkbox/'){
           const demo=page.getByTestId('controlled-selection');
@@ -815,8 +845,11 @@ try{
           assert.equal(await demo.locator('output').textContent(),'center / 0');
         }
         if(route==='/zh-hans/components/icon-button/'){
-          const box=await page.getByRole('button',{name:'新建',exact:true}).boundingBox();
-          assert.equal(box?.width,36);assert.equal(box?.height,36);
+          const preview=page.locator('#preview');
+          for(const [name,size] of [['通知',36],['编辑',36],['更多',32],['删除',32]]){
+            const box=await preview.getByRole('button',{name,exact:true}).boundingBox();
+            assert.equal(box?.width,size);assert.equal(box?.height,size);
+          }
         }
         if(route==='/zh-hans/components/close-button/'){
           for(const size of [16,20,24,32]){
