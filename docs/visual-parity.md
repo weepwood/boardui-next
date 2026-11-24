@@ -37,3 +37,7 @@ Notification/Announcement 移植上游 MIT 源与 Motion，保留历史调用；
 ### 第五批：日期与数值输入
 
 DatePicker、Slider、InputOtp 直接移植公开 MIT 实现；DateCalendar 复用上游 MonthPanel/DayCell，TimeField、NumberField、ColorPicker、TokenInput 为本地扩展。增加共享 field-styles、CalendarDate/Date 转换，保留已有调用方式。日期选择支持草稿/应用/取消、范围约束，滑块增加双端范围，颜色仅提交完整 HEX，标签支持中文逗号与批量粘贴。新增八组专项测试。
+
+### 集中验收与积压清理
+
+将 #9–#12 的依赖链汇总到同一份 main 候选变更，使用单次构建覆盖四个批次，不再等待每个中间分支重复构建。Textarea 自动测量时禁止 height 过渡，避免 reduced-motion 全局规则影响 scrollHeight；Dropdown 交给 React Aria 管理开关、外部关闭和焦点恢复，保留上游视觉配方；NumberField 的键盘测试按实际本地化文本框语义定位。保留原有专项断言及正式发布完整验收。旧 PR 在汇总变更合并前保留，不提前关闭。

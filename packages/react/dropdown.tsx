@@ -16,7 +16,7 @@ import {
   MENU_POPOVER_WIDTH,
 } from "./menu-styles";
 import { cx } from "./cx";
-import { useDismissOnOutsidePress, useTriggerToggle } from "./use-dismiss-on-outside-press";
+
 
 /**
  * Dropdown — the BoardUI popover-menu recipe as composable primitives, built
@@ -68,15 +68,7 @@ export interface DropdownProps {
   children: ReactNode;
 }
 
-/**
- * The popover is `isNonModal`: react-aria's modal scroll lock puts
- * `overflow: hidden` on <html>, which collapses the page scroll position and
- * visibly yanks sticky layout (e.g. the docs sidebar) whenever a menu opens.
- * Non-modal skips the lock, but react-aria hard-couples outside-press
- * dismissal to modality — so open state lives here (bridging any controlled
- * props) and dismissal is restored via useDismissOnOutsidePress, the same
- * fix as Select and the date-picker family.
- */
+/** React Aria manages dismissal, focus restoration and trigger state. */
 export function Dropdown({ isOpen: controlledOpen, onOpenChange, children }: DropdownProps) {
   const triggerRef = useRef<HTMLButtonElement>(null);
   const popoverRef = useRef<HTMLElement>(null);
@@ -88,13 +80,11 @@ export function Dropdown({ isOpen: controlledOpen, onOpenChange, children }: Dro
     onOpenChange?.(next);
   };
 
-  useDismissOnOutsidePress(isOpen, () => setOpen(false), [triggerRef, popoverRef]);
-  // Pressing the trigger while open closes the menu instead of reopening
-  const allowOpenChange = useTriggerToggle(isOpen, triggerRef);
+
 
   return (
     <DropdownContext.Provider value={{ triggerRef, popoverRef }}>
-      <AriaDialogTrigger isOpen={isOpen} onOpenChange={(o) => allowOpenChange(o) && setOpen(o)}>
+      <AriaDialogTrigger isOpen={isOpen} onOpenChange={setOpen}>
         {children}
       </AriaDialogTrigger>
     </DropdownContext.Provider>
@@ -141,7 +131,6 @@ export function DropdownPopover({
   return (
     <AriaPopover
       ref={context?.popoverRef}
-      isNonModal
       placement={placement}
       offset={offset}
       crossOffset={crossOffset}

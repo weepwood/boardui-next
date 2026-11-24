@@ -198,6 +198,7 @@ export function TextareaBase({
         className={cx(
           textareaStyles.textarea,
           textareaStyles.resize[autoResize ? "none" : resize],
+          autoResize && "transition-none",
           ctx.inputClassName,
           className,
         )}

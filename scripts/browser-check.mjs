@@ -25,11 +25,12 @@ if(!full)for(const route of JSON.parse(process.env.TARGET_ROUTES||'[]'))if(!rout
 const report=[],errors=[];
 let browser;
 try{
-  browser=await ({chromium,firefox,webkit}[browserName]).launch();
+  browser=await ({chromium,firefox,webkit}[browserName]).launch(process.env.BROWSER_EXECUTABLE?{executablePath:process.env.BROWSER_EXECUTABLE}:{});
   if(full)mkdirSync('acceptance',{recursive:true});
   for(const theme of full?['light','dark']:['light']){
     const context=await browser.newContext({viewport:{width:1440,height:1000},colorScheme:theme,reducedMotion:'reduce'});
     const page=await context.newPage();
+    page.setDefaultTimeout(10000);
     const failures=[];
     page.on('pageerror',e=>failures.push(e.message));
     page.on('response',r=>{if(r.url().startsWith(origin)&&r.status()>=400)failures.push(r.status()+' '+r.url());});
@@ -133,7 +134,7 @@ try{
           assert.ok((await page.locator('#preview').textContent()).includes('10:30'));
         }
         if(route==='/zh-hans/components/number-field/'){
-          const field=page.locator('#preview').getByRole('spinbutton');
+          const field=page.locator('#preview').getByRole('textbox',{name:'数量'});
           await field.press('ArrowUp');
           assert.equal(await field.inputValue(),'4');
         }
@@ -236,7 +237,10 @@ try{
           const trigger=page.getByRole('button',{name:'打开分组菜单'});
           await trigger.scrollIntoViewIfNeeded();
           await trigger.press('Enter');
-          await page.getByRole('dialog',{name:'分组操作'}).getByRole('button',{name:'编辑',exact:true}).click();
+          const dialog=page.getByRole('dialog',{name:'分组操作'});
+          await dialog.waitFor();
+          await dialog.getByRole('button',{name:'编辑',exact:true}).click();
+          assert.ok((await page.locator('main output').allTextContents()).includes('编辑'));
           await page.getByRole('dialog',{name:'分组操作'}).waitFor({state:'hidden'});
         }
         if(route==='/zh-hans/components/tooltip/'){
@@ -262,9 +266,9 @@ try{
           assert.ok(await input.evaluate(e=>e.required || e.getAttribute('aria-required')==='true'),'required field semantics');
           assert.ok(await input.getAttribute('aria-describedby'));
           const notes=demo.getByRole('textbox',{name:'受控备注'});
-          const before=(await notes.boundingBox()).height;
+          const before=await notes.evaluate(e=>parseFloat(getComputedStyle(e).lineHeight)*2);
           await notes.fill('one\ntwo\nthree\nfour\nfive\nsix');
-          await page.waitForFunction(({el,height})=>el.getBoundingClientRect().height>height,{el:await notes.elementHandle(),height:before});
+          await page.waitForFunction(({el,height})=>el.getBoundingClientRect().height>=height*2,{el:await notes.elementHandle(),height:before});
           await notes.fill('');
           await page.waitForFunction(({el,height})=>Math.abs(el.getBoundingClientRect().height-height)<1,{el:await notes.elementHandle(),height:before});
           const search=demo.getByRole('searchbox',{name:'受控搜索'});
