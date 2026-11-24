@@ -110,7 +110,7 @@ export function TabList<T extends object>({ className, ref, ...props }: TabListP
       />
       {underline && (
         <span
-          aria-hidden
+          aria-hidden data-tab-indicator
           className="pointer-events-none absolute bottom-0 left-0 h-0.5 bg-accent-600 transition-[transform,width] duration-200 ease motion-reduce:transition-none"
           style={{
             transform: `translateX(${underline.left}px)`,

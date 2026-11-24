@@ -21,6 +21,7 @@ export function DocRenderer({ slug }: { slug: string }) {
 
   return (
     <ComponentPage
+      slug={slug}
       title={doc.title}
       description={doc.description}
       breadcrumbs={componentCrumbs(doc.title)}

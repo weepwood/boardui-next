@@ -140,6 +140,47 @@ try{
           await link.waitFor({state:'visible'});
           assert.ok((await link.getAttribute('href')).startsWith(base+'/'));
         }
+        if(route==='/zh-hans/rtl/'){
+          const lab=page.getByTestId('direction-lab');
+          await lab.waitFor();
+          assert.equal(await lab.getAttribute('dir'),'rtl');
+          const next=lab.getByRole('button',{name:'下一步'});
+          await page.waitForFunction(e=>getComputedStyle(e).rotate.includes('180deg'),await next.locator('svg').elementHandle());
+          const tabs=lab.getByRole('tablist',{name:'方向选项卡'});
+          const first=tabs.getByRole('tab',{name:'概览'}),second=tabs.getByRole('tab',{name:'活动'});
+          assert.ok((await first.boundingBox()).x>(await second.boundingBox()).x);
+          await first.press('ArrowLeft');
+          await page.waitForFunction(e=>e.getAttribute('aria-selected')==='true',await second.elementHandle());
+          const aligned=async (indicator,selected)=>{await page.waitForFunction(({a,b})=>{const x=a.getBoundingClientRect(),y=b.getBoundingClientRect();return Math.abs(x.left-y.left)<2&&Math.abs(x.width-y.width)<2},{a:await indicator.elementHandle(),b:await selected.elementHandle()})};
+          await aligned(lab.locator('[data-tab-indicator]'),second);
+          const segment=lab.getByRole('radio',{name:'周'});
+          await segment.click();
+          await aligned(lab.locator('[data-segment-indicator]'),segment);
+          const slider=lab.getByRole('slider',{name:'方向音量'});
+          await slider.press('ArrowLeft');
+          await page.waitForFunction(e=>Number(e.getAttribute('aria-valuenow')??e.value)>40,await slider.elementHandle());
+          const select=lab.getByRole('button',{name:/地区/});
+          await select.click();
+          await page.getByRole('option',{name:'欧洲',exact:true}).click();
+          await page.waitForFunction(e=>e.textContent.includes('欧洲'),await select.elementHandle());
+          await lab.getByRole('button',{name:'操作菜单'}).click();
+          const dialog=page.getByRole('dialog',{name:'方向操作'});
+          await dialog.getByRole('button',{name:'编辑'}).click();
+          await page.keyboard.press('Escape');
+          await dialog.waitFor({state:'hidden'});
+          assert.equal(await lab.getByRole('textbox',{name:'电子邮箱'}).evaluate(e=>getComputedStyle(e).direction),'ltr');
+          await lab.getByRole('radio',{name:'A',exact:true}).press('ArrowLeft');
+          await page.waitForFunction(e=>e.textContent.includes(' / b / '),await lab.getByTestId('direction-state').elementHandle());
+          await lab.getByRole('button',{name:'下一页'}).click();
+          await page.waitForFunction(e=>e.textContent.includes(' / 3 / '),await lab.getByTestId('direction-state').elementHandle());
+          const state=await lab.getByTestId('direction-state').textContent();
+          await page.getByRole('button',{name:'切换为 LTR'}).click();
+          assert.equal(await lab.getAttribute('dir'),'ltr');
+          assert.equal(await lab.getByTestId('direction-state').textContent(),state);
+          await aligned(lab.locator('[data-tab-indicator]'),second);
+          await aligned(lab.locator('[data-segment-indicator]'),segment);
+          await page.waitForFunction(e=>getComputedStyle(e).rotate==='none',await next.locator('svg').elementHandle());
+        }
         if(route==='/zh-hans/templates/marketing/'){
           const demo=page.locator('#preview');
           await demo.getByRole('radio',{name:'已结束',exact:true}).click();

@@ -101,7 +101,7 @@ export function SegmentedControl({ className, children, variant = "solid", ref, 
     >
       {variant === "solid" && thumb && (
         <span
-          aria-hidden
+          aria-hidden data-segment-indicator
           className="pointer-events-none absolute left-0 top-0 rounded-md bg-segmented-control-selected-background shadow-2xs transition-[transform,width,height] duration-200 ease motion-reduce:transition-none"
           style={{
             transform: `translate(${thumb.left}px, ${thumb.top}px)`,

@@ -1,3 +1,4 @@
+import { AcceptanceStatus } from "./AcceptanceStatus";
 import { DocsLayout } from "./DocsLayout";
 import { ApiReference,type ApiEntry } from "./ApiReference";
 import { ComponentPreview } from "./ComponentPreview";
@@ -25,7 +26,7 @@ export function ComponentPage({
   preview,
   previewCode,
   sections = [],
-  install,api,
+  install,api,slug,
 }: {
   title: string;
   description: string;
@@ -35,12 +36,14 @@ export function ComponentPage({
   sections?: DemoSection[];
   install?: string;
   api?:ApiEntry[];
+  slug?:string;
 }) {
   const toc: TocItem[] = [
     { id: "preview", label: "预览" },
     ...(install ? [{ id: "installation", label: "安装" }] : []),
     ...sections.map((s) => ({ id: s.id, label: s.title })),
     ...(api?.length?[{id:"api",label:"组件 API"}]:[]),
+    ...(slug?[{id:"acceptance-status",label:"验收状态"}]:[]),
   ];
 
   return (
@@ -83,6 +86,7 @@ export function ComponentPage({
         </section>
       ))}
       {!!api?.length&&<ApiReference entries={api}/>}
+      {slug&&<AcceptanceStatus slug={slug}/>}
     </DocsLayout>
   );
 }

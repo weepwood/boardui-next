@@ -12,3 +12,12 @@
 - **还原质量优先于组件数量，公共视觉基础优先于局部修补。** 先统一上游运行时令牌、字体、图标和页面框架；记录真实浏览器几何、计算样式、交互及明显视觉差异。未校准项目不得扩大组件覆盖来掩盖偏差。
 
 - 视觉验收以原版设计语言、信息层级、语义令牌、SVG 图标、状态反馈和动画节奏一致为准；字体栅格化、抗锯齿、轻微尺寸及内容差异不阻塞合并。无需逐像素截图匹配。保留功能、无障碍和 RTL 专项门禁。
+
+## 项目交接（2026-11-24）
+
+- 当前主线：八批基础组件、应用组件及模板首轮改造已合并；#18 目录筛选及浏览器回归修复已合并（main a00428d）。当前工作分支 feat/component-acceptance-matrix，专注 RTL 实验室、逐组件证据与文档。
+- 完整验收：基线 #16 run 45384688919（684 页面/主题组合，三浏览器有失败）；修复版 #18 run 45387299806 尚在执行。新助手先通过 GitHub API/gh 检查该 run 的最终结果和最新 PR，不要从历史描述推断 CI 已通过。
+- 正式版本仍未发布；104 项清单的正式五维验收仍待完成。reference/evidence/acceptance-observations.json 保存抽样证据，不能批量将 pending 改成 passed。文档页显示独立的来源和验收状态。
+- 接手步骤：读 docs/productization.md、docs/visual-parity.md、reference/upstream-manifest.json 和证据清单；先审查当前 PR、完整验收报告，修复真实失败后再合并；按需运行 npm test、npm run typecheck、npm run test:api、npm run test:library。风险改动执行 npm run build:pages、npm run test:export 和定向 browser-check。
+- RTL 实验室 /zh-hans/rtl/，验证真实 DirectionProvider locale 切换、方向键、选中指示器、图标、浮层、数值及状态。后续补日期、树、表格、多尺寸、移动端及独立包的剩余方向检查。
+- 下一阶段：检查第二轮完整验收结果并修复跨浏览器失败；以真实可复验的视觉、交互、无障碍、API、RTL 证据逐批推进，优先公开基础组件。Pro 不复制；正式发布不得跳过证据门禁。默认每次会话更新此交接段落，避免堆叠对话日志。

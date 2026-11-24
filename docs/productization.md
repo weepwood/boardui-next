@@ -39,3 +39,7 @@ Next.js 从 15.5.4 升到 15.5.29，官方 npm 审计的 critical 从 1 降为 0
 目录提供关键词、分类与实现来源组合筛选，组件预览仅在视口附近挂载（不可交互的真实演示）；模板使用简洁入口，不再冒充截图。原版 Pro 标注来源，不代表已获得授权源码。文档搜索复用已有模态命令面板。参见 reference/evidence/visual-sample-20261124.json：实测四个代表页面公共 main 与 heading 坐标一致、预览画布宽高与圆角一致；Input/Checkbox/Select 的预览内容排列存在差异，本次调整主示例，保留业务接口及受控示例。
 
 正式工作流新增独立报告汇总，校验 SHA、预期页面与主题覆盖、重复条目、缺失结果及真实失败，保存具体 axe 节点。正反测试样例已通过。报告不自动把逐组件视觉/API/RTL/交互标记通过，不放宽 release-gate。
+
+## RTL 与证据治理
+
+新增真实方向实验室，使用阿拉伯语 I18nProvider，而非仅在 DOM 上手改 dir，覆盖按钮镜像、Tabs/SegmentedControl 指示器、Slider 方向键、Select/Dropdown、邮箱输入、Radio、Pagination 和切换方向时的受控状态。初次本地 Edge 专项 7/7 通过，仍需跨浏览器。证据账本区分 partial/passed/failed，当前仅记录可验证抽样，未标记任何组件完整通过；test:evidence 检查条目、证据文件、维度、来源和正式 passed 的对应完整证据。组件文档显示证据范围，智能体技能指南显示进度。AGENTS.md 保存接手检查点。
