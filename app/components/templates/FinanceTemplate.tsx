@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { DemoNotice, TemplateSegments, downloadCsv } from "./TemplateShared";
 import { StatCard } from "@/app/components/ui/StatCard";
 import { AreaChart, BarChart, RadialChart, BarList } from "@/app/components/ui/Chart";
 import { Badge } from "@/app/components/ui/Badge";
@@ -23,39 +24,22 @@ export function FinanceTemplate() {
   const [range, setRange] = useState<"月" | "季" | "年">("月");
 
   return (
-    <div className="flex min-h-[680px] w-full flex-col overflow-hidden rounded-3xl border border-border-button-default bg-background-primary-default shadow-card">
+    <div className="flex min-h-[680px] w-full flex-col overflow-hidden rounded-3xl border border-border-button-default bg-background-primary-default shadow-sidebar">
       <header className="flex flex-wrap items-center justify-between gap-2 border-b border-border-primary px-4 py-3">
         <div className="flex flex-col gap-0.5">
           <h3 className="text-title-3-semibold text-text-primary">财务</h3>
-          <span className="text-caption-2-regular text-text-tertiary">2026 财年 · 数据截至今日</span>
+          <span className="text-caption-2-regular text-text-tertiary">2026 财年 · 示例数据</span>
         </div>
         <div className="flex items-center gap-2">
-          <div className="inline-flex items-center gap-0.5 rounded-2lg bg-segmented-control-background p-0.5">
-            {(["月", "季", "年"] as const).map((r) => (
-              <button
-                key={r}
-                type="button"
-                onClick={() => setRange(r)}
-                className={cn(
-                  "h-7 cursor-pointer rounded-[7px] px-2.5 text-body-2-medium",
-                  "transition-colors duration-150 ease-out",
-                  range === r
-                    ? "bg-segmented-control-selected-background text-text-primary shadow-xs"
-                    : "text-text-secondary hover:text-text-primary"
-                )}
-              >
-                {r}
-              </button>
-            ))}
-          </div>
-          <Button size="sm" variant="secondary" leading={<Icon name="download-line" className="size-3.5" />}>
+          <TemplateSegments values={["月","季","年"] as const} value={range} onChange={setRange}/>
+          <Button onPress={()=>downloadCsv("transactions.csv",[["编号","名称","分类","金额","日期","状态"],...TRANSACTIONS.map(t=>[t.id,t.name,t.category,t.amount,t.date,t.status])])} size="sm" variant="secondary" leading={<Icon name="download-line" className="size-3.5" />}>
             导出报表
           </Button>
         </div>
       </header>
 
       <div className="flex flex-col gap-3 p-4">
-        <div className="grid grid-cols-2 gap-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
           <StatCard label="营业收入" value="¥2,486,320" delta="+18.4%" trend="up" icon="line-chart-line" spark={CASH_FLOW} />
           <StatCard label="运营支出" value="¥1,142,800" delta="+6.2%" trend="up" icon="wallet-3-line" spark={[30, 32, 31, 36, 34, 38, 40]} />
           <StatCard label="净利润" value="¥1,343,520" delta="+21.7%" trend="up" icon="money-dollar-circle-line" spark={[20, 24, 26, 28, 32, 36, 42]} />
@@ -63,15 +47,15 @@ export function FinanceTemplate() {
         </div>
 
         <div className="grid grid-cols-1 gap-2 lg:grid-cols-3">
-          <div className="flex flex-col gap-2 rounded-2lg border border-border-button-default p-3 lg:col-span-2">
+          <div className="flex flex-col gap-2 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4 lg:col-span-2">
             <div className="flex items-center justify-between">
               <span className="text-body-2-medium text-text-primary">现金流趋势</span>
-              <span className="text-caption-2-regular text-text-tertiary">近 12 个月</span>
+              <span className="text-caption-2-regular text-text-tertiary">{range==="月"?"月度样本":range==="季"?"季度样本":"年度样本"}</span>
             </div>
-            <AreaChart data={CASH_FLOW} height={150} gradientId="fin-cash" />
+            <AreaChart data={range==="月"?CASH_FLOW.slice(-4):range==="季"?CASH_FLOW.filter((_,i)=>i%3===2):CASH_FLOW} height={150} gradientId="fin-cash" />
           </div>
 
-          <div className="flex flex-col items-center justify-center gap-2 rounded-2lg border border-border-button-default p-3">
+          <div className="flex flex-col items-center justify-center gap-2 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
             <span className="self-start text-body-2-medium text-text-primary">毛利率</span>
             <RadialChart value={54} size={110} label="54%" color="var(--color-lime-500)" />
             <span className="text-caption-2-regular text-text-tertiary">行业平均 42%</span>
@@ -79,7 +63,7 @@ export function FinanceTemplate() {
         </div>
 
         <div className="grid grid-cols-1 gap-2 lg:grid-cols-2">
-          <div className="flex flex-col gap-2 rounded-2lg border border-border-button-default p-3">
+          <div className="flex flex-col gap-2 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
             <span className="text-body-2-medium text-text-primary">月度收支</span>
             <BarChart data={[62, 48, 71, 55, 80, 63, 88, 72]} height={130} />
             <div className="flex items-center gap-3 text-caption-2-regular text-text-tertiary">
@@ -91,7 +75,7 @@ export function FinanceTemplate() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-2 rounded-2lg border border-border-button-default p-3">
+          <div className="flex flex-col gap-2 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
             <span className="text-body-2-medium text-text-primary">支出结构</span>
             <BarList
               items={[
@@ -105,13 +89,13 @@ export function FinanceTemplate() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-2 rounded-2lg border border-border-button-default p-3">
+        <div className="flex flex-col gap-2 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
           <div className="flex items-center justify-between">
             <span className="text-body-2-medium text-text-primary">交易明细</span>
-            <Button size="sm" variant="ghost">查看全部</Button>
+            <DemoNotice/>
           </div>
           <div className="overflow-x-auto">
-            <table className="w-full text-body-2-regular">
+            <table className="bui-table bui-table-sm">
               <thead>
                 <tr className="text-caption-1-semibold text-text-secondary">
                   <th className="px-2 py-1.5 text-start font-medium">编号</th>

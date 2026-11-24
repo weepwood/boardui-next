@@ -1,0 +1,11 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false, "declaration": true, "declarationMap": false,
+    "module": "ESNext", "moduleResolution": "Bundler", "jsx": "react-jsx",
+    "rootDir": ".", "outDir": "../build/boardui-next/esm",
+    "incremental": false, "allowJs": false, "plugins": []
+  },
+  "include": ["react/**/*.ts", "react/**/*.tsx", "styles/**/*.ts"],
+  "exclude": ["../node_modules", "../build"]
+}

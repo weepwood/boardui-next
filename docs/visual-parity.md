@@ -49,3 +49,7 @@ DatePicker、Slider、InputOtp 直接移植公开 MIT 实现；DateCalendar 复�
 ### 第七批：应用级组合组件
 
 移植 Breadcrumb、AgentThinking、ComposerLoader、免费 AgentComposer 的固定 MIT 上游源码；Pro Composer 不复制，保留本地多行接口并引入公共加载层。NavigationItem 与 Toolbar 是可复用本地组件，侧栏固定图标位置、260/60px 宽度、子项回调；CommandPalette 采用 React Aria 模态管理与局部键盘导航，ContextMenu 使用 portal 和焦点恢复。AgentProgress 增加语义步骤。未配置的工具不伪装可用，AI 演示不接真实服务。
+
+### 第八批：产品化第一轮
+
+已增加实际预览包构建与消费端测试，修复安装说明与六个重点模板的交互，统一共享状态控件。详见 docs/productization.md。仍须完成其他模板和逐组件正式验收。

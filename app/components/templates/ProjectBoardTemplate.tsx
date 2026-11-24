@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { DemoNotice, TemplateSegments, downloadCsv } from "./TemplateShared";
 import { Avatar } from "@/app/components/ui/Avatar";
 import { Badge } from "@/app/components/ui/Badge";
 import { Icon } from "@/app/components/ui/Icon";
@@ -106,11 +107,13 @@ const INITIAL: Column[] = [
 
 /** 项目看板模板：四列看板 + 任务卡 + 成员头像堆叠 */
 export function ProjectBoardTemplate() {
-  const [columns] = useState(INITIAL);
+  const [columns,setColumns] = useState(INITIAL);
+  const [draft,setDraft]=useState("");const [target,setTarget]=useState<string|null>(null);
+  const add=()=>{if(!target||!draft.trim())return;setColumns(prev=>prev.map(c=>c.id===target?{...c,cards:[...c.cards,{id:crypto.randomUUID(),title:draft.trim(),assignees:[]}]}:c));setDraft("");setTarget(null)};
   const [view, setView] = useState<"board" | "list">("board");
 
   return (
-    <div className="flex min-h-[680px] w-full flex-col overflow-hidden rounded-3xl border border-border-button-default bg-background-primary-default shadow-card">
+    <div className="flex min-h-[680px] w-full flex-col overflow-hidden rounded-3xl border border-border-button-default bg-background-primary-default shadow-sidebar">
       {/* 头部 */}
       <header className="flex flex-col gap-3 border-b border-border-primary p-4">
         <div className="flex flex-wrap items-start justify-between gap-2">
@@ -120,7 +123,7 @@ export function ProjectBoardTemplate() {
               <Badge variant="accent">进行中</Badge>
             </div>
             <span className="text-caption-1-regular text-text-tertiary">
-              9 个任务 · 4 位成员 · 更新于 2 小时前
+              {columns.reduce((n,c)=>n+c.cards.length,0)} 个任务 · 本地示例
             </span>
           </div>
           <div className="flex items-center gap-2">
@@ -134,7 +137,7 @@ export function ProjectBoardTemplate() {
                 +4
               </span>
             </div>
-            <Button size="sm" leading={<Icon name="add-line" className="size-3.5" />}>
+            <Button onPress={()=>setTarget(columns[0].id)} size="sm" leading={<Icon name="add-line" className="size-3.5" />}>
               新建任务
             </Button>
           </div>
@@ -142,41 +145,18 @@ export function ProjectBoardTemplate() {
 
         {/* 视图切换 */}
         <div className="flex items-center gap-2">
-          <div className="inline-flex items-center gap-0.5 rounded-2lg bg-segmented-control-background p-0.5">
-            {(
-              [
-                { key: "board", label: "看板", icon: "layout-column-line" },
-                { key: "list", label: "列表", icon: "list-unordered" },
-              ] as const
-            ).map((v) => (
-              <button
-                key={v.key}
-                type="button"
-                onClick={() => setView(v.key)}
-                className={cn(
-                  "inline-flex h-7 cursor-pointer items-center gap-1.5 rounded-[7px] px-2.5",
-                  "text-body-2-medium transition-colors duration-150 ease-out",
-                  view === v.key
-                    ? "bg-segmented-control-selected-background text-text-primary shadow-xs"
-                    : "text-text-secondary hover:text-text-primary"
-                )}
-              >
-                <Icon name={v.icon} className="size-3.5" />
-                {v.label}
-              </button>
-            ))}
-          </div>
+          <TemplateSegments values={["看板","列表"] as const} value={view==="board"?"看板":"列表"} onChange={v=>setView(v==="看板"?"board":"list")}/>
           <div className="ms-auto flex items-center gap-1">
             <button
               type="button"
-              aria-label="筛选"
+              aria-label="筛选（未配置）" disabled
               className="flex size-7 cursor-pointer items-center justify-center rounded-lg text-foreground-icon-secondary hover:bg-background-secondary-hover"
             >
               <Icon name="filter-3-line" className="size-4" />
             </button>
             <button
               type="button"
-              aria-label="更多"
+              aria-label="更多（未配置）" disabled
               className="flex size-7 cursor-pointer items-center justify-center rounded-lg text-foreground-icon-secondary hover:bg-background-secondary-hover"
             >
               <Icon name="more-2-line" className="size-4" />
@@ -185,6 +165,7 @@ export function ProjectBoardTemplate() {
         </div>
       </header>
 
+      {target&&<form className="flex flex-wrap items-center gap-2 p-3" onSubmit={e=>{e.preventDefault();add()}}><input autoFocus aria-label="任务标题" value={draft} onChange={e=>setDraft(e.target.value)} className="min-w-0 flex-1 rounded-2lg bg-background-tertiary-default p-2 text-body-medium" placeholder="任务标题"/><button type="submit" disabled={!draft.trim()} className="rounded-2lg bg-button-primary px-3 py-2 text-white disabled:opacity-40">添加</button><Button variant="secondary" onPress={()=>setTarget(null)}>取消</Button></form>}
       {/* 看板 */}
       {view === "board" ? (
         <div className="flex min-h-0 flex-1 gap-2 overflow-x-auto p-3 [scrollbar-width:thin]">
@@ -202,7 +183,7 @@ export function ProjectBoardTemplate() {
                 </div>
                 <button
                   type="button"
-                  aria-label={`在${col.title}中添加`}
+                  aria-label={`在${col.title}中添加`} onClick={()=>setTarget(col.id)}
                   className="flex size-5 cursor-pointer items-center justify-center rounded text-text-tertiary hover:bg-background-tertiary-hover hover:text-text-primary"
                 >
                   <Icon name="add-line" className="size-3.5" />
@@ -263,7 +244,7 @@ export function ProjectBoardTemplate() {
                 ))}
 
                 <button
-                  type="button"
+                  type="button" onClick={()=>setTarget(col.id)}
                   className={cn(
                     "flex w-full cursor-pointer items-center gap-1 rounded-lg px-2 py-1.5",
                     "text-caption-1-regular text-text-tertiary",

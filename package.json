@@ -14,7 +14,9 @@
     "test:browser": "node scripts/browser-check.mjs",
     "test:release": "node scripts/release-gate.mjs",
     "icons:generate": "node scripts/generate-icon-registry.mjs",
-    "test:icons": "node scripts/generate-icon-registry.mjs --check"
+    "test:icons": "node scripts/generate-icon-registry.mjs --check",
+    "build:library": "node scripts/build-library.mjs",
+    "test:library": "npm run build:library && node scripts/check-library.mjs"
   },
   "dependencies": {
     "@fontsource-variable/inter": "5.3.0",
@@ -24,7 +26,7 @@
     "@remixicon/react": "4.9.0",
     "clsx": "^2.1.1",
     "motion": "12.42.2",
-    "next": "15.5.4",
+    "next": "15.5.29",
     "react": "19.1.0",
     "react-aria-components": "^1.8.0",
     "react-dom": "19.1.0",

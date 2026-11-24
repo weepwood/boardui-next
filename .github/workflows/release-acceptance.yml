@@ -26,6 +26,8 @@ jobs:
           restore-keys: |
             next-pages-${{ runner.os }}-${{ hashFiles('package-lock.json') }}-
       - run: npm test
+      - run: npm run typecheck
+      - run: npm run test:library
       - run: npm run build:pages
       - run: npm run test:export
       - uses: actions/upload-artifact@v4

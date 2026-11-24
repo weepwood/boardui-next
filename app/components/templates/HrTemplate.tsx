@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { DemoNotice, TemplateSegments, downloadCsv } from "./TemplateShared";
 import { StatCard } from "@/app/components/ui/StatCard";
 import { BarList, RadialChart } from "@/app/components/ui/Chart";
 import { Avatar } from "@/app/components/ui/Avatar";
@@ -42,24 +43,25 @@ export function HrTemplate() {
   const shown = filter === "全部" ? MEMBERS : MEMBERS.filter((m) => m.status === filter);
 
   return (
-    <div className="flex min-h-[660px] w-full flex-col overflow-hidden rounded-3xl border border-border-button-default bg-background-primary-default shadow-card">
+    <div className="flex min-h-[660px] w-full flex-col overflow-hidden rounded-3xl border border-border-button-default bg-background-primary-default shadow-sidebar">
       <header className="flex flex-wrap items-center justify-between gap-2 border-b border-border-primary px-4 py-3">
         <div className="flex flex-col gap-0.5">
           <h3 className="text-title-3-semibold text-text-primary">人力资源团队</h3>
           <span className="text-caption-2-regular text-text-tertiary">
-            45 位成员 · 5 个部门
+            示例：45 位成员 · 5 个部门
           </span>
         </div>
         <div className="flex items-center gap-2">
-          <Button size="sm" variant="secondary" leading={<Icon name="user-add-line" className="size-3.5" />}>
+          <Button isDisabled size="sm" variant="secondary" leading={<Icon name="user-add-line" className="size-3.5" />}>
             邀请成员
           </Button>
+          <DemoNotice/>
           <Avatar name="王五" size="sm" />
         </div>
       </header>
 
       <div className="flex flex-col gap-3 p-4">
-        <div className="grid grid-cols-2 gap-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
           <StatCard label="总人数" value="45" delta="+3" trend="up" icon="team-line" spark={[38, 39, 40, 41, 42, 44, 45]} />
           <StatCard label="平均司龄" value="2.4 年" delta="+0.2" trend="up" icon="time-line" spark={[2.0, 2.1, 2.1, 2.2, 2.2, 2.3, 2.4]} />
           <StatCard label="本月入职" value="3" delta="+1" trend="up" icon="user-add-line" />
@@ -67,27 +69,10 @@ export function HrTemplate() {
         </div>
 
         <div className="grid grid-cols-1 gap-2 lg:grid-cols-3">
-          <div className="flex flex-col gap-2 rounded-2lg border border-border-button-default p-3 lg:col-span-2">
+          <div className="flex flex-col gap-2 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4 lg:col-span-2">
             <div className="flex flex-wrap items-center justify-between gap-2">
               <span className="text-body-2-medium text-text-primary">成员</span>
-              <div className="flex items-center gap-0.5 rounded-2lg bg-segmented-control-background p-0.5">
-                {(["全部", "在职", "休假", "试用"] as const).map((f) => (
-                  <button
-                    key={f}
-                    type="button"
-                    onClick={() => setFilter(f)}
-                    className={cn(
-                      "h-6 cursor-pointer rounded-md px-2 text-caption-1-medium",
-                      "transition-colors duration-150 ease-out",
-                      filter === f
-                        ? "bg-segmented-control-selected-background text-text-primary shadow-xs"
-                        : "text-text-secondary hover:text-text-primary"
-                    )}
-                  >
-                    {f}
-                  </button>
-                ))}
-              </div>
+              <TemplateSegments values={["全部","在职","休假","试用"] as const} value={filter} onChange={setFilter}/>
             </div>
 
             <div className="flex flex-col divide-y divide-border-primary">
@@ -115,7 +100,7 @@ export function HrTemplate() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-2 rounded-2lg border border-border-button-default p-3">
+          <div className="flex flex-col gap-2 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
             <span className="text-body-2-medium text-text-primary">部门分布</span>
             <div className="flex justify-center py-1">
               <RadialChart value={40} size={96} label="18/45" />
@@ -126,7 +111,7 @@ export function HrTemplate() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-2 rounded-2lg border border-border-button-default p-3">
+        <div className="flex flex-col gap-2 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
           <span className="text-body-2-medium text-text-primary">部门负责人</span>
           <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
             {DEPARTMENTS.map((d) => (

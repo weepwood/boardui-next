@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { DemoNotice, TemplateSegments, downloadCsv } from "./TemplateShared";
 import { Icon } from "@/app/components/ui/Icon";
 import { Avatar } from "@/app/components/ui/Avatar";
 import { cn } from "@/lib/utils";
@@ -47,43 +48,48 @@ const FIRST_WEEKDAY = 5; // 0=周一 … 5=周六
 /** 日历模板：月视图 + 事件色块 + 侧栏日程 */
 export function CalendarTemplate() {
   const [selected, setSelected] = useState(12);
-  const [month] = useState("2026年8月");
+  const [cursor,setCursor]=useState({year:2026,month:7});
+  const month=cursor.year+"年"+(cursor.month+1)+"月";
+  const days=new Date(cursor.year,cursor.month+1,0).getDate();
+  const first=(new Date(cursor.year,cursor.month,1).getDay()+6)%7;
+  const monthEvents=cursor.year===2026&&cursor.month===7?EVENTS:[];
+  const shift=(n:number)=>{const d=new Date(cursor.year,cursor.month+n,1);setCursor({year:d.getFullYear(),month:d.getMonth()});setSelected(1)};
 
   const cells: (number | null)[] = [
-    ...Array.from({ length: FIRST_WEEKDAY }, () => null),
-    ...Array.from({ length: DAYS_IN_MONTH }, (_, i) => i + 1),
+    ...Array.from({ length: first }, () => null),
+    ...Array.from({ length: days }, (_, i) => i + 1),
   ];
   while (cells.length % 7 !== 0) cells.push(null);
 
-  const dayEvents = EVENTS.filter((e) => e.day === selected);
-  const today = 12;
+  const dayEvents = monthEvents.filter((e) => e.day === selected);
+  const now=new Date();const today=now.getFullYear()===cursor.year&&now.getMonth()===cursor.month?now.getDate():0;
 
   return (
-    <div className="flex min-h-[620px] w-full flex-col overflow-hidden rounded-3xl border border-border-button-default bg-background-primary-default shadow-card lg:flex-row">
+    <div className="flex min-h-[620px] w-full flex-col overflow-hidden rounded-3xl border border-border-button-default bg-background-primary-default shadow-sidebar lg:flex-row">
       {/* 日历主体 */}
       <div className="flex min-w-0 flex-1 flex-col">
         <header className="flex flex-wrap items-center justify-between gap-2 border-b border-border-primary px-4 py-3">
           <div className="flex items-center gap-2">
             <h3 className="text-title-3-semibold text-text-primary">{month}</h3>
-            <span className="text-caption-1-regular text-text-tertiary">9 个日程</span>
+            <span className="text-caption-1-regular text-text-tertiary">{monthEvents.length} 个日程 · 示例</span>
           </div>
           <div className="flex items-center gap-1">
             <button
               type="button"
-              aria-label="上个月"
+              aria-label="上个月" onClick={()=>shift(-1)}
               className="flex size-7 cursor-pointer items-center justify-center rounded-lg text-foreground-icon-secondary hover:bg-background-secondary-hover"
             >
               <Icon name="arrow-left-s-line" className="size-4" />
             </button>
             <button
               type="button"
-              className="h-7 cursor-pointer rounded-lg px-2 text-caption-1-medium text-text-secondary hover:bg-background-secondary-hover"
+              onClick={()=>{const d=new Date();setCursor({year:d.getFullYear(),month:d.getMonth()});setSelected(d.getDate())}} className="h-7 cursor-pointer rounded-lg px-2 text-caption-1-medium text-text-secondary hover:bg-background-secondary-hover"
             >
               今天
             </button>
             <button
               type="button"
-              aria-label="下个月"
+              aria-label="下个月" onClick={()=>shift(1)}
               className="flex size-7 cursor-pointer items-center justify-center rounded-lg text-foreground-icon-secondary hover:bg-background-secondary-hover"
             >
               <Icon name="arrow-right-s-line" className="size-4" />
@@ -104,7 +110,7 @@ export function CalendarTemplate() {
         </div>
 
         {/* 日期网格 */}
-        <div className="grid flex-1 grid-cols-7 auto-rows-fr">
+        <div className="grid flex-1 grid-cols-7 auto-rows-fr min-w-0">
           {cells.map((day, i) => {
             if (day === null) {
               return (
@@ -114,16 +120,16 @@ export function CalendarTemplate() {
                 />
               );
             }
-            const evs = EVENTS.filter((e) => e.day === day);
+            const evs = monthEvents.filter((e) => e.day === day);
             const isToday = day === today;
             const isSel = day === selected;
             return (
               <button
                 key={day}
                 type="button"
-                onClick={() => setSelected(day)}
+                onClick={() => setSelected(day)} aria-label={month+day+"日"} aria-pressed={isSel}
                 className={cn(
-                  "flex min-h-[84px] cursor-pointer flex-col gap-1 border-b border-e border-border-primary p-1.5 text-start",
+                  "flex min-w-0 min-h-[84px] cursor-pointer flex-col gap-1 border-b border-e border-border-primary p-1.5 text-start",
                   "transition-colors duration-150 ease-out",
                   isSel ? "bg-badge-new-background" : "hover:bg-background-secondary-hover"
                 )}
@@ -166,7 +172,7 @@ export function CalendarTemplate() {
       {/* 侧栏日程 */}
       <aside className="flex w-full shrink-0 flex-col gap-3 border-t border-border-primary p-4 lg:w-[240px] lg:border-s lg:border-t-0">
         <div className="flex flex-col gap-0.5">
-          <span className="text-body-2-medium text-text-primary">8月{selected}日</span>
+          <span className="text-body-2-medium text-text-primary">{cursor.month+1}月{selected}日</span>
           <span className="text-caption-2-regular text-text-tertiary">
             {dayEvents.length} 个日程
           </span>
