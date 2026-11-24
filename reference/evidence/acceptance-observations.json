@@ -2498,6 +2498,48 @@
       "scope": "本地 Edge 初始状态 axe、指定图表触摸或看板打开态 axe/无障碍树抽样；非人工读屏及所有状态。",
       "source": "reference/evidence/chart-workspace-20261124.json",
       "route": "/zh-hans/templates/project-board/"
+    },
+    {
+      "id": "formal-candidate-visual-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "button",
+        "input",
+        "select",
+        "modal",
+        "area-chart-card",
+        "home-dashboard",
+        "finance-dashboard",
+        "project-board",
+        "ai-chat"
+      ],
+      "scope": "固定 main acec795 的 Edge 初始态 11 路由×双主题×双视口候选截图，44 PNG 哈希与尺寸通过；尚未人工批准或对照原版像素验收。",
+      "source": "reference/evidence/screenshots/20261124-formal-candidate/manifest.json"
+    },
+    {
+      "id": "formal-recent-accessibility-20261124",
+      "dimension": "accessibility",
+      "result": "partial",
+      "components": [
+        "project-board",
+        "ai-chat",
+        "area-chart-card",
+        "modal"
+      ],
+      "scope": "最新 main 的 33 组页面布局与初始态 axe 检查无问题；含独立工作区及 RTL 页面，非逐状态或人工读屏验收。",
+      "source": "reference/evidence/formal-preparation-20261124.json"
+    },
+    {
+      "id": "formal-production-interaction-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "project-board",
+        "ai-chat"
+      ],
+      "scope": "最新生产 Pages 45426148628 通过，实际 Edge 检查跨列拖放和会话草稿隔离恢复；不代表完整交互或真机验收。",
+      "source": "reference/evidence/formal-preparation-20261124.json"
     }
   ]
 }
