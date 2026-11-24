@@ -93,6 +93,28 @@ try{
             assert.equal(await nav.locator('[aria-current="page"]').count(),1);
             assert.equal(await group.getAttribute('aria-expanded'),'false');
             assert.ok(await navigationPage.evaluate(()=>window.__sidebarInstance===document.querySelector('aside')));
+            // A late response from an earlier click must never replace the last destination.
+            let releaseLate;
+            const lateGate=new Promise(r=>{releaseLate=r});
+            const latePattern='**/zh-hans/components/textarea/index.txt*';
+            await navigationPage.route(latePattern,async r=>{await lateGate;await r.continue().catch(()=>{});});
+            try{
+              await nav.locator('a[data-doc-path="/zh-hans/components/textarea"]').click();
+              await navigationPage.locator('[data-navigation-pending]').waitFor({state:'visible'});
+              assert.ok(await navigationPage.locator('[data-doc-route]').evaluate(e=>e.inert));
+              await nav.locator('a[data-doc-path="/zh-hans/components/combobox"]').click();
+              await navigationPage.waitForURL(/\/components\/combobox\/?$/);
+              await navigationPage.locator('main h1').waitFor();
+              const heading=await navigationPage.locator('main h1').textContent();
+              releaseLate();
+              await navigationPage.waitForLoadState('networkidle');
+              assert.match(navigationPage.url(),/\/components\/combobox\/?$/);
+              assert.equal(await navigationPage.locator('main h1').textContent(),heading);
+              assert.equal(await navigationPage.locator('[data-nav-pending]').count(),0);
+              assert.equal(await navigationPage.locator('[data-doc-content]').getAttribute('aria-busy'),null);
+              assert.equal(await navigationPage.locator('[data-doc-route]').evaluate(e=>e.inert),false);
+              assert.equal(await nav.locator('[aria-current="page"]').count(),1);
+            }finally{releaseLate();await navigationPage.unroute(latePattern);}
           }finally{await navigationPage.close();}
         }
         if(route==='/zh-hans/components/'){
@@ -133,6 +155,36 @@ try{
           await dialog.getByRole('option',{name:/日期选择/}).waitFor();
           await page.keyboard.press('Escape');
           await dialog.waitFor({state:'hidden'});
+          const catalogPage=await context.newPage();
+          try{
+            await catalogPage.addInitScript(()=>{
+              const Native=window.IntersectionObserver;
+              window.__catalogIO={created:0,active:0};
+              window.IntersectionObserver=class extends Native{
+                constructor(callback,options){
+                  super(callback,options);
+                  this.catalog=options?.rootMargin==="240px 0px";
+                  this.targets=new Set();
+                  if(this.catalog)window.__catalogIO.created++;
+                }
+                observe(el){if(this.catalog&&!this.targets.has(el)){this.targets.add(el);window.__catalogIO.active++;}super.observe(el);}
+                unobserve(el){if(this.catalog&&this.targets.delete(el))window.__catalogIO.active--;super.unobserve(el);}
+                disconnect(){if(this.catalog){window.__catalogIO.active-=this.targets.size;this.targets.clear();}super.disconnect();}
+              };
+            });
+            await catalogPage.goto(origin+'/zh-hans/components/',{waitUntil:'networkidle'});
+            await catalogPage.locator('[data-live-preview]').first().waitFor();
+            assert.equal(await catalogPage.evaluate(()=>window.__catalogIO.created),1);
+            const catalogSearch=catalogPage.getByRole('textbox',{name:'搜索组件目录'});
+            await catalogSearch.fill('date-picker');
+            await catalogPage.waitForFunction(()=>document.querySelectorAll('[data-catalog-slug]').length===1);
+            await catalogSearch.fill('');
+            await catalogPage.waitForFunction(()=>document.querySelectorAll('[data-catalog-slug]').length>90);
+            assert.ok(await catalogPage.evaluate(()=>window.__catalogIO.created<=2));
+            await catalogPage.locator('aside nav [data-doc-path="/zh-hans/components/button"]').click();
+            await catalogPage.waitForURL(/\/components\/button\/?$/);
+            await catalogPage.waitForFunction(()=>window.__catalogIO.active===0);
+          }finally{await catalogPage.close();}
 
         }
         assert.deepEqual(await page.locator('[data-icon-fallback="true"]').evaluateAll(es=>es.map(e=>e.getAttribute('data-icon'))),[],'unknown SVG name on '+route);

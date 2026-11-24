@@ -10,6 +10,7 @@ export function DocsShell({children}:{children:ReactNode}){
  const shell=useRef<HTMLDivElement>(null);
  const content=useRef<HTMLDivElement>(null);
  const feedback=useRef<HTMLDivElement>(null);
+ const routeContent=useRef<HTMLDivElement>(null);
  const targetLabel=useRef<HTMLHeadingElement>(null);
  const targetCrumb=useRef<HTMLParagraphElement>(null);
  const intent=useRef<Intent|null>(null);
@@ -24,6 +25,7 @@ export function DocsShell({children}:{children:ReactNode}){
    content.current?.removeAttribute("data-route-pending");
    content.current?.removeAttribute("aria-busy");
    if(feedback.current)feedback.current.hidden=true;
+   if(routeContent.current)routeContent.current.inert=false;
  },[]);
  // A narrow imperative feedback surface avoids an urgent React render of the
  // old route before the Next.js navigation transition can commit. The router
@@ -43,12 +45,18 @@ export function DocsShell({children}:{children:ReactNode}){
      if(targetLabel.current)targetLabel.current.textContent=label;
      if(targetCrumb.current)targetCrumb.current.textContent="BoardUI / "+label;
      content.current?.setAttribute("data-route-pending","true");
+     if(routeContent.current)routeContent.current.inert=true;
      if(feedback.current)feedback.current.hidden=false;
    },100);
    timeout.current=setTimeout(clear,12000);
  },[clear]);
  useLayoutEffect(()=>{if(intent.current&&intent.current.from!==pathname)clear()},[pathname,clear]);
- useEffect(()=>clear,[clear]);
+ useEffect(()=>{
+   // A history traversal may cancel an in-flight navigation without changing
+   // the normalized pathname (for example, a hash-only history entry).
+   window.addEventListener("popstate",clear);
+   return ()=>{window.removeEventListener("popstate",clear);clear()};
+ },[clear]);
  const warm=useCallback((href:string)=>{
    href=normalize(href);
    if(href===pathRef.current)return;
@@ -63,7 +71,7 @@ export function DocsShell({children}:{children:ReactNode}){
  },[router]);
  const value=useMemo(()=>({begin,warm}),[begin,warm]);
  return <NavContext.Provider value={value}><div ref={shell} className="flex min-h-screen w-full bg-background-full"><Sidebar/><div ref={content} data-doc-content className="relative min-w-0 flex-1">
-  <div data-doc-route>{children}</div>
+  <div ref={routeContent} data-doc-route>{children}</div>
   <div ref={feedback} hidden data-navigation-pending className="absolute inset-0 bg-background-full" role="status" aria-live="polite"><div className="sticky top-0 mx-auto flex w-full max-w-[1200px] flex-col gap-8 px-6 pt-10 sm:px-10"><p ref={targetCrumb} className="text-body-2-regular text-text-secondary"/><h2 ref={targetLabel} className="text-title-1-medium text-text-primary"/><div className="flex max-w-[900px] flex-col gap-4"><div className="h-4 w-3/5 rounded-md bg-background-tertiary-default"/><div className="h-[327px] rounded-3xl border border-border-component-detail-container"/><span className="sr-only">正在加载页面</span></div></div></div>
  </div></div></NavContext.Provider>
 }

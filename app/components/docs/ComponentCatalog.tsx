@@ -15,8 +15,9 @@ const data=navigation.filter(g=>categories.includes(g.title)).map(g=>({title:g.t
   const status:CatalogStatus=!exists?"missing":entry?.implementation==="ported-unverified"?"ported":i.isPro?"independent":"existing";
   return {...i,slug,template,status,description:template?templateDescriptions[slug]??"应用界面模板":meta?.description??"尚未实现"};
 })}));
+const templateGroups=data.filter(g=>g.title==="模板");
 export function ComponentCatalog({templatesOnly=false}:{templatesOnly?:boolean}){
- const available=templatesOnly?data.filter(g=>g.title==="模板"):data;
+ const available=templatesOnly?templateGroups:data;
  const [query,setQuery]=useState(""),[category,setCategory]=useState("全部"),[status,setStatus]=useState("all");
  const search=useDeferredValue(query.trim().toLowerCase());
  const groups=useMemo(()=>available.filter(g=>category==="全部"||g.title===category).map(g=>({...g,items:g.items.filter(i=>(status==="all"||i.status===status)&&[i.label,i.slug,i.description,g.title].join(" ").toLowerCase().includes(search))})).filter(g=>g.items.length),[available,category,status,search]);
