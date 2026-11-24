@@ -40,7 +40,7 @@ export function CheckboxGlyph({
       aria-hidden
       className={cx(
         "flex shrink-0 items-center justify-center rounded-sm",
-        "transition-[background-color,border-color,box-shadow] duration-150 ease",
+        "transition-[background-color,border-color,box-shadow] duration-150 ease motion-reduce:transition-none",
         s.box,
         isMarked
           ? cx(
@@ -52,7 +52,7 @@ export function CheckboxGlyph({
               hover ? "border-border-checkbox-hover" : "border-border-checkbox-default",
             ),
         isDisabled && "opacity-50",
-        isFocusVisible && "ring-2 ring-border-focus-ring ring-offset-2",
+        isFocusVisible && "ring-2 ring-border-focus-ring ring-offset-2 ring-offset-background-full",
       )}
     >
       <svg viewBox="0 0 16 16" fill="none" className={s.glyph}>
@@ -66,7 +66,7 @@ export function CheckboxGlyph({
             strokeLinecap="round"
             strokeLinejoin="round"
             pathLength={1}
-            className="animate-check-draw"
+            className="animate-check-draw motion-reduce:animate-none"
           />
         ) : null}
       </svg>

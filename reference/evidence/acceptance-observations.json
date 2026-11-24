@@ -2883,6 +2883,38 @@
       ],
       "scope": "真实阿拉伯语方向切换、方向图标旋转及按钮组键盘操作通过；尚未全变体跨浏览器。",
       "source": "reference/evidence/button-family-20261125.json"
+    },
+    {
+      "id": "consolidated-consumer-api-20261125",
+      "dimension": "api",
+      "result": "partial",
+      "components": [
+        "input",
+        "textarea",
+        "checkbox",
+        "radio",
+        "select",
+        "tabs",
+        "pagination"
+      ],
+      "scope": "实际 tarball 独立 Vite 项目提交原生 FormData、验证字段值、切换 Tabs 与分页动态挂载；仅指定接口，不替代全 API。",
+      "source": "reference/evidence/consolidated-consumer-20261125.json"
+    },
+    {
+      "id": "consolidated-consumer-interaction-20261125",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "input",
+        "textarea",
+        "checkbox",
+        "radio",
+        "select",
+        "tabs",
+        "pagination"
+      ],
+      "scope": "实际 Edge 独立消费：键盘单选、复选、浮层选择、表单提交、Tabs、220px 动态分页与下一页，最终通过；非完整变体与跨浏览器。",
+      "source": "reference/evidence/consolidated-consumer-20261125.json"
     }
   ]
 }

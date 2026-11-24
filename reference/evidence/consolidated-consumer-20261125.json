@@ -1,0 +1,33 @@
+{
+  "base": "930529514be2f6559f9ea0c29ca88659a2405bb2",
+  "scope": "集中 PR #43：独立组件包消费、表单及窄容器分页修复；非正式三浏览器完成证据",
+  "browser": "Microsoft Edge (Chromium), macOS",
+  "checks": {
+    "typecheck": "passed",
+    "unit": "passed",
+    "api": "passed",
+    "tarballSSR": "passed",
+    "tarballTypes": "passed",
+    "independentViteBuild": "passed",
+    "consumerBrowser": "passed",
+    "staticExport": "passed"
+  },
+  "consumerArchiveBytes": 121211,
+  "export": {
+    "pages": 120,
+    "peakGzipJs": 509876,
+    "peakGzipHtml": 26539,
+    "templateCatalogGzipJs": 253870
+  },
+  "browserAssertions": [
+    "原生 FormData 邮箱/备注/复选框/单选框/Select 值",
+    "TabPanel 切换",
+    "220px 分页动态从单页到多页、下一页、消失、再次出现，检查横向溢出",
+    "既有按钮、主题、RTL、进度及图表唯一渐变 ID"
+  ],
+  "limitations": [
+    "首次 Playwright radio.check() 对隐藏原生输入产生指针拦截超时；改为真实 Space 键并断言 checked，最终通过",
+    "扩展后的独立示例 Vite JS 533.24 kB，gzip 163.92 kB，存在大 chunk 提示；不是生产文档站超预算",
+    "完整 Chromium/Firefox/WebKit 与人工验收尚未完成"
+  ]
+}

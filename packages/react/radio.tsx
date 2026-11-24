@@ -79,7 +79,7 @@ export function RadioDot({ selected = false, size = "sm", focusVisible = false, 
       className={cx(
         "relative flex shrink-0 items-center justify-center rounded-full",
         s.dot,
-        focusVisible && "ring-2 ring-border-focus-ring ring-offset-2",
+        focusVisible && "ring-2 ring-border-focus-ring ring-offset-2 ring-offset-background-full",
         className,
       )}
     >
@@ -87,7 +87,7 @@ export function RadioDot({ selected = false, size = "sm", focusVisible = false, 
       <span
         className={cx(
           "absolute inset-0 rounded-full border-border-checkbox-default bg-background-primary-default shadow-xs",
-          "transition-opacity duration-200 ease",
+          "transition-opacity duration-200 ease motion-reduce:transition-none",
           s.border,
           selected && "opacity-0",
         )}
@@ -96,7 +96,7 @@ export function RadioDot({ selected = false, size = "sm", focusVisible = false, 
       <span
         className={cx(
           "absolute inset-0 rounded-full",
-          "transition-opacity duration-200 ease",
+          "transition-opacity duration-200 ease motion-reduce:transition-none",
           s.selected,
           !selected && "opacity-0",
         )}
@@ -107,7 +107,7 @@ export function RadioDot({ selected = false, size = "sm", focusVisible = false, 
       <span
         className={cx(
           "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-control-indicator-background",
-          "transition-[scale,opacity] duration-200 ease",
+          "transition-[scale,opacity] duration-200 ease motion-reduce:transition-none",
           s.inner,
           selected ? "scale-100 opacity-100" : "scale-0 opacity-0",
         )}

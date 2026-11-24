@@ -197,3 +197,9 @@
 - #42 run 45435094403 全部通过，Squash 合并 1f4713e；Pages 45435932817 成功。正式报告原始提交仍为 acec795。
 - Button/AriaButton 带边框纯图标中号统一为 36px 方形；ButtonGroup 的 size 传给未显式指定的子项（显式覆盖不变）；IconButton/旧版适配与组内按钮统一减少动效、主题焦点及禁用状态。没有增加依赖和公共 props。
 - 最终 Edge 20/20 双主题页面、8/8 双主题双视口双方向状态截图及局部 axe，TypeScript、单测、41 API 组/69 导出一致性、tarball SSR/类型、独立 Vite 实际安装构建和浏览器消费通过。120 HTML 导出及资源预算通过（JS 509770B，HTML 26539B）。报告 reference/evidence/button-family-20261125.json；scripts/audit-button-family.mjs 加入正式 Chromium 流程。截图为局部状态，不冒充原版对照；只登记 partial，正式新源码三浏览器和人工无障碍仍待完成。
+
+### 集中发布收口（2026-11-25，用户调整）
+
+- 剩余基础按钮、表单、导航浮层、数据展示、图表、应用组件及模板统一在现有 PR #43（qa/button-family-closure）推进；不再按小批次创建 PR，不为各个小组件单独发布。使用中文 Git commit，集中处理实际缺陷、整体验收一次、通过后统一审查合并与生产发布。中间提交的 CI 不能作为最终提交的结果；不降低已有正式门禁。
+- #43 原 head 9305295 的 run 45436399141 已通过，按用户要求保留 PR 继续扩充，未提前合并。统一 Checkbox/Radio/Switch/Slider 焦点偏移色和减少动效；修复 Pagination 从 1 页动态到多页无法重新观测及极窄容器溢出，260px 以下显示当前/总页数并保留前后按钮。
+- 扩展独立 Vite 消费到原生 FormData、Select、Tabs、窄容器动态分页。实际 tarball SSR/类型/独立构建和 Edge 浏览器通过；首次 radio.check 指针拦截，最终通过实际键盘 Space 并断言 checked。类型、单测、API 以及 120 HTML 静态导出预算通过。报告 reference/evidence/consolidated-consumer-20261125.json。扩展示例产生 Vite 大 chunk 提示，未放宽生产预算。正式全站候选仍需新提交的完整三浏览器结果；104 项五维门禁不自动批准。

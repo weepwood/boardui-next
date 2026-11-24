@@ -76,21 +76,22 @@ const cell = "flex size-8 shrink-0 items-center justify-center rounded-lg text-b
  *  somewhere around 380–420px depending on totalPages' digit count. */
 const COMPACT_WIDTH = 420;
 
-function useIsCompact() {
+function useIsCompact(visible:boolean) {
   const ref = useRef<HTMLElement>(null);
-  const [isCompact, setIsCompact] = useState(false);
+  const [width, setWidth] = useState<number|null>(null);
 
   useEffect(() => {
     const el = ref.current;
-    if (!el) return;
+    if (!visible || !el) return;
+    setWidth(el.clientWidth);
     const observer = new ResizeObserver(([entry]) => {
-      setIsCompact(entry.contentRect.width < COMPACT_WIDTH);
+      setWidth(entry.contentRect.width);
     });
     observer.observe(el);
     return () => observer.disconnect();
-  }, []);
+  }, [visible]);
 
-  return [ref, isCompact] as const;
+  return [ref, width!==null && width<COMPACT_WIDTH, width!==null && width<260] as const;
 }
 
 export function Pagination({
@@ -104,9 +105,10 @@ export function Pagination({
   "aria-label": ariaLabel = "分页",
 }: PaginationProps) {
 
-  const [navRef, isCompact] = useIsCompact();
+  const [navRef, isCompact, isTiny] = useIsCompact(totalPages > 1);
   if (totalPages <= 1) return null;
-  const pages = paginationRange(page, totalPages, isCompact ? 0 : Math.max(0,Math.min(5,Math.trunc(siblingCount))));
+  const current=Math.max(1,Math.min(totalPages,Math.trunc(page)||1));
+  const pages = isTiny?[current]:paginationRange(current, totalPages, isCompact ? 0 : Math.max(0,Math.min(5,Math.trunc(siblingCount))));
 
   return (
     <nav
@@ -120,14 +122,15 @@ export function Pagination({
         iconOnly={isCompact}
         leadingIcon={RiArrowLeftLine}
         aria-label={isCompact ? previousLabel : undefined}
-        disabled={page <= 1}
-        onClick={() => onChange(page - 1)}
+        disabled={current <= 1}
+        onClick={() => onChange(current - 1)}
       >
         {isCompact ? undefined : previousLabel}
       </Button>
 
       <ul className="flex min-w-0 items-center gap-0.5">
-        {pages.map((item, i) =>
+        {isTiny&&<li className="text-caption-1-regular text-text-secondary tabular-nums" aria-current="page">{current} / {totalPages}</li>}
+        {!isTiny&&pages.map((item, i) =>
           item === DOTS ? (
             <li
               key={`dots-${i}`}
@@ -141,12 +144,12 @@ export function Pagination({
               <button
                 type="button"
                 aria-label={`前往第 ${item} 页`}
-                aria-current={item === page ? "page" : undefined}
+                aria-current={item === current ? "page" : undefined}
                 onClick={() => onChange(item)}
                 className={cx(
                   cell,
-                  "cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-border-focus-ring",
-                  item === page
+                  "cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-background-full focus-visible:ring-border-focus-ring",
+                  item === current
                     ? "border border-border-button-default bg-background-primary-default text-text-primary shadow-xs"
                     : "text-text-secondary hover:bg-background-secondary-hover hover:text-text-primary",
                 )}
@@ -165,8 +168,8 @@ export function Pagination({
         leadingIcon={isCompact ? RiArrowRightLine : undefined}
         trailingIcon={isCompact ? undefined : RiArrowRightLine}
         aria-label={isCompact ? nextLabel : undefined}
-        disabled={page >= totalPages}
-        onClick={() => onChange(page + 1)}
+        disabled={current >= totalPages}
+        onClick={() => onChange(current + 1)}
       >
         {isCompact ? undefined : nextLabel}
       </Button>
