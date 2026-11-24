@@ -53,13 +53,14 @@ export function ComponentPage({
 
       {install && (
         <section id="installation" className="flex scroll-mt-14 flex-col gap-2 pt-10">
-          <h2 className="text-title-2-medium text-text-primary">安装</h2>
+          <h2 className="text-title-2-medium text-text-primary">本地构建与复用</h2>
+          <p className="text-body-regular text-text-secondary">非官方预览包，尚未发布 npm 或安装 CLI。核心导出可用本地 tarball；其余组件保留在仓库应用源码中。详见安装指南。</p>
           <div className="overflow-hidden rounded-2lg border border-border-button-default bg-background-primary-default">
             <div className="flex items-center gap-2 border-b border-border-primary px-3 py-2">
               <span className="text-caption-1-medium text-text-tertiary">终端</span>
             </div>
             <pre className="overflow-x-auto p-3 font-mono text-body-2-regular text-text-primary">
-              <code>{install}</code>
+              <code>{"git clone https://github.com/weepwood/boardui-next.git\ncd boardui-next\nnpm ci\nnpm run test:library"}</code>
             </pre>
           </div>
         </section>

@@ -1,12 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import { DemoNotice, TemplateSegments, downloadCsv } from "./TemplateShared";
 import { StatCard } from "@/app/components/ui/StatCard";
 import { AreaChart, BarList, RadialChart, Heatmap, BarChart } from "@/app/components/ui/Chart";
 import { Avatar } from "@/app/components/ui/Avatar";
 import { Badge } from "@/app/components/ui/Badge";
 import { Button } from "@/app/components/ui/Button";
 import { Icon } from "@/app/components/ui/Icon";
+import { NavigationItem } from "@/packages/react/navigation";
 import { Counter } from "@/app/components/ui/Counter";
 import { cn } from "@/lib/utils";
 
@@ -36,29 +38,13 @@ export function DashboardTemplate() {
   const [count, setCount] = useState(3);
 
   return (
-    <div className="flex min-h-[720px] w-full overflow-hidden rounded-3xl border border-border-button-default bg-background-primary-default shadow-card">
+    <div className="flex min-h-[720px] w-full overflow-hidden rounded-3xl border border-border-button-default bg-background-primary-default shadow-sidebar">
       {/* 侧边导航 */}
-      <aside className="hidden w-[52px] shrink-0 flex-col items-center gap-1 border-e border-border-primary bg-background-secondary-default p-2 sm:flex">
+      <aside className="hidden w-[60px] shrink-0 flex-col items-center gap-1 bg-background-secondary-default p-3 sm:flex">
         <span className="mb-2 flex size-7 items-center justify-center rounded-lg bg-text-primary text-[12px] font-bold text-background-full">
           A
         </span>
-        {NAV.map((n) => (
-          <button
-            key={n.label}
-            type="button"
-            onClick={() => setActive(n.label)}
-            aria-label={n.label}
-            className={cn(
-              "flex size-8 cursor-pointer items-center justify-center rounded-lg",
-              "transition-colors duration-150 ease-out",
-              active === n.label
-                ? "bg-background-primary-default text-text-primary shadow-xs"
-                : "text-foreground-icon-secondary hover:bg-background-tertiary-hover hover:text-text-primary"
-            )}
-          >
-            <Icon name={n.icon} className="size-4" />
-          </button>
-        ))}
+        {NAV.map(n=><NavigationItem key={n.label} label={n.label} icon={n.icon} active={active===n.label} collapsed onClick={()=>setActive(n.label)}/>)}
       </aside>
 
       {/* 主内容 */}
@@ -66,20 +52,21 @@ export function DashboardTemplate() {
         {/* 顶栏 */}
         <header className="flex items-center justify-between gap-3 border-b border-border-primary px-4 py-3">
           <div className="flex flex-col">
-            <h3 className="text-body-large-medium text-text-primary">概览</h3>
-            <span className="text-caption-2-regular text-text-tertiary">2026 年 11 月 · 实时数据</span>
+            <h3 className="text-body-large-medium text-text-primary">{active}</h3>
+            <span className="text-caption-2-regular text-text-tertiary">2026 年 11 月 · 演示数据</span>
           </div>
           <div className="flex items-center gap-2">
-            <Button size="sm" variant="secondary" leading={<Icon name="download-line" className="size-3.5" />}>
+            <Button onPress={()=>downloadCsv("orders.csv",[["订单号","客户","金额","状态"],...ORDERS.map(o=>[o.id,o.customer,o.amount,o.status])])} size="sm" variant="secondary" leading={<Icon name="download-line" className="size-3.5" />}>
               导出
             </Button>
+            <DemoNotice/>
             <Avatar name="张三" size="sm" />
           </div>
         </header>
 
         <div className="flex flex-col gap-3 p-4">
           {/* 统计卡 */}
-          <div className="grid grid-cols-2 gap-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
             <StatCard label="总收入" value="¥128,430" delta="+12.5%" trend="up" icon="money-dollar-circle-line" spark={REVENUE} />
             <StatCard label="订单数" value="1,284" delta="+8.2%" trend="up" icon="shopping-bag-3-line" spark={[8, 12, 10, 16, 14, 19, 22]} />
             <StatCard label="活跃用户" value="8,621" delta="-2.4%" trend="down" icon="user-line" spark={[22, 20, 21, 18, 17, 16, 15]} />
@@ -88,7 +75,7 @@ export function DashboardTemplate() {
 
           {/* 主图表 + 环形 */}
           <div className="grid grid-cols-1 gap-2 lg:grid-cols-3">
-            <div className="flex flex-col gap-2 rounded-2lg border border-border-button-default p-3 lg:col-span-2">
+            <div className="flex flex-col gap-2 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4 lg:col-span-2">
               <div className="flex items-center justify-between">
                 <span className="text-body-2-medium text-text-primary">收入趋势</span>
                 <span className="text-caption-2-regular text-text-tertiary">近 12 周</span>
@@ -96,7 +83,7 @@ export function DashboardTemplate() {
               <AreaChart data={REVENUE} height={140} gradientId="dash-revenue" />
             </div>
 
-            <div className="flex flex-col items-center justify-center gap-2 rounded-2lg border border-border-button-default p-3">
+            <div className="flex flex-col items-center justify-center gap-2 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
               <span className="self-start text-body-2-medium text-text-primary">目标完成度</span>
               <RadialChart value={72} size={100} label="72%" />
               <span className="text-caption-2-regular text-text-tertiary">距年终目标还差 ¥32,000</span>
@@ -105,7 +92,7 @@ export function DashboardTemplate() {
 
           {/* 渠道 + 热力图 */}
           <div className="grid grid-cols-1 gap-2 lg:grid-cols-2">
-            <div className="flex flex-col gap-2 rounded-2lg border border-border-button-default p-3">
+            <div className="flex flex-col gap-2 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
               <span className="text-body-2-medium text-text-primary">流量来源</span>
               <BarList
                 items={[
@@ -117,7 +104,7 @@ export function DashboardTemplate() {
               />
             </div>
 
-            <div className="flex flex-col gap-2 rounded-2lg border border-border-button-default p-3">
+            <div className="flex flex-col gap-2 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
               <div className="flex items-center justify-between">
                 <span className="text-body-2-medium text-text-primary">活跃热力图</span>
                 <span className="text-caption-2-regular text-text-tertiary">近 20 周</span>
@@ -136,16 +123,16 @@ export function DashboardTemplate() {
           </div>
 
           {/* 最近订单 */}
-          <div className="flex flex-col gap-2 rounded-2lg border border-border-button-default p-3">
+          <div className="flex flex-col gap-2 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
             <div className="flex items-center justify-between">
               <span className="text-body-2-medium text-text-primary">最近订单</span>
               <div className="flex items-center gap-2">
-                <Counter value={count} onChange={setCount} min={1} max={10} />
-                <Button size="sm" variant="ghost">查看全部</Button>
+                <Counter value={count} onChange={setCount} min={1} max={ORDERS.length} />
+                <Button size="sm" variant="ghost" onPress={()=>setCount(ORDERS.length)}>查看全部</Button>
               </div>
             </div>
             <div className="overflow-x-auto">
-              <table className="w-full text-body-2-regular">
+              <table className="bui-table bui-table-sm">
                 <thead>
                   <tr className="text-caption-1-semibold text-text-secondary">
                     <th className="px-2 py-1.5 text-start font-medium">订单号</th>
@@ -155,7 +142,7 @@ export function DashboardTemplate() {
                   </tr>
                 </thead>
                 <tbody>
-                  {ORDERS.map((o) => (
+                  {ORDERS.slice(0,count).map((o) => (
                     <tr key={o.id} className="border-t border-border-primary">
                       <td className="px-2 py-1.5 font-mono text-caption-1-medium text-text-primary">{o.id}</td>
                       <td className="px-2 py-1.5 text-text-primary">{o.customer}</td>

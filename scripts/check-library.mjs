@@ -1,0 +1,24 @@
+import { execFileSync } from 'node:child_process';
+import { mkdirSync, rmSync, writeFileSync, readFileSync } from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+const root=process.cwd(), dir=path.join(root,'build/library-consumer'), pkg=path.join(dir,'node_modules/@weepwood/boardui-next');
+rmSync(dir,{recursive:true,force:true});mkdirSync(pkg,{recursive:true});
+const output=JSON.parse(execFileSync('npm',['pack','--json','--pack-destination',dir,path.join(root,'build/boardui-next')],{encoding:'utf8'}))[0];
+execFileSync('tar',['-xzf',path.join(dir,output.filename),'-C',pkg,'--strip-components=1']);
+const css=readFileSync(path.join(pkg,'styles.css'),'utf8');
+assert.ok(css.includes('.button-press-motion')&&css.includes('--color-text-primary')&&css.includes('.bui-table'));
+assert.ok(!css.includes('@source')&&!css.includes('@theme'));
+writeFileSync(path.join(dir,'smoke.mjs'),`
+import assert from 'node:assert/strict';
+import React from 'react';
+import {renderToString} from 'react-dom/server';
+import {Button,SvgIcon,DirectionProvider,Checkbox,Input,AgentThinking} from '@weepwood/boardui-next';
+const html=renderToString(React.createElement(DirectionProvider,{locale:'zh-CN'},React.createElement('div',null,React.createElement(Button,null,'Demo'),React.createElement(SvgIcon,{name:'search-line'}),React.createElement(Checkbox,null,'Check'),React.createElement(Input,{label:'Name'}),React.createElement(AgentThinking,{label:'Working',showTimer:false}))));
+assert.match(html,/Demo/);assert.match(html,/<svg/);assert.match(html,/Name/);assert.match(html,/Working/);
+console.log('Packed consumer SSR smoke passed');
+`);
+execFileSync(process.execPath,[path.join(dir,'smoke.mjs')],{stdio:'inherit'});
+writeFileSync(path.join(dir,'smoke.tsx'),`import { Button, Input, type ButtonProps } from '@weepwood/boardui-next'; const props:ButtonProps={size:'small'}; export const view=<><Button {...props}>Demo</Button><Input label="Name"/></>;`);
+execFileSync(process.execPath,['node_modules/typescript/bin/tsc','--noEmit','--strict','--skipLibCheck','--jsx','react-jsx','--target','ES2022','--module','ESNext','--moduleResolution','Bundler',path.join(dir,'smoke.tsx')],{stdio:'inherit'});
+console.log('Packed consumer type check passed',output.filename,output.size+' bytes');

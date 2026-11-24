@@ -100,6 +100,49 @@ try{
           await link.waitFor({state:'visible'});
           assert.ok((await link.getAttribute('href')).startsWith(base+'/'));
         }
+        if(route==='/zh-hans/templates/dashboard/'){
+          const demo=page.locator('#preview');
+          await demo.getByRole('button',{name:'分析',exact:true}).click();
+          await demo.getByRole('heading',{name:'分析',exact:true}).waitFor();
+          await demo.getByRole('button',{name:'查看全部'}).click();
+          assert.equal(await demo.locator('tbody tr').count(),4);
+        }
+        if(route==='/zh-hans/templates/ai-chat/'){
+          const demo=page.locator('#preview');
+          await demo.getByRole('textbox',{name:'消息'}).fill('模板测试');
+          await demo.getByRole('button',{name:'发送',exact:true}).click();
+          await demo.getByText('本地示例：已收到消息。此模板未连接 AI 服务。',{exact:true}).waitFor();
+          await demo.getByRole('button',{name:'新建对话'}).click();
+          assert.equal(await demo.getByText('模板测试',{exact:true}).count(),0);
+        }
+        if(route==='/zh-hans/templates/finance/'){
+          const demo=page.locator('#preview');
+          await demo.getByRole('radio',{name:'年',exact:true}).click();
+          await demo.getByText('年度样本',{exact:true}).waitFor();
+        }
+        if(route==='/zh-hans/templates/hr/'){
+          const demo=page.locator('#preview');
+          await demo.getByRole('radio',{name:'休假',exact:true}).click();
+          const members=demo.locator('.divide-y > div');
+          await page.waitForFunction(()=>document.querySelectorAll('#preview .divide-y > div').length===1);
+          assert.ok((await members.first().textContent()).includes('赵六'));
+        }
+        if(route==='/zh-hans/templates/calendar/'){
+          const demo=page.locator('#preview');
+          await demo.getByRole('button',{name:'下个月'}).click();
+          await demo.getByRole('heading',{name:'2026年9月'}).waitFor();
+          await demo.getByRole('button',{name:'上个月'}).click();
+          await demo.getByRole('heading',{name:'2026年8月'}).waitFor();
+        }
+        if(route==='/zh-hans/templates/project-board/'){
+          const demo=page.locator('#preview');
+          await demo.getByRole('button',{name:'新建任务'}).click();
+          await demo.getByRole('textbox',{name:'任务标题'}).fill('模板测试任务');
+          await demo.getByRole('button',{name:'添加',exact:true}).click();
+          await demo.getByText('模板测试任务',{exact:true}).waitFor();
+          await demo.getByRole('radio',{name:'列表',exact:true}).click();
+          await demo.getByText('模板测试任务',{exact:true}).waitFor();
+        }
         if(route==='/zh-hans/components/sidebar/'){
           const side=page.locator('#preview').getByRole('complementary',{name:'应用侧边栏'});
           const icon=side.getByRole('button',{name:'概览'}).locator('svg');
