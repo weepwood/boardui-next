@@ -75,6 +75,11 @@ jobs:
           fi
         env:
           BROWSER: ${{ matrix.browser }}
+      - name: 初始态视觉基线候选及完整性检查
+        if: matrix.browser == 'chromium'
+        run: |
+          node scripts/capture-visual-baseline.mjs acceptance/visual-candidate
+          node scripts/verify-visual-candidate.mjs acceptance/visual-candidate
       - name: 图表与工作区触摸状态
         if: matrix.browser == 'chromium'
         run: node scripts/check-chart-workspace.mjs acceptance/chart-workspace

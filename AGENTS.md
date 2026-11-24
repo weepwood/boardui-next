@@ -178,3 +178,11 @@
 - 看板：同列编辑保持顺序，原生桌面跨列拖放复用同一移动函数，落点高亮与清理；键盘/触摸仍可通过编辑状态移动。不承诺列内排序或触摸拖放。状态点、进度语义、搜索清除、卡片标题换行与列表适配。
 - 聊天：参考固定上游公开 agent-chat、agent-chat-history、agent-chat-message 的独立面板和消息排版，按会话保留内存草稿、搜索历史、区分用户气泡与助手正文、保留多行文本，复用现有 Composer。不增加依赖、模型调用或持久化。
 - 最终 Edge 22/22 页面主题专项（含真实桌面跨列拖放、同列编辑、草稿隔离、RTL）、16/16 双主题双视口布局与操作、类型、单测、120 页导出和预算通过；首次图标检查失败已重新生成并通过。六张实际截图、报告 reference/evidence/board-chat-polish-20261124.json 和 scripts/audit-board-chat-visual.mjs。正式三浏览器、真机触摸、读屏和五维门禁待执行。
+
+### 正式质量收口与视觉候选完整性（2026-11-24）
+
+- #40 run 45424248511 全部成功，Squash 合并 acec795；Pages 45426148628 成功，线上 Edge 实际验证看板跨列拖拽、聊天草稿隔离与恢复。冻结新增功能。正式验收 workflow_dispatch 45426162052 对 acec795：build 通过（独立包、API、消费浏览器、安全审计、静态导出），三浏览器尚在执行。
+- 最新本地初始态 axe/布局专项 33/33；候选初始态 11 路由 × 双主题 × 双视口 44 PNG 全量留存 reference/evidence/screenshots/20261124-formal-candidate/manifest.json，记录源提交、浏览器版本、系统、尺寸及 SHA-256。独立固定范围校验拒绝缺失路由及损坏 PNG。新脚本加入正式 Chromium 流程；仍为 candidate-unreviewed，不是人工批准基线或像素差异门禁。复验历史截图可用 GITHUB_SHA=acec79535604686edbdc915411f7165a8e05342d node scripts/verify-visual-candidate.mjs reference/evidence/screenshots/20261124-formal-candidate。
+- 报告 reference/evidence/formal-preparation-20261124.json；新增三条 partial 证据，未改变任何 verification 状态。npm run test:release 仍阻止 104 项未闭合的正式发布；完整三浏览器、原版差异、逐组件五维、真机触摸和人工读屏不能由截图生成自动替代。
+
+- 全站扩展 Edge 审计完成 455/455（238 个双主题桌面 axe/布局、119 个 390px 浅色、98 个 320/2560px 重点页面；119 条 index.html 路由，区别于 120 个 HTML 导出文件）；无所检查的溢出、页面错误、axe 违规。报告 reference/evidence/formal-responsive-20261124.json；仅登记实际映射的部分无障碍证据，未改变五维门禁。

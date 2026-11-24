@@ -1,0 +1,1005 @@
+{
+  "sha": "acec79535604686edbdc915411f7165a8e05342d",
+  "scope": "正式验收准备，局部 Edge 页面采样与截图候选完整性，非人工批准基线",
+  "formalRun": 45426162052,
+  "formalBuild": "success",
+  "productionRun": 45426148628,
+  "production": "success",
+  "productionInteractions": [
+    "看板跨列拖拽",
+    "会话草稿隔离与恢复"
+  ],
+  "visualCandidate": "reference/evidence/screenshots/20261124-formal-candidate/manifest.json",
+  "visualCandidateCount": 44,
+  "integrityNegativeTests": [
+    "删减路由清单被拒绝",
+    "PNG 单字节篡改被拒绝"
+  ],
+  "recentLayoutAxe": [
+    {
+      "route": "/zh-hans/components/area-chart-card/",
+      "theme": "light",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "面积图 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        324,
+        40,
+        808,
+        2213
+      ],
+      "preview": [
+        324,
+        188,
+        808,
+        536
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/workspace/ai-chat/",
+      "theme": "light",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "AI 聊天独立工作区 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        0,
+        0,
+        1440,
+        1000
+      ],
+      "preview": [
+        16,
+        84,
+        1408,
+        760
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/workspace/project-board/",
+      "theme": "light",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "项目看板独立工作区 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        0,
+        0,
+        1440,
+        1000
+      ],
+      "preview": [
+        16,
+        84,
+        1408,
+        724
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/templates/project-board/",
+      "theme": "light",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "项目看板模板 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        284,
+        0,
+        1156,
+        1286
+      ],
+      "preview": [
+        324,
+        322,
+        1076,
+        724
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/templates/ai-chat/",
+      "theme": "light",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "AI 聊天模板 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        284,
+        0,
+        1156,
+        1322
+      ],
+      "preview": [
+        324,
+        322,
+        1076,
+        760
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/rtl/",
+      "theme": "light",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "BoardUI — 组件库",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        412,
+        40,
+        900,
+        918
+      ],
+      "preview": null,
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/modal/",
+      "theme": "light",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "弹窗 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        324,
+        40,
+        808,
+        1042
+      ],
+      "preview": [
+        324,
+        188,
+        808,
+        405
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/area-chart-card/",
+      "theme": "dark",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "面积图 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        324,
+        40,
+        808,
+        2213
+      ],
+      "preview": [
+        324,
+        188,
+        808,
+        536
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/workspace/project-board/",
+      "theme": "dark",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "项目看板独立工作区 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        0,
+        0,
+        1440,
+        1000
+      ],
+      "preview": [
+        16,
+        84,
+        1408,
+        724
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/workspace/ai-chat/",
+      "theme": "dark",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "AI 聊天独立工作区 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        0,
+        0,
+        1440,
+        1000
+      ],
+      "preview": [
+        16,
+        84,
+        1408,
+        760
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/templates/ai-chat/",
+      "theme": "dark",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "AI 聊天模板 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        284,
+        0,
+        1156,
+        1322
+      ],
+      "preview": [
+        324,
+        322,
+        1076,
+        760
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/templates/project-board/",
+      "theme": "dark",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "项目看板模板 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        284,
+        0,
+        1156,
+        1286
+      ],
+      "preview": [
+        324,
+        322,
+        1076,
+        724
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/modal/",
+      "theme": "dark",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "弹窗 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        324,
+        40,
+        808,
+        1042
+      ],
+      "preview": [
+        324,
+        188,
+        808,
+        405
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/rtl/",
+      "theme": "dark",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "BoardUI — 组件库",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        412,
+        40,
+        900,
+        918
+      ],
+      "preview": null,
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/area-chart-card/",
+      "theme": "light",
+      "profile": {
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 2
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "面积图 — BoardUI",
+      "width": 390,
+      "viewport": 390,
+      "main": [
+        24,
+        40,
+        342,
+        2442
+      ],
+      "preview": [
+        24,
+        188,
+        342,
+        559
+      ],
+      "dpr": 2,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/templates/project-board/",
+      "theme": "light",
+      "profile": {
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 2
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "项目看板模板 — BoardUI",
+      "width": 390,
+      "viewport": 390,
+      "main": [
+        0,
+        0,
+        390,
+        1373
+      ],
+      "preview": [
+        24,
+        344,
+        342,
+        769
+      ],
+      "dpr": 2,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/templates/ai-chat/",
+      "theme": "light",
+      "profile": {
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 2
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "AI 聊天模板 — BoardUI",
+      "width": 390,
+      "viewport": 390,
+      "main": [
+        0,
+        0,
+        390,
+        1369
+      ],
+      "preview": [
+        24,
+        366,
+        342,
+        743
+      ],
+      "dpr": 2,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/workspace/project-board/",
+      "theme": "light",
+      "profile": {
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 2
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "项目看板独立工作区 — BoardUI",
+      "width": 390,
+      "viewport": 390,
+      "main": [
+        0,
+        0,
+        390,
+        933
+      ],
+      "preview": [
+        12,
+        124,
+        366,
+        769
+      ],
+      "dpr": 2,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/workspace/ai-chat/",
+      "theme": "light",
+      "profile": {
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 2
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "AI 聊天独立工作区 — BoardUI",
+      "width": 390,
+      "viewport": 390,
+      "main": [
+        0,
+        0,
+        390,
+        907
+      ],
+      "preview": [
+        12,
+        124,
+        366,
+        743
+      ],
+      "dpr": 2,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/modal/",
+      "theme": "light",
+      "profile": {
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 2
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "弹窗 — BoardUI",
+      "width": 390,
+      "viewport": 390,
+      "main": [
+        24,
+        40,
+        342,
+        1262
+      ],
+      "preview": [
+        24,
+        210,
+        342,
+        399
+      ],
+      "dpr": 2,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/rtl/",
+      "theme": "light",
+      "profile": {
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 2
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "BoardUI — 组件库",
+      "width": 390,
+      "viewport": 390,
+      "main": [
+        24,
+        40,
+        342,
+        1026
+      ],
+      "preview": null,
+      "dpr": 2,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/area-chart-card/",
+      "theme": "light",
+      "profile": {
+        "width": 320,
+        "height": 720,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "面积图 — BoardUI",
+      "width": 320,
+      "viewport": 320,
+      "main": [
+        24,
+        40,
+        272,
+        2529
+      ],
+      "preview": [
+        24,
+        210,
+        272,
+        620
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/templates/project-board/",
+      "theme": "light",
+      "profile": {
+        "width": 320,
+        "height": 720,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "项目看板模板 — BoardUI",
+      "width": 320,
+      "viewport": 320,
+      "main": [
+        0,
+        0,
+        320,
+        1429
+      ],
+      "preview": [
+        24,
+        344,
+        272,
+        805
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/templates/ai-chat/",
+      "theme": "light",
+      "profile": {
+        "width": 320,
+        "height": 720,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "AI 聊天模板 — BoardUI",
+      "width": 320,
+      "viewport": 320,
+      "main": [
+        0,
+        0,
+        320,
+        1300
+      ],
+      "preview": [
+        24,
+        366,
+        272,
+        634
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/workspace/project-board/",
+      "theme": "light",
+      "profile": {
+        "width": 320,
+        "height": 720,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "项目看板独立工作区 — BoardUI",
+      "width": 320,
+      "viewport": 320,
+      "main": [
+        0,
+        0,
+        320,
+        969
+      ],
+      "preview": [
+        12,
+        124,
+        296,
+        805
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/workspace/ai-chat/",
+      "theme": "light",
+      "profile": {
+        "width": 320,
+        "height": 720,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "AI 聊天独立工作区 — BoardUI",
+      "width": 320,
+      "viewport": 320,
+      "main": [
+        0,
+        0,
+        320,
+        798
+      ],
+      "preview": [
+        12,
+        124,
+        296,
+        634
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/rtl/",
+      "theme": "light",
+      "profile": {
+        "width": 320,
+        "height": 720,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "BoardUI — 组件库",
+      "width": 320,
+      "viewport": 320,
+      "main": [
+        24,
+        40,
+        272,
+        1100
+      ],
+      "preview": null,
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/area-chart-card/",
+      "theme": "light",
+      "profile": {
+        "width": 2560,
+        "height": 1440,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "面积图 — BoardUI",
+      "width": 2560,
+      "viewport": 2560,
+      "main": [
+        862,
+        40,
+        852,
+        2213
+      ],
+      "preview": [
+        862,
+        188,
+        852,
+        536
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/templates/project-board/",
+      "theme": "light",
+      "profile": {
+        "width": 2560,
+        "height": 1440,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "项目看板模板 — BoardUI",
+      "width": 2560,
+      "viewport": 2560,
+      "main": [
+        822,
+        0,
+        1200,
+        1286
+      ],
+      "preview": [
+        862,
+        322,
+        1120,
+        724
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/templates/ai-chat/",
+      "theme": "light",
+      "profile": {
+        "width": 2560,
+        "height": 1440,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "AI 聊天模板 — BoardUI",
+      "width": 2560,
+      "viewport": 2560,
+      "main": [
+        822,
+        0,
+        1200,
+        1322
+      ],
+      "preview": [
+        862,
+        322,
+        1120,
+        760
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/workspace/project-board/",
+      "theme": "light",
+      "profile": {
+        "width": 2560,
+        "height": 1440,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "项目看板独立工作区 — BoardUI",
+      "width": 2560,
+      "viewport": 2560,
+      "main": [
+        0,
+        0,
+        2560,
+        1440
+      ],
+      "preview": [
+        440,
+        84,
+        1680,
+        724
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/workspace/ai-chat/",
+      "theme": "light",
+      "profile": {
+        "width": 2560,
+        "height": 1440,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "AI 聊天独立工作区 — BoardUI",
+      "width": 2560,
+      "viewport": 2560,
+      "main": [
+        0,
+        0,
+        2560,
+        1440
+      ],
+      "preview": [
+        440,
+        84,
+        1680,
+        760
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/rtl/",
+      "theme": "light",
+      "profile": {
+        "width": 2560,
+        "height": 1440,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "BoardUI — 组件库",
+      "width": 2560,
+      "viewport": 2560,
+      "main": [
+        972,
+        40,
+        900,
+        918
+      ],
+      "preview": null,
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    }
+  ],
+  "limitations": [
+    "正式三浏览器运行中，不纳入通过数",
+    "初始态候选不等同原版视觉还原或像素差异验收",
+    "页面 axe 采样不等同所有状态与人工读屏",
+    "104 条目五维门禁仍全部未闭合"
+  ]
+}

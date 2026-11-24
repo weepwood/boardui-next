@@ -1,0 +1,566 @@
+{
+  "schemaVersion": 1,
+  "sha": "acec79535604686edbdc915411f7165a8e05342d",
+  "status": "candidate-unreviewed",
+  "browser": "chromium",
+  "browserVersion": "158.0.4370.33",
+  "platform": "darwin",
+  "arch": "arm64",
+  "profiles": [
+    {
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "routes": [
+    "/",
+    "/zh-hans/components/button/",
+    "/zh-hans/components/input/",
+    "/zh-hans/components/select/",
+    "/zh-hans/components/modal/",
+    "/zh-hans/components/area-chart-card/",
+    "/workspace/dashboard/",
+    "/workspace/finance/",
+    "/workspace/project-board/",
+    "/workspace/ai-chat/",
+    "/zh-hans/rtl/"
+  ],
+  "rows": [
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "route": "/",
+      "status": "captured",
+      "file": "light-1440-_.png",
+      "bytes": 175557,
+      "sha256": "1d8dcf7ce45e640ebfd729cbd1de465f6fd0b95eed5f53bd6eac2810f32bf6c2"
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "route": "/zh-hans/components/button/",
+      "status": "captured",
+      "file": "light-1440-_zh-hans_components_button_.png",
+      "bytes": 126597,
+      "sha256": "d72dec4b9d708b8f2a34e6130054f7cfe1f7019e6bfce653f134452d67702170"
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "route": "/zh-hans/components/input/",
+      "status": "captured",
+      "file": "light-1440-_zh-hans_components_input_.png",
+      "bytes": 117250,
+      "sha256": "c2bed97fb9a44db2bf4349a3178c7c197d1bc2b5b088382a95c1231493b87acd"
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "route": "/zh-hans/components/select/",
+      "status": "captured",
+      "file": "light-1440-_zh-hans_components_select_.png",
+      "bytes": 129549,
+      "sha256": "41798ab7b0ced7ac816f8364f09491233e7e55d345a4db4478a361e8796e33ba"
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "route": "/zh-hans/components/modal/",
+      "status": "captured",
+      "file": "light-1440-_zh-hans_components_modal_.png",
+      "bytes": 127941,
+      "sha256": "9e394c5934aeda4ba04aa45e5db25d6d8ecb391af90b4aea20be835265b12c39"
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "route": "/zh-hans/components/area-chart-card/",
+      "status": "captured",
+      "file": "light-1440-_zh-hans_components_area-chart-card_.png",
+      "bytes": 144915,
+      "sha256": "51b7261e356fd48a804c7f2a3fd26d70fa80b785a8d3ecb986ba7f8d04ebf520"
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "route": "/workspace/dashboard/",
+      "status": "captured",
+      "file": "light-1440-_workspace_dashboard_.png",
+      "bytes": 95841,
+      "sha256": "cd7f9ec8218a6485b5cbe9f198ecca1a2a30643bf07262ec1b3fa175aa08c545"
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "route": "/workspace/finance/",
+      "status": "captured",
+      "file": "light-1440-_workspace_finance_.png",
+      "bytes": 88798,
+      "sha256": "1bb68f19ccad8b34772abd163066ae28fbb0ac2145473f638cbcb0071487c540"
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "route": "/workspace/project-board/",
+      "status": "captured",
+      "file": "light-1440-_workspace_project-board_.png",
+      "bytes": 113391,
+      "sha256": "a7710b4826ed4d1f660dadfcb2d56391b373d7463f7f7839ce8795cc5a543da8"
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "route": "/workspace/ai-chat/",
+      "status": "captured",
+      "file": "light-1440-_workspace_ai-chat_.png",
+      "bytes": 89390,
+      "sha256": "34740ea4494e1d1c1719e6d83b0aca750ffb52a5a8e6744327c4cee06c3fd8c3"
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "route": "/zh-hans/rtl/",
+      "status": "captured",
+      "file": "light-1440-_zh-hans_rtl_.png",
+      "bytes": 116785,
+      "sha256": "c67c48390dd74f2b9166c4023b0c17b46db8fc52b9d3b92a95897c67cf370a6e"
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "route": "/",
+      "status": "captured",
+      "file": "light-390-_.png",
+      "bytes": 62763,
+      "sha256": "1e2704185d4ad8b5f61dd87a7b892f8d23ab42eef5cfaf15c6d23dd4cfaf25f0"
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "route": "/zh-hans/components/button/",
+      "status": "captured",
+      "file": "light-390-_zh-hans_components_button_.png",
+      "bytes": 45564,
+      "sha256": "0a366bc5f4a39a61e1c32f725c21c934b080f7081edad912311c335c3cb8ba16"
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "route": "/zh-hans/components/input/",
+      "status": "captured",
+      "file": "light-390-_zh-hans_components_input_.png",
+      "bytes": 39514,
+      "sha256": "d33c73a0346b2db8c334ee3d7cb8b3ebb98a1ccd826a8f13a744ceea5571c7b8"
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "route": "/zh-hans/components/select/",
+      "status": "captured",
+      "file": "light-390-_zh-hans_components_select_.png",
+      "bytes": 45206,
+      "sha256": "da899dd5f4b18092c82be5a1997d2a76db14300693356806b45c5e3ca1f303cc"
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "route": "/zh-hans/components/modal/",
+      "status": "captured",
+      "file": "light-390-_zh-hans_components_modal_.png",
+      "bytes": 43322,
+      "sha256": "b0172a449b8a7efa5877972c0877cd263e96753d1aa43eeee5ebf957d5335147"
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "route": "/zh-hans/components/area-chart-card/",
+      "status": "captured",
+      "file": "light-390-_zh-hans_components_area-chart-card_.png",
+      "bytes": 41662,
+      "sha256": "0c3a3b73ced90c2b59dfa374b75ad10f1a2e67c2818e8b52a825a1a24a9d3c6b"
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "route": "/workspace/dashboard/",
+      "status": "captured",
+      "file": "light-390-_workspace_dashboard_.png",
+      "bytes": 39043,
+      "sha256": "ba4796600dd93fd5520a696ea5086706d1f74ce7073adf2be2a1e14d1e4e1d76"
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "route": "/workspace/finance/",
+      "status": "captured",
+      "file": "light-390-_workspace_finance_.png",
+      "bytes": 46991,
+      "sha256": "26998546d167b2a56e4ad42c72826ec16791c5fb82040638cfe292fe0b93b3cb"
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "route": "/workspace/project-board/",
+      "status": "captured",
+      "file": "light-390-_workspace_project-board_.png",
+      "bytes": 61860,
+      "sha256": "6df5ddb3f219cae31037e54eb7d05ee69b6bea2d2b9146471b97adb084f018ca"
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "route": "/workspace/ai-chat/",
+      "status": "captured",
+      "file": "light-390-_workspace_ai-chat_.png",
+      "bytes": 37472,
+      "sha256": "4fec1f97b66114a16b5b6c255c60e4fec7ec3f897a3e359db12d921b0caa4d70"
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "route": "/zh-hans/rtl/",
+      "status": "captured",
+      "file": "light-390-_zh-hans_rtl_.png",
+      "bytes": 50148,
+      "sha256": "5123b0893c01ad20ba09ab49c3a2913491a6e70208f3c0518e7fbdf4f47affaf"
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "route": "/",
+      "status": "captured",
+      "file": "dark-1440-_.png",
+      "bytes": 179199,
+      "sha256": "7a97fdfc174de06227e04004dad63112981f970e6d20542b7aba3c2c23dd189e"
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "route": "/zh-hans/components/button/",
+      "status": "captured",
+      "file": "dark-1440-_zh-hans_components_button_.png",
+      "bytes": 128307,
+      "sha256": "5a689b5ea1bf1049b2e2f8f8a43c11246352242172713cbfe89d101a68bbbb2d"
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "route": "/zh-hans/components/input/",
+      "status": "captured",
+      "file": "dark-1440-_zh-hans_components_input_.png",
+      "bytes": 118894,
+      "sha256": "e0bd19f97b15b9aaa3480c17f72747830b3be6c9f0b509002c2fd0514f7d6884"
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "route": "/zh-hans/components/select/",
+      "status": "captured",
+      "file": "dark-1440-_zh-hans_components_select_.png",
+      "bytes": 131321,
+      "sha256": "a2f713ee56005d4e6470f8f949f01dfd401874ed3d23a6bd396166d9874d9d97"
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "route": "/zh-hans/components/modal/",
+      "status": "captured",
+      "file": "dark-1440-_zh-hans_components_modal_.png",
+      "bytes": 129664,
+      "sha256": "d8cb73f012045e6f3b047f3dc463b500cb3d6ff1798bc7b7bdab892262672baa"
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "route": "/zh-hans/components/area-chart-card/",
+      "status": "captured",
+      "file": "dark-1440-_zh-hans_components_area-chart-card_.png",
+      "bytes": 146971,
+      "sha256": "9ab4c73e75a7c6a34a4c5b609216ebe7372fbad19135eab7f73e8499abdf1828"
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "route": "/workspace/dashboard/",
+      "status": "captured",
+      "file": "dark-1440-_workspace_dashboard_.png",
+      "bytes": 96787,
+      "sha256": "86fa4bc9f1f5cc18a5874a2a1c2c9b1d797b68d26e41a66ef0bda2fd88416366"
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "route": "/workspace/finance/",
+      "status": "captured",
+      "file": "dark-1440-_workspace_finance_.png",
+      "bytes": 89171,
+      "sha256": "413e9700fe7235664bab66de4baa400c3fe9b222ac0da01d6230f462742a79dc"
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "route": "/workspace/project-board/",
+      "status": "captured",
+      "file": "dark-1440-_workspace_project-board_.png",
+      "bytes": 112884,
+      "sha256": "f2b5d5b24d0eab000c0c6bb8e99f27ee5f7aebb1dcb43c253c2999f90c70b3d1"
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "route": "/workspace/ai-chat/",
+      "status": "captured",
+      "file": "dark-1440-_workspace_ai-chat_.png",
+      "bytes": 91282,
+      "sha256": "7f039700e849aa93067c53f9b212ed4ce8d604b252555456627a3fb2a07d294f"
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "route": "/zh-hans/rtl/",
+      "status": "captured",
+      "file": "dark-1440-_zh-hans_rtl_.png",
+      "bytes": 118140,
+      "sha256": "ed5c06594dbb4fe2ac9d155da9e9b0213f1fb8aed5b1626cdc65b76098837943"
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "route": "/",
+      "status": "captured",
+      "file": "dark-390-_.png",
+      "bytes": 64601,
+      "sha256": "970e3ffa8b937198294aebaaa38b7619c53187206aeae71ea7241ce0db55ac4c"
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "route": "/zh-hans/components/button/",
+      "status": "captured",
+      "file": "dark-390-_zh-hans_components_button_.png",
+      "bytes": 46271,
+      "sha256": "61f4e8e528b15629c09bab83d4d95fa06072b5b436e47b2c7d3c63e50bf0672d"
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "route": "/zh-hans/components/input/",
+      "status": "captured",
+      "file": "dark-390-_zh-hans_components_input_.png",
+      "bytes": 40001,
+      "sha256": "73963e302d80538ca8112f302daa6096fed117e394f63209d09d094a460ba588"
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "route": "/zh-hans/components/select/",
+      "status": "captured",
+      "file": "dark-390-_zh-hans_components_select_.png",
+      "bytes": 46123,
+      "sha256": "2dd562699f095a4992eb0f53ba456b7c0fc573e2ddc64ed871af670eb8f2a689"
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "route": "/zh-hans/components/modal/",
+      "status": "captured",
+      "file": "dark-390-_zh-hans_components_modal_.png",
+      "bytes": 44030,
+      "sha256": "30f884325f6301b436a705a12c3f184a819eaec6ac68f273aff202653ff79c2f"
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "route": "/zh-hans/components/area-chart-card/",
+      "status": "captured",
+      "file": "dark-390-_zh-hans_components_area-chart-card_.png",
+      "bytes": 42802,
+      "sha256": "d13ac490ed2efcec743c1950c1e08477314b5739ad7706cb32be40cdb7c883b0"
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "route": "/workspace/dashboard/",
+      "status": "captured",
+      "file": "dark-390-_workspace_dashboard_.png",
+      "bytes": 39560,
+      "sha256": "3627c09430651dac127084951789ad2edf38e1cec3aab19d5c1f198e7b1e9477"
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "route": "/workspace/finance/",
+      "status": "captured",
+      "file": "dark-390-_workspace_finance_.png",
+      "bytes": 47567,
+      "sha256": "7ce2ea8da2503311afc4674d9b0b8f4ff2505909c854340f95529ed8496ac7da"
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "route": "/workspace/project-board/",
+      "status": "captured",
+      "file": "dark-390-_workspace_project-board_.png",
+      "bytes": 61483,
+      "sha256": "027dc86734fb4399f972dbc83edaa37d561bd43112ad4d7cfec397d6fdfc5768"
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "route": "/workspace/ai-chat/",
+      "status": "captured",
+      "file": "dark-390-_workspace_ai-chat_.png",
+      "bytes": 38003,
+      "sha256": "9b6674677383f601daa5782b91f1f0dc54849089cfad7681ba3129aed5864acb"
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "route": "/zh-hans/rtl/",
+      "status": "captured",
+      "file": "dark-390-_zh-hans_rtl_.png",
+      "bytes": 50743,
+      "sha256": "6c854c6ddb49976a180bec96c3dbcdcbe379a7778ebae187acb90a34a4c0e16a"
+    }
+  ]
+}
