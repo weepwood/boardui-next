@@ -58,7 +58,7 @@ export function ComponentPage({
       </div>
 
       {install && (
-        <section id="installation" className="flex scroll-mt-14 flex-col gap-2 pt-10">
+        <section id="installation" className="docs-deferred-section flex scroll-mt-14 flex-col gap-2 pt-10">
           <h2 className="text-title-2-medium text-text-primary">本地构建与复用</h2>
           <p className="text-body-regular text-text-secondary">非官方预览包，尚未发布 npm 或安装 CLI。核心导出可用本地 tarball；其余组件保留在仓库应用源码中。详见安装指南。</p>
           <div className="overflow-hidden rounded-2lg border border-border-button-default bg-background-primary-default">
@@ -73,7 +73,7 @@ export function ComponentPage({
       )}
 
       {sections.map((s) => (
-        <section key={s.id} id={s.id} className="flex scroll-mt-14 flex-col gap-2 pt-10">
+        <section key={s.id} id={s.id} className="docs-deferred-section flex scroll-mt-14 flex-col gap-2 pt-10">
           <div className="flex flex-col gap-1">
             <h2 className="text-title-2-medium text-text-primary">{s.title}</h2>
             {s.description && (

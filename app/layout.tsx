@@ -1,6 +1,7 @@
 import { DirectionProvider } from "@/packages/react/direction";
 import type { Metadata } from "next";
 import "./globals.css";
+import { DocsShell } from "./components/docs/DocsShell";
 import { ThemeProvider } from "./components/ThemeProvider";
 
 export const metadata: Metadata = {
@@ -26,7 +27,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full antialiased">
-        <ThemeProvider><DirectionProvider locale="zh-CN">{children}</DirectionProvider></ThemeProvider>
+        <ThemeProvider><DirectionProvider locale="zh-CN"><DocsShell>{children}</DocsShell></DirectionProvider></ThemeProvider>
       </body>
     </html>
   );

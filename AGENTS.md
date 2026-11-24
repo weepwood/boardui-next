@@ -36,3 +36,10 @@
 - 全部 12 个应用模板及对应文档页已纳入统一视觉与响应式布局治理，使用容器查询；公共浮层、表单状态、应用组合组件同步改进。SettingsModal 已迁移 React Aria Modal。
 - 视觉证据：`reference/evidence/consolidated-visual-20261124.json`（本地 Edge，12 个模板 × 2 视口 × 2 主题，48 个组合的布局与运行检查；并非全站像素级验收）。专项浏览器 44 个页面组合与设置弹窗追加回归 7 个组合通过，独立包构建、SSR/类型消费验证、116 个静态页导出检查通过。
 - 合并前继续遵守快速检查／风险专项／正式发布三层 CI；不将未验收的上游复现标记为完整验收。后续优先根据实际截图和用户反馈修复具体视觉偏差，勿再把同类视觉调整拆散。
+
+### 导航性能专项（2026-11-24）
+
+- #22 集中视觉重构已合并，基线 main bffce37。本次修复用户反馈的侧栏切换卡顿：根布局持久 DocsShell、有限意图预取（40ms hover、键盘 focus、60s 窗口最多 8 个、节流网络跳过）、独立即时菜单反馈与超过 100ms 的内容占位、延迟挂载搜索、屏幕外文档区 content-visibility。
+- 实测两种按组件拆包候选及整树 React 状态驱动加载反馈出现性能退化，已撤销，不要盲目恢复。保留共享文档注册表；NavContext 只暴露稳定操作，轻量 DOM 反馈不决定 URL 或 aria-current；路由完成/超时清理。
+- 证据 reference/evidence/navigation-performance-20261124.json；生产静态导出 Edge 实测，模拟 120ms RTT 参数、750000 bytes/s、CPU 4 倍降速，6 次切换 750/262/278/227/432/114ms -> 533/166/133/98/337/96ms。单次序列，不宣称全网或所有设备结果；预取请求不计入点击后的资源列表。
+- 复现：构建 Pages 后安装测试所需 Playwright（按 CI 版本），执行 node scripts/benchmark-navigation.mjs /tmp/nav-result.json；本地可设 BROWSER_EXECUTABLE。浏览器回归增加受控慢请求、即时反馈、保持唯一实际激活、折叠状态和 DOM 实例、历史回退检查。

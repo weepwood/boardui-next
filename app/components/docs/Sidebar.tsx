@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useId, useRef, useState } from "react";
+import { memo, useEffect, useId, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { navigation, type NavItem } from "@/lib/navigation";
@@ -8,7 +8,9 @@ import { cn } from "@/lib/utils";
 import { Icon } from "../ui/Icon";
 import { ModalOverlay,Modal,Dialog } from "react-aria-components";
 import { CloseButton } from "@/packages/react/close-button";
-import { CommandSearch } from "./CommandSearch";
+import { useDocsNavigation } from "./navigation-context";
+import dynamic from "next/dynamic";
+const CommandSearch=dynamic(()=>import("./CommandSearch").then(m=>m.CommandSearch));
 
 /** 新徽标：原站 bg-badge-new-background px-1 py-px rounded-sm */
 function NewBadge() {
@@ -57,11 +59,20 @@ function TreeGuide({ active,last }: { active: boolean;last:boolean }) {
   );
 }
 
-function NavLink({ item,active,last }: { item: NavItem;active:boolean;last:boolean }) {
+const NavLink=memo(function NavLink({item,active,last,begin,warm}:{item:NavItem;active:boolean;last:boolean;begin:(href:string,label:string)=>void;warm:(href:string)=>void}){
+  const timer=useRef<ReturnType<typeof setTimeout>|null>(null);
+  const cancel=()=>{if(timer.current){clearTimeout(timer.current);timer.current=null}};
+  useEffect(()=>()=>{if(timer.current)clearTimeout(timer.current)},[]);
+
 
   return (
     <Link
       href={item.href} prefetch={false}
+      onPointerEnter={()=>{cancel();timer.current=setTimeout(()=>warm(item.href),40)}}
+      onPointerLeave={cancel}
+      onFocus={e=>{if(e.currentTarget.matches(":focus-visible"))warm(item.href)}}
+      onNavigate={()=>{cancel();begin(item.href,item.label)}}
+      data-doc-path={item.href}
       aria-current={active ? "page" : undefined}
       data-nav-selected={active?"true":undefined}
       className={cn(
@@ -82,19 +93,19 @@ function NavLink({ item,active,last }: { item: NavItem;active:boolean;last:boole
       )}
     </Link>
   );
-}
+});
 
 /** 可折叠分组：grid-template-rows 动画，与原站一致 */
-function NavGroupSection({
+const NavGroupSection=memo(function NavGroupSection({
   title,
   items,
   defaultOpen = true,
-  activeHref,
+  activeHref,begin,warm,
 }: {
   title: string;
   items: NavItem[];
   defaultOpen?: boolean;
-  activeHref?:string;
+  activeHref?:string;begin:(href:string,label:string)=>void;warm:(href:string)=>void;
 }) {
   const [open, setOpen] = useState(defaultOpen);
   const id=useId();
@@ -133,16 +144,17 @@ function NavGroupSection({
         <div className="min-h-0 overflow-hidden">
           <div className="relative flex flex-col gap-0.5">
             {items.map((item,index) => (
-              <NavLink key={item.href} item={item} active={activeHref===item.href} last={index===items.length-1}/>
+              <NavLink key={item.href} item={item} active={activeHref===item.href} last={index===items.length-1} begin={begin} warm={warm}/>
             ))}
           </div>
         </div>
       </div>
     </div>
   );
-}
+});
 
 export function Sidebar() {
+  const {begin,warm}=useDocsNavigation();
   const total = navigation.reduce((n, g) => n + g.items.length, 0);
   const [searchOpen, setSearchOpen] = useState(false);
   const [mobileOpen,setMobileOpen]=useState(false);
@@ -214,7 +226,7 @@ export function Sidebar() {
           显示 <span className="contents">{total}</span> 项
         </p>
         {navigation.map((group) => (
-          <NavGroupSection key={group.title} title={group.title} items={group.items} activeHref={activeHref}/>
+          <NavGroupSection key={group.title} title={group.title} items={group.items} activeHref={group.items.some(i=>i.href===activeHref)?activeHref:undefined} begin={mobile?(href,label)=>{setMobileOpen(false);begin(href,label)}:begin} warm={warm}/>
         ))}
       </nav>
   </>;
@@ -234,7 +246,7 @@ export function Sidebar() {
     <ModalOverlay isOpen={mobileOpen} onOpenChange={setMobileOpen} isDismissable className="fixed inset-0 z-[70] flex bg-black/30 dark:bg-black/60 lg:hidden">
       <Modal className="h-full w-[min(300px,calc(100vw-24px))] p-3 outline-none"><Dialog aria-label="文档导航" className="flex h-full min-h-0 flex-col gap-3 overflow-hidden rounded-3xl border border-border-button-white bg-background-secondary-default p-3 shadow-sidebar outline-none"><div className="flex justify-end"><CloseButton size="md" aria-label="关闭文档导航" onClick={()=>setMobileOpen(false)}/></div>{content(true)}</Dialog></Modal>
     </ModalOverlay>
-    <CommandSearch open={searchOpen} onClose={() => setSearchOpen(false)} />
+    {searchOpen&&<CommandSearch open={searchOpen} onClose={() => setSearchOpen(false)} />}
     </>
   );
 }

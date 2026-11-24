@@ -1,6 +1,6 @@
 export type ApiEntry={name:string;source:string;props:{name:string;type:string;optional:boolean;description:string}[]};
 export function ApiReference({entries}:{entries:ApiEntry[]}){
-  return <section id="api" className="flex scroll-mt-14 flex-col gap-3 pt-10">
+  return <section id="api" className="docs-deferred-section flex scroll-mt-14 flex-col gap-3 pt-10">
     <h2 className="text-title-2-medium text-text-primary">组件 API</h2>
     <p className="text-body-regular text-text-secondary">从独立包 TypeScript 源码生成。列出本地属性及常用继承属性；完整签名以类型声明为准。应用演示中的兼容接口可能不同。</p>
     {entries.map(entry=><details key={entry.name} className="rounded-2xl border border-border-component-detail-container bg-background-primary-default" open={entry===entries[0]}>
