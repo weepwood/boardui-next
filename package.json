@@ -8,7 +8,7 @@
     "start": "next start -p 3000",
     "typecheck": "tsc --noEmit",
     "test:registry": "node --test tests/registry.test.mjs",
-    "test": "npm run test:registry && npm run test:icons && npm run test:evidence && npm run test:tokens && npm run test:grid && npm run test:doc-factories",
+    "test": "npm run test:registry && npm run test:icons && npm run test:evidence && npm run test:tokens && npm run test:grid && npm run test:doc-factories && npm run test:chart-stacking",
     "build:pages": "node scripts/build-pages.mjs",
     "test:export": "node scripts/check-export.mjs",
     "test:browser": "node scripts/browser-check.mjs",
@@ -28,7 +28,8 @@
     "prebuild": "npm run fonts:prepare",
     "prebuild:pages": "npm run fonts:prepare",
     "test:grid": "node --test tests/grid-sort.test.mjs",
-    "test:doc-factories": "node --test tests/doc-factories.test.mjs"
+    "test:doc-factories": "node --test tests/doc-factories.test.mjs",
+    "test:chart-stacking": "node --test tests/chart-stacking.test.mjs"
   },
   "dependencies": {
     "@fontsource-variable/inter": "5.3.0",

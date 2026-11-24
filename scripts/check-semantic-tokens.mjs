@@ -21,3 +21,13 @@ for(const file of files.filter(p=>/\.tsx?$/.test(p))){
 }
 assert.deepEqual(bad,[],bad.join("\n"));
 console.log("Static semantic color utilities resolve to declared tokens or utilities.");
+
+// SVG stroke/fill and inline CSS use raw variables rather than utility names.
+const rawColors=new Set([...colors,...[...readFileSync("node_modules/tailwindcss/theme.css","utf8").matchAll(/--color-([\w-]+)\s*:/g)].map(m=>m[1])]);
+for(const file of files.filter(p=>/\.tsx?$/.test(p))){
+ const source=readFileSync(file,"utf8");
+ for(const m of source.matchAll(/var\(--color-([\w-]+)\)/g)){
+  if(!rawColors.has(m[1]))bad.push(file+" raw color token "+m[0]);
+ }
+}
+assert.deepEqual(bad,[],bad.join("\n"));

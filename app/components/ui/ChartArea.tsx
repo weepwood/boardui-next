@@ -13,6 +13,8 @@
  * 实现上用手写 SVG，但严格按 recharts 的布局比例，保证视觉一致。
  */
 
+import {useId} from "react";
+import {stackSeries} from "./chart-stacking";
 const PAD = { left: 36, right: 8, top: 9, bottom: 30 };
 
 export type Series = {
@@ -23,7 +25,7 @@ export type Series = {
 
 /** 取一个能被 (ticks-1) 整除的整齐上限 */
 function niceMax(values: number[], ticks = 4) {
-  const max = Math.max(...values, 1);
+  const max = values.reduce((max,value)=>Math.max(max,value),1);
   const seg = ticks - 1;
   const raw = max / seg;
   const mag = Math.pow(10, Math.floor(Math.log10(raw)));
@@ -60,15 +62,14 @@ export function ChartArea({
   showAxis?: boolean;
   smooth?: boolean;
 }) {
+  const uid=useId().replace(/[^a-zA-Z0-9_-]/g,"");
   const W = 544;
   const H = height;
   const innerW = W - PAD.left - PAD.right;
   const innerH = H - PAD.top - PAD.bottom;
 
   // 计算 Y 轴最大值（取所有系列之和，模拟叠加）
-  const sums = labels.map((_, i) =>
-    series.reduce((s, se) => s + (se.data[i] ?? 0), 0)
-  );
+  const {baselines:cumulative,total:sums}=stackSeries(series,labels.length);
   const max = niceMax(sums, yTicks);
 
   const xAt = (i: number) =>
@@ -77,7 +78,7 @@ export function ChartArea({
 
   // 生成路径（可平滑）
   const buildLine = (data: number[], cumulative: number[]) => {
-    const pts = data.map((v, i) => [xAt(i), yAt(cumulative[i] + v)] as const);
+    const pts = data.map((v, i) => [xAt(i), yAt((cumulative[i]??0) + v)] as const);
     if (!smooth || pts.length < 3) {
       return pts.map(([x, y], i) => `${i === 0 ? "M" : "L"}${x.toFixed(1)},${y.toFixed(1)}`).join(" ");
     }
@@ -97,13 +98,6 @@ export function ChartArea({
     return d;
   };
 
-  // 逐层累加，得到叠加基线
-  const cumulative = series.map((_, si) =>
-    labels.map((__, i) =>
-      series.slice(0, si).reduce((s, se) => s + (se.data[i] ?? 0), 0)
-    )
-  );
-
   return (
     <svg
       viewBox={`0 0 ${W} ${H}`}
@@ -114,7 +108,7 @@ export function ChartArea({
     >
       <defs>
         {series.map((s, i) => (
-          <linearGradient key={i} id={`grad-${s.name}-${i}`} x1="0" y1="0" x2="0" y2="1">
+          <linearGradient key={i} id={`grad-${uid}-${i}`} x1="0" y1="0" x2="0" y2="1">
             <stop offset="0%" stopColor={s.color} stopOpacity={fillOpacity} />
             <stop offset="100%" stopColor={s.color} stopOpacity={0.02} />
           </linearGradient>
@@ -132,7 +126,7 @@ export function ChartArea({
               x2={W - PAD.right}
               y1={y}
               y2={y}
-              stroke="var(--color-border-primary)"
+              stroke="var(--color-separator-border)"
               strokeWidth="1"
               strokeDasharray="3 3"
             />
@@ -164,14 +158,12 @@ export function ChartArea({
         .reverse()
         .map(({ s, i }) => {
           const line = buildLine(s.data, cumulative[i]);
-          const base = labels.map((_, k) => cumulative[i][k] + (s.data[k] ?? 0));
           const first = xAt(0);
           const lastX = xAt(labels.length - 1);
           const area = `${line} L${lastX.toFixed(1)},${yAt(cumulative[i][labels.length - 1] ?? 0).toFixed(1)} L${first.toFixed(1)},${yAt(cumulative[i][0] ?? 0).toFixed(1)} Z`;
-          void base;
           return (
             <g key={s.name}>
-              <path d={area} fill={`url(#grad-${s.name}-${i})`} />
+              <path d={area} fill={`url(#grad-${uid}-${i})`} />
               <path
                 d={line}
                 fill="none"

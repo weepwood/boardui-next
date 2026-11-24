@@ -11,8 +11,9 @@ const W = 100;
 const H = 40;
 
 function domain(values:number[]):[number,number] {
-  const finite=values.filter(Number.isFinite);
-  return finite.reduce(([lo,hi],v)=>[Math.min(lo,v),Math.max(hi,v)],[0,1] as [number,number]);
+  let lo=0,hi=1;
+  for(const v of values)if(Number.isFinite(v)){lo=Math.min(lo,v);hi=Math.max(hi,v);}
+  return [lo,hi];
 }
 function buildPath(values:number[],closed=false,bounds=domain(values)):string {
   if(!values.length)return "";
@@ -75,6 +76,7 @@ export function LineChart({
   series: { data: number[]; color: string }[];
   height?: number;
 }) {
+  const bounds=domain(series.flatMap(s=>s.data));
   return (
     <svg
       viewBox={`0 0 ${W} ${H}`}
@@ -85,7 +87,7 @@ export function LineChart({
       {series.map((s, i) => (
         <path
           key={i}
-          d={buildPath(s.data,false,domain(series.flatMap(s=>s.data)))}
+          d={buildPath(s.data,false,bounds)}
           fill="none"
           stroke={s.color}
           strokeWidth="2"
@@ -238,7 +240,7 @@ export function RadarChart({
             .map((_, i) => point(i, ratio).map((x) => x.toFixed(2)).join(","))
             .join(" ")}
           fill="none"
-          stroke="var(--color-border-primary)"
+          stroke="var(--color-separator-border)"
           strokeWidth="0.4"
         />
       ))}
@@ -252,7 +254,7 @@ export function RadarChart({
             y1={cy}
             x2={x}
             y2={y}
-            stroke="var(--color-border-primary)"
+            stroke="var(--color-separator-border)"
             strokeWidth="0.4"
           />
         );
@@ -411,7 +413,7 @@ export function FunnelChart({
               height="14"
               rx="7"
               fill="white"
-              stroke="var(--color-border-primary)"
+              stroke="var(--color-separator-border)"
               strokeWidth="0.25"
             />
             <text

@@ -20,16 +20,29 @@ for(const f of html) {
 assert.equal(missing.size,0,[...missing].slice(0,30).join('\n'));
 console.log('Static export: '+html.length+' HTML pages checked');
 
-// Template-only catalog must not pull the heavy interactive demo registry.
-// Budget includes unique script src resources referenced by the static HTML,
-// including polyfills; this is a conservative build-time gzip estimate.
-const templateHtml=readFileSync(join(root,'zh-hans/templates/index.html'),'utf8');
-const templateScripts=new Set([...templateHtml.matchAll(/<script[^>]*\bsrc="([^"]+\.js)"/g)].map(m=>m[1]));
-assert.ok(templateScripts.size>0,'missing template scripts');
-const scriptBytes=[...templateScripts].reduce((sum,url)=>{
+// A deterministic resource-size gate for every exported HTML page. Reuse
+// compressed sizes across routes; shared chunks are counted once per page.
+const gzipCache=new Map();
+function scriptSize(url){
   assert.ok(url.startsWith(base+'/'),'unexpected script URL '+url);
-  return sum+gzipSync(readFileSync(join(root,decodeURIComponent(url.slice(base.length))))).length;
-},0);
-const budget=350*1024;
-assert.ok(scriptBytes<=budget,'Template catalog JS budget exceeded: '+scriptBytes+' > '+budget+' bytes');
-console.log('Template catalog initial gzip JS budget: '+scriptBytes+' / '+budget+' bytes');
+  if(!gzipCache.has(url))gzipCache.set(url,gzipSync(readFileSync(join(root,decodeURIComponent(url.slice(base.length))))).length);
+  return gzipCache.get(url);
+}
+const metrics=html.map(file=>{
+  const source=readFileSync(file,'utf8');
+  const scripts=new Set([...source.matchAll(/<script[^>]*\bsrc="([^"]+\.js)"/g)].map(m=>m[1]));
+  assert.ok(scripts.size>0,'missing scripts: '+file);
+  return {file,js:[...scripts].reduce((sum,url)=>sum+scriptSize(url),0),html:gzipSync(source).length};
+});
+const jsBudget=550*1024,htmlBudget=40*1024;
+for(const row of metrics){
+  assert.ok(row.js<=jsBudget,row.file+' initial JS '+row.js+' > '+jsBudget+' bytes');
+  assert.ok(row.html<=htmlBudget,row.file+' HTML '+row.html+' > '+htmlBudget+' bytes');
+}
+const template=metrics.find(row=>row.file===join(root,'zh-hans/templates/index.html'));
+assert.ok(template,'missing template catalog');
+const templateBudget=350*1024;
+assert.ok(template.js<=templateBudget,'Template catalog JS budget exceeded: '+template.js+' > '+templateBudget+' bytes');
+console.log('Template catalog initial gzip JS budget: '+template.js+' / '+templateBudget+' bytes');
+const peakJs=Math.max(...metrics.map(row=>row.js)),peakHtml=Math.max(...metrics.map(row=>row.html));
+console.log('All '+metrics.length+' HTML pages: peak gzip JS '+peakJs+' / '+jsBudget+' bytes; peak gzip HTML '+peakHtml+' / '+htmlBudget+' bytes');

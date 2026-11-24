@@ -189,6 +189,13 @@ try{
         }
         assert.deepEqual(await page.locator('[data-icon-fallback="true"]').evaluateAll(es=>es.map(e=>e.getAttribute('data-icon'))),[],'unknown SVG name on '+route);
         if(route==='/zh-hans/components/button/'){
+          const toc=page.getByRole('navigation',{name:'在此页面上'});
+          await toc.getByRole('link',{name:'组件 API',exact:true}).click();
+          await page.waitForFunction(()=>location.hash==='#api');
+          await page.waitForFunction(()=>document.querySelector('nav[aria-label="在此页面上"] a[href="#api"]')?.getAttribute('aria-current')==='location');
+          await toc.getByRole('link',{name:'预览',exact:true}).click();
+          await page.waitForFunction(()=>location.hash==='#preview');
+          await page.waitForFunction(()=>document.querySelector('nav[aria-label="在此页面上"] a[href="#preview"]')?.getAttribute('aria-current')==='location');
           const api=page.locator('#api');
           await api.getByRole('heading',{name:'组件 API'}).waitFor();
           assert.ok(await api.getByRole('table',{name:'Button 属性'}).count());
@@ -219,6 +226,8 @@ try{
           await arrow.evaluate(e=>e.closest('[dir]').dir='rtl');
           await page.waitForFunction(e=>getComputedStyle(e).rotate.includes('180deg'),await arrow.elementHandle());
           await arrow.evaluate(e=>e.closest('[dir]').dir='ltr');
+          await page.evaluate(()=>window.scrollTo({top:0,behavior:"instant"}));
+          await page.waitForFunction(()=>window.scrollY===0);
           const geometry=await page.evaluate(()=>{const r=s=>{const e=document.querySelector(s);const b=e.getBoundingClientRect();return [b.x,b.y,b.width,b.height].map(Math.round)};return {main:r('main'),heading:r('main h1'),sidebar:r('aside'),toc:r('main+aside'),canvas:r('#preview > div > div:last-child'),shadow:getComputedStyle(document.documentElement).getPropertyValue('--shadow-sidebar').trim(),font:document.fonts.check('14px "Noto Sans SC Variable"','按钮')}});
           const near=(actual,expected,tolerance=12)=>assert.ok(actual.every((n,i)=>Math.abs(n-expected[i])<=tolerance), JSON.stringify({actual,expected,tolerance}));
           near(geometry.main.slice(0,3),[324,40,808]);
@@ -439,6 +448,28 @@ try{
         }
         if(route==='/zh-hans/components/breadcrumb/'){
           assert.equal(await page.locator('#preview [aria-current=page]').textContent(),'面包屑导航');
+        }
+        if(['/zh-hans/components/composer-loader/','/zh-hans/components/spinner/','/zh-hans/components/skeleton/'].includes(route)){
+          const preview=page.locator('#preview');
+          const isLoader=route.includes('composer-loader'),isSkeleton=route.includes('skeleton');
+          const selector=isLoader?'.bui-composer-loader-rect':isSkeleton?'[data-skeleton]':'[data-spinner]';
+          const target=preview.locator(selector).first();
+          await page.emulateMedia({reducedMotion:'no-preference'});
+          await preview.scrollIntoViewIfNeeded();
+          await target.waitFor();
+          const state=()=>target.evaluate((el,pseudo)=>getComputedStyle(el,pseudo?'::before':null).animationPlayState,isSkeleton);
+          await page.waitForFunction(({selector,pseudo})=>getComputedStyle(document.querySelector('#preview '+selector),pseudo?'::before':null).animationPlayState==='running',{selector,pseudo:isSkeleton});
+          await page.evaluate(()=>window.scrollTo(0,document.documentElement.scrollHeight));
+          // Short pages can end before their preview leaves the viewport. Add a
+          // temporary spacer only in the test, not production content.
+          await page.evaluate(()=>{const spacer=document.createElement('div');spacer.id='motion-test-spacer';spacer.style.height='2000px';document.body.append(spacer);window.scrollTo(0,document.documentElement.scrollHeight)});
+          await page.waitForFunction(({selector,pseudo})=>getComputedStyle(document.querySelector('#preview '+selector),pseudo?'::before':null).animationPlayState==='paused',{selector,pseudo:isSkeleton});
+          await preview.scrollIntoViewIfNeeded();
+          await page.waitForFunction(({selector,pseudo})=>getComputedStyle(document.querySelector('#preview '+selector),pseudo?'::before':null).animationPlayState==='running',{selector,pseudo:isSkeleton});
+          assert.equal(await state(),'running');
+          await page.emulateMedia({reducedMotion:'reduce'});
+          assert.equal(await target.evaluate((el,pseudo)=>getComputedStyle(el,pseudo?'::before':null).animationName,isSkeleton),'none');
+          await page.evaluate(()=>document.getElementById('motion-test-spacer')?.remove());
         }
         if(route==='/zh-hans/components/agent-thinking/'){
           const preview=page.locator('#preview');

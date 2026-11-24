@@ -5,6 +5,8 @@
 
 import { useEffect, useId, useRef, useState } from "react";
 import type { CSSProperties, ReactNode } from "react";
+import { useVisibleActivity } from "./use-visible-activity";
+import { observeSize } from "./observe-size";
 import { cx } from "./cx";
 
 /**
@@ -110,16 +112,18 @@ export function ComposerLoader({
 
   const gradientId = `bui-cl-${useId().replace(/[^a-zA-Z0-9]/g, "")}`;
   const clipRef = useRef<HTMLSpanElement>(null);
+  const visible=useVisibleActivity(clipRef);
   const [box, setBox] = useState({ w: 640, h: 52 });
 
   useEffect(() => {
     const el = clipRef.current;
     if (!el) return;
-    const observer = new ResizeObserver(() =>
-      setBox({ w: Math.max(1, el.clientWidth), h: Math.max(1, el.clientHeight) }),
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
+    const measure=()=>{
+      const w=Math.max(1,el.clientWidth),h=Math.max(1,el.clientHeight);
+      setBox(prev=>prev.w===w&&prev.h===h?prev:{w,h});
+    };
+    measure();
+    return observeSize(el,measure);
   }, []);
 
   const [c0, c1, c2, c3] = colors;
@@ -215,6 +219,7 @@ export function ComposerLoader({
 
       <span
         ref={clipRef}
+        data-motion-active={active&&visible?"true":"false"}
         aria-hidden
         className="pointer-events-none absolute inset-0 overflow-hidden"
         style={{
