@@ -61,3 +61,14 @@ export { StatusDot } from "./status-dot";
 export { Pagination } from "./pagination";
 export { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell } from "./table";
 export { TreeView, TreeViewItem } from "./tree-view";
+
+export { AgentThinking } from "./agent-thinking";
+export type { AgentThinkingProps,AgentThinkingVariant,AgentThinkingTone } from "./agent-thinking";
+export { ComposerLoader } from "./composer-loader";
+export type { ComposerLoaderProps } from "./composer-loader";
+export { AgentComposer } from "./agent-composer";
+export type { AgentComposerProps } from "./agent-composer";
+export { Breadcrumb,BreadcrumbItem } from "./breadcrumb";
+export { NavigationItem } from "./navigation";
+export { Toolbar } from "./toolbar";
+export type { ToolbarAction } from "./toolbar";

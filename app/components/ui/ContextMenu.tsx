@@ -1,112 +1,15 @@
 "use client";
-
-import { useEffect, useRef, useState } from "react";
-import { cn } from "@/lib/utils";
+import { useEffect,useLayoutEffect,useRef,useState } from "react";
+import { createPortal } from "react-dom";
+import { cx } from "@/packages/react/cx";
+import { MENU_POPOVER_SURFACE,MENU_ITEM } from "@/packages/react/menu-styles";
 import { Icon } from "./Icon";
-
-export type ContextMenuItem = {
-  id: string;
-  label: string;
-  icon?: string;
-  shortcut?: string;
-  danger?: boolean;
-  dividerBefore?: boolean;
-  onSelect?: () => void;
-};
-
-/**
- * 右键菜单：在指定区域内右键唤出，点击外部/按 Esc 关闭。
- * 位置自动避让视口边界。
- */
-export function ContextMenu({
-  items,
-  children,
-  className,
-}: {
-  items: ContextMenuItem[];
-  children: React.ReactNode;
-  className?: string;
-}) {
-  const [pos, setPos] = useState<{ x: number; y: number } | null>(null);
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!pos) return;
-    const close = (e: MouseEvent) => {
-      if (ref.current && !ref.current.contains(e.target as Node)) setPos(null);
-    };
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setPos(null);
-    };
-    document.addEventListener("mousedown", close);
-    document.addEventListener("keydown", onKey);
-    return () => {
-      document.removeEventListener("mousedown", close);
-      document.removeEventListener("keydown", onKey);
-    };
-  }, [pos]);
-
-  return (
-    <div
-      className={cn("relative", className)}
-      onContextMenu={(e) => {
-        e.preventDefault();
-        const w = 200;
-        const h = items.length * 32 + 16;
-        const x = Math.min(e.clientX, window.innerWidth - w - 8);
-        const y = Math.min(e.clientY, window.innerHeight - h - 8);
-        setPos({ x, y });
-      }}
-    >
-      {children}
-
-      {pos && (
-        <div
-          ref={ref}
-          role="menu"
-          style={{ left: pos.x, top: pos.y }}
-          className={cn(
-            "fixed z-[70] w-[200px] rounded-2lg border border-border-button-default",
-            "bg-background-primary-default p-1.5 shadow-lg",
-            "animate-[popover-in_160ms_cubic-bezier(0.22,1,0.36,1)]"
-          )}
-        >
-          {items.map((it) => (
-            <div key={it.id}>
-              {it.dividerBefore && <div className="my-1 h-px bg-border-primary" />}
-              <button
-                type="button"
-                role="menuitem"
-                onClick={() => {
-                  it.onSelect?.();
-                  setPos(null);
-                }}
-                className={cn(
-                  "flex w-full cursor-pointer items-center gap-2 rounded-md px-2 py-1.5 text-start",
-                  "text-body-2-medium transition-colors duration-100 ease-out",
-                  it.danger
-                    ? "text-red-600 hover:bg-red-50 dark:hover:bg-red-950/40"
-                    : "text-text-primary hover:bg-background-secondary-hover"
-                )}
-              >
-                {it.icon && (
-                  <Icon
-                    name={it.icon}
-                    className={cn(
-                      "size-3.5 shrink-0",
-                      it.danger ? "text-red-500" : "text-foreground-icon-secondary"
-                    )}
-                  />
-                )}
-                <span className="flex-1">{it.label}</span>
-                {it.shortcut && (
-                  <kbd className="text-[10px] text-text-tertiary">{it.shortcut}</kbd>
-                )}
-              </button>
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
-  );
+export type ContextMenuItem={id:string;label:string;icon?:string;shortcut?:string;danger?:boolean;dividerBefore?:boolean;onSelect?:()=>void;disabled?:boolean};
+export function ContextMenu({items,children,className}:{items:ContextMenuItem[];children:React.ReactNode;className?:string}){
+ const [pos,setPos]=useState<{x:number;y:number}|null>(null),menu=useRef<HTMLDivElement>(null),trigger=useRef<HTMLDivElement>(null),returnTo=useRef<HTMLElement|null>(null);
+ const close=(restore=true)=>{setPos(null);if(restore)returnTo.current?.focus()};
+ const show=(x:number,y:number)=>{returnTo.current=document.activeElement instanceof HTMLElement&&trigger.current?.contains(document.activeElement)?document.activeElement:trigger.current;setPos({x,y})};
+ useLayoutEffect(()=>{if(!pos||!menu.current)return;const el=menu.current;const r=el.getBoundingClientRect();el.style.left=Math.max(8,Math.min(pos.x,window.innerWidth-r.width-8))+"px";el.style.top=Math.max(8,Math.min(pos.y,window.innerHeight-r.height-8))+"px";el.querySelector<HTMLElement>('button:not(:disabled)')?.focus()},[pos]);
+ useEffect(()=>{if(!pos)return;const outside=(e:PointerEvent)=>{if(!menu.current?.contains(e.target as Node))close(false)};const dismiss=()=>close(false);document.addEventListener("pointerdown",outside,true);window.addEventListener("resize",dismiss);window.addEventListener("scroll",dismiss,true);return()=>{document.removeEventListener("pointerdown",outside,true);window.removeEventListener("resize",dismiss);window.removeEventListener("scroll",dismiss,true)}},[pos]);
+ return <div ref={trigger} tabIndex={0} aria-label="右键菜单区域" aria-haspopup="menu" aria-expanded={!!pos} className={cx("relative outline-none focus-visible:ring-2 focus-visible:ring-border-focus-ring",className)} onContextMenu={e=>{e.preventDefault();show(e.clientX,e.clientY)}} onKeyDown={e=>{if(e.key==="ContextMenu"||(e.shiftKey&&e.key==="F10")){e.preventDefault();const r=e.currentTarget.getBoundingClientRect();show(r.left,r.bottom)}}}>{children}{pos&&createPortal(<div ref={menu} role="menu" aria-label="快捷操作" style={{position:"fixed",left:pos.x,top:pos.y}} className={cx(MENU_POPOVER_SURFACE,"z-[90] w-[220px] max-h-[calc(100dvh-16px)] animate-[popover-in_160ms_cubic-bezier(0.22,1,0.36,1)] motion-reduce:animate-none")} onKeyDown={e=>{if(e.key==="Escape"||e.key==="Tab"){e.preventDefault();close();return}const buttons=Array.from(menu.current?.querySelectorAll<HTMLButtonElement>("button:not(:disabled)")??[]);if(!buttons.length)return;const i=buttons.indexOf(document.activeElement as HTMLButtonElement);if(["ArrowDown","ArrowUp","Home","End"].includes(e.key)){e.preventDefault();buttons[e.key==="Home"?0:e.key==="End"?buttons.length-1:(i+(e.key==="ArrowDown"?1:-1)+buttons.length)%buttons.length]?.focus()}}}>{items.map(it=><div role="none" key={it.id}>{it.dividerBefore&&<div role="separator" className="my-1 h-px bg-separator-border"/>}<button type="button" role="menuitem" tabIndex={-1} disabled={it.disabled} onClick={()=>{it.onSelect?.();close()}} className={cx(MENU_ITEM,"text-body-medium hover:bg-dropdown-item-hover-background focus:bg-dropdown-item-hover-background disabled:opacity-40",it.danger&&"text-text-error-primary")}>{it.icon&&<Icon name={it.icon} className="size-5"/>}<span className="flex-1">{it.label}</span>{it.shortcut&&<kbd className="text-caption-1-regular text-text-tertiary">{it.shortcut}</kbd>}</button></div>)}</div>,document.body)}</div>;
 }

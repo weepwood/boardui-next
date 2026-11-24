@@ -100,6 +100,57 @@ try{
           await link.waitFor({state:'visible'});
           assert.ok((await link.getAttribute('href')).startsWith(base+'/'));
         }
+        if(route==='/zh-hans/components/sidebar/'){
+          const side=page.locator('#preview').getByRole('complementary',{name:'应用侧边栏'});
+          const icon=side.getByRole('button',{name:'概览'}).locator('svg');
+          const offset=await icon.evaluate(e=>e.getBoundingClientRect().x-e.closest('aside').getBoundingClientRect().x);
+          await side.getByRole('button',{name:'收起侧边栏'}).click();
+          await page.waitForFunction(e=>Math.abs(e.getBoundingClientRect().width-60)<1,await side.elementHandle());
+          assert.ok(Math.abs(await icon.evaluate(e=>e.getBoundingClientRect().x-e.closest('aside').getBoundingClientRect().x)-offset)<2);
+          await side.getByRole('button',{name:'文档',exact:true}).click();
+          await side.getByRole('button',{name:'按钮',exact:true}).click();
+          assert.equal(await side.getByRole('button',{name:'按钮',exact:true}).getAttribute('aria-current'),'page');
+        }
+        if(route==='/zh-hans/components/command-palette/'){
+          const trigger=page.getByRole('button',{name:'打开命令面板'});
+          await trigger.click();
+          const dialog=page.getByRole('dialog',{name:'命令面板'});
+          const input=dialog.getByRole('combobox',{name:'搜索命令'});
+          await input.fill('设置');await input.press('Enter');
+          await dialog.waitFor({state:'hidden'});
+          await page.getByText('上次执行：打开设置',{exact:true}).waitFor();
+          await page.waitForFunction(e=>document.activeElement===e,await trigger.elementHandle());
+        }
+        if(route==='/zh-hans/components/context-menu/'){
+          const target=page.getByLabel('右键菜单区域');
+          await target.press('Shift+F10');
+          const menu=page.getByRole('menu',{name:'快捷操作'});
+          await menu.waitFor();
+          await menu.getByRole('menuitem',{name:/复制/}).press('ArrowDown');
+          await menu.getByRole('menuitem',{name:/粘贴/}).press('Enter');
+          await menu.waitFor({state:'hidden'});
+          await page.getByText('上次操作：粘贴',{exact:true}).waitFor();
+        }
+        if(route==='/zh-hans/components/composer/'){
+          const demo=page.locator('#preview'),field=demo.getByRole('textbox',{name:'消息'});
+          assert.ok(await demo.getByRole('button',{name:'发送',exact:true}).isDisabled());
+          await field.fill('测试消息');await field.press('Shift+Enter');assert.ok((await field.inputValue()).includes('\n'));
+          await field.press('Enter');await demo.getByText('已发送：测试消息',{exact:false}).waitFor();
+          assert.equal(await field.inputValue(),'');
+          const toolbar=page.getByRole('toolbar',{name:'编辑工具栏'});
+          await toolbar.getByRole('button',{name:'撤销'}).press('ArrowRight');
+          await toolbar.getByRole('button',{name:'重做'}).press('Enter');
+          await page.getByText('操作：重做',{exact:true}).waitFor();
+        }
+        if(route==='/zh-hans/components/breadcrumb/'){
+          assert.equal(await page.locator('#preview [aria-current=page]').textContent(),'面包屑导航');
+        }
+        if(route==='/zh-hans/components/agent-thinking/'){
+          assert.equal(await page.locator('#preview').getByRole('status').count(),4);
+        }
+        if(route==='/zh-hans/components/agent-progress/'){
+          assert.equal(await page.locator('#preview [aria-current=step]').count(),1);
+        }
         if(route==='/zh-hans/components/table/'){
           const table=page.locator('#preview').getByRole('grid',{name:'成员列表'});
           assert.equal(await table.getByRole('row').count(),4);

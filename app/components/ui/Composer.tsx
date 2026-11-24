@@ -1,96 +1,16 @@
 "use client";
-
-import { useState } from "react";
-import { cn } from "@/lib/utils";
-import { Icon } from "./Icon";
-
-/**
- * 对话输入框：多行自适应 + 工具按钮 + 发送。
- * 与 composer 系列配合使用。
- */
-export function Composer({
-  placeholder = "输入消息…",
-  value,
-  onChange,
-  onSend,
-  tools = true,
-  className,
-}: {
-  placeholder?: string;
-  value?: string;
-  onChange?: (v: string) => void;
-  onSend?: (v: string) => void;
-  tools?: boolean;
-  className?: string;
-}) {
-  const [inner, setInner] = useState("");
-  const v = value ?? inner;
-
-  const set = (next: string) => {
-    if (value === undefined) setInner(next);
-    onChange?.(next);
-  };
-
-  return (
-    <div
-      className={cn(
-        "flex w-full flex-col gap-1.5 rounded-2xl border border-border-button-default",
-        "bg-background-primary-default p-2 shadow-xs",
-        "transition-[border-color,box-shadow] duration-150 ease-out",
-        "focus-within:border-border-button-hover focus-within:shadow-sm",
-        className
-      )}
-    >
-      <textarea
-        value={v}
-        onChange={(e) => set(e.target.value)}
-        onKeyDown={(e) => {
-          if (e.key === "Enter" && !e.shiftKey) {
-            e.preventDefault();
-            onSend?.(v);
-          }
-        }}
-        placeholder={placeholder}
-        rows={2}
-        className="max-h-40 min-h-[36px] resize-none bg-transparent px-1 text-body-medium text-text-primary outline-none placeholder:text-text-placeholder"
-      />
-      <div className="flex items-center justify-between gap-2">
-        {tools ? (
-          <div className="flex items-center gap-0.5">
-            {[
-              { icon: "attachment-2", label: "附件" },
-              { icon: "image-line", label: "图片" },
-              { icon: "mic-line", label: "语音" },
-            ].map((t) => (
-              <button
-                key={t.icon}
-                type="button"
-                aria-label={t.label}
-                className="flex size-7 cursor-pointer items-center justify-center rounded-lg text-foreground-icon-secondary hover:bg-background-secondary-hover hover:text-text-primary"
-              >
-                <Icon name={t.icon} className="size-4" />
-              </button>
-            ))}
-          </div>
-        ) : (
-          <span />
-        )}
-        <button
-          type="button"
-          onClick={() => onSend?.(v)}
-          disabled={!v.trim()}
-          aria-label="发送"
-          className={cn(
-            "flex size-7 shrink-0 cursor-pointer items-center justify-center rounded-lg",
-            "transition-[background-color,scale] duration-150 ease-out active:scale-95",
-            v.trim()
-              ? "bg-accent-500 text-white hover:bg-accent-600"
-              : "bg-background-tertiary-default text-text-tertiary"
-          )}
-        >
-          <Icon name="arrow-up-line" className="size-4" />
-        </button>
-      </div>
-    </div>
-  );
+import { useId,useLayoutEffect,useRef,useState } from "react";
+import { RiAttachment2,RiImageLine,RiMicLine,RiArrowUpLine,RiStopFill } from "@remixicon/react";
+import { ComposerLoader } from "@/packages/react/composer-loader";
+import { cx } from "@/packages/react/cx";
+export function Composer({placeholder="输入消息…",value,onChange,onSend,tools=true,className,busy=false,onStop,onAttach,onImage,onVoice}:{placeholder?:string;value?:string;onChange?:(v:string)=>void;onSend?:(v:string)=>void;tools?:boolean;className?:string;busy?:boolean;onStop?:()=>void;onAttach?:()=>void;onImage?:()=>void;onVoice?:()=>void}){
+ const id=useId(),ref=useRef<HTMLTextAreaElement>(null),[inner,setInner]=useState("");const v=value??inner;
+ const set=(next:string)=>{if(value===undefined)setInner(next);onChange?.(next)};
+ const send=()=>{if(busy||!v.trim()||!onSend)return;onSend(v);if(value===undefined)setInner("")};
+ useLayoutEffect(()=>{const e=ref.current;if(!e)return;e.style.height="0px";const h=Math.max(36,Math.min(e.scrollHeight,160));e.style.height=h+"px";e.style.overflowY=e.scrollHeight>h?"auto":"hidden"},[v]);
+ const buttons=[{Icon:RiAttachment2,label:"附件",action:onAttach},{Icon:RiImageLine,label:"图片",action:onImage},{Icon:RiMicLine,label:"语音",action:onVoice}];
+ return <ComposerLoader active={busy} radius={24} className={cx("w-full",className)}><form onSubmit={e=>{e.preventDefault();send()}} className={cx("flex w-full flex-col gap-2 rounded-3xl border border-border-button-default p-2",busy?"bg-transparent":"bg-background-primary-default shadow-xs")}>
+ <label htmlFor={id} className="sr-only">消息</label><textarea id={id} ref={ref} value={v} onChange={e=>set(e.target.value)} onKeyDown={e=>{if(e.key==="Enter"&&!e.shiftKey&&!e.nativeEvent.isComposing){e.preventDefault();send()}}} placeholder={placeholder} rows={2} className="block w-full resize-none bg-transparent px-2 py-0 text-body-regular text-text-primary outline-none focus-visible:outline-none transition-none placeholder:text-text-tertiary"/>
+ <div className="flex items-center justify-between gap-2">{tools?<div className="flex gap-1">{buttons.map(({Icon,label,action})=><button key={label} type="button" aria-label={label} disabled={!action} onClick={action} className="flex size-9 items-center justify-center rounded-full bg-ai-chat-composer-add-background text-foreground-icon-secondary transition-colors duration-150 hover:bg-ai-chat-composer-add-hover-background disabled:cursor-not-allowed disabled:opacity-40 focus-visible:ring-2 focus-visible:ring-border-focus-ring"><Icon className="size-5" aria-hidden/></button>)}</div>:<span/>}
+ {busy?<button type="button" aria-label="停止生成" onClick={onStop} disabled={!onStop} className="flex size-9 items-center justify-center rounded-full bg-background-secondary-default text-foreground-icon-secondary hover:bg-background-secondary-hover"><RiStopFill className="size-5" aria-hidden/></button>:<button type="submit" aria-label="发送" disabled={!v.trim()||!onSend} className="button-press-motion flex size-9 items-center justify-center rounded-full bg-button-primary text-white transition-opacity disabled:cursor-not-allowed disabled:opacity-40"><RiArrowUpLine className="size-5" aria-hidden/></button>}</div></form></ComposerLoader>;
 }

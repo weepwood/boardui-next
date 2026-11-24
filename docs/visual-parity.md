@@ -45,3 +45,7 @@ DatePicker、Slider、InputOtp 直接移植公开 MIT 实现；DateCalendar 复�
 ### 第六批：数据展示与文件选择
 
 移植 Avatar、Badge、Chip、StatusDot、Pagination、Table、TreeView 的固定上游 MIT 源及表格 CSS；DataGrid 与 DataTable 共用实现，支持数字自然排序、可控选择、行号清理。Progress/Meter 共享轨道与填充，Meter 提供语义值。FileUpload 保留多文件选择接口，接入原版配色，验证扩展名/MIME 与大小、重复项及移除回调；未集成上传服务，不显示伪造上传完成。原版进度上传演示未直接移植。
+
+### 第七批：应用级组合组件
+
+移植 Breadcrumb、AgentThinking、ComposerLoader、免费 AgentComposer 的固定 MIT 上游源码；Pro Composer 不复制，保留本地多行接口并引入公共加载层。NavigationItem 与 Toolbar 是可复用本地组件，侧栏固定图标位置、260/60px 宽度、子项回调；CommandPalette 采用 React Aria 模态管理与局部键盘导航，ContextMenu 使用 portal 和焦点恢复。AgentProgress 增加语义步骤。未配置的工具不伪装可用，AI 演示不接真实服务。
