@@ -1,3 +1,4 @@
+import { directionalIconClass } from "./directional-icon";
 import type {
   AnchorHTMLAttributes,
   ButtonHTMLAttributes,
@@ -101,12 +102,12 @@ export function Button({
       )}
       {...props}
     >
-      {Leading ? <Leading className={styles.icon[size]} aria-hidden /> : null}
+      {Leading ? <Leading className={cx(styles.icon[size], directionalIconClass(Leading))} aria-hidden /> : null}
       {!iconOnly && children !== undefined && children !== null && (
         <span className={styles.label[size]}>{children}</span>
       )}
       {!iconOnly && Trailing ? (
-        <Trailing className={styles.icon[size]} aria-hidden />
+        <Trailing className={cx(styles.icon[size], directionalIconClass(Trailing))} aria-hidden />
       ) : null}
     </button>
   );
@@ -136,12 +137,12 @@ export function ButtonLink({
       )}
       {...props}
     >
-      {Leading ? <Leading className={styles.icon[size]} aria-hidden /> : null}
+      {Leading ? <Leading className={cx(styles.icon[size], directionalIconClass(Leading))} aria-hidden /> : null}
       {!iconOnly && children !== undefined && children !== null && (
         <span className={styles.label[size]}>{children}</span>
       )}
       {!iconOnly && Trailing ? (
-        <Trailing className={styles.icon[size]} aria-hidden />
+        <Trailing className={cx(styles.icon[size], directionalIconClass(Trailing))} aria-hidden />
       ) : null}
     </a>
   );

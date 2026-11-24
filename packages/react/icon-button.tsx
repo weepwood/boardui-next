@@ -1,3 +1,4 @@
+import { directionalIconClass } from "./directional-icon";
 // BoardUI MIT source: components/base/buttons/icon-button.tsx; see LICENSE.
 import type {
   AnchorHTMLAttributes,
@@ -84,7 +85,7 @@ export function IconButton({
       className={cx(styles.base, styles.size[size], className)}
       {...props}
     >
-      <Icon className={styles.icon[size]} aria-hidden />
+      <Icon className={cx(styles.icon[size], directionalIconClass(Icon))} aria-hidden />
     </button>
   );
 }
@@ -103,7 +104,7 @@ export function IconLinkButton({
       className={cx(styles.base, styles.size[size], className)}
       {...props}
     >
-      <Icon className={styles.icon[size]} aria-hidden />
+      <Icon className={cx(styles.icon[size], directionalIconClass(Icon))} aria-hidden />
     </a>
   );
 }

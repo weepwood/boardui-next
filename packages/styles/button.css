@@ -15,7 +15,7 @@
     color var(--button-transition-ms) ease,
     transform 420ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  &:active:not(:disabled):not([aria-disabled="true"]) {
+  &:is(:active,[data-pressed]):not(:disabled):not([aria-disabled="true"]) {
     transform: scale(0.98);
     transition-duration: 150ms, 150ms, 150ms, 150ms, 220ms;
   }
@@ -50,10 +50,10 @@
   &:hover:not(:disabled):not([aria-disabled="true"])::before {
     opacity: 1;
   }
-  &:active:not(:disabled):not([aria-disabled="true"]) {
+  &:is(:active,[data-pressed]):not(:disabled):not([aria-disabled="true"]) {
     background-image: var(--gradient-button-primary-active);
   }
-  &:active:not(:disabled):not([aria-disabled="true"])::before {
+  &:is(:active,[data-pressed]):not(:disabled):not([aria-disabled="true"])::before {
     opacity: 0;
   }
   &:disabled,
@@ -85,10 +85,10 @@
   &:hover:not(:disabled):not([aria-disabled="true"])::before {
     opacity: 1;
   }
-  &:active:not(:disabled):not([aria-disabled="true"]) {
+  &:is(:active,[data-pressed]):not(:disabled):not([aria-disabled="true"]) {
     background-image: var(--gradient-button-danger-active);
   }
-  &:active:not(:disabled):not([aria-disabled="true"])::before {
+  &:is(:active,[data-pressed]):not(:disabled):not([aria-disabled="true"])::before {
     opacity: 0;
   }
   &:disabled,

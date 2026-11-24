@@ -6,6 +6,7 @@
  * 演示内容用 JSX 直接定义，保证可交互。
  */
 import { useState } from "react";
+import { RiAddLine as AddGlyph, RiEditLine as EditGlyph, RiArrowRightLine as ArrowGlyph } from "@remixicon/react";
 import type { ReactNode } from "react";
 
 import { Button } from "@/app/components/ui/Button";
@@ -181,10 +182,6 @@ function ControlledSelectionDemo() {
   return <div className="flex flex-col gap-3" data-testid="controlled-selection"><Checkbox isSelected={checked} onChange={setChecked}>受控复选框</Checkbox><Switch isSelected={enabled} onChange={setEnabled}>受控开关</Switch><RadioGroup value={choice} onChange={setChoice} label="受控单选"><Radio value="a">选项 A</Radio><Radio value="b">选项 B</Radio></RadioGroup><output aria-live="polite">{String(checked)} / {String(enabled)} / {choice}</output></div>;
 }
 
-function glyphSize(className?: string) { return className?.includes("size-[18px]") ? 18 : className?.includes("size-5") ? 20 : className?.includes("size-3.5") ? 14 : 16; }
-function AddGlyph({className}: {className?: string}) {return <Icon name="add-line" className={className} size={glyphSize(className)}/>;}
-function EditGlyph({className}: {className?: string}) {return <Icon name="edit-line" className={className} size={glyphSize(className)}/>;}
-function ArrowGlyph({className}: {className?: string}) {return <Icon name="arrow-right-line" className={className} size={glyphSize(className)}/>;}
 function ButtonFamilyDemo() {
   const [selection,setSelection]=useState("left");
   const [count,setCount]=useState(0);
