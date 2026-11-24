@@ -133,3 +133,5 @@
 ### PR #33 / #34 收口（2026-11-24）
 
 - #34 quick/targeted 全部成功，合并至 main 9ff45fd。#33 run 45410366059 的 Chromium 专项与 Firefox/WebKit 导航字体均通过，但 Firefox 双主题 button hover 样式超时；Mozilla Bug 2037020 记录 Linux headless Firefox 错报 hover/pointer 能力，当前根因仍需通过真实 CI 验证。Firefox 桌面验收改用 Xvfb headed，增加能力断言，保留真实 hover、焦点及按压检查，不修改发布门禁。已纳入 #34 主分支，需重跑全部必要 CI。
+
+- #33 run 45412098773：Xvfb Firefox hover 不再报错，浅色 Button 页目录跳转超时。目录显式锚点意图不再被延迟布局的 IntersectionObserver 竞争覆盖，用户主动滚动后恢复跟踪；细分 hash/选中断言，保留测试严格性。新 CI 待验证根因。
