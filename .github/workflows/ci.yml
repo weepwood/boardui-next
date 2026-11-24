@@ -10,7 +10,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   quick:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 8
     outputs:
       risk: ${{ steps.risk.outputs.risk }}
@@ -35,7 +35,7 @@ jobs:
   targeted:
     needs: quick
     if: needs.quick.outputs.risk == 'true'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4

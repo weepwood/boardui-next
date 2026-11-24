@@ -12,3 +12,5 @@
 正式验收流程已经有全站基础覆盖，但截图比对基线、逐组件完整交互/RTL 用例仍待建立；验收清单 pending 项会阻止正式验收通过。
 
 Pages 地址：https://weepwood.github.io/boardui-next/ 。Settings → Pages → Build and deployment → Source 选择 GitHub Actions。如自动启用权限不足，需仓库管理员首次配置。GitHub Pages 为静态预览，不提供 Next.js 服务端运行时。开发仍可 npm run dev；本地导出 npm run build:pages（out/）。
+
+浏览器验证固定 ubuntu-24.04，避免 ubuntu-latest 自动切换到 Playwright 尚不支持的系统版本。
