@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { Icon } from "./Icon";
 import { Checkbox } from "./Checkbox";
@@ -41,6 +41,7 @@ export function DataGrid({
   selectedIds?:string[];
   onSelectionChange?:(ids:string[])=>void;
 }) {
+  const selectAllRef=useRef<HTMLLabelElement>(null);
   const [sort, setSort] = useState<{ col: string; dir: "asc" | "desc" } | null>(null);
   const [inner, setInner] = useState<string[]>([]);
   const rowIds=useMemo(()=>new Set(rows.map(r=>r.id)),[rows]);
@@ -64,13 +65,15 @@ export function DataGrid({
         className
       )}
     >
-      <div className="overflow-x-auto overscroll-x-contain">
+      <div role="region" aria-label="数据表格滚动区域" tabIndex={0} className="min-w-0 overflow-x-auto overscroll-x-contain outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-border-focus-ring">
         <table aria-label="数据表格" className={cn("bui-table",density==="compact"&&"bui-table-sm")}>
           <thead>
             <tr className="bg-background-secondary-default">
               {selectable && (
                 <th scope="col" className="w-9 px-2 py-1.5">
                   <Checkbox
+                    ref={selectAllRef}
+                    isDisabled={rows.length===0}
                     isSelected={allChecked}
                     isIndeterminate={selected.length > 0 && !allChecked}
                     onChange={(on) => setSelected(on ? rows.map((r) => r.id) : [])}
@@ -99,7 +102,7 @@ export function DataGrid({
                         )
                       }
                       className={cn(
-                        "inline-flex cursor-pointer items-center gap-0.5 hover:text-text-primary",
+                        "inline-flex cursor-pointer items-center gap-0.5 rounded-sm hover:text-text-primary focus-visible:outline-2 focus-visible:outline-border-focus-ring",
                         c.align === "end" && "flex-row-reverse"
                       )}
                     >
@@ -127,7 +130,7 @@ export function DataGrid({
             {sorted.length === 0 ? (
               <tr>
                 <td
-                  colSpan={columns.length + (selectable ? 1 : 0)}
+                  colSpan={Math.max(1,columns.length + (selectable ? 1 : 0))}
                   className="py-10 text-center text-caption-1-regular text-text-tertiary"
                 >
                   没有数据
@@ -140,7 +143,7 @@ export function DataGrid({
                   <tr
                     key={r.id}
                     className={cn(
-                      "border-t border-separator-border transition-colors duration-150",
+                      "border-t border-separator-border transition-colors duration-150 motion-reduce:transition-none",
                       on ? "bg-background-secondary-hover" : "hover:bg-background-secondary-hover"
                     )}
                   >
@@ -184,6 +187,7 @@ export function DataGrid({
         </table>
       </div>
 
+      {selectable&&<span className="sr-only" aria-live="polite" aria-atomic="true">选择数量：{selected.length}</span>}
       {selectable && selected.length > 0 && (
         <div className="flex items-center gap-2 border-t border-separator-border bg-background-secondary-default px-3 py-1.5">
           <span className="text-caption-2-medium text-text-secondary">
@@ -191,8 +195,8 @@ export function DataGrid({
           </span>
           <button
             type="button"
-            onClick={() => setSelected([])}
-            className="ms-auto cursor-pointer text-caption-1-medium text-text-tertiary hover:text-text-primary"
+            onClick={() => {setSelected([]);selectAllRef.current?.querySelector("input")?.focus()}}
+            className="ms-auto cursor-pointer rounded-sm text-caption-1-medium text-text-secondary hover:text-text-primary focus-visible:outline-2 focus-visible:outline-border-focus-ring"
           >
             清除选择
           </button>

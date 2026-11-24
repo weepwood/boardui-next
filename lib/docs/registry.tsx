@@ -1126,7 +1126,7 @@ import { RiArrowRightLine } from "@remixicon/react";
     description: "紧凑行高的数据表格变体，适合后台批量处理。",
     install: "npx boardui@latest add data-grid",
     preview: () => (<DataGridDemo />),
-    demos: () => ([]),
+    demos: () => ([{id:"empty-grid",title:"空数据状态",node:<DataGrid columns={[{id:"item",label:"项目"}]} rows={[]}/>}]),
   },
 
   "notification-center": {

@@ -514,6 +514,7 @@ try{
           const panel=page.locator('#preview [role=tabpanel]');
           const control=panel.getByRole('combobox',{name:'查看图表数据点'});
           await control.selectOption('0');await panel.locator('[data-chart-tooltip]').waitFor();
+          assert.equal(await panel.locator('[data-chart-announcement]').textContent(),await panel.locator('[data-chart-tooltip] p').evaluateAll(es=>es.map(e=>e.textContent).join('：')));
           const record=page.locator('#records [role=tabpanel]');
           await record.getByRole('radio',{name:'更新数据'}).click();
           await record.getByRole('combobox',{name:'查看图表数据点'}).selectOption('0');
@@ -606,10 +607,13 @@ try{
           const position=await chart.evaluate(svg=>{const p=new DOMPoint(37,40).matrixTransform(svg.getScreenCTM());return {x:p.x,y:p.y}});
           await page.mouse.move(position.x,position.y);
           await demo.locator('[data-chart-tooltip]').getByText('3,400',{exact:true}).waitFor();
+          assert.equal(await demo.locator('[data-chart-announcement]').textContent(),'');
           await page.mouse.move(0,0);await demo.locator('[data-chart-tooltip]').waitFor({state:'hidden'});
           await point.selectOption('0');await demo.locator('[data-chart-tooltip]').getByText('3,400',{exact:true}).waitFor();
+          const announcement=await demo.locator('[data-chart-announcement]').textContent();assert.ok(announcement.includes('3,400'));
           const later=await chart.evaluate(svg=>{const p=new DOMPoint(svg.viewBox.baseVal.width*.75,40).matrixTransform(svg.getScreenCTM());return {x:p.x,y:p.y}});
           await page.mouse.move(later.x,later.y);
+          assert.equal(await demo.locator('[data-chart-announcement]').textContent(),announcement);
           await page.mouse.move(0,0);
           assert.equal(await point.inputValue(),'0');
           await demo.locator('[data-chart-tooltip]').getByText('3,400',{exact:true}).waitFor();
@@ -865,8 +869,16 @@ try{
           assert.ok((await demo.locator('tbody tr').first().textContent()).includes('IT-002'));
           await demo.getByRole('checkbox',{name:'全选'}).press('Space');
           await demo.getByText('已选 3 项').waitFor();
-          await demo.getByRole('button',{name:'清除选择'}).click();
-          assert.ok(!(await demo.getByRole('checkbox',{name:'全选'}).isChecked()));
+          await demo.getByRole('button',{name:'清除选择'}).press('Enter');
+          const selectAll=demo.getByRole('checkbox',{name:'全选'});
+          assert.ok(!(await selectAll.isChecked()));
+          assert.ok(await selectAll.evaluate(e=>document.activeElement===e));
+          assert.equal(await demo.getByRole('columnheader',{name:'数量'}).getAttribute('aria-sort'),'ascending');
+          const scroll=demo.getByRole('region',{name:'数据表格滚动区域'});
+          await scroll.focus();assert.ok(await scroll.evaluate(e=>e===document.activeElement));
+          const empty=page.locator('#empty-grid [role=tabpanel]');
+          assert.ok(await empty.getByRole('checkbox',{name:'全选'}).isDisabled());
+          await empty.getByText('没有数据',{exact:true}).waitFor();
         }
         if(route==='/zh-hans/components/data-table/'){
           const demo=page.locator('#preview');

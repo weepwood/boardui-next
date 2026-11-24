@@ -1,0 +1,1076 @@
+{
+  "base": "e51f61be235795a277fbaa9fecc2beab6c53236b",
+  "scope": "集中 PR #43 数据表格与图表播报修复",
+  "browser": "Edge (Chromium), macOS",
+  "targeted": {
+    "browser": "chromium",
+    "results": [
+      {
+        "theme": "light",
+        "route": "/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/button/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/select/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/modal/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/templates/dashboard/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/data-grid/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/data-table/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/area-chart-card/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/radar-chart-card/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/scatter-chart-card/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/combo-chart-card/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/orders-chart-card/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/workspace/dashboard/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/workspace/finance/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/rtl/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/button/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/select/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/modal/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/templates/dashboard/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/data-grid/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/data-table/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/area-chart-card/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/radar-chart-card/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/scatter-chart-card/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/combo-chart-card/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/orders-chart-card/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/workspace/dashboard/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/workspace/finance/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/rtl/",
+        "violations": [],
+        "status": "checked"
+      }
+    ],
+    "errors": []
+  },
+  "responsiveAndAxe": [
+    {
+      "route": "/zh-hans/components/data-grid/",
+      "theme": "light",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "数据网格 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        324,
+        40,
+        808,
+        1450
+      ],
+      "preview": [
+        324,
+        188,
+        808,
+        405
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/area-chart-card/",
+      "theme": "light",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "面积图 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        324,
+        40,
+        808,
+        2213
+      ],
+      "preview": [
+        324,
+        188,
+        808,
+        536
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/data-table/",
+      "theme": "light",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "数据表格 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        324,
+        40,
+        808,
+        1042
+      ],
+      "preview": [
+        324,
+        188,
+        808,
+        405
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/workspace/dashboard/",
+      "theme": "light",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "仪表盘独立工作区 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        0,
+        0,
+        1440,
+        1375
+      ],
+      "preview": [
+        16,
+        84,
+        1408,
+        1247
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/radar-chart-card/",
+      "theme": "light",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "雷达图 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        324,
+        40,
+        808,
+        2013
+      ],
+      "preview": [
+        324,
+        188,
+        808,
+        405
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/workspace/finance/",
+      "theme": "light",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "财务独立工作区 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        0,
+        0,
+        1440,
+        1302
+      ],
+      "preview": [
+        16,
+        84,
+        1408,
+        1174
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/data-table/",
+      "theme": "dark",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "数据表格 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        324,
+        40,
+        808,
+        1042
+      ],
+      "preview": [
+        324,
+        188,
+        808,
+        405
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/data-grid/",
+      "theme": "dark",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "数据网格 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        324,
+        40,
+        808,
+        1450
+      ],
+      "preview": [
+        324,
+        188,
+        808,
+        405
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/area-chart-card/",
+      "theme": "dark",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "面积图 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        324,
+        40,
+        808,
+        2213
+      ],
+      "preview": [
+        324,
+        188,
+        808,
+        536
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/radar-chart-card/",
+      "theme": "dark",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "雷达图 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        324,
+        40,
+        808,
+        2013
+      ],
+      "preview": [
+        324,
+        188,
+        808,
+        405
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/workspace/dashboard/",
+      "theme": "dark",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "仪表盘独立工作区 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        0,
+        0,
+        1440,
+        1375
+      ],
+      "preview": [
+        16,
+        84,
+        1408,
+        1247
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/workspace/finance/",
+      "theme": "dark",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "财务独立工作区 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        0,
+        0,
+        1440,
+        1302
+      ],
+      "preview": [
+        16,
+        84,
+        1408,
+        1174
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/data-grid/",
+      "theme": "light",
+      "profile": {
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 2
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "数据网格 — BoardUI",
+      "width": 390,
+      "viewport": 390,
+      "main": [
+        24,
+        40,
+        342,
+        1642
+      ],
+      "preview": [
+        24,
+        188,
+        342,
+        399
+      ],
+      "dpr": 2,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/data-table/",
+      "theme": "light",
+      "profile": {
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 2
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "数据表格 — BoardUI",
+      "width": 390,
+      "viewport": 390,
+      "main": [
+        24,
+        40,
+        342,
+        1240
+      ],
+      "preview": [
+        24,
+        188,
+        342,
+        399
+      ],
+      "dpr": 2,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/area-chart-card/",
+      "theme": "light",
+      "profile": {
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 2
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "面积图 — BoardUI",
+      "width": 390,
+      "viewport": 390,
+      "main": [
+        24,
+        40,
+        342,
+        2442
+      ],
+      "preview": [
+        24,
+        188,
+        342,
+        559
+      ],
+      "dpr": 2,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/radar-chart-card/",
+      "theme": "light",
+      "profile": {
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 2
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "雷达图 — BoardUI",
+      "width": 390,
+      "viewport": 390,
+      "main": [
+        24,
+        40,
+        342,
+        2213
+      ],
+      "preview": [
+        24,
+        188,
+        342,
+        399
+      ],
+      "dpr": 2,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/workspace/dashboard/",
+      "theme": "light",
+      "profile": {
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 2
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "仪表盘独立工作区 — BoardUI",
+      "width": 390,
+      "viewport": 390,
+      "main": [
+        0,
+        0,
+        390,
+        2533
+      ],
+      "preview": [
+        12,
+        124,
+        366,
+        2369
+      ],
+      "dpr": 2,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/workspace/finance/",
+      "theme": "light",
+      "profile": {
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 2
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "财务独立工作区 — BoardUI",
+      "width": 390,
+      "viewport": 390,
+      "main": [
+        0,
+        0,
+        390,
+        2210
+      ],
+      "preview": [
+        12,
+        124,
+        366,
+        2046
+      ],
+      "dpr": 2,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/data-grid/",
+      "theme": "light",
+      "profile": {
+        "width": 320,
+        "height": 720,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "数据网格 — BoardUI",
+      "width": 320,
+      "viewport": 320,
+      "main": [
+        24,
+        40,
+        272,
+        1664
+      ],
+      "preview": [
+        24,
+        210,
+        272,
+        399
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/area-chart-card/",
+      "theme": "light",
+      "profile": {
+        "width": 320,
+        "height": 720,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "面积图 — BoardUI",
+      "width": 320,
+      "viewport": 320,
+      "main": [
+        24,
+        40,
+        272,
+        2529
+      ],
+      "preview": [
+        24,
+        210,
+        272,
+        620
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/radar-chart-card/",
+      "theme": "light",
+      "profile": {
+        "width": 320,
+        "height": 720,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "雷达图 — BoardUI",
+      "width": 320,
+      "viewport": 320,
+      "main": [
+        24,
+        40,
+        272,
+        2239
+      ],
+      "preview": [
+        24,
+        210,
+        272,
+        399
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/workspace/dashboard/",
+      "theme": "light",
+      "profile": {
+        "width": 320,
+        "height": 720,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "仪表盘独立工作区 — BoardUI",
+      "width": 320,
+      "viewport": 320,
+      "main": [
+        0,
+        0,
+        320,
+        2617
+      ],
+      "preview": [
+        12,
+        124,
+        296,
+        2453
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/workspace/finance/",
+      "theme": "light",
+      "profile": {
+        "width": 320,
+        "height": 720,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "财务独立工作区 — BoardUI",
+      "width": 320,
+      "viewport": 320,
+      "main": [
+        0,
+        0,
+        320,
+        2246
+      ],
+      "preview": [
+        12,
+        124,
+        296,
+        2082
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/data-grid/",
+      "theme": "light",
+      "profile": {
+        "width": 2560,
+        "height": 1440,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "数据网格 — BoardUI",
+      "width": 2560,
+      "viewport": 2560,
+      "main": [
+        862,
+        40,
+        852,
+        1450
+      ],
+      "preview": [
+        862,
+        188,
+        852,
+        405
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/area-chart-card/",
+      "theme": "light",
+      "profile": {
+        "width": 2560,
+        "height": 1440,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "面积图 — BoardUI",
+      "width": 2560,
+      "viewport": 2560,
+      "main": [
+        862,
+        40,
+        852,
+        2213
+      ],
+      "preview": [
+        862,
+        188,
+        852,
+        536
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/radar-chart-card/",
+      "theme": "light",
+      "profile": {
+        "width": 2560,
+        "height": 1440,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "雷达图 — BoardUI",
+      "width": 2560,
+      "viewport": 2560,
+      "main": [
+        862,
+        40,
+        852,
+        2013
+      ],
+      "preview": [
+        862,
+        188,
+        852,
+        405
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/workspace/dashboard/",
+      "theme": "light",
+      "profile": {
+        "width": 2560,
+        "height": 1440,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "仪表盘独立工作区 — BoardUI",
+      "width": 2560,
+      "viewport": 2560,
+      "main": [
+        0,
+        0,
+        2560,
+        1440
+      ],
+      "preview": [
+        440,
+        84,
+        1680,
+        1247
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/workspace/finance/",
+      "theme": "light",
+      "profile": {
+        "width": 2560,
+        "height": 1440,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "财务独立工作区 — BoardUI",
+      "width": 2560,
+      "viewport": 2560,
+      "main": [
+        0,
+        0,
+        2560,
+        1440
+      ],
+      "preview": [
+        440,
+        84,
+        1680,
+        1174
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    }
+  ],
+  "checks": [
+    "清除选择恢复焦点",
+    "空表全选禁用",
+    "排序 aria-sort",
+    "滚动区域键盘可达",
+    "图表悬停不改变主动选择播报",
+    "主动数据选择与提示一致"
+  ],
+  "export": {
+    "pages": 120,
+    "peakGzipJs": 510197,
+    "peakGzipHtml": 26532,
+    "templateCatalogGzipJs": 253870
+  },
+  "limitations": [
+    "前一提交 e51f61b 的正式714/714通过不代表新修复已在三浏览器通过",
+    "局部 axe 和 DOM 播报断言不等同人工读屏",
+    "未批准正式五维门禁"
+  ]
+}

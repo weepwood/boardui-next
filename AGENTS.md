@@ -203,3 +203,6 @@
 - 剩余基础按钮、表单、导航浮层、数据展示、图表、应用组件及模板统一在现有 PR #43（qa/button-family-closure）推进；不再按小批次创建 PR，不为各个小组件单独发布。使用中文 Git commit，集中处理实际缺陷、整体验收一次、通过后统一审查合并与生产发布。中间提交的 CI 不能作为最终提交的结果；不降低已有正式门禁。
 - #43 原 head 9305295 的 run 45436399141 已通过，按用户要求保留 PR 继续扩充，未提前合并。统一 Checkbox/Radio/Switch/Slider 焦点偏移色和减少动效；修复 Pagination 从 1 页动态到多页无法重新观测及极窄容器溢出，260px 以下显示当前/总页数并保留前后按钮。
 - 扩展独立 Vite 消费到原生 FormData、Select、Tabs、窄容器动态分页。实际 tarball SSR/类型/独立构建和 Edge 浏览器通过；首次 radio.check 指针拦截，最终通过实际键盘 Space 并断言 checked。类型、单测、API 以及 120 HTML 静态导出预算通过。报告 reference/evidence/consolidated-consumer-20261125.json。扩展示例产生 Vite 大 chunk 提示，未放宽生产预算。正式全站候选仍需新提交的完整三浏览器结果；104 项五维门禁不自动批准。
+
+- 集中 PR #43 继续使用同一分支。e51f61b 日常 run 45437113841 全部通过；正式 run 45437101528 构建、Chromium/Firefox/WebKit、报告通过，各 238/238 共 714/714，release-gate 仅逐组件五维未闭合。下载原始报告及正式汇总至 reference/evidence/formal-45437101528，证据仍绑定 e51f61b。
+- 同 PR 新修复 DataGrid/DataTable 键盘滚动区域、排序焦点、空表禁用全选、清除选择恢复焦点及数量播报；ChartArea/ChartDataInspector 分离视觉悬停和稳定主动选择 aria-live。无新依赖/公共接口变更。本地 Edge 32/32 页面专项、28/28 响应式和局部 axe、类型、单测、120 HTML 导出及预算通过；报告 reference/evidence/consolidated-data-chart-20261125.json。未进行人工读屏，不自动标记正式五维通过。
