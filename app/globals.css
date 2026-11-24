@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "@fontsource-variable/noto-sans-sc";
+@import "./styles/.generated-fonts/noto.css";
 @import "@fontsource-variable/inter/opsz.css";
 @import "@fontsource-variable/jetbrains-mono";
 @import "./styles/tokens.css";

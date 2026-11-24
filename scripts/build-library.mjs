@@ -18,7 +18,7 @@ const pkg={name:'@weepwood/boardui-next',version:app.version,type:'module',licen
 writeFileSync(path.join(dir,'package.json'),JSON.stringify(pkg,null,2)+'\n');
 copyFileSync('LICENSE',path.join(dir,'LICENSE'));copyFileSync('packages/README.md',path.join(dir,'README.md'));
 // Flatten local CSS imports, omit bundled fonts so consuming apps choose their own.
-const raw=readFileSync('app/globals.css','utf8').replace(/^@import "([^"]+)";\s*$/gm,(_,f)=>f.startsWith('.')?readFileSync(path.resolve(root,'app',f),'utf8'):'');
+const raw=readFileSync('app/globals.css','utf8').replace(/^@import "([^"]+)";\s*$/gm,(_,f)=>f.includes('.generated-fonts/')?'':f.startsWith('.')?readFileSync(path.resolve(root,'app',f),'utf8'):'');
 const source='@source "./esm";\n'+raw;
 writeFileSync(path.join(dir,'tailwind.css'),source);
 const result=await postcss([tailwind({base:root,optimize:true})]).process('@import "tailwindcss" source(none);\n'+source,{from:path.join(dir,'tailwind.css'),to:path.join(dir,'styles.css')});

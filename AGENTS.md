@@ -50,3 +50,10 @@
 - 新批次：目录 100 张卡片的 88 个可见性订阅共享一个观察器，预览尺寸共享 ResizeObserver 并对同批更新去重；memo 卡片、稳定模板筛选输入，目录入口复用导航反馈。路由占位显示时旧内容 inert；popstate 立即清理导航意图。
 - 本地 Edge 测量见 reference/evidence/catalog-observers-20261124.json。初始 IntersectionObserver 实例 89→2，四次筛选后累计 258→2，预览 9→9；计数含框架观察器，不等于耗时同比降低。滚动后视口仍只挂载必要预览。
 - browser-check 增加目录共享观察器与卸载清理断言、连续点击时旧延迟请求不能覆盖最后目标、inert/aria-busy 清理检查。12 个专项组合、116 静态 HTML、类型及注册表/令牌/证据通过；其他浏览器仍需复验。
+
+### 首屏加载性能专项
+
+- #24 目录共享观察器与快速导航修复已合并（main c1be8c9）。新批次将 API 参考按当前 slug 传递、验收状态由服务端渲染、目录仅接收精简元数据，保留共享演示注册表缓存优势。
+- Noto Sans SC 使用原有固定 Fontsource 版本，构建时通过 subset-font@2.9.0 为静态界面字符生成小型可变字体并拆分互斥 unicode-range；其他字符仍走原完整子集。生成资源不提交、不进入独立组件包。字体许可随站点导出。npm run dev/build/build:pages 自动执行 fonts:prepare；直接使用 Next CLI 前需手动准备。源码字符集/锁文件/脚本签名变化重新生成。
+- 冷启动证据 reference/evidence/cold-start-20261124.json；按钮页字体 953240→368316 bytes、压缩 JS 472105→457770 bytes，目录字体 1074924→383112 bytes。FCP 有波动，非稳定速度结论。Edge 抽样常用/回退字符加载与 400/700 字重宽度一致。复现命令 node scripts/benchmark-cold-start.mjs /tmp/cold.json（需要 Playwright，可设 BROWSER_EXECUTABLE）。
+- 导航/字体类高风险 PR 加入专用 Chromium、Firefox、WebKit 快速竞态/字体回退测试，不扩大全量日常检查。完整发布门禁不变，后续优先真实跨浏览器回归和低性能设备测量。
