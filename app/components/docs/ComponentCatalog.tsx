@@ -1,10 +1,11 @@
 "use client";
 import {useDeferredValue,useMemo,useState} from "react";
-import {CatalogCard,type CatalogStatus} from "./CatalogCard";
+import {CatalogCard,type CatalogCardProps} from "./CatalogCard";
+import type {ComponentType} from "react";
 import {SvgIcon} from "@/packages/react/svg-icon";
 import type {CatalogGroups} from "./catalog-data";
 const categories=["基础组件","组合组件","图表","模板"];
-export function ComponentCatalog({templatesOnly=false,available}:{templatesOnly?:boolean;available:CatalogGroups}){
+export function ComponentCatalog({templatesOnly=false,available,Card=CatalogCard}:{templatesOnly?:boolean;available:CatalogGroups;Card?:ComponentType<CatalogCardProps>}){
  const [query,setQuery]=useState(""),[category,setCategory]=useState("全部"),[status,setStatus]=useState("all");
  const search=useDeferredValue(query.trim().toLowerCase());
  const groups=useMemo(()=>available.filter(g=>category==="全部"||g.title===category).map(g=>({...g,items:g.items.filter(i=>(status==="all"||i.status===status)&&[i.label,i.slug,i.description,g.title].join(" ").toLowerCase().includes(search))})).filter(g=>g.items.length),[available,category,status,search]);
@@ -17,6 +18,6 @@ export function ComponentCatalog({templatesOnly=false,available}:{templatesOnly?
   </div>
   <div role="group" aria-label="组件分类" className="flex flex-wrap items-center gap-1 border-b border-separator-border pb-3">{(templatesOnly?["全部"]:["全部",...categories]).map(c=><button type="button" key={c} aria-pressed={category===c} onClick={()=>setCategory(c)} className={"rounded-lg px-3 py-1.5 text-body-medium transition-colors motion-reduce:transition-none "+(category===c?"bg-background-secondary-hover text-text-primary":"text-text-secondary hover:bg-background-primary-hover")}>{c}</button>)}<span role="status" className="ms-auto text-body-2-regular text-text-secondary">{count} / {total} 项</span></div>
  </div>
- {groups.length===0?<div className="rounded-3xl border border-border-component-detail-container p-12 text-center text-text-secondary">没有匹配的组件。<button type="button" onClick={()=>{setQuery("");setCategory("全部");setStatus("all")}} className="ms-2 underline">重置筛选</button></div>:groups.map(g=><section key={g.title} id={g.title==="模板"?"templates":g.title} className="flex scroll-mt-10 flex-col gap-4"><h2 className="flex items-baseline gap-2 text-title-2-medium text-text-primary">{g.title}<span className="text-body-regular text-text-secondary">{g.items.length}</span></h2><div className="grid w-full grid-cols-1 gap-x-5 gap-y-3 sm:grid-cols-2 sm:gap-5 xl:grid-cols-[repeat(3,minmax(0,304px))]">{g.items.map(i=><CatalogCard key={i.href} title={i.label} {...i}/>)}</div></section>)}
+ {groups.length===0?<div className="rounded-3xl border border-border-component-detail-container p-12 text-center text-text-secondary">没有匹配的组件。<button type="button" onClick={()=>{setQuery("");setCategory("全部");setStatus("all")}} className="ms-2 underline">重置筛选</button></div>:groups.map(g=><section key={g.title} id={g.title==="模板"?"templates":g.title} className="flex scroll-mt-10 flex-col gap-4"><h2 className="flex items-baseline gap-2 text-title-2-medium text-text-primary">{g.title}<span className="text-body-regular text-text-secondary">{g.items.length}</span></h2><div className="grid w-full grid-cols-1 gap-x-5 gap-y-3 sm:grid-cols-2 sm:gap-5 xl:grid-cols-[repeat(3,minmax(0,304px))]">{g.items.map(i=><Card key={i.href} title={i.label} {...i}/>)}</div></section>)}
  </>;
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { memo, useEffect, useId, useRef, useState } from "react";
+import { memo, useCallback, useEffect, useId, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { navigation, type NavItem } from "@/lib/navigation";
@@ -165,6 +165,7 @@ export function Sidebar() {
   useEffect(()=>setMobileOpen(false),[pathname]);
   useEffect(()=>{const nav=desktopNav.current;const active=nav?.querySelector<HTMLElement>('[aria-current="page"]');if(!nav||!active)return;const n=nav.getBoundingClientRect(),a=active.getBoundingClientRect();if(a.top<n.top||a.bottom>n.bottom)nav.scrollTop+=a.top-n.top-n.height/3;},[activeHref]);
 
+  const closeSearch=useCallback(()=>setSearchOpen(false),[]);
   // ⌘K / Ctrl+K 唤起搜索
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -246,7 +247,7 @@ export function Sidebar() {
     <ModalOverlay isOpen={mobileOpen} onOpenChange={setMobileOpen} isDismissable className="fixed inset-0 z-[70] flex bg-black/30 dark:bg-black/60 lg:hidden">
       <Modal className="h-full w-[min(300px,calc(100vw-24px))] p-3 outline-none"><Dialog aria-label="文档导航" className="flex h-full min-h-0 flex-col gap-3 overflow-hidden rounded-3xl border border-border-button-white bg-background-secondary-default p-3 shadow-sidebar outline-none"><div className="flex justify-end"><CloseButton size="md" aria-label="关闭文档导航" onClick={()=>setMobileOpen(false)}/></div>{content(true)}</Dialog></Modal>
     </ModalOverlay>
-    {searchOpen&&<CommandSearch open={searchOpen} onClose={() => setSearchOpen(false)} />}
+    {searchOpen&&<CommandSearch open={searchOpen} onClose={closeSearch} />}
     </>
   );
 }
