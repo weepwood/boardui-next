@@ -3,7 +3,6 @@ import { DocsLayout } from "./components/docs/DocsLayout";
 import { Icon } from "./components/ui/Icon";
 import { Button } from "./components/ui/Button";
 import { Badge } from "./components/ui/Badge";
-import { docs } from "@/lib/docs/registry";
 import { docMetas } from "@/lib/docs/meta";
 
 const FEATURES = [
@@ -15,12 +14,12 @@ const FEATURES = [
   {
     icon: "hand-coin-line",
     title: "无障碍开箱可用",
-    desc: "基于 React Aria Components，键盘导航、焦点管理、ARIA 语义天然完整。",
+    desc: "基于 React Aria Components，提供键盘导航、焦点管理与 ARIA 基础，仍需逐组件验证。",
   },
   {
     icon: "magic-line",
-    title: "交互动效逐帧对齐",
-    desc: "缓动 cubic-bezier(0.22,1,0.36,1)，时长 150/200/300ms，按压 scale 0.98，与原站一致。",
+    title: "交互动效校准",
+    desc: "缓动 cubic-bezier(0.22,1,0.36,1)，时长 150/200/300ms，按压 scale 0.98，待与原站逐项对比。",
   },
   {
     icon: "moon-line",
@@ -37,16 +36,16 @@ export default function HomePage() {
       {/* Hero */}
       <header className="flex flex-col gap-4 pt-4">
         <div className="flex items-center gap-2">
-          <Badge variant="accent">v1.0</Badge>
+          <Badge variant="accent">开发中</Badge>
           <span className="text-caption-1-regular text-text-tertiary">
-            已实现 {total} 个组件 · 115 个令牌
+            {total} 个组件文档 · 待逐项验收
           </span>
         </div>
         <h1 className="text-large-title-medium text-text-primary">
           为 AI 原生产品打造的组件库
         </h1>
         <p className="max-w-2xl text-headline-medium text-text-secondary">
-          可复制粘贴的组件集合。基于 React Aria 构建，视觉与交互动效完整对齐设计系统——包括每一次按压、每一段过渡曲线。
+          可复制粘贴的组件集合。基于 React Aria 构建，以原版视觉与交互动效为基准，持续校准每一个组件。
         </p>
         <div className="flex flex-wrap items-center gap-2 pt-1">
           <Link href="/zh-hans/components">

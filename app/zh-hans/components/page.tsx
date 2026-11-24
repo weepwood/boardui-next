@@ -46,7 +46,7 @@ export default function ComponentsIndexPage() {
       <header className="flex flex-col gap-2">
         <h1 className="text-title-1-medium text-text-primary">组件</h1>
         <p className="text-headline-medium text-text-secondary">
-          可复制粘贴的组件集合。基于 React Aria 构建，所有组件都支持键盘操作、屏幕阅读器，并自动适配暗色模式。
+          基于 React Aria 的组件演示集合。视觉、交互与无障碍一致性正在逐项验收。
         </p>
       </header>
 
@@ -102,7 +102,7 @@ export default function ComponentsIndexPage() {
                       )}
                     </div>
                     <span className="truncate text-caption-2-regular text-text-tertiary">
-                      {hasDoc ? "已实现，可交互" : "待实现"}
+                      {hasDoc ? "已有演示 · 待验收" : "待实现"}
                     </span>
                   </div>
                   {hasDoc && (

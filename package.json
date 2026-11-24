@@ -6,7 +6,9 @@
     "dev": "next dev -p 3000",
     "build": "next build",
     "start": "next start -p 3000",
-    "lint": "next lint"
+    "typecheck": "tsc --noEmit",
+    "test:registry": "node --test tests/registry.test.mjs",
+    "test": "npm run test:registry"
   },
   "dependencies": {
     "clsx": "^2.1.1",
