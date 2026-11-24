@@ -52,7 +52,7 @@ export function ColorPicker({
         />
         <div
           className={cn(
-            fieldSurface,"flex-1 focus-within:ring-border-button-active",!valid&&"bg-background-tertiary-error"
+            fieldSurface,"flex-1",valid?"hover:ring-border-button-hover focus-within:ring-border-button-active":"bg-background-tertiary-error focus-within:ring-border-error-default"
           )}
         >
           <span className="text-caption-1-medium text-text-tertiary">#</span>

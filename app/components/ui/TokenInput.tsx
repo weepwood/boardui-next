@@ -65,7 +65,7 @@ export function TokenInput({
           fieldSurface,"w-full cursor-text flex-wrap gap-1",
           invalid
             ? "bg-background-tertiary-error ring-border-error-default"
-            : "focus-within:ring-border-button-active"
+            : "hover:ring-border-button-hover focus-within:ring-border-button-active"
         )}
       >
         {tokens.map((t) => (

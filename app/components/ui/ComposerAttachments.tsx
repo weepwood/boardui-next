@@ -42,7 +42,7 @@ export function ComposerAttachments({
             {a.name}
           </span>
           {a.size && (
-            <span className="shrink-0 text-[10px] text-text-tertiary">{a.size}</span>
+            <span className="shrink-0 text-caption-2-regular text-text-secondary">{a.size}</span>
           )}
           <button
             type="button"

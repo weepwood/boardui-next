@@ -34,14 +34,14 @@ const HISTORY = [
 /** 医疗档案模板：患者概览、生命体征、用药、就诊记录 */
 export function MedicalProfileTemplate() {
   return (
-    <div className="flex min-h-[680px] w-full flex-col overflow-hidden rounded-3xl border border-border-button-default bg-background-primary-default shadow-sidebar">
+    <div className="flex min-h-[680px] w-full flex-col overflow-hidden bui-template-shell rounded-3xl border border-border-component-detail-container bg-background-full">
       <p className="border-b border-separator-border px-4 py-2 text-body-2-regular text-text-secondary">虚构医疗资料，仅用于界面演示；不用于诊疗或风险评估。</p>
       {/* 患者头部 */}
       <header className="flex flex-wrap items-center gap-3 border-b border-separator-border p-4">
         <Avatar name="陈静" size="xl" />
         <div className="flex min-w-0 flex-1 flex-col gap-1">
           <div className="flex flex-wrap items-center gap-2">
-            <h3 className="text-title-3-semibold text-text-primary">陈静</h3>
+            <h3 className="text-headline-medium text-text-primary">陈静</h3>
             <Badge variant="neutral">女 · 34 岁</Badge>
             <Badge variant="success">A 型血</Badge>
           </div>
@@ -61,11 +61,11 @@ export function MedicalProfileTemplate() {
 
       <div className="flex flex-col gap-3 p-4">
         {/* 生命体征 */}
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="grid min-w-0 grid-cols-1 gap-3 @sm:grid-cols-2 @3xl:grid-cols-4">
           {VITALS.map((v) => (
             <div
               key={v.label}
-              className="flex flex-col gap-1 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4"
+              className="flex flex-col gap-1 bui-template-panel min-w-0 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4"
             >
               <div className="flex items-center gap-1.5">
                 <Icon name={v.icon} className={cn("size-3.5", v.tone)} />
@@ -85,9 +85,9 @@ export function MedicalProfileTemplate() {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 gap-2 lg:grid-cols-3">
+        <div className="grid min-w-0 grid-cols-1 gap-3 @3xl:grid-cols-3">
           {/* 健康环 */}
-          <div className="flex flex-col items-center gap-2 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
+          <div className="flex flex-col items-center gap-2 bui-template-panel min-w-0 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
             <span className="self-start text-body-2-medium text-text-primary">今日目标</span>
             <ActivityRings
               size={130}
@@ -114,7 +114,7 @@ export function MedicalProfileTemplate() {
           </div>
 
           {/* 心率趋势 */}
-          <div className="flex flex-col gap-2 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4 lg:col-span-2">
+          <div className="flex flex-col gap-2 bui-template-panel min-w-0 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4 @3xl:col-span-2">
             <div className="flex items-center justify-between">
               <span className="text-body-2-medium text-text-primary">近 7 日静息心率</span>
               <span className="text-caption-2-regular text-text-tertiary">平均 71 bpm</span>
@@ -135,9 +135,9 @@ export function MedicalProfileTemplate() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-2 lg:grid-cols-2">
+        <div className="grid min-w-0 grid-cols-1 gap-3 @2xl:grid-cols-2">
           {/* 用药 */}
-          <div className="flex flex-col gap-2 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
+          <div className="flex flex-col gap-2 bui-template-panel min-w-0 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
             <div className="flex items-center justify-between">
               <span className="text-body-2-medium text-text-primary">当前用药</span>
               <Badge variant="accent">{MEDICATIONS.filter((m) => m.active).length} 项在用</Badge>
@@ -159,7 +159,7 @@ export function MedicalProfileTemplate() {
                     <span className="truncate text-caption-1-medium text-text-primary">
                       {m.name}
                     </span>
-                    <span className="truncate text-[10px] text-text-tertiary">{m.dose}</span>
+                    <span className="truncate text-caption-2-regular text-text-secondary">{m.dose}</span>
                   </div>
                   <span
                     className={cn(
@@ -189,7 +189,7 @@ export function MedicalProfileTemplate() {
           </div>
 
           {/* 就诊记录 */}
-          <div className="flex flex-col gap-2 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
+          <div className="flex flex-col gap-2 bui-template-panel min-w-0 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
             <span className="text-body-2-medium text-text-primary">就诊记录</span>
             <div className="flex flex-col">
               {HISTORY.map((h, i) => (
@@ -201,13 +201,13 @@ export function MedicalProfileTemplate() {
                     )}
                   </div>
                   <div className="flex flex-1 flex-col gap-0.5 pb-3">
-                    <div className="flex items-center justify-between gap-2">
+                    <div className="flex flex-wrap items-center justify-between gap-2">
                       <span className="text-caption-1-medium text-text-primary">{h.title}</span>
                       <span className="shrink-0 text-[10px] tabular-nums text-text-tertiary">
                         {h.date}
                       </span>
                     </div>
-                    <span className="text-[10px] text-text-tertiary">
+                    <span className="text-caption-2-regular text-text-secondary">
                       {h.dept} · {h.doctor}
                     </span>
                   </div>

@@ -1,7 +1,14 @@
 import { cx } from "./cx";
-export const fieldSurface="flex min-h-9 min-w-0 items-center gap-2 rounded-2lg bg-background-tertiary-default px-2.5 py-1.5 ring-2 ring-inset ring-transparent transition-[background-color,box-shadow,color] duration-150 ease motion-reduce:transition-none";
-export const fieldText="min-w-0 flex-1 bg-transparent p-0 text-body-regular text-text-primary outline-none focus-visible:outline-none placeholder:text-text-tertiary";
+export type FieldVisualState={isHovered?:boolean;isFocusWithin?:boolean;isDisabled?:boolean;isInvalid?:boolean};
+export const fieldTransition="transition-[background-color,box-shadow,color] duration-[var(--input-transition-ms)] ease motion-reduce:transition-none";
+export const fieldSurface=cx("flex min-h-9 min-w-0 items-center gap-2 rounded-2lg bg-background-tertiary-default px-2.5 py-1.5 ring-2 ring-inset ring-transparent",fieldTransition);
+export const fieldText="min-w-0 flex-1 bg-transparent p-0 text-body-regular text-text-primary outline-none focus-visible:outline-none placeholder:text-text-tertiary focus:placeholder:text-text-primary disabled:cursor-not-allowed disabled:text-input-disabled-text disabled:placeholder:text-input-disabled-text";
 export const fieldLabel="text-body-medium text-text-primary";
-export function fieldState({isHovered,isFocusWithin,isDisabled,isInvalid}:{isHovered?:boolean;isFocusWithin?:boolean;isDisabled?:boolean;isInvalid?:boolean}){
- return cx(fieldSurface,isHovered&&!isFocusWithin&&!isDisabled&&!isInvalid&&"ring-border-button-hover",isFocusWithin&&!isDisabled&&!isInvalid&&"ring-border-button-active",isInvalid&&"bg-background-tertiary-error text-foreground-icon-error",isDisabled&&"bg-input-disabled-background text-input-disabled-foreground");
+export function fieldVisualState({isHovered,isFocusWithin,isDisabled,isInvalid}:FieldVisualState){
+ if(isDisabled)return "bg-input-disabled-background text-input-disabled-foreground cursor-not-allowed";
+ if(isInvalid)return cx("bg-background-tertiary-error text-foreground-icon-error",isFocusWithin&&"ring-border-error-default");
+ if(isFocusWithin)return "ring-border-button-active";
+ if(isHovered)return "ring-border-button-hover";
+ return "";
 }
+export function fieldState(state:FieldVisualState){return cx(fieldSurface,fieldVisualState(state));}

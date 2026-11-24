@@ -1,6 +1,7 @@
 // BoardUI MIT source, pinned upstream; see LICENSE.
 "use client";
 
+import { fieldVisualState,fieldTransition } from "./field-styles";
 import {
   createContext,
   useContext,
@@ -133,7 +134,7 @@ const inputStyles = sortCx({
     "rounded-2lg",
     "bg-background-tertiary-default text-foreground-icon-tertiary",
     "ring-2 ring-inset ring-transparent",
-    "transition-[background-color,box-shadow,color] duration-[var(--input-transition-ms)] ease",
+    fieldTransition,
   ].join(" "),
 
   fieldSize: {
@@ -189,22 +190,7 @@ export function InputBase({
           hasAddon
             ? inputStyles.fieldWithAddonSize[size]
             : inputStyles.fieldSize[size],
-          // Hover: idle, no focus, no disabled, no invalid
-          isHovered &&
-            !isFocusWithin &&
-            !isDisabled &&
-            !isInvalid &&
-            "ring-border-button-hover",
-          // Focus wins over hover
-          isFocusWithin &&
-            !isDisabled &&
-            !isInvalid &&
-            "ring-border-button-active",
-          // Disabled
-          isDisabled &&
-            "bg-input-disabled-background text-input-disabled-foreground",
-          // Invalid
-          isInvalid && "bg-background-tertiary-error text-foreground-icon-error",
+          fieldVisualState({isHovered,isFocusWithin,isDisabled,isInvalid}),
           ctx.fieldClassName,
           fieldClassName,
         )

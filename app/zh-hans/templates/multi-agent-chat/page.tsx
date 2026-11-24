@@ -7,9 +7,10 @@ export const metadata: Metadata = { title: "多智能体聊天模板" };
 export default function Page() {
   return (
     <DocsLayout
+      variant="catalog"
       breadcrumbs={[
         { label: "BoardUI", href: "/" },
-        { label: "模板", href: "/zh-hans/components" },
+        { label: "模板", href: "/zh-hans/templates" },
         { label: "多智能体聊天" },
       ]}
       toc={[
@@ -19,12 +20,12 @@ export default function Page() {
     >
       <header className="flex flex-col gap-2">
         <h1 className="text-title-1-medium text-text-primary">多智能体聊天</h1>
-        <p className="text-headline-medium text-text-secondary">
+        <p className="text-headline-regular text-text-secondary">
           智能体列表 + 任务执行步骤 + 智能体间协作记录。
         </p>
       </header>
 
-      <div id="preview" className="scroll-mt-14">
+      <div id="preview" className="@container min-w-0 scroll-mt-14">
         <MultiAgentChatTemplate />
       </div>
 

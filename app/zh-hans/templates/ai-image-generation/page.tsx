@@ -7,9 +7,10 @@ export const metadata: Metadata = { title: "AI 图像生成模板" };
 export default function Page() {
   return (
     <DocsLayout
+      variant="catalog"
       breadcrumbs={[
         { label: "BoardUI", href: "/" },
-        { label: "模板", href: "/zh-hans/components" },
+        { label: "模板", href: "/zh-hans/templates" },
         { label: "AI 图像生成" },
       ]}
       toc={[
@@ -19,12 +20,12 @@ export default function Page() {
     >
       <header className="flex flex-col gap-2">
         <h1 className="text-title-1-medium text-text-primary">AI 图像生成</h1>
-        <p className="text-headline-medium text-text-secondary">
+        <p className="text-headline-regular text-text-secondary">
           提示词输入 + 风格比例参数 + 生成结果网格，含加载态。
         </p>
       </header>
 
-      <div id="preview" className="scroll-mt-14">
+      <div id="preview" className="@container min-w-0 scroll-mt-14">
         <AiImageTemplate />
       </div>
 

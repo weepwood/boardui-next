@@ -459,3 +459,29 @@
 .docs-preview-canvas {
   background: var(--color-background-full);
 }
+
+
+/* Local application previews: separation without stacked shadows. */
+.bui-template-shell {
+  min-width: 0;
+  box-shadow: var(--shadow-card);
+}
+.bui-template-shell > header {
+  background: var(--color-background-primary-default);
+}
+.bui-template-panel {
+  box-shadow: var(--shadow-card);
+}
+.bui-template-shell :where(button, a, input, textarea, select):not([class*="focus-visible:"]):focus-visible {
+  outline: 2px solid var(--color-border-focus-ring);
+  outline-offset: 2px;
+}
+.bui-template-shell :where(button, a) {
+  -webkit-tap-highlight-color: transparent;
+}
+@media (prefers-reduced-motion: reduce) {
+  .docs-entry-card, .docs-search-field, .docs-preview-indicator,
+  .bui-template-shell :where(button, a) {
+    transition: none;
+  }
+}

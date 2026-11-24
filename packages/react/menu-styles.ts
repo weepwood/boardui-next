@@ -7,7 +7,7 @@
  * motion, and row treatments from here.
  */
 export const MENU_POPOVER_SURFACE = [
-  "z-50 max-w-[calc(100vw-32px)] overflow-y-auto",
+  "z-50 max-w-[calc(100vw-32px)] max-h-[calc(100dvh-32px)] overflow-y-auto overscroll-contain",
   "rounded-2xl border border-border-button-default bg-background-primary-default p-2.5 shadow-dropdown",
   "transition duration-150 ease-out motion-reduce:transition-none",
   "data-[entering]:opacity-0 data-[entering]:scale-95 data-[entering]:blur-[2px]",
@@ -22,7 +22,7 @@ export const MENU_ITEMS_CONTAINER = "flex w-full flex-col gap-1 outline-none";
 
 export const MENU_ITEM = [
   "flex w-full cursor-pointer items-center gap-2 rounded-2lg p-2 text-start",
-  "text-text-primary outline-none transition-colors",
+  "min-h-8 text-text-primary outline-none transition-colors duration-150 motion-reduce:transition-none",
 ].join(" ");
 
 export const MENU_ITEM_ACTIVE = "bg-dropdown-item-hover-background";

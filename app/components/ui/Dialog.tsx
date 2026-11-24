@@ -31,7 +31,7 @@ export function Dialog({
     <RACDialog
       {...props}
       className={cn(
-        "flex min-h-0 flex-col gap-2 overflow-clip py-4 outline-none",
+        "flex min-h-0 flex-col gap-4 overflow-clip py-5 outline-none",
         MODAL_SURFACE,
         "w-[480px] max-w-[calc(100vw-2rem)] max-h-[calc(100dvh-2rem)]",
         className
@@ -53,9 +53,9 @@ export function DialogHeader({
   onClose?: () => void;
 }) {
   return (
-    <div className="flex shrink-0 items-start gap-3 px-4">
-      <div className="flex min-w-0 flex-1 flex-col">
-        <Heading slot="title" className="py-1 text-body-medium text-text-primary">
+    <div className="flex shrink-0 items-start gap-3 px-5">
+      <div className="flex min-w-0 flex-1 flex-col gap-1">
+        <Heading slot="title" className="text-headline-medium text-text-primary">
           {title}
         </Heading>
         {description && (
@@ -71,13 +71,13 @@ export function DialogHeader({
 
 /** 弹窗内容区 */
 export function DialogBody({ children }: { children: React.ReactNode }) {
-  return <div className="flex min-h-0 flex-1 flex-col gap-3 overflow-y-auto px-4">{children}</div>;
+  return <div className="flex min-h-0 flex-1 flex-col gap-3 overflow-y-auto overscroll-contain px-5">{children}</div>;
 }
 
 /** 弹窗底部操作区 */
 export function DialogFooter({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex shrink-0 items-center justify-end gap-2 px-4 pt-1">{children}</div>
+    <div className="flex shrink-0 items-center justify-end gap-2 px-5 pt-1">{children}</div>
   );
 }
 

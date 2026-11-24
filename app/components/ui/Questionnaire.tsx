@@ -49,7 +49,7 @@ export function Questionnaire({
   return (
     <div
       className={cn(
-        "flex w-full max-w-[440px] flex-col gap-3 rounded-2lg border border-border-button-default",
+        "flex w-full max-w-[440px] flex-col gap-3 rounded-2xl border border-border-component-detail-container",
         "bg-background-primary-default p-4 shadow-card",
         className
       )}
@@ -80,7 +80,7 @@ export function Questionnaire({
             onChange={(e) => setAnswers({ ...answers, [q.id]: e.target.value })}
             rows={3}
             placeholder="输入你的回答…"
-            className="resize-none rounded-2lg border border-border-button-default bg-background-primary-default px-2.5 py-2 text-body-2-regular text-text-primary outline-none placeholder:text-text-placeholder focus:ring-2 focus:ring-accent-500/30"
+            className="resize-none rounded-2xl border border-border-component-detail-container bg-background-primary-default px-2.5 py-2 text-body-2-regular text-text-primary outline-none placeholder:text-text-placeholder focus:ring-2 focus:ring-accent-500/30"
           />
         ) : (
           q.options?.map((opt) => {

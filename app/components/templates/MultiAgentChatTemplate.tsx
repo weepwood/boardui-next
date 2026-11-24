@@ -75,9 +75,9 @@ export function MultiAgentChatTemplate() {
   const current = AGENTS.find((a) => a.id === selected)!;
 
   return (
-    <div className="flex min-h-[640px] w-full flex-col overflow-hidden rounded-3xl border border-border-button-default bg-background-primary-default shadow-sidebar lg:flex-row">
+    <div className="flex min-h-[640px] w-full flex-col overflow-hidden bui-template-shell rounded-3xl border border-border-component-detail-container bg-background-full  @3xl:flex-row">
       {/* 智能体列表 */}
-      <aside className="flex w-full shrink-0 flex-col gap-2 border-b border-separator-border p-3 lg:w-[220px] lg:border-b-0 lg:border-e">
+      <aside className="flex w-full shrink-0 flex-col gap-2 border-b border-separator-border bg-background-secondary-default p-3 @3xl:w-[220px] @3xl:border-b-0 @3xl:border-e">
         <div className="flex items-center justify-between px-1">
           <span className="text-body-2-medium text-text-primary">智能体 · 示例</span>
           <Badge variant="accent">{AGENTS.filter((a) => a.status !== "idle").length} 活跃</Badge>
@@ -101,7 +101,7 @@ export function MultiAgentChatTemplate() {
               <Avatar name={a.name} size="sm" />
               <div className="flex min-w-0 flex-1 flex-col gap-0.5">
                 <span className="truncate text-caption-1-medium text-text-primary">{a.name}</span>
-                <span className="truncate text-[10px] text-text-tertiary">{a.role}</span>
+                <span className="truncate text-caption-2-regular text-text-secondary">{a.role}</span>
                 <span className={cn("flex items-center gap-1 text-[10px]", meta.cls)}>
                   <span className={cn("size-1.5 rounded-full", meta.dot, a.status === "running" && "animate-pulse motion-reduce:animate-none")} />
                   {meta.label}
@@ -114,12 +114,12 @@ export function MultiAgentChatTemplate() {
 
       {/* 任务流 */}
       <div className="flex min-w-0 flex-1 flex-col">
-        <header className="flex items-center justify-between gap-2 border-b border-separator-border px-4 py-2.5">
+        <header className="flex flex-wrap items-center justify-between gap-2 border-b border-separator-border px-4 py-2.5">
           <div className="flex items-center gap-2">
             <Avatar name={current.name} size="md" />
             <div className="flex flex-col">
               <span className="text-body-2-medium text-text-primary">{current.name}</span>
-              <span className="text-[10px] text-text-tertiary">{current.role}</span>
+              <span className="text-caption-2-regular text-text-secondary">{current.role}</span>
             </div>
           </div>
           <Badge
@@ -162,7 +162,7 @@ export function MultiAgentChatTemplate() {
                   m.done ? "border-separator-border" : "border-accent-300 bg-badge-new-background"
                 )}
               >
-                <div className="flex items-center gap-1.5 text-[10px] text-text-tertiary">
+                <div className="flex items-center gap-1.5 text-caption-2-regular text-text-secondary">
                   <span className="font-medium text-text-secondary">{m.from}</span>
                   <Icon name="arrow-right-line" className="size-2.5" />
                   <span className="font-medium text-text-secondary">{m.to}</span>

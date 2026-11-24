@@ -7,9 +7,10 @@ export const metadata: Metadata = { title: "医疗档案模板" };
 export default function Page() {
   return (
     <DocsLayout
+      variant="catalog"
       breadcrumbs={[
         { label: "BoardUI", href: "/" },
-        { label: "模板", href: "/zh-hans/components" },
+        { label: "模板", href: "/zh-hans/templates" },
         { label: "医疗档案" },
       ]}
       toc={[
@@ -19,12 +20,12 @@ export default function Page() {
     >
       <header className="flex flex-col gap-2">
         <h1 className="text-title-1-medium text-text-primary">医疗档案</h1>
-        <p className="text-headline-medium text-text-secondary">
+        <p className="text-headline-regular text-text-secondary">
           患者概览、生命体征、活动圆环、用药与就诊时间线。
         </p>
       </header>
 
-      <div id="preview" className="scroll-mt-14">
+      <div id="preview" className="@container min-w-0 scroll-mt-14">
         <MedicalProfileTemplate />
       </div>
 

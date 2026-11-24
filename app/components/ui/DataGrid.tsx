@@ -63,12 +63,12 @@ export function DataGrid({
   return (
     <div
       className={cn(
-        "w-full overflow-hidden rounded-2lg border border-border-button-default",
+        "min-w-0 w-full overflow-hidden rounded-2xl border border-border-component-detail-container",
         "bg-background-primary-default",
         className
       )}
     >
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto overscroll-x-contain">
         <table aria-label="数据表格" className={cn("bui-table",density==="compact"&&"bui-table-sm")}>
           <thead>
             <tr className="bg-background-secondary-default">

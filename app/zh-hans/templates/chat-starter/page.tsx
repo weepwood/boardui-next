@@ -7,9 +7,10 @@ export const metadata: Metadata = { title: "聊天入门模板" };
 export default function Page() {
   return (
     <DocsLayout
+      variant="catalog"
       breadcrumbs={[
         { label: "BoardUI", href: "/" },
-        { label: "模板", href: "/zh-hans/components" },
+        { label: "模板", href: "/zh-hans/templates" },
         { label: "聊天入门" },
       ]}
       toc={[
@@ -19,12 +20,12 @@ export default function Page() {
     >
       <header className="flex flex-col gap-2">
         <h1 className="text-title-1-medium text-text-primary">聊天入门</h1>
-        <p className="text-headline-medium text-text-secondary">
+        <p className="text-headline-regular text-text-secondary">
           空白态引导：品牌标记、四张建议卡片、首条输入框。
         </p>
       </header>
 
-      <div id="preview" className="scroll-mt-14">
+      <div id="preview" className="@container min-w-0 scroll-mt-14">
         <ChatStarterTemplate />
       </div>
 

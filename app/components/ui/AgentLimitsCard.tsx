@@ -21,7 +21,7 @@ export function AgentLimitsCard({
   return (
     <div
       className={cn(
-        "flex w-full flex-col gap-2.5 rounded-2lg border border-border-button-default",
+        "flex w-full flex-col gap-2.5 rounded-2xl border border-border-component-detail-container",
         "bg-background-primary-default p-3 shadow-card",
         className
       )}
@@ -44,7 +44,7 @@ export function AgentLimitsCard({
             <div key={l.id} className="flex flex-col gap-1">
               <div className="flex items-baseline justify-between gap-2">
                 <span className="text-caption-1-regular text-text-secondary">{l.label}</span>
-                <span className="text-[10px] tabular-nums text-text-tertiary">
+                <span className="text-caption-2-regular tabular-nums text-text-secondary">
                   {l.used}
                   {l.unit ?? ""} / {l.max}
                   {l.unit ?? ""}
@@ -52,7 +52,7 @@ export function AgentLimitsCard({
               </div>
               <div className="h-1.5 w-full overflow-hidden rounded-full bg-background-tertiary-default">
                 <div
-                  className={cn("h-full rounded-full transition-[width] duration-500 ease-bui", tone)}
+                  className={cn("h-full rounded-full transition-[width] duration-300 ease-bui motion-reduce:transition-none", tone)}
                   style={{ width: `${pct}%` }}
                 />
               </div>
@@ -62,7 +62,7 @@ export function AgentLimitsCard({
       </div>
 
       {resetText && (
-        <div className="flex items-center gap-1 border-t border-separator-border pt-2 text-[10px] text-text-tertiary">
+        <div className="flex items-center gap-1 border-t border-separator-border pt-2 text-caption-2-regular text-text-secondary">
           <Icon name="refresh-line" className="size-3" />
           {resetText}
         </div>

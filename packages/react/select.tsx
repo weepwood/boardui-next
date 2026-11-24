@@ -101,9 +101,9 @@ export function Select<T extends object>({
               "flex w-full cursor-pointer items-center justify-between rounded-2lg",
               "border border-border-button-default bg-background-primary-default shadow-xs",
               "text-text-primary",
-              "transition-[background-color,border-color,box-shadow,padding,font-size] duration-200 ease motion-reduce:transition-none",
+              "transition-[background-color,border-color,box-shadow] duration-200 ease motion-reduce:transition-none",
               "hover:bg-background-primary-hover hover:border-border-button-hover",
-              "outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-border-focus-ring",
+              "outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-border-focus-ring",
               "disabled:cursor-not-allowed disabled:bg-background-primary-disabled disabled:text-text-tertiary disabled:shadow-none",
               size === "sm"
                 ? "gap-1 px-[7px] py-1 text-body-2-medium"
@@ -141,7 +141,7 @@ export function Select<T extends object>({
           >
             <AriaListBox
               items={items}
-              className={cx(MENU_ITEMS_CONTAINER, "max-h-[240px] overflow-auto")}
+              className={cx(MENU_ITEMS_CONTAINER, "max-h-[min(240px,50dvh)] overflow-auto overscroll-contain")}
             >
               <SelectSizeContext.Provider value={size}>{children}</SelectSizeContext.Provider>
             </AriaListBox>
