@@ -109,7 +109,7 @@ try{
           const demo=page.locator('#preview');
           await demo.getByRole('button',{name:'数量'}).click();
           assert.ok((await demo.locator('tbody tr').first().textContent()).includes('IT-002'));
-          await demo.getByRole('checkbox',{name:'全选'}).click();
+          await demo.getByRole('checkbox',{name:'全选'}).press('Space');
           await demo.getByText('已选 3 项').waitFor();
           await demo.getByRole('button',{name:'清除选择'}).click();
           assert.ok(!(await demo.getByRole('checkbox',{name:'全选'}).isChecked()));
@@ -145,11 +145,11 @@ try{
           await demo.getByText('sample.pdf',{exact:true}).waitFor({state:'hidden'});
         }
         if(route==='/zh-hans/components/avatar/'){
-          await page.getByLabel('回退头像',{exact:true}).getByText('A',{exact:true}).waitFor();
+          await page.waitForFunction(()=>document.querySelector('[aria-label="回退头像"]')?.textContent==='A');
         }
         if(route==='/zh-hans/components/chip/'){
           const filters=page.locator('#filters');
-          const btn=filters.getByRole('button').first();
+          const btn=filters.locator('button[aria-pressed]').first();
           const prev=await btn.getAttribute('aria-pressed');
           await btn.click();
           assert.notEqual(await btn.getAttribute('aria-pressed'),prev);
@@ -238,7 +238,7 @@ try{
           await dialog.getByRole('textbox',{name:'邮箱地址'}).fill('demo@example.com');
           await page.keyboard.press('Escape');
           await dialog.waitFor({state:'hidden'});
-          assert.ok(await trigger.evaluate(e=>document.activeElement===e));
+          await page.waitForFunction(e=>document.activeElement===e,await trigger.elementHandle());
         }
         if(route==='/zh-hans/components/drawer/'){
           await page.getByRole('button',{name:'打开抽屉'}).click();

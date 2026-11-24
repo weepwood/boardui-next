@@ -1,6 +1,6 @@
 // BoardUI MIT source, pinned upstream; see LICENSE.
 "use client";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 /* eslint-disable @next/next/no-img-element */
 import type { HTMLAttributes, Ref } from "react";
 import { cx, sortCx } from "./cx";
@@ -64,6 +64,8 @@ export function Avatar({
   ...props
 }: AvatarProps) {
   const [failed,setFailed]=useState<string|null>(null);
+  const imageRef=useRef<HTMLImageElement>(null);
+  useEffect(()=>{const image=imageRef.current;if(src&&image?.complete&&image.naturalWidth===0)setFailed(src)},[src]);
   return (
     <span
       ref={ref}
@@ -72,7 +74,7 @@ export function Avatar({
     >
       {src && failed!==src ? (
         <img
-          src={src} onError={()=>setFailed(src)}
+          ref={imageRef} src={src} onError={()=>setFailed(src)}
           alt={alt ?? ""}
           loading="lazy"
           decoding="async"
