@@ -1,16 +1,38 @@
-name: 日常检查
+name: 日常检查与风险专项
 on:
   pull_request:
-  push:
-    branches: [main]
   workflow_dispatch:
 permissions:
   contents: read
 concurrency:
-  group: ci-${{ github.ref }}
+  group: quick-${{ github.ref }}
   cancel-in-progress: true
 jobs:
-  check:
+  quick:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    outputs:
+      risk: ${{ steps.risk.outputs.risk }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run typecheck
+      - id: risk
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          FORCE_RISK: ${{ contains(github.event.pull_request.labels.*.name, 'high-risk') }}
+        run: node scripts/classify-risk.mjs
+  targeted:
+    needs: quick
+    if: needs.quick.outputs.risk == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -20,6 +42,14 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: npm test
-      - run: npm run typecheck
-      - run: npm run build
+      - uses: actions/cache@v4
+        with:
+          path: .next/cache
+          key: next-pages-${{ runner.os }}-${{ hashFiles('package-lock.json') }}-${{ github.sha }}
+          restore-keys: |
+            next-pages-${{ runner.os }}-${{ hashFiles('package-lock.json') }}-
+      - run: npm run build:pages
+      - run: npm run test:export
+      - run: npm install --no-save --package-lock=false playwright@1.56.1
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:browser -- --targeted

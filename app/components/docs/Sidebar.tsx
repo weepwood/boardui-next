@@ -57,7 +57,7 @@ function TreeGuide({ active }: { active: boolean }) {
 
 function NavLink({ item }: { item: NavItem }) {
   const pathname = usePathname();
-  const active = pathname === item.href.split("#")[0];
+  const active = pathname.replace(/\/$/, "") === item.href.split("#")[0].replace(/\/$/, "");
 
   return (
     <Link

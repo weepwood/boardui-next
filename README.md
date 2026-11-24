@@ -1,5 +1,9 @@
 # BoardUI 复刻工程
 
+> CI 原则：日常迭代快速检查，高风险改动专项验证，正式发布完整验收。详见 [CI 与部署](docs/ci-and-pages.md)。
+>
+> GitHub Pages 预览（首次部署成功后可用）：https://weepwood.github.io/boardui-next/
+
 基于 **Next.js 15 + React Aria Components + Tailwind v4**，对 BoardUI 官网文档站进行 1:1 复刻。
 
 ## 快速开始
