@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { docs } from "@/lib/docs/registry";
-const ported=new Set(["button","icon-button","button-group","close-button","checkbox","radio","switch","input","textarea","tabs","segmented-control","select","dropdown","tooltip","notification","announcement","date-picker","slider","input-otp","avatar","badge","chip","pagination","table","tree-view"]);
+const ported=new Set(["button","icon-button","button-group","close-button","checkbox","radio","switch","input","textarea","tabs","segmented-control","select","dropdown","tooltip","notification","announcement","date-picker","slider","input-otp","avatar","badge","chip","pagination","table","tree-view","breadcrumb","agent-thinking","composer-loader"]);
 export function CatalogCard({slug,title,description,href,isPro,isNew}:{slug:string;title:string;description:string;href:string;isPro?:boolean;isNew?:boolean}) {
   const doc=docs[slug];
   const preview=ported.has(slug)&&doc;

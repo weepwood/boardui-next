@@ -90,7 +90,7 @@
       "tier": "free",
       "upstreamStatus": "shipped",
       "localRoute": "/zh-hans/components/breadcrumb",
-      "implementation": "existing-unverified",
+      "implementation": "ported-unverified",
       "sourcePolicy": "verify-public-source",
       "verification": {
         "visual": "pending",
@@ -99,7 +99,14 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "sourcePaths": [
+        "components/base/breadcrumb/breadcrumb.tsx"
+      ],
+      "localPaths": [
+        "packages/react/breadcrumb.tsx"
+      ],
+      "notes": "固定上游 MIT 公开实现，中文兼容适配；专项验收待完成。"
     },
     {
       "slug": "button",
@@ -710,7 +717,7 @@
       "tier": "free",
       "upstreamStatus": "shipped",
       "localRoute": "/zh-hans/components/agent-thinking",
-      "implementation": "existing-unverified",
+      "implementation": "ported-unverified",
       "sourcePolicy": "verify-public-source",
       "verification": {
         "visual": "pending",
@@ -719,14 +726,21 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "sourcePaths": [
+        "components/application/agent-thinking/agent-thinking.tsx"
+      ],
+      "localPaths": [
+        "packages/react/agent-thinking.tsx"
+      ],
+      "notes": "固定上游 MIT 公开实现，中文兼容适配；专项验收待完成。"
     },
     {
       "slug": "composer-loader",
       "tier": "free",
       "upstreamStatus": "shipped",
       "localRoute": "/zh-hans/components/composer-loader",
-      "implementation": "existing-unverified",
+      "implementation": "ported-unverified",
       "sourcePolicy": "verify-public-source",
       "verification": {
         "visual": "pending",
@@ -735,7 +749,14 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "sourcePaths": [
+        "components/application/composer-loader/composer-loader.tsx"
+      ],
+      "localPaths": [
+        "packages/react/composer-loader.tsx"
+      ],
+      "notes": "固定上游 MIT 公开实现，中文兼容适配；专项验收待完成。"
     },
     {
       "slug": "composer-panel",
@@ -1704,7 +1725,8 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "notes": "独立本地实现，统一原版视觉令牌、SVG 和键盘/焦点交互；非直接移植 Pro 源码。"
     },
     {
       "slug": "date-calendar",
@@ -1763,7 +1785,8 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "notes": "独立本地实现，统一原版视觉令牌、SVG 和键盘/焦点交互；非直接移植 Pro 源码。"
     },
     {
       "slug": "composer",

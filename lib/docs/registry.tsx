@@ -6,6 +6,8 @@
  * 演示内容用 JSX 直接定义，保证可交互。
  */
 import { useState } from "react";
+import { Toolbar } from "@/packages/react/toolbar";
+import { AgentComposer } from "@/packages/react/agent-composer";
 import { Chip as StatusChip } from "@/packages/react/chip";
 import { StatusDot } from "@/packages/react/status-dot";
 import { Avatar as CoreAvatar } from "@/packages/react/avatar";
@@ -215,6 +217,14 @@ function DropdownSurfaceDemo(){
 }
 function PopoverDemo(){
   return <DialogTrigger><Button variant="secondary">打开浮层</Button><Popover className="w-64"><Dialog aria-label="设置浮层" className="flex flex-col gap-3 outline-none"><p className="text-body-medium">快速设置</p><Input label="名称" placeholder="输入名称"/><Button slot="close" variant="secondary">关闭</Button></Dialog></Popover></DialogTrigger>;
+}
+function ToolbarDemo(){
+  const [last,setLast]=useState("—");
+  return <div className="flex flex-col items-center gap-2"><Toolbar aria-label="编辑工具栏" actions={[{id:"undo",label:"撤销",icon:"arrow-go-back-line",onAction:()=>setLast("撤销")},{id:"redo",label:"重做",icon:"arrow-go-forward-line",onAction:()=>setLast("重做")},{id:"copy",label:"复制",icon:"file-copy-line",onAction:()=>setLast("复制")}]}/><output>操作：{last}</output></div>;
+}
+function FreeComposerDemo(){
+  const [value,setValue]=useState(""),[busy,setBusy]=useState(false),[count,setCount]=useState(0);
+  return <div className="w-full max-w-lg"><AgentComposer value={value} onValueChange={setValue} busy={busy} onStop={()=>setBusy(false)} onSubmit={()=>{setCount(c=>c+1);setValue("");setBusy(true)}} messageCount={count}/><p className="mt-2 text-caption-1-regular text-text-tertiary">本地交互演示，未连接模型服务。</p></div>;
 }
 export const docs: Record<string, Doc> = {
   button: {
@@ -939,7 +949,7 @@ export const docs: Record<string, Doc> = {
 
   "context-menu": {
     title: "右键菜单",
-    description: "区域内右键唤出，位置自动避让视口边界，点击外部关闭。",
+    description: "右键或 Shift+F10 打开，支持键盘方向导航、边界避让及焦点恢复。",
     install: "npx boardui@latest add context-menu",
     preview: <ContextMenuDemo />,
     demos: [],
@@ -990,7 +1000,7 @@ export const docs: Record<string, Doc> = {
     description: "多行自适应输入，Enter 发送、Shift+Enter 换行，带工具按钮与发送态。",
     install: "npx boardui@latest add composer",
     preview: <ComposerDemo />,
-    demos: [],
+    demos: [{id:"free-composer",title:"原版免费对话输入",node:<FreeComposerDemo/>},{id:"toolbar",title:"键盘工具栏",node:<ToolbarDemo/>}],
   },
 
   "composer-attachments": {
@@ -1003,7 +1013,7 @@ export const docs: Record<string, Doc> = {
 
   "composer-loader": {
     title: "输入框加载",
-    description: "AI 生成中的三点跳动占位。",
+    description: "原版 SVG 环绕光带、渐变辉光及淡入淡出，支持减少动效。",
     install: "npx boardui@latest add composer-loader",
     preview: (
       <div className="flex w-full max-w-sm flex-col gap-2">
@@ -1085,12 +1095,14 @@ export const docs: Record<string, Doc> = {
 
   "agent-thinking": {
     title: "智能体思考状态",
-    description: "闪烁星标 + 流光文字，用于 AI 推理中的占位。",
+    description: "原版四种思考动画（波浪、旋转、星光、无穷），支持主题语义色、流光与计时。",
     install: "npx boardui@latest add agent-thinking",
     preview: (
       <div className="flex flex-col items-start gap-2">
         <AgentThinking text="正在分析你的请求" />
-        <AgentThinking text="正在整理 12 个来源" />
+        <AgentThinking text="正在整理 12 个来源" variant="spin" />
+        <AgentThinking text="正在构思方案" variant="stars" />
+        <AgentThinking text="正在生成回复" variant="infinity" tone="accent" />
       </div>
     ),
     demos: [],
@@ -1154,7 +1166,7 @@ export const docs: Record<string, Doc> = {
 
   sidebar: {
     title: "侧边栏",
-    description: "图标 + 文字 + 二级展开 + 收起模式。",
+    description: "260/60px 浮动侧栏，固定图标位置、渐变选中态及文字渐隐，支持二级导航。",
     install: "npx boardui@latest add sidebar",
     preview: <AppSidebarDemo />,
     demos: [],
@@ -1702,7 +1714,7 @@ function ComposerDemo() {
   const [log, setLog] = useState("—");
   return (
     <div className="w-full max-w-sm">
-      <Composer onSend={(v) => v.trim() && setLog(v)} />
+      <Composer onSend={(v) => v.trim() && setLog(v)} onAttach={()=>setLog("选择附件")} />
       <span className="mt-1 block text-caption-2-regular text-text-tertiary">已发送：{log}</span>
     </div>
   );
@@ -1821,9 +1833,10 @@ function SettingsDemo() {
 }
 
 function AppSidebarDemo() {
+  const [active,setActive]=useState("home");
   return (
     <div className="h-[340px]">
-      <AppSidebar
+      <AppSidebar active={active} onActiveChange={setActive} user={{name:"张三",description:"个人工作区"}}
         items={[
           { id: "home", label: "概览", icon: "dashboard-line" },
           { id: "docs", label: "文档", icon: "book-open-line", children: [{ id: "d1", label: "按钮" }, { id: "d2", label: "表格" }] },
