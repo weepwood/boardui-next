@@ -8,7 +8,7 @@ import { RiNotification3Line } from "@remixicon/react";
  * 每个条目包含：标题、描述、预览演示、分节演示、代码示例。
  * 演示通过惰性工厂创建：共享模块保留缓存，只创建当前需要的 JSX。
  */
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Select as FilterSelect, SelectItem as FilterOption } from "@/packages/react/select";
 import { Toolbar } from "@/packages/react/toolbar";
 import { AgentComposer } from "@/packages/react/agent-composer";
@@ -21,7 +21,7 @@ import { RiMailLine, RiSearchLine, RiAddLine as AddGlyph, RiEditLine as EditGlyp
 import type { ReactNode } from "react";
 
 import { Button } from "@/app/components/ui/Button";
-import { AriaButton, Button as NativeButton, ButtonLink, IconButton as CoreIconButton, ButtonGroup as CoreButtonGroup, ButtonGroupItem, CloseButton as CoreCloseButton } from "@/packages/react";
+import { AriaButton, Button as NativeButton, ButtonLink, IconButton as CoreIconButton, ButtonGroup as CoreButtonGroup, ButtonGroupItem, CloseButton as CoreCloseButton, DirectionProvider } from "@/packages/react";
 import { IconButton } from "@/app/components/ui/IconButton";
 import { Chip } from "@/app/components/ui/Chip";
 import { Input } from "@/app/components/ui/Input";
@@ -182,6 +182,25 @@ function PeriodButtonGroupDemo(){
  const [value,setValue]=useState("month");
  return <CoreButtonGroup aria-label="时间范围">{[["day","日"],["week","周"],["month","月份"],["year","年份"]].map(([id,label])=><ButtonGroupItem key={id} selected={value===id} onClick={()=>setValue(id)}>{label}</ButtonGroupItem>)}</CoreButtonGroup>;
 }
+function CloseButtonStateDemo(){
+  const [count,setCount]=useState(0),[submitted,setSubmitted]=useState(0),[rtl,setRtl]=useState(false),[refReady,setRefReady]=useState(false);
+  const closeRef=useRef<HTMLButtonElement>(null);
+  return <div data-testid="close-button-states" className="flex min-w-0 flex-col gap-3">
+    <label className="flex items-center gap-2 text-body-2-regular text-text-secondary"><input type="checkbox" checked={rtl} onChange={e=>setRtl(e.target.checked)}/>RTL</label>
+    <DirectionProvider locale={rtl?"ar":"zh-CN"} data-testid="close-button-direction">
+      <form className="flex flex-wrap items-center gap-5" onSubmit={e=>{e.preventDefault();setSubmitted(v=>v+1)}}>
+        <CoreCloseButton ref={closeRef} aria-label="关闭可用" onClick={()=>setCount(v=>v+1)} data-testid="close-default"/>
+        <CoreCloseButton disabled aria-label="关闭禁用" onClick={()=>setCount(v=>v+100)} data-testid="close-disabled"/>
+        <CoreCloseButton size="sm" type="submit" aria-label="提交表单" data-testid="close-submit"/>
+        <CloseButton aria-label="关闭兼容按钮" onPress={()=>setCount(v=>v+1)} />
+        <CloseButton aria-label="兼容禁用" isDisabled onPress={()=>setCount(v=>v+100)} />
+      </form>
+      <button type="button" className="text-body-2-regular text-text-primary underline" onClick={()=>{setRefReady(closeRef.current instanceof HTMLButtonElement);closeRef.current?.focus()}}>聚焦关闭按钮</button>
+      <output aria-live="polite" className="text-caption-1-regular text-text-secondary">{count} / {submitted} / {String(refReady)}</output>
+    </DirectionProvider>
+  </div>
+}
+
 function ButtonFamilyDemo() {
   const [selection,setSelection]=useState("left");
   const [count,setCount]=useState(0);
@@ -819,7 +838,7 @@ import { RiArrowRightLine } from "@remixicon/react";
     title: "关闭按钮",
     description: "原版独立 SVG 路径：16 / 20 / 24 / 32px 容器及各自精确线宽。",
     preview: () => (<div className="flex items-end gap-5">{([{size:"2xs",label:"2xs",px:16},{size:"xs",label:"xs",px:20},{size:"sm",label:"SM",px:24},{size:"md",label:"MD",px:32}] as const).map(({size,label,px})=><div key={size} className="flex flex-col items-center gap-2"><CoreCloseButton size={size} aria-label={"关闭 "+px}/><span className="text-caption-2-regular text-text-secondary">{label}</span></div>)}</div>),
-    demos: () => ([{id:"legacy",title:"旧版兼容样式",node:<><CloseButton size="sm"/><CloseButton size="lg"/><CloseButton variant="filled"/></>}]),
+    demos: () => ([{id:"states",title:"交互与方向",node:<CloseButtonStateDemo/>},{id:"legacy",title:"旧版兼容样式",node:<><CloseButton size="sm"/><CloseButton size="lg"/><CloseButton variant="filled"/></>}]),
   },
 
   "link-button": {

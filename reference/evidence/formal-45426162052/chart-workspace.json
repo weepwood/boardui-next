@@ -1,0 +1,167 @@
+{
+  "browser": "chromium",
+  "results": [
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/radar-chart-card/",
+      "name": "触摸数据点、动态值、可访问状态",
+      "browser": "chromium",
+      "details": {
+        "initial": "速度85",
+        "violations": [],
+        "aria": "- combobox \"查看图表数据点\":\n  - option \"选择\"\n  - option \"速度\" [selected]\n  - option \"体积\"\n  - option \"复用\"\n  - option \"文档\"\n  - option \"无障碍\""
+      },
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/radial-chart-card/",
+      "name": "触摸数据点、动态值、可访问状态",
+      "browser": "chromium",
+      "details": {
+        "initial": "铬镀275",
+        "violations": [],
+        "aria": "- combobox \"查看图表数据点\":\n  - option \"选择\"\n  - option \"铬镀\" [selected]\n  - option \"狩猎之旅\"\n  - option \"火狐浏览器\"\n  - option \"边缘\"\n  - option \"其他\""
+      },
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/heatmap-chart-card/",
+      "name": "触摸数据点、动态值、可访问状态",
+      "browser": "chromium",
+      "details": {
+        "initial": "第 1 周 第 1 天3",
+        "violations": [],
+        "aria": "- combobox \"查看图表数据点\":\n  - option \"选择\"\n  - option \"第 1 周 第 1 天\" [selected]\n  - option \"第 1 周 第 2 天\"\n  - option \"第 1 周 第 3 天\"\n  - option \"第 1 周 第 4 天\"\n  - option \"第 1 周 第 5 天\"\n  - option \"第 1 周 第 6 天\"\n  - option \"第 1 周 第 7 天\"\n  - option \"第 2 周 第 1 天\"\n  - option \"第 2 周 第 2 天\"\n  - option \"第 2 周 第 3 天\"\n  - option \"第 2 周 第 4 天\"\n  - option \"第 2 周 第 5 天\"\n  - option \"第 2 周 第 6 天\"\n  - option \"第 2 周 第 7 天\"\n  - option \"第 3 周 第 1 天\"\n  - option \"第 3 周 第 2 天\"\n  - option \"第 3 周 第 3 天\"\n  - option \"第 3 周 第 4 天\"\n  - option \"第 3 周 第 5 天\"\n  - option \"第 3 周 第 6 天\"\n  - option \"第 3 周 第 7 天\"\n  - option \"第 4 周 第 1 天\"\n  - option \"第 4 周 第 2 天\"\n  - option \"第 4 周 第 3 天\"\n  - option \"第 4 周 第 4 天\"\n  - option \"第 4 周 第 5 天\"\n  - option \"第 4 周 第 6 天\"\n  - option \"第 4 周 第 7 天\"\n  - option \"第 5 周 第 1 天\"\n  - option \"第 5 周 第 2 天\"\n  - option \"第 5 周 第 3 天\"\n  - option \"第 5 周 第 4 天\"\n  - option \"第 5 周 第 5 天\"\n  - option \"第 5 周 第 6 天\"\n  - option \"第 5 周 第 7 天\"\n  - option \"第 6 周 第 1 天\"\n  - option \"第 6 周 第 2 天\"\n  - option \"第 6 周 第 3 天\"\n  - option \"第 6 周 第 4 天\"\n  - option \"第 6 周 第 5 天\"\n  - option \"第 6 周 第 6 天\"\n  - option \"第 6 周 第 7 天\"\n  - option \"第 7 周 第 1 天\"\n  - option \"第 7 周 第 2 天\"\n  - option \"第 7 周 第 3 天\"\n  - option \"第 7 周 第 4 天\"\n  - option \"第 7 周 第 5 天\"\n  - option \"第 7 周 第 6 天\"\n  - option \"第 7 周 第 7 天\"\n  - option \"第 8 周 第 1 天\"\n  - option \"第 8 周 第 2 天\"\n  - option \"第 8 周 第 3 天\"\n  - option \"第 8 周 第 4 天\"\n  - option \"第 8 周 第 5 天\"\n  - option \"第 8 周 第 6 天\"\n  - option \"第 8 周 第 7 天\"\n  - option \"第 9 周 第 1 天\"\n  - option \"第 9 周 第 2 天\"\n  - option \"第 9 周 第 3 天\"\n  - option \"第 9 周 第 4 天\"\n  - option \"第 9 周 第 5 天\"\n  - option \"第 9 周 第 6 天\"\n  - option \"第 9 周 第 7 天\"\n  - option \"第 10 周 第 1 天\"\n  - option \"第 10 周 第 2 天\"\n  - option \"第 10 周 第 3 天\"\n  - option \"第 10 周 第 4 天\"\n  - option \"第 10 周 第 5 天\"\n  - option \"第 10 周 第 6 天\"\n  - option \"第 10 周 第 7 天\"\n  - option \"第 11 周 第 1 天\"\n  - option \"第 11 周 第 2 天\"\n  - option \"第 11 周 第 3 天\"\n  - option \"第 11 周 第 4 天\"\n  - option \"第 11 周 第 5 天\"\n  - option \"第 11 周 第 6 天\"\n  - option \"第 11 周 第 7 天\"\n  - option \"第 12 周 第 1 天\"\n  - option \"第 12 周 第 2 天\"\n  - option \"第 12 周 第 3 天\"\n  - option \"第 12 周 第 4 天\"\n  - option \"第 12 周 第 5 天\"\n  - option \"第 12 周 第 6 天\"\n  - option \"第 12 周 第 7 天\"\n  - option \"第 13 周 第 1 天\"\n  - option \"第 13 周 第 2 天\"\n  - option \"第 13 周 第 3 天\"\n  - option \"第 13 周 第 4 天\"\n  - option \"第 13 周 第 5 天\"\n  - option \"第 13 周 第 6 天\"\n  - option \"第 13 周 第 7 天\"\n  - option \"第 14 周 第 1 天\"\n  - option \"第 14 周 第 2 天\"\n  - option \"第 14 周 第 3 天\"\n  - option \"第 14 周 第 4 天\"\n  - option \"第 14 周 第 5 天\"\n  - option \"第 14 周 第 6 天\"\n  - option \"第 14 周 第 7 天\"\n  - option \"第 15 周 第 1 天\"\n  - option \"第 15 周 第 2 天\"\n  - option \"第 15 周 第 3 天\"\n  - option \"第 15 周 第 4 天\"\n  - option \"第 15 周 第 5 天\"\n  - option \"第 15 周 第 6 天\"\n  - option \"第 15 周 第 7 天\"\n  - option \"第 16 周 第 1 天\"\n  - option \"第 16 周 第 2 天\"\n  - option \"第 16 周 第 3 天\"\n  - option \"第 16 周 第 4 天\"\n  - option \"第 16 周 第 5 天\"\n  - option \"第 16 周 第 6 天\"\n  - option \"第 16 周 第 7 天\""
+      },
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/scatter-chart-card/",
+      "name": "触摸数据点、动态值、可访问状态",
+      "browser": "chromium",
+      "details": {
+        "initial": "样本 1X: 12 · Y: 24",
+        "violations": [],
+        "aria": "- combobox \"查看图表数据点\":\n  - option \"选择\"\n  - option \"样本 1\" [selected]\n  - option \"样本 2\"\n  - option \"样本 3\"\n  - option \"样本 4\"\n  - option \"样本 5\"\n  - option \"样本 6\"\n  - option \"样本 7\"\n  - option \"样本 8\"\n  - option \"样本 9\"\n  - option \"样本 10\"\n  - option \"样本 11\"\n  - option \"样本 12\""
+      },
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/combo-chart-card/",
+      "name": "触摸数据点、动态值、可访问状态",
+      "browser": "chromium",
+      "details": {
+        "initial": "第 1 期柱：42 · 线：24",
+        "violations": [],
+        "aria": "- combobox \"查看图表数据点\":\n  - option \"选择\"\n  - option \"第 1 期\" [selected]\n  - option \"第 2 期\"\n  - option \"第 3 期\"\n  - option \"第 4 期\"\n  - option \"第 5 期\"\n  - option \"第 6 期\"\n  - option \"第 7 期\""
+      },
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "route": "/workspace/project-board/",
+      "name": "独立看板移动端表单与打开弹窗 axe",
+      "browser": "chromium",
+      "details": {
+        "violations": [],
+        "aria": "- dialog \"编辑任务\":\n  - heading \"编辑任务\" [level=2]\n  - paragraph: 修改任务标题或移动到其他状态；同列编辑保留原顺序。\n  - button \"关闭\"\n  - text: 任务标题\n  - textbox \"编辑任务标题\": 记录智能体操作的审计跟踪\n  - text: 任务状态\n  - combobox \"移动至\":\n    - option \"积压\" [selected]\n    - option \"要做的事\"\n    - option \"进行中\"\n    - option \"已完成\"\n  - button \"取消\"\n  - button \"保存任务\""
+      },
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "route": "/workspace/ai-chat/",
+      "name": "移动端会话操作",
+      "browser": "chromium",
+      "details": {
+        "violations": []
+      },
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/radar-chart-card/",
+      "name": "触摸数据点、动态值、可访问状态",
+      "browser": "chromium",
+      "details": {
+        "initial": "速度85",
+        "violations": [],
+        "aria": "- combobox \"查看图表数据点\":\n  - option \"选择\"\n  - option \"速度\" [selected]\n  - option \"体积\"\n  - option \"复用\"\n  - option \"文档\"\n  - option \"无障碍\""
+      },
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/radial-chart-card/",
+      "name": "触摸数据点、动态值、可访问状态",
+      "browser": "chromium",
+      "details": {
+        "initial": "铬镀275",
+        "violations": [],
+        "aria": "- combobox \"查看图表数据点\":\n  - option \"选择\"\n  - option \"铬镀\" [selected]\n  - option \"狩猎之旅\"\n  - option \"火狐浏览器\"\n  - option \"边缘\"\n  - option \"其他\""
+      },
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/heatmap-chart-card/",
+      "name": "触摸数据点、动态值、可访问状态",
+      "browser": "chromium",
+      "details": {
+        "initial": "第 1 周 第 1 天3",
+        "violations": [],
+        "aria": "- combobox \"查看图表数据点\":\n  - option \"选择\"\n  - option \"第 1 周 第 1 天\" [selected]\n  - option \"第 1 周 第 2 天\"\n  - option \"第 1 周 第 3 天\"\n  - option \"第 1 周 第 4 天\"\n  - option \"第 1 周 第 5 天\"\n  - option \"第 1 周 第 6 天\"\n  - option \"第 1 周 第 7 天\"\n  - option \"第 2 周 第 1 天\"\n  - option \"第 2 周 第 2 天\"\n  - option \"第 2 周 第 3 天\"\n  - option \"第 2 周 第 4 天\"\n  - option \"第 2 周 第 5 天\"\n  - option \"第 2 周 第 6 天\"\n  - option \"第 2 周 第 7 天\"\n  - option \"第 3 周 第 1 天\"\n  - option \"第 3 周 第 2 天\"\n  - option \"第 3 周 第 3 天\"\n  - option \"第 3 周 第 4 天\"\n  - option \"第 3 周 第 5 天\"\n  - option \"第 3 周 第 6 天\"\n  - option \"第 3 周 第 7 天\"\n  - option \"第 4 周 第 1 天\"\n  - option \"第 4 周 第 2 天\"\n  - option \"第 4 周 第 3 天\"\n  - option \"第 4 周 第 4 天\"\n  - option \"第 4 周 第 5 天\"\n  - option \"第 4 周 第 6 天\"\n  - option \"第 4 周 第 7 天\"\n  - option \"第 5 周 第 1 天\"\n  - option \"第 5 周 第 2 天\"\n  - option \"第 5 周 第 3 天\"\n  - option \"第 5 周 第 4 天\"\n  - option \"第 5 周 第 5 天\"\n  - option \"第 5 周 第 6 天\"\n  - option \"第 5 周 第 7 天\"\n  - option \"第 6 周 第 1 天\"\n  - option \"第 6 周 第 2 天\"\n  - option \"第 6 周 第 3 天\"\n  - option \"第 6 周 第 4 天\"\n  - option \"第 6 周 第 5 天\"\n  - option \"第 6 周 第 6 天\"\n  - option \"第 6 周 第 7 天\"\n  - option \"第 7 周 第 1 天\"\n  - option \"第 7 周 第 2 天\"\n  - option \"第 7 周 第 3 天\"\n  - option \"第 7 周 第 4 天\"\n  - option \"第 7 周 第 5 天\"\n  - option \"第 7 周 第 6 天\"\n  - option \"第 7 周 第 7 天\"\n  - option \"第 8 周 第 1 天\"\n  - option \"第 8 周 第 2 天\"\n  - option \"第 8 周 第 3 天\"\n  - option \"第 8 周 第 4 天\"\n  - option \"第 8 周 第 5 天\"\n  - option \"第 8 周 第 6 天\"\n  - option \"第 8 周 第 7 天\"\n  - option \"第 9 周 第 1 天\"\n  - option \"第 9 周 第 2 天\"\n  - option \"第 9 周 第 3 天\"\n  - option \"第 9 周 第 4 天\"\n  - option \"第 9 周 第 5 天\"\n  - option \"第 9 周 第 6 天\"\n  - option \"第 9 周 第 7 天\"\n  - option \"第 10 周 第 1 天\"\n  - option \"第 10 周 第 2 天\"\n  - option \"第 10 周 第 3 天\"\n  - option \"第 10 周 第 4 天\"\n  - option \"第 10 周 第 5 天\"\n  - option \"第 10 周 第 6 天\"\n  - option \"第 10 周 第 7 天\"\n  - option \"第 11 周 第 1 天\"\n  - option \"第 11 周 第 2 天\"\n  - option \"第 11 周 第 3 天\"\n  - option \"第 11 周 第 4 天\"\n  - option \"第 11 周 第 5 天\"\n  - option \"第 11 周 第 6 天\"\n  - option \"第 11 周 第 7 天\"\n  - option \"第 12 周 第 1 天\"\n  - option \"第 12 周 第 2 天\"\n  - option \"第 12 周 第 3 天\"\n  - option \"第 12 周 第 4 天\"\n  - option \"第 12 周 第 5 天\"\n  - option \"第 12 周 第 6 天\"\n  - option \"第 12 周 第 7 天\"\n  - option \"第 13 周 第 1 天\"\n  - option \"第 13 周 第 2 天\"\n  - option \"第 13 周 第 3 天\"\n  - option \"第 13 周 第 4 天\"\n  - option \"第 13 周 第 5 天\"\n  - option \"第 13 周 第 6 天\"\n  - option \"第 13 周 第 7 天\"\n  - option \"第 14 周 第 1 天\"\n  - option \"第 14 周 第 2 天\"\n  - option \"第 14 周 第 3 天\"\n  - option \"第 14 周 第 4 天\"\n  - option \"第 14 周 第 5 天\"\n  - option \"第 14 周 第 6 天\"\n  - option \"第 14 周 第 7 天\"\n  - option \"第 15 周 第 1 天\"\n  - option \"第 15 周 第 2 天\"\n  - option \"第 15 周 第 3 天\"\n  - option \"第 15 周 第 4 天\"\n  - option \"第 15 周 第 5 天\"\n  - option \"第 15 周 第 6 天\"\n  - option \"第 15 周 第 7 天\"\n  - option \"第 16 周 第 1 天\"\n  - option \"第 16 周 第 2 天\"\n  - option \"第 16 周 第 3 天\"\n  - option \"第 16 周 第 4 天\"\n  - option \"第 16 周 第 5 天\"\n  - option \"第 16 周 第 6 天\"\n  - option \"第 16 周 第 7 天\""
+      },
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/scatter-chart-card/",
+      "name": "触摸数据点、动态值、可访问状态",
+      "browser": "chromium",
+      "details": {
+        "initial": "样本 1X: 12 · Y: 24",
+        "violations": [],
+        "aria": "- combobox \"查看图表数据点\":\n  - option \"选择\"\n  - option \"样本 1\" [selected]\n  - option \"样本 2\"\n  - option \"样本 3\"\n  - option \"样本 4\"\n  - option \"样本 5\"\n  - option \"样本 6\"\n  - option \"样本 7\"\n  - option \"样本 8\"\n  - option \"样本 9\"\n  - option \"样本 10\"\n  - option \"样本 11\"\n  - option \"样本 12\""
+      },
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/combo-chart-card/",
+      "name": "触摸数据点、动态值、可访问状态",
+      "browser": "chromium",
+      "details": {
+        "initial": "第 1 期柱：42 · 线：24",
+        "violations": [],
+        "aria": "- combobox \"查看图表数据点\":\n  - option \"选择\"\n  - option \"第 1 期\" [selected]\n  - option \"第 2 期\"\n  - option \"第 3 期\"\n  - option \"第 4 期\"\n  - option \"第 5 期\"\n  - option \"第 6 期\"\n  - option \"第 7 期\""
+      },
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "route": "/workspace/project-board/",
+      "name": "独立看板移动端表单与打开弹窗 axe",
+      "browser": "chromium",
+      "details": {
+        "violations": [],
+        "aria": "- dialog \"编辑任务\":\n  - heading \"编辑任务\" [level=2]\n  - paragraph: 修改任务标题或移动到其他状态；同列编辑保留原顺序。\n  - button \"关闭\"\n  - text: 任务标题\n  - textbox \"编辑任务标题\": 记录智能体操作的审计跟踪\n  - text: 任务状态\n  - combobox \"移动至\":\n    - option \"积压\" [selected]\n    - option \"要做的事\"\n    - option \"进行中\"\n    - option \"已完成\"\n  - button \"取消\"\n  - button \"保存任务\""
+      },
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "route": "/workspace/ai-chat/",
+      "name": "移动端会话操作",
+      "browser": "chromium",
+      "details": {
+        "violations": []
+      },
+      "status": "passed"
+    }
+  ]
+}

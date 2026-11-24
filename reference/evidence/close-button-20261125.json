@@ -1,0 +1,212 @@
+{
+  "base": "9b04fcda159b3a6e0633d91f9d762a6fff668b6e",
+  "upstream": "BoardUI/boardui@ec5c5eb3e29c2441be63b9422cd54f411ef23466:components/base/buttons/close-button.tsx",
+  "browser": "local Edge on macOS",
+  "scope": "关闭按钮几何、原生点击/键盘/表单/ref、禁用及兼容按钮、减少动效、RTL、局部 axe",
+  "visual": [
+    {
+      "theme": "light",
+      "width": 1440,
+      "direction": "ltr",
+      "status": "passed",
+      "file": "light-1440-ltr.png"
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "direction": "rtl",
+      "status": "passed",
+      "file": "light-1440-rtl.png"
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "direction": "ltr",
+      "status": "passed",
+      "file": "light-390-ltr.png"
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "direction": "rtl",
+      "status": "passed",
+      "file": "light-390-rtl.png"
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "direction": "ltr",
+      "status": "passed",
+      "file": "dark-1440-ltr.png"
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "direction": "rtl",
+      "status": "passed",
+      "file": "dark-1440-rtl.png"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "direction": "ltr",
+      "status": "passed",
+      "file": "dark-390-ltr.png"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "direction": "rtl",
+      "status": "passed",
+      "file": "dark-390-rtl.png"
+    }
+  ],
+  "browserTargeted": {
+    "browser": "chromium",
+    "results": [
+      {
+        "theme": "light",
+        "route": "/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/button/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/select/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/modal/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/templates/dashboard/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/close-button/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/announcement/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/notification/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/rtl/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/button/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/select/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/modal/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/templates/dashboard/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/close-button/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/announcement/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/notification/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/rtl/",
+        "violations": [],
+        "status": "checked"
+      }
+    ],
+    "errors": []
+  },
+  "export": {
+    "pages": 120,
+    "maxGzipJs": 509470,
+    "maxGzipHtml": 26538,
+    "templateCatalogGzipJs": 253870
+  },
+  "screenshots": [
+    "reference/evidence/screenshots/20261125-close-button/light-1440-ltr.png",
+    "reference/evidence/screenshots/20261125-close-button/light-1440-rtl.png",
+    "reference/evidence/screenshots/20261125-close-button/light-390-ltr.png",
+    "reference/evidence/screenshots/20261125-close-button/light-390-rtl.png",
+    "reference/evidence/screenshots/20261125-close-button/dark-1440-ltr.png",
+    "reference/evidence/screenshots/20261125-close-button/dark-1440-rtl.png",
+    "reference/evidence/screenshots/20261125-close-button/dark-390-ltr.png",
+    "reference/evidence/screenshots/20261125-close-button/dark-390-rtl.png"
+  ],
+  "limitations": [
+    "局部 axe 不是人工读屏或所有状态验收",
+    "本轮关闭按钮修复尚待远程跨浏览器复验",
+    "原生小尺寸遵循上游几何，实际触控目标尺寸仍须结合上下文审计",
+    "首次断言严格等于 0s 与全局 0.01ms reduced-motion 上限不一致，最终检查 transition-property:none 且时长不超过上限"
+  ]
+}
