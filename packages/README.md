@@ -36,3 +36,30 @@ export function Example() {
 ## 验收边界
 
 test:library 构建实际 tarball，解包后验证 ESM 导入、SSR、CSS 及 TypeScript 消费端。当前是本地预览产物，尚未通过正式发布的跨浏览器、无障碍、逐组件风格/交互与安全门禁。详见 reference/upstream-manifest.json。
+
+## 独立 Vite 消费示例
+
+仓库根目录运行：
+
+```sh
+npm run test:library
+npm run test:consumer
+cd build/vite-consumer
+npm run dev
+```
+
+示例源文件在 examples/react-vite，构建时从实际 tarball 安装依赖，不使用 Next 应用别名。示例验证受控输入、按钮保存、深色主题、RTL、图表和进度。Vite 仅为示例的构建依赖，不进入组件包。
+
+## 数据展示 API
+
+| 组件 | 核心属性 |
+| --- | --- |
+| AreaChart | data: number[], height?, stroke?, gradientId?（每实例自动后缀） |
+| LineChart | series: {data:number[],color:string}[], height?（统一坐标域） |
+| BarChart | data: number[], height?, color? |
+| StatCard | label, value, delta?, trend?, spark?, icon? |
+| Progress | React Aria ProgressBarProps, size? |
+| Meter | value, max?, label?, tone? |
+| AgentProgress | steps: {id,label,state}[], title? |
+
+图表当前为轻量 SVG 实现，非原版 Pro 图表源码移植；部分图表仍缺少完整可访问数据表和通用交互能力。Heatmap 现有 weeks/seed 为演示模式，不应当作真实活动数据。其余 API 以导出的 TypeScript 声明为准。

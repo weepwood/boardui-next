@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Composer } from "@/app/components/ui/Composer";
 import { Button } from "@/app/components/ui/Button";
 import { Icon } from "@/app/components/ui/Icon";
 import { cn } from "@/lib/utils";
@@ -40,9 +41,10 @@ const SUGGESTIONS = [
 export function ChatStarterTemplate() {
   const [value, setValue] = useState("");
   const [picked, setPicked] = useState<string | null>(null);
+ const [sent,setSent]=useState("");
 
   return (
-    <div className="flex min-h-[560px] w-full flex-col items-center justify-center overflow-hidden rounded-3xl border border-border-button-default bg-background-primary-default p-6 shadow-card">
+    <div className="flex min-h-[560px] w-full flex-col items-center justify-center overflow-hidden rounded-3xl border border-border-button-default bg-background-primary-default p-6 shadow-sidebar">
       <div className="flex w-full max-w-lg flex-col items-center gap-6">
         {/* 品牌标记 */}
         <span className="flex size-12 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,#a855f7,#6366f1)] text-white shadow-md">
@@ -61,7 +63,7 @@ export function ChatStarterTemplate() {
           {SUGGESTIONS.map((s) => (
             <button
               key={s.id}
-              type="button"
+              type="button" aria-pressed={picked===s.id}
               onClick={() => {
                 setPicked(s.id);
                 setValue(s.title);
@@ -93,40 +95,10 @@ export function ChatStarterTemplate() {
           ))}
         </div>
 
-        {/* 输入框 */}
-        <div className="flex w-full flex-col gap-2 rounded-2xl border border-border-button-default bg-background-primary-default p-2 shadow-xs focus-within:ring-2 focus-within:ring-accent-500/30">
-          <textarea
-            value={value}
-            onChange={(e) => setValue(e.target.value)}
-            placeholder="给助手发送消息…"
-            rows={2}
-            className="resize-none bg-transparent px-1 text-body-medium text-text-primary outline-none placeholder:text-text-placeholder"
-          />
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-1">
-              <button
-                type="button"
-                aria-label="附件"
-                className="flex size-7 cursor-pointer items-center justify-center rounded-lg text-foreground-icon-secondary hover:bg-background-secondary-hover"
-              >
-                <Icon name="attachment-line" className="size-4" />
-              </button>
-              <button
-                type="button"
-                aria-label="语音"
-                className="flex size-7 cursor-pointer items-center justify-center rounded-lg text-foreground-icon-secondary hover:bg-background-secondary-hover"
-              >
-                <Icon name="mic-line" className="size-4" />
-              </button>
-            </div>
-            <Button size="sm" isDisabled={!value.trim()} aria-label="发送" className="w-8 px-0">
-              <Icon name="arrow-up-line" className="size-4" />
-            </Button>
-          </div>
-        </div>
-
+        <Composer tools={false} value={value} onChange={setValue} onSend={v=>{setSent(v);setValue("");setPicked(null)}} placeholder="输入示例消息…"/>
+        {sent&&<p role="status" className="w-full break-words rounded-2lg bg-background-secondary-default p-3 text-body-regular">本地记录：{sent}</p>}
         <span className="text-caption-2-regular text-text-tertiary">
-          BoardUI 助手可能会出错，请核实重要信息。
+          本地交互演示，未连接 AI 服务。
         </span>
       </div>
     </div>

@@ -72,3 +72,10 @@ export { Breadcrumb,BreadcrumbItem } from "./breadcrumb";
 export { NavigationItem } from "./navigation";
 export { Toolbar } from "./toolbar";
 export type { ToolbarAction } from "./toolbar";
+
+export { Progress } from "./progress";
+export { Meter } from "./meter";
+export { StatCard } from "./stat-card";
+export { AgentProgress } from "./agent-progress";
+export type { AgentStep } from "./agent-progress";
+export { AreaChart, LineChart, BarChart, BarList, RadialChart, RadarChart, Heatmap, FunnelChart, FunnelLegend } from "./chart";

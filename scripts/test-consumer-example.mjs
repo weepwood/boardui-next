@@ -1,0 +1,12 @@
+import {cpSync,mkdirSync,rmSync,readdirSync} from 'node:fs';
+import {execFileSync} from 'node:child_process';
+import path from 'node:path';
+const root=process.cwd(),dir=path.join(root,'build/vite-consumer');
+const packs=path.join(root,'build/library-consumer');
+const archive=readdirSync(packs).find(f=>f.endsWith('.tgz'));
+if(!archive)throw Error('Run npm run test:library first');
+rmSync(dir,{recursive:true,force:true});mkdirSync(dir,{recursive:true});
+cpSync('examples/react-vite',dir,{recursive:true});
+execFileSync('npm',['install','--no-audit','--no-fund',path.join(packs,archive)],{cwd:dir,stdio:'inherit'});
+execFileSync('npm',['run','build'],{cwd:dir,stdio:'inherit'});
+console.log('Independent Vite consumer built from tarball');
