@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "observations": [
+    {
+      "id": "visual-sample-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": ["button", "input", "checkbox", "select"],
+      "scope": "1440×1000 浅色 Chromium 实测：公共画布与代表控件几何；主预览调整前的数据，不代表像素或完整视觉验收。",
+      "source": "reference/evidence/visual-sample-20261124.json"
+    },
+    {
+      "id": "direction-lab-20261124",
+      "dimension": "rtl",
+      "result": "partial",
+      "components": ["button", "tabs", "segmented-control", "slider", "select", "dropdown", "input", "radio", "pagination"],
+      "scope": "本地 Edge 浅色：实际阿拉伯语 I18nProvider、方向键、指示器、图标、浮层与受控状态切换检查；尚未覆盖全部变体和跨浏览器。",
+      "source": "scripts/browser-check.mjs",
+      "route": "/zh-hans/rtl/"
+    },
+    {
+      "id": "api-extraction-20261124",
+      "dimension": "api",
+      "result": "partial",
+      "components": ["button", "icon-button", "button-group", "close-button", "checkbox", "radio", "switch", "input", "textarea", "tabs", "segmented-control", "select", "dropdown", "tooltip", "notification", "announcement", "date-picker", "slider", "input-otp", "avatar", "badge", "chip", "pagination", "table", "tree-view", "breadcrumb", "agent-thinking", "composer-loader", "composer", "agent-progress", "progress", "meter", "stat-cards", "area-chart-card", "line-chart-card", "radar-chart-card", "radial-chart-card", "funnel-chart-card"],
+      "scope": "生成公共入口 API 参考并检查漂移；不代表全部兼容适配器、受控模式及导出签名已经验收。",
+      "source": "lib/docs/api-reference.generated.json"
+    }
+  ]
+}
