@@ -5,7 +5,7 @@ const ported=new Set(["button","icon-button","button-group","close-button","chec
 export function CatalogCard({slug,title,description,href,isPro,isNew}:{slug:string;title:string;description:string;href:string;isPro?:boolean;isNew?:boolean}) {
   const doc=docs[slug];
   const preview=ported.has(slug)&&doc;
-  return <article className="group relative h-[332px] overflow-hidden rounded-[28px] border border-border-component-detail-container bg-background-primary-default transition-colors hover:border-border-button-hover xl:h-[299px]">
+  return <article className="landing-showcase-card group relative h-[332px] overflow-hidden rounded-[28px] border border-transparent bg-background-primary-default [container-type:inline-size] dark:bg-transparent xl:h-[299px]">
     <div className="relative flex h-[230px] items-center justify-center overflow-hidden px-6 xl:h-[197px]">
       {preview ? <div inert className="pointer-events-none flex max-w-full flex-wrap items-center justify-center gap-3">{doc.preview}</div> : <span className="text-body-2-regular text-text-tertiary">{isPro?"Pro · 独立实现待验收":"组件预览待校准"}</span>}
     </div>

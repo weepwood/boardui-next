@@ -181,9 +181,10 @@ function ControlledSelectionDemo() {
   return <div className="flex flex-col gap-3" data-testid="controlled-selection"><Checkbox isSelected={checked} onChange={setChecked}>受控复选框</Checkbox><Switch isSelected={enabled} onChange={setEnabled}>受控开关</Switch><RadioGroup value={choice} onChange={setChoice} label="受控单选"><Radio value="a">选项 A</Radio><Radio value="b">选项 B</Radio></RadioGroup><output aria-live="polite">{String(checked)} / {String(enabled)} / {choice}</output></div>;
 }
 
-function glyphSize(className?: string) { return className?.includes("size-[18px]") ? 18 : className?.includes("size-5") ? 20 : 16; }
+function glyphSize(className?: string) { return className?.includes("size-[18px]") ? 18 : className?.includes("size-5") ? 20 : className?.includes("size-3.5") ? 14 : 16; }
 function AddGlyph({className}: {className?: string}) {return <Icon name="add-line" className={className} size={glyphSize(className)}/>;}
 function EditGlyph({className}: {className?: string}) {return <Icon name="edit-line" className={className} size={glyphSize(className)}/>;}
+function ArrowGlyph({className}: {className?: string}) {return <Icon name="arrow-right-line" className={className} size={glyphSize(className)}/>;}
 function ButtonFamilyDemo() {
   const [selection,setSelection]=useState("left");
   const [count,setCount]=useState(0);
@@ -193,27 +194,28 @@ function ButtonFamilyDemo() {
 export const docs: Record<string, Doc> = {
   button: {
     title: "按钮",
-    description: "原版尺寸、变体、标签及渐变交互配方已移植；浏览器像素、键盘和 RTL 一致性仍待验收。",
-    previewCode: `import { AriaButton } from "@/packages/react";
-<AriaButton>开始使用</AriaButton>
-<AriaButton variant="secondary">继续</AriaButton>
-<AriaButton variant="ghost">标记为已完成</AriaButton>
-<AriaButton variant="danger">删除</AriaButton>`,
-    preview: (
-      <>
-        <AriaButton>开始使用</AriaButton>
-        <AriaButton variant="secondary">继续</AriaButton>
-        <AriaButton variant="ghost">标记为已完成</AriaButton>
-        <AriaButton variant="danger">删除</AriaButton>
-      </>
-    ),
+    description: "与 BoardUI 设计系统匹配的按钮，提供主要、次要、幽灵及危险四种变体和三种尺寸，支持前导与尾随图标、纯图标模式，以及悬停、按下、焦点和禁用的语义交互状态。",
+    previewCode: `import { Button } from "@/packages/react";
+<Button>开始使用</Button>
+<Button variant="secondary" trailingIcon={ArrowGlyph}>继续</Button>
+<Button variant="ghost">标记为已完成</Button>
+<Button variant="danger">删除</Button>`,
+    preview: <><NativeButton>开始使用</NativeButton><NativeButton variant="secondary" trailingIcon={ArrowGlyph}>继续</NativeButton><NativeButton variant="ghost">标记为已完成</NativeButton><NativeButton variant="danger">删除</NativeButton></>,
     demos: [
-      { id:"sizes", title:"原版尺寸", code:`<AriaButton size="medium">Medium</AriaButton>
-<AriaButton size="small">Small</AriaButton>
-<AriaButton size="xs">XS</AriaButton>`, node:<><AriaButton size="medium">Medium</AriaButton><AriaButton size="small">Small</AriaButton><AriaButton size="xs">XS</AriaButton></> },
-      { id:"disabled", title:"禁用", node:<><AriaButton isDisabled>主要</AriaButton><AriaButton variant="secondary" isDisabled>次要</AriaButton><AriaButton variant="ghost" isDisabled>幽灵</AriaButton><AriaButton variant="danger" isDisabled>危险</AriaButton></> },
-      { id:"native",title:"原生按钮与链接",node:<><NativeButton>原生按钮</NativeButton><ButtonLink href={(process.env.NEXT_PUBLIC_BASE_PATH ?? "") + "/zh-hans/components/"} variant="secondary">查看组件</ButtonLink></> },
-      { id:"legacy",title:"旧版兼容接口",description:"现有应用仍可使用旧的 size、leading 和 destructive 等属性；尚未进行全站切换。",node:<><Button size="sm">小号</Button><Button variant="outline">描边</Button><Button variant="destructive">危险</Button></> },
+      {id:"variants",title:"变体",code:`<Button>按钮文字</Button>
+<Button variant="secondary">按钮文字</Button>
+<Button variant="ghost">按钮文字</Button>
+<Button variant="danger">按钮文字</Button>`,node:<><NativeButton>按钮文字</NativeButton><NativeButton variant="secondary">按钮文字</NativeButton><NativeButton variant="ghost">按钮文字</NativeButton><NativeButton variant="danger">按钮文字</NativeButton></>},
+      {id:"sizes",title:"尺寸",code:`<Button size="medium">中</Button>
+<Button size="small">小</Button>
+<Button size="xs">Xs</Button>`,node:<><NativeButton size="medium">中</NativeButton><NativeButton size="small">小</NativeButton><NativeButton size="xs">Xs</NativeButton><NativeButton iconOnly leadingIcon={AddGlyph} aria-label="添加" size="medium"/><NativeButton iconOnly leadingIcon={AddGlyph} aria-label="添加" size="small"/><NativeButton iconOnly leadingIcon={AddGlyph} aria-label="添加" size="xs"/></>},
+      {id:"icons",title:"图标",code:`<Button leadingIcon={AddGlyph}>新项目</Button>
+<Button variant="secondary" trailingIcon={ArrowGlyph}>继续</Button>
+<Button variant="secondary" iconOnly leadingIcon={AddGlyph} aria-label="添加" />`,node:<><NativeButton leadingIcon={AddGlyph}>新项目</NativeButton><NativeButton variant="secondary" trailingIcon={ArrowGlyph}>继续</NativeButton><NativeButton variant="secondary" iconOnly leadingIcon={AddGlyph} aria-label="添加"/></>},
+      {id:"disabled",title:"禁用",code:`<Button disabled>按钮文字</Button>
+<Button variant="secondary" disabled>按钮文字</Button>`,node:<><NativeButton disabled>按钮文字</NativeButton><NativeButton variant="secondary" disabled>按钮文字</NativeButton><NativeButton variant="ghost" disabled>按钮文字</NativeButton><NativeButton variant="danger" disabled>按钮文字</NativeButton></>},
+      {id:"native",title:"扩展接口：原生链接和 React Aria",node:<><AriaButton>AriaButton</AriaButton><ButtonLink href={(process.env.NEXT_PUBLIC_BASE_PATH ?? "") + "/zh-hans/components/"} variant="secondary">查看组件</ButtonLink></>},
+      {id:"legacy",title:"旧版兼容接口",description:"保留既有业务页面调用方式。",node:<><Button size="sm">小号</Button><Button variant="outline">描边</Button><Button variant="destructive">危险</Button></>},
     ],
   },
 
