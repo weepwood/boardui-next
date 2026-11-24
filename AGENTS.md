@@ -1,5 +1,10 @@
 # BoardUI Next 开发规范
 
+### 文档界面细节专项（2026-11-24，候选）
+
+- 独立于 #33 的文档 UI 改进：预览/代码切换保留演示实例，隐藏区域 inert；复制状态统一并防止过期异步结果；代码面板支持键盘滚动、行数提示和窄屏布局。API 折叠层级、类型断行、目录焦点圆角及顶栏操作反馈均沿用现有语义令牌。
+- 浏览器回归新增输入状态保留与隐藏焦点隔离断言。提交时尚未执行该候选的完整 CI、真实截图和三浏览器验收，不升级任何正式证据状态；优先收口 #33，再按各自风险门禁合并。
+
 - 原版基线见 reference/upstream-manifest.json，未经评审不得漂移。
 - MIT 公开源码保留原版权；Pro 项仅独立实现或取得授权，不下载受限源码。
 - 不将渲染成功、文件存在或构建通过视为视觉与交互验收完成；每项须记录视觉、交互、API、无障碍、RTL 证据。
@@ -124,3 +129,7 @@
 - 四条独立 /workspace/{dashboard,finance,ai-chat,project-board}/ 静态路由不占文档导航，返回文档/工作区切换/主题；看板搜索、标签筛选、任务标题/状态修改、筛选后 CSV、空态、焦点恢复；不是可拖拽看板，数据仅本地实例，刷新恢复样本。宽屏/移动端实际截图。
 - 本地 Edge 36/36 双主题交互（最后 Textarea/Button 修复前），修复后相关 18/18，14/14 双主题触摸与打开态 axe（最后修复前），最终 61/61 布局/初始态 axe。120 HTML、类型/API/单测/独立包 SSR 与类型检查通过；最大 gzip JS 505356 B，HTML 25780 B。保留真实无障碍树、截图及报告 reference/evidence/chart-workspace-20261124.json，不将抽样当成单次完整通过。未进行人工读屏，全站最终三浏览器待验证。
 - 新 CI 高风险添加 Firefox/WebKit Button/Input/textarea 双主题专项、工作区/图表触摸状态、全站响应式截图；正式 workflow Chromium 增加触摸检查，原严格门禁保留。下一轮先检查本批 PR CI 和正式工作流实际报告，按失败阶段修复、通过后合并部署。
+
+### PR #33 / #34 收口（2026-11-24）
+
+- #34 quick/targeted 全部成功，合并至 main 9ff45fd。#33 run 45410366059 的 Chromium 专项与 Firefox/WebKit 导航字体均通过，但 Firefox 双主题 button hover 样式超时；Mozilla Bug 2037020 记录 Linux headless Firefox 错报 hover/pointer 能力，当前根因仍需通过真实 CI 验证。Firefox 桌面验收改用 Xvfb headed，增加能力断言，保留真实 hover、焦点及按压检查，不修改发布门禁。已纳入 #34 主分支，需重跑全部必要 CI。

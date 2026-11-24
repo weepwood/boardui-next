@@ -73,7 +73,7 @@ jobs:
           npx playwright install --with-deps firefox webkit
           BROWSER=firefox node scripts/check-navigation-compat.mjs
           BROWSER=webkit node scripts/check-navigation-compat.mjs
-          BROWSER=firefox TARGET_ROUTES='["/zh-hans/components/input/","/zh-hans/components/textarea/"]' npm run test:browser -- --targeted --both-themes
+          BROWSER=firefox BROWSER_HEADED=1 TARGET_ROUTES='["/zh-hans/components/input/","/zh-hans/components/textarea/"]' xvfb-run -a npm run test:browser -- --targeted --both-themes
           BROWSER=webkit TARGET_ROUTES='["/zh-hans/components/input/","/zh-hans/components/textarea/"]' npm run test:browser -- --targeted --both-themes
       - name: WebKit 折叠与 RTL 回归
         if: needs.quick.outputs.rtlCompat == 'true'

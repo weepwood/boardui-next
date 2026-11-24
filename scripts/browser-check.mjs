@@ -26,7 +26,9 @@ if(!full)for(const route of JSON.parse(process.env.TARGET_ROUTES||'[]'))if(!rout
 const report=[],errors=[];
 let browser;
 try{
-  browser=await ({chromium,firefox,webkit}[browserName]).launch(process.env.BROWSER_EXECUTABLE?{executablePath:process.env.BROWSER_EXECUTABLE}:{});
+  // Linux headless Firefox reports no hover-capable pointer (Mozilla #2037020).
+  // The CI desktop Firefox lane uses Xvfb, not a weaker hover assertion.
+  browser=await ({chromium,firefox,webkit}[browserName]).launch({...(process.env.BROWSER_EXECUTABLE?{executablePath:process.env.BROWSER_EXECUTABLE}:{}),headless:process.env.BROWSER_HEADED!=='1'});
   if(full)mkdirSync('acceptance',{recursive:true});
   for(const theme of full||process.argv.includes('--both-themes')?['light','dark']:['light']){
     const context=await browser.newContext({viewport:{width:1440,height:1000},colorScheme:theme,reducedMotion:'reduce'});
@@ -84,6 +86,15 @@ try{
               assert.equal(await navigationPage.locator('[data-nav-pending]').count(),0);
               assert.equal(await group.getAttribute('aria-expanded'),'false');
               assert.ok(await navigationPage.evaluate(()=>window.__sidebarInstance===document.querySelector('aside')));
+              // Switching to code must preserve the live demo, not expose hidden inputs.
+              const preview=navigationPage.locator('#preview');
+              const email=preview.getByRole('textbox',{name:/电子邮箱/});
+              await email.fill('preview@example.com');
+              await preview.getByRole('tab',{name:'代码',exact:true}).click();
+              assert.equal(await preview.getByRole('textbox',{name:/电子邮箱/}).count(),0);
+              assert.equal(await preview.locator('[data-preview-content]').evaluate(e=>e.hidden&&e.inert),true);
+              await preview.getByRole('tab',{name:'预览',exact:true}).click();
+              assert.equal(await email.inputValue(),'preview@example.com');
             }finally{release();await navigationPage.unroute(pattern);}
             await nav.locator('a[data-doc-path="/zh-hans/components/select"]').click();
             await navigationPage.waitForURL(/\/components\/select\/?$/);
@@ -256,6 +267,8 @@ try{
           const pressTarget=demo.getByRole('tabpanel').getByRole('button',{name:'开始使用',exact:true});
           const secondary=demo.getByRole('tabpanel').getByRole('button',{name:'继续',exact:true});
           stage='button: hover style';
+          const pointer=await page.evaluate(()=>({hover:matchMedia('(hover: hover)').matches,fine:matchMedia('(pointer: fine)').matches}));
+          assert.ok(pointer.hover,'desktop browser must advertise hover: '+JSON.stringify(pointer));
           await page.mouse.move(0,0);
           await page.waitForFunction(e=>!e.matches(':hover'),await secondary.elementHandle());
           const resting=await secondary.evaluate(e=>getComputedStyle(e).backgroundColor);
