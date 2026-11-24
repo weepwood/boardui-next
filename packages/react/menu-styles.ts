@@ -28,4 +28,4 @@ export const MENU_ITEM = [
 export const MENU_ITEM_ACTIVE = "bg-dropdown-item-hover-background";
 
 export const MENU_ITEM_INTERACTIVE =
-  "hover:bg-dropdown-item-hover-background focus-visible:bg-dropdown-item-hover-background";
+  "hover:bg-dropdown-item-hover-background focus-visible:bg-dropdown-item-hover-background focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-border-focus-ring";

@@ -1011,6 +1011,9 @@ try{
           const tab=page.locator('#preview').getByRole('tab',{name:/横幅/});
           await tab.press('ArrowRight');
           assert.equal(await page.locator('#preview').getByRole('tab',{name:/帖子/}).getAttribute('aria-selected'),'true');
+          const selected=page.locator('#preview').getByRole('tab',{name:/帖子/});
+          assert.ok(await selected.evaluate(e=>e.matches(':focus-visible')));
+          assert.ok(await selected.evaluate(e=>getComputedStyle(e).boxShadow!=='none'));
         }
         if(route==='/zh-hans/components/segmented-control/'){
           const demo=page.locator('#preview');
@@ -1019,7 +1022,11 @@ try{
         }
         if(route==='/zh-hans/components/select/'){
           const filter=page.locator('#preview').getByRole('button',{name:/按价格过滤/});
-          await filter.click();await page.getByRole('option',{name:'100 元以内'}).click();
+          await filter.click();
+          const low=page.getByRole('option',{name:'100 元以内'});
+          await low.hover();
+          await page.waitForFunction(e=>e.hasAttribute('data-hovered')&&getComputedStyle(e).backgroundColor!=='rgba(0, 0, 0, 0)',await low.elementHandle());
+          await low.click();
           assert.ok((await filter.textContent()).includes('100 元以内'));
           const trigger=page.locator('#framework').getByRole('button',{name:/框架/});
           await trigger.click();
@@ -1074,6 +1081,9 @@ try{
           const demo=page.getByTestId('form-fields');
           const input=demo.getByRole('textbox',{name:'受控邮箱'});
           await input.fill('demo@example.com');
+          const field=input.locator('xpath=ancestor::*[@data-focus-within][1]');
+          assert.ok(await field.count());
+          assert.ok(await field.evaluate(e=>getComputedStyle(e).boxShadow!=='none'));
           assert.equal(await input.inputValue(),'demo@example.com');
           assert.ok(await input.evaluate(e=>e.required || e.getAttribute('aria-required')==='true'),'required field semantics');
           await page.waitForFunction(el=>{const ids=el.getAttribute('aria-describedby')?.split(/\s+/)||[];return ids.some(id=>document.getElementById(id)?.textContent.includes('输入有效邮箱'))},await input.elementHandle());

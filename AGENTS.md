@@ -147,3 +147,9 @@
 - #35 f585bc1 原 CI 45412923661 全部通过；依赖 #33 的新锚点修复后已同步 5dccdf5，不能将旧 CI 当作最新通过。
 - 实际浏览器测量：浅色三级文字/白背景 2.58→4.90；深色次级文字/主卡片 3.19→7.22，三级文字 1.94→5.86；深色中性数据柱/图表背景 1.18→3.78。14/14 语义组合达到设定阈值；保留原始 upstream/theme.css、原版强调色与表面层级。仅局部令牌验收，不代表整站 WCAG 合规。
 - 本地类型、单元测试、120 静态页与资源预算通过，20/20 双主题双视口布局检查通过。四张实际截图及报告见 reference/evidence/semantic-contrast-20261124.json；新增 scripts/audit-contrast.mjs 至风险 CI。需检查最新 CI、正式三浏览器及人工无障碍，五维门禁不变。
+
+### 基础控件与浮层状态精修（2026-11-24）
+
+- #33 run 45415435830 全部成功，Squash 合并 c5146f8；Pages 45417838543 成功，线上独立工作区标记已核对。#35 原 CI 45415897873 通过；主分支文件树与 #33 完全一致，同步历史而不改变文件树后 head 5507784，需重验 run 45417938031。
+- 基于 #35 的堆叠候选，统一 Button React Aria pressed/减少动效/焦点偏移，Input/Textarea hover 1px、错误常驻 1px、focus 2px 语义描边；Select 展开/hover/键盘焦点，Dropdown 焦点与选中兼容；Tabs 内描边、未选中计数语义底色、重复测量去重。保留原有组件 API 及 React Aria 交互语义。
+- 本地 Edge 24/24 双主题页面交互（含 RTL 页面）、24/24 双主题双视口布局，TypeScript、单测、120 静态页和预算通过。六张真实截图与报告 reference/evidence/control-interaction-20261124.json；脚本 scripts/audit-control-visual.mjs。正式三浏览器、逐状态 axe、人工验收与五维门禁尚未完成。

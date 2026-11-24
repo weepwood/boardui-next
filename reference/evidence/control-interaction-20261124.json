@@ -1,0 +1,173 @@
+{
+  "base": "5507784",
+  "browser": "Microsoft Edge (Chromium), macOS",
+  "scope": "基础控件候选，非正式验收",
+  "visual": [
+    {
+      "theme": "light",
+      "width": 1440,
+      "route": "/zh-hans/components/button/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "route": "/zh-hans/components/input/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "route": "/zh-hans/components/select/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "route": "/zh-hans/components/tabs/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "route": "/zh-hans/components/popover/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "route": "/zh-hans/components/modal/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "route": "/zh-hans/components/button/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "route": "/zh-hans/components/input/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "route": "/zh-hans/components/select/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "route": "/zh-hans/components/tabs/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "route": "/zh-hans/components/popover/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "route": "/zh-hans/components/modal/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "route": "/zh-hans/components/button/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "route": "/zh-hans/components/input/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "route": "/zh-hans/components/select/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "route": "/zh-hans/components/tabs/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "route": "/zh-hans/components/popover/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "route": "/zh-hans/components/modal/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "route": "/zh-hans/components/button/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "route": "/zh-hans/components/input/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "route": "/zh-hans/components/select/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "route": "/zh-hans/components/tabs/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "route": "/zh-hans/components/popover/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "route": "/zh-hans/components/modal/",
+      "status": "passed"
+    }
+  ],
+  "browserTargeted": {
+    "count": 24,
+    "failures": 0
+  },
+  "export": {
+    "pages": 120,
+    "maxGzipJs": 506877,
+    "maxGzipHtml": 26494,
+    "templateCatalogGzipJs": 253675
+  },
+  "screenshots": [
+    "reference/evidence/screenshots/20261124-control-interaction/light-1440-_zh-hans_components_input_focus.jpg",
+    "reference/evidence/screenshots/20261124-control-interaction/dark-1440-_zh-hans_components_input_focus.jpg",
+    "reference/evidence/screenshots/20261124-control-interaction/light-1440-_zh-hans_components_select_open.jpg",
+    "reference/evidence/screenshots/20261124-control-interaction/dark-1440-_zh-hans_components_select_open.jpg",
+    "reference/evidence/screenshots/20261124-control-interaction/dark-390-_zh-hans_components_tabs_.jpg",
+    "reference/evidence/screenshots/20261124-control-interaction/light-390-_zh-hans_components_modal_.jpg"
+  ],
+  "limitations": [
+    "截图生成及溢出检查不等同逐像素验收",
+    "Firefox/WebKit 和正式 RTL 验收待执行"
+  ]
+}
