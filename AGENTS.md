@@ -133,3 +133,10 @@
 ### PR #33 / #34 收口（2026-11-24）
 
 - #34 quick/targeted 全部成功，合并至 main 9ff45fd。#33 run 45410366059 的 Chromium 专项与 Firefox/WebKit 导航字体均通过，但 Firefox 双主题 button hover 样式超时；Mozilla Bug 2037020 记录 Linux headless Firefox 错报 hover/pointer 能力，当前根因仍需通过真实 CI 验证。Firefox 桌面验收改用 Xvfb headed，增加能力断言，保留真实 hover、焦点及按压检查，不修改发布门禁。已纳入 #34 主分支，需重跑全部必要 CI。
+
+### 订单图表与工作区视觉精修（2026-11-24）
+
+- 基于 #33 修复提交 c2bb0a4，单独堆叠候选，先收口 #33。固定 MIT OrdersChartCard 公开源码：月份 hover/选择联动标题、订单量、去年同期和真实同比；保留触摸和键盘数据点，范围切换清除旧选择但不重新挂载控件。紧凑轴刻度、增高画布、沿用上游 chart-track 与双柱颜色。
+- 四个独立工作区共享单行桌面顶栏，移动端导航换行，复用主题切换组件、语义令牌和焦点环。未重构各模板业务内部。
+- 最终本地 Edge：22/22 页面主题专项、14/14 触摸/交互态、20/20 双主题双视口布局与截图；120 静态 HTML，最大 gzip JS 506471B、HTML 26491B，模板目录 253422B；类型检查通过。初次候选单测通过，最终 CI 尚待执行。证据 reference/evidence/orders-workspace-polish-20261124.json 与六张代表实际截图；复现 node scripts/audit-workspace-visual.mjs [输出目录]（Playwright，可设 BROWSER_EXECUTABLE）。
+- 实际截图仍显示深色次级文字/去年柱对比偏弱；应先测量具体对比度再做令牌兼容治理，不擅自整体改色。正式三浏览器、RTL、人工无障碍和五维门禁不变。

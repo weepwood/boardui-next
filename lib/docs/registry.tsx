@@ -1304,7 +1304,7 @@ import { RiArrowRightLine } from "@remixicon/react";
     preview: () => ((
       <div className="w-full max-w-[420px]">
         <ChartCard periodFilter kind="orders" title="订单量"
-            delta="+8.2%" height={120} />
+            delta="+8.2%" height={164} />
       </div>
     )),
     demos: () => ([]),
