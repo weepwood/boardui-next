@@ -25,10 +25,13 @@ export function ComponentPreview({
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const copyRequest = useRef(0);
   const copyPending = useRef(false);
-  useEffect(() => () => {
-    copyRequest.current++;
-    copyPending.current = false;
-    if (timer.current) clearTimeout(timer.current);
+  useEffect(() => {
+    setCopyStatus("idle");
+    return () => {
+      copyRequest.current++;
+      copyPending.current = false;
+      if (timer.current) clearTimeout(timer.current);
+    };
   }, [code]);
 
   const copy = async () => {
@@ -129,7 +132,7 @@ export function ComponentPreview({
         </div>
       </div>
 
-      <span role="status" className="sr-only">{copyStatus === "success" ? "代码已复制" : copyStatus === "error" ? "复制失败，请打开代码视图手动复制" : ""}</span>
+      <span aria-live="polite" aria-atomic="true" className="sr-only">{copyStatus === "success" ? "代码已复制" : copyStatus === "error" ? "复制失败，请打开代码视图手动复制" : ""}</span>
       {/* 画布 */}
       <div
         className={cn(
