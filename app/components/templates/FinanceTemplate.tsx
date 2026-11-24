@@ -1,13 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import { DemoNotice, TemplateSegments, downloadCsv } from "./TemplateShared";
+import { DemoNotice, TemplateSegments, downloadCsv, analyticsPanel, analyticsGrid, AnalyticsSectionHeading } from "./TemplateShared";
 import { StatCard } from "@/app/components/ui/StatCard";
-import { AreaChart, BarChart, RadialChart, BarList } from "@/app/components/ui/Chart";
+import { BarChart, BarList } from "@/app/components/ui/Chart";
 import {SankeyChart} from "@/app/components/ui/ChartExtra";
 import { Badge } from "@/app/components/ui/Badge";
 import { Icon } from "@/app/components/ui/Icon";
 import { Button } from "@/app/components/ui/Button";
+import { ChartDataInspector } from "@/app/components/ui/ChartDataInspector";
 import { cn } from "@/lib/utils";
 
 const CASH_FLOW = [42, 48, 45, 52, 58, 55, 62, 68, 66, 74, 79, 85];
@@ -25,6 +26,7 @@ export function FinanceTemplate() {
   const [range, setRange] = useState<"月" | "季" | "年">("月");
 
   const source=range==="月"?CASH_FLOW.slice(-4):range==="季"?CASH_FLOW.filter((_,i)=>i%3===2):CASH_FLOW;
+  const income=[62,48,71,55,80,63,88,72];
   const amount=source.reduce((a,b)=>a+b,0);
   const flow=[{from:"收入",to:"运营",value:Math.round(amount*.46)},{from:"收入",to:"投资",value:Math.round(amount*.24)},{from:"收入",to:"留存",value:amount-Math.round(amount*.46)-Math.round(amount*.24)}];
   return (
@@ -35,41 +37,42 @@ export function FinanceTemplate() {
           <span className="text-caption-2-regular text-text-tertiary">2026 财年 · 示例数据</span>
         </div>
         <div className="flex items-center gap-2">
-          <TemplateSegments values={["月","季","年"] as const} value={range} onChange={setRange}/>
+          <DemoNotice/>
           <Button onPress={()=>downloadCsv("transactions.csv",[["编号","名称","分类","金额","日期","状态"],...TRANSACTIONS.map(t=>[t.id,t.name,t.category,t.amount,t.date,t.status])])} size="sm" variant="secondary" leading={<Icon name="download-line" className="size-3.5" />}>
             导出报表
           </Button>
         </div>
       </header>
 
-      <div className="flex flex-col gap-3 p-4">
-        <div className="grid min-w-0 grid-cols-1 gap-3 @sm:grid-cols-2 @3xl:grid-cols-4">
+      <div className="flex min-w-0 flex-col gap-3 p-3 @lg:p-4">
+        <AnalyticsSectionHeading title="年度财务概览" description="固定年度指标 · 不随现金流样本切换"/>
+        <div className={analyticsGrid}>
           <StatCard className="border-transparent bg-background-secondary-default shadow-none" label="营业收入" value="¥2,486,320" delta="+18.4%" trend="up" icon="line-chart-line" spark={CASH_FLOW} />
           <StatCard className="border-transparent bg-background-secondary-default shadow-none" label="运营支出" value="¥1,142,800" delta="+6.2%" trend="up" icon="wallet-3-line" spark={[30, 32, 31, 36, 34, 38, 40]} />
           <StatCard className="border-transparent bg-background-secondary-default shadow-none" label="净利润" value="¥1,343,520" delta="+21.7%" trend="up" icon="money-dollar-circle-line" spark={[20, 24, 26, 28, 32, 36, 42]} />
           <StatCard className="border-transparent bg-background-secondary-default shadow-none" label="应收账款" value="¥384,200" delta="-4.1%" trend="down" icon="file-list-3-line" spark={[45, 43, 44, 41, 40, 38, 36]} />
         </div>
 
-        <div className="flex min-w-0 flex-col gap-3 rounded-2xl bg-background-secondary-default p-4">
-          <div className="flex flex-wrap items-center justify-between gap-2"><div><p className="text-body-medium text-text-secondary">现金流量</p><p className="text-title-1-medium tabular-nums text-text-primary">¥{(amount*1000).toLocaleString("en-US")}</p></div><span className="text-caption-1-regular text-text-secondary">{range==="月"?"月度样本":range==="季"?"季度样本":"年度样本"}</span></div>
-          <SankeyChart height={240} nodes={[{id:"收入",label:"收入",layer:0,value:amount},...flow.map(f=>({id:f.to,label:f.to,layer:2 as const,value:f.value}))]} links={flow}/>
-          <div className="grid grid-cols-1 gap-2 @sm:grid-cols-3">{flow.map(f=><div key={f.to} className="rounded-xl bg-background-primary-default p-3"><span className="text-body-2-regular text-text-secondary">{f.to}</span><p className="text-body-medium tabular-nums text-text-primary">¥{(f.value*1000).toLocaleString("en-US")}</p></div>)}</div>
+        <div className={analyticsPanel}>
+          <div className="flex flex-wrap items-center justify-between gap-2"><div><p className="text-body-medium text-text-secondary">现金流量</p><p className="text-title-1-medium tabular-nums text-text-primary">¥{(amount*1000).toLocaleString("en-US")}</p></div><TemplateSegments values={["月","季","年"] as const} value={range} onChange={setRange}/></div>
+          <div className="grid min-w-0 gap-3 @2xl:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]"><div className="min-w-0"><p className="mb-2 text-caption-1-regular text-text-secondary">{range==="月"?"月度样本":range==="季"?"季度样本":"年度样本"}</p><SankeyChart height={170} nodes={[{id:"收入",label:"收入",layer:0,value:amount},...flow.map(f=>({id:f.to,label:f.to,layer:2 as const,value:f.value}))]} links={flow}/></div>
+          <div className="grid min-w-0 grid-cols-1 gap-2 @sm:grid-cols-3 @2xl:grid-cols-1">{flow.map(f=><div key={f.to} className="min-w-0 rounded-xl bg-background-primary-default p-3"><div className="flex flex-wrap items-center justify-between gap-1"><span className="text-body-2-regular text-text-secondary">{f.to}</span><span className="text-caption-1-medium tabular-nums text-text-secondary">{(f.value/amount*100).toFixed(1)}%</span></div><p className="text-body-medium tabular-nums text-text-primary">¥{(f.value*1000).toLocaleString("en-US")}</p></div>)}</div></div>
         </div>
         <div className="grid min-w-0 grid-cols-1 gap-3 @2xl:grid-cols-2">
-          <div className="flex flex-col gap-2 min-w-0 rounded-2xl bg-background-secondary-default p-4">
-            <span className="text-body-2-medium text-text-primary">月度收支</span>
-            <BarChart data={[62, 48, 71, 55, 80, 63, 88, 72]} height={130} />
+          <div className={analyticsPanel}>
+            <AnalyticsSectionHeading title="月度收入样本" description="单位：千元 · 8 个样本"/>
+            <ChartDataInspector records={income.map((value,i)=>({label:"样本 "+(i+1),value}))}>{active=><BarChart data={income} activeIndex={active} height={130}/>}</ChartDataInspector>
             <div className="flex items-center gap-3 text-caption-2-regular text-text-tertiary">
               <span className="flex items-center gap-1">
                 <span className="size-2 rounded-sm bg-accent-500" />
                 收入
               </span>
-              <span>支出约为收入的 46%</span>
+              <span>独立收入示例</span>
             </div>
           </div>
 
-          <div className="flex flex-col gap-2 min-w-0 rounded-2xl bg-background-secondary-default p-4">
-            <span className="text-body-2-medium text-text-primary">支出结构</span>
+          <div className={analyticsPanel}>
+            <AnalyticsSectionHeading title="支出结构" description="独立支出示例"/>
             <BarList
               items={[
                 { label: "人力成本", value: 620 },
@@ -82,12 +85,12 @@ export function FinanceTemplate() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-2 min-w-0 rounded-2xl bg-background-secondary-default p-4">
+        <div className={analyticsPanel}>
           <div className="flex items-center justify-between">
-            <span className="text-body-2-medium text-text-primary">交易明细</span>
+            <AnalyticsSectionHeading title="交易明细" description={TRANSACTIONS.length+" 条本地交易"}/>
             <DemoNotice/>
           </div>
-          <div className="min-w-0 overflow-x-auto overscroll-x-contain">
+          <div className="min-w-0 overflow-x-auto overscroll-x-contain" tabIndex={0} role="region" aria-label="交易明细表格">
             <table className="bui-table bui-table-sm">
               <thead>
                 <tr className="text-caption-1-semibold text-text-secondary">

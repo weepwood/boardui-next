@@ -1,0 +1,127 @@
+{
+  "base": "5de1f61",
+  "browser": "Microsoft Edge (Chromium), macOS",
+  "scope": "Dashboard/Finance 文档与独立工作区双主题双视口，操作与布局专项",
+  "visual": [
+    {
+      "theme": "light",
+      "width": 1440,
+      "route": "/zh-hans/templates/dashboard/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "route": "/zh-hans/templates/finance/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "route": "/workspace/dashboard/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "route": "/workspace/finance/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "route": "/zh-hans/templates/dashboard/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "route": "/zh-hans/templates/finance/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "route": "/workspace/dashboard/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "route": "/workspace/finance/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "route": "/zh-hans/templates/dashboard/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "route": "/zh-hans/templates/finance/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "route": "/workspace/dashboard/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "route": "/workspace/finance/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "route": "/zh-hans/templates/dashboard/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "route": "/zh-hans/templates/finance/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "route": "/workspace/dashboard/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "route": "/workspace/finance/",
+      "status": "passed"
+    }
+  ],
+  "browserTargeted": {
+    "count": 22,
+    "failures": 0
+  },
+  "export": {
+    "pages": 120,
+    "maxGzipJs": 508447,
+    "maxGzipHtml": 26530,
+    "templateCatalogGzipJs": 253673
+  },
+  "screenshots": [
+    "reference/evidence/screenshots/20261124-analytics-layout/light-1440-_workspace_dashboard_.jpg",
+    "reference/evidence/screenshots/20261124-analytics-layout/dark-1440-_workspace_dashboard_.jpg",
+    "reference/evidence/screenshots/20261124-analytics-layout/light-1440-_workspace_finance_.jpg",
+    "reference/evidence/screenshots/20261124-analytics-layout/dark-1440-_workspace_finance_.jpg",
+    "reference/evidence/screenshots/20261124-analytics-layout/light-390-_workspace_dashboard_.jpg",
+    "reference/evidence/screenshots/20261124-analytics-layout/dark-390-_workspace_finance_.jpg"
+  ],
+  "limitations": [
+    "首次测试命令误填 stat-card 路径，最终正确 stat-cards 路径重跑通过",
+    "本地样本非真实业务数据，年度指标不随现金流样本切换",
+    "截图与布局测试不是逐像素还原或完整 WCAG 证明",
+    "正式三浏览器及人工无障碍待验收"
+  ]
+}

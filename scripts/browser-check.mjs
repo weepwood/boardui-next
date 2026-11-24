@@ -400,8 +400,9 @@ try{
           await demo.getByRole('button',{name:'发送',exact:true}).click();
           await demo.getByText('本地记录：写一段代码',{exact:true}).waitFor();
         }
-        if(route==='/zh-hans/templates/dashboard/'){
+        if(route==='/zh-hans/templates/dashboard/'||route==='/workspace/dashboard/'){
           const demo=page.locator('#preview');
+          assert.ok(await demo.getByText('总收入',{exact:true}).evaluate(e=>e.getBoundingClientRect().top<document.querySelector('#preview').querySelector('h4').getBoundingClientRect().top));
           await demo.getByRole('button',{name:'下一批'}).click();await demo.getByText('赵六',{exact:true}).first().waitFor();
           await demo.getByRole('button',{name:'分析',exact:true}).click();
           await demo.getByRole('heading',{name:'分析',exact:true}).waitFor();
@@ -421,10 +422,13 @@ try{
           try{await mobile.setViewportSize({width:390,height:844});await mobile.goto(origin+route,{waitUntil:'networkidle'});const panel=mobile.locator('#preview');await panel.getByRole('button',{name:'新建对话',exact:true}).click();await panel.getByRole('combobox',{name:'切换会话'}).selectOption('1');await panel.getByRole('log').getByText('帮我用 BoardUI 搭一个数据看板').waitFor();}finally{await mobile.close()}
 
         }
-        if(route==='/zh-hans/templates/finance/'){
+        if(route==='/zh-hans/templates/finance/'||route==='/workspace/finance/'){
           const demo=page.locator('#preview');
           await demo.getByRole('radio',{name:'年',exact:true}).click();
           await demo.getByText('年度样本',{exact:true}).waitFor();
+          assert.ok(await demo.getByText('固定年度指标 · 不随现金流样本切换',{exact:true}).count());
+          await demo.getByRole('combobox',{name:'查看图表数据点'}).selectOption('0');
+          await demo.locator('[data-chart-tooltip]').getByText('62',{exact:true}).waitFor();
         }
         if(route==='/zh-hans/templates/hr/'){
           const demo=page.locator('#preview');
