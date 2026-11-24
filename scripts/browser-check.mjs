@@ -47,6 +47,13 @@ try{
           await page.getByRole('button',{name:theme==='light'?'切换到亮色模式':'切换到暗色模式'}).click();
           await page.waitForFunction(d=>document.documentElement.classList.contains('dark')===d,theme==='dark');
         }
+        if(route==='/zh-hans/components/'){
+          const card=page.locator('main article').first();
+          const rect=await card.boundingBox();
+          assert.equal(rect?.width,304);assert.equal(rect?.height,299);
+          assert.equal(await card.evaluate(e=>getComputedStyle(e).borderRadius),'28px');
+          assert.equal(await card.locator(':scope > div').first().evaluate(e=>e.getBoundingClientRect().height),197);
+        }
         if(route==='/zh-hans/components/button/'){
           const geometry=await page.evaluate(()=>{const r=s=>{const e=document.querySelector(s);const b=e.getBoundingClientRect();return [b.x,b.y,b.width,b.height].map(Math.round)};return {main:r('main'),heading:r('main h1'),sidebar:r('aside'),toc:r('main+aside'),canvas:r('#preview > div > div:last-child'),shadow:getComputedStyle(document.documentElement).getPropertyValue('--shadow-sidebar').trim(),font:document.fonts.check('14px "Noto Sans SC Variable"','按钮')}});
           assert.deepEqual(geometry.main.slice(0,3),[324,40,808]);
@@ -56,6 +63,14 @@ try{
           assert.ok(geometry.canvas[3]>=327);
           assert.ok(geometry.shadow,'runtime sidebar elevation token');
           assert.ok(geometry.font,'self-hosted Chinese font');
+          const demo=page.locator('#preview');
+          const buttons=demo.getByRole('tabpanel').getByRole('button');
+          assert.equal(await buttons.count(),4);
+          for(const button of await buttons.all())assert.equal((await button.boundingBox())?.height,36);
+          await demo.getByRole('tab',{name:'预览'}).press('ArrowRight');
+          assert.equal(await demo.getByRole('tab',{name:'代码'}).getAttribute('aria-selected'),'true');
+          await demo.getByRole('tab',{name:'代码'}).press('ArrowLeft');
+          assert.equal(await demo.getByRole('tab',{name:'预览'}).getAttribute('aria-selected'),'true');
           const link=page.getByRole('link',{name:'查看组件',exact:true});
           await link.waitFor({state:'visible'});
           assert.ok((await link.getAttribute('href')).startsWith(base+'/'));

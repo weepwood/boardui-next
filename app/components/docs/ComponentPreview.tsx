@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useId, useState } from "react";
 import { cn } from "@/lib/utils";
 import { Icon } from "../ui/Icon";
 
@@ -19,6 +19,7 @@ export function ComponentPreview({
   code?: string;
   minHeight?: number;
 }) {
+  const id = useId();
   const [tab, setTab] = useState<"preview" | "code">("preview");
   const [copied, setCopied] = useState(false);
 
@@ -34,15 +35,15 @@ export function ComponentPreview({
   };
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-[22px]">
       {/* 工具条 */}
-      <div className="flex items-center justify-between gap-2">
+      <div className="flex min-h-[38px] items-center justify-between gap-2">
         {/* 分段控件 */}
         <div
           role="tablist"
           aria-label="视图切换"
           className={cn(
-            "relative inline-flex items-center rounded-2lg p-1",
+            "relative inline-flex items-center gap-0.5 rounded-2lg p-1",
             "bg-segmented-control-background"
           )}
         >
@@ -58,6 +59,16 @@ export function ComponentPreview({
                 key={t.key}
                 role="tab"
                 aria-selected={active}
+                id={`${id}-${t.key}`}
+                aria-controls={`${id}-panel`}
+                tabIndex={active ? 0 : -1}
+                onKeyDown={(e) => {
+                  if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(e.key)) return;
+                  e.preventDefault();
+                  const next = e.key === "Home" ? "preview" : e.key === "End" ? "code" : t.key === "preview" ? "code" : "preview";
+                  setTab(next);
+                  document.getElementById(`${id}-${next}`)?.focus();
+                }}
                 type="button"
                 onClick={() => setTab(t.key)}
                 className={cn(
@@ -82,9 +93,9 @@ export function ComponentPreview({
             onClick={copy}
             disabled={!code}
             className={cn(
-              "inline-flex h-7 cursor-pointer items-center gap-1.5 rounded-lg px-2",
-              "text-caption-1-medium text-text-secondary",
-              "transition-colors duration-150 ease-out hover:bg-background-secondary-hover",
+              "inline-flex h-[38px] cursor-pointer items-center gap-1.5 rounded-2lg border border-border-button-default bg-background-primary-default px-3 shadow-xs",
+              "text-body-medium text-text-primary",
+              "transition-colors duration-150 ease-out hover:bg-background-primary-hover",
               "disabled:cursor-default disabled:opacity-50"
             )}
           >
@@ -101,6 +112,9 @@ export function ComponentPreview({
           "rounded-3xl border border-border-component-detail-container",
           "p-8"
         )}
+        role="tabpanel"
+        id={`${id}-panel`}
+        aria-labelledby={`${id}-${tab}`}
         style={{ minHeight }}
       >
         {tab === "preview" ? (
