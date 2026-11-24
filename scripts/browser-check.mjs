@@ -584,6 +584,18 @@ try{
           await demo.locator('[data-chart-tooltip]').getByText('3,400',{exact:true}).waitFor();
           await page.mouse.move(0,0);await demo.locator('[data-chart-tooltip]').waitFor({state:'hidden'});
           await point.selectOption('0');await demo.locator('[data-chart-tooltip]').getByText('3,400',{exact:true}).waitFor();
+          const later=await chart.evaluate(svg=>{const p=new DOMPoint(svg.viewBox.baseVal.width*.75,40).matrixTransform(svg.getScreenCTM());return {x:p.x,y:p.y}});
+          await page.mouse.move(later.x,later.y);
+          await page.mouse.move(0,0);
+          assert.equal(await point.inputValue(),'0');
+          await demo.locator('[data-chart-tooltip]').getByText('3,400',{exact:true}).waitFor();
+          await page.setViewportSize({width:390,height:844});
+          try{
+            await page.waitForFunction(e=>Math.abs(e.viewBox.baseVal.width-e.clientWidth)<=1,await chart.elementHandle());
+            assert.ok(await chart.locator('[data-chart-axis-label]').count()<8);
+            assert.equal(await point.locator('option').count(),9);
+          }finally{await page.setViewportSize({width:1440,height:1000});}
+
           if(process.env.CHART_SCREENSHOT)await page.screenshot({path:process.env.CHART_SCREENSHOT.replace('.png','-'+theme+'.png')});
 
           await demo.getByRole('button',{name:'有机',exact:true}).click();
@@ -953,6 +965,7 @@ try{
           await trigger.click();
           const dialog=page.getByRole('dialog',{name:'邀请团队成员'});
           await dialog.waitFor();
+          assert.ok(await dialog.evaluate(e=>(e.getAttribute('aria-describedby')||'').split(/\s+/).some(id=>document.getElementById(id)?.textContent.includes('他们会收到一封电子邮件'))),'dialog description must resolve to visible text');
           await dialog.getByRole('textbox',{name:'邮箱地址'}).fill('demo@example.com');
           for(let i=0;i<8;i++){await page.keyboard.press('Tab');assert.ok(await dialog.evaluate(e=>e.contains(document.activeElement)),'dialog forward focus containment');}
           for(let i=0;i<8;i++){await page.keyboard.press('Shift+Tab');assert.ok(await dialog.evaluate(e=>e.contains(document.activeElement)),'dialog backward focus containment');}
