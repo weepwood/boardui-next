@@ -271,6 +271,7 @@ try{
           assert.equal((await selected.textContent()).trim(),'模板');
         }
         if(route==='/zh-hans/rtl/'){
+          stage='rtl: initial direction and tabs';
           const lab=page.getByTestId('direction-lab');
           await lab.waitFor();
           assert.equal(await lab.getAttribute('dir'),'rtl');
@@ -278,7 +279,7 @@ try{
           await page.waitForFunction(e=>getComputedStyle(e).rotate.includes('180deg'),await next.locator('svg').elementHandle());
           const tabs=lab.getByRole('tablist',{name:'方向选项卡'});
           const first=tabs.getByRole('tab',{name:'概览'}),second=tabs.getByRole('tab',{name:'活动'});
-          assert.ok((await first.boundingBox()).x>(await second.boundingBox()).x);
+          await page.waitForFunction(({a,b})=>a.getBoundingClientRect().x>b.getBoundingClientRect().x,{a:await first.elementHandle(),b:await second.elementHandle()});
           await first.press('ArrowLeft');
           await page.waitForFunction(e=>e.getAttribute('aria-selected')==='true',await second.elementHandle());
           const aligned=async (indicator,selected)=>{await page.waitForFunction(({a,b})=>{const x=a.getBoundingClientRect(),y=b.getBoundingClientRect();return Math.abs(x.left-y.left)<2&&Math.abs(x.width-y.width)<2},{a:await indicator.elementHandle(),b:await selected.elementHandle()})};
@@ -286,6 +287,7 @@ try{
           const segment=lab.getByRole('radio',{name:'周'});
           await segment.click();
           await aligned(lab.locator('[data-segment-indicator]'),segment);
+          stage='rtl: slider and overlays';
           const slider=lab.getByRole('slider',{name:'方向音量'});
           await slider.press('ArrowLeft');
           await page.waitForFunction(e=>Number(e.getAttribute('aria-valuenow')??e.value)>40,await slider.elementHandle());
@@ -304,8 +306,9 @@ try{
           await lab.getByRole('button',{name:'下一页'}).click();
           await page.waitForFunction(e=>e.textContent.includes(' / 3 / '),await lab.getByTestId('direction-state').elementHandle());
           const state=await lab.getByTestId('direction-state').textContent();
+          stage='rtl: preserve state on LTR switch';
           await page.getByRole('button',{name:'切换为 LTR'}).click();
-          assert.equal(await lab.getAttribute('dir'),'ltr');
+          await page.waitForFunction(e=>e.getAttribute('dir')==='ltr',await lab.elementHandle());
           assert.equal(await lab.getByTestId('direction-state').textContent(),state);
           await aligned(lab.locator('[data-tab-indicator]'),second);
           await aligned(lab.locator('[data-segment-indicator]'),segment);
@@ -387,12 +390,83 @@ try{
         }
         if(route==='/zh-hans/templates/project-board/'){
           const demo=page.locator('#preview');
+          const cols=demo.locator('[data-board-column]');
+          if(await cols.count()===4)assert.ok(await cols.evaluateAll(es=>es.every(e=>e.getBoundingClientRect().width>=196)));
           await demo.getByRole('button',{name:'新建任务'}).click();
           await demo.getByRole('textbox',{name:'任务标题'}).fill('模板测试任务');
           await demo.getByRole('button',{name:'添加',exact:true}).click();
           await demo.getByText('模板测试任务',{exact:true}).waitFor();
           await demo.getByRole('radio',{name:'列表',exact:true}).click();
           await demo.getByText('模板测试任务',{exact:true}).waitFor();
+        }
+        if(route==='/zh-hans/components/calendar/'){
+          const demo=page.locator('#preview');
+          await demo.getByRole('button',{name:'下个月'}).click();
+          await demo.getByRole('heading',{name:'2026年9月'}).waitFor();
+          await demo.getByText('0 个日程 · 示例',{exact:true}).waitFor();
+          await demo.getByRole('button',{name:'上个月'}).click();
+          await demo.getByRole('heading',{name:'2026年8月'}).waitFor();
+          await demo.getByRole('button',{name:/2026年8月12日/}).click();
+          await demo.getByText('季度规划',{exact:true}).last().waitFor();
+          assert.equal(await demo.getByRole('button',{name:/2026年8月12日/}).getAttribute('aria-pressed'),'true');
+          await demo.getByRole('button',{name:'今天',exact:true}).click();
+          const month=await page.evaluate(()=>{const d=new Date();return d.getFullYear()+'年'+(d.getMonth()+1)+'月'});
+          await demo.getByRole('heading',{name:month}).waitFor();
+        }
+        if(route==='/zh-hans/components/composer-panel/'){
+          const demo=page.locator('#preview');
+          const tab=demo.getByRole('tab',{name:'工具',exact:true});
+          await tab.press('ArrowRight');
+          await demo.getByRole('tabpanel',{name:'文件'}).getByText(/选择需要引用的附件/).waitFor();
+          assert.equal(await demo.getByRole('tab',{name:'文件'}).getAttribute('aria-selected'),'true');
+          await demo.getByRole('tab',{name:'提示词'}).click();
+          await demo.getByRole('tabpanel',{name:'提示词'}).getByText(/选择预设工作流/).waitFor();
+        }
+        if(route==='/zh-hans/components/composer-attachments/'){
+          const demo=page.locator('#preview');
+          await demo.getByRole('button',{name:'移除 设计稿.pdf'}).click();
+          await demo.getByText('设计稿.pdf',{exact:true}).waitFor({state:'hidden'});
+          await demo.getByText('封面图.png',{exact:true}).waitFor();
+        }
+        if(route==='/zh-hans/components/notification-center/'){
+          const demo=page.locator('#preview'),count=demo.getByRole('status',{name:'未读通知数量'});
+          await count.waitFor({state:'attached'});
+          assert.equal(await count.textContent(),'2');
+          await demo.getByRole('radio',{name:'提及 1'}).click();
+          await demo.getByRole('button',{name:'新评论，未读'}).waitFor();
+          assert.equal(await demo.getByRole('button',{name:'构建已完成，未读'}).count(),0);
+          await demo.getByRole('radio',{name:'全部 3'}).click();
+          await demo.getByRole('button',{name:'构建已完成，未读'}).click();
+          assert.equal(await count.textContent(),'1');
+          await demo.getByRole('button',{name:'全部已读'}).click();
+          assert.equal(await count.textContent(),'0');
+          assert.ok(await demo.getByRole('button',{name:'全部已读'}).isDisabled());
+          await demo.getByRole('button',{name:'添加示例通知'}).click();
+          assert.equal(await count.textContent(),'1');
+          await demo.getByRole('button',{name:'新通知 3，未读'}).waitFor();
+        }
+        if(route==='/zh-hans/components/agent-creator/'){
+          const demo=page.locator('#preview'),name=demo.getByRole('textbox',{name:'名称',exact:true}),create=demo.getByRole('button',{name:'创建',exact:true});
+          await name.fill('');assert.ok(await create.isDisabled());
+          await name.fill('验收助手');
+          await demo.getByRole('button',{name:/模型/}).click();
+          await page.getByRole('option',{name:'深度推理'}).click();
+          const temperature=demo.getByRole('slider',{name:'温度（越高越有创造性）'});
+          await temperature.press('ArrowRight');
+          await demo.getByRole('switch',{name:'流式输出'}).press('Space');
+          await create.click();
+          await demo.getByText(/上次创建：验收助手 \/ deep \/ 41 \/ 检索网页 \/ false/).waitFor();
+        }
+        if(['/zh-hans/components/area-chart-card/','/zh-hans/components/line-chart-card/','/zh-hans/components/earnings-chart-card/','/zh-hans/components/orders-chart-card/','/zh-hans/components/revenue-chart-card/'].includes(route)){
+          const demo=page.locator('#preview'),svg=demo.getByRole('img',{name:/趋势图/});
+          const axisCount=()=>svg.locator('text').filter({hasText:/^[1-8]月$/}).count();
+          assert.equal(await axisCount(),8);
+          await demo.getByRole('radio',{name:'近4月'}).click();
+          await page.waitForFunction(()=>document.querySelectorAll('#preview svg[role=img] text').length>0&&[...document.querySelectorAll('#preview svg[role=img] text')].filter(e=>/^[1-8]月$/.test(e.textContent)).length===4);
+          assert.ok(!(await svg.locator('path').evaluateAll(es=>es.some(e=>/NaN|Infinity/.test(e.getAttribute('d')??'')))));
+          if(route.includes('line-chart'))assert.equal(await svg.locator('path[fill^="url("]').count(),0);
+          await demo.getByRole('radio',{name:'近8月'}).click();
+          await page.waitForFunction(()=>[...document.querySelectorAll('#preview svg[role=img] text')].filter(e=>/^[1-8]月$/.test(e.textContent)).length===8);
         }
         if(route==='/zh-hans/components/sidebar/'){
           const side=page.locator('#preview').getByRole('complementary',{name:'应用侧边栏'});
@@ -495,6 +569,23 @@ try{
           await page.emulateMedia({reducedMotion:'reduce'});
           assert.equal(await preview.locator('.bui-agent-thinking-label').first().evaluate(e=>getComputedStyle(e).animationName),'none');
         }
+        if(route.includes('/components/')&&/\/(?:[^/]*chart-card|activity-rings-card|bar-list-card|contributions-card|most-active-days-card|sleep-score-card|stage-bars-card|steps-card)\/$/.test(route)){
+          stage='chart: finite geometry and unique paint references';
+          const panel=page.locator('#preview [role=tabpanel]');
+          assert.equal(await panel.count(),1);
+          const geometry=await panel.evaluate(el=>{
+            const ids=[...el.querySelectorAll('svg [id]')].map(e=>e.id);
+            const invalid=[...el.querySelectorAll('svg path,svg rect,svg circle,svg line,svg polyline,svg polygon')].some(e=>[...e.attributes].some(a=>['d','points','x','y','width','height','cx','cy','r','x1','x2','y1','y2'].includes(a.name)&&/NaN|Infinity/.test(a.value)));
+            return {invalid,duplicate:ids.length!==new Set(ids).size,visible:el.getBoundingClientRect().width>0};
+          });
+          assert.deepEqual(geometry,{invalid:false,duplicate:false,visible:true});
+        }
+        if(route==='/zh-hans/components/bar-list-card/'){
+          const demo=page.locator('#preview');
+          await demo.getByRole('button',{name:'浏览器',exact:true}).click();
+          await demo.getByText('铬镀',{exact:true}).waitFor();
+          assert.equal(await demo.getByText('桌面',{exact:true}).count(),0);
+        }
         if(route==='/zh-hans/components/agent-progress/'){
           assert.equal(await page.locator('#preview [aria-current=step]').count(),1);
         }
@@ -502,6 +593,16 @@ try{
           const table=page.locator('#preview').getByRole('grid',{name:'成员列表'});
           assert.equal(await table.getByRole('row').count(),4);
           assert.ok(await table.locator('tbody tr').first().getByRole('rowheader').count());
+          const demo=page.locator('#preview'),query=demo.getByRole('searchbox',{name:'搜索成员'});
+          await query.fill('李四');
+          await page.waitForFunction(()=>document.querySelectorAll('#preview tbody tr').length===1);
+          assert.ok((await table.textContent()).includes('李四'));
+          await query.fill('');
+          await demo.getByRole('button',{name:/筛选成员状态/}).click();
+          await page.getByRole('option',{name:'休假',exact:true}).click();
+          await page.waitForFunction(()=>document.querySelector('#preview tbody')?.textContent.includes('王五'));
+          assert.equal(await table.locator('tbody tr').count(),1);
+
         }
         if(route==='/zh-hans/components/data-grid/'){
           const demo=page.locator('#preview');
@@ -666,15 +767,19 @@ try{
           await dialog.waitFor({state:'hidden'});
         }
         if(route==='/zh-hans/components/accordion/'){
+          stage='accordion: single expansion';
           const first=page.getByRole('button',{name:'第一项',exact:true});
           const second=page.getByRole('button',{name:'第二项',exact:true});
+          await second.scrollIntoViewIfNeeded();
           await second.click();
+          await page.waitForFunction(e=>e.getAttribute('aria-expanded')==='true',await second.elementHandle());
           assert.equal(await first.getAttribute('aria-expanded'),'false');
           assert.equal(await second.getAttribute('aria-expanded'),'true');
           assert.ok(await page.getByRole('button',{name:'禁用项'}).isDisabled());
+          stage='collapsible: editable panel close';
           const more=page.getByRole('button',{name:'更多设置'});
           await more.click();await page.getByRole('textbox',{name:'折叠内输入框'}).fill('test');
-          await more.click();assert.equal(await more.getAttribute('aria-expanded'),'false');
+          await more.click();await page.waitForFunction(e=>e.getAttribute('aria-expanded')==='false',await more.elementHandle());
         }
         if(route==='/zh-hans/components/notification/'){
           await page.getByRole('button',{name:'关闭示例通知'}).click();
@@ -715,6 +820,13 @@ try{
           assert.equal(await field.inputValue(),'北京');
         }
         if(route==='/zh-hans/components/dropdown/'){
+          const attach=page.locator('#preview').getByRole('button',{name:'添加到聊天'});
+          await attach.press('Enter');
+          const attachMenu=page.getByRole('menu',{name:'添加到聊天'});
+          await attachMenu.getByRole('menuitem',{name:'添加文件'}).press('Enter');
+          await page.locator('#preview').getByText('上次操作：文件').waitFor();
+          await attachMenu.waitFor({state:'hidden'});
+
           const trigger=page.getByRole('button',{name:'打开分组菜单'});
           await trigger.scrollIntoViewIfNeeded();
           await trigger.press('Enter');
@@ -874,5 +986,6 @@ try{
     await context.close();
   }
 }finally{await browser?.close();await new Promise(r=>server.close(r));if(full){mkdirSync('acceptance',{recursive:true});writeFileSync('acceptance/report.json',JSON.stringify({sha:process.env.GITHUB_SHA??execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),browser:browserName,report,errors},null,2));}}
+if(process.env.BROWSER_REPORT_PATH)writeFileSync(process.env.BROWSER_REPORT_PATH,JSON.stringify({browser:browserName,results:report,errors},null,2));
 console.log('Checked '+report.length+' page/theme combinations');
 if(errors.length){console.error(errors.join('\n'));process.exitCode=1;}

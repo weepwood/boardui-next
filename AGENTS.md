@@ -95,3 +95,12 @@
 - 校准主预览七项：IconButton 四项 36/36/32/32px；CloseButton 四尺寸和标签；ButtonGroup 四时间范围（旧受控演示移至 controlled）；Radio 三计费选项；Switch 胶囊/矩形各三尺寸；Textarea 404×80px 必填发行说明；SegmentedControl 每周/月/年 48×28px。保持公共组件 API，Button、Checkbox、Select 不做无意义修改；Input 内部宽度差异仍待复核。
 - 本地双主题 24 组截图布局无横溢出及 pageerror，人工抽看 switch 与 dark textarea；32/32 Edge 专项（12 控件加 4 默认页面，每主题 16），新增 switch/radio/textarea 键盘和状态回归，116 静态页及类型、API、预算通过。证据 reference/evidence/basic-components-visual-interaction-20261124.json；复现 scripts/audit-basic-visual.mjs [输出目录]，browser-check.mjs --targeted --both-themes。ledger 增加 12 条视觉与 12 条交互部分证据，修正旧 visual-sample 实际只有 3 个样本；不升级正式验收状态。
 - 完整验收 run 45399678321 针对 #28 合并提交 eca3148：Chromium 230/230、Firefox 230/230、WebKit 226/230。WebKit 浅/深 accordion aria-expanded 断言失败，RTL 浅色 React #418、深色布尔断言失败。690 组合中 686 通过，正式门禁仍未通过；下一批优先定位这两个实际问题，再验收 Dropdown/Popover/Tooltip/Dialog/Drawer/Accordion、日期与数值输入。不要把旧完整验收当作本批通过。
+
+### 组合组件、图表与模板逐项视觉/交互验收
+
+- #30 quick/targeted 成功并合并至 main 4185e8a。本批按 02–09 专项覆盖 52 个组件页与 12 个模板页。固定公开 MIT 源 ec5c5eb，官网实时浅色对照 40 个组件及 10 个独立模板；后者整页结构不同，HR/Calendar 无对应原版模板。Pro 独立实现，不取未授权源码。
+- 真实修复：Dropdown 主预览操作反馈、Tooltip 三种变体、Table 搜索与状态筛选；ComposerPanel 复用 React Aria Tabs 并可受控；NotificationCenter 新通知同步、分类、未读状态与 430px 轻量面板；AgentCreator 完整配置回调与必填校验。CalendarCard 与 CalendarTemplate 共用月份逻辑，补齐前后月份、今天与选择。面积图沿真实基线闭合，折线图取消叠加填充，五个趋势图增加真实 4/8 月数据范围切换；单系列卡标题指标仍是示例值，不声称业务指标全联动。
+- 仪表盘、财务、人力资源、营销模板减少层叠描边/阴影，统一语义次级表面；看板列按宽度伸展、标签自适应，移除非交互卡片误导性悬停。医疗档案仅只读虚构数据；其它模板专项含本地发送、任务新增、筛选、日期切换、关注、预览等，不代表生产后端。
+- 最终 Edge 双主题 138/138 组合通过（含默认路由/RTL），64×2 视觉截图无横溢出或 pageerror；图表新增有限几何、唯一 SVG ID 断言。116 静态页、类型、API、单测、独立包 SSR/类型消费及预算通过；全站 gzip 最大 JS 500438B、HTML 25782B，模板目录 253311B。证据 reference/evidence/compound-visual-interaction-20261124.json，8 张代表性实际截图 reference/evidence/screenshots/20261124-compound/。复现 scripts/audit-component-matrix.mjs，CI 额外保留视觉矩阵 artifact。
+- WebKit 旧全量 run 45399678321 为 226/230，Chromium/Firefox 各 230/230。Accordion 滚入后等待真实 aria-expanded 状态，RTL 采用确定性可见数字文本与布局/方向提交等待，保留最终断言。当前本地 Firefox 安装缺 libmozglue.dylib，WebKit 安装未完整，不能宣称根因已确认或修复通过。新增 CI WebKit 双主题专项；需检查实际输出再决定合并与完整三浏览器复验。
+- ledger 仅新增部分视觉/交互证据；全部 104 项正式验收状态保持原状，不把截图、状态断言或本地 Chromium 专项当作完整跨浏览器/axe 验收。后续优先 WebKit 真实结果、未核验变体及原版模板结构差异。

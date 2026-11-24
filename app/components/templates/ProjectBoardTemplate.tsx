@@ -171,8 +171,8 @@ export function ProjectBoardTemplate() {
         <div className="flex min-h-0 flex-1 gap-2 overflow-x-auto p-3 [scrollbar-width:thin]">
           {columns.map((col) => (
             <div
-              key={col.id}
-              className="flex w-[196px] shrink-0 flex-col gap-2 rounded-2xl bg-background-secondary-default p-3"
+              key={col.id} data-board-column
+              className="flex min-w-[196px] flex-1 flex-col gap-2 rounded-2xl bg-background-secondary-default p-3"
             >
               <div className="flex items-center justify-between px-1">
                 <div className="flex items-center gap-1.5">
@@ -195,14 +195,13 @@ export function ProjectBoardTemplate() {
                   <div
                     key={card.id}
                     className={cn(
-                      "group flex cursor-pointer flex-col gap-1.5 rounded-lg border border-border-button-default",
-                      "bg-background-primary-default p-2 shadow-xs",
-                      "transition-[border-color,box-shadow,transform] duration-150 ease-out",
-                      "hover:-translate-y-px hover:border-border-button-hover hover:shadow-sm"
+                      "group flex flex-col gap-2 rounded-xl border border-border-component-detail-container",
+                      "bg-background-primary-default p-3",
+                      "transition-colors duration-150 motion-reduce:transition-none"
                     )}
                   >
                     {card.tag && (
-                      <Badge variant={card.tag.variant}>{card.tag.label}</Badge>
+                      <Badge className="self-start" variant={card.tag.variant}>{card.tag.label}</Badge>
                     )}
                     <span className="text-body-2-medium leading-snug text-text-primary">
                       {card.title}
@@ -273,7 +272,7 @@ export function ProjectBoardTemplate() {
                 <span className="min-w-0 flex-1 truncate text-body-2-medium text-text-primary">
                   {card.title}
                 </span>
-                {card.tag && <Badge variant={card.tag.variant}>{card.tag.label}</Badge>}
+                {card.tag && <Badge className="self-start" variant={card.tag.variant}>{card.tag.label}</Badge>}
                 <span className="shrink-0 text-caption-2-regular text-text-tertiary">
                   {col.title}
                 </span>

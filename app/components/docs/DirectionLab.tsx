@@ -15,7 +15,7 @@ export function DirectionLab(){
  <Select aria-label="地区" selectedKey={selection} onSelectionChange={k=>setSelection(String(k))}><SelectItem id="a">亚洲</SelectItem><SelectItem id="b">欧洲</SelectItem></Select>
  <Dropdown><DropdownTrigger className="rounded-2lg border border-border-button-default px-3 py-2 text-body-medium">操作菜单</DropdownTrigger><DropdownPopover aria-label="方向操作"><DropdownItem onSelect={()=>setAction("编辑")}>编辑</DropdownItem></DropdownPopover></Dropdown></div>
  <div className="grid min-w-0 gap-4 sm:grid-cols-2"><Input label="电子邮箱" type="email" defaultValue="example@example.com" hint="邮箱保持 LTR"/><RadioGroup aria-label="单选方向" value={radio} onChange={setRadio} orientation="horizontal"><Radio value="a">A</Radio><Radio value="b">B</Radio></RadioGroup></div>
- <Slider label="音量" thumbLabel="方向音量" value={volume} onChange={setVolume} minValue={0} maxValue={100}/>
+ <Slider label="音量" thumbLabel="方向音量" value={volume} formatValue={value=>String(value)} onChange={setVolume} minValue={0} maxValue={100}/>
  <Pagination page={page} totalPages={8} onChange={setPage}/>
  <output data-testid="direction-state" className="break-words rounded-lg bg-background-secondary-default p-2 text-body-2-regular" aria-live="polite">{[tab,segment,selection,radio,volume,page,action||"—"].join(" / ")}</output>
  </DirectionProvider>

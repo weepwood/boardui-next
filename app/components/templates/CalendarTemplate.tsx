@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import {useCalendarMonth} from "@/app/components/ui/use-calendar-month";
 import { DemoNotice, TemplateSegments, downloadCsv } from "./TemplateShared";
 import { Icon } from "@/app/components/ui/Icon";
 import { Avatar } from "@/app/components/ui/Avatar";
@@ -47,22 +47,9 @@ const FIRST_WEEKDAY = 5; // 0=周一 … 5=周六
 
 /** 日历模板：月视图 + 事件色块 + 侧栏日程 */
 export function CalendarTemplate() {
-  const [selected, setSelected] = useState(12);
-  const [cursor,setCursor]=useState({year:2026,month:7});
-  const month=cursor.year+"年"+(cursor.month+1)+"月";
-  const days=new Date(cursor.year,cursor.month+1,0).getDate();
-  const first=(new Date(cursor.year,cursor.month,1).getDay()+6)%7;
+  const {cursor,month,selected,setSelected,cells,today,shift,goToday}=useCalendarMonth({year:2026,month:7},12);
   const monthEvents=cursor.year===2026&&cursor.month===7?EVENTS:[];
-  const shift=(n:number)=>{const d=new Date(cursor.year,cursor.month+n,1);setCursor({year:d.getFullYear(),month:d.getMonth()});setSelected(1)};
-
-  const cells: (number | null)[] = [
-    ...Array.from({ length: first }, () => null),
-    ...Array.from({ length: days }, (_, i) => i + 1),
-  ];
-  while (cells.length % 7 !== 0) cells.push(null);
-
-  const dayEvents = monthEvents.filter((e) => e.day === selected);
-  const now=new Date();const today=now.getFullYear()===cursor.year&&now.getMonth()===cursor.month?now.getDate():0;
+  const dayEvents=monthEvents.filter(e=>e.day===selected);
 
   return (
     <div className="flex min-h-[620px] w-full flex-col overflow-hidden bui-template-shell rounded-3xl border border-border-component-detail-container bg-background-full  @3xl:flex-row">
@@ -83,7 +70,7 @@ export function CalendarTemplate() {
             </button>
             <button
               type="button"
-              onClick={()=>{const d=new Date();setCursor({year:d.getFullYear(),month:d.getMonth()});setSelected(d.getDate())}} className="h-7 cursor-pointer rounded-lg px-2 text-caption-1-medium text-text-secondary hover:bg-background-secondary-hover"
+              onClick={goToday} className="h-7 cursor-pointer rounded-lg px-2 text-caption-1-medium text-text-secondary hover:bg-background-secondary-hover"
             >
               今天
             </button>
@@ -127,7 +114,7 @@ export function CalendarTemplate() {
               <button
                 key={day}
                 type="button"
-                onClick={() => setSelected(day)} aria-label={month+day+"日"} aria-pressed={isSel}
+                onClick={() => setSelected(day)} aria-pressed={isSel} aria-label={month+day+"日"}
                 className={cn(
                   "flex min-w-0 min-h-[52px] @lg:min-h-[84px] cursor-pointer flex-col gap-1 border-b border-e border-separator-border p-1.5 text-start",
                   "transition-colors duration-150 ease-out",

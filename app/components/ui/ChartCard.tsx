@@ -1,5 +1,7 @@
 "use client";
 
+import {useState} from "react";
+import {SegmentedControl} from "./SegmentedControl";
 import { cn } from "@/lib/utils";
 import { Icon } from "./Icon";
 import { ChartArea, ChartLegend, type Series } from "./ChartArea";
@@ -24,6 +26,8 @@ export type ChartCardProps = {
   icon?: string;
   className?: string;
   height?: number;
+  /** Local sample time range selector for monthly chart series. */
+  periodFilter?: boolean;
 };
 
 const MONTHS = ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月"];
@@ -52,7 +56,7 @@ const LEGEND = [
 
 /** 卡片外壳：与 StatCard 同一视觉语言 */
 function Card({
-  title, subtitle, value, delta, trend = "up", children, className,
+  title, subtitle, value, delta, trend = "up", children, className, controls,
 }: {
   title: string;
   subtitle?: string;
@@ -60,6 +64,7 @@ function Card({
   delta?: string;
   trend?: "up" | "down" | "flat";
   children: React.ReactNode;
+  controls?: React.ReactNode;
   className?: string;
 }) {
   return (
@@ -72,7 +77,7 @@ function Card({
       )}
     >
       <div className="flex flex-col gap-1">
-        <span className="text-body-medium text-text-secondary">{title}</span>
+        <div className="flex flex-wrap items-center justify-between gap-2"><span className="text-body-medium text-text-secondary">{title}</span>{controls}</div>
         {(value || delta) && (
           <div className="flex items-center gap-2">
             {value && (
@@ -108,32 +113,40 @@ function Card({
  * 通用图表卡片：20 种图表类型。
  * 折线/面积类使用 ChartArea（含网格、双轴、图例），其余复用基础图表。
  */
-export function ChartCard({ kind, height = 196, ...rest }: ChartCardProps) {
+export function ChartCard({ kind, height = 196, periodFilter=false, ...rest }: ChartCardProps) {
   const { title, subtitle, value, delta, trend, className } = rest;
   void rest.icon;
+  const [period,setPeriod]=useState("8");
+  const showPeriods=periodFilter&&["area","line","earnings","orders","revenue"].includes(kind);
+  const range=showPeriods?Number(period):8;
+  const months=MONTHS.slice(-range);
+  const windowSeries=(series:Series[])=>series.map(s=>({...s,data:s.data.slice(-range)}));
+  const format=(n:number)=>n.toLocaleString("en-US");
+  const displayLegend=showPeriods?windowSeries(AREA_SERIES).map(s=>({name:s.name,color:s.color,value:format(s.data.reduce((a,b)=>a+b,0))})):LEGEND;
+  const total=showPeriods&&["area","line"].includes(kind)?format(windowSeries(AREA_SERIES).reduce((sum,s)=>sum+s.data.reduce((a,b)=>a+b,0),0)):value;
 
   const body = (() => {
     switch (kind) {
       case "area":
         return (
           <>
-            <ChartArea series={AREA_SERIES} labels={MONTHS} height={height} />
-            <ChartLegend items={LEGEND} />
+            <ChartArea series={windowSeries(AREA_SERIES)} labels={months} height={height} />
+            <ChartLegend items={displayLegend} />
           </>
         );
       case "line":
         return (
           <>
-            <ChartArea series={AREA_SERIES} labels={MONTHS} height={height} fillOpacity={0.08} />
-            <ChartLegend items={LEGEND} />
+            <ChartArea series={windowSeries(AREA_SERIES)} labels={months} height={height} stacked={false} showFill={false} />
+            <ChartLegend items={displayLegend} />
           </>
         );
       case "revenue":
         return (
           <>
             <ChartArea
-              series={[{ name: "营收", data: [30, 42, 38, 55, 48, 68, 62, 82].map((v) => v * 1000), color: "var(--color-lime-500)" }]}
-              labels={MONTHS}
+              series={windowSeries([{ name: "营收", data: [30, 42, 38, 55, 48, 68, 62, 82].map((v) => v * 1000), color: "var(--color-lime-500)" }])}
+              labels={months}
               height={height}
             />
           </>
@@ -141,16 +154,16 @@ export function ChartCard({ kind, height = 196, ...rest }: ChartCardProps) {
       case "earnings":
         return (
           <ChartArea
-            series={[{ name: "收入", data: [22, 30, 28, 42, 38, 56, 50, 68].map((v) => v * 800), color: "var(--color-accent-500)" }]}
-            labels={MONTHS}
+            series={windowSeries([{ name: "收入", data: [22, 30, 28, 42, 38, 56, 50, 68].map((v) => v * 800), color: "var(--color-accent-500)" }])}
+            labels={months}
             height={height}
           />
         );
       case "orders":
         return (
           <ChartArea
-            series={[{ name: "订单", data: [24, 38, 31, 52, 44, 66, 58, 72].map((v) => v * 40), color: "var(--color-amber-500)" }]}
-            labels={MONTHS}
+            series={windowSeries([{ name: "订单", data: [24, 38, 31, 52, 44, 66, 58, 72].map((v) => v * 40), color: "var(--color-amber-500)" }])}
+            labels={months}
             height={height}
           />
         );
@@ -359,7 +372,7 @@ export function ChartCard({ kind, height = 196, ...rest }: ChartCardProps) {
   })();
 
   return (
-    <Card title={title} subtitle={subtitle} value={value} delta={delta} trend={trend} className={className}>
+    <Card title={title} subtitle={subtitle} value={total} delta={showPeriods?undefined:delta} trend={trend} className={className} controls={showPeriods?<SegmentedControl value={period} onChange={setPeriod} size="sm" options={[{id:"4",label:"近4月"},{id:"8",label:"近8月"}]}/>:undefined}>
       {body}
     </Card>
   );

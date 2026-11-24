@@ -41,14 +41,14 @@ export function MarketingTemplate() {
 
       <div className="flex flex-col gap-3 p-4">
         <div className="grid min-w-0 grid-cols-1 gap-3 @sm:grid-cols-2 @3xl:grid-cols-4">
-          <StatCard label="访问量" value="284,620" delta="+24.3%" trend="up" icon="eye-line" spark={TRAFFIC} />
-          <StatCard label="获客成本" value="¥42.80" delta="-8.6%" trend="down" icon="money-cny-circle-line" spark={[52, 50, 48, 47, 45, 44, 43]} />
-          <StatCard label="广告回报" value="4.6x" delta="+0.8x" trend="up" icon="funds-line" spark={[3.4, 3.6, 3.8, 4.0, 4.2, 4.4, 4.6]} />
-          <StatCard label="转化率" value="4.82%" delta="+0.9%" trend="up" icon="percent-line" spark={[3.2, 3.6, 3.9, 4.1, 4.4, 4.6, 4.82]} />
+          <StatCard className="border-transparent bg-background-secondary-default shadow-none" label="访问量" value="284,620" delta="+24.3%" trend="up" icon="eye-line" spark={TRAFFIC} />
+          <StatCard className="border-transparent bg-background-secondary-default shadow-none" label="获客成本" value="¥42.80" delta="-8.6%" trend="down" icon="money-cny-circle-line" spark={[52, 50, 48, 47, 45, 44, 43]} />
+          <StatCard className="border-transparent bg-background-secondary-default shadow-none" label="广告回报" value="4.6x" delta="+0.8x" trend="up" icon="funds-line" spark={[3.4, 3.6, 3.8, 4.0, 4.2, 4.4, 4.6]} />
+          <StatCard className="border-transparent bg-background-secondary-default shadow-none" label="转化率" value="4.82%" delta="+0.9%" trend="up" icon="percent-line" spark={[3.2, 3.6, 3.9, 4.1, 4.4, 4.6, 4.82]} />
         </div>
 
         <div className="grid min-w-0 grid-cols-1 gap-3 @3xl:grid-cols-3">
-          <div className="flex flex-col gap-2 bui-template-panel min-w-0 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4 @3xl:col-span-2">
+          <div className="flex flex-col gap-2 min-w-0 rounded-2xl bg-background-secondary-default p-4 @3xl:col-span-2">
             <div className="flex items-center justify-between">
               <span className="text-body-2-medium text-text-primary">流量趋势</span>
               <div className="flex items-center gap-2 text-caption-2-regular text-text-tertiary">
@@ -71,7 +71,7 @@ export function MarketingTemplate() {
             />
           </div>
 
-          <div className="flex flex-col gap-2 bui-template-panel min-w-0 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
+          <div className="flex flex-col gap-2 min-w-0 rounded-2xl bg-background-secondary-default p-4">
             <span className="text-body-2-medium text-text-primary">转化漏斗</span>
             <FunnelChart
               steps={[
@@ -86,7 +86,7 @@ export function MarketingTemplate() {
         </div>
 
         <div className="grid min-w-0 grid-cols-1 gap-3 @2xl:grid-cols-2">
-          <div className="flex flex-col gap-2 bui-template-panel min-w-0 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
+          <div className="flex flex-col gap-2 min-w-0 rounded-2xl bg-background-secondary-default p-4">
             <span className="text-body-2-medium text-text-primary">渠道 ROI</span>
             <BarList
               items={[
@@ -99,7 +99,7 @@ export function MarketingTemplate() {
             />
           </div>
 
-          <div className="flex flex-col gap-2 bui-template-panel min-w-0 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
+          <div className="flex flex-col gap-2 min-w-0 rounded-2xl bg-background-secondary-default p-4">
             <div className="flex items-center justify-between">
               <span className="text-body-2-medium text-text-primary">内容发布密度</span>
               <span className="text-caption-2-regular text-text-tertiary">近 16 周</span>
@@ -110,7 +110,7 @@ export function MarketingTemplate() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-2 bui-template-panel min-w-0 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
+        <div className="flex flex-col gap-2 min-w-0 rounded-2xl bg-background-secondary-default p-4">
           <div className="flex items-center justify-between">
             <span className="text-body-2-medium text-text-primary">活动列表</span>
             <TemplateSegments values={["全部","进行中","已结束"] as const} value={filter} onChange={setFilter}/>

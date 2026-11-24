@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import {useCalendarMonth} from "./use-calendar-month";
 import { Icon } from "@/app/components/ui/Icon";
 import { Avatar } from "@/app/components/ui/Avatar";
 import { cn } from "@/lib/utils";
@@ -41,22 +41,12 @@ const TONE: Record<EventTone, string> = {
 const WEEKDAYS = ["一", "二", "三", "四", "五", "六", "日"];
 
 /** 2026 年 8 月的真实布局：1 号是周六 */
-const DAYS_IN_MONTH = 31;
-const FIRST_WEEKDAY = 5; // 0=周一 … 5=周六
 
 /** 日历模板：月视图 + 事件色块 + 侧栏日程 */
 export function CalendarCard() {
-  const [selected, setSelected] = useState(12);
-  const [month] = useState("2026年8月");
-
-  const cells: (number | null)[] = [
-    ...Array.from({ length: FIRST_WEEKDAY }, () => null),
-    ...Array.from({ length: DAYS_IN_MONTH }, (_, i) => i + 1),
-  ];
-  while (cells.length % 7 !== 0) cells.push(null);
-
-  const dayEvents = EVENTS.filter((e) => e.day === selected);
-  const today = 12;
+  const {cursor,month,selected,setSelected,cells,today,shift,goToday}=useCalendarMonth({year:2026,month:7},12);
+  const monthEvents=cursor.year===2026&&cursor.month===7?EVENTS:[];
+  const dayEvents=monthEvents.filter(e=>e.day===selected);
 
   return (
     <div className="flex min-h-[620px] w-full flex-col overflow-hidden rounded-3xl border border-border-component-detail-container bg-background-primary-default lg:flex-row">
@@ -64,26 +54,26 @@ export function CalendarCard() {
       <div className="flex min-w-0 flex-1 flex-col">
         <header className="flex flex-wrap items-center justify-between gap-2 border-b border-separator-border px-4 py-3">
           <div className="flex items-center gap-2">
-            <h3 className="text-title-3-semibold text-text-primary">{month}</h3>
-            <span className="text-caption-1-regular text-text-tertiary">9 个日程</span>
+            <h3 className="text-headline-medium text-text-primary">{month}</h3>
+            <span className="text-caption-1-regular text-text-tertiary">{monthEvents.length} 个日程 · 示例</span>
           </div>
           <div className="flex items-center gap-1">
             <button
               type="button"
-              aria-label="上个月"
+              aria-label="上个月" onClick={()=>shift(-1)}
               className="flex size-7 cursor-pointer items-center justify-center rounded-lg text-foreground-icon-secondary hover:bg-background-secondary-hover"
             >
               <Icon name="arrow-left-s-line" className="size-4" />
             </button>
             <button
-              type="button"
+              type="button" onClick={goToday}
               className="h-7 cursor-pointer rounded-lg px-2 text-caption-1-medium text-text-secondary hover:bg-background-secondary-hover"
             >
               今天
             </button>
             <button
               type="button"
-              aria-label="下个月"
+              aria-label="下个月" onClick={()=>shift(1)}
               className="flex size-7 cursor-pointer items-center justify-center rounded-lg text-foreground-icon-secondary hover:bg-background-secondary-hover"
             >
               <Icon name="arrow-right-s-line" className="size-4" />
@@ -114,17 +104,17 @@ export function CalendarCard() {
                 />
               );
             }
-            const evs = EVENTS.filter((e) => e.day === day);
+            const evs = monthEvents.filter((e) => e.day === day);
             const isToday = day === today;
             const isSel = day === selected;
             return (
               <button
                 key={day}
                 type="button"
-                onClick={() => setSelected(day)}
+                onClick={() => setSelected(day)} aria-pressed={isSel} aria-label={month+day+"日，"+evs.length+"个日程"}
                 className={cn(
                   "flex min-w-0 min-h-[84px] cursor-pointer flex-col gap-1 border-b border-e border-separator-border p-1.5 text-start",
-                  "transition-colors duration-150 ease-out",
+                  "transition-colors duration-150 ease-out motion-reduce:transition-none focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-border-focus-ring",
                   isSel ? "bg-badge-new-background" : "hover:bg-background-secondary-hover"
                 )}
               >
@@ -166,7 +156,7 @@ export function CalendarCard() {
       {/* 侧栏日程 */}
       <aside className="flex w-full shrink-0 flex-col gap-3 border-t border-separator-border p-4 lg:w-[240px] lg:border-s lg:border-t-0">
         <div className="flex flex-col gap-0.5">
-          <span className="text-body-2-medium text-text-primary">8月{selected}日</span>
+          <span className="text-body-2-medium text-text-primary">{cursor.month+1}月{selected}日</span>
           <span className="text-caption-2-regular text-text-tertiary">
             {dayEvents.length} 个日程
           </span>

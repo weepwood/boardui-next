@@ -67,15 +67,15 @@ export function DashboardTemplate() {
         <div className="flex min-w-0 flex-col gap-3 p-3 @lg:p-4">
           {/* 统计卡 */}
           <div className="grid min-w-0 grid-cols-1 gap-3 @sm:grid-cols-2 @3xl:grid-cols-4">
-            <StatCard label="总收入" value="¥128,430" delta="+12.5%" trend="up" icon="money-dollar-circle-line" spark={REVENUE} />
-            <StatCard label="订单数" value="1,284" delta="+8.2%" trend="up" icon="shopping-bag-3-line" spark={[8, 12, 10, 16, 14, 19, 22]} />
-            <StatCard label="活跃用户" value="8,621" delta="-2.4%" trend="down" icon="user-line" spark={[22, 20, 21, 18, 17, 16, 15]} />
-            <StatCard label="转化率" value="3.84%" delta="+0.6%" trend="up" icon="line-chart-line" spark={[2, 2.4, 2.8, 3.1, 3.4, 3.6, 3.84]} />
+            <StatCard className="border-transparent bg-background-secondary-default shadow-none" label="总收入" value="¥128,430" delta="+12.5%" trend="up" icon="money-dollar-circle-line" spark={REVENUE} />
+            <StatCard className="border-transparent bg-background-secondary-default shadow-none" label="订单数" value="1,284" delta="+8.2%" trend="up" icon="shopping-bag-3-line" spark={[8, 12, 10, 16, 14, 19, 22]} />
+            <StatCard className="border-transparent bg-background-secondary-default shadow-none" label="活跃用户" value="8,621" delta="-2.4%" trend="down" icon="user-line" spark={[22, 20, 21, 18, 17, 16, 15]} />
+            <StatCard className="border-transparent bg-background-secondary-default shadow-none" label="转化率" value="3.84%" delta="+0.6%" trend="up" icon="line-chart-line" spark={[2, 2.4, 2.8, 3.1, 3.4, 3.6, 3.84]} />
           </div>
 
           {/* 主图表 + 环形 */}
           <div className="grid min-w-0 grid-cols-1 gap-3 @3xl:grid-cols-3">
-            <div className="flex flex-col gap-2 bui-template-panel min-w-0 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4 @3xl:col-span-2">
+            <div className="flex flex-col gap-2 min-w-0 rounded-2xl bg-background-secondary-default p-4 @3xl:col-span-2">
               <div className="flex items-center justify-between">
                 <span className="text-body-2-medium text-text-primary">收入趋势</span>
                 <span className="text-caption-2-regular text-text-tertiary">近 12 周</span>
@@ -83,7 +83,7 @@ export function DashboardTemplate() {
               <AreaChart data={REVENUE} height={140} gradientId="dash-revenue" />
             </div>
 
-            <div className="flex flex-col items-center justify-center gap-2 bui-template-panel min-w-0 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
+            <div className="flex flex-col items-center justify-center gap-2 min-w-0 rounded-2xl bg-background-secondary-default p-4">
               <span className="self-start text-body-2-medium text-text-primary">目标完成度</span>
               <RadialChart value={72} size={100} label="72%" />
               <span className="text-caption-2-regular text-text-tertiary">距年终目标还差 ¥32,000</span>
@@ -92,7 +92,7 @@ export function DashboardTemplate() {
 
           {/* 渠道 + 热力图 */}
           <div className="grid min-w-0 grid-cols-1 gap-3 @2xl:grid-cols-2">
-            <div className="flex flex-col gap-2 bui-template-panel min-w-0 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
+            <div className="flex flex-col gap-2 min-w-0 rounded-2xl bg-background-secondary-default p-4">
               <span className="text-body-2-medium text-text-primary">流量来源</span>
               <BarList
                 items={[
@@ -104,7 +104,7 @@ export function DashboardTemplate() {
               />
             </div>
 
-            <div className="flex flex-col gap-2 bui-template-panel min-w-0 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
+            <div className="flex flex-col gap-2 min-w-0 rounded-2xl bg-background-secondary-default p-4">
               <div className="flex items-center justify-between">
                 <span className="text-body-2-medium text-text-primary">活跃热力图</span>
                 <span className="text-caption-2-regular text-text-tertiary">近 20 周</span>
@@ -123,7 +123,7 @@ export function DashboardTemplate() {
           </div>
 
           {/* 最近订单 */}
-          <div className="flex flex-col gap-2 bui-template-panel min-w-0 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
+          <div className="flex flex-col gap-2 min-w-0 rounded-2xl bg-background-secondary-default p-4">
             <div className="flex items-center justify-between">
               <span className="text-body-2-medium text-text-primary">最近订单</span>
               <div className="flex items-center gap-2">
