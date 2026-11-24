@@ -553,8 +553,8 @@ export const docs: Record<string, Doc> = {
     description: "原版浅色语义卡片、方向感知箭头、淡入缩放及模糊过渡。",
     install: "npx boardui@latest add tooltip",
     preview: (
-      <TooltipTrigger>
-        <Button variant="secondary">悬停查看提示</Button>
+      <TooltipTrigger delay={120}>
+        <AriaButton variant="secondary">悬停查看提示</AriaButton>
         <Tooltip>这是一个提示气泡</Tooltip>
       </TooltipTrigger>
     ),
