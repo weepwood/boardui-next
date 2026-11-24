@@ -21,7 +21,7 @@
     "test:consumer:browser": "node scripts/check-consumer-browser.mjs",
     "docs:api": "node scripts/generate-api-reference.mjs",
     "test:api": "node scripts/generate-api-reference.mjs --check",
-    "test:evidence": "node scripts/check-evidence.mjs",
+    "test:evidence": "node scripts/check-evidence.mjs && node --test tests/evidence-gate.test.mjs",
     "test:tokens": "node scripts/check-semantic-tokens.mjs",
     "fonts:prepare": "node scripts/prepare-fonts.mjs",
     "predev": "npm run fonts:prepare",

@@ -7,6 +7,7 @@ const Glyph=({className,...props})=><svg viewBox="0 0 20 20" className={classNam
 function App(){
  const [count,setCount]=useState(0),[pressed,setPressed]=useState(false);
  const [formResult,setFormResult]=useState(""),[pages,setPages]=useState(1),[page,setPage]=useState(1);
+ const [capacity,setCapacity]=useState(25);
  const [actionCount,setActionCount]=useState(0),[dismissCount,setDismissCount]=useState(0);
  const [dark,setDark]=useState(false),[rtl,setRtl]=useState(false),[name,setName]=useState("示例项目"),[saved,setSaved]=useState("");
  return <DirectionProvider locale={rtl?"ar":"zh-CN"}><main style={{maxWidth:680,margin:"auto",padding:24,display:"grid",gap:16}}>
@@ -33,6 +34,9 @@ function App(){
  <FunnelChart steps={[{label:"零基线",value:0},{label:"无效值",value:NaN},{label:"后续",value:8}]}/>
  <div data-testid="empty-funnel"><FunnelChart steps={[]}/></div>
  <Meter label="无效容量" value={Infinity} max={0}/>
+ <Meter label="动态容量" value={capacity} max={200} className="consumer-meter" tone="success"/>
+ <Meter value={42} tone="warning"/>
+ <Button onClick={()=>setCapacity(175)}>增加容量</Button><Button onClick={()=>setCapacity(50)}>降低容量</Button>
  <Announcement title="消费公告" actionLabel="执行公告" onAction={()=>setActionCount(v=>v+1)} dismissible closeLabel="关闭消费公告" onClose={()=>setDismissCount(v=>v+1)}/>
  <Notification title="消费通知" actions={[{label:"执行通知",onClick:()=>setActionCount(v=>v+1)}]} closeLabel="关闭消费通知" onDismiss={()=>setDismissCount(v=>v+1)}/>
  <output data-testid="notice-count">{actionCount} / {dismissCount}</output>

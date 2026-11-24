@@ -3868,6 +3868,47 @@
       ],
       "scope": "修正语义色废弃令牌、字号标签与真实四档字重，Edge双主题计算样式及18组专项通过，非完整原版视觉验收。",
       "source": "reference/evidence/final-guide-tokens-20261125.json"
+    },
+    {
+      "id": "divider-intrinsic-interaction-na-20261125",
+      "dimension": "interaction",
+      "result": "not-applicable",
+      "components": [
+        "divider"
+      ],
+      "scope": "分隔线默认契约仅用于静态内容分隔，实测两个方向与装饰变体均无焦点、无可操作状态。",
+      "source": "reference/evidence/passive-contract-decisions-20261125.json",
+      "reason": "静态 Divider 本身没有鼠标、键盘操作、焦点恢复或动效中断要求；外部组合交互不属于其自身契约。"
+    },
+    {
+      "id": "divider-rtl-contract-20261125",
+      "dimension": "rtl",
+      "result": "passed",
+      "components": [
+        "divider"
+      ],
+      "scope": "水平与垂直两种方向、装饰与语义变体均在双主题双视口 LTR/RTL 实测，线宽、方向、装饰属性与焦点语义符合契约。",
+      "source": "reference/evidence/passive-contract-decisions-20261125.json"
+    },
+    {
+      "id": "meter-api-contract-20261125",
+      "dimension": "api",
+      "result": "passed",
+      "components": [
+        "meter"
+      ],
+      "scope": "全部五个自有属性 value/max/label/className/tone 经源码、文档和真实浏览器验证；默认值、四种色调、无效输入、受外部状态驱动更新及打包消费均通过。无 ref、事件或表单组件接口。",
+      "source": "reference/evidence/passive-contract-decisions-20261125.json"
+    },
+    {
+      "id": "meter-rtl-contract-20261125",
+      "dimension": "rtl",
+      "result": "passed",
+      "components": [
+        "meter"
+      ],
+      "scope": "双主题双视口双方向实际检查各色调及边界值；填充从逻辑起点开始、渐变方向镜像、动态值更新后比例正确，不含浮层。",
+      "source": "reference/evidence/passive-contract-decisions-20261125.json"
     }
   ]
 }

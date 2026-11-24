@@ -74,6 +74,17 @@ try{
  assert.equal(await funnel.locator("text").evaluateAll(es=>es.map(e=>e.textContent).join(",")),"—,—,—");
  assert.equal(await page.getByTestId("empty-funnel").getByRole("status").textContent(),"暂无可展示数据");
  assert.equal(await boundary.getByRole("meter",{name:"无效容量"}).getAttribute("aria-valuenow"),"0");
+ const meter=boundary.getByRole("meter",{name:"动态容量"});
+ assert.equal(await meter.getAttribute("aria-valuemax"),"200");
+ assert.equal(await meter.getAttribute("aria-valuenow"),"25");
+ assert.equal(await boundary.locator(".consumer-meter").count(),1);
+ assert.equal(await boundary.getByRole("meter",{name:"度量",exact:true}).getAttribute("aria-valuenow"),"42");
+ await boundary.getByRole("button",{name:"增加容量"}).press("Enter");
+ assert.equal(await meter.getAttribute("aria-valuenow"),"175");
+ await boundary.getByRole("button",{name:"降低容量"}).press("Space");
+ assert.equal(await meter.getAttribute("aria-valuenow"),"50");
+ const geometry=await meter.evaluate(e=>{const a=e.getBoundingClientRect(),b=e.firstElementChild.getBoundingClientRect();return {ratio:b.width/a.width,right:Math.abs(a.right-b.right),gradient:getComputedStyle(e.firstElementChild).backgroundImage}});
+ assert.ok(Math.abs(geometry.ratio-.25)<.01);assert.ok(geometry.right<=1);assert.ok(geometry.gradient.includes("to left"),geometry.gradient);
  for(const type of ["公告","通知"]){
   await boundary.getByRole("button",{name:"执行"+type}).press("Enter");
   const close=boundary.getByRole("button",{name:"关闭消费"+type});await close.press("Space");await close.waitFor({state:"hidden"});

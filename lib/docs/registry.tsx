@@ -566,7 +566,7 @@ import { RiArrowRightLine } from "@remixicon/react";
         <span className="text-body-regular text-text-secondary">下方内容</span>
       </div>
     )),
-    demos: () => ([]),
+    demos: () => ([{id:"orientation-contract",title:"方向与语义",node:<div data-testid="divider-contract" className="flex w-full max-w-sm flex-col gap-3"><div className="flex h-8 items-center gap-3"><span>前</span><Divider orientation="vertical" aria-label="垂直分隔线" className="shrink-0"/><span>后</span></div><Divider aria-label="水平分隔线" id="horizontal-contract" className="w-full"/><Divider aria-hidden="true" data-testid="decorative-divider"/></div>}]),
   },
 
   tabs: {
@@ -830,7 +830,7 @@ import { RiArrowRightLine } from "@remixicon/react";
         <Meter label="磁盘" value={93} tone="danger" />
       </div>
     )),
-    demos: () => ([]),
+    demos: () => ([{id:"meter-contract",title:"数值更新与边界",node:<MeterContractDemo/>}]),
   },
 
   "file-upload": {
@@ -1448,6 +1448,18 @@ import { RiArrowRightLine } from "@remixicon/react";
   },
 };
 /* ---------------- 内部演示组件 ---------------- */
+
+function MeterContractDemo(){
+ const [value,setValue]=useState(25);
+ return <div data-testid="meter-contract" className="flex w-full max-w-sm flex-col gap-3">
+  <Meter label="动态容量" value={value} max={200} className="meter-contract-root"/>
+  <Meter value={-3} label="负值"/>
+  <Meter value={250} max={200} label="超额" tone="danger"/>
+  <Meter value={NaN} max={0} label="无效值" tone="warning"/>
+  <Meter value={42} tone="success"/>
+  <div className="flex flex-wrap gap-2"><Button onPress={()=>setValue(175)}>增加</Button><Button onPress={()=>setValue(50)}>降低</Button></div>
+ </div>
+}
 
 function DismissContractDemo({kind}:{kind:"announcement"|"notification"}){
  const [actions,setActions]=useState(0),[closed,setClosed]=useState(0),[instance,setInstance]=useState(0);

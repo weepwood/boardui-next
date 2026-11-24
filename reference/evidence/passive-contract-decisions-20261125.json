@@ -1,0 +1,155 @@
+{
+  "base": "648b8083da601a7e8668d9bdf951fdd5178ba48b",
+  "scope": "Divider orientation, decorative semantics, no native focus; Meter all own props, invalid boundaries, external controlled updates and logical fill, two themes/viewports/directions, reduced motion",
+  "results": [
+    {
+      "theme": "light",
+      "width": 1440,
+      "direction": "ltr",
+      "status": "passed",
+      "geometry": {
+        "ratio": 0.25,
+        "start": 0,
+        "gradient": "linear-gradient(to right, oklch(0.623 0.214 259.815) 0px, oklch(0.546 0.245 262.881) 100%)",
+        "transition": "none"
+      }
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "direction": "rtl",
+      "status": "passed",
+      "geometry": {
+        "ratio": 0.25,
+        "start": 0,
+        "gradient": "linear-gradient(to left, oklch(0.623 0.214 259.815) 0px, oklch(0.546 0.245 262.881) 100%)",
+        "transition": "none"
+      }
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "direction": "ltr",
+      "status": "passed",
+      "geometry": {
+        "ratio": 0.25,
+        "start": 0,
+        "gradient": "linear-gradient(to right, oklch(0.623 0.214 259.815) 0px, oklch(0.546 0.245 262.881) 100%)",
+        "transition": "none"
+      }
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "direction": "rtl",
+      "status": "passed",
+      "geometry": {
+        "ratio": 0.25,
+        "start": 0,
+        "gradient": "linear-gradient(to left, oklch(0.623 0.214 259.815) 0px, oklch(0.546 0.245 262.881) 100%)",
+        "transition": "none"
+      }
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "direction": "ltr",
+      "status": "passed",
+      "geometry": {
+        "ratio": 0.25,
+        "start": 0,
+        "gradient": "linear-gradient(to right, oklch(0.623 0.214 259.815) 0px, oklch(0.546 0.245 262.881) 100%)",
+        "transition": "none"
+      }
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "direction": "rtl",
+      "status": "passed",
+      "geometry": {
+        "ratio": 0.25,
+        "start": 0,
+        "gradient": "linear-gradient(to left, oklch(0.623 0.214 259.815) 0px, oklch(0.546 0.245 262.881) 100%)",
+        "transition": "none"
+      }
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "direction": "ltr",
+      "status": "passed",
+      "geometry": {
+        "ratio": 0.25,
+        "start": 0,
+        "gradient": "linear-gradient(to right, oklch(0.623 0.214 259.815) 0px, oklch(0.546 0.245 262.881) 100%)",
+        "transition": "none"
+      }
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "direction": "rtl",
+      "status": "passed",
+      "geometry": {
+        "ratio": 0.25,
+        "start": 0,
+        "gradient": "linear-gradient(to left, oklch(0.623 0.214 259.815) 0px, oklch(0.546 0.245 262.881) 100%)",
+        "transition": "none"
+      }
+    }
+  ],
+  "sourceSha256": {
+    "app/components/ui/Divider.tsx": "6a14a92a1e286ea11e03b535643585f53109c357f491578088670eec6ab41123",
+    "packages/react/meter.tsx": "75fb5fbcb63f0844e44b3a68ab00bbbe151f6a50e9ab2428e0f24ff757595040",
+    "packages/react/progress-styles.ts": "1cd102ccb14e487f3407466428fed09dd5a179440e9189fc46ea8ffb07c88e28",
+    "lib/docs/registry.tsx": "329ede551bb5fa9426b56f2882a239ced11c6859acb4d31bd81be75ee241d550",
+    "examples/react-vite/main.jsx": "f25202808444a2959a9db593579440be7e48214f04ae902aeaa9580748f6275e",
+    "scripts/check-consumer-browser.mjs": "8a00a77d2479d87715c3ecd37955ffbf5a9b2cc3b071f673b0deda5fad9bb592",
+    "scripts/audit-passive-contracts.mjs": "65d307fedc0944cdf5726b31b415883b7b15a0b638b7c8da3a1fc75c5e14ac33"
+  },
+  "consumer": {
+    "packedSSR": "passed",
+    "packedTypes": "passed",
+    "independentViteBuild": "passed",
+    "browser": "passed",
+    "meterAssertions": [
+      "max/value updates, fallback accessible name, className, invalid values, RTL fill geometry and gradient"
+    ]
+  },
+  "export": {
+    "pages": 120,
+    "peakGzipJs": 511200,
+    "peakGzipHtml": 26527,
+    "templateCatalogGzipJs": 253900
+  },
+  "screenshots": [
+    "reference/evidence/screenshots/20261125-passive-contracts/dark-1440-ltr-divider.png",
+    "reference/evidence/screenshots/20261125-passive-contracts/dark-1440-ltr-meter.png",
+    "reference/evidence/screenshots/20261125-passive-contracts/dark-1440-rtl-divider.png",
+    "reference/evidence/screenshots/20261125-passive-contracts/dark-1440-rtl-meter.png",
+    "reference/evidence/screenshots/20261125-passive-contracts/dark-390-ltr-divider.png",
+    "reference/evidence/screenshots/20261125-passive-contracts/dark-390-ltr-meter.png",
+    "reference/evidence/screenshots/20261125-passive-contracts/dark-390-rtl-divider.png",
+    "reference/evidence/screenshots/20261125-passive-contracts/dark-390-rtl-meter.png",
+    "reference/evidence/screenshots/20261125-passive-contracts/light-1440-ltr-divider.png",
+    "reference/evidence/screenshots/20261125-passive-contracts/light-1440-ltr-meter.png",
+    "reference/evidence/screenshots/20261125-passive-contracts/light-1440-rtl-divider.png",
+    "reference/evidence/screenshots/20261125-passive-contracts/light-1440-rtl-meter.png",
+    "reference/evidence/screenshots/20261125-passive-contracts/light-390-ltr-divider.png",
+    "reference/evidence/screenshots/20261125-passive-contracts/light-390-ltr-meter.png",
+    "reference/evidence/screenshots/20261125-passive-contracts/light-390-rtl-divider.png",
+    "reference/evidence/screenshots/20261125-passive-contracts/light-390-rtl-meter.png"
+  ],
+  "limitations": [
+    "latest Firefox/WebKit not yet run for these changes",
+    "manual screen reader and normal-motion interruption still pending",
+    "API decision applies to Meter own five props, not other components",
+    "Divider has no intrinsic user-operated state; host-provided interactions are not part of its default contract"
+  ],
+  "initialFailures": [
+    "React Aria filtered aria-hidden on decorative Separator",
+    "initial typecheck revealed aria-hidden was not typed by RAC; wrapper now explicitly types and forwards it",
+    "native hr border obscured semantic separator color; border-0 and computed style assertion added"
+  ]
+}

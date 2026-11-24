@@ -9,7 +9,7 @@
     },
     "interaction": {
       "missing": [],
-      "formal": 0,
+      "formal": 1,
       "scoped": 104
     },
     "accessibility": {
@@ -19,12 +19,12 @@
     },
     "api": {
       "missing": [],
-      "formal": 0,
+      "formal": 1,
       "scoped": 104
     },
     "rtl": {
       "missing": [],
-      "formal": 0,
+      "formal": 2,
       "scoped": 104
     }
   },
@@ -41,6 +41,7 @@
             "final-guide-token-contract-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -49,6 +50,7 @@
             "consolidated-remaining-passive-presentation-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -64,6 +66,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -72,6 +75,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -80,6 +84,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -95,6 +100,7 @@
             "final-guide-token-contract-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -103,6 +109,7 @@
             "consolidated-remaining-passive-presentation-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -118,6 +125,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -126,6 +134,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -134,6 +143,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -148,6 +158,7 @@
             "feedback-visual-visual-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -156,6 +167,7 @@
             "consolidated-remaining-interaction-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -171,6 +183,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -180,6 +193,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -188,6 +202,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -202,6 +217,7 @@
             "feedback-visual-visual-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -210,6 +226,7 @@
             "consolidated-remaining-state-fallback-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -225,6 +242,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -234,6 +252,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -242,6 +261,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -256,6 +276,7 @@
             "compound-visual-breadcrumb-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -264,6 +285,7 @@
             "compound-interaction-breadcrumb-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -278,6 +300,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -287,6 +310,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -295,6 +319,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -312,6 +337,7 @@
             "reviewed-initial-baseline-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -321,6 +347,7 @@
             "button-family-interaction-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -336,6 +363,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -346,6 +374,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -356,6 +385,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -371,6 +401,7 @@
             "button-family-visual-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -380,6 +411,7 @@
             "button-family-interaction-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -395,6 +427,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -405,6 +438,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -414,6 +448,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -428,6 +463,7 @@
             "responsive-visual-carousel-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -436,6 +472,7 @@
             "responsive-interaction-carousel-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -451,6 +488,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -459,6 +497,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -467,6 +506,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -482,6 +522,7 @@
             "basic-visual-checkbox-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -491,6 +532,7 @@
             "consolidated-consumer-interaction-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -505,6 +547,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -515,6 +558,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -523,6 +567,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -537,6 +582,7 @@
             "feedback-visual-visual-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -545,6 +591,7 @@
             "consolidated-remaining-interaction-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -560,6 +607,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -569,6 +617,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -577,6 +626,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -592,6 +642,7 @@
             "close-button-visual-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -602,6 +653,7 @@
             "button-family-interaction-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -617,6 +669,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -628,6 +681,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -637,6 +691,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -651,6 +706,7 @@
             "compound-visual-date-picker-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -659,6 +715,7 @@
             "compound-interaction-date-picker-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -673,6 +730,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -682,6 +740,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -690,6 +749,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -704,14 +764,21 @@
             "responsive-visual-divider-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
-          "status": "pending",
+          "status": "not-applicable",
           "partial": [
             "consolidated-remaining-passive-presentation-20261125"
           ],
           "passed": [],
+          "notApplicable": [
+            {
+              "id": "divider-intrinsic-interaction-na-20261125",
+              "reason": "静态 Divider 本身没有鼠标、键盘操作、焦点恢复或动效中断要求；外部组合交互不属于其自身契约。"
+            }
+          ],
           "failed": []
         },
         "accessibility": {
@@ -727,6 +794,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -735,14 +803,18 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
-          "status": "pending",
+          "status": "passed",
           "partial": [
             "consolidated-full-rtl-rtl-20261125"
           ],
-          "passed": [],
+          "passed": [
+            "divider-rtl-contract-20261125"
+          ],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -757,6 +829,7 @@
             "compound-visual-dropdown-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -765,6 +838,7 @@
             "compound-interaction-dropdown-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -779,6 +853,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -788,6 +863,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -797,6 +873,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -811,6 +888,7 @@
             "compound-visual-file-upload-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -819,6 +897,7 @@
             "compound-interaction-file-upload-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -833,6 +912,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -841,6 +921,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -849,6 +930,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -864,6 +946,7 @@
             "button-family-visual-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -873,6 +956,7 @@
             "button-family-interaction-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -888,6 +972,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -898,6 +983,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -907,6 +993,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -924,6 +1011,7 @@
             "reviewed-initial-baseline-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -933,6 +1021,7 @@
             "consolidated-consumer-interaction-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -947,6 +1036,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -957,6 +1047,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -966,6 +1057,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -980,6 +1072,7 @@
             "compound-visual-input-otp-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -988,6 +1081,7 @@
             "compound-interaction-input-otp-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -1002,6 +1096,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -1011,6 +1106,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -1019,6 +1115,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -1033,6 +1130,7 @@
             "responsive-visual-link-button-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -1041,6 +1139,7 @@
             "consolidated-remaining-interaction-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -1056,6 +1155,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -1064,6 +1164,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -1072,6 +1173,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -1086,6 +1188,7 @@
             "feedback-visual-visual-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -1094,6 +1197,7 @@
             "consolidated-remaining-interaction-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -1109,6 +1213,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -1118,6 +1223,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -1126,6 +1232,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -1140,6 +1247,7 @@
             "compound-visual-pagination-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -1149,6 +1257,7 @@
             "consolidated-consumer-interaction-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -1163,6 +1272,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -1173,6 +1283,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -1182,6 +1293,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -1196,6 +1308,7 @@
             "basic-visual-radio-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -1205,6 +1318,7 @@
             "consolidated-consumer-interaction-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -1219,6 +1333,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -1229,6 +1344,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -1238,6 +1354,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -1252,6 +1369,7 @@
             "basic-visual-segmented-control-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -1260,6 +1378,7 @@
             "basic-interaction-segmented-control-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -1274,6 +1393,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -1283,6 +1403,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -1292,6 +1413,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -1309,6 +1431,7 @@
             "reviewed-initial-baseline-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -1318,6 +1441,7 @@
             "consolidated-consumer-interaction-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -1332,6 +1456,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -1342,6 +1467,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -1351,6 +1477,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -1365,6 +1492,7 @@
             "compound-visual-slider-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -1373,6 +1501,7 @@
             "compound-interaction-slider-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -1387,6 +1516,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -1396,6 +1526,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -1405,6 +1536,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -1419,6 +1551,7 @@
             "responsive-visual-social-button-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -1427,6 +1560,7 @@
             "responsive-interaction-social-button-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -1442,6 +1576,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -1450,6 +1585,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -1458,6 +1594,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -1472,6 +1609,7 @@
             "basic-visual-switch-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -1480,6 +1618,7 @@
             "basic-interaction-switch-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -1494,6 +1633,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -1503,6 +1643,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -1511,6 +1652,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -1525,6 +1667,7 @@
             "compound-visual-table-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -1533,6 +1676,7 @@
             "compound-interaction-table-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -1547,6 +1691,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -1556,6 +1701,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -1564,6 +1710,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -1578,6 +1725,7 @@
             "basic-visual-tabs-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -1587,6 +1735,7 @@
             "consolidated-consumer-interaction-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -1601,6 +1750,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -1611,6 +1761,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -1620,6 +1771,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -1634,6 +1786,7 @@
             "basic-visual-textarea-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -1643,6 +1796,7 @@
             "consolidated-consumer-interaction-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -1657,6 +1811,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -1667,6 +1822,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -1675,6 +1831,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -1689,6 +1846,7 @@
             "compound-visual-tree-view-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -1697,6 +1855,7 @@
             "compound-interaction-tree-view-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -1711,6 +1870,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -1720,6 +1880,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -1728,6 +1889,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -1742,6 +1904,7 @@
             "compound-visual-tooltip-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -1750,6 +1913,7 @@
             "compound-interaction-tooltip-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -1764,6 +1928,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -1773,6 +1938,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -1781,6 +1947,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -1795,6 +1962,7 @@
             "compound-visual-agent-thinking-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -1803,6 +1971,7 @@
             "compound-interaction-agent-thinking-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -1817,6 +1986,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -1826,6 +1996,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -1834,6 +2005,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -1848,6 +2020,7 @@
             "compound-visual-composer-loader-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -1856,6 +2029,7 @@
             "compound-interaction-composer-loader-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -1870,6 +2044,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -1879,6 +2054,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -1887,6 +2063,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -1901,6 +2078,7 @@
             "compound-visual-composer-panel-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -1909,6 +2087,7 @@
             "compound-interaction-composer-panel-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -1923,6 +2102,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -1931,6 +2111,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -1939,6 +2120,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -1953,6 +2135,7 @@
             "compound-visual-composer-attachments-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -1961,6 +2144,7 @@
             "compound-interaction-composer-attachments-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -1975,6 +2159,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -1983,6 +2168,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -1991,6 +2177,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -2005,6 +2192,7 @@
             "responsive-visual-auth-card-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -2013,6 +2201,7 @@
             "responsive-interaction-auth-card-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -2028,6 +2217,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -2036,6 +2226,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -2044,6 +2235,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -2058,6 +2250,7 @@
             "responsive-visual-web-search-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -2066,6 +2259,7 @@
             "responsive-interaction-web-search-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -2081,6 +2275,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -2089,6 +2284,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -2097,6 +2293,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -2111,6 +2308,7 @@
             "responsive-visual-task-list-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -2119,6 +2317,7 @@
             "responsive-interaction-task-list-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -2134,6 +2333,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -2142,6 +2342,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -2150,6 +2351,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -2164,6 +2366,7 @@
             "compound-visual-agent-limits-card-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -2172,6 +2375,7 @@
             "consolidated-remaining-state-boundary-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -2186,6 +2390,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -2194,6 +2399,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -2202,6 +2408,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -2216,6 +2423,7 @@
             "responsive-visual-questionnaire-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -2224,6 +2432,7 @@
             "responsive-interaction-questionnaire-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -2239,6 +2448,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -2247,6 +2457,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -2255,6 +2466,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -2269,6 +2481,7 @@
             "compound-visual-agent-creator-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -2277,6 +2490,7 @@
             "compound-interaction-agent-creator-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -2291,6 +2505,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -2299,6 +2514,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -2307,6 +2523,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -2321,6 +2538,7 @@
             "compound-visual-agent-progress-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -2329,6 +2547,7 @@
             "compound-interaction-agent-progress-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -2343,6 +2562,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -2352,6 +2572,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -2360,6 +2581,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -2374,6 +2596,7 @@
             "compound-visual-calendar-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -2382,6 +2605,7 @@
             "compound-interaction-calendar-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -2396,6 +2620,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -2404,6 +2629,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -2412,6 +2638,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -2426,6 +2653,7 @@
             "compound-visual-data-grid-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -2435,6 +2663,7 @@
             "consolidated-data-chart-interaction-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -2450,6 +2679,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -2458,6 +2688,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -2466,6 +2697,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -2480,6 +2712,7 @@
             "compound-visual-data-table-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -2489,6 +2722,7 @@
             "consolidated-data-chart-interaction-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -2504,6 +2738,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -2512,6 +2747,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -2520,6 +2756,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -2534,6 +2771,7 @@
             "compound-visual-notification-center-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -2542,6 +2780,7 @@
             "compound-interaction-notification-center-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -2556,6 +2795,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -2564,6 +2804,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -2572,6 +2813,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -2586,6 +2828,7 @@
             "responsive-visual-settings-modal-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -2594,6 +2837,7 @@
             "responsive-interaction-settings-modal-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -2609,6 +2853,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -2617,6 +2862,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -2625,6 +2871,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -2639,6 +2886,7 @@
             "compound-visual-sidebar-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -2647,6 +2895,7 @@
             "compound-interaction-sidebar-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -2661,6 +2910,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -2669,6 +2919,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -2677,6 +2928,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -2691,6 +2943,7 @@
             "feedback-visual-visual-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -2699,6 +2952,7 @@
             "consolidated-remaining-passive-presentation-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -2714,6 +2968,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -2723,6 +2978,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -2731,6 +2987,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -2745,6 +3002,7 @@
             "compound-visual-revenue-chart-card-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -2753,6 +3011,7 @@
             "compound-interaction-revenue-chart-card-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -2767,6 +3026,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -2775,6 +3035,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -2783,6 +3044,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -2797,6 +3059,7 @@
             "compound-visual-activity-rings-card-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -2805,6 +3068,7 @@
             "consolidated-remaining-passive-presentation-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -2819,6 +3083,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -2827,6 +3092,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -2835,6 +3101,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -2851,6 +3118,7 @@
             "reviewed-initial-baseline-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -2860,6 +3128,7 @@
             "consolidated-data-chart-interaction-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -2876,6 +3145,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -2885,6 +3155,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -2893,6 +3164,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -2907,6 +3179,7 @@
             "compound-visual-bar-list-card-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -2915,6 +3188,7 @@
             "compound-interaction-bar-list-card-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -2929,6 +3203,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -2937,6 +3212,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -2945,6 +3221,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -2960,6 +3237,7 @@
             "chart-workspace-visual-combo-chart-card-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -2969,6 +3247,7 @@
             "consolidated-data-chart-interaction-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -2985,6 +3264,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -2993,6 +3273,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -3001,6 +3282,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -3015,6 +3297,7 @@
             "compound-visual-contributions-card-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -3023,6 +3306,7 @@
             "consolidated-remaining-interaction-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -3037,6 +3321,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -3045,6 +3330,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -3053,6 +3339,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -3067,6 +3354,7 @@
             "compound-visual-earnings-chart-card-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -3075,6 +3363,7 @@
             "compound-interaction-earnings-chart-card-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -3089,6 +3378,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -3097,6 +3387,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -3105,6 +3396,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -3119,6 +3411,7 @@
             "compound-visual-funnel-chart-card-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -3127,6 +3420,7 @@
             "consolidated-remaining-passive-presentation-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -3141,6 +3435,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -3150,6 +3445,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -3158,6 +3454,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -3173,6 +3470,7 @@
             "chart-workspace-visual-heatmap-chart-card-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -3181,6 +3479,7 @@
             "chart-workspace-interaction-heatmap-chart-card-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -3196,6 +3495,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -3204,6 +3504,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -3212,6 +3513,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -3226,6 +3528,7 @@
             "compound-visual-most-active-days-card-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -3234,6 +3537,7 @@
             "consolidated-remaining-passive-presentation-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -3248,6 +3552,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -3256,6 +3561,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -3264,6 +3570,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -3279,6 +3586,7 @@
             "chart-workspace-visual-radar-chart-card-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -3288,6 +3596,7 @@
             "consolidated-data-chart-interaction-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -3304,6 +3613,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -3313,6 +3623,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -3321,6 +3632,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -3336,6 +3648,7 @@
             "chart-workspace-visual-radial-chart-card-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -3344,6 +3657,7 @@
             "chart-workspace-interaction-radial-chart-card-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -3359,6 +3673,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -3368,6 +3683,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -3376,6 +3692,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -3390,6 +3707,7 @@
             "compound-visual-line-chart-card-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -3398,6 +3716,7 @@
             "compound-interaction-line-chart-card-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -3412,6 +3731,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -3421,6 +3741,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -3429,6 +3750,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -3443,6 +3765,7 @@
             "compound-visual-sankey-chart-card-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -3451,6 +3774,7 @@
             "consolidated-remaining-passive-presentation-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -3465,6 +3789,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -3473,6 +3798,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -3481,6 +3807,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -3496,6 +3823,7 @@
             "chart-workspace-visual-scatter-chart-card-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -3505,6 +3833,7 @@
             "consolidated-data-chart-interaction-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -3521,6 +3850,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -3529,6 +3859,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -3537,6 +3868,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -3551,6 +3883,7 @@
             "compound-visual-sleep-score-card-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -3559,6 +3892,7 @@
             "consolidated-remaining-interaction-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -3573,6 +3907,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -3581,6 +3916,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -3589,6 +3925,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -3603,6 +3940,7 @@
             "compound-visual-stage-bars-card-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -3611,6 +3949,7 @@
             "consolidated-remaining-passive-presentation-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -3625,6 +3964,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -3633,6 +3973,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -3641,6 +3982,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -3655,6 +3997,7 @@
             "compound-visual-steps-card-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -3663,6 +4006,7 @@
             "consolidated-remaining-interaction-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -3677,6 +4021,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -3685,6 +4030,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -3693,6 +4039,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -3707,6 +4054,7 @@
             "compound-visual-chat-starter-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -3715,6 +4063,7 @@
             "compound-interaction-chat-starter-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -3729,6 +4078,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -3737,6 +4087,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -3745,6 +4096,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -3759,6 +4111,7 @@
             "compound-visual-multi-agent-chat-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -3767,6 +4120,7 @@
             "compound-interaction-multi-agent-chat-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -3781,6 +4135,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -3789,6 +4144,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -3797,6 +4153,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -3814,6 +4171,7 @@
             "reviewed-initial-baseline-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -3824,6 +4182,7 @@
             "formal-production-interaction-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -3840,6 +4199,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -3848,6 +4208,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -3856,6 +4217,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -3870,6 +4232,7 @@
             "compound-visual-ai-image-generation-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -3878,6 +4241,7 @@
             "compound-interaction-ai-image-generation-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -3892,6 +4256,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -3900,6 +4265,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -3908,6 +4274,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -3922,6 +4289,7 @@
             "compound-visual-ai-profile-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -3930,6 +4298,7 @@
             "compound-interaction-ai-profile-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -3944,6 +4313,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -3952,6 +4322,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -3960,6 +4331,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -3977,6 +4349,7 @@
             "reviewed-initial-baseline-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -3985,6 +4358,7 @@
             "compound-interaction-finance-dashboard-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -3999,6 +4373,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -4007,6 +4382,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -4015,6 +4391,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -4032,6 +4409,7 @@
             "reviewed-initial-baseline-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -4040,6 +4418,7 @@
             "compound-interaction-home-dashboard-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -4054,6 +4433,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -4062,6 +4442,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -4070,6 +4451,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -4084,6 +4466,7 @@
             "compound-visual-marketing-dashboard-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -4092,6 +4475,7 @@
             "compound-interaction-marketing-dashboard-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -4106,6 +4490,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -4114,6 +4499,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -4122,6 +4508,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -4136,6 +4523,7 @@
             "compound-visual-medical-profile-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -4144,6 +4532,7 @@
             "compound-interaction-medical-profile-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -4158,6 +4547,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -4166,6 +4556,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -4174,6 +4565,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -4191,6 +4583,7 @@
             "reviewed-initial-baseline-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -4201,6 +4594,7 @@
             "formal-production-interaction-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -4217,6 +4611,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -4225,6 +4620,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -4233,6 +4629,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -4247,6 +4644,7 @@
             "responsive-visual-search-field-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -4255,6 +4653,7 @@
             "responsive-interaction-search-field-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -4270,6 +4669,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -4278,6 +4678,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -4286,6 +4687,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -4300,6 +4702,7 @@
             "feedback-visual-visual-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -4308,6 +4711,7 @@
             "consolidated-remaining-passive-presentation-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -4323,6 +4727,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -4332,6 +4737,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -4340,6 +4746,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -4354,6 +4761,7 @@
             "feedback-visual-visual-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -4362,6 +4770,7 @@
             "consolidated-remaining-passive-presentation-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -4377,6 +4786,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -4386,6 +4796,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -4394,6 +4805,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -4408,6 +4820,7 @@
             "responsive-visual-spinner-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -4416,6 +4829,7 @@
             "responsive-interaction-spinner-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -4431,6 +4845,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -4439,6 +4854,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -4447,6 +4863,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -4461,6 +4878,7 @@
             "responsive-visual-skeleton-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -4469,6 +4887,7 @@
             "responsive-interaction-skeleton-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -4484,6 +4903,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -4492,6 +4912,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -4500,6 +4921,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -4514,6 +4936,7 @@
             "compound-visual-accordion-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -4522,6 +4945,7 @@
             "compound-interaction-accordion-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -4536,6 +4960,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -4544,6 +4969,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -4552,6 +4978,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -4566,6 +4993,7 @@
             "responsive-visual-toggle-button-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -4574,6 +5002,7 @@
             "responsive-interaction-toggle-button-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -4589,6 +5018,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -4597,6 +5027,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -4605,6 +5036,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -4619,6 +5051,7 @@
             "responsive-visual-tag-group-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -4627,6 +5060,7 @@
             "responsive-interaction-tag-group-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -4642,6 +5076,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -4650,6 +5085,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -4658,6 +5094,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -4674,6 +5111,7 @@
             "reviewed-initial-baseline-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -4682,6 +5120,7 @@
             "compound-interaction-modal-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -4697,6 +5136,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -4705,6 +5145,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -4713,6 +5154,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -4727,6 +5169,7 @@
             "compound-visual-popover-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -4735,6 +5178,7 @@
             "compound-interaction-popover-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -4749,6 +5193,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -4757,6 +5202,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -4765,6 +5211,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -4779,6 +5226,7 @@
             "responsive-visual-counter-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -4787,6 +5235,7 @@
             "responsive-interaction-counter-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -4802,6 +5251,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -4810,6 +5260,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -4818,6 +5269,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -4832,6 +5284,7 @@
             "responsive-visual-toast-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -4840,6 +5293,7 @@
             "responsive-interaction-toast-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -4855,6 +5309,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -4863,6 +5318,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -4871,6 +5327,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -4885,6 +5342,7 @@
             "compound-visual-drawer-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -4893,6 +5351,7 @@
             "compound-interaction-drawer-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -4907,6 +5366,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -4915,6 +5375,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -4923,6 +5384,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -4937,6 +5399,7 @@
             "compound-visual-number-field-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -4945,6 +5408,7 @@
             "compound-interaction-number-field-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -4959,6 +5423,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -4967,6 +5432,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -4975,6 +5441,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -4989,6 +5456,7 @@
             "responsive-visual-combobox-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -4997,6 +5465,7 @@
             "responsive-interaction-combobox-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -5012,6 +5481,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -5020,6 +5490,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -5028,6 +5499,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -5042,6 +5514,7 @@
             "feedback-visual-visual-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -5050,6 +5523,7 @@
             "consolidated-remaining-passive-presentation-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -5065,23 +5539,30 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
-          "status": "pending",
+          "status": "passed",
           "partial": [
             "api-extraction-20261124",
             "consolidated-api-contracts-20261125"
           ],
-          "passed": [],
+          "passed": [
+            "meter-api-contract-20261125"
+          ],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
-          "status": "pending",
+          "status": "passed",
           "partial": [
             "consolidated-full-rtl-rtl-20261125"
           ],
-          "passed": [],
+          "passed": [
+            "meter-rtl-contract-20261125"
+          ],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -5096,6 +5577,7 @@
             "compound-visual-time-field-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -5104,6 +5586,7 @@
             "compound-interaction-time-field-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -5118,6 +5601,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -5126,6 +5610,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -5134,6 +5619,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -5148,6 +5634,7 @@
             "compound-visual-context-menu-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -5156,6 +5643,7 @@
             "compound-interaction-context-menu-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -5170,6 +5658,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -5178,6 +5667,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -5186,6 +5676,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -5200,6 +5691,7 @@
             "compound-visual-date-calendar-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -5208,6 +5700,7 @@
             "compound-interaction-date-calendar-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -5222,6 +5715,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -5230,6 +5724,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -5238,6 +5733,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -5252,6 +5748,7 @@
             "compound-visual-color-picker-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -5260,6 +5757,7 @@
             "compound-interaction-color-picker-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -5274,6 +5772,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -5282,6 +5781,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -5290,6 +5790,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -5304,6 +5805,7 @@
             "responsive-visual-token-input-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -5312,6 +5814,7 @@
             "responsive-interaction-token-input-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -5327,6 +5830,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -5335,6 +5839,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -5343,6 +5848,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -5357,6 +5863,7 @@
             "compound-visual-command-palette-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -5365,6 +5872,7 @@
             "compound-interaction-command-palette-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -5379,6 +5887,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -5387,6 +5896,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -5395,6 +5905,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -5409,6 +5920,7 @@
             "compound-visual-composer-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -5417,6 +5929,7 @@
             "compound-interaction-composer-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -5431,6 +5944,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -5440,6 +5954,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -5448,6 +5963,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -5463,6 +5979,7 @@
             "chart-workspace-visual-orders-chart-card-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -5473,6 +5990,7 @@
             "consolidated-data-chart-interaction-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -5489,6 +6007,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -5497,6 +6016,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -5505,6 +6025,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -5519,6 +6040,7 @@
             "compound-visual-template-calendar-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -5527,6 +6049,7 @@
             "compound-interaction-template-calendar-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -5541,6 +6064,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -5549,6 +6073,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -5557,6 +6082,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
@@ -5571,6 +6097,7 @@
             "compound-visual-template-hr-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "interaction": {
@@ -5579,6 +6106,7 @@
             "compound-interaction-template-hr-20261124"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "accessibility": {
@@ -5593,6 +6121,7 @@
             "formal-three-browser-45452007160"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "api": {
@@ -5601,6 +6130,7 @@
             "consolidated-api-contracts-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         },
         "rtl": {
@@ -5609,6 +6139,7 @@
             "consolidated-full-rtl-rtl-20261125"
           ],
           "passed": [],
+          "notApplicable": [],
           "failed": []
         }
       }
