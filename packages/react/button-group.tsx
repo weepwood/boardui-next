@@ -1,3 +1,5 @@
+"use client";
+import { createContext, useContext } from "react";
 import { directionalIconClass } from "./directional-icon";
 // BoardUI MIT source: components/base/buttons/button-group.tsx; see LICENSE.
 import type {
@@ -26,6 +28,7 @@ import { cx, sortCx } from "./cx";
  */
 
 export type ButtonGroupSize = "medium" | "small";
+const ButtonGroupSizeContext = createContext<ButtonGroupSize>("medium");
 
 type IconComponent = ComponentType<{
   className?: string;
@@ -43,10 +46,10 @@ const styles = sortCx({
   item: [
     "inline-flex items-center justify-center gap-1 whitespace-nowrap",
     "bg-background-primary-default text-text-primary font-sans select-none cursor-pointer",
-    "transition-[background-color,color] duration-150 ease",
+    "transition-[background-color,color] duration-150 ease motion-reduce:transition-none",
     "outline-none focus-visible:relative focus-visible:z-10 focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-border-focus-ring",
-    "hover:bg-background-primary-hover active:bg-background-primary-active",
-    "disabled:cursor-not-allowed disabled:bg-background-primary-disabled disabled:text-text-tertiary",
+    "enabled:hover:bg-background-primary-hover enabled:active:bg-background-primary-active",
+    "disabled:cursor-not-allowed disabled:bg-background-primary-disabled disabled:text-text-disabled",
   ].join(" "),
 
   size: {
@@ -81,7 +84,7 @@ export interface ButtonGroupProps {
 export function ButtonGroup({ size = "medium", children, className, ref, ...props }: ButtonGroupProps) {
   return (
     <div ref={ref} role="group" data-size={size} className={cx(styles.group, className)} {...props}>
-      {children}
+      <ButtonGroupSizeContext.Provider value={size}>{children}</ButtonGroupSizeContext.Provider>
     </div>
   );
 }
@@ -101,7 +104,7 @@ export interface ButtonGroupItemProps
 }
 
 export function ButtonGroupItem({
-  size = "medium",
+  size: explicitSize,
   selected,
   iconOnly = false,
   leadingIcon: Leading,
@@ -112,6 +115,8 @@ export function ButtonGroupItem({
   ref,
   ...props
 }: ButtonGroupItemProps) {
+  const inheritedSize=useContext(ButtonGroupSizeContext);
+  const size=explicitSize??inheritedSize;
   return (
     <button
       ref={ref}

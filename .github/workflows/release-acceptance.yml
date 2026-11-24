@@ -83,6 +83,9 @@ jobs:
       - name: 关闭按钮双主题方向与状态专项
         if: matrix.browser == 'chromium'
         run: node scripts/audit-close-button.mjs acceptance/close-button
+      - name: 基础按钮双主题方向与状态专项
+        if: matrix.browser == 'chromium'
+        run: node scripts/audit-button-family.mjs acceptance/button-family
       - name: 图表与工作区触摸状态
         if: matrix.browser == 'chromium'
         run: node scripts/check-chart-workspace.mjs acceptance/chart-workspace

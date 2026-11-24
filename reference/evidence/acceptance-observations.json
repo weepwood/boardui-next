@@ -2821,6 +2821,68 @@
       "scope": "真实 DirectionProvider Arabic 切换，SVG 路径保持不镜像，键盘触发及焦点顺序经检查；未完成全部尺寸变体跨浏览器。",
       "source": "reference/evidence/close-button-20261125.json",
       "route": "/zh-hans/components/close-button/"
+    },
+    {
+      "id": "button-family-visual-20261125",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "button",
+        "icon-button",
+        "button-group"
+      ],
+      "scope": "真实浏览器验证中号纯图标 36×36、small 组 32px/子项30px；8 张双主题双视口双方向状态截图，非全部状态原版对照。",
+      "source": "reference/evidence/button-family-20261125.json"
+    },
+    {
+      "id": "button-family-interaction-20261125",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "button",
+        "icon-button",
+        "button-group",
+        "close-button"
+      ],
+      "scope": "本地页面专项和 tarball Vite 消费实测键盘、禁用不触发、组切换、关闭按钮重置，待其他浏览器复验。",
+      "source": "reference/evidence/button-family-20261125.json"
+    },
+    {
+      "id": "button-family-api-20261125",
+      "dimension": "api",
+      "result": "partial",
+      "components": [
+        "button",
+        "icon-button",
+        "button-group",
+        "close-button"
+      ],
+      "scope": "独立 tarball SSR/类型/Vite 构建与浏览器消费通过，ButtonGroup size 继承、aria-pressed、原生和 AriaButton 事件、CloseButton 回调；仅指定 API 合约。",
+      "source": "reference/evidence/button-family-20261125.json"
+    },
+    {
+      "id": "button-family-accessibility-20261125",
+      "dimension": "accessibility",
+      "result": "partial",
+      "components": [
+        "button",
+        "icon-button",
+        "button-group"
+      ],
+      "scope": "8 组局部 axe、Tab 跳过禁用、图标按钮名称与焦点通过；尚未人工读屏及完整状态覆盖。",
+      "source": "reference/evidence/button-family-20261125.json"
+    },
+    {
+      "id": "button-family-rtl-20261125",
+      "dimension": "rtl",
+      "result": "partial",
+      "components": [
+        "button",
+        "icon-button",
+        "button-group"
+      ],
+      "scope": "真实阿拉伯语方向切换、方向图标旋转及按钮组键盘操作通过；尚未全变体跨浏览器。",
+      "source": "reference/evidence/button-family-20261125.json"
     }
   ]
 }

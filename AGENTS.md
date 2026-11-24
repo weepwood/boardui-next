@@ -191,3 +191,9 @@
 
 - #41 run 45427115892 全部通过，Squash 合并 9b04fcd；Pages 45434367661 成功。正式运行 45426162052 源提交 acec795 的 build、Chromium/Firefox/WebKit、report 全部成功，三浏览器各 238/238，总计 714/714，Chromium 图表/工作区触摸专项 14/14。最终 release-gate 失败仅因逐组件五维未闭合；下载原始报告并逐条核对身份、覆盖、无重复/缺失、axe 后保存在 reference/evidence/formal-45426162052/。历史报告仍绑定 acec795，不冒充新源码通过。
 - 冻结新增功能，优先逐组件验收。关闭按钮保留固定上游四档 SVG 几何，补齐禁用样式、减少动效、焦点主题令牌；旧 React Aria 兼容层也继承减少动效。新增真实点击、Enter、Space、Tab 跳过禁用、ref、默认 button/显式 submit、兼容 onPress 与 RTL 断言。首次 duration=0s 断言不符合全局 0.01ms 规则，最终同时要求 transition-property:none 与时长上限。本地 Edge 20/20 页面专项，8/8 双主题双视口 LTR/RTL 状态截图和局部 axe，类型、单测、120 HTML 导出及预算通过。报告 reference/evidence/close-button-20261125.json。正式 CI 新增 Chromium 状态专项，五维记录仍为 partial，保留人工审查、独立包全 API 与真机限制。
+
+### 基础按钮批次收口（2026-11-25）
+
+- #42 run 45435094403 全部通过，Squash 合并 1f4713e；Pages 45435932817 成功。正式报告原始提交仍为 acec795。
+- Button/AriaButton 带边框纯图标中号统一为 36px 方形；ButtonGroup 的 size 传给未显式指定的子项（显式覆盖不变）；IconButton/旧版适配与组内按钮统一减少动效、主题焦点及禁用状态。没有增加依赖和公共 props。
+- 最终 Edge 20/20 双主题页面、8/8 双主题双视口双方向状态截图及局部 axe，TypeScript、单测、41 API 组/69 导出一致性、tarball SSR/类型、独立 Vite 实际安装构建和浏览器消费通过。120 HTML 导出及资源预算通过（JS 509770B，HTML 26539B）。报告 reference/evidence/button-family-20261125.json；scripts/audit-button-family.mjs 加入正式 Chromium 流程。截图为局部状态，不冒充原版对照；只登记 partial，正式新源码三浏览器和人工无障碍仍待完成。

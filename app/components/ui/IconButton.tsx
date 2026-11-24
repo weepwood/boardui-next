@@ -38,9 +38,9 @@ export function IconButton({
       aria-label={label}
       className={cn(
         "inline-flex cursor-pointer items-center justify-center rounded-2lg",
-        "transition-[background-color,color,scale] duration-150 ease-out",
+        "transition-[background-color,color,scale] duration-150 ease-out motion-reduce:transition-none motion-reduce:pressed:scale-100",
         "pressed:scale-95 outline-none",
-        "focus-visible:ring-2 focus-visible:ring-accent-500 focus-visible:ring-offset-2",
+        "focus-visible:ring-2 focus-visible:ring-border-focus-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background-full",
         "disabled:cursor-not-allowed disabled:opacity-50",
         sizes[size],
         variants[variant],

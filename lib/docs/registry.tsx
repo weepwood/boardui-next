@@ -21,7 +21,7 @@ import { RiMailLine, RiSearchLine, RiAddLine as AddGlyph, RiEditLine as EditGlyp
 import type { ReactNode } from "react";
 
 import { Button } from "@/app/components/ui/Button";
-import { AriaButton, Button as NativeButton, ButtonLink, IconButton as CoreIconButton, ButtonGroup as CoreButtonGroup, ButtonGroupItem, CloseButton as CoreCloseButton, DirectionProvider } from "@/packages/react";
+import { AriaButton, Button as NativeButton, ButtonLink, IconButton as CoreIconButton, IconLinkButton, ButtonGroup as CoreButtonGroup, ButtonGroupItem, CloseButton as CoreCloseButton, DirectionProvider } from "@/packages/react";
 import { IconButton } from "@/app/components/ui/IconButton";
 import { Chip } from "@/app/components/ui/Chip";
 import { Input } from "@/app/components/ui/Input";
@@ -201,6 +201,27 @@ function CloseButtonStateDemo(){
   </div>
 }
 
+function ButtonContractDemo(){
+ const [rtl,setRtl]=useState(false),[count,setCount]=useState(0),[pressed,setPressed]=useState(false);
+ return <div data-testid="button-contract" className="flex flex-col gap-3">
+  <label className="flex gap-2 text-body-2-regular"><input type="checkbox" checked={rtl} onChange={e=>setRtl(e.target.checked)}/>RTL</label>
+  <DirectionProvider locale={rtl?"ar":"zh-CN"}>
+   <div className="flex flex-wrap items-center gap-3">
+    <NativeButton iconOnly variant="secondary" leadingIcon={ArrowGlyph} aria-label="方向操作" onClick={()=>setCount(n=>n+1)}/>
+    <AriaButton iconOnly variant="secondary" leadingIcon={AddGlyph} aria-label="ARIA 操作" onPress={()=>setCount(n=>n+1)}/>
+    <CoreIconButton icon={AddGlyph} aria-label="禁用图标" disabled onClick={()=>setCount(n=>n+100)}/>
+    <IconLinkButton icon={ArrowGlyph} href="#preview" aria-label="返回预览"/>
+    <CoreButtonGroup size="small" aria-label="继承尺寸">
+     <ButtonGroupItem selected={pressed} onClick={()=>setPressed(v=>!v)}>切换</ButtonGroupItem>
+     <ButtonGroupItem disabled>禁用</ButtonGroupItem>
+     <ButtonGroupItem iconOnly leadingIcon={ArrowGlyph} aria-label="组方向"/>
+    </CoreButtonGroup>
+   </div>
+   <output aria-live="polite">{count} / {String(pressed)}</output>
+  </DirectionProvider>
+ </div>;
+}
+
 function ButtonFamilyDemo() {
   const [selection,setSelection]=useState("left");
   const [count,setCount]=useState(0);
@@ -262,6 +283,7 @@ import { RiArrowRightLine } from "@remixicon/react";
       {id:"disabled",title:"禁用",code:`<Button disabled>按钮文字</Button>
 <Button variant="secondary" disabled>按钮文字</Button>`,node:<><NativeButton disabled>按钮文字</NativeButton><NativeButton variant="secondary" disabled>按钮文字</NativeButton><NativeButton variant="ghost" disabled>按钮文字</NativeButton><NativeButton variant="danger" disabled>按钮文字</NativeButton></>},
       {id:"native",title:"扩展接口：原生链接和 React Aria",node:<><AriaButton>AriaButton</AriaButton><ButtonLink href={(process.env.NEXT_PUBLIC_BASE_PATH ?? "") + "/zh-hans/components/"} variant="secondary">查看组件</ButtonLink></>},
+      {id:"contract",title:"按钮状态与方向",node:<ButtonContractDemo/>},
       {id:"legacy",title:"旧版兼容接口",description:"保留既有业务页面调用方式。",node:<><Button size="sm">小号</Button><Button variant="outline">描边</Button><Button variant="destructive">危险</Button></>},
     ]),
   },

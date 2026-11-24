@@ -29,6 +29,21 @@ try{
  assert.equal(await page.getByRole("progressbar",{name:"任务进度"}).getAttribute("aria-valuenow"),"60");
  const ids=await page.locator("linearGradient").evaluateAll(es=>es.map(e=>e.id));
  assert.ok(ids.length>=2);assert.equal(new Set(ids).size,ids.length);
+ const group=page.getByRole("group",{name:"消费按钮组"}),toggle=group.getByRole("button",{name:"切换"});
+ assert.equal((await group.boundingBox())?.height,32);
+ assert.equal((await toggle.boundingBox())?.height,30);
+ await toggle.press("Space");assert.equal(await toggle.getAttribute("aria-pressed"),"true");
+ await toggle.press("Tab");assert.ok(await group.getByRole("button",{name:"更多"}).evaluate(e=>e===document.activeElement));
+ for(const name of ["原生增加","ARIA 增加"]){
+  const button=page.getByRole("button",{name,exact:true});
+  const rect=await button.boundingBox();assert.equal(rect?.width,36);assert.equal(rect?.height,36);
+  await button.press("Space");
+ }
+ const disabled=page.getByRole("button",{name:"禁用增加"});
+ assert.equal(await disabled.isDisabled(),true);await disabled.evaluate(e=>e.click());
+ assert.equal(await page.getByTestId("button-count").textContent(),"2");
+ await page.getByRole("button",{name:"重置"}).press("Enter");
+ assert.equal(await page.getByTestId("button-count").textContent(),"0");
  assert.deepEqual(errors,[]);
- console.log("Vite tarball consumer: controlled input, click, dark, RTL, progress and unique gradient IDs passed");
+ console.log("Vite tarball consumer: controlled input, click, dark, RTL, progress, unique gradient IDs, button group inheritance, square icon buttons and keyboard/disabled behavior passed");
 }finally{await browser?.close();await new Promise(r=>server.close(r));}

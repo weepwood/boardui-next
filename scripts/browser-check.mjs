@@ -1235,6 +1235,28 @@ try{
             await page.waitForFunction(()=>document.querySelector('[data-testid="controlled-selection"] output')?.textContent==='false / false / a');
           }
         }
+        if(route==='/zh-hans/components/button/'){
+          stage='button family: square, inherited size and RTL';
+          const demo=page.getByTestId('button-contract');
+          await demo.scrollIntoViewIfNeeded();
+          const direction=demo.getByRole('button',{name:'方向操作'}),aria=demo.getByRole('button',{name:'ARIA 操作'}),disabled=demo.getByRole('button',{name:'禁用图标'});
+          for(const b of [direction,aria]){const size=await b.boundingBox();assert.equal(size?.width,36);assert.equal(size?.height,36);}
+          assert.equal(await disabled.isDisabled(),true);
+          await disabled.evaluate(e=>e.click());
+          await direction.press('Enter');await aria.press('Space');
+          assert.equal(await demo.locator('output').textContent(),'2 / false');
+          const group=demo.getByRole('group',{name:'继承尺寸'}),toggle=group.getByRole('button',{name:'切换'});
+          assert.equal((await group.boundingBox())?.height,32);
+          assert.equal((await toggle.boundingBox())?.height,30);
+          await toggle.press('Space');assert.equal(await toggle.getAttribute('aria-pressed'),'true');
+          await toggle.press('Tab');assert.ok(await group.getByRole('button',{name:'组方向'}).evaluate(e=>e===document.activeElement));
+          assert.equal(await demo.getByRole('link',{name:'返回预览'}).getAttribute('href'),'#preview');
+          const before=await direction.locator('svg').evaluate(e=>getComputedStyle(e).rotate);
+          await demo.getByRole('checkbox',{name:'RTL'}).check();
+          const after=await direction.locator('svg').evaluate(e=>getComputedStyle(e).rotate);
+          assert.notEqual(before,after);
+          assert.equal(await demo.locator('output').textContent(),'2 / true');
+        }
         if(route==='/zh-hans/components/button-group/'){
           const demo=page.getByTestId('button-family');
           await demo.waitFor({state:'visible'});
