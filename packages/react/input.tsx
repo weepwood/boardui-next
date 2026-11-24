@@ -252,6 +252,8 @@ export interface InputProps
     > {
   label?: ReactNode;
   hint?: ReactNode;
+  /** Compatibility alias for hint. */
+  description?: ReactNode;
   /** Show an info icon next to the label. Replace with tooltip when Tooltip lands. */
   tooltip?: boolean | string;
   placeholder?: string;
@@ -263,6 +265,7 @@ export interface InputProps
 export function Input({
   label,
   hint,
+  description,
   tooltip,
   placeholder,
   inputDir,
@@ -309,7 +312,7 @@ export function Input({
             trailingAddon={trailingAddon}
             fieldClassName={fieldClassName}
           />
-          {hint && <HintText isInvalid={isInvalid}>{hint}</HintText>}
+          {(hint??description) && <HintText isInvalid={isInvalid}>{hint??description}</HintText>}
         </>
       )}
     </TextField>

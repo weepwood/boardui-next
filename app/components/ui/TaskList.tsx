@@ -60,6 +60,7 @@ export function TaskList({
               type="button"
               role="checkbox"
               aria-checked={!!t.done}
+              aria-label={t.title}
               onClick={() => toggle(t.id)}
               className={cn(
                 "flex size-[18px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border",

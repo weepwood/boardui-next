@@ -36,6 +36,11 @@ jobs:
       - run: npm run test:consumer:browser
       - run: npm run build:pages
       - run: npm run test:export
+      - run: node scripts/acceptance-report.mjs --routes
+      - uses: actions/upload-artifact@v4
+        with:
+          name: acceptance-routes
+          path: acceptance/expected-routes.json
       - uses: actions/upload-artifact@v4
         with:
           name: release-export
@@ -71,8 +76,38 @@ jobs:
           name: acceptance-${{ matrix.browser }}
           path: acceptance/
           if-no-files-found: warn
-  release-gate:
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: acceptance-report-${{ matrix.browser }}
+          path: acceptance/report.json
+          if-no-files-found: warn
+  report:
+    if: always()
     needs: [build, browser]
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: acceptance-report-*
+          path: acceptance/reports
+      - uses: actions/download-artifact@v4
+        with:
+          name: acceptance-routes
+          path: acceptance/reports/acceptance-routes
+      - run: node scripts/acceptance-report.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: acceptance-summary
+          path: acceptance/summary.json
+          if-no-files-found: warn
+  release-gate:
+    needs: [build, browser, report]
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
