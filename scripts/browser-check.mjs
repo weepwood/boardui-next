@@ -249,6 +249,19 @@ try{
           await demo.getByRole('tab',{name:'代码'}).press('ArrowLeft');
           assert.equal(await demo.getByRole('tab',{name:'预览'}).getAttribute('aria-selected'),'true');
           const pressTarget=demo.getByRole('tabpanel').getByRole('button',{name:'开始使用',exact:true});
+          const secondary=demo.getByRole('tabpanel').getByRole('button',{name:'继续',exact:true});
+          await page.mouse.move(0,0);
+          const resting=await secondary.evaluate(e=>getComputedStyle(e).backgroundColor);
+          await secondary.hover();
+          await page.waitForFunction(({e,resting})=>getComputedStyle(e).backgroundColor!==resting,{e:await secondary.elementHandle(),resting});
+          await page.mouse.move(0,0);
+          await pressTarget.focus();await page.keyboard.press('Tab');
+          await page.waitForFunction(e=>e===document.activeElement&&e.matches(':focus-visible'),await secondary.elementHandle());
+          assert.ok(await secondary.evaluate(e=>getComputedStyle(e).boxShadow!=='none'));
+          const disabled=page.locator('#disabled [role=tabpanel]').getByRole('button');
+          assert.equal(await disabled.count(),4);
+          for(const b of await disabled.all())assert.ok(await b.isDisabled());
+
           await page.emulateMedia({reducedMotion:'no-preference'});
           await pressTarget.scrollIntoViewIfNeeded();
           const box=await pressTarget.boundingBox();
@@ -356,6 +369,7 @@ try{
         }
         if(route==='/zh-hans/templates/dashboard/'){
           const demo=page.locator('#preview');
+          await demo.getByRole('button',{name:'下一批'}).click();await demo.getByText('赵六',{exact:true}).first().waitFor();
           await demo.getByRole('button',{name:'分析',exact:true}).click();
           await demo.getByRole('heading',{name:'分析',exact:true}).waitFor();
           await demo.getByRole('button',{name:'查看全部'}).click();
@@ -365,9 +379,14 @@ try{
           const demo=page.locator('#preview');
           await demo.getByRole('textbox',{name:'消息'}).fill('模板测试');
           await demo.getByRole('button',{name:'发送',exact:true}).click();
-          await demo.getByText('本地示例：已收到消息。此模板未连接 AI 服务。',{exact:true}).waitFor();
-          await demo.getByRole('button',{name:'新建对话'}).click();
-          assert.equal(await demo.getByText('模板测试',{exact:true}).count(),0);
+          await demo.getByRole('log').getByText('本地示例：已收到消息。此模板未连接 AI 服务。').waitFor();
+          await demo.getByRole('button',{name:'新建对话',exact:true}).click();
+          assert.equal(await demo.getByRole('log').getByText('模板测试').count(),0);
+          await demo.getByRole('button',{name:'数据看板搭建',exact:true}).click();
+          await demo.getByRole('log').getByText('模板测试').waitFor();
+          const mobile=await context.newPage();
+          try{await mobile.setViewportSize({width:390,height:844});await mobile.goto(origin+route,{waitUntil:'networkidle'});const panel=mobile.locator('#preview');await panel.getByRole('button',{name:'新建对话',exact:true}).click();await panel.getByRole('combobox',{name:'切换会话'}).selectOption('1');await panel.getByRole('log').getByText('帮我用 BoardUI 搭一个数据看板').waitFor();}finally{await mobile.close()}
+
         }
         if(route==='/zh-hans/templates/finance/'){
           const demo=page.locator('#preview');
@@ -398,6 +417,96 @@ try{
           await demo.getByText('模板测试任务',{exact:true}).waitFor();
           await demo.getByRole('radio',{name:'列表',exact:true}).click();
           await demo.getByText('模板测试任务',{exact:true}).waitFor();
+        }
+        if(route==='/zh-hans/components/carousel/'){
+          const demo=page.locator('#preview'),next=demo.getByRole('button',{name:'下一张'}),prev=demo.getByRole('button',{name:'上一张'});
+          assert.ok(await prev.isDisabled());await next.click();
+          await page.waitForFunction(()=>document.querySelector('#preview button[aria-current=true]')?.getAttribute('aria-label')==='第 2 张');
+          await demo.getByRole('button',{name:'第 3 张'}).click();
+          await page.waitForFunction(()=>document.querySelector('#preview button[aria-current=true]')?.getAttribute('aria-label')==='第 3 张');
+          assert.ok(await next.isDisabled());await prev.press('Enter');
+          await page.waitForFunction(()=>document.querySelector('#preview button[aria-current=true]')?.getAttribute('aria-label')==='第 2 张');
+        }
+        if(route==='/zh-hans/components/auth-card/'){
+          const demo=page.locator('#preview'),login=demo.getByRole('button',{name:'登录',exact:true});
+          assert.ok(await login.isDisabled());
+          await demo.getByRole('textbox',{name:'邮箱'}).fill('demo@example.com');
+          await demo.getByLabel('密码',{exact:true}).fill('sample123');await login.click();
+          await demo.getByText('本地表单校验通过，未连接认证服务').waitFor();
+          assert.equal(await demo.getByLabel('密码',{exact:true}).inputValue(),'');
+          await demo.getByRole('button',{name:/去注册/}).click();
+          assert.ok(await demo.getByRole('button',{name:'注册',exact:true}).isDisabled());
+          await demo.getByLabel('密码',{exact:true}).fill('sample123');
+          await demo.getByRole('checkbox').press('Space');
+          assert.ok(await demo.getByRole('button',{name:'注册',exact:true}).isEnabled());
+        }
+        if(route==='/zh-hans/components/questionnaire/'){
+          const demo=page.locator('#preview');
+          const next=demo.getByRole('button',{name:'下一题'});
+          assert.ok(await next.isDisabled());
+          await demo.getByRole('radio',{name:'AI 产品'}).press('Space');assert.ok(await demo.getByRole('radio',{name:'AI 产品'}).isChecked());await next.click();
+          await demo.getByRole('checkbox',{name:'无障碍'}).press('Space');assert.ok(await demo.getByRole('checkbox',{name:'无障碍'}).isChecked());await next.click();
+          const input=demo.getByRole('textbox',{name:'还有什么建议？'});
+          await input.fill('   ');assert.ok(await demo.getByRole('button',{name:'提交'}).isDisabled());
+          await input.fill('验收通过');await demo.getByRole('button',{name:'提交'}).click();await demo.getByText('感谢填写').waitFor();
+        }
+        if(route==='/zh-hans/components/task-list/'){
+          const demo=page.locator('#preview'),check=demo.getByRole('checkbox',{name:'为模型选择器添加键盘导航'});
+          await check.press('Space');assert.equal(await check.getAttribute('aria-checked'),'true');
+          await demo.getByText('2 / 4 已完成').waitFor();
+        }
+        if(route==='/zh-hans/components/web-search/'){
+          const demo=page.locator('#preview'),button=demo.getByRole('button',{name:/检索到 2 个来源/});
+          assert.equal(await button.getAttribute('aria-expanded'),'false');
+          assert.equal(await demo.getByRole('link').count(),0);await button.click();
+          await demo.getByRole('link',{name:/React Aria 官方文档/}).waitFor();
+          assert.ok((await demo.getByRole('link',{name:/React Aria 官方文档/}).getAttribute('href')).startsWith('https://'));
+          await button.press('Enter');assert.equal(await button.getAttribute('aria-expanded'),'false');
+        }
+        if(route==='/zh-hans/components/tag-group/'){
+          const demo=page.locator('#preview');
+          await demo.getByRole('button',{name:'移除 React',exact:true}).click();
+          await demo.getByText('React',{exact:true}).waitFor({state:'hidden'});
+          await demo.getByRole('button',{name:'重置标签'}).click();await demo.getByText('React',{exact:true}).waitFor();
+        }
+        if(route==='/zh-hans/components/social-button/'){
+          const demo=page.locator('#preview');await demo.getByRole('button',{name:/GitHub/}).press('Enter');
+          await demo.getByText('github · 本地演示，未连接认证').waitFor();
+        }
+        if(route==='/zh-hans/components/counter/'){
+          const demo=page.locator('#preview'),minus=demo.getByRole('button',{name:'减少'});
+          await minus.click();assert.ok(await minus.isDisabled());
+          await demo.getByRole('button',{name:'增加'}).press('Enter');assert.ok(await minus.isEnabled());
+        }
+        if(route==='/zh-hans/components/toggle-button/'){
+          const demo=page.locator('#preview');await demo.getByRole('radio',{name:'网格'}).press('Space');
+          assert.equal(await demo.getByRole('radio',{name:'网格'}).getAttribute('aria-checked'),'true');
+        }
+        if(route==='/zh-hans/components/toast/'){
+          await page.locator('#preview').getByRole('button',{name:'成功提示'}).click();await page.getByText('已保存',{exact:true}).waitFor();
+          await page.getByRole('button',{name:'关闭消息'}).click();await page.getByText('已保存',{exact:true}).waitFor({state:'hidden'});
+        }
+        if(route==='/zh-hans/components/area-chart-card/'){
+          const demo=page.locator('#preview'),point=demo.getByRole('combobox',{name:'查看图表数据点'});
+          const chart=demo.getByRole('img',{name:/趋势图/});
+          await chart.scrollIntoViewIfNeeded();
+          const position=await chart.evaluate(svg=>{const p=new DOMPoint(37,40).matrixTransform(svg.getScreenCTM());return {x:p.x,y:p.y}});
+          await page.mouse.move(position.x,position.y);
+          await demo.locator('[data-chart-tooltip]').getByText('3,400',{exact:true}).waitFor();
+          await page.mouse.move(0,0);await demo.locator('[data-chart-tooltip]').waitFor({state:'hidden'});
+          await point.selectOption('0');await demo.locator('[data-chart-tooltip]').getByText('3,400',{exact:true}).waitFor();
+          if(process.env.CHART_SCREENSHOT)await page.screenshot({path:process.env.CHART_SCREENSHOT.replace('.png','-'+theme+'.png')});
+
+          await demo.getByRole('button',{name:'有机',exact:true}).click();
+          assert.equal(await demo.getByRole('button',{name:'有机',exact:true}).getAttribute('aria-pressed'),'false');
+          for(const name of ['推荐','其他'])await demo.getByRole('button',{name,exact:true}).click();
+          await demo.getByText('暂无可展示数据').waitFor();
+          for(const name of ['有机','推荐','其他'])await demo.getByRole('button',{name,exact:true}).click();
+          const dynamic=page.locator('#dynamic');
+          await dynamic.getByRole('radio',{name:'更新数据'}).click();
+          await dynamic.getByRole('combobox',{name:'查看图表数据点'}).selectOption('2');
+          await dynamic.locator('[data-chart-tooltip]').getByText('36',{exact:true}).waitFor();
+          await dynamic.getByRole('radio',{name:'空数据'}).click();await dynamic.getByText('暂无可展示数据').waitFor();
         }
         if(route==='/zh-hans/components/calendar/'){
           const demo=page.locator('#preview');

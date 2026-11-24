@@ -17,6 +17,7 @@ jobs:
       routes: ${{ steps.risk.outputs.routes }}
       navigation: ${{ steps.risk.outputs.navigation }}
       matrix: ${{ steps.risk.outputs.matrix }}
+      responsive: ${{ steps.risk.outputs.responsive }}
       rtlCompat: ${{ steps.risk.outputs.rtlCompat }}
     steps:
       - uses: actions/checkout@v4
@@ -60,7 +61,7 @@ jobs:
       - run: npm run test:export
       - run: npm install --no-save --package-lock=false playwright@1.56.1
       - run: npx playwright install --with-deps chromium
-      - run: npm run test:browser -- --targeted ${{ needs.quick.outputs.matrix == 'true' && '--both-themes' || '' }}
+      - run: npm run test:browser -- --targeted ${{ (needs.quick.outputs.matrix == 'true' || needs.quick.outputs.responsive == 'true') && '--both-themes' || '' }}
         env:
           TARGET_ROUTES: ${{ needs.quick.outputs.routes }}
       - name: 持续动效资源释放专项
@@ -85,4 +86,15 @@ jobs:
         with:
           name: component-visual-matrix
           path: acceptance/component-matrix/
+          if-no-files-found: warn
+      - name: 全站初始状态 axe 与响应式验收
+        if: needs.quick.outputs.responsive == 'true'
+        run: |
+          npm install --no-save --package-lock=false axe-core@4.10.3 playwright@1.56.1
+          node scripts/audit-responsive-accessibility.mjs acceptance/responsive --local-only
+      - uses: actions/upload-artifact@v4
+        if: always() && needs.quick.outputs.responsive == 'true'
+        with:
+          name: responsive-accessibility
+          path: acceptance/responsive/
           if-no-files-found: warn

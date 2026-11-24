@@ -104,3 +104,13 @@
 - 最终 Edge 双主题 138/138 组合通过（含默认路由/RTL），64×2 视觉截图无横溢出或 pageerror；图表新增有限几何、唯一 SVG ID 断言。116 静态页、类型、API、单测、独立包 SSR/类型消费及预算通过；全站 gzip 最大 JS 500438B、HTML 25782B，模板目录 253311B。证据 reference/evidence/compound-visual-interaction-20261124.json，8 张代表性实际截图 reference/evidence/screenshots/20261124-compound/。复现 scripts/audit-component-matrix.mjs，CI 额外保留视觉矩阵 artifact。
 - WebKit 旧全量 run 45399678321 为 226/230，Chromium/Firefox 各 230/230。Accordion 滚入后等待真实 aria-expanded 状态，RTL 采用确定性可见数字文本与布局/方向提交等待，保留最终断言。当前本地 Firefox 安装缺 libmozglue.dylib，WebKit 安装未完整，不能宣称根因已确认或修复通过。新增 CI WebKit 双主题专项；需检查实际输出再决定合并与完整三浏览器复验。
 - ledger 仅新增部分视觉/交互证据；全部 104 项正式验收状态保持原状，不把截图、状态断言或本地 Chromium 专项当作完整跨浏览器/axe 验收。后续优先 WebKit 真实结果、未核验变体及原版模板结构差异。
+
+### 响应式、图表数据与无障碍专项
+
+- #31 quick/targeted 全部通过（含 WebKit Accordion/RTL 双主题与截图矩阵），合并至 main 487eb32；Pages 45406161298 build/deploy 成功，生产通知中心 HTTP 200 并包含“添加示例通知/条未读”。此前 WebKit 指定问题通过，不代表最终完整三浏览器验收。
+- 本批候选基于该提交，重查固定 MIT carousel/divider/social-button 源与官网 11 个剩余条目的公开浅色页面，复用上批真实模板截图对照。Carousel 改原生 scroll-snap、边界禁用、方向适配与当前项语义；TagGroup 使用 React Aria remove slot；Questionnaire 真实 radio/checkbox、空白校验及空问题状态；WebSearch 折叠内容 inert、真实文档链接；AuthCard 本地表单校验、回调、清除密码及未连接服务说明；TaskList 状态反馈。
+- Dashboard 增加招聘翻页及营收范围；Finance 现金流量主区为守恒样本流向带，范围改变数据；AI Chat 可新建多个会话、保留历史、窄屏切换会话、宽屏工作区显示真实本地消息。看板本轮沿用 #31 的自适应列，非像素复刻；AI 模板仍未连接后端。
+- ChartArea 鼠标数据点、键盘可选数据点、实际数值提示；ChartCard 面积/折线图例开关、外部动态数据与空状态；Sankey 按节点入/出流量布局，路径宽度与样本量相称。修复 SVG title 多文本子节点触发 hydration #418，改为确定性单字符串；保留严格 pageerror 门禁。
+- 本地 Edge 初始基线 230 个桌面双主题 axe、193 个布局组合、11 个官网采样。新候选全扫 423 组合有 9 项失败（8 hydration、1 暗色 composer-panel 选中 tab aria-controls 瞬态引用）。修复 SVG title 与 axe 前等待真实选中 tabpanel 引用，相关 21 组合复验 0 问题；首轮交互 94/106，修正实际 DOM 角色/名称、保留断言后相关 28/28，按钮 hover/focus/disabled/pressed 等 12/12。不要把不同构建结果拼成单次最终全量成功。最终 CI 另设 423 组合完整复跑并上传 artifact。自动 axe 初始状态不等同人工读屏。
+- 116 静态 HTML、类型/API/单测、独立包 SSR/类型消费通过；最大 gzip JS 503239B、HTML 25773B，模板目录 253310B。证据 reference/evidence/responsive-accessibility-20261124.json 与代表截图目录。剩余 20 个条目补齐部分证据，104 项均有范围受限的证据，正式五维验收门禁未升级。下一轮先核查本批 PR CI 的最终全站复扫、实际失败项与部署，再执行真正完整三浏览器/交互态及人工无障碍验收。
+- 最后补充图表指针实测：14/14 双主题专项通过；以 SVG 实际屏幕坐标触发数据点，检查 3,400 数值、离开隐藏、键盘选择、图例全部隐藏/恢复、动态更新与空状态。新增两张数据提示截图。共 197 条部分验收记录、104/104 条目覆盖；保留全站复扫与完整正式验收门禁。

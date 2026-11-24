@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef,useState } from "react";
+import { useRef,useState,useId } from "react";
 import {useVisibleActivity} from "@/packages/react/use-visible-activity";
 import { cn } from "@/lib/utils";
 import { Icon } from "./Icon";
@@ -31,6 +31,7 @@ export function WebSearch({
   const ref=useRef<HTMLDivElement>(null);
   const visible=useVisibleActivity(ref);
   const [open, setOpen] = useState(false);
+  const panel=useId();
 
   return (
     <div ref={ref} data-motion-active={status==="searching"&&visible?"true":"false"}
@@ -42,8 +43,8 @@ export function WebSearch({
     >
       <button
         type="button"
-        onClick={() => setOpen((v) => !v)}
-        className="flex items-center gap-2 px-3 py-2 text-start transition-colors hover:bg-background-secondary-hover"
+        onClick={() => setOpen((v) => !v)} aria-expanded={open} aria-controls={panel}
+        className="flex items-center gap-2 px-3 py-2 text-start transition-colors hover:bg-background-secondary-hover focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-border-focus-ring"
       >
         <span
           className={cn(
@@ -74,12 +75,12 @@ export function WebSearch({
       </button>
 
       <div
-        className="grid transition-[grid-template-rows,opacity] duration-300 ease-in-out motion-reduce:transition-none"
+        id={panel} inert={!open} aria-hidden={!open} className="grid transition-[grid-template-rows,opacity] duration-300 ease-in-out motion-reduce:transition-none"
         style={{ gridTemplateRows: open ? "1fr" : "0fr", opacity: open ? 1 : 0 }}
       >
         <div className="overflow-hidden">
           <div className="flex flex-col gap-1.5 border-t border-separator-border p-2.5">
-            {sources.map((s, i) => (
+            {sources.length===0&&<p className="text-body-2-regular text-text-secondary">{status==="searching"?"等待检索结果":"暂无来源"}</p>}{sources.map((s, i) => (
               <a
                 key={s.id}
                 href={s.url}

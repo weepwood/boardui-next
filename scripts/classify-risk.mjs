@@ -25,6 +25,13 @@ for(const p of files){
   if(tpl&&existsSync('app/zh-hans/templates/'+kebab(tpl[1])+'/page.tsx'))routes.add('/zh-hans/templates/'+kebab(tpl[1])+'/');
 }
 const matrix=files.includes("scripts/audit-component-matrix.mjs");
+const responsive=files.includes("scripts/audit-responsive-accessibility.mjs");
+if(responsive){
+  const m=JSON.parse(readFileSync("reference/upstream-manifest.json","utf8"));
+  const selected=new Set("color typography carousel divider link-button social-button auth-card web-search task-list questionnaire settings-modal search-field spinner skeleton toggle-button tag-group counter toast combobox token-input".split(" "));
+  for(const e of [...m.components,...m.localOnly])if(selected.has(e.slug)||e.localRoute.includes("/templates/")||/chart-card|steps-card|sleep-score-card/.test(e.slug))routes.add(e.localRoute+"/");
+  routes.add("/zh-hans/rtl/");routes.add("/zh-hans/components/accordion/");
+}
 const rtlCompat=matrix||files.some(p=>/^(app\/components\/(docs\/DirectionLab|ui\/(Accordion|Collapsible))|packages\/react\/(direction|slider|tabs|segmented-control))/.test(p));
 if(matrix){
   const m=JSON.parse(readFileSync("reference/upstream-manifest.json","utf8"));
@@ -35,4 +42,4 @@ if(matrix){
 const navRisk=files.some(p=>/^(app\/(layout\.tsx|globals\.css|components\/docs\/(DocsShell|Sidebar|navigation-context|CatalogCard|catalog-observers))|scripts\/(prepare-fonts|check-navigation-compat)|package(-lock)?\.json)/.test(p))||FORCE_RISK==='true';
 const risk=FORCE_RISK==='true'||!BASE_SHA||!HEAD_SHA||risky.length>0;
 console.log(JSON.stringify({risk,files:risky},null,2));
-if(GITHUB_OUTPUT) appendFileSync(GITHUB_OUTPUT,'risk='+risk+'\n'+'navigation='+navRisk+'\n'+'matrix='+matrix+'\n'+'rtlCompat='+rtlCompat+'\n'+'routes='+JSON.stringify([...routes])+'\n');
+if(GITHUB_OUTPUT) appendFileSync(GITHUB_OUTPUT,'risk='+risk+'\n'+'navigation='+navRisk+'\n'+'matrix='+matrix+'\n'+'responsive='+responsive+'\n'+'rtlCompat='+rtlCompat+'\n'+'routes='+JSON.stringify([...routes])+'\n');

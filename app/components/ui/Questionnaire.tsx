@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState,useId } from "react";
 import { cn } from "@/lib/utils";
 import { Icon } from "./Icon";
 import { Button } from "./Button";
@@ -28,9 +28,13 @@ export function Questionnaire({
 }) {
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string | string[]>>({});
-  const q = questions[step];
-  const last = step === questions.length - 1;
-  const answered = answers[q.id] !== undefined && String(answers[q.id]).length > 0;
+  const uid=useId();
+  const current=Math.min(step,questions.length-1);
+  const q=questions[current];
+  if(!q)return <div role="status" className="p-6 text-text-secondary">暂无问题</div>;
+  const last=current===questions.length-1;
+  const answer=answers[q.id];
+  const answered=Array.isArray(answer)?answer.length>0:!!answer?.trim();
 
   const pick = (opt: string) => {
     if (q.type === "multi") {
@@ -57,13 +61,13 @@ export function Questionnaire({
       <div className="flex flex-col gap-1.5">
         <div className="flex items-center justify-between text-caption-2-regular text-text-tertiary">
           <span>
-            第 {step + 1} / {questions.length} 题
+            第 {current + 1} / {questions.length} 题
           </span>
           <span className="tabular-nums">
-            {Math.round(((step + 1) / questions.length) * 100)}%
+            {Math.round(((current + 1) / questions.length) * 100)}%
           </span>
         </div>
-        <Progress value={((step + 1) / questions.length) * 100} size="sm" />
+        <Progress value={((current + 1) / questions.length) * 100} size="sm" aria-label="问卷进度" />
       </div>
 
       <div className="flex flex-col gap-1">
@@ -76,7 +80,7 @@ export function Questionnaire({
       <div className="flex flex-col gap-1.5">
         {q.type === "text" ? (
           <textarea
-            value={(answers[q.id] as string) ?? ""}
+            aria-label={q.title} value={(answers[q.id] as string) ?? ""}
             onChange={(e) => setAnswers({ ...answers, [q.id]: e.target.value })}
             rows={3}
             placeholder="输入你的回答…"
@@ -89,19 +93,18 @@ export function Questionnaire({
                 ? (selected as string[] | undefined)?.includes(opt)
                 : selected === opt;
             return (
-              <button
+              <label
                 key={opt}
-                type="button"
-                onClick={() => pick(opt)}
                 className={cn(
-                  "flex items-center gap-2 rounded-2lg border px-2.5 py-2 text-start",
+                  "relative flex cursor-pointer items-center gap-2 rounded-2lg border px-2.5 py-2 text-start focus-within:ring-2 focus-within:ring-border-focus-ring",
                   "text-body-2-medium transition-[border-color,background-color] duration-150 ease-out",
                   on
                     ? "border-accent-400 bg-badge-new-background text-text-primary"
                     : "border-border-button-default text-text-secondary hover:border-border-button-hover"
                 )}
               >
-                <span
+                <input type={q.type==="multi"?"checkbox":"radio"} name={uid+"-"+q.id} checked={!!on} onChange={()=>pick(opt)} className="sr-only"/>
+                <span aria-hidden
                   className={cn(
                     "flex size-4 shrink-0 items-center justify-center",
                     q.type === "multi" ? "rounded-[4px]" : "rounded-full",
@@ -112,7 +115,7 @@ export function Questionnaire({
                   {on && <Icon name="check-line" className="size-2.5 text-white" />}
                 </span>
                 {opt}
-              </button>
+              </label>
             );
           })
         )}
@@ -122,8 +125,8 @@ export function Questionnaire({
         <Button
           size="sm"
           variant="ghost"
-          isDisabled={step === 0}
-          onClick={() => setStep((s) => s - 1)}
+          isDisabled={current === 0}
+          onClick={() => setStep(current - 1)}
         >
           上一题
         </Button>
@@ -132,7 +135,7 @@ export function Questionnaire({
           isDisabled={!answered}
           onClick={() => {
             if (last) onSubmit?.(answers);
-            else setStep((s) => s + 1);
+            else setStep(current + 1);
           }}
         >
           {last ? "提交" : "下一题"}

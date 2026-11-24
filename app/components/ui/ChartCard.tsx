@@ -28,6 +28,8 @@ export type ChartCardProps = {
   height?: number;
   /** Local sample time range selector for monthly chart series. */
   periodFilter?: boolean;
+  /** External data for area/line charts. */
+  data?:{labels:string[];series:Series[]};
 };
 
 const MONTHS = ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月"];
@@ -113,32 +115,39 @@ function Card({
  * 通用图表卡片：20 种图表类型。
  * 折线/面积类使用 ChartArea（含网格、双轴、图例），其余复用基础图表。
  */
-export function ChartCard({ kind, height = 196, periodFilter=false, ...rest }: ChartCardProps) {
+export function ChartCard({ kind, height = 196, periodFilter=false, data, ...rest }: ChartCardProps) {
   const { title, subtitle, value, delta, trend, className } = rest;
   void rest.icon;
   const [period,setPeriod]=useState("8");
+  const [hidden,setHidden]=useState<string[]>([]);
+  const toggle=(name:string)=>setHidden(p=>p.includes(name)?p.filter(n=>n!==name):[...p,name]);
   const showPeriods=periodFilter&&["area","line","earnings","orders","revenue"].includes(kind);
-  const range=showPeriods?Number(period):8;
-  const months=MONTHS.slice(-range);
-  const windowSeries=(series:Series[])=>series.map(s=>({...s,data:s.data.slice(-range)}));
+  const sourceSeries=data?.series??AREA_SERIES;
+  const sourceLabels=data?.labels??MONTHS;
+  const range=showPeriods?Number(period):sourceLabels.length;
+  const months=sourceLabels.slice(Math.max(0,sourceLabels.length-range));
+  const windowSeries=(series:Series[])=>series.map(s=>({...s,data:s.data.slice(Math.max(0,sourceLabels.length-range),sourceLabels.length)}));
   const format=(n:number)=>n.toLocaleString("en-US");
-  const displayLegend=showPeriods?windowSeries(AREA_SERIES).map(s=>({name:s.name,color:s.color,value:format(s.data.reduce((a,b)=>a+b,0))})):LEGEND;
-  const total=showPeriods&&["area","line"].includes(kind)?format(windowSeries(AREA_SERIES).reduce((sum,s)=>sum+s.data.reduce((a,b)=>a+b,0),0)):value;
+  const all=windowSeries(sourceSeries);
+  const shown=all.filter(s=>!hidden.includes(s.name));
+  const sum=(s:Series)=>s.data.reduce((a,b)=>a+(Number.isFinite(b)?b:0),0);
+  const displayLegend=all.map(s=>({name:s.name,color:s.color,value:format(sum(s))}));
+  const total=["area","line"].includes(kind)?format(shown.reduce((n,s)=>n+sum(s),0)):value;
 
   const body = (() => {
     switch (kind) {
       case "area":
         return (
           <>
-            <ChartArea series={windowSeries(AREA_SERIES)} labels={months} height={height} />
-            <ChartLegend items={displayLegend} />
+            <ChartArea series={shown} labels={months} height={height} />
+            <ChartLegend items={displayLegend} hidden={hidden} onToggle={toggle}/>
           </>
         );
       case "line":
         return (
           <>
-            <ChartArea series={windowSeries(AREA_SERIES)} labels={months} height={height} stacked={false} showFill={false} />
-            <ChartLegend items={displayLegend} />
+            <ChartArea series={shown} labels={months} height={height} stacked={false} showFill={false} />
+            <ChartLegend items={displayLegend} hidden={hidden} onToggle={toggle}/>
           </>
         );
       case "revenue":
