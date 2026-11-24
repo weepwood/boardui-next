@@ -196,7 +196,7 @@ export const docs: Record<string, Doc> = {
 <AriaButton size="small">Small</AriaButton>
 <AriaButton size="xs">XS</AriaButton>`, node:<><AriaButton size="medium">Medium</AriaButton><AriaButton size="small">Small</AriaButton><AriaButton size="xs">XS</AriaButton></> },
       { id:"disabled", title:"禁用", node:<><AriaButton isDisabled>主要</AriaButton><AriaButton variant="secondary" isDisabled>次要</AriaButton><AriaButton variant="ghost" isDisabled>幽灵</AriaButton><AriaButton variant="danger" isDisabled>危险</AriaButton></> },
-      { id:"native",title:"原生按钮与链接",node:<><NativeButton>原生按钮</NativeButton><ButtonLink href="/zh-hans/components" variant="secondary">查看组件</ButtonLink></> },
+      { id:"native",title:"原生按钮与链接",node:<><NativeButton>原生按钮</NativeButton><ButtonLink href={(process.env.NEXT_PUBLIC_BASE_PATH ?? "") + "/zh-hans/components/"} variant="secondary">查看组件</ButtonLink></> },
       { id:"legacy",title:"旧版兼容接口",description:"现有应用仍可使用旧的 size、leading 和 destructive 等属性；尚未进行全站切换。",node:<><Button size="sm">小号</Button><Button variant="outline">描边</Button><Button variant="destructive">危险</Button></> },
     ],
   },
@@ -641,8 +641,8 @@ export const docs: Record<string, Doc> = {
     preview: (
       <Breadcrumb
         items={[
-          { id: "1", label: "BoardUI", href: "/" },
-          { id: "2", label: "组件", href: "/zh-hans/components" },
+          { id: "1", label: "BoardUI", href: (process.env.NEXT_PUBLIC_BASE_PATH ?? "") + "/" },
+          { id: "2", label: "组件", href: (process.env.NEXT_PUBLIC_BASE_PATH ?? "") + "/zh-hans/components/" },
           { id: "3", label: "面包屑导航" },
         ]}
       />
