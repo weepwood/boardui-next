@@ -1,0 +1,80 @@
+{
+  "baseline": "762b49c0ee9fb21da9db827a56400c7d758c1a63",
+  "environment": "Local Edge production static export, 1440×1000, instrumented native IntersectionObserver constructor, observe/unobserve/disconnect and callbacks. Counts include framework/TOC observers, not just catalog. Same filter sequence date-picker, empty, button, empty; scroll to last card; navigate to button. Single run, not a latency measurement.",
+  "before": [
+    {
+      "name": "initial",
+      "created": 89,
+      "observed": 88,
+      "active": 88,
+      "callbacks": 88,
+      "cards": 100,
+      "previews": 9
+    },
+    {
+      "name": "filters",
+      "created": 258,
+      "observed": 260,
+      "active": 88,
+      "callbacks": 269,
+      "cards": 100,
+      "previews": 9
+    },
+    {
+      "name": "scroll",
+      "created": 258,
+      "observed": 260,
+      "active": 88,
+      "callbacks": 282,
+      "cards": 100,
+      "previews": 4
+    },
+    {
+      "name": "leave catalog",
+      "created": 259,
+      "observed": 269,
+      "active": 9,
+      "callbacks": 283,
+      "cards": 0,
+      "previews": 0
+    }
+  ],
+  "after": [
+    {
+      "name": "initial",
+      "created": 2,
+      "observed": 88,
+      "active": 88,
+      "callbacks": 1,
+      "cards": 100,
+      "previews": 9
+    },
+    {
+      "name": "filters",
+      "created": 2,
+      "observed": 260,
+      "active": 88,
+      "callbacks": 7,
+      "cards": 100,
+      "previews": 9
+    },
+    {
+      "name": "scroll",
+      "created": 2,
+      "observed": 260,
+      "active": 88,
+      "callbacks": 8,
+      "cards": 100,
+      "previews": 4
+    },
+    {
+      "name": "leave catalog",
+      "created": 3,
+      "observed": 269,
+      "active": 9,
+      "callbacks": 9,
+      "cards": 0,
+      "previews": 0
+    }
+  ]
+}

@@ -1,7 +1,9 @@
 "use client";
 import Link from "next/link";
-import { useEffect,useLayoutEffect,useRef,useState } from "react";
+import { memo,useEffect,useLayoutEffect,useRef,useState } from "react";
 import { docs } from "@/lib/docs/registry";
+import { observeCatalogCard,observePreviewSize } from "./catalog-observers";
+import { useDocsNavigation } from "./navigation-context";
 
 export type CatalogStatus="ported"|"independent"|"existing"|"missing";
 const statusLabels={ported:"原版公开源码",independent:"独立实现",existing:"本地实现",missing:"待实现"};
@@ -12,20 +14,19 @@ function PreviewFit({children,wide}:{children:React.ReactNode;wide:boolean}){
   useLayoutEffect(()=>{
     const viewport=outer.current,node=inner.current;if(!viewport||!node)return;
     const fit=()=>{const w=node.scrollWidth,h=node.scrollHeight;setScale(Math.min(1,(viewport.clientWidth-24)/Math.max(w,1),(viewport.clientHeight-24)/Math.max(h,1)))};
-    fit();const ro=new ResizeObserver(fit);ro.observe(viewport);ro.observe(node);
-    return ()=>ro.disconnect();
+    fit();
+    return observePreviewSize([viewport,node],fit);
   },[]);
   return <div ref={outer} className="absolute inset-0 overflow-hidden"><div ref={inner} data-live-preview className={"pointer-events-none absolute top-1/2 left-1/2 flex max-w-none flex-wrap items-center justify-center gap-3 "+(wide?"w-[600px]":"w-[calc(100%-48px)]")} style={{transform:`translate(-50%,-50%) scale(${Math.max(.1,scale)})`}}>{children}</div></div>;
 }
-export function CatalogCard({slug,title,description,href,isPro,isNew,status,template=false}:{slug:string;title:string;description:string;href:string;isPro?:boolean;isNew?:boolean;status:CatalogStatus;template?:boolean}) {
+export const CatalogCard=memo(function CatalogCard({slug,title,description,href,isPro,isNew,status,template=false}:{slug:string;title:string;description:string;href:string;isPro?:boolean;isNew?:boolean;status:CatalogStatus;template?:boolean}) {
   const ref=useRef<HTMLElement>(null);
+  const {begin,warm}=useDocsNavigation();
   const [visible,setVisible]=useState(false);
   const doc=docs[slug];
   useEffect(()=>{
     if(template||!doc||!ref.current)return;
-    const observer=new IntersectionObserver(([entry])=>setVisible(entry.isIntersecting),{rootMargin:"240px 0px"});
-    observer.observe(ref.current);
-    return ()=>observer.disconnect();
+    return observeCatalogCard(ref.current,setVisible);
   },[doc,template]);
   const hasPreview=!!doc&&!template;
   return <article ref={ref} data-catalog-slug={slug} data-catalog-status={status} className={template||!hasPreview?"docs-entry-card group relative flex min-h-[116px] flex-col justify-center gap-2 rounded-2xl bg-background-primary-default p-5":"landing-showcase-card group relative h-[332px] overflow-hidden rounded-[28px] border border-transparent bg-background-primary-default [container-type:inline-size] dark:bg-transparent xl:h-[299px]"}>
@@ -37,6 +38,6 @@ export function CatalogCard({slug,title,description,href,isPro,isNew,status,temp
       <p className="line-clamp-2 text-body-regular leading-[18px] text-pretty text-text-secondary">{description}</p>
       <p className="text-caption-1-regular leading-[14px] truncate text-text-secondary">{template?"完整模板 · ": ""}{statusLabels[status]}</p>
     </div>
-    {status!=="missing"&&<Link href={href} prefetch={false} aria-label={"查看 "+title} title={statusLabels[status]+" · 待完整验收"} className="absolute inset-0 z-50 rounded-[25px] outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-border-focus-ring"><span className="sr-only">查看 {title}</span></Link>}
+    {status!=="missing"&&<Link href={href} prefetch={false} onFocus={e=>{if(e.currentTarget.matches(":focus-visible"))warm(href)}} onNavigate={()=>begin(href,title)} aria-label={"查看 "+title} title={statusLabels[status]+" · 待完整验收"} className="absolute inset-0 z-50 rounded-[25px] outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-border-focus-ring"><span className="sr-only">查看 {title}</span></Link>}
   </article>
-}
+});
