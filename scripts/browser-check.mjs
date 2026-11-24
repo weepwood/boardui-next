@@ -956,6 +956,18 @@ try{
           await page.keyboard.press('Escape');
           await dialog.waitFor({state:'hidden'});
           await page.waitForFunction(e=>document.activeElement===e,await trigger.elementHandle());
+          stage='modal: short viewport layout and dismissal';
+          await page.setViewportSize({width:320,height:420});
+          try{
+            await trigger.click();await dialog.waitFor();
+            assert.ok(await dialog.evaluate(e=>{const r=e.getBoundingClientRect();return r.left>=0&&r.right<=innerWidth+1&&r.top>=0&&r.bottom<=innerHeight+1}));
+            assert.ok(await dialog.evaluate(e=>e.scrollWidth<=e.clientWidth+1));
+            const footer=dialog.getByRole('button',{name:'发送邀请'});
+            await footer.scrollIntoViewIfNeeded();
+            await footer.click();
+            await dialog.waitFor({state:'hidden'});
+            await page.waitForFunction(e=>document.activeElement===e,await trigger.elementHandle());
+          }finally{await page.setViewportSize({width:1440,height:1000});}
         }
         if(route==='/zh-hans/components/settings-modal/'){
           const trigger=page.locator('#preview').getByRole('button',{name:'打开设置'});
@@ -1071,10 +1083,18 @@ try{
           await page.getByRole('tooltip').waitFor({state:'hidden'});
         }
         if(route==='/zh-hans/components/popover/'){
-          await page.getByRole('button',{name:'打开浮层'}).click();
-          await page.getByRole('dialog',{name:'设置浮层'}).waitFor({state:'visible'});
-          await page.keyboard.press('Escape');
-          await page.getByRole('dialog',{name:'设置浮层'}).waitFor({state:'hidden'});
+          const trigger=page.getByRole('button',{name:'打开浮层'}),dialog=page.getByRole('dialog',{name:'设置浮层'});
+          await trigger.click();await dialog.waitFor();
+          await dialog.getByRole('textbox',{name:'名称'}).fill('浮层验收');
+          await page.keyboard.press('Escape');await dialog.waitFor({state:'hidden'});
+          await page.waitForFunction(e=>document.activeElement===e,await trigger.elementHandle());
+          await page.setViewportSize({width:320,height:420});
+          try{
+            await trigger.click();await dialog.waitFor();
+            assert.ok(await dialog.evaluate(e=>{const r=e.getBoundingClientRect();return r.left>=0&&r.right<=innerWidth+1&&r.top>=0&&r.bottom<=innerHeight+1}));
+            await dialog.getByRole('button',{name:'关闭'}).click();await dialog.waitFor({state:'hidden'});
+            await page.waitForFunction(e=>document.activeElement===e,await trigger.elementHandle());
+          }finally{await page.setViewportSize({width:1440,height:1000});}
         }
         if(route==='/zh-hans/components/input/'){
           stage='input: required and description';

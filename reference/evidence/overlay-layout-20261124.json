@@ -1,0 +1,174 @@
+{
+  "base": "508af27",
+  "browser": "Microsoft Edge (Chromium), macOS",
+  "scope": "Dialog/Popover/Select/Dropdown 双主题三视口打开、边界及 Escape 焦点恢复；非正式全站验收",
+  "visual": [
+    {
+      "theme": "light",
+      "width": 1440,
+      "route": "/zh-hans/components/modal/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "route": "/zh-hans/components/popover/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "route": "/zh-hans/components/select/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "route": "/zh-hans/components/dropdown/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "route": "/zh-hans/components/modal/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "route": "/zh-hans/components/popover/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "route": "/zh-hans/components/select/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "route": "/zh-hans/components/dropdown/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 320,
+      "route": "/zh-hans/components/modal/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 320,
+      "route": "/zh-hans/components/popover/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 320,
+      "route": "/zh-hans/components/select/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 320,
+      "route": "/zh-hans/components/dropdown/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "route": "/zh-hans/components/modal/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "route": "/zh-hans/components/popover/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "route": "/zh-hans/components/select/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "route": "/zh-hans/components/dropdown/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "route": "/zh-hans/components/modal/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "route": "/zh-hans/components/popover/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "route": "/zh-hans/components/select/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "route": "/zh-hans/components/dropdown/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 320,
+      "route": "/zh-hans/components/modal/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 320,
+      "route": "/zh-hans/components/popover/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 320,
+      "route": "/zh-hans/components/select/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 320,
+      "route": "/zh-hans/components/dropdown/",
+      "status": "passed"
+    }
+  ],
+  "browserTargeted": {
+    "count": 24,
+    "failures": 0
+  },
+  "export": {
+    "pages": 120,
+    "maxGzipJs": 507088,
+    "maxGzipHtml": 26498,
+    "templateCatalogGzipJs": 253673
+  },
+  "screenshots": [
+    "reference/evidence/screenshots/20261124-overlay-layout/light-320-_zh-hans_components_modal_open.jpg",
+    "reference/evidence/screenshots/20261124-overlay-layout/dark-320-_zh-hans_components_modal_open.jpg",
+    "reference/evidence/screenshots/20261124-overlay-layout/light-320-_zh-hans_components_popover_open.jpg",
+    "reference/evidence/screenshots/20261124-overlay-layout/dark-320-_zh-hans_components_popover_open.jpg",
+    "reference/evidence/screenshots/20261124-overlay-layout/dark-1440-_zh-hans_components_select_open.jpg",
+    "reference/evidence/screenshots/20261124-overlay-layout/light-390-_zh-hans_components_dropdown_open.jpg"
+  ],
+  "limitations": [
+    "模拟窄短视口不是移动设备软键盘真机测试",
+    "截图及边界检查非逐像素验收",
+    "Firefox/WebKit、人工读屏待执行"
+  ]
+}
