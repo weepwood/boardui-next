@@ -1,0 +1,96 @@
+{
+  "environment": "Chromium CDP, same context, six cycles of five routes; forced GC at button page, warm cache; not a heap-retainer analysis; local Edge, 1440x1000, production static export. GC heap growth includes route caching and retained measurement instrumentation.",
+  "results": [
+    {
+      "cycle": 1,
+      "heapBytes": 7797060,
+      "documents": 1,
+      "nodes": 2904,
+      "eventListeners": 518,
+      "longTasks": 0,
+      "longTaskMs": 0
+    },
+    {
+      "cycle": 2,
+      "heapBytes": 8198572,
+      "documents": 1,
+      "nodes": 2134,
+      "eventListeners": 493,
+      "longTasks": 0,
+      "longTaskMs": 0
+    },
+    {
+      "cycle": 3,
+      "heapBytes": 8373736,
+      "documents": 1,
+      "nodes": 2904,
+      "eventListeners": 518,
+      "longTasks": 0,
+      "longTaskMs": 0
+    },
+    {
+      "cycle": 4,
+      "heapBytes": 8401632,
+      "documents": 1,
+      "nodes": 2904,
+      "eventListeners": 518,
+      "longTasks": 0,
+      "longTaskMs": 0
+    },
+    {
+      "cycle": 5,
+      "heapBytes": 8431756,
+      "documents": 1,
+      "nodes": 2904,
+      "eventListeners": 518,
+      "longTasks": 0,
+      "longTaskMs": 0
+    },
+    {
+      "cycle": 6,
+      "heapBytes": 8489992,
+      "documents": 1,
+      "nodes": 2904,
+      "eventListeners": 518,
+      "longTasks": 0,
+      "longTaskMs": 0
+    }
+  ],
+  "warmRange": {
+    "heapBytes": 116256,
+    "nodes": 0,
+    "eventListeners": 0
+  },
+  "errors": [],
+  "baseline": "eca31488a1e5ad7a8179079c1a56313c1cfdae79",
+  "priorFullAcceptance": {
+    "run": 45387299806,
+    "sha": "06044e67b6533766282245698b1fdd5a21f98c3b",
+    "results": [
+      {
+        "browser": "chromium",
+        "pass": 228,
+        "failed": 0,
+        "missing": 0
+      },
+      {
+        "browser": "firefox",
+        "pass": 227,
+        "failed": 1,
+        "missing": 0
+      },
+      {
+        "browser": "webkit",
+        "pass": 228,
+        "failed": 0,
+        "missing": 0
+      }
+    ],
+    "failure": "Firefox light /zh-hans/components/input/ waitForFunction timeout; exact assertion unknown"
+  },
+  "currentFullAcceptance": {
+    "run": 45399678321,
+    "sha": "eca31488a1e5ad7a8179079c1a56313c1cfdae79",
+    "statusAtRecording": "build passed, browser matrix in progress"
+  }
+}

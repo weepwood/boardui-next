@@ -1,9 +1,11 @@
 // BoardUI MIT source, pinned upstream; see LICENSE.
 "use client";
 
+import { observeSize } from "./observe-size";
 import { fieldVisualState,fieldTransition } from "./field-styles";
 import {
   useContext,
+  useCallback,
   useLayoutEffect,
   useRef,
   useState,
@@ -136,7 +138,7 @@ export function TextareaBase({
   // Measure from zero so the field shrinks back as well as grows. Reading the
   // computed line box keeps the floor and ceiling honest when a consumer
   // overrides the type scale through `className`.
-  const fit = () => {
+  const fit = useCallback(() => {
     const field = innerRef.current;
     if (!field) return;
     if (!autoResize) {
@@ -145,6 +147,8 @@ export function TextareaBase({
       field.style.overflowY = "";
       return;
     }
+    // Defer measurement while hidden; the width observer retries on reveal.
+    if(field.clientWidth===0)return;
     const line =
       parseFloat(window.getComputedStyle(field).lineHeight) || FALLBACK_LINE_HEIGHT;
     const ceiling = maxRows ? Math.max(rows, maxRows) * line : Infinity;
@@ -153,12 +157,29 @@ export function TextareaBase({
     field.style.height = `${Math.min(next, ceiling)}px`;
     field.style.maxHeight = maxRows ? `${ceiling}px` : "";
     field.style.overflowY = next > ceiling ? "auto" : "hidden";
-  };
+  },[autoResize,rows,maxRows]);
 
   // No dependency list: typing on an uncontrolled field re-renders nothing,
   // so `onInput` handles keystrokes and this catches every other reason the
   // value moved (a controlled parent, a form reset, an autofill).
   useLayoutEffect(fit);
+  useLayoutEffect(()=>{
+    const field=innerRef.current;
+    if(!autoResize||!field)return;
+    let width=field.clientWidth,alive=true;
+    const stop=observeSize(field,()=>{
+      const next=field.clientWidth;
+      if(next===width)return;
+      width=next;
+      if(next>0)fit();
+    });
+    // Font metrics can change without changing the container width.
+    const fonts=document.fonts;
+    const onFonts=()=>{if(alive)fit()};
+    fonts?.addEventListener("loadingdone",onFonts);
+    if(fonts?.status==="loading")void fonts.ready.then(onFonts);
+    return ()=>{alive=false;stop();fonts?.removeEventListener("loadingdone",onFonts)};
+  },[autoResize,fit]);
 
   return (
     <AriaGroup
