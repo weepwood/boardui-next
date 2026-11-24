@@ -18,3 +18,6 @@ export { ButtonGroup, ButtonGroupItem } from "./button-group";
 export type { ButtonGroupProps, ButtonGroupItemProps, ButtonGroupSize } from "./button-group";
 export { CloseButton } from "./close-button";
 export type { CloseButtonProps, CloseButtonSize } from "./close-button";
+
+export { SvgIcon, resolveIcon } from "./svg-icon";
+export type { SvgIconProps, IconName } from "./svg-icon";

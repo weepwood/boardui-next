@@ -1,4 +1,5 @@
 "use client";
+import { directionalIconClass } from "./directional-icon";
 import { Button as RACButton, type ButtonProps as RACProps } from "react-aria-components";
 import type { ReactNode, Ref } from "react";
 import { cx } from "./cx";
@@ -16,8 +17,8 @@ export interface AriaButtonProps extends Omit<RACProps,"children"|"className"> {
 }
 export function AriaButton({size="medium",variant="primary",iconOnly=false,leadingIcon:Leading,trailingIcon:Trailing,children,className,ref,...props}:AriaButtonProps) {
   return <RACButton {...props} ref={ref} className={cx(styles.base, styles.size[size],styles.variant[variant],iconOnly && styles.iconOnlySize[size],className)}>
-    {Leading && <Leading className={styles.icon[size]} aria-hidden/>}
+    {Leading && <Leading className={cx(styles.icon[size], directionalIconClass(Leading))} aria-hidden/>}
     {!iconOnly && children != null && <span className={styles.label[size]}>{children}</span>}
-    {!iconOnly && Trailing && <Trailing className={styles.icon[size]} aria-hidden/>}
+    {!iconOnly && Trailing && <Trailing className={cx(styles.icon[size], directionalIconClass(Trailing))} aria-hidden/>}
   </RACButton>;
 }

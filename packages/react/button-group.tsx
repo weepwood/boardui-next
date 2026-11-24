@@ -1,3 +1,4 @@
+import { directionalIconClass } from "./directional-icon";
 // BoardUI MIT source: components/base/buttons/button-group.tsx; see LICENSE.
 import type {
   ButtonHTMLAttributes,
@@ -125,9 +126,9 @@ export function ButtonGroupItem({
       )}
       {...props}
     >
-      {Leading ? <Leading className={styles.icon[size]} aria-hidden /> : null}
+      {Leading ? <Leading className={cx(styles.icon[size], directionalIconClass(Leading))} aria-hidden /> : null}
       {!iconOnly && children !== undefined && children !== null && <span>{children}</span>}
-      {!iconOnly && Trailing ? <Trailing className={styles.icon[size]} aria-hidden /> : null}
+      {!iconOnly && Trailing ? <Trailing className={cx(styles.icon[size], directionalIconClass(Trailing))} aria-hidden /> : null}
     </button>
   );
 }

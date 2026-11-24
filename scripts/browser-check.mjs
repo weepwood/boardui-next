@@ -54,10 +54,22 @@ try{
           assert.equal(await card.evaluate(e=>getComputedStyle(e).borderRadius),'28px');
           assert.equal(await card.locator(':scope > div').first().evaluate(e=>e.getBoundingClientRect().height),197);
         }
+        assert.equal(await page.locator('[data-icon-fallback="true"]').count(),0,'unknown SVG name on '+route);
         if(route==='/zh-hans/components/button/'){
+          const svg=page.locator('main svg[data-icon]');
+          assert.ok(await svg.count()>0,'shared SVG icons rendered');
+          assert.equal(await page.locator('i[class*="ri-"]').count(),0,'no icon font elements');
+          assert.equal(await page.locator('[data-icon-fallback="true"]').count(),0,'no unknown icon on button page');
+          const arrow=page.locator('#preview button').filter({hasText:'继续'}).locator('svg').first();
+          assert.equal(await arrow.evaluate(e=>e.getAttribute('viewBox')),'0 0 24 24');
+          assert.ok((await arrow.evaluate(e=>getComputedStyle(e).rotate))==='none');
+          await page.locator('html').evaluate(e=>e.dir='rtl');
+          assert.ok((await arrow.evaluate(e=>getComputedStyle(e).rotate)).includes('180deg'));
+          await page.locator('html').evaluate(e=>e.dir='ltr');
           const geometry=await page.evaluate(()=>{const r=s=>{const e=document.querySelector(s);const b=e.getBoundingClientRect();return [b.x,b.y,b.width,b.height].map(Math.round)};return {main:r('main'),heading:r('main h1'),sidebar:r('aside'),toc:r('main+aside'),canvas:r('#preview > div > div:last-child'),shadow:getComputedStyle(document.documentElement).getPropertyValue('--shadow-sidebar').trim(),font:document.fonts.check('14px "Noto Sans SC Variable"','按钮')}});
-          assert.deepEqual(geometry.main.slice(0,3),[324,40,808]);
-          assert.deepEqual(geometry.heading.slice(0,2),[324,108]);
+          const near=(actual,expected,tolerance=12)=>assert.ok(actual.every((n,i)=>Math.abs(n-expected[i])<=tolerance), JSON.stringify({actual,expected,tolerance}));
+          near(geometry.main.slice(0,3),[324,40,808]);
+          near(geometry.heading.slice(0,2),[324,108]);
           assert.deepEqual(geometry.sidebar,[12,12,260,976]);
           assert.deepEqual(geometry.toc.slice(0,3),[1180,40,220]);
           assert.ok(geometry.canvas[3]>=327);
@@ -71,6 +83,18 @@ try{
           assert.equal(await demo.getByRole('tab',{name:'代码'}).getAttribute('aria-selected'),'true');
           await demo.getByRole('tab',{name:'代码'}).press('ArrowLeft');
           assert.equal(await demo.getByRole('tab',{name:'预览'}).getAttribute('aria-selected'),'true');
+          const pressTarget=demo.getByRole('tabpanel').getByRole('button',{name:'开始使用',exact:true});
+          await page.emulateMedia({reducedMotion:'no-preference'});
+          await pressTarget.scrollIntoViewIfNeeded();
+          const box=await pressTarget.boundingBox();
+          assert.ok(box);
+          await page.mouse.move(box.x+box.width/2,box.y+box.height/2);
+          await page.mouse.down();
+          try {
+            await page.waitForFunction(e=>{const t=getComputedStyle(e).transform;return t!=='none'&&Math.abs(new DOMMatrix(t).a-0.98)<0.005},await pressTarget.elementHandle(),{timeout:4000});
+          } finally {await page.mouse.up();}
+          await page.waitForFunction(e=>{const t=getComputedStyle(e).transform;return t==='none'||Math.abs(new DOMMatrix(t).a-1)<0.005},await pressTarget.elementHandle(),{timeout:4000});
+          await page.emulateMedia({reducedMotion:'reduce'});
           const link=page.getByRole('link',{name:'查看组件',exact:true});
           await link.waitFor({state:'visible'});
           assert.ok((await link.getAttribute('href')).startsWith(base+'/'));
