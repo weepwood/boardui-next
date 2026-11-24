@@ -660,9 +660,23 @@ try{
             assert.equal(await svg.locator('[data-series=previous]').count(),8);
             await demo.getByRole('combobox',{name:'查看图表数据点'}).selectOption('0');
             await demo.locator('[data-chart-tooltip]').getByText('今年：1,680 · 去年：1,510',{exact:true}).waitFor();
+            assert.equal(await demo.locator('[data-orders-label]').textContent(),'1月');
+            assert.equal(await demo.locator('[data-orders-value]').textContent(),'1,680');
+            assert.equal(await demo.locator('[data-orders-previous]').textContent(),'去年同期 1,510');
+            assert.equal(await demo.locator('[data-orders-delta]').textContent(),'+11.3%');
+            await demo.getByRole('combobox',{name:'查看图表数据点'}).selectOption('');
+            assert.equal(await demo.locator('[data-orders-value]').textContent(),'15,810');
+            await svg.locator('[data-series=current]').first().hover();
+            await demo.locator('[data-orders-value]').getByText('1,680',{exact:true}).waitFor();
+            await page.mouse.move(0,0);
+            await demo.locator('[data-orders-value]').getByText('15,810',{exact:true}).waitFor();
           }
 
           await demo.getByRole('radio',{name:'近4月'}).click();
+          if(route.includes('orders-chart')){
+            assert.equal(await demo.locator('[data-orders-label]').textContent(),'订单量');
+            assert.equal(await demo.getByRole('combobox',{name:'查看图表数据点'}).inputValue(),'');
+          }
           await page.waitForFunction(()=>document.querySelectorAll('#preview svg[role=img] text').length>0&&[...document.querySelectorAll('#preview svg[role=img] text')].filter(e=>/^[1-8]月$/.test(e.textContent)).length===4);
           assert.ok(!(await svg.locator('path').evaluateAll(es=>es.some(e=>/NaN|Infinity/.test(e.getAttribute('d')??'')))));
           if(route.includes('line-chart'))assert.equal(await svg.locator('path[fill^="url("]').count(),0);

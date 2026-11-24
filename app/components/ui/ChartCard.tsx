@@ -61,7 +61,7 @@ const LEGEND = [
 
 /** 卡片外壳：与 StatCard 同一视觉语言 */
 function Card({
-  title, subtitle, value, delta, trend = "up", children, className, controls,
+  title, subtitle, value, delta, trend = "up", children, className, controls, hideHeader=false,
 }: {
   title: string;
   subtitle?: string;
@@ -70,6 +70,7 @@ function Card({
   trend?: "up" | "down" | "flat";
   children: React.ReactNode;
   controls?: React.ReactNode;
+  hideHeader?:boolean;
   className?: string;
 }) {
   return (
@@ -81,7 +82,7 @@ function Card({
         className
       )}
     >
-      <div className="flex flex-col gap-1">
+      {!hideHeader&&<div className="flex flex-col gap-1">
         <div className="flex flex-wrap items-center justify-between gap-2"><span className="text-body-medium text-text-secondary">{title}</span>{controls}</div>
         {(value || delta) && (
           <div className="flex items-center gap-2">
@@ -108,7 +109,7 @@ function Card({
         {subtitle && !value && (
           <span className="text-caption-1-regular text-text-tertiary">{subtitle}</span>
         )}
-      </div>
+      </div>}
       {children}
     </div>
   );
@@ -148,6 +149,27 @@ export function ChartCard({ kind, height = 196, periodFilter=false, data, record
   const bars=prepare(sample([42,58,36,64,48,72,55].map((value,i)=>({label:"第 "+(i+1)+" 期",value}))));
   const heat=prepare(sample(Array.from({length:16*7},(_,i)=>({label:"第 "+(Math.floor(i/7)+1)+" 周 第 "+(i%7+1)+" 天",value:Math.floor(Math.abs(Math.sin((i+7)*1.7))*5)}))),r=>r.value>=0);
   const colors=["var(--color-amber-400)","var(--color-pink-400)","var(--color-purple-400)","var(--color-accent-500)","var(--color-lime-500)"];
+  const periodControls=showPeriods?<SegmentedControl value={period} onChange={setPeriod} size="sm" options={[{id:"4",label:"近4月"},{id:"8",label:"近8月"}]}/>:undefined;
+  if(kind==="orders"){
+    return <Card title={title} className={className} hideHeader>
+      <ChartDataInspector resetKey={period} records={orderRows} seriesLabels={["今年","去年"]} renderSummary={row=>{
+        const current=row?.value??orderTotal, previous=row?.secondary??orderPrevious;
+        const percent=previous?Math.round((current-previous)/previous*1000)/10:null;
+        const change=percent===null?(current?"新增":"—"):(percent>0?"+":"")+percent+"%";
+        return <div className="flex min-w-0 flex-col gap-3 pb-2" data-orders-summary>
+          <div className="flex flex-wrap items-start justify-between gap-2">
+            <div className="min-w-0 flex-1"><p className="text-body-medium text-text-secondary" data-orders-label>{row?.label??title}</p>
+              <div className="flex flex-wrap items-center gap-2 pt-1"><span data-orders-value className="text-title-1-medium tabular-nums text-text-primary">{format(current)}</span>
+                <span data-orders-delta className={cn("rounded-md px-1.5 py-0.5 text-caption-1-medium tabular-nums",percent!==null&&percent>0?"bg-lime-200 text-lime-800 dark:bg-lime-950 dark:text-lime-300":percent!==null&&percent<0?"bg-red-200 text-red-800 dark:bg-red-950 dark:text-red-300":"bg-background-tertiary-default text-text-secondary")}>{change}</span>
+              </div>
+              <p data-orders-previous className="pt-1 text-body-2-regular tabular-nums text-text-secondary">去年同期 {format(previous)}</p>
+            </div>{periodControls}
+          </div>
+          <div className="flex flex-wrap items-center justify-end gap-3 text-caption-1-medium text-text-secondary"><span className="flex items-center gap-1.5"><i className="size-2 shrink-0 rounded-full bg-chart-9-active"/>今年</span><span className="flex items-center gap-1.5"><i className="size-2 shrink-0 rounded-full bg-chart-neutral"/>去年</span></div>
+        </div>
+      }}>{active=><OrdersBars rows={orderRows} height={height} activeIndex={active}/>}</ChartDataInspector>
+    </Card>;
+  }
   const body = (() => {
     switch (kind) {
       case "area":
@@ -182,8 +204,6 @@ export function ChartCard({ kind, height = 196, periodFilter=false, data, record
             height={height}
           />
         );
-      case "orders":
-        return <><div className="flex flex-wrap items-center justify-between gap-2 text-caption-1-regular text-text-secondary"><span>去年同期 {format(orderPrevious)}</span><span className="flex gap-2"><span className="flex items-center gap-1"><i className="size-2 rounded-sm bg-chart-9-active"/>今年</span><span className="flex items-center gap-1"><i className="size-2 rounded-sm bg-chart-neutral"/>去年</span></span></div><ChartDataInspector records={orderRows} seriesLabels={["今年","去年"]}>{active=><OrdersBars rows={orderRows} height={height} activeIndex={active}/>}</ChartDataInspector></>;
       case "steps":
         return (
           <ChartArea
@@ -364,7 +384,7 @@ export function ChartCard({ kind, height = 196, periodFilter=false, data, record
   })();
 
   return (
-    <Card title={title} subtitle={subtitle} value={total} delta={showPeriods?undefined:delta} trend={trend} className={className} controls={showPeriods?<SegmentedControl value={period} onChange={setPeriod} size="sm" options={[{id:"4",label:"近4月"},{id:"8",label:"近8月"}]}/>:undefined}>
+    <Card title={title} subtitle={subtitle} value={total} delta={showPeriods?undefined:delta} trend={trend} className={className} controls={periodControls}>
       {body}
     </Card>
   );

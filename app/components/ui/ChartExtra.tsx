@@ -74,10 +74,10 @@ export function ComboChart({bars,line,height=140,activeIndex}:{bars:number[];lin
 
 /** Independently rendered monthly grouped bars, following the public OrdersChartCard comparison structure. */
 export function OrdersBars({rows,height=160,activeIndex}:{rows:{label:string;value:number;secondary?:number}[];height?:number;activeIndex?:number|null}){
- const W=420,H=160,L=32,R=8,T=8,B=24,span=W-L-R,step=span/Math.max(1,rows.length),bw=step*.29;
+ const W=400,H=160,L=36,R=8,T=8,B=24,span=W-L-R,step=span/Math.max(1,rows.length),bw=step*.29;
  const max=rows.reduce((n,r)=>Math.max(n,r.value,r.secondary??0),1)*1.1,y=(v:number)=>H-B-v/max*(H-B-T);
  return <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label="订单趋势图" className="w-full" style={{height}}>
- {Array.from({length:4},(_,i)=>i/3).map((r,i)=><g key={i}><line x1={L} x2={W-R} y1={y(r*max)} y2={y(r*max)} stroke="var(--color-separator-border)" strokeDasharray="3 3"/><text x={L-4} y={y(r*max)+3} textAnchor="end" fontSize="10" fill="var(--color-text-secondary)">{Math.round(r*max).toLocaleString("en-US")}</text></g>)}
- {rows.map((r,i)=>{const x=L+i*step+(step-bw*2-2)/2;return <g key={i} data-chart-index={i}><rect x={L+i*step} y={T} width={step} height={H-B-T} fill="var(--color-background-tertiary-default)" opacity={activeIndex===i ? .6 : 0}/><rect data-series="previous" x={x} y={y(r.secondary??0)} width={bw} height={H-B-y(r.secondary??0)} rx="2" fill="var(--color-chart-neutral)"/><rect data-series="current" x={x+bw+2} y={y(r.value)} width={bw} height={H-B-y(r.value)} rx="2" fill="var(--color-chart-9-active)"/><text x={L+(i+.5)*step} y={H-6} textAnchor="middle" fontSize="10" fill="var(--color-text-secondary)">{r.label}</text></g>})}
+ {Array.from({length:4},(_,i)=>i/3).map((r,i)=><g key={i}><line x1={L} x2={W-R} y1={y(r*max)} y2={y(r*max)} stroke="var(--color-separator-border)" strokeDasharray="3 3"/><text x={L-4} y={y(r*max)+3} textAnchor="end" fontSize="10" fill="var(--color-text-secondary)">{r*max>=1000?Number((r*max/1000).toFixed(1))+"k":Math.round(r*max).toString()}</text></g>)}
+ {rows.map((r,i)=>{const x=L+i*step+(step-bw*2-2)/2;return <g key={i} data-chart-index={i}><rect x={L+i*step} y={T} width={step} height={H-B-T} fill="var(--color-chart-track)" opacity={activeIndex===i ? .5 : 0}/><rect data-series="previous" x={x} y={y(r.secondary??0)} width={bw} height={H-B-y(r.secondary??0)} rx="2" fill="var(--color-chart-neutral)"/><rect data-series="current" x={x+bw+2} y={y(r.value)} width={bw} height={H-B-y(r.value)} rx="2" fill="var(--color-chart-9-active)"/><text x={L+(i+.5)*step} y={H-6} textAnchor="middle" fontSize="10" fill="var(--color-text-secondary)">{r.label}</text></g>})}
  </svg>
 }

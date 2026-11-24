@@ -64,6 +64,14 @@ jobs:
       - run: npm run test:browser -- --targeted ${{ (needs.quick.outputs.matrix == 'true' || needs.quick.outputs.responsive == 'true') && '--both-themes' || '' }}
         env:
           TARGET_ROUTES: ${{ needs.quick.outputs.routes }}
+      - name: 语义颜色对比度专项
+        run: node scripts/audit-contrast.mjs acceptance/contrast
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: semantic-contrast
+          path: acceptance/contrast/
+          if-no-files-found: warn
       - name: 持续动效资源释放专项
         run: node scripts/check-activity-cleanup.mjs /tmp/activity-cleanup.json
       - name: 导航与字体跨浏览器专项
