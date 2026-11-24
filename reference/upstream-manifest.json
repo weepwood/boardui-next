@@ -152,7 +152,7 @@
       "tier": "free",
       "upstreamStatus": "shipped",
       "localRoute": "/zh-hans/components/checkbox",
-      "implementation": "existing-unverified",
+      "implementation": "ported-unverified",
       "sourcePolicy": "verify-public-source",
       "verification": {
         "visual": "pending",
@@ -161,7 +161,18 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "sourcePaths": [
+        "components/base/checkbox/checkbox.tsx",
+        "components/base/checkbox/checkbox-glyph.tsx",
+        "styles/globals.css"
+      ],
+      "localPaths": [
+        "packages/react/checkbox.tsx",
+        "packages/react/checkbox-glyph.tsx",
+        "packages/styles/checkbox.css"
+      ],
+      "notes": "已移植公开 MIT 上游组件与视觉结构，旧导入路径兼容；专项浏览器证据与像素对比待验证。"
     },
     {
       "slug": "chip",
@@ -360,7 +371,7 @@
       "tier": "free",
       "upstreamStatus": "shipped",
       "localRoute": "/zh-hans/components/radio",
-      "implementation": "existing-unverified",
+      "implementation": "ported-unverified",
       "sourcePolicy": "verify-public-source",
       "verification": {
         "visual": "pending",
@@ -369,7 +380,14 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "sourcePaths": [
+        "components/base/radio/radio.tsx"
+      ],
+      "localPaths": [
+        "packages/react/radio.tsx"
+      ],
+      "notes": "已移植公开 MIT 上游组件与视觉结构，旧导入路径兼容；专项浏览器证据与像素对比待验证。"
     },
     {
       "slug": "segmented-control",
@@ -440,7 +458,7 @@
       "tier": "free",
       "upstreamStatus": "shipped",
       "localRoute": "/zh-hans/components/switch",
-      "implementation": "existing-unverified",
+      "implementation": "ported-unverified",
       "sourcePolicy": "verify-public-source",
       "verification": {
         "visual": "pending",
@@ -449,7 +467,14 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "sourcePaths": [
+        "components/base/switch/switch.tsx"
+      ],
+      "localPaths": [
+        "packages/react/switch.tsx"
+      ],
+      "notes": "已移植公开 MIT 上游组件与视觉结构，旧导入路径兼容；专项浏览器证据与像素对比待验证。"
     },
     {
       "slug": "table",
