@@ -88,3 +88,10 @@
 - 本地 10 个 Edge 专项组合、116 静态页、类型、API、独立包 SSR/类型消费通过；全站 gzip 最大 JS 498093B、HTML 25777B，低于既有预算。Firefox/WebKit 新候选仍待复验。
 - 新增 scripts/audit-runtime-lifecycle.mjs，Chromium CDP 六轮五路由（30 次切换），每轮同一 button 页面 GC 后取 heap/DOM/listeners；后四轮 heap 8373736→8489992B（范围116256B），DOM 2904、监听518保持稳定，文档1、无 pageerror；只证明该场景，不是完整 heap-retainer 审计，不设置脆弱内存绝对门禁。证据 reference/evidence/runtime-lifecycle-20261124.json。
 - 发布清单 104 条、五个维度均待完整验收，0 条全验收；不得将页面自动化、性能测试或部分证据标记为完整通过。下一次先查看完整验收 run 45399678321 与新 PR CI，再按实际失败分类治理。
+
+### 基础控件逐组件视觉与交互验收
+
+- #29 CI quick/targeted 成功，已合并 main 34d9f43。本批基于其内容，对照固定公开 MIT 源及官网实时浅色预览 12 个基础控件。官网部署 SHA 未知；Tabs 预览测量选中空占位，不能作原版几何结论。隐藏 native input 的 13px 几何不是可见 glyph。
+- 校准主预览七项：IconButton 四项 36/36/32/32px；CloseButton 四尺寸和标签；ButtonGroup 四时间范围（旧受控演示移至 controlled）；Radio 三计费选项；Switch 胶囊/矩形各三尺寸；Textarea 404×80px 必填发行说明；SegmentedControl 每周/月/年 48×28px。保持公共组件 API，Button、Checkbox、Select 不做无意义修改；Input 内部宽度差异仍待复核。
+- 本地双主题 24 组截图布局无横溢出及 pageerror，人工抽看 switch 与 dark textarea；32/32 Edge 专项（12 控件加 4 默认页面，每主题 16），新增 switch/radio/textarea 键盘和状态回归，116 静态页及类型、API、预算通过。证据 reference/evidence/basic-components-visual-interaction-20261124.json；复现 scripts/audit-basic-visual.mjs [输出目录]，browser-check.mjs --targeted --both-themes。ledger 增加 12 条视觉与 12 条交互部分证据，修正旧 visual-sample 实际只有 3 个样本；不升级正式验收状态。
+- 完整验收 run 45399678321 针对 #28 合并提交 eca3148：Chromium 230/230、Firefox 230/230、WebKit 226/230。WebKit 浅/深 accordion aria-expanded 断言失败，RTL 浅色 React #418、深色布尔断言失败。690 组合中 686 通过，正式门禁仍未通过；下一批优先定位这两个实际问题，再验收 Dropdown/Popover/Tooltip/Dialog/Drawer/Accordion、日期与数值输入。不要把旧完整验收当作本批通过。

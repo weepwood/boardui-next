@@ -8,7 +8,7 @@
   "browser": "Edge (Chromium)",
   "upstream": "https://www.boardui.com/zh-hans/components/",
   "localBase": "2935c443525e92b9c2b3c4863153fbf2fed92316 + pre-preview-adjustment worktree",
-  "scope": "Four representative pages. Measurements only; not pixel or behavioral acceptance. Input, Checkbox and Select preview composition was adjusted after sampling.",
+  "scope": "Three representative pages. Measurements only; not pixel or behavioral acceptance. Input, Checkbox and Select preview composition was adjusted after sampling.",
   "samples": [
     {
       "slug": "input",
