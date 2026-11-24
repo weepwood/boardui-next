@@ -1,0 +1,290 @@
+{
+  "baseline": "d294a8f77d36f946645e624177f7e15fdecfe01d",
+  "environment": "Local Edge Chromium on mini.local, production static export, 1440×1000; hover for 180ms before click, then wait for target URL, active link, heading and two animation frames. Single sequence for each profile; not a real-world latency guarantee.",
+  "profiles": {
+    "local": "unthrottled",
+    "throttled": {
+      "latencyMs": 120,
+      "downloadBytesPerSecond": 750000,
+      "uploadBytesPerSecond": 250000,
+      "cpuSlowdown": 4
+    }
+  },
+  "before": [
+    {
+      "profile": "local",
+      "path": "/zh-hans/components/button",
+      "ms": 156,
+      "sidebarSame": false,
+      "requests": [
+        {
+          "name": "index.txt",
+          "ms": 3,
+          "bytes": 6201
+        },
+        {
+          "name": "page-8570e10c1e1d31a2.js",
+          "ms": 2,
+          "bytes": 111742
+        }
+      ],
+      "longTasks": 0
+    },
+    {
+      "profile": "local",
+      "path": "/zh-hans/components/input",
+      "ms": 99,
+      "sidebarSame": false,
+      "requests": [
+        {
+          "name": "index.txt",
+          "ms": 2,
+          "bytes": 6200
+        }
+      ],
+      "longTasks": 0
+    },
+    {
+      "profile": "local",
+      "path": "/zh-hans/components/select",
+      "ms": 78,
+      "sidebarSame": false,
+      "requests": [
+        {
+          "name": "index.txt",
+          "ms": 3,
+          "bytes": 6204
+        }
+      ],
+      "longTasks": 0
+    },
+    {
+      "profile": "local",
+      "path": "/zh-hans/components/data-grid",
+      "ms": 83,
+      "sidebarSame": false,
+      "requests": [
+        {
+          "name": "index.txt",
+          "ms": 3,
+          "bytes": 6219
+        }
+      ],
+      "longTasks": 0
+    },
+    {
+      "profile": "local",
+      "path": "/zh-hans/templates/dashboard",
+      "ms": 116,
+      "sidebarSame": false,
+      "requests": [
+        {
+          "name": "index.txt",
+          "ms": 3,
+          "bytes": 8268
+        },
+        {
+          "name": "page-ffcb76d7897f282b.js",
+          "ms": 3,
+          "bytes": 20380
+        }
+      ],
+      "longTasks": 0
+    },
+    {
+      "profile": "local",
+      "path": "/zh-hans/components/button",
+      "ms": 85,
+      "sidebarSame": false,
+      "requests": [],
+      "longTasks": 0
+    },
+    {
+      "profile": "throttled",
+      "path": "/zh-hans/components/button",
+      "ms": 750,
+      "sidebarSame": false,
+      "requests": [
+        {
+          "name": "index.txt",
+          "ms": 132,
+          "bytes": 6201
+        },
+        {
+          "name": "page-8570e10c1e1d31a2.js",
+          "ms": 270,
+          "bytes": 111742
+        }
+      ],
+      "longTasks": 1
+    },
+    {
+      "profile": "throttled",
+      "path": "/zh-hans/components/input",
+      "ms": 262,
+      "sidebarSame": false,
+      "requests": [
+        {
+          "name": "index.txt",
+          "ms": 131,
+          "bytes": 6200
+        }
+      ],
+      "longTasks": 0
+    },
+    {
+      "profile": "throttled",
+      "path": "/zh-hans/components/select",
+      "ms": 278,
+      "sidebarSame": false,
+      "requests": [
+        {
+          "name": "index.txt",
+          "ms": 131,
+          "bytes": 6204
+        }
+      ],
+      "longTasks": 0
+    },
+    {
+      "profile": "throttled",
+      "path": "/zh-hans/components/data-grid",
+      "ms": 227,
+      "sidebarSame": false,
+      "requests": [
+        {
+          "name": "index.txt",
+          "ms": 133,
+          "bytes": 6219
+        }
+      ],
+      "longTasks": 0
+    },
+    {
+      "profile": "throttled",
+      "path": "/zh-hans/templates/dashboard",
+      "ms": 432,
+      "sidebarSame": false,
+      "requests": [
+        {
+          "name": "index.txt",
+          "ms": 134,
+          "bytes": 8268
+        },
+        {
+          "name": "page-ffcb76d7897f282b.js",
+          "ms": 150,
+          "bytes": 20380
+        }
+      ],
+      "longTasks": 1
+    },
+    {
+      "profile": "throttled",
+      "path": "/zh-hans/components/button",
+      "ms": 114,
+      "sidebarSame": false,
+      "requests": [],
+      "longTasks": 0
+    }
+  ],
+  "after": [
+    {
+      "profile": "local",
+      "path": "/zh-hans/components/button",
+      "ms": 130,
+      "sidebarSame": true,
+      "requests": [],
+      "longTasks": 0
+    },
+    {
+      "profile": "local",
+      "path": "/zh-hans/components/input",
+      "ms": 100,
+      "sidebarSame": true,
+      "requests": [],
+      "longTasks": 0
+    },
+    {
+      "profile": "local",
+      "path": "/zh-hans/components/select",
+      "ms": 82,
+      "sidebarSame": true,
+      "requests": [],
+      "longTasks": 0
+    },
+    {
+      "profile": "local",
+      "path": "/zh-hans/components/data-grid",
+      "ms": 80,
+      "sidebarSame": true,
+      "requests": [],
+      "longTasks": 0
+    },
+    {
+      "profile": "local",
+      "path": "/zh-hans/templates/dashboard",
+      "ms": 82,
+      "sidebarSame": true,
+      "requests": [],
+      "longTasks": 0
+    },
+    {
+      "profile": "local",
+      "path": "/zh-hans/components/button",
+      "ms": 86,
+      "sidebarSame": true,
+      "requests": [],
+      "longTasks": 0
+    },
+    {
+      "profile": "throttled",
+      "path": "/zh-hans/components/button",
+      "ms": 533,
+      "sidebarSame": true,
+      "requests": [],
+      "longTasks": 1
+    },
+    {
+      "profile": "throttled",
+      "path": "/zh-hans/components/input",
+      "ms": 166,
+      "sidebarSame": true,
+      "requests": [],
+      "longTasks": 0
+    },
+    {
+      "profile": "throttled",
+      "path": "/zh-hans/components/select",
+      "ms": 133,
+      "sidebarSame": true,
+      "requests": [],
+      "longTasks": 0
+    },
+    {
+      "profile": "throttled",
+      "path": "/zh-hans/components/data-grid",
+      "ms": 98,
+      "sidebarSame": true,
+      "requests": [],
+      "longTasks": 0
+    },
+    {
+      "profile": "throttled",
+      "path": "/zh-hans/templates/dashboard",
+      "ms": 337,
+      "sidebarSame": true,
+      "requests": [],
+      "longTasks": 0
+    },
+    {
+      "profile": "throttled",
+      "path": "/zh-hans/components/button",
+      "ms": 96,
+      "sidebarSame": true,
+      "requests": [],
+      "longTasks": 0
+    }
+  ],
+  "rejectedCandidates": "Per-document dynamic loading and generated independent static routes regressed cold navigation; a React state-driven whole-shell loading overlay regressed warm navigation. Reverted these candidates. Kept shared registry, intent-bounded route prefetch, persistent shell and isolated delayed feedback."
+}

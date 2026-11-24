@@ -485,3 +485,26 @@
     transition: none;
   }
 }
+
+/* Do not lay out/paint the entire documentation tail during a route switch.
+ * Keep static markup and anchor navigation intact. */
+.docs-deferred-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 360px;
+}
+
+/* Immediate route intent without synchronously re-rendering the old page. */
+aside nav:has([data-nav-pending]) [data-nav-selected="true"]:not([data-nav-pending]) {
+  background: transparent;
+  color: var(--color-text-secondary);
+}
+aside nav [data-nav-pending="true"] {
+  background: var(--color-background-secondary-hover);
+  color: var(--color-text-primary);
+}
+[data-route-pending] > [data-doc-route] {
+  visibility: hidden;
+}
+[data-navigation-pending][hidden] {
+  display: none;
+}

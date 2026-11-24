@@ -7,7 +7,7 @@ export function AcceptanceStatus({slug}:{slug:string}){
  const entry=entries.find(e=>e.slug===slug);
  if(!entry)return null;
  const observations=ledger.observations.filter(o=>o.components.includes(slug));
- return <section id="acceptance-status" className="flex min-w-0 flex-col gap-3 pt-10 scroll-mt-14">
+ return <section id="acceptance-status" className="docs-deferred-section flex min-w-0 flex-col gap-3 pt-10 scroll-mt-14">
  <h2 className="text-title-2-medium text-text-primary">实现与验收状态</h2>
  <p className="text-body-regular text-text-secondary">{entry.implementation==="ported-unverified"?"固定上游公开源码移植":"tier" in entry&&entry.tier==="pro"?"独立实现，非原版 Pro 源码":"本地实现"}；下列状态仅用于正式验收，不代表所有功能不可用。</p>
  <dl className="grid grid-cols-2 gap-2 sm:grid-cols-5">{dims.map(([key,label])=>{const state=entry.verification[key],sample=observations.some(o=>o.dimension===key);return <div key={key} className="rounded-xl border border-border-component-detail-container p-3"><dt className="text-caption-1-medium text-text-secondary">{label}</dt><dd className="mt-1 text-body-2-medium text-text-primary">{state==="pending"&&sample?"已有抽样证据":labels[state]??state}</dd></div>})}</dl>

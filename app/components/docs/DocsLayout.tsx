@@ -1,4 +1,3 @@
-import { Sidebar } from "./Sidebar";
 import { TopBar } from "./TopBar";
 import { TableOfContents, type TocItem } from "./TableOfContents";
 import type { Crumb } from "./Breadcrumbs";
@@ -8,8 +7,8 @@ export function DocsLayout({breadcrumbs,toc=[],children,header,variant="detail"}
   breadcrumbs:Crumb[];toc?:TocItem[];children:React.ReactNode;header?:React.ReactNode;variant?:"detail"|"catalog";
 }) {
   const top=<div className="flex flex-col gap-8"><TopBar breadcrumbs={breadcrumbs}/>{header}</div>;
-  return <div className="flex min-h-screen w-full bg-background-full"><Sidebar/><div className="min-w-0 flex-1">
+  return <>
     {variant==="catalog" ? <main className="mx-auto flex w-full max-w-[1200px] flex-col gap-12 px-6 pt-10 pb-14 sm:px-10">{top}{children}</main> :
     <div className="component-detail mx-auto flex w-full max-w-[1200px] justify-center gap-12 px-6 pt-10 pb-14 sm:px-10"><main className="flex w-full min-w-0 max-w-[900px] flex-col gap-3">{header ? <>{top}{children}</> : <div className="flex flex-col gap-8"><TopBar breadcrumbs={breadcrumbs}/>{children}</div>}</main><TableOfContents items={toc}/></div>}
-  </div></div>;
+  </>;
 }

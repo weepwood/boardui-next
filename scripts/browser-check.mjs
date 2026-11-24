@@ -57,6 +57,44 @@ try{
           await page.getByRole('button',{name:theme==='light'?'切换到亮色模式':'切换到暗色模式'}).click();
           await page.waitForFunction(d=>document.documentElement.classList.contains('dark')===d,theme==='dark');
         }
+        if(route==='/'){
+          const navigationPage=await context.newPage();
+          try{
+            await navigationPage.goto(origin+'/',{waitUntil:'networkidle'});
+            const nav=navigationPage.locator('aside nav[aria-label="元件库"]');
+            const group=nav.getByRole('button',{name:'图表',exact:true});
+            await group.click();
+            assert.equal(await group.getAttribute('aria-expanded'),'false');
+            await navigationPage.evaluate(()=>{window.__sidebarInstance=document.querySelector('aside')});
+            let release;
+            const gate=new Promise(r=>{release=r});
+            const pattern='**/zh-hans/components/input/index.txt*';
+            await navigationPage.route(pattern,async r=>{await gate;await r.continue()});
+            try{
+              const input=nav.locator('a[data-doc-path="/zh-hans/components/input"]');
+              await input.click();
+              await navigationPage.locator('[data-nav-pending="true"]').waitFor();
+              assert.equal(await navigationPage.locator('[data-nav-pending="true"]').count(),1);
+              await navigationPage.locator('[data-navigation-pending]').waitFor({state:'visible'});
+              assert.ok((await navigationPage.locator('[data-navigation-pending]').textContent()).includes('输入框'));
+              release();
+              await navigationPage.waitForURL(/\/components\/input\/?$/);
+              await navigationPage.locator('main h1').waitFor();
+              assert.equal(await navigationPage.locator('[data-nav-pending]').count(),0);
+              assert.equal(await group.getAttribute('aria-expanded'),'false');
+              assert.ok(await navigationPage.evaluate(()=>window.__sidebarInstance===document.querySelector('aside')));
+            }finally{release();await navigationPage.unroute(pattern);}
+            await nav.locator('a[data-doc-path="/zh-hans/components/select"]').click();
+            await navigationPage.waitForURL(/\/components\/select\/?$/);
+            await navigationPage.locator('main h1').waitFor();
+            assert.ok(await navigationPage.evaluate(()=>window.__sidebarInstance===document.querySelector('aside')));
+            await navigationPage.goBack({waitUntil:'networkidle'});
+            await navigationPage.waitForURL(/\/components\/input\/?$/);
+            assert.equal(await nav.locator('[aria-current="page"]').count(),1);
+            assert.equal(await group.getAttribute('aria-expanded'),'false');
+            assert.ok(await navigationPage.evaluate(()=>window.__sidebarInstance===document.querySelector('aside')));
+          }finally{await navigationPage.close();}
+        }
         if(route==='/zh-hans/components/'){
           const nav=page.locator('aside nav[aria-label="元件库"]');
           const selected=nav.locator('[data-nav-selected="true"]');
