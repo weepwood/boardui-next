@@ -30,6 +30,7 @@ export function SankeyChart({
   ];
 
   // 计算每个节点的纵向位置
+  const nodeById=new Map(nodes.map(n=>[n.id,n]));
   const pos = new Map<string, { y: number; h: number }>();
   layers.forEach((l) => {
     const inLayer = nodes.filter((n) => n.layer === l);
@@ -53,8 +54,8 @@ export function SankeyChart({
         const a = pos.get(lk.from);
         const b = pos.get(lk.to);
         if (!a || !b) return null;
-        const fromNode = nodes.find((n) => n.id === lk.from)!;
-        const toNode = nodes.find((n) => n.id === lk.to)!;
+        const fromNode = nodeById.get(lk.from)!;
+        const toNode = nodeById.get(lk.to)!;
         const x1 = layerX[fromNode.layer];
         const x2 = layerX[toNode.layer];
         const y1 = a.y + a.h / 2;
@@ -124,7 +125,7 @@ export function ScatterChart({
         const y = PADT + (i / (yTicks.length - 1)) * ih;
         return (
           <line key={i} x1={PADL} x2={W - PADR} y1={y} y2={y}
-            stroke="var(--color-border-primary)" strokeWidth="0.15" strokeDasharray="0.6 0.6" />
+            stroke="var(--color-separator-border)" strokeWidth="0.15" strokeDasharray="0.6 0.6" />
         );
       })}
       {/* 纵向网格 */}
@@ -132,7 +133,7 @@ export function ScatterChart({
         const x = PADL + (i / (xTicks.length - 1)) * iw;
         return (
           <line key={i} x1={x} x2={x} y1={PADT} y2={PADT + ih}
-            stroke="var(--color-border-primary)" strokeWidth="0.15" strokeDasharray="0.6 0.6" />
+            stroke="var(--color-separator-border)" strokeWidth="0.15" strokeDasharray="0.6 0.6" />
         );
       })}
       {/* Y 轴刻度 */}

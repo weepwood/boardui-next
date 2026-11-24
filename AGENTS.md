@@ -71,3 +71,12 @@
 - AgentThinking 使用共享 IntersectionObserver 与页面 visibilitychange，仅在可见时运行 80ms 波纹/旋转和 100ms 计时回调，CSS 装饰动画暂停；恢复时按实际经过时间更新，实时响应 reduced-motion。独立包 API 不变。1.2s Edge 采样：可见 30+48，离开视口 30+48→0+0，恢复 30+48。
 - 证据 reference/evidence/preview-initialization-motion-20261124.json，复现 scripts/benchmark-preview-initialization.mjs 与 scripts/benchmark-motion-visibility.mjs（Playwright，BROWSER_EXECUTABLE 可选）。三轮冷启动脚本中位数 button 824→798ms、agent-thinking 755→754ms、catalog 772→727ms；部分 FCP/长任务反而上升，部分测量并行执行其他本地检查，只视为诊断数据，不承诺整页提速。保留真实静态文档、锚点及预览行为。
 - npm test 新增文档惰性工厂结构门禁，浏览器专项验证离屏计时暂停、恢复连续性、减少动效。12 个本地组合、116 HTML 导出、独立包构建/SSR/类型消费、类型与 API 检查通过。后续优先隔离环境重复测量长文档布局和其他持续动画；逐组件验收门禁保持不变。
+
+### 持续动效、图表与文档性能专项
+
+- #27 已通过 CI 并合并至 main 8c7519e，Pages run 45398346724 成功。继续沿用共享文档注册表的惰性工厂。
+- ComposerLoader、Skeleton、Spinner、WebSearch 使用共享可见性机制，后台或离屏暂停对应装饰动画；共享一个 visibilitychange 监听，ComposerLoader 共享尺寸监听并去重相同尺寸更新。修复 Skeleton 错误 keyframes 名及减少动效；不删除状态组件和 ARIA。未覆盖所有连续动效组件。
+- 图表为 SVG viewBox，无需额外 ResizeObserver。面积图叠加前缀累加，32×1000 测试旧基线与总量取值共 528000 次→32000 次，结果一致；折线图共享 domain，桑基图节点索引；唯一 SVG 渐变 ID、修复失效描边变量。语义检查覆盖原始 CSS 颜色变量及 Tailwind 官方主题。
+- 长文档 TOC 按稳定标题 ID 订阅、维护交叉观察集合、锚点即时反馈，保留完整静态文档和 API 表。未虚拟化 API 表格，未证明长文档整体加速。
+- 新增全站静态压缩预算：JS 550 KiB、HTML 40 KiB，模板目录仍 350 KiB；116 页最高 497843/25775 bytes。属于构建估算，不等于网络耗时；共享脚本压缩缓存。
+- 14 个 Edge 专项组合通过；3 次 ComposerLoader 导航往返的相关 IO/RO 观察目标 4/2→0/0，新增 check-activity-cleanup.mjs 风险专项，不等同完整堆内存泄漏审计。证据 reference/evidence/activity-charts-docs-20261124.json。独立包 SSR/类型消费、类型/API、图表单测及静态导出均通过。正式发布门禁不变。

@@ -1,5 +1,7 @@
 "use client";
 
+import {useRef} from "react";
+import {useVisibleActivity} from "@/packages/react/use-visible-activity";
 import {
   ProgressBar as RACProgressBar,
   type ProgressBarProps,
@@ -15,6 +17,8 @@ export function Spinner({
   className?: string;
   size?: number;
 }) {
+  const ref=useRef<SVGSVGElement>(null);
+  const active=useVisibleActivity(ref);
   return (
     <RACProgressBar
       {...props}
@@ -23,11 +27,14 @@ export function Spinner({
       className={cn("inline-flex", className)}
     >
       <svg
+        ref={ref}
+        data-motion-active={active?"true":"false"}
+        data-spinner
         width={size}
         height={size}
         viewBox="0 0 24 24"
         fill="none"
-        className="animate-spin"
+        className="animate-spin motion-reduce:animate-none"
         style={{ animationDuration: "0.75s" }}
       >
         <circle

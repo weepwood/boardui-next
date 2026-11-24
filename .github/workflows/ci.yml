@@ -61,6 +61,8 @@ jobs:
       - run: npm run test:browser -- --targeted
         env:
           TARGET_ROUTES: ${{ needs.quick.outputs.routes }}
+      - name: 持续动效资源释放专项
+        run: node scripts/check-activity-cleanup.mjs /tmp/activity-cleanup.json
       - name: 导航与字体跨浏览器专项
         if: needs.quick.outputs.navigation == 'true'
         run: |

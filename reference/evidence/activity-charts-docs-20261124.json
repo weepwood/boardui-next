@@ -1,0 +1,65 @@
+{
+  "baseline": "0556d3c17f70f251785afb3f1c2bc661997a15f5",
+  "environment": "Local Edge production static export, light, 1440×1000; chart count is deterministic Node unit test, not latency. CSS pause/resume and reduced-motion verified on ComposerLoader, Spinner and Skeleton. Observer cleanup instrumented native observe/unobserve/disconnect for elements with data-motion-active during three route round trips.",
+  "stacking": {
+    "series": 32,
+    "pointsPerSeries": 1000,
+    "previousBaselineReads": 496000,
+    "previousTotalReads": 32000,
+    "newCombinedReads": 32000,
+    "sameBaselinesAndTotals": true
+  },
+  "cleanup": [
+    {
+      "cycle": 1,
+      "phase": "mounted",
+      "intersection": 4,
+      "resize": 2
+    },
+    {
+      "cycle": 1,
+      "phase": "released",
+      "intersection": 0,
+      "resize": 0
+    },
+    {
+      "cycle": 2,
+      "phase": "mounted",
+      "intersection": 4,
+      "resize": 2
+    },
+    {
+      "cycle": 2,
+      "phase": "released",
+      "intersection": 0,
+      "resize": 0
+    },
+    {
+      "cycle": 3,
+      "phase": "mounted",
+      "intersection": 4,
+      "resize": 2
+    },
+    {
+      "cycle": 3,
+      "phase": "released",
+      "intersection": 0,
+      "resize": 0
+    }
+  ],
+  "staticBudget": {
+    "pages": 116,
+    "peakJsBytes": 497843,
+    "jsLimitBytes": 563200,
+    "peakHtmlBytes": 25775,
+    "htmlLimitBytes": 40960,
+    "templateJsBytes": 253104,
+    "templateLimitBytes": 358400
+  },
+  "browser": {
+    "engine": "Edge Chromium",
+    "targetedCombinations": 14,
+    "passed": 14,
+    "scope": "light theme, existing navigation checks, chart pages, visibility and anchor regressions; not full cross-browser or heap leak analysis"
+  }
+}

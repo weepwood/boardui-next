@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useRef,useState } from "react";
+import {useVisibleActivity} from "@/packages/react/use-visible-activity";
 import { cn } from "@/lib/utils";
 import { Icon } from "./Icon";
 
@@ -27,10 +28,12 @@ export function WebSearch({
   status?: "searching" | "done";
   className?: string;
 }) {
+  const ref=useRef<HTMLDivElement>(null);
+  const visible=useVisibleActivity(ref);
   const [open, setOpen] = useState(false);
 
   return (
-    <div
+    <div ref={ref} data-motion-active={status==="searching"&&visible?"true":"false"}
       className={cn(
         "flex w-full flex-col overflow-hidden rounded-2xl border border-border-component-detail-container",
         "bg-background-primary-default",
@@ -52,7 +55,7 @@ export function WebSearch({
         >
           <Icon
             name={status === "searching" ? "loader-4-line" : "global-line"}
-            className={cn("size-3.5", status === "searching" && "animate-spin")}
+            className={cn("size-3.5", status === "searching" && "animate-spin motion-reduce:animate-none bui-search-spinner")}
           />
         </span>
         <div className="flex min-w-0 flex-1 flex-col">
@@ -71,7 +74,7 @@ export function WebSearch({
       </button>
 
       <div
-        className="grid transition-[grid-template-rows,opacity] duration-300 ease-in-out"
+        className="grid transition-[grid-template-rows,opacity] duration-300 ease-in-out motion-reduce:transition-none"
         style={{ gridTemplateRows: open ? "1fr" : "0fr", opacity: open ? 1 : 0 }}
       >
         <div className="overflow-hidden">

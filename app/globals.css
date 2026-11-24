@@ -517,3 +517,12 @@ aside nav [data-nav-pending="true"] {
 [data-motion-active="false"] .bui-agent-thinking-label {
   will-change: auto;
 }
+
+/* Pause perpetual decorative loops outside the viewport or in background tabs.
+ * Preserve the DOM and all status/ARIA semantics. */
+[data-motion-active="false"] .bui-composer-loader-rect,
+[data-motion-active="false"] .bui-search-spinner,
+[data-spinner][data-motion-active="false"],
+[data-skeleton][data-motion-active="false"]::before {
+  animation-play-state: paused !important;
+}
