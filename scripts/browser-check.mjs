@@ -84,6 +84,15 @@ try{
               assert.equal(await navigationPage.locator('[data-nav-pending]').count(),0);
               assert.equal(await group.getAttribute('aria-expanded'),'false');
               assert.ok(await navigationPage.evaluate(()=>window.__sidebarInstance===document.querySelector('aside')));
+              // Switching to code must preserve the live demo, not expose hidden inputs.
+              const preview=navigationPage.locator('#preview');
+              const email=preview.getByRole('textbox',{name:/电子邮箱/});
+              await email.fill('preview@example.com');
+              await preview.getByRole('tab',{name:'代码',exact:true}).click();
+              assert.equal(await preview.getByRole('textbox',{name:/电子邮箱/}).count(),0);
+              assert.equal(await preview.locator('[data-preview-content]').evaluate(e=>e.hidden&&e.inert),true);
+              await preview.getByRole('tab',{name:'预览',exact:true}).click();
+              assert.equal(await email.inputValue(),'preview@example.com');
             }finally{release();await navigationPage.unroute(pattern);}
             await nav.locator('a[data-doc-path="/zh-hans/components/select"]').click();
             await navigationPage.waitForURL(/\/components\/select\/?$/);

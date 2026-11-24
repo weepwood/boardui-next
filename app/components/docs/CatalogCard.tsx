@@ -33,10 +33,10 @@ export const CatalogCard=memo(function CatalogCard({slug,title,description,href,
       {visible?<PreviewFit wide={compactPreviews.has(slug)}>{renderPreview?.()}</PreviewFit>:<div className="h-9 w-24 rounded-lg bg-background-tertiary-default opacity-35"/>}
     </div>}
     <div data-card-caption className={hasPreview?"flex min-w-0 flex-col gap-1 px-5 py-2":"flex flex-col gap-1"}>
-      <h3 className="flex min-w-0 items-center gap-2 text-headline-medium leading-5 text-text-primary"><span className="truncate">{title}</span>{isNew&&<span className="shrink-0 rounded-sm bg-badge-new-background px-1 text-caption-2-medium text-accent-600 dark:text-accent-300">全新</span>}{isPro&&<span title="原版 Pro；本站为独立实现，非授权 Pro 源码" className="shrink-0 text-caption-2-medium text-text-secondary">原版 Pro</span>}</h3>
+      <h3 className="flex min-w-0 items-center gap-2 text-headline-medium leading-5 text-text-primary"><span className="min-w-0 truncate" title={title}>{title}</span>{isNew&&<span className="shrink-0 rounded-sm bg-badge-new-background px-1 text-caption-2-medium text-accent-600 dark:text-accent-300">全新</span>}{isPro&&<span title="原版 Pro；本站为独立实现，非授权 Pro 源码" className="shrink-0 text-caption-2-medium text-text-secondary">原版 Pro</span>}</h3>
       <p className="line-clamp-2 text-body-regular leading-[18px] text-pretty text-text-secondary">{description}</p>
       <p className="text-caption-1-regular leading-[14px] truncate text-text-secondary">{template?"完整模板 · ": ""}{statusLabels[status]}</p>
     </div>
-    {status!=="missing"&&<Link href={href} prefetch={false} onFocus={e=>{if(e.currentTarget.matches(":focus-visible"))warm(href)}} onNavigate={()=>begin(href,title)} aria-label={"查看 "+title} title={statusLabels[status]+" · 待完整验收"} className="absolute inset-0 z-50 rounded-[25px] outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-border-focus-ring"><span className="sr-only">查看 {title}</span></Link>}
+    {status!=="missing"&&<Link href={href} prefetch={false} onFocus={e=>{if(e.currentTarget.matches(":focus-visible"))warm(href)}} onNavigate={()=>begin(href,title)} aria-label={"查看 "+title} title={title+" · "+statusLabels[status]+" · 待完整验收"} className={"absolute inset-0 z-50 outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-border-focus-ring "+(hasPreview?"rounded-[28px]":"rounded-2xl")}><span className="sr-only">查看 {title}</span></Link>}
   </article>
 });

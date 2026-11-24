@@ -14,10 +14,12 @@ export function ThemeToggle() {
       type="button"
       onClick={toggle}
       aria-label={isDark ? "切换到亮色模式" : "切换到暗色模式"}
+      title={isDark ? "切换到亮色模式" : "切换到暗色模式"}
       className={cn(
         "flex size-9 cursor-pointer items-center justify-center rounded-2lg",
         "text-foreground-icon-secondary transition-colors duration-150 ease-out",
-        "hover:bg-background-secondary-hover hover:text-foreground-icon-primary"
+        "hover:bg-background-secondary-hover hover:text-foreground-icon-primary active:bg-background-secondary-default",
+        "outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-border-focus-ring"
       )}
     >
       <Icon
