@@ -3,18 +3,9 @@
   "formalComplete": 0,
   "counts": {
     "visual": {
-      "missing": [
-        "announcement",
-        "avatar",
-        "chip",
-        "notification",
-        "stat-cards",
-        "badge",
-        "progress",
-        "meter"
-      ],
+      "missing": [],
       "formal": 0,
-      "scoped": 96
+      "scoped": 104
     },
     "interaction": {
       "missing": [],
@@ -67,7 +58,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -118,7 +110,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -147,7 +140,9 @@
       "dimensions": {
         "visual": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "feedback-visual-visual-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -166,7 +161,9 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "feedback-visual-accessibility-20261125",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -196,7 +193,9 @@
       "dimensions": {
         "visual": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "feedback-visual-visual-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -215,7 +214,9 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "feedback-visual-accessibility-20261125",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -266,7 +267,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -321,7 +323,8 @@
             "button-family-accessibility-20261125",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -378,7 +381,8 @@
             "button-family-accessibility-20261125",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -432,7 +436,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -484,7 +489,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -515,7 +521,9 @@
       "dimensions": {
         "visual": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "feedback-visual-visual-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -534,7 +542,9 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "feedback-visual-accessibility-20261125",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -589,7 +599,8 @@
             "close-button-accessibility-20261125",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -643,7 +654,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -695,7 +707,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -745,7 +758,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -797,7 +811,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -850,7 +865,8 @@
             "button-family-accessibility-20261125",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -906,7 +922,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -959,7 +976,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -1011,7 +1029,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -1040,7 +1059,9 @@
       "dimensions": {
         "visual": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "feedback-visual-visual-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -1059,7 +1080,9 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "feedback-visual-accessibility-20261125",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -1111,7 +1134,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -1165,7 +1189,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -1218,7 +1243,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -1273,7 +1299,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -1326,7 +1353,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -1379,7 +1407,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -1429,7 +1458,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -1480,7 +1510,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -1532,7 +1563,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -1586,7 +1618,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -1638,7 +1671,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -1689,7 +1723,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -1740,7 +1775,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -1791,7 +1827,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -1842,7 +1879,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -1892,7 +1930,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -1943,7 +1982,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -1994,7 +2034,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -2045,7 +2086,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -2095,7 +2137,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -2146,7 +2189,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -2196,7 +2240,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -2246,7 +2291,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -2297,7 +2343,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -2349,7 +2396,8 @@
             "formal-three-browser-45437101528",
             "consolidated-data-chart-accessibility-20261125",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -2401,7 +2449,8 @@
             "formal-three-browser-45437101528",
             "consolidated-data-chart-accessibility-20261125",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -2451,7 +2500,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -2502,7 +2552,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -2552,7 +2603,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -2581,7 +2633,9 @@
       "dimensions": {
         "visual": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "feedback-visual-visual-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -2600,7 +2654,9 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "feedback-visual-accessibility-20261125",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -2651,7 +2707,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -2701,7 +2758,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -2755,7 +2813,8 @@
             "formal-three-browser-45437101528",
             "consolidated-data-chart-accessibility-20261125",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -2806,7 +2865,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -2860,7 +2920,8 @@
             "formal-three-browser-45437101528",
             "consolidated-data-chart-accessibility-20261125",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -2910,7 +2971,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -2960,7 +3022,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -3010,7 +3073,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -3063,7 +3127,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -3113,7 +3178,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -3167,7 +3233,8 @@
             "formal-three-browser-45437101528",
             "consolidated-data-chart-accessibility-20261125",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -3220,7 +3287,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -3271,7 +3339,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -3322,7 +3391,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -3376,7 +3446,8 @@
             "formal-three-browser-45437101528",
             "consolidated-data-chart-accessibility-20261125",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -3426,7 +3497,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -3476,7 +3548,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -3526,7 +3599,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -3576,7 +3650,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -3626,7 +3701,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -3682,7 +3758,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -3732,7 +3809,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -3782,7 +3860,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -3834,7 +3913,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -3886,7 +3966,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -3936,7 +4017,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -3986,7 +4068,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -4042,7 +4125,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -4093,7 +4177,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -4122,7 +4207,9 @@
       "dimensions": {
         "visual": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "feedback-visual-visual-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -4141,7 +4228,9 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "feedback-visual-accessibility-20261125",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -4171,7 +4260,9 @@
       "dimensions": {
         "visual": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "feedback-visual-visual-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -4190,7 +4281,9 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "feedback-visual-accessibility-20261125",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -4242,7 +4335,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -4293,7 +4387,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -4343,7 +4438,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -4394,7 +4490,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -4445,7 +4542,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -4497,7 +4595,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -4547,7 +4646,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -4598,7 +4698,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -4649,7 +4750,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -4699,7 +4801,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -4749,7 +4852,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -4800,7 +4904,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -4829,7 +4934,9 @@
       "dimensions": {
         "visual": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "feedback-visual-visual-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -4848,7 +4955,9 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "feedback-visual-accessibility-20261125",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -4899,7 +5008,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -4949,7 +5059,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -4999,7 +5110,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -5049,7 +5161,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -5100,7 +5213,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -5150,7 +5264,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -5200,7 +5315,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -5256,7 +5372,8 @@
             "formal-three-browser-45437101528",
             "consolidated-data-chart-accessibility-20261125",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -5306,7 +5423,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []
@@ -5356,7 +5474,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-full-rtl-accessibility-20261125",
-            "formal-three-browser-45439538959"
+            "formal-three-browser-45439538959",
+            "formal-three-browser-45442604183"
           ],
           "passed": [],
           "failed": []

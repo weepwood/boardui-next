@@ -1,0 +1,1085 @@
+{
+  "scope": "8 feedback and data-display routes, dual themes and viewports, actual initial/selected/action/fallback candidate screenshots; not upstream pixel parity or full manual acceptance",
+  "base": "c717fb5e3d48788c001a95aceff944ca2b5b140e",
+  "results": [
+    {
+      "slug": "announcement",
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "browserVersion": "158.0.4370.33",
+      "layout": {
+        "width": 742,
+        "height": 384,
+        "scrollWidth": 742,
+        "documentWidth": 1440,
+        "viewportWidth": 1440
+      },
+      "screenshots": [
+        {
+          "file": "light-1440-announcement.png",
+          "sha256": "d8695286f3f351bf8223623fc2ae1211224d4e3f6d87698c8834d68290384e11",
+          "bytes": 25054,
+          "width": 742,
+          "height": 384
+        },
+        {
+          "file": "light-1440-announcement-action.png",
+          "sha256": "b50ce00a75bcb4f7b93036fbc02de082184e749057c5d4ad6be47bd139505a66",
+          "bytes": 9376,
+          "width": 384,
+          "height": 210
+        }
+      ],
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "avatar",
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "browserVersion": "158.0.4370.33",
+      "layout": {
+        "width": 742,
+        "height": 40,
+        "scrollWidth": 742,
+        "documentWidth": 1440,
+        "viewportWidth": 1440
+      },
+      "screenshots": [
+        {
+          "file": "light-1440-avatar.png",
+          "sha256": "95442e553188fa10db21a0274da8d771e719f8b1a8143da6e735b4c0cca45c15",
+          "bytes": 3322,
+          "width": 742,
+          "height": 41
+        },
+        {
+          "file": "light-1440-avatar-sizes.png",
+          "sha256": "dd37d67e9d94ada024490d3458b9f6c156eccd8fd521cb355fecb7935c14cd41",
+          "bytes": 4216,
+          "width": 742,
+          "height": 48
+        }
+      ],
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "chip",
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "browserVersion": "158.0.4370.33",
+      "layout": {
+        "width": 742,
+        "height": 28,
+        "scrollWidth": 742,
+        "documentWidth": 1440,
+        "viewportWidth": 1440
+      },
+      "screenshots": [
+        {
+          "file": "light-1440-chip.png",
+          "sha256": "0dd78f7c14843d3a38018f060f50ddec9fb51271b95e025042bf94091930c85f",
+          "bytes": 4185,
+          "width": 742,
+          "height": 29
+        },
+        {
+          "file": "light-1440-chip-selected.png",
+          "sha256": "0c7251ca87cbe6af178bb638a40a9fbcdea3b2a62dd6b6ea3f30556b2929bf9c",
+          "bytes": 3995,
+          "width": 742,
+          "height": 28
+        }
+      ],
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "notification",
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "browserVersion": "158.0.4370.33",
+      "layout": {
+        "width": 742,
+        "height": 250,
+        "scrollWidth": 742,
+        "documentWidth": 1440,
+        "viewportWidth": 1440
+      },
+      "screenshots": [
+        {
+          "file": "light-1440-notification.png",
+          "sha256": "55f02ed68f20829fbce0a5a8b73d6c2428fcdfa35b3298ef542c8d541dc17e55",
+          "bytes": 20411,
+          "width": 742,
+          "height": 251
+        },
+        {
+          "file": "light-1440-notification-action.png",
+          "sha256": "dd06ab5ed54c1b8da9e5ef72728d047c6d4df00b23c9cd10a2cca4ea28732412",
+          "bytes": 10753,
+          "width": 384,
+          "height": 196
+        }
+      ],
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "stat-cards",
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "browserVersion": "158.0.4370.33",
+      "layout": {
+        "width": 742,
+        "height": 226,
+        "scrollWidth": 742,
+        "documentWidth": 1440,
+        "viewportWidth": 1440
+      },
+      "valueMetrics": {
+        "lines": 1,
+        "width": 87
+      },
+      "statGrid": {
+        "columns": 2,
+        "width": 742
+      },
+      "screenshots": [
+        {
+          "file": "light-1440-stat-cards.png",
+          "sha256": "04e6ca6fbd7514349e233f7f67a7cab09079037cc8a8f62992f5f0764c3e2f10",
+          "bytes": 17727,
+          "width": 742,
+          "height": 227
+        }
+      ],
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "badge",
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "browserVersion": "158.0.4370.33",
+      "layout": {
+        "width": 742,
+        "height": 24,
+        "scrollWidth": 742,
+        "documentWidth": 1440,
+        "viewportWidth": 1440
+      },
+      "screenshots": [
+        {
+          "file": "light-1440-badge.png",
+          "sha256": "51295fc10f723e0ed5538c0c7dfb67706d0bb71274e627aad2a46b3c9f3e93a3",
+          "bytes": 4601,
+          "width": 742,
+          "height": 25
+        }
+      ],
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "progress",
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "browserVersion": "158.0.4370.33",
+      "layout": {
+        "width": 742,
+        "height": 8,
+        "scrollWidth": 742,
+        "documentWidth": 1440,
+        "viewportWidth": 1440
+      },
+      "screenshots": [
+        {
+          "file": "light-1440-progress.png",
+          "sha256": "0ad2422f8423230f442e6ea85f7b0788e3e2a4a442c4b0076f9607759a50e4ba",
+          "bytes": 1038,
+          "width": 742,
+          "height": 9
+        },
+        {
+          "file": "light-1440-progress-sizes.png",
+          "sha256": "523904d7095d25c72ce943d267e1d7a51bc06d68339a020cd1de208e08a93c58",
+          "bytes": 3263,
+          "width": 742,
+          "height": 46
+        }
+      ],
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "meter",
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "browserVersion": "158.0.4370.33",
+      "layout": {
+        "width": 742,
+        "height": 164,
+        "scrollWidth": 742,
+        "documentWidth": 1440,
+        "viewportWidth": 1440
+      },
+      "screenshots": [
+        {
+          "file": "light-1440-meter.png",
+          "sha256": "ef2b4e57b007fe1ea943fab59084a46bf96f797e063999f53d0294c552034ab7",
+          "bytes": 11708,
+          "width": 742,
+          "height": 165
+        }
+      ],
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "announcement",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "browserVersion": "158.0.4370.33",
+      "layout": {
+        "width": 308,
+        "height": 384,
+        "scrollWidth": 308,
+        "documentWidth": 390,
+        "viewportWidth": 390
+      },
+      "screenshots": [
+        {
+          "file": "light-390-announcement.png",
+          "sha256": "fbe31edf5e0711cad7a511f5581babf345ade08d2cc18624581a5fd4af31b4eb",
+          "bytes": 22060,
+          "width": 308,
+          "height": 384
+        },
+        {
+          "file": "light-390-announcement-action.png",
+          "sha256": "1194463ad944e0927200e8199f8824d6791c9215218ffc7bb29d147c7bb79c5b",
+          "bytes": 9062,
+          "width": 308,
+          "height": 210
+        }
+      ],
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "avatar",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "browserVersion": "158.0.4370.33",
+      "layout": {
+        "width": 308,
+        "height": 40,
+        "scrollWidth": 308,
+        "documentWidth": 390,
+        "viewportWidth": 390
+      },
+      "screenshots": [
+        {
+          "file": "light-390-avatar.png",
+          "sha256": "9b79cf0a53db819b80f4cf6b752d06034724dc63ee7f5d7f86edc01a7dba0b4b",
+          "bytes": 2956,
+          "width": 308,
+          "height": 41
+        },
+        {
+          "file": "light-390-avatar-sizes.png",
+          "sha256": "f089b3fb680162ac5ef69c0f19a1ce27e1fc4672a7a7fb75f59e9c01155fd0f7",
+          "bytes": 4869,
+          "width": 308,
+          "height": 48
+        }
+      ],
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "chip",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "browserVersion": "158.0.4370.33",
+      "layout": {
+        "width": 308,
+        "height": 28,
+        "scrollWidth": 308,
+        "documentWidth": 390,
+        "viewportWidth": 390
+      },
+      "screenshots": [
+        {
+          "file": "light-390-chip.png",
+          "sha256": "a6c18d476598282e830764602177d02ae5d7c7887db8fac33a4e1ea8423d467a",
+          "bytes": 3854,
+          "width": 308,
+          "height": 29
+        },
+        {
+          "file": "light-390-chip-selected.png",
+          "sha256": "c098707adb74e41fa8a6396baf78af31800c839ba148cbe17553c476072053c5",
+          "bytes": 3550,
+          "width": 308,
+          "height": 28
+        }
+      ],
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "notification",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "browserVersion": "158.0.4370.33",
+      "layout": {
+        "width": 308,
+        "height": 270,
+        "scrollWidth": 308,
+        "documentWidth": 390,
+        "viewportWidth": 390
+      },
+      "screenshots": [
+        {
+          "file": "light-390-notification.png",
+          "sha256": "4f67e8a31b4e1d967d77abf0f40ef8614e8c688661338c454ab3154c5c291421",
+          "bytes": 18410,
+          "width": 308,
+          "height": 271
+        },
+        {
+          "file": "light-390-notification-action.png",
+          "sha256": "3f94bc982e749174f2708cde4df576b9951e748aec03fce830fff5624b897937",
+          "bytes": 10367,
+          "width": 308,
+          "height": 196
+        }
+      ],
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "stat-cards",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "browserVersion": "158.0.4370.33",
+      "layout": {
+        "width": 308,
+        "height": 460,
+        "scrollWidth": 308,
+        "documentWidth": 390,
+        "viewportWidth": 390
+      },
+      "valueMetrics": {
+        "lines": 1,
+        "width": 87
+      },
+      "statGrid": {
+        "columns": 1,
+        "width": 308
+      },
+      "screenshots": [
+        {
+          "file": "light-390-stat-cards.png",
+          "sha256": "ce3a71ef75145e15cfc7d5f84aae232231a3638d8c938fa74f8e58afdb7c06cf",
+          "bytes": 18928,
+          "width": 308,
+          "height": 460
+        }
+      ],
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "badge",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "browserVersion": "158.0.4370.33",
+      "layout": {
+        "width": 308,
+        "height": 24,
+        "scrollWidth": 308,
+        "documentWidth": 390,
+        "viewportWidth": 390
+      },
+      "screenshots": [
+        {
+          "file": "light-390-badge.png",
+          "sha256": "0866b9879f3d560597057dc9f36816e5f16d0a3e2cdd7bbb6b165e8ffcd3d5e9",
+          "bytes": 4322,
+          "width": 308,
+          "height": 25
+        }
+      ],
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "progress",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "browserVersion": "158.0.4370.33",
+      "layout": {
+        "width": 308,
+        "height": 8,
+        "scrollWidth": 308,
+        "documentWidth": 390,
+        "viewportWidth": 390
+      },
+      "screenshots": [
+        {
+          "file": "light-390-progress.png",
+          "sha256": "7625dd4fc96c3651b8996fe4b15b4d438c0d18190538c4fd17db7b79ccbd3dc6",
+          "bytes": 764,
+          "width": 308,
+          "height": 9
+        },
+        {
+          "file": "light-390-progress-sizes.png",
+          "sha256": "e4ed980cf3c5ab43a214d911c012643b664033bf55d0bfdd01651fd1cc3893ef",
+          "bytes": 2496,
+          "width": 308,
+          "height": 46
+        }
+      ],
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "meter",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "browserVersion": "158.0.4370.33",
+      "layout": {
+        "width": 308,
+        "height": 164,
+        "scrollWidth": 308,
+        "documentWidth": 390,
+        "viewportWidth": 390
+      },
+      "screenshots": [
+        {
+          "file": "light-390-meter.png",
+          "sha256": "7bafe62f3dae4802bf654899aa83a00a86d0dd8fe25402e4ff95a28d308e0952",
+          "bytes": 9943,
+          "width": 308,
+          "height": 165
+        }
+      ],
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "announcement",
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "browserVersion": "158.0.4370.33",
+      "layout": {
+        "width": 742,
+        "height": 384,
+        "scrollWidth": 742,
+        "documentWidth": 1440,
+        "viewportWidth": 1440
+      },
+      "screenshots": [
+        {
+          "file": "dark-1440-announcement.png",
+          "sha256": "8c073cf3da712075a87f1790a6d96e86adffc8461619ee5e43d10d67f935d84e",
+          "bytes": 25970,
+          "width": 742,
+          "height": 384
+        },
+        {
+          "file": "dark-1440-announcement-action.png",
+          "sha256": "9052a794e6223942fcbf9940098ac215d2257e05ca7b5d90b4fa25dcf52e569f",
+          "bytes": 9595,
+          "width": 384,
+          "height": 210
+        }
+      ],
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "avatar",
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "browserVersion": "158.0.4370.33",
+      "layout": {
+        "width": 742,
+        "height": 40,
+        "scrollWidth": 742,
+        "documentWidth": 1440,
+        "viewportWidth": 1440
+      },
+      "screenshots": [
+        {
+          "file": "dark-1440-avatar.png",
+          "sha256": "cce8c127a39903cf3e221b589950efc332bb68bbd9b1ea9ef97d1b2b7104dc72",
+          "bytes": 3603,
+          "width": 742,
+          "height": 41
+        },
+        {
+          "file": "dark-1440-avatar-sizes.png",
+          "sha256": "b3295023a1d4b9c7f38f622a5f4fb92855ad1081013d2ab578e802c071fa7261",
+          "bytes": 4675,
+          "width": 742,
+          "height": 48
+        }
+      ],
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "chip",
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "browserVersion": "158.0.4370.33",
+      "layout": {
+        "width": 742,
+        "height": 28,
+        "scrollWidth": 742,
+        "documentWidth": 1440,
+        "viewportWidth": 1440
+      },
+      "screenshots": [
+        {
+          "file": "dark-1440-chip.png",
+          "sha256": "cccfa684e25b5ab7dd1b305b9022b8e16d1b4fdcff4a1160755ea246421f5efc",
+          "bytes": 4291,
+          "width": 742,
+          "height": 29
+        },
+        {
+          "file": "dark-1440-chip-selected.png",
+          "sha256": "669ebc156313922d94a233ce8d745614b645b4ba08d889a76bc394b8a52310af",
+          "bytes": 4069,
+          "width": 742,
+          "height": 28
+        }
+      ],
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "notification",
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "browserVersion": "158.0.4370.33",
+      "layout": {
+        "width": 742,
+        "height": 250,
+        "scrollWidth": 742,
+        "documentWidth": 1440,
+        "viewportWidth": 1440
+      },
+      "screenshots": [
+        {
+          "file": "dark-1440-notification.png",
+          "sha256": "1ee796d83da2d9128f0c7b9a08162f44f1e27947aa78298b893643a9d03562cb",
+          "bytes": 21180,
+          "width": 742,
+          "height": 251
+        },
+        {
+          "file": "dark-1440-notification-action.png",
+          "sha256": "c61f79237ef08c71554194b5b51dd0daa025d88abcca2ed61857af7a25c38c0a",
+          "bytes": 10868,
+          "width": 384,
+          "height": 196
+        }
+      ],
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "stat-cards",
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "browserVersion": "158.0.4370.33",
+      "layout": {
+        "width": 742,
+        "height": 226,
+        "scrollWidth": 742,
+        "documentWidth": 1440,
+        "viewportWidth": 1440
+      },
+      "valueMetrics": {
+        "lines": 1,
+        "width": 87
+      },
+      "statGrid": {
+        "columns": 2,
+        "width": 742
+      },
+      "screenshots": [
+        {
+          "file": "dark-1440-stat-cards.png",
+          "sha256": "cf852a8d45697729dc8aa074a7a55ca8e6bd89034c3e1654765f24c8363ca35b",
+          "bytes": 17316,
+          "width": 742,
+          "height": 227
+        }
+      ],
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "badge",
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "browserVersion": "158.0.4370.33",
+      "layout": {
+        "width": 742,
+        "height": 24,
+        "scrollWidth": 742,
+        "documentWidth": 1440,
+        "viewportWidth": 1440
+      },
+      "screenshots": [
+        {
+          "file": "dark-1440-badge.png",
+          "sha256": "6ce9b3bf7aed768bfb1bf09f1a4048bb7ab2c5f42f1614ec20c125bc3d99c662",
+          "bytes": 4636,
+          "width": 742,
+          "height": 25
+        }
+      ],
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "progress",
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "browserVersion": "158.0.4370.33",
+      "layout": {
+        "width": 742,
+        "height": 8,
+        "scrollWidth": 742,
+        "documentWidth": 1440,
+        "viewportWidth": 1440
+      },
+      "screenshots": [
+        {
+          "file": "dark-1440-progress.png",
+          "sha256": "d1ba55bc6a5c902f6f924d90b8719e023d71017424523a911b47c85a954797ed",
+          "bytes": 1012,
+          "width": 742,
+          "height": 9
+        },
+        {
+          "file": "dark-1440-progress-sizes.png",
+          "sha256": "5c6ef3cce763e6ec6e5ec8953a88963df3f48449b6f71d1b0e3a757d4bc6e44f",
+          "bytes": 3226,
+          "width": 742,
+          "height": 46
+        }
+      ],
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "meter",
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "browserVersion": "158.0.4370.33",
+      "layout": {
+        "width": 742,
+        "height": 164,
+        "scrollWidth": 742,
+        "documentWidth": 1440,
+        "viewportWidth": 1440
+      },
+      "screenshots": [
+        {
+          "file": "dark-1440-meter.png",
+          "sha256": "03396c32bdad1309e6bbd2f3d22b4330ed757912c4371d7168d412c4dde4936a",
+          "bytes": 11958,
+          "width": 742,
+          "height": 165
+        }
+      ],
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "announcement",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "browserVersion": "158.0.4370.33",
+      "layout": {
+        "width": 308,
+        "height": 384,
+        "scrollWidth": 308,
+        "documentWidth": 390,
+        "viewportWidth": 390
+      },
+      "screenshots": [
+        {
+          "file": "dark-390-announcement.png",
+          "sha256": "65695b25262bdf1f9ce07d76bf1e7c0adfc462a4d689862db88a42ece2b0c2b3",
+          "bytes": 22960,
+          "width": 308,
+          "height": 384
+        },
+        {
+          "file": "dark-390-announcement-action.png",
+          "sha256": "57de013c73e81fff9801386bfaa59a367e960afe066b0f72e716c1f89157cfb8",
+          "bytes": 9303,
+          "width": 308,
+          "height": 210
+        }
+      ],
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "avatar",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "browserVersion": "158.0.4370.33",
+      "layout": {
+        "width": 308,
+        "height": 40,
+        "scrollWidth": 308,
+        "documentWidth": 390,
+        "viewportWidth": 390
+      },
+      "screenshots": [
+        {
+          "file": "dark-390-avatar.png",
+          "sha256": "06d463668721e21eb22e01577eb30c31317027cab0cc971d6ac1f1db04e7dca3",
+          "bytes": 3271,
+          "width": 308,
+          "height": 41
+        },
+        {
+          "file": "dark-390-avatar-sizes.png",
+          "sha256": "63acd73bd35d6e8231ef8234c403cbb183f27bcc53f59e6e598026f816dcfe2e",
+          "bytes": 5227,
+          "width": 308,
+          "height": 48
+        }
+      ],
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "chip",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "browserVersion": "158.0.4370.33",
+      "layout": {
+        "width": 308,
+        "height": 28,
+        "scrollWidth": 308,
+        "documentWidth": 390,
+        "viewportWidth": 390
+      },
+      "screenshots": [
+        {
+          "file": "dark-390-chip.png",
+          "sha256": "74085cdbde579de16abc1f332cbc3ddfcb6c7f12a64329d0b7d358eca446c961",
+          "bytes": 4022,
+          "width": 308,
+          "height": 29
+        },
+        {
+          "file": "dark-390-chip-selected.png",
+          "sha256": "aeb6c4356802cc3d7c7a2f4211fbc84c522217dc156eb32314fb4e8975c790b9",
+          "bytes": 3638,
+          "width": 308,
+          "height": 28
+        }
+      ],
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "notification",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "browserVersion": "158.0.4370.33",
+      "layout": {
+        "width": 308,
+        "height": 270,
+        "scrollWidth": 308,
+        "documentWidth": 390,
+        "viewportWidth": 390
+      },
+      "screenshots": [
+        {
+          "file": "dark-390-notification.png",
+          "sha256": "f0a80d0765e849cb8d4fb78fd16489c94100550b34ca3b3775ab83f431a4c575",
+          "bytes": 19206,
+          "width": 308,
+          "height": 271
+        },
+        {
+          "file": "dark-390-notification-action.png",
+          "sha256": "51fc167b6cd0930ca9cc2bc1dcd77ccd502d557ebadc62edd68fef7e4233735e",
+          "bytes": 10560,
+          "width": 308,
+          "height": 196
+        }
+      ],
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "stat-cards",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "browserVersion": "158.0.4370.33",
+      "layout": {
+        "width": 308,
+        "height": 460,
+        "scrollWidth": 308,
+        "documentWidth": 390,
+        "viewportWidth": 390
+      },
+      "valueMetrics": {
+        "lines": 1,
+        "width": 87
+      },
+      "statGrid": {
+        "columns": 1,
+        "width": 308
+      },
+      "screenshots": [
+        {
+          "file": "dark-390-stat-cards.png",
+          "sha256": "a6b55386ebfa23d4b55e3671f0516279b6790c69e15990360ff160f996609dab",
+          "bytes": 18520,
+          "width": 308,
+          "height": 460
+        }
+      ],
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "badge",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "browserVersion": "158.0.4370.33",
+      "layout": {
+        "width": 308,
+        "height": 24,
+        "scrollWidth": 308,
+        "documentWidth": 390,
+        "viewportWidth": 390
+      },
+      "screenshots": [
+        {
+          "file": "dark-390-badge.png",
+          "sha256": "ea4c12789fc2fe077c29a82860428f7816ff0ac63d419524a38b1c93ae528249",
+          "bytes": 4422,
+          "width": 308,
+          "height": 25
+        }
+      ],
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "progress",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "browserVersion": "158.0.4370.33",
+      "layout": {
+        "width": 308,
+        "height": 8,
+        "scrollWidth": 308,
+        "documentWidth": 390,
+        "viewportWidth": 390
+      },
+      "screenshots": [
+        {
+          "file": "dark-390-progress.png",
+          "sha256": "2580dcc5c0052e224d62c7a42ec2b09df3ff73e5fe20377a0945256c78d8e9f8",
+          "bytes": 722,
+          "width": 308,
+          "height": 9
+        },
+        {
+          "file": "dark-390-progress-sizes.png",
+          "sha256": "e74806d4792ee218d72fa54cd31153cf877f670e6159753a9deb0d63d18a4df8",
+          "bytes": 2350,
+          "width": 308,
+          "height": 46
+        }
+      ],
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "meter",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "browserVersion": "158.0.4370.33",
+      "layout": {
+        "width": 308,
+        "height": 164,
+        "scrollWidth": 308,
+        "documentWidth": 390,
+        "viewportWidth": 390
+      },
+      "screenshots": [
+        {
+          "file": "dark-390-meter.png",
+          "sha256": "d05077fe153dc6af97760dc3ff89ff595be19811decbdd42d1ee9f9874980d71",
+          "bytes": 10172,
+          "width": 308,
+          "height": 165
+        }
+      ],
+      "violations": [],
+      "status": "passed",
+      "errors": []
+    }
+  ],
+  "screenshotsDirectory": "reference/evidence/screenshots/20261125-feedback-visual",
+  "reviewedSamples": [
+    "dark-390-stat-cards.png",
+    "light-1440-stat-cards.png",
+    "dark-390-notification-action.png",
+    "light-390-chip-selected.png"
+  ],
+  "limitations": [
+    "候选截图及局部视觉抽查，不等于原版逐状态像素一致",
+    "当前截图绑定基础提交及未提交修复，远程候选仍需复验"
+  ]
+}

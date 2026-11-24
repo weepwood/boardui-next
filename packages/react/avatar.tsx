@@ -38,7 +38,7 @@ export interface AvatarProps extends HTMLAttributes<HTMLSpanElement> {
 }
 
 const styles = sortCx({
-  base: "inline-flex shrink-0 select-none items-center justify-center overflow-hidden rounded-full text-center align-middle transition-[width,height,font-size] duration-200 ease",
+  base: "inline-flex shrink-0 select-none items-center justify-center overflow-hidden rounded-full text-center align-middle transition-[width,height,font-size] duration-200 ease motion-reduce:transition-none",
   size: {
     xs: "size-5 text-[10px] leading-[15px] font-semibold",
     sm: "size-6 text-caption-1-semibold tracking-normal",

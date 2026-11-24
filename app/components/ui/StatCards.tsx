@@ -24,18 +24,15 @@ export function StatCards({
   columns?: 2 | 3 | 4;
   className?: string;
 }) {
-  const grid =
-    columns === 2
-      ? "grid-cols-1 sm:grid-cols-2"
-      : columns === 3
-        ? "grid-cols-2 lg:grid-cols-3"
-        : "grid-cols-2 lg:grid-cols-4";
-
+  // Use the actual available width; avoid an unbalanced 3+1 layout for four cards.
+  const grid = columns === 4 ? "@min-[760px]:grid-cols-4" : columns === 3 ? "@min-[568px]:grid-cols-3" : "";
   return (
-    <div className={cn("grid gap-2", grid, className)}>
-      {items.map((it) => (
-        <StatCard key={it.label} {...it} />
-      ))}
+    <div className="@container min-w-0 w-full">
+      <div className={cn("grid grid-cols-1 gap-2 @min-[376px]:grid-cols-2",grid,className)}>
+        {items.map((it) => (
+          <StatCard key={it.label} {...it} />
+        ))}
+      </div>
     </div>
   );
 }

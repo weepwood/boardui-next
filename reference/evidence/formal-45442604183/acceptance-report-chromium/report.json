@@ -1,0 +1,1435 @@
+{
+  "sha": "c717fb5e3d48788c001a95aceff944ca2b5b140e",
+  "browser": "chromium",
+  "report": [
+    {
+      "theme": "light",
+      "route": "/404/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/workspace/ai-chat/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/workspace/dashboard/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/workspace/finance/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/workspace/project-board/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/advanced/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/accordion/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/activity-rings-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/agent-creator/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/agent-limits-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/agent-progress/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/agent-thinking/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/announcement/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/area-chart-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/auth-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/avatar/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/badge/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/bar-list-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/breadcrumb/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/button/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/button-group/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/calendar/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/carousel/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/checkbox/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/chip/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/close-button/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/color/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/color-picker/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/combo-chart-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/combobox/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/command-palette/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/composer/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/composer-attachments/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/composer-loader/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/composer-panel/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/context-menu/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/contributions-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/counter/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/data-grid/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/data-table/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/date-calendar/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/date-picker/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/divider/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/drawer/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/dropdown/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/earnings-chart-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/file-upload/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/funnel-chart-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/heatmap-chart-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/icon-button/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/input/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/input-otp/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/line-chart-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/link-button/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/meter/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/modal/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/most-active-days-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/notification/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/notification-center/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/number-field/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/orders-chart-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/pagination/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/popover/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/progress/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/questionnaire/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/radar-chart-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/radial-chart-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/radio/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/revenue-chart-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/sankey-chart-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/scatter-chart-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/search-field/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/segmented-control/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/select/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/settings-modal/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/sidebar/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/skeleton/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/sleep-score-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/slider/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/social-button/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/spinner/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/stage-bars-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/stat-cards/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/steps-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/switch/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/table/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/tabs/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/tag-group/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/task-list/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/textarea/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/time-field/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/toast/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/toggle-button/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/token-input/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/tooltip/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/tree-view/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/typography/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/components/web-search/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/getting-started/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/installation/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/kitchen-sink/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/mcp/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/rtl/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/skill/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/templates/ai-chat/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/templates/ai-image-generation/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/templates/ai-profile/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/templates/calendar/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/templates/chat-starter/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/templates/dashboard/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/templates/finance/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/templates/hr/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/templates/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/templates/marketing/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/templates/medical-profile/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/templates/multi-agent-chat/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "light",
+      "route": "/zh-hans/templates/project-board/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/404/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/workspace/ai-chat/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/workspace/dashboard/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/workspace/finance/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/workspace/project-board/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/advanced/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/accordion/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/activity-rings-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/agent-creator/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/agent-limits-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/agent-progress/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/agent-thinking/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/announcement/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/area-chart-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/auth-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/avatar/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/badge/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/bar-list-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/breadcrumb/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/button/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/button-group/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/calendar/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/carousel/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/checkbox/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/chip/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/close-button/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/color/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/color-picker/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/combo-chart-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/combobox/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/command-palette/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/composer/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/composer-attachments/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/composer-loader/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/composer-panel/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/context-menu/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/contributions-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/counter/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/data-grid/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/data-table/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/date-calendar/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/date-picker/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/divider/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/drawer/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/dropdown/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/earnings-chart-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/file-upload/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/funnel-chart-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/heatmap-chart-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/icon-button/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/input/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/input-otp/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/line-chart-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/link-button/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/meter/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/modal/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/most-active-days-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/notification/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/notification-center/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/number-field/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/orders-chart-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/pagination/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/popover/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/progress/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/questionnaire/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/radar-chart-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/radial-chart-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/radio/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/revenue-chart-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/sankey-chart-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/scatter-chart-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/search-field/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/segmented-control/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/select/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/settings-modal/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/sidebar/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/skeleton/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/sleep-score-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/slider/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/social-button/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/spinner/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/stage-bars-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/stat-cards/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/steps-card/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/switch/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/table/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/tabs/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/tag-group/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/task-list/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/textarea/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/time-field/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/toast/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/toggle-button/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/token-input/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/tooltip/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/tree-view/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/typography/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/components/web-search/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/getting-started/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/installation/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/kitchen-sink/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/mcp/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/rtl/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/skill/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/templates/ai-chat/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/templates/ai-image-generation/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/templates/ai-profile/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/templates/calendar/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/templates/chat-starter/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/templates/dashboard/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/templates/finance/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/templates/hr/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/templates/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/templates/marketing/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/templates/medical-profile/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/templates/multi-agent-chat/",
+      "violations": [],
+      "status": "checked"
+    },
+    {
+      "theme": "dark",
+      "route": "/zh-hans/templates/project-board/",
+      "violations": [],
+      "status": "checked"
+    }
+  ],
+  "errors": []
+}
