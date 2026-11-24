@@ -7,13 +7,14 @@
  * motion, and row treatments from here.
  */
 export const MENU_POPOVER_SURFACE = [
-  "z-50 max-w-[calc(100vw-32px)] max-h-[calc(100dvh-32px)] overflow-y-auto overscroll-contain",
+  "z-50 max-w-[calc(100vw-32px)] max-h-[min(var(--available-height,100dvh),calc(100dvh-32px))] overflow-y-auto overscroll-contain",
   "rounded-2xl border border-border-button-default bg-background-primary-default p-2.5 shadow-dropdown",
-  "transition duration-150 ease-out motion-reduce:transition-none",
+  "transition-[opacity,scale,filter] duration-150 ease-out motion-reduce:transition-none",
   "data-[entering]:opacity-0 data-[entering]:scale-95 data-[entering]:blur-[2px]",
   "data-[exiting]:opacity-0 data-[exiting]:scale-95 data-[exiting]:blur-[2px]",
   "data-[placement=bottom]:origin-top-left rtl:data-[placement=bottom]:origin-top-right data-[placement=top]:origin-bottom-left rtl:data-[placement=top]:origin-bottom-right",
   "data-[placement=left]:origin-right data-[placement=right]:origin-left",
+  "motion-reduce:data-[entering]:scale-100 motion-reduce:data-[exiting]:scale-100 motion-reduce:data-[entering]:blur-none motion-reduce:data-[exiting]:blur-none",
 ].join(" ");
 
 export const MENU_POPOVER_WIDTH = "w-[266px]";

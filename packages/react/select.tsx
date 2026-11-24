@@ -132,6 +132,7 @@ export function Select<T extends object>({
           <AriaPopover
             ref={popoverRef}
             offset={4}
+            containerPadding={16}
             className={cx(
               MENU_POPOVER_WIDTH,
               MENU_POPOVER_SURFACE,
