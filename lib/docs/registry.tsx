@@ -692,7 +692,7 @@ import { RiArrowRightLine } from "@remixicon/react";
         <Announcement variant="error" title="同步失败" description="无法连接到远端仓库，请检查网络。" />
       </div>
     )),
-    demos: () => ([{id:"dismiss",title:"操作与关闭",node:<div className="w-full max-w-xs"><CoreAnnouncement title="完善工作区" description="管理工作区设置。" actionLabel="查看设置" dismissible closeLabel="关闭示例公告"/></div>}]),
+    demos: () => ([{id:"dismiss",title:"操作与关闭",node:<DismissContractDemo kind="announcement"/>}]),
   },
 
   notification: {
@@ -706,7 +706,7 @@ import { RiArrowRightLine } from "@remixicon/react";
         <Notification variant="error" title="上传失败" description="文件大小超过限制，请压缩后重试。" />
       </div>
     )),
-    demos: () => ([{id:"dismiss",title:"关闭与操作",node:<div className="w-full max-w-sm"><CoreNotification title="任务已完成" description="可手动关闭通知。" status="success" closeLabel="关闭示例通知" actions={[{label:"查看详情",variant:"secondary"}]}/></div>}]),
+    demos: () => ([{id:"dismiss",title:"关闭与操作",node:<DismissContractDemo kind="notification"/>}]),
   },
 
   toast: {
@@ -1059,7 +1059,7 @@ import { RiArrowRightLine } from "@remixicon/react";
         />
       </div>
     )),
-    demos: () => ([]),
+    demos: () => ([{id:"limits-edge",title:"额度边界",node:<AgentLimitsCard limits={[{id:"zero",label:"未知额度",used:10,max:0},{id:"negative",label:"负数用量",used:-10,max:100},{id:"over",label:"超过额度",used:120,max:100}]}/>}]),
   },
 
   "agent-progress": {
@@ -1448,6 +1448,15 @@ import { RiArrowRightLine } from "@remixicon/react";
   },
 };
 /* ---------------- 内部演示组件 ---------------- */
+
+function DismissContractDemo({kind}:{kind:"announcement"|"notification"}){
+ const [actions,setActions]=useState(0),[closed,setClosed]=useState(0),[instance,setInstance]=useState(0);
+ return <div className="flex w-full max-w-sm flex-col gap-2" data-testid="dismiss-contract">
+  {kind==="announcement"?<CoreAnnouncement key={instance} title="完善工作区" description="管理工作区设置。" actionLabel="查看设置" onAction={()=>setActions(v=>v+1)} dismissible closeLabel="关闭示例公告" onClose={()=>setClosed(v=>v+1)}/>:<CoreNotification key={instance} title="任务已完成" description="可手动关闭通知。" status="success" closeLabel="关闭示例通知" actions={[{label:"查看详情",variant:"secondary",onClick:()=>setActions(v=>v+1)}]} onDismiss={()=>setClosed(v=>v+1)}/>}
+  <output aria-live="polite">{actions} / {closed}</output>
+  <Button variant="secondary" onPress={()=>setInstance(v=>v+1)}>重置示例</Button>
+ </div>;
+}
 
 function ChipDemo() {
   return (

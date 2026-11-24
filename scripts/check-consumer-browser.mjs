@@ -67,6 +67,18 @@ try{
  await nav.waitFor({state:"hidden"});
  await page.getByRole("button",{name:"切换分页数量"}).click();
  await nav.getByText("1 / 20",{exact:true}).waitFor();
+ const boundary=page.getByRole("region",{name:"组件边界"});
+ const funnel=boundary.getByRole("img",{name:"转化漏斗"});
+ assert.equal(await funnel.locator("path").count(),3);
+ assert.ok(!(await funnel.evaluate(e=>e.outerHTML)).match(/NaN|Infinity/));
+ assert.equal(await funnel.locator("text").evaluateAll(es=>es.map(e=>e.textContent).join(",")),"—,—,—");
+ assert.equal(await page.getByTestId("empty-funnel").getByRole("status").textContent(),"暂无可展示数据");
+ assert.equal(await boundary.getByRole("meter",{name:"无效容量"}).getAttribute("aria-valuenow"),"0");
+ for(const type of ["公告","通知"]){
+  await boundary.getByRole("button",{name:"执行"+type}).press("Enter");
+  const close=boundary.getByRole("button",{name:"关闭消费"+type});await close.press("Space");await close.waitFor({state:"hidden"});
+ }
+ await page.getByTestId("notice-count").getByText("2 / 2",{exact:true}).waitFor();
  assert.deepEqual(errors,[]);
- console.log("Vite tarball consumer: controlled input, click, dark, RTL, progress, unique gradient IDs, button group inheritance, square icon buttons keyboard/disabled behavior, native form submission, tabs and narrow pagination passed");
+ console.log("Vite tarball consumer: controlled input, click, dark, RTL, progress, unique gradient IDs, button group inheritance, square icon buttons keyboard/disabled behavior, native form submission, tabs, narrow pagination, funnel/meter boundaries and dismissal callbacks passed");
 }finally{await browser?.close();await new Promise(r=>server.close(r));}

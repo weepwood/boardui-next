@@ -17,31 +17,9 @@
       "scoped": 96
     },
     "interaction": {
-      "missing": [
-        "color",
-        "typography",
-        "announcement",
-        "avatar",
-        "chip",
-        "divider",
-        "link-button",
-        "notification",
-        "agent-limits-card",
-        "stat-cards",
-        "activity-rings-card",
-        "contributions-card",
-        "funnel-chart-card",
-        "most-active-days-card",
-        "sankey-chart-card",
-        "sleep-score-card",
-        "stage-bars-card",
-        "steps-card",
-        "badge",
-        "progress",
-        "meter"
-      ],
+      "missing": [],
       "formal": 0,
-      "scoped": 83
+      "scoped": 104
     },
     "accessibility": {
       "missing": [],
@@ -49,76 +27,9 @@
       "scoped": 104
     },
     "api": {
-      "missing": [
-        "color",
-        "typography",
-        "carousel",
-        "divider",
-        "file-upload",
-        "link-button",
-        "social-button",
-        "composer-panel",
-        "composer-attachments",
-        "auth-card",
-        "web-search",
-        "task-list",
-        "agent-limits-card",
-        "questionnaire",
-        "agent-creator",
-        "calendar",
-        "data-grid",
-        "data-table",
-        "notification-center",
-        "settings-modal",
-        "sidebar",
-        "revenue-chart-card",
-        "activity-rings-card",
-        "bar-list-card",
-        "combo-chart-card",
-        "contributions-card",
-        "earnings-chart-card",
-        "heatmap-chart-card",
-        "most-active-days-card",
-        "sankey-chart-card",
-        "scatter-chart-card",
-        "sleep-score-card",
-        "stage-bars-card",
-        "steps-card",
-        "chat-starter",
-        "multi-agent-chat",
-        "ai-chat",
-        "ai-image-generation",
-        "ai-profile",
-        "finance-dashboard",
-        "home-dashboard",
-        "marketing-dashboard",
-        "medical-profile",
-        "project-board",
-        "search-field",
-        "spinner",
-        "skeleton",
-        "accordion",
-        "toggle-button",
-        "tag-group",
-        "modal",
-        "popover",
-        "counter",
-        "toast",
-        "drawer",
-        "number-field",
-        "combobox",
-        "time-field",
-        "context-menu",
-        "date-calendar",
-        "color-picker",
-        "token-input",
-        "command-palette",
-        "orders-chart-card",
-        "template:calendar",
-        "template:hr"
-      ],
+      "missing": [],
       "formal": 0,
-      "scoped": 38
+      "scoped": 104
     },
     "rtl": {
       "missing": [],
@@ -142,7 +53,9 @@
         },
         "interaction": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-remaining-passive-presentation-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -153,14 +66,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -188,7 +104,9 @@
         },
         "interaction": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-remaining-passive-presentation-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -199,14 +117,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -232,7 +153,9 @@
         },
         "interaction": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-remaining-interaction-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -242,7 +165,8 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
@@ -250,7 +174,8 @@
         "api": {
           "status": "pending",
           "partial": [
-            "api-extraction-20261124"
+            "api-extraction-20261124",
+            "consolidated-api-contracts-20261125"
           ],
           "passed": [],
           "failed": []
@@ -277,7 +202,9 @@
         },
         "interaction": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-remaining-state-fallback-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -287,7 +214,8 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
@@ -295,7 +223,8 @@
         "api": {
           "status": "pending",
           "partial": [
-            "api-extraction-20261124"
+            "api-extraction-20261124",
+            "consolidated-api-contracts-20261125"
           ],
           "passed": [],
           "failed": []
@@ -336,7 +265,8 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
@@ -344,7 +274,8 @@
         "api": {
           "status": "pending",
           "partial": [
-            "api-extraction-20261124"
+            "api-extraction-20261124",
+            "consolidated-api-contracts-20261125"
           ],
           "passed": [],
           "failed": []
@@ -389,7 +320,8 @@
             "formal-three-browser-accessibility-45426162052",
             "button-family-accessibility-20261125",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
@@ -398,7 +330,8 @@
           "status": "pending",
           "partial": [
             "api-extraction-20261124",
-            "button-family-api-20261125"
+            "button-family-api-20261125",
+            "consolidated-api-contracts-20261125"
           ],
           "passed": [],
           "failed": []
@@ -444,7 +377,8 @@
             "formal-three-browser-accessibility-45426162052",
             "button-family-accessibility-20261125",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
@@ -453,7 +387,8 @@
           "status": "pending",
           "partial": [
             "api-extraction-20261124",
-            "button-family-api-20261125"
+            "button-family-api-20261125",
+            "consolidated-api-contracts-20261125"
           ],
           "passed": [],
           "failed": []
@@ -496,14 +431,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -545,7 +483,8 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
@@ -554,7 +493,8 @@
           "status": "pending",
           "partial": [
             "api-extraction-20261124",
-            "consolidated-consumer-api-20261125"
+            "consolidated-consumer-api-20261125",
+            "consolidated-api-contracts-20261125"
           ],
           "passed": [],
           "failed": []
@@ -581,7 +521,9 @@
         },
         "interaction": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-remaining-interaction-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -591,7 +533,8 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
@@ -599,7 +542,8 @@
         "api": {
           "status": "pending",
           "partial": [
-            "api-extraction-20261124"
+            "api-extraction-20261124",
+            "consolidated-api-contracts-20261125"
           ],
           "passed": [],
           "failed": []
@@ -644,7 +588,8 @@
             "formal-three-browser-accessibility-45426162052",
             "close-button-accessibility-20261125",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
@@ -654,7 +599,8 @@
           "partial": [
             "api-extraction-20261124",
             "close-button-api-20261125",
-            "button-family-api-20261125"
+            "button-family-api-20261125",
+            "consolidated-api-contracts-20261125"
           ],
           "passed": [],
           "failed": []
@@ -696,7 +642,8 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
@@ -704,7 +651,8 @@
         "api": {
           "status": "pending",
           "partial": [
-            "api-extraction-20261124"
+            "api-extraction-20261124",
+            "consolidated-api-contracts-20261125"
           ],
           "passed": [],
           "failed": []
@@ -733,7 +681,9 @@
         },
         "interaction": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-remaining-passive-presentation-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -744,14 +694,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -791,7 +744,8 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
@@ -799,7 +753,8 @@
         "api": {
           "status": "pending",
           "partial": [
-            "api-extraction-20261124"
+            "api-extraction-20261124",
+            "consolidated-api-contracts-20261125"
           ],
           "passed": [],
           "failed": []
@@ -841,14 +796,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -891,7 +849,8 @@
             "formal-three-browser-accessibility-45426162052",
             "button-family-accessibility-20261125",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
@@ -900,7 +859,8 @@
           "status": "pending",
           "partial": [
             "api-extraction-20261124",
-            "button-family-api-20261125"
+            "button-family-api-20261125",
+            "consolidated-api-contracts-20261125"
           ],
           "passed": [],
           "failed": []
@@ -945,7 +905,8 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
@@ -954,7 +915,8 @@
           "status": "pending",
           "partial": [
             "api-extraction-20261124",
-            "consolidated-consumer-api-20261125"
+            "consolidated-consumer-api-20261125",
+            "consolidated-api-contracts-20261125"
           ],
           "passed": [],
           "failed": []
@@ -996,7 +958,8 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
@@ -1004,7 +967,8 @@
         "api": {
           "status": "pending",
           "partial": [
-            "api-extraction-20261124"
+            "api-extraction-20261124",
+            "consolidated-api-contracts-20261125"
           ],
           "passed": [],
           "failed": []
@@ -1033,7 +997,9 @@
         },
         "interaction": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-remaining-interaction-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -1044,14 +1010,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -1077,7 +1046,9 @@
         },
         "interaction": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-remaining-interaction-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -1087,7 +1058,8 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
@@ -1095,7 +1067,8 @@
         "api": {
           "status": "pending",
           "partial": [
-            "api-extraction-20261124"
+            "api-extraction-20261124",
+            "consolidated-api-contracts-20261125"
           ],
           "passed": [],
           "failed": []
@@ -1137,7 +1110,8 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
@@ -1146,7 +1120,8 @@
           "status": "pending",
           "partial": [
             "api-extraction-20261124",
-            "consolidated-consumer-api-20261125"
+            "consolidated-consumer-api-20261125",
+            "consolidated-api-contracts-20261125"
           ],
           "passed": [],
           "failed": []
@@ -1189,7 +1164,8 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
@@ -1198,7 +1174,8 @@
           "status": "pending",
           "partial": [
             "api-extraction-20261124",
-            "consolidated-consumer-api-20261125"
+            "consolidated-consumer-api-20261125",
+            "consolidated-api-contracts-20261125"
           ],
           "passed": [],
           "failed": []
@@ -1240,7 +1217,8 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
@@ -1248,7 +1226,8 @@
         "api": {
           "status": "pending",
           "partial": [
-            "api-extraction-20261124"
+            "api-extraction-20261124",
+            "consolidated-api-contracts-20261125"
           ],
           "passed": [],
           "failed": []
@@ -1293,7 +1272,8 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
@@ -1302,7 +1282,8 @@
           "status": "pending",
           "partial": [
             "api-extraction-20261124",
-            "consolidated-consumer-api-20261125"
+            "consolidated-consumer-api-20261125",
+            "consolidated-api-contracts-20261125"
           ],
           "passed": [],
           "failed": []
@@ -1344,7 +1325,8 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
@@ -1352,7 +1334,8 @@
         "api": {
           "status": "pending",
           "partial": [
-            "api-extraction-20261124"
+            "api-extraction-20261124",
+            "consolidated-api-contracts-20261125"
           ],
           "passed": [],
           "failed": []
@@ -1395,14 +1378,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -1442,7 +1428,8 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
@@ -1450,7 +1437,8 @@
         "api": {
           "status": "pending",
           "partial": [
-            "api-extraction-20261124"
+            "api-extraction-20261124",
+            "consolidated-api-contracts-20261125"
           ],
           "passed": [],
           "failed": []
@@ -1491,7 +1479,8 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
@@ -1499,7 +1488,8 @@
         "api": {
           "status": "pending",
           "partial": [
-            "api-extraction-20261124"
+            "api-extraction-20261124",
+            "consolidated-api-contracts-20261125"
           ],
           "passed": [],
           "failed": []
@@ -1541,7 +1531,8 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
@@ -1550,7 +1541,8 @@
           "status": "pending",
           "partial": [
             "api-extraction-20261124",
-            "consolidated-consumer-api-20261125"
+            "consolidated-consumer-api-20261125",
+            "consolidated-api-contracts-20261125"
           ],
           "passed": [],
           "failed": []
@@ -1593,7 +1585,8 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
@@ -1602,7 +1595,8 @@
           "status": "pending",
           "partial": [
             "api-extraction-20261124",
-            "consolidated-consumer-api-20261125"
+            "consolidated-consumer-api-20261125",
+            "consolidated-api-contracts-20261125"
           ],
           "passed": [],
           "failed": []
@@ -1643,7 +1637,8 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
@@ -1651,7 +1646,8 @@
         "api": {
           "status": "pending",
           "partial": [
-            "api-extraction-20261124"
+            "api-extraction-20261124",
+            "consolidated-api-contracts-20261125"
           ],
           "passed": [],
           "failed": []
@@ -1692,7 +1688,8 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
@@ -1700,7 +1697,8 @@
         "api": {
           "status": "pending",
           "partial": [
-            "api-extraction-20261124"
+            "api-extraction-20261124",
+            "consolidated-api-contracts-20261125"
           ],
           "passed": [],
           "failed": []
@@ -1741,7 +1739,8 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
@@ -1749,7 +1748,8 @@
         "api": {
           "status": "pending",
           "partial": [
-            "api-extraction-20261124"
+            "api-extraction-20261124",
+            "consolidated-api-contracts-20261125"
           ],
           "passed": [],
           "failed": []
@@ -1790,7 +1790,8 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
@@ -1798,7 +1799,8 @@
         "api": {
           "status": "pending",
           "partial": [
-            "api-extraction-20261124"
+            "api-extraction-20261124",
+            "consolidated-api-contracts-20261125"
           ],
           "passed": [],
           "failed": []
@@ -1839,14 +1841,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -1886,14 +1891,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -1934,14 +1942,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -1982,14 +1993,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -2030,14 +2044,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -2065,7 +2082,9 @@
         },
         "interaction": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-remaining-state-boundary-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -2075,14 +2094,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -2123,14 +2145,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -2170,14 +2195,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -2217,7 +2245,8 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
@@ -2225,7 +2254,8 @@
         "api": {
           "status": "pending",
           "partial": [
-            "api-extraction-20261124"
+            "api-extraction-20261124",
+            "consolidated-api-contracts-20261125"
           ],
           "passed": [],
           "failed": []
@@ -2266,14 +2296,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -2315,14 +2348,17 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-data-chart-accessibility-20261125",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -2364,14 +2400,17 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-data-chart-accessibility-20261125",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -2411,14 +2450,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -2459,14 +2501,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -2506,14 +2551,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -2539,7 +2587,9 @@
         },
         "interaction": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-remaining-passive-presentation-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -2549,7 +2599,8 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
@@ -2557,7 +2608,8 @@
         "api": {
           "status": "pending",
           "partial": [
-            "api-extraction-20261124"
+            "api-extraction-20261124",
+            "consolidated-api-contracts-20261125"
           ],
           "passed": [],
           "failed": []
@@ -2598,14 +2650,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -2633,7 +2688,9 @@
         },
         "interaction": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-remaining-passive-presentation-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -2643,14 +2700,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -2694,7 +2754,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-data-chart-accessibility-20261125",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
@@ -2702,7 +2763,8 @@
         "api": {
           "status": "pending",
           "partial": [
-            "api-extraction-20261124"
+            "api-extraction-20261124",
+            "consolidated-api-contracts-20261125"
           ],
           "passed": [],
           "failed": []
@@ -2743,14 +2805,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -2794,14 +2859,17 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-data-chart-accessibility-20261125",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -2829,7 +2897,9 @@
         },
         "interaction": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-remaining-interaction-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -2839,14 +2909,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -2886,14 +2959,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -2921,7 +2997,9 @@
         },
         "interaction": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-remaining-passive-presentation-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -2931,7 +3009,8 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
@@ -2939,7 +3018,8 @@
         "api": {
           "status": "pending",
           "partial": [
-            "api-extraction-20261124"
+            "api-extraction-20261124",
+            "consolidated-api-contracts-20261125"
           ],
           "passed": [],
           "failed": []
@@ -2982,14 +3062,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -3017,7 +3100,9 @@
         },
         "interaction": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-remaining-passive-presentation-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -3027,14 +3112,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -3078,7 +3166,8 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-data-chart-accessibility-20261125",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
@@ -3086,7 +3175,8 @@
         "api": {
           "status": "pending",
           "partial": [
-            "api-extraction-20261124"
+            "api-extraction-20261124",
+            "consolidated-api-contracts-20261125"
           ],
           "passed": [],
           "failed": []
@@ -3129,7 +3219,8 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
@@ -3137,7 +3228,8 @@
         "api": {
           "status": "pending",
           "partial": [
-            "api-extraction-20261124"
+            "api-extraction-20261124",
+            "consolidated-api-contracts-20261125"
           ],
           "passed": [],
           "failed": []
@@ -3178,7 +3270,8 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
@@ -3186,7 +3279,8 @@
         "api": {
           "status": "pending",
           "partial": [
-            "api-extraction-20261124"
+            "api-extraction-20261124",
+            "consolidated-api-contracts-20261125"
           ],
           "passed": [],
           "failed": []
@@ -3215,7 +3309,9 @@
         },
         "interaction": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-remaining-passive-presentation-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -3225,14 +3321,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -3276,14 +3375,17 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-data-chart-accessibility-20261125",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -3311,7 +3413,9 @@
         },
         "interaction": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-remaining-interaction-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -3321,14 +3425,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -3356,7 +3463,9 @@
         },
         "interaction": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-remaining-passive-presentation-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -3366,14 +3475,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -3401,7 +3513,9 @@
         },
         "interaction": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-remaining-interaction-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -3411,14 +3525,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -3458,14 +3575,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -3505,14 +3625,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -3558,14 +3681,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -3605,14 +3731,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -3652,14 +3781,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -3701,14 +3833,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -3750,14 +3885,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -3797,14 +3935,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -3844,14 +3985,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -3897,14 +4041,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -3945,14 +4092,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -3978,7 +4128,9 @@
         },
         "interaction": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-remaining-passive-presentation-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -3988,7 +4140,8 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
@@ -3996,7 +4149,8 @@
         "api": {
           "status": "pending",
           "partial": [
-            "api-extraction-20261124"
+            "api-extraction-20261124",
+            "consolidated-api-contracts-20261125"
           ],
           "passed": [],
           "failed": []
@@ -4023,7 +4177,9 @@
         },
         "interaction": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-remaining-passive-presentation-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -4033,7 +4189,8 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
@@ -4041,7 +4198,8 @@
         "api": {
           "status": "pending",
           "partial": [
-            "api-extraction-20261124"
+            "api-extraction-20261124",
+            "consolidated-api-contracts-20261125"
           ],
           "passed": [],
           "failed": []
@@ -4083,14 +4241,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -4131,14 +4292,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -4178,14 +4342,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -4226,14 +4393,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -4274,14 +4444,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -4323,14 +4496,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -4370,14 +4546,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -4418,14 +4597,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -4466,14 +4648,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -4513,14 +4698,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -4560,14 +4748,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -4608,14 +4799,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -4641,7 +4835,9 @@
         },
         "interaction": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-remaining-passive-presentation-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -4651,7 +4847,8 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
@@ -4659,7 +4856,8 @@
         "api": {
           "status": "pending",
           "partial": [
-            "api-extraction-20261124"
+            "api-extraction-20261124",
+            "consolidated-api-contracts-20261125"
           ],
           "passed": [],
           "failed": []
@@ -4700,14 +4898,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -4747,14 +4948,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -4794,14 +4998,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -4841,14 +5048,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -4889,14 +5099,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -4936,14 +5149,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -4983,7 +5199,8 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
@@ -4991,7 +5208,8 @@
         "api": {
           "status": "pending",
           "partial": [
-            "api-extraction-20261124"
+            "api-extraction-20261124",
+            "consolidated-api-contracts-20261125"
           ],
           "passed": [],
           "failed": []
@@ -5037,14 +5255,17 @@
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
             "consolidated-data-chart-accessibility-20261125",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -5084,14 +5305,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },
@@ -5131,14 +5355,17 @@
             "formal-full-edge-accessibility-20261124",
             "formal-three-browser-accessibility-45426162052",
             "formal-three-browser-45437101528",
-            "consolidated-full-rtl-accessibility-20261125"
+            "consolidated-full-rtl-accessibility-20261125",
+            "formal-three-browser-45439538959"
           ],
           "passed": [],
           "failed": []
         },
         "api": {
           "status": "pending",
-          "partial": [],
+          "partial": [
+            "consolidated-api-contracts-20261125"
+          ],
           "passed": [],
           "failed": []
         },

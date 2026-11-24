@@ -1,12 +1,13 @@
 import React, {useState} from "react";
 import {createRoot} from "react-dom/client";
 import "@weepwood/boardui-next/styles.css";
-import {Button,Input,Switch,DirectionProvider,StatCard,AreaChart,Progress,ButtonGroup,ButtonGroupItem,IconButton,CloseButton,AriaButton,Checkbox,Radio,RadioGroup,Textarea,Select,SelectItem,Tabs,TabList,Tab,TabPanel,Pagination} from "@weepwood/boardui-next";
+import {Button,Input,Switch,DirectionProvider,StatCard,AreaChart,Progress,ButtonGroup,ButtonGroupItem,IconButton,CloseButton,AriaButton,Checkbox,Radio,RadioGroup,Textarea,Select,SelectItem,Tabs,TabList,Tab,TabPanel,Pagination,FunnelChart,Meter,Notification,Announcement} from "@weepwood/boardui-next";
 
 const Glyph=({className,...props})=><svg viewBox="0 0 20 20" className={className} {...props}><path d="M5 10h10m-5-5v10" stroke="currentColor" fill="none"/></svg>;
 function App(){
  const [count,setCount]=useState(0),[pressed,setPressed]=useState(false);
  const [formResult,setFormResult]=useState(""),[pages,setPages]=useState(1),[page,setPage]=useState(1);
+ const [actionCount,setActionCount]=useState(0),[dismissCount,setDismissCount]=useState(0);
  const [dark,setDark]=useState(false),[rtl,setRtl]=useState(false),[name,setName]=useState("示例项目"),[saved,setSaved]=useState("");
  return <DirectionProvider locale={rtl?"ar":"zh-CN"}><main style={{maxWidth:680,margin:"auto",padding:24,display:"grid",gap:16}}>
  <h1 className="text-title-1-medium text-text-primary">BoardUI Next</h1>
@@ -28,6 +29,14 @@ function App(){
  </form>
  <Tabs defaultSelectedKey="a"><TabList aria-label="消费标签"><Tab id="a">概览</Tab><Tab id="b">详情</Tab></TabList><TabPanel id="a">概览内容</TabPanel><TabPanel id="b">详情内容</TabPanel></Tabs>
  <div style={{width:220}}><Button onClick={()=>{setPages(v=>v===1?20:1);setPage(1)}}>切换分页数量</Button><Pagination page={page} totalPages={pages} onChange={setPage}/></div>
+ <section aria-label="组件边界">
+ <FunnelChart steps={[{label:"零基线",value:0},{label:"无效值",value:NaN},{label:"后续",value:8}]}/>
+ <div data-testid="empty-funnel"><FunnelChart steps={[]}/></div>
+ <Meter label="无效容量" value={Infinity} max={0}/>
+ <Announcement title="消费公告" actionLabel="执行公告" onAction={()=>setActionCount(v=>v+1)} dismissible closeLabel="关闭消费公告" onClose={()=>setDismissCount(v=>v+1)}/>
+ <Notification title="消费通知" actions={[{label:"执行通知",onClick:()=>setActionCount(v=>v+1)}]} closeLabel="关闭消费通知" onDismiss={()=>setDismissCount(v=>v+1)}/>
+ <output data-testid="notice-count">{actionCount} / {dismissCount}</output>
+ </section>
  <StatCard label="示例收入" value="¥2,400" spark={[2,4,3,6]}/>
  <AreaChart data={[4,7,-1,5]}/><Progress aria-label="任务进度" value={60}/>
  </main></DirectionProvider>;

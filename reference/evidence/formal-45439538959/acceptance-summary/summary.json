@@ -1,0 +1,25 @@
+{
+  "sha": "821784d3aa9c8d0a9b41825dd60022116807d64c",
+  "expectedPerBrowser": 238,
+  "results": [
+    {
+      "browser": "chromium",
+      "pass": 238,
+      "failed": 0,
+      "missing": 0
+    },
+    {
+      "browser": "firefox",
+      "pass": 238,
+      "failed": 0,
+      "missing": 0
+    },
+    {
+      "browser": "webkit",
+      "pass": 238,
+      "failed": 0,
+      "missing": 0
+    }
+  ],
+  "failures": []
+}

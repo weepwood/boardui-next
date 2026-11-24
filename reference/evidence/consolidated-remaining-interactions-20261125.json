@@ -1,0 +1,360 @@
+{
+  "scope": "21 previously uncovered routes: real interaction/state assertions where applicable; passive display assertions are not interactive behavior",
+  "results": [
+    {
+      "slug": "color",
+      "theme": "light",
+      "mode": "passive-presentation",
+      "assertion": "69 resolved colors",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "typography",
+      "theme": "light",
+      "mode": "passive-presentation",
+      "assertion": "typography guide and code",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "announcement",
+      "theme": "light",
+      "mode": "interaction",
+      "assertion": "action callback, dismiss callback, remount",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "divider",
+      "theme": "light",
+      "mode": "passive-presentation",
+      "assertion": "separator semantics",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "chip",
+      "theme": "light",
+      "mode": "interaction",
+      "assertion": "keyboard toggles",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "avatar",
+      "theme": "light",
+      "mode": "state-fallback",
+      "assertion": "broken image fallback",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "agent-limits-card",
+      "theme": "light",
+      "mode": "state-boundary",
+      "assertion": "normal, zero-max, negative and over-limit",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "link-button",
+      "theme": "light",
+      "mode": "interaction",
+      "assertion": "keyboard navigation",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "notification",
+      "theme": "light",
+      "mode": "interaction",
+      "assertion": "action callback, dismiss callback, remount",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "activity-rings-card",
+      "theme": "light",
+      "mode": "passive-presentation",
+      "assertion": "three labelled rings",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "stat-cards",
+      "theme": "light",
+      "mode": "passive-presentation",
+      "assertion": "four data cards",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "contributions-card",
+      "theme": "light",
+      "mode": "interaction",
+      "assertion": "140 cells and keyboard scroll entry",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "funnel-chart-card",
+      "theme": "light",
+      "mode": "passive-presentation",
+      "assertion": "four funnel stages",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "most-active-days-card",
+      "theme": "light",
+      "mode": "passive-presentation",
+      "assertion": "five weekday labels",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "sankey-chart-card",
+      "theme": "light",
+      "mode": "passive-presentation",
+      "assertion": "seven flows and accessible description",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "stage-bars-card",
+      "theme": "light",
+      "mode": "passive-presentation",
+      "assertion": "four stage values",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "sleep-score-card",
+      "theme": "light",
+      "mode": "interaction",
+      "assertion": "data selection and clear",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "steps-card",
+      "theme": "light",
+      "mode": "interaction",
+      "assertion": "data selection and clear",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "badge",
+      "theme": "light",
+      "mode": "passive-presentation",
+      "assertion": "six status labels",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "progress",
+      "theme": "light",
+      "mode": "passive-presentation",
+      "assertion": "determinate/indeterminate semantics",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "meter",
+      "theme": "light",
+      "mode": "passive-presentation",
+      "assertion": "bounded meter values",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "typography",
+      "theme": "dark",
+      "mode": "passive-presentation",
+      "assertion": "typography guide and code",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "color",
+      "theme": "dark",
+      "mode": "passive-presentation",
+      "assertion": "69 resolved colors",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "announcement",
+      "theme": "dark",
+      "mode": "interaction",
+      "assertion": "action callback, dismiss callback, remount",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "divider",
+      "theme": "dark",
+      "mode": "passive-presentation",
+      "assertion": "separator semantics",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "avatar",
+      "theme": "dark",
+      "mode": "state-fallback",
+      "assertion": "broken image fallback",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "chip",
+      "theme": "dark",
+      "mode": "interaction",
+      "assertion": "keyboard toggles",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "agent-limits-card",
+      "theme": "dark",
+      "mode": "state-boundary",
+      "assertion": "normal, zero-max, negative and over-limit",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "link-button",
+      "theme": "dark",
+      "mode": "interaction",
+      "assertion": "keyboard navigation",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "notification",
+      "theme": "dark",
+      "mode": "interaction",
+      "assertion": "action callback, dismiss callback, remount",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "stat-cards",
+      "theme": "dark",
+      "mode": "passive-presentation",
+      "assertion": "four data cards",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "contributions-card",
+      "theme": "dark",
+      "mode": "interaction",
+      "assertion": "140 cells and keyboard scroll entry",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "activity-rings-card",
+      "theme": "dark",
+      "mode": "passive-presentation",
+      "assertion": "three labelled rings",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "funnel-chart-card",
+      "theme": "dark",
+      "mode": "passive-presentation",
+      "assertion": "four funnel stages",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "most-active-days-card",
+      "theme": "dark",
+      "mode": "passive-presentation",
+      "assertion": "five weekday labels",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "sankey-chart-card",
+      "theme": "dark",
+      "mode": "passive-presentation",
+      "assertion": "seven flows and accessible description",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "sleep-score-card",
+      "theme": "dark",
+      "mode": "interaction",
+      "assertion": "data selection and clear",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "stage-bars-card",
+      "theme": "dark",
+      "mode": "passive-presentation",
+      "assertion": "four stage values",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "steps-card",
+      "theme": "dark",
+      "mode": "interaction",
+      "assertion": "data selection and clear",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "meter",
+      "theme": "dark",
+      "mode": "passive-presentation",
+      "assertion": "bounded meter values",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "badge",
+      "theme": "dark",
+      "mode": "passive-presentation",
+      "assertion": "six status labels",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "slug": "progress",
+      "theme": "dark",
+      "mode": "passive-presentation",
+      "assertion": "determinate/indeterminate semantics",
+      "status": "passed",
+      "errors": []
+    }
+  ],
+  "base": "1592208b5e394c94e3afd4cb5ac9a5f80ae53e9d",
+  "browser": "Edge (Chromium), macOS",
+  "counts": {
+    "passive-presentation": 24,
+    "interaction": 14,
+    "state-fallback": 2,
+    "state-boundary": 2
+  },
+  "export": {
+    "pages": 120,
+    "peakGzipJs": 510784,
+    "peakGzipHtml": 26533,
+    "templateCatalogGzipJs": 253900
+  },
+  "limitations": [
+    "Passive presentation checks are not interactive behavior.",
+    "Latest Firefox/WebKit and manual acceptance pending.",
+    "Expanded Vite fixture emits chunk size warning; production page budgets pass."
+  ]
+}
