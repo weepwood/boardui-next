@@ -156,7 +156,7 @@ export function ComponentPreview({
               <span className="text-caption-1-medium text-text-secondary">代码示例</span>
               {code && <span className="text-caption-1-regular tabular-nums text-text-secondary">{code.split("\n").length} 行</span>}
             </div>
-            <pre aria-label="示例代码" tabIndex={0}
+            <pre dir="ltr" aria-label="示例代码" tabIndex={0}
               className="max-h-[480px] w-full min-w-0 overflow-auto p-3 text-start font-mono text-body-2-regular outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-border-focus-ring sm:p-4">
               <code className="text-text-primary">{code ?? "// 暂无代码示例"}</code>
             </pre>

@@ -21,7 +21,7 @@ import { RiMailLine, RiSearchLine, RiAddLine as AddGlyph, RiEditLine as EditGlyp
 import type { ReactNode } from "react";
 
 import { Button } from "@/app/components/ui/Button";
-import { AriaButton, Button as NativeButton, ButtonLink, IconButton as CoreIconButton, ButtonGroup as CoreButtonGroup, ButtonGroupItem, CloseButton as CoreCloseButton, DirectionProvider } from "@/packages/react";
+import { AriaButton, Button as NativeButton, ButtonLink, IconButton as CoreIconButton, IconLinkButton, ButtonGroup as CoreButtonGroup, ButtonGroupItem, CloseButton as CoreCloseButton, DirectionProvider } from "@/packages/react";
 import { IconButton } from "@/app/components/ui/IconButton";
 import { Chip } from "@/app/components/ui/Chip";
 import { Input } from "@/app/components/ui/Input";
@@ -201,6 +201,27 @@ function CloseButtonStateDemo(){
   </div>
 }
 
+function ButtonContractDemo(){
+ const [rtl,setRtl]=useState(false),[count,setCount]=useState(0),[pressed,setPressed]=useState(false);
+ return <div data-testid="button-contract" className="flex flex-col gap-3">
+  <label className="flex gap-2 text-body-2-regular"><input type="checkbox" checked={rtl} onChange={e=>setRtl(e.target.checked)}/>RTL</label>
+  <DirectionProvider locale={rtl?"ar":"zh-CN"}>
+   <div className="flex flex-wrap items-center gap-3">
+    <NativeButton iconOnly variant="secondary" leadingIcon={ArrowGlyph} aria-label="方向操作" onClick={()=>setCount(n=>n+1)}/>
+    <AriaButton iconOnly variant="secondary" leadingIcon={AddGlyph} aria-label="ARIA 操作" onPress={()=>setCount(n=>n+1)}/>
+    <CoreIconButton icon={AddGlyph} aria-label="禁用图标" disabled onClick={()=>setCount(n=>n+100)}/>
+    <IconLinkButton icon={ArrowGlyph} href="#preview" aria-label="返回预览"/>
+    <CoreButtonGroup size="small" aria-label="继承尺寸">
+     <ButtonGroupItem selected={pressed} onClick={()=>setPressed(v=>!v)}>切换</ButtonGroupItem>
+     <ButtonGroupItem disabled>禁用</ButtonGroupItem>
+     <ButtonGroupItem iconOnly leadingIcon={ArrowGlyph} aria-label="组方向"/>
+    </CoreButtonGroup>
+   </div>
+   <output aria-live="polite">{count} / {String(pressed)}</output>
+  </DirectionProvider>
+ </div>;
+}
+
 function ButtonFamilyDemo() {
   const [selection,setSelection]=useState("left");
   const [count,setCount]=useState(0);
@@ -262,6 +283,7 @@ import { RiArrowRightLine } from "@remixicon/react";
       {id:"disabled",title:"禁用",code:`<Button disabled>按钮文字</Button>
 <Button variant="secondary" disabled>按钮文字</Button>`,node:<><NativeButton disabled>按钮文字</NativeButton><NativeButton variant="secondary" disabled>按钮文字</NativeButton><NativeButton variant="ghost" disabled>按钮文字</NativeButton><NativeButton variant="danger" disabled>按钮文字</NativeButton></>},
       {id:"native",title:"扩展接口：原生链接和 React Aria",node:<><AriaButton>AriaButton</AriaButton><ButtonLink href={(process.env.NEXT_PUBLIC_BASE_PATH ?? "") + "/zh-hans/components/"} variant="secondary">查看组件</ButtonLink></>},
+      {id:"contract",title:"按钮状态与方向",node:<ButtonContractDemo/>},
       {id:"legacy",title:"旧版兼容接口",description:"保留既有业务页面调用方式。",node:<><Button size="sm">小号</Button><Button variant="outline">描边</Button><Button variant="destructive">危险</Button></>},
     ]),
   },
@@ -463,6 +485,7 @@ import { RiArrowRightLine } from "@remixicon/react";
       </>
     )),
     demos: () => ([
+      {id:"source-contract",title:"图片来源切换",node:<AvatarContractDemo/>},
       {id:"fallback",title:"图片加载失败回退",node:<CoreAvatar src="data:image/png;base64,broken" alt="测试头像" initials="A" aria-label="回退头像"/>},
       {
         id: "sizes",
@@ -490,6 +513,7 @@ import { RiArrowRightLine } from "@remixicon/react";
       </div>
     )),
     demos: () => ([
+      {id:"loading-contract",title:"等待态与数值更新",node:<LoadingContractDemo/>},
       {
         id: "sizes",
         title: "尺寸",
@@ -514,7 +538,7 @@ import { RiArrowRightLine } from "@remixicon/react";
         <Spinner className="text-accent-500" size={28} />
       </>
     )),
-    demos: () => ([]),
+    demos: () => ([{id:"spinner-contract",title:"可访问名称",node:<div data-testid="spinner-contract" className="flex gap-3"><Spinner aria-label="正在同步" size={24}/><span id="spinner-label">正在读取</span><Spinner aria-labelledby="spinner-label" size={20}/></div>}]),
   },
 
   skeleton: {
@@ -530,7 +554,7 @@ import { RiArrowRightLine } from "@remixicon/react";
         </div>
       </div>
     )),
-    demos: () => ([]),
+    demos: () => ([{id:"radius-contract",title:"圆角变体",node:<div data-testid="skeleton-contract" className="flex flex-wrap gap-2"><Skeleton className="size-10" rounded="sm"/><Skeleton className="size-10" rounded="md"/><Skeleton className="size-10" rounded="lg"/><Skeleton className="size-10" rounded="full"/><Skeleton className="size-10"/></div>}]),
   },
 
   divider: {
@@ -544,7 +568,7 @@ import { RiArrowRightLine } from "@remixicon/react";
         <span className="text-body-regular text-text-secondary">下方内容</span>
       </div>
     )),
-    demos: () => ([]),
+    demos: () => ([{id:"orientation-contract",title:"方向与语义",node:<div data-testid="divider-contract" className="flex w-full max-w-sm flex-col gap-3"><div className="flex h-8 items-center gap-3"><span>前</span><Divider orientation="vertical" aria-label="垂直分隔线" className="shrink-0"/><span>后</span></div><Divider aria-label="水平分隔线" id="horizontal-contract" className="w-full"/><Divider aria-hidden="true" data-testid="decorative-divider"/></div>}]),
   },
 
   tabs: {
@@ -670,7 +694,7 @@ import { RiArrowRightLine } from "@remixicon/react";
         <Announcement variant="error" title="同步失败" description="无法连接到远端仓库，请检查网络。" />
       </div>
     )),
-    demos: () => ([{id:"dismiss",title:"操作与关闭",node:<div className="w-full max-w-xs"><CoreAnnouncement title="完善工作区" description="管理工作区设置。" actionLabel="查看设置" dismissible closeLabel="关闭示例公告"/></div>}]),
+    demos: () => ([{id:"dismiss",title:"操作与关闭",node:<DismissContractDemo kind="announcement"/>}]),
   },
 
   notification: {
@@ -684,7 +708,7 @@ import { RiArrowRightLine } from "@remixicon/react";
         <Notification variant="error" title="上传失败" description="文件大小超过限制，请压缩后重试。" />
       </div>
     )),
-    demos: () => ([{id:"dismiss",title:"关闭与操作",node:<div className="w-full max-w-sm"><CoreNotification title="任务已完成" description="可手动关闭通知。" status="success" closeLabel="关闭示例通知" actions={[{label:"查看详情",variant:"secondary"}]}/></div>}]),
+    demos: () => ([{id:"dismiss",title:"关闭与操作",node:<DismissContractDemo kind="notification"/>}]),
   },
 
   toast: {
@@ -808,7 +832,7 @@ import { RiArrowRightLine } from "@remixicon/react";
         <Meter label="磁盘" value={93} tone="danger" />
       </div>
     )),
-    demos: () => ([]),
+    demos: () => ([{id:"meter-contract",title:"数值更新与边界",node:<MeterContractDemo/>}]),
   },
 
   "file-upload": {
@@ -1037,7 +1061,7 @@ import { RiArrowRightLine } from "@remixicon/react";
         />
       </div>
     )),
-    demos: () => ([]),
+    demos: () => ([{id:"limits-edge",title:"额度边界",node:<AgentLimitsCard limits={[{id:"zero",label:"未知额度",used:10,max:0},{id:"negative",label:"负数用量",used:-10,max:100},{id:"over",label:"超过额度",used:120,max:100}]}/>}]),
   },
 
   "agent-progress": {
@@ -1104,7 +1128,7 @@ import { RiArrowRightLine } from "@remixicon/react";
     description: "紧凑行高的数据表格变体，适合后台批量处理。",
     install: "npx boardui@latest add data-grid",
     preview: () => (<DataGridDemo />),
-    demos: () => ([]),
+    demos: () => ([{id:"empty-grid",title:"空数据状态",node:<DataGrid columns={[{id:"item",label:"项目"}]} rows={[]}/>}]),
   },
 
   "notification-center": {
@@ -1426,6 +1450,46 @@ import { RiArrowRightLine } from "@remixicon/react";
   },
 };
 /* ---------------- 内部演示组件 ---------------- */
+
+function LoadingContractDemo(){
+ const [pending,setPending]=useState(true),[value,setValue]=useState(25);
+ return <div data-testid="loading-contract" className="flex w-full max-w-sm flex-col gap-3">
+  <Progress aria-label="动态进度" value={value} minValue={20} maxValue={120} size="sm" isIndeterminate={pending}/>
+  <div className="flex flex-wrap gap-2"><Button onPress={()=>setPending(v=>!v)}>切换等待</Button><Button onPress={()=>setValue(95)}>更新进度</Button></div>
+ </div>;
+}
+function AvatarContractDemo(){
+ const [src,setSrc]=useState("data:image/png;base64,broken");
+ const good="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Crect width='24' height='24' fill='blue'/%3E%3C/svg%3E";
+ const ref=useRef<HTMLSpanElement>(null);
+ const [ready,setReady]=useState(false);
+ return <div data-testid="avatar-contract" className="flex flex-col gap-2">
+  <CoreAvatar ref={ref} src={src} initials="A" alt="切换头像" color="blue"/>
+  <div className="flex flex-wrap gap-2"><Button onPress={()=>setSrc(good)}>有效图片</Button><Button onPress={()=>setSrc("data:image/png;base64,broken")}>损坏图片</Button><Button onPress={()=>setReady(ref.current instanceof HTMLSpanElement)}>检查引用</Button></div>
+  <output>{String(ready)}</output>
+ </div>;
+}
+
+function MeterContractDemo(){
+ const [value,setValue]=useState(25);
+ return <div data-testid="meter-contract" className="flex w-full max-w-sm flex-col gap-3">
+  <Meter label="动态容量" value={value} max={200} className="meter-contract-root"/>
+  <Meter value={-3} label="负值"/>
+  <Meter value={250} max={200} label="超额" tone="danger"/>
+  <Meter value={NaN} max={0} label="无效值" tone="warning"/>
+  <Meter value={42} tone="success"/>
+  <div className="flex flex-wrap gap-2"><Button onPress={()=>setValue(175)}>增加</Button><Button onPress={()=>setValue(50)}>降低</Button></div>
+ </div>
+}
+
+function DismissContractDemo({kind}:{kind:"announcement"|"notification"}){
+ const [actions,setActions]=useState(0),[closed,setClosed]=useState(0),[instance,setInstance]=useState(0);
+ return <div className="flex w-full max-w-sm flex-col gap-2" data-testid="dismiss-contract">
+  {kind==="announcement"?<CoreAnnouncement key={instance} title="完善工作区" description="管理工作区设置。" actionLabel="查看设置" onAction={()=>setActions(v=>v+1)} dismissible closeLabel="关闭示例公告" onClose={()=>setClosed(v=>v+1)}/>:<CoreNotification key={instance} title="任务已完成" description="可手动关闭通知。" status="success" closeLabel="关闭示例通知" actions={[{label:"查看详情",variant:"secondary",onClick:()=>setActions(v=>v+1)}]} onDismiss={()=>setClosed(v=>v+1)}/>}
+  <output aria-live="polite">{actions} / {closed}</output>
+  <Button variant="secondary" onPress={()=>setInstance(v=>v+1)}>重置示例</Button>
+ </div>;
+}
 
 function ChipDemo() {
   return (

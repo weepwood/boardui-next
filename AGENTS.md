@@ -191,3 +191,30 @@
 
 - #41 run 45427115892 全部通过，Squash 合并 9b04fcd；Pages 45434367661 成功。正式运行 45426162052 源提交 acec795 的 build、Chromium/Firefox/WebKit、report 全部成功，三浏览器各 238/238，总计 714/714，Chromium 图表/工作区触摸专项 14/14。最终 release-gate 失败仅因逐组件五维未闭合；下载原始报告并逐条核对身份、覆盖、无重复/缺失、axe 后保存在 reference/evidence/formal-45426162052/。历史报告仍绑定 acec795，不冒充新源码通过。
 - 冻结新增功能，优先逐组件验收。关闭按钮保留固定上游四档 SVG 几何，补齐禁用样式、减少动效、焦点主题令牌；旧 React Aria 兼容层也继承减少动效。新增真实点击、Enter、Space、Tab 跳过禁用、ref、默认 button/显式 submit、兼容 onPress 与 RTL 断言。首次 duration=0s 断言不符合全局 0.01ms 规则，最终同时要求 transition-property:none 与时长上限。本地 Edge 20/20 页面专项，8/8 双主题双视口 LTR/RTL 状态截图和局部 axe，类型、单测、120 HTML 导出及预算通过。报告 reference/evidence/close-button-20261125.json。正式 CI 新增 Chromium 状态专项，五维记录仍为 partial，保留人工审查、独立包全 API 与真机限制。
+
+### 基础按钮批次收口（2026-11-25）
+
+- #42 run 45435094403 全部通过，Squash 合并 1f4713e；Pages 45435932817 成功。正式报告原始提交仍为 acec795。
+- Button/AriaButton 带边框纯图标中号统一为 36px 方形；ButtonGroup 的 size 传给未显式指定的子项（显式覆盖不变）；IconButton/旧版适配与组内按钮统一减少动效、主题焦点及禁用状态。没有增加依赖和公共 props。
+- 最终 Edge 20/20 双主题页面、8/8 双主题双视口双方向状态截图及局部 axe，TypeScript、单测、41 API 组/69 导出一致性、tarball SSR/类型、独立 Vite 实际安装构建和浏览器消费通过。120 HTML 导出及资源预算通过（JS 509770B，HTML 26539B）。报告 reference/evidence/button-family-20261125.json；scripts/audit-button-family.mjs 加入正式 Chromium 流程。截图为局部状态，不冒充原版对照；只登记 partial，正式新源码三浏览器和人工无障碍仍待完成。
+
+### 集中发布收口（2026-11-25，用户调整）
+
+- 剩余基础按钮、表单、导航浮层、数据展示、图表、应用组件及模板统一在现有 PR #43（qa/button-family-closure）推进；不再按小批次创建 PR，不为各个小组件单独发布。使用中文 Git commit，集中处理实际缺陷、整体验收一次、通过后统一审查合并与生产发布。中间提交的 CI 不能作为最终提交的结果；不降低已有正式门禁。
+- #43 原 head 9305295 的 run 45436399141 已通过，按用户要求保留 PR 继续扩充，未提前合并。统一 Checkbox/Radio/Switch/Slider 焦点偏移色和减少动效；修复 Pagination 从 1 页动态到多页无法重新观测及极窄容器溢出，260px 以下显示当前/总页数并保留前后按钮。
+- 扩展独立 Vite 消费到原生 FormData、Select、Tabs、窄容器动态分页。实际 tarball SSR/类型/独立构建和 Edge 浏览器通过；首次 radio.check 指针拦截，最终通过实际键盘 Space 并断言 checked。类型、单测、API 以及 120 HTML 静态导出预算通过。报告 reference/evidence/consolidated-consumer-20261125.json。扩展示例产生 Vite 大 chunk 提示，未放宽生产预算。正式全站候选仍需新提交的完整三浏览器结果；104 项五维门禁不自动批准。
+
+- 集中 PR #43 继续使用同一分支。e51f61b 日常 run 45437113841 全部通过；正式 run 45437101528 构建、Chromium/Firefox/WebKit、报告通过，各 238/238 共 714/714，release-gate 仅逐组件五维未闭合。下载原始报告及正式汇总至 reference/evidence/formal-45437101528，证据仍绑定 e51f61b。
+- 同 PR 新修复 DataGrid/DataTable 键盘滚动区域、排序焦点、空表禁用全选、清除选择恢复焦点及数量播报；ChartArea/ChartDataInspector 分离视觉悬停和稳定主动选择 aria-live。无新依赖/公共接口变更。本地 Edge 32/32 页面专项、28/28 响应式和局部 axe、类型、单测、120 HTML 导出及预算通过；报告 reference/evidence/consolidated-data-chart-20261125.json。未进行人工读屏，不自动标记正式五维通过。
+
+- 集中 PR #43 最新 821784d 日常 45439560094 通过，正式 45439538959 构建成功但三浏览器仍在执行（本次检查时）。新候选增加显式首次加载 URL ?audit-direction=rtl，真实 Arabic I18nProvider 和根 dir 一致；正常中文仍 LTR。新增全 104 条目 RTL 初始态双配置审计；首次 122/208，86 个窄屏 scrollable-region-focusable，定位到公共安装/代码块及营销数据表。集中补齐 tabindex、名称、焦点环，代码保持 LTR；最终 208/208（1440 浅色、390 深色）及普通 LTR 专项 24/24。色板恢复 Tailwind 动态引用所需 primitive，实际 4 配置×69 色阶有效，类型、单测、120 HTML 导出及资源预算通过。报告 reference/evidence/consolidated-rtl-20261125.json，8 张真实截图。加入正式 Chromium 审计；新增 report-acceptance-gaps.mjs 生成逐维缺口，不变更任何 verification 状态，不将初始态自动化等同人工完整五维。
+
+- #43 集中 API 与剩余交互：821784d 正式 45439538959 三浏览器各238/238，共714/714，原始报告逐条核对归档；最终五维 gate 未通过。新增 API 审计：104 条目源码签名、94 tarball 运行时导出、69 已有文档导出，区分71条应用/指南映射及独立包。剩余21条目双主题42/42，真实交互14组、状态回退/边界4组、纯展示24组。修复额度无效值与语义、LinkButton 焦点及 RTL/减少动效、贡献图键盘滚动、FunnelChart 空值/零基线与深色胶囊；公告/通知回调实测。独立包 SSR/类型/Vite 真实交互、类型/单测、120 HTML 及预算通过。报告 reference/evidence/consolidated-api-contracts-20261125.json 与 reference/evidence/consolidated-remaining-interactions-20261125.json。独立扩展示例 JS 671.31kB 有 chunk 提示，生产预算不变。正式 CI 增加两项审计；证据均为 partial，正式五维及最新三浏览器仍待验收。
+
+- #43 正式 run 45442604183 对 c717fb5 三浏览器714/714，日常45442622651通过；原始报告与API产物归档。剩余8组件视觉专项32/32，52张实际截图哈希尺寸核验；StatCards 按容器宽度调整列数、Avatar/Chip减少动效。120 HTML与预算通过。报告 reference/evidence/consolidated-feedback-visual-20261125.json。全104条目五维均有部分证据，正式完整验收仍未闭合，不自动批准。
+
+- #43 最新 56e0c4a 日常45452026858通过，正式45452007160的 build、三浏览器、report通过，714/714无失败或缺失；仅 release-gate 因逐组件完整证据未闭合失败。归档原始报告 reference/evidence/formal-45452007160/，绑定该提交。实际下载最新 Chromium 44张初始态候选、校验哈希尺寸并查看8张联系表；保留为限定初始态回归参考，新增 review记录及 verify-reviewed-baseline.mjs，非人工批准或全状态原版对照。修正 Color 语义边框旧变量、Typography 两个字号标注及四档真实字重，静态类名防裁剪；类型、单测、18/18本地专项、120 HTML导出及预算通过，初次 Edge 路径填写错误后更正。报告 reference/evidence/final-guide-tokens-20261125.json。继续冻结新增功能，避免每个证据更新都手动触发全量CI；待真正的正式验收缺口闭合后统一进行最终候选完整验收。未改变任何五维门禁，不提前发布。
+
+- #43 在 648b808 基础上首次正式逐维裁定：Divider interaction 不适用（静态无固有操作），Divider RTL、Meter API 与 RTL 通过，共4/520维度；其余维度仍待验收。强化 check-evidence，not-applicable 强制来源、理由及链接，新增六种门禁正负例测试。实际发现装饰 Separator 的 aria-hidden 被 RAC 过滤、hr 默认边框覆盖语义色；显式类型/渲染转发及 border-0 修复。共享进度/度量渐变 RTL 镜像。双主题双视口双方向最终8/8组合，两组件16张截图；独立 tarball SSR/类型/Vite实际消费通过，动态容量、边界、方向与比例断言通过。120 HTML与资源预算通过；报告 reference/evidence/passive-contract-decisions-20261125.json，正式 CI 增加被动组件专项。未批准人工读屏、正常动效中断或完整视觉；新源码三浏览器待验证，正式发布仍阻塞。不新建PR，不重复手动触发全量CI。
+
+- #43 集中等待与头像契约：a9ec6f0 日常45458806107 quick通过、targeted截至本轮检查仍执行。Avatar 按 src 重建内部图片状态，失败后换源可重新请求；Spinner 尊重 aria-label/labelledby 并隐藏装饰SVG；Progress 不确定态按RTL镜像，观察稳定容器、离屏暂停/恢复、减少动效居中。合并专项8/8：主题、方向、正常/减少动效，真实等待态/值切换、图片重复回退/ref、Spinner命名、Skeleton全部自有圆角属性；类型、单测、API、tarball及独立消费和120 HTML预算通过。报告 reference/evidence/loading-contract-decisions-20261125.json。新增正式 Progress RTL、Skeleton API 两项，累计6/520，其余保持 partial，未声称人工读屏或最新三浏览器通过。CI增加合并专项，无新PR，不手动重复全量验收。

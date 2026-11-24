@@ -1,0 +1,228 @@
+{
+  "base": "1f4713ed0428e1f6d49b09d3e8e60e837e5da6b4",
+  "browser": "Edge (Chromium), macOS",
+  "scope": "Button/AriaButton 36px 正方形、ButtonGroup 尺寸继承、IconButton/CloseButton 状态、键盘、方向和独立消费",
+  "visual": [
+    {
+      "theme": "light",
+      "width": 1440,
+      "direction": "ltr",
+      "status": "passed",
+      "file": "light-1440-ltr.png"
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "direction": "rtl",
+      "status": "passed",
+      "file": "light-1440-rtl.png"
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "direction": "ltr",
+      "status": "passed",
+      "file": "light-390-ltr.png"
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "direction": "rtl",
+      "status": "passed",
+      "file": "light-390-rtl.png"
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "direction": "ltr",
+      "status": "passed",
+      "file": "dark-1440-ltr.png"
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "direction": "rtl",
+      "status": "passed",
+      "file": "dark-1440-rtl.png"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "direction": "ltr",
+      "status": "passed",
+      "file": "dark-390-ltr.png"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "direction": "rtl",
+      "status": "passed",
+      "file": "dark-390-rtl.png"
+    }
+  ],
+  "browserTargeted": {
+    "browser": "chromium",
+    "results": [
+      {
+        "theme": "light",
+        "route": "/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/button/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/select/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/modal/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/templates/dashboard/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/button-group/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/icon-button/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/close-button/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/rtl/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/button/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/select/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/modal/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/templates/dashboard/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/button-group/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/icon-button/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/close-button/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/rtl/",
+        "violations": [],
+        "status": "checked"
+      }
+    ],
+    "errors": []
+  },
+  "consumer": {
+    "archive": "weepwood-boardui-next-0.1.0.tgz",
+    "archiveBytes": 121079,
+    "ssr": "passed",
+    "types": "passed",
+    "viteBuild": "passed",
+    "browser": "passed",
+    "checks": [
+      "group height 32px/item 30px",
+      "aria-pressed",
+      "disabled skipped by Tab",
+      "native and Aria icon buttons 36px square",
+      "disabled click ignored",
+      "CloseButton reset",
+      "dark and RTL"
+    ]
+  },
+  "export": {
+    "pages": 120,
+    "maxGzipJs": 509770,
+    "maxGzipHtml": 26539,
+    "templateCatalogGzipJs": 253870
+  },
+  "screenshots": [
+    "reference/evidence/screenshots/20261125-button-family/light-1440-ltr.png",
+    "reference/evidence/screenshots/20261125-button-family/light-1440-rtl.png",
+    "reference/evidence/screenshots/20261125-button-family/light-390-ltr.png",
+    "reference/evidence/screenshots/20261125-button-family/light-390-rtl.png",
+    "reference/evidence/screenshots/20261125-button-family/dark-1440-ltr.png",
+    "reference/evidence/screenshots/20261125-button-family/dark-1440-rtl.png",
+    "reference/evidence/screenshots/20261125-button-family/dark-390-ltr.png",
+    "reference/evidence/screenshots/20261125-button-family/dark-390-rtl.png"
+  ],
+  "limitations": [
+    "局部截图并非原站全部状态对照",
+    "独立消费测试只覆盖指定合约，不等于全部 API",
+    "Firefox/WebKit 最终候选及人工读屏待验证",
+    "ButtonGroup 的 size 现在传递给未指定尺寸的子项；显式尺寸覆盖仍保留"
+  ]
+}

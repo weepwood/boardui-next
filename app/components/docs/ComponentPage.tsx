@@ -65,7 +65,7 @@ export function ComponentPage({
             <div className="flex items-center gap-2 border-b border-separator-border px-3 py-2">
               <span className="text-caption-1-medium text-text-tertiary">终端</span>
             </div>
-            <pre className="overflow-x-auto p-3 font-mono text-body-2-regular text-text-primary">
+            <pre tabIndex={0} dir="ltr" aria-label="代码示例" className="outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-border-focus-ring overflow-x-auto p-3 font-mono text-body-2-regular text-text-primary">
               <code>{"git clone https://github.com/weepwood/boardui-next.git\ncd boardui-next\nnpm ci\nnpm run test:library"}</code>
             </pre>
           </div>

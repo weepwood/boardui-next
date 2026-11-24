@@ -1,0 +1,420 @@
+{
+  "base": "a9ec6f0ca8ae145a56ef515ed436ed376a64bef3",
+  "scope": "Progress mode transition, normal/reduced motion lifecycle and logical fill; Avatar source retry/ref; Spinner names; Skeleton own prop variants",
+  "results": [
+    {
+      "theme": "light",
+      "direction": "ltr",
+      "motion": "no-preference",
+      "geometry": {
+        "height": 6,
+        "start": 0
+      },
+      "shapes": [
+        {
+          "radius": "4px",
+          "w": 40,
+          "h": 40,
+          "hidden": "true",
+          "animation": "bui-skeleton-sheen-x"
+        },
+        {
+          "radius": "6px",
+          "w": 40,
+          "h": 40,
+          "hidden": "true",
+          "animation": "bui-skeleton-sheen-x"
+        },
+        {
+          "radius": "10px",
+          "w": 40,
+          "h": 40,
+          "hidden": "true",
+          "animation": "bui-skeleton-sheen-x"
+        },
+        {
+          "radius": "3.35544e+07px",
+          "w": 40,
+          "h": 40,
+          "hidden": "true",
+          "animation": "bui-skeleton-sheen-x"
+        },
+        {
+          "radius": "6px",
+          "w": 40,
+          "h": 40,
+          "hidden": "true",
+          "animation": "bui-skeleton-sheen-x"
+        }
+      ],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "theme": "light",
+      "direction": "ltr",
+      "motion": "reduce",
+      "geometry": {
+        "height": 6,
+        "start": 0
+      },
+      "shapes": [
+        {
+          "radius": "4px",
+          "w": 40,
+          "h": 40,
+          "hidden": "true",
+          "animation": "none"
+        },
+        {
+          "radius": "6px",
+          "w": 40,
+          "h": 40,
+          "hidden": "true",
+          "animation": "none"
+        },
+        {
+          "radius": "10px",
+          "w": 40,
+          "h": 40,
+          "hidden": "true",
+          "animation": "none"
+        },
+        {
+          "radius": "3.35544e+07px",
+          "w": 40,
+          "h": 40,
+          "hidden": "true",
+          "animation": "none"
+        },
+        {
+          "radius": "6px",
+          "w": 40,
+          "h": 40,
+          "hidden": "true",
+          "animation": "none"
+        }
+      ],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "theme": "light",
+      "direction": "rtl",
+      "motion": "no-preference",
+      "geometry": {
+        "height": 6,
+        "start": 0
+      },
+      "shapes": [
+        {
+          "radius": "4px",
+          "w": 40,
+          "h": 40,
+          "hidden": "true",
+          "animation": "bui-skeleton-sheen-x"
+        },
+        {
+          "radius": "6px",
+          "w": 40,
+          "h": 40,
+          "hidden": "true",
+          "animation": "bui-skeleton-sheen-x"
+        },
+        {
+          "radius": "10px",
+          "w": 40,
+          "h": 40,
+          "hidden": "true",
+          "animation": "bui-skeleton-sheen-x"
+        },
+        {
+          "radius": "3.35544e+07px",
+          "w": 40,
+          "h": 40,
+          "hidden": "true",
+          "animation": "bui-skeleton-sheen-x"
+        },
+        {
+          "radius": "6px",
+          "w": 40,
+          "h": 40,
+          "hidden": "true",
+          "animation": "bui-skeleton-sheen-x"
+        }
+      ],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "theme": "light",
+      "direction": "rtl",
+      "motion": "reduce",
+      "geometry": {
+        "height": 6,
+        "start": 0
+      },
+      "shapes": [
+        {
+          "radius": "4px",
+          "w": 40,
+          "h": 40,
+          "hidden": "true",
+          "animation": "none"
+        },
+        {
+          "radius": "6px",
+          "w": 40,
+          "h": 40,
+          "hidden": "true",
+          "animation": "none"
+        },
+        {
+          "radius": "10px",
+          "w": 40,
+          "h": 40,
+          "hidden": "true",
+          "animation": "none"
+        },
+        {
+          "radius": "3.35544e+07px",
+          "w": 40,
+          "h": 40,
+          "hidden": "true",
+          "animation": "none"
+        },
+        {
+          "radius": "6px",
+          "w": 40,
+          "h": 40,
+          "hidden": "true",
+          "animation": "none"
+        }
+      ],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "theme": "dark",
+      "direction": "ltr",
+      "motion": "no-preference",
+      "geometry": {
+        "height": 6,
+        "start": 0
+      },
+      "shapes": [
+        {
+          "radius": "4px",
+          "w": 40,
+          "h": 40,
+          "hidden": "true",
+          "animation": "bui-skeleton-sheen-x"
+        },
+        {
+          "radius": "6px",
+          "w": 40,
+          "h": 40,
+          "hidden": "true",
+          "animation": "bui-skeleton-sheen-x"
+        },
+        {
+          "radius": "10px",
+          "w": 40,
+          "h": 40,
+          "hidden": "true",
+          "animation": "bui-skeleton-sheen-x"
+        },
+        {
+          "radius": "3.35544e+07px",
+          "w": 40,
+          "h": 40,
+          "hidden": "true",
+          "animation": "bui-skeleton-sheen-x"
+        },
+        {
+          "radius": "6px",
+          "w": 40,
+          "h": 40,
+          "hidden": "true",
+          "animation": "bui-skeleton-sheen-x"
+        }
+      ],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "theme": "dark",
+      "direction": "ltr",
+      "motion": "reduce",
+      "geometry": {
+        "height": 6,
+        "start": 0
+      },
+      "shapes": [
+        {
+          "radius": "4px",
+          "w": 40,
+          "h": 40,
+          "hidden": "true",
+          "animation": "none"
+        },
+        {
+          "radius": "6px",
+          "w": 40,
+          "h": 40,
+          "hidden": "true",
+          "animation": "none"
+        },
+        {
+          "radius": "10px",
+          "w": 40,
+          "h": 40,
+          "hidden": "true",
+          "animation": "none"
+        },
+        {
+          "radius": "3.35544e+07px",
+          "w": 40,
+          "h": 40,
+          "hidden": "true",
+          "animation": "none"
+        },
+        {
+          "radius": "6px",
+          "w": 40,
+          "h": 40,
+          "hidden": "true",
+          "animation": "none"
+        }
+      ],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "theme": "dark",
+      "direction": "rtl",
+      "motion": "no-preference",
+      "geometry": {
+        "height": 6,
+        "start": 0
+      },
+      "shapes": [
+        {
+          "radius": "4px",
+          "w": 40,
+          "h": 40,
+          "hidden": "true",
+          "animation": "bui-skeleton-sheen-x"
+        },
+        {
+          "radius": "6px",
+          "w": 40,
+          "h": 40,
+          "hidden": "true",
+          "animation": "bui-skeleton-sheen-x"
+        },
+        {
+          "radius": "10px",
+          "w": 40,
+          "h": 40,
+          "hidden": "true",
+          "animation": "bui-skeleton-sheen-x"
+        },
+        {
+          "radius": "3.35544e+07px",
+          "w": 40,
+          "h": 40,
+          "hidden": "true",
+          "animation": "bui-skeleton-sheen-x"
+        },
+        {
+          "radius": "6px",
+          "w": 40,
+          "h": 40,
+          "hidden": "true",
+          "animation": "bui-skeleton-sheen-x"
+        }
+      ],
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "theme": "dark",
+      "direction": "rtl",
+      "motion": "reduce",
+      "geometry": {
+        "height": 6,
+        "start": 0
+      },
+      "shapes": [
+        {
+          "radius": "4px",
+          "w": 40,
+          "h": 40,
+          "hidden": "true",
+          "animation": "none"
+        },
+        {
+          "radius": "6px",
+          "w": 40,
+          "h": 40,
+          "hidden": "true",
+          "animation": "none"
+        },
+        {
+          "radius": "10px",
+          "w": 40,
+          "h": 40,
+          "hidden": "true",
+          "animation": "none"
+        },
+        {
+          "radius": "3.35544e+07px",
+          "w": 40,
+          "h": 40,
+          "hidden": "true",
+          "animation": "none"
+        },
+        {
+          "radius": "6px",
+          "w": 40,
+          "h": 40,
+          "hidden": "true",
+          "animation": "none"
+        }
+      ],
+      "status": "passed",
+      "errors": []
+    }
+  ],
+  "sourceSha256": {
+    "packages/react/progress.tsx": "20222a69acea1cdd3c84fc26d6c8a2b2e19d9a744e9f7ea00eecff1348bc40bc",
+    "packages/react/avatar.tsx": "4fd7539032a547bc58f17c99057cf93dde08de0b2bb69bbaa4468f8c95dece08",
+    "packages/react/use-visible-activity.ts": "b659e039d3e7b5ec85e1c6cf854baaec82a216b6a534849f3b934adfdcb9ca81",
+    "app/components/ui/Spinner.tsx": "31223ca7df4260381a89efab959a5e2fa70e5203d078d69a33adc0b0e4eed63d",
+    "app/components/ui/Skeleton.tsx": "d89a6d1e407f11e8b65826de9e0d197611f8e512b5e5621c372ea93b30513142",
+    "app/globals.css": "db7a28e8c250f2992f4b16cbda35010325111b9e3e99d0bc017aba60d73f0507",
+    "lib/docs/registry.tsx": "299dd288050d8f9dfcf0cfde9a2e5bf35031caca46377b483243d278bede088a",
+    "scripts/audit-loading-contracts.mjs": "3c400c7893c0acc90d7de54143d868d9ed943cc511333b4192a86ca0a34fb955"
+  },
+  "browser": "Edge Chromium macOS",
+  "consumer": {
+    "packedSSR": "passed",
+    "packedTypes": "passed",
+    "independentViteBuild": "passed",
+    "existingBrowserRegression": "passed"
+  },
+  "export": {
+    "pages": 120,
+    "peakGzipJs": 511794,
+    "peakGzipHtml": 26527,
+    "templateCatalogGzipJs": 253900
+  },
+  "limitations": [
+    "8 combinations couple light with desktop and dark with mobile; not all viewport/theme Cartesian combinations",
+    "Avatar photo-source/ref cases, not all inherited HTML props",
+    "Spinner named states, not all inherited ProgressBar props",
+    "No manual screen reader or new full Firefox/WebKit check",
+    "Progress normal motion mode transition and viewport pause/resume verified; browser background-tab visibility not separately simulated"
+  ]
+}

@@ -324,13 +324,15 @@ export function FunnelChart({
   height?: number;
 }) {
   const n = steps.length;
-  const max = steps[0]?.value ?? 1;
+  const safeSteps=steps.map(s=>({...s,value:Number.isFinite(s.value)?Math.max(0,s.value):0}));
+  const first=safeSteps[0]?.value??0;
+  const max=Math.max(1,...safeSteps.map(s=>s.value));
 
   const VW = 400;
   const VH = 100;
   const PAD_X = 2;
   const PAD_Y = 4;
-  const segW = (VW - PAD_X * 2) / n;
+  const segW = (VW - PAD_X * 2) / Math.max(1,n);
   const maxH = VH - PAD_Y * 2;
 
   const colors = [
@@ -341,8 +343,9 @@ export function FunnelChart({
   ];
 
   // 每段高度：严格按数值比例，但保底 26%（避免末段过薄无法容纳胶囊）
-  const hs = steps.map((s) => Math.max(maxH * 0.26, (s.value / max) * maxH));
+  const hs = safeSteps.map((s) => Math.max(maxH * 0.26, (s.value / max) * maxH));
 
+  if(!n)return <div role="status" className="flex items-center justify-center text-body-2-regular text-text-secondary" style={{height}}>暂无可展示数据</div>;
   return (
     <svg
       viewBox={`0 0 ${VW} ${VH}`}
@@ -350,9 +353,10 @@ export function FunnelChart({
       className="w-full"
       style={{ height }}
       aria-label="转化漏斗"
+      aria-description={safeSteps.map(s=>s.label+"："+s.value).join("；")}
       role="img"
     >
-      {steps.map((s, i) => {
+      {safeSteps.map((s, i) => {
         const x1 = PAD_X + i * segW;
         const x2 = x1 + segW;
         const h1 = hs[i];
@@ -383,10 +387,10 @@ export function FunnelChart({
       })}
 
       {/* 百分比胶囊：白底 + 细描边，居中于每段 */}
-      {steps.map((s, i) => {
+      {safeSteps.map((s, i) => {
         const cx = PAD_X + i * segW + segW / 2;
-        const pct = Math.round((s.value / max) * 100);
-        const label = `${pct}%`;
+        const pct=first>0?Math.round(s.value/first*100):null;
+        const label=pct===null?"—":`${pct}%`;
         const w = label.length * 6.4 + 12;
         return (
           <g key={`l-${s.label}`}>
@@ -396,7 +400,7 @@ export function FunnelChart({
               width={w}
               height="14"
               rx="7"
-              fill="white"
+              fill="var(--color-background-primary-default)"
               stroke="var(--color-separator-border)"
               strokeWidth="0.25"
             />

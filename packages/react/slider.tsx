@@ -136,7 +136,7 @@ function SliderBase<T extends SliderValue>({
                             "transition-[scale,box-shadow,border-color] duration-150 ease motion-reduce:transition-none",
                             isThumbHovered && !isDragging && "scale-105 border-border-button-hover",
                             isDragging && "z-20 scale-110 border-accent-500 shadow-[0_3px_8px_color-mix(in_srgb,var(--color-accent-600)_22%,transparent)]",
-                            isFocusVisible && "ring-2 ring-border-focus-ring ring-offset-2",
+                            isFocusVisible && "ring-2 ring-border-focus-ring ring-offset-2 ring-offset-background-full",
                             isDisabled ? "cursor-not-allowed" : "cursor-grab active:cursor-grabbing",
                           )
                         }

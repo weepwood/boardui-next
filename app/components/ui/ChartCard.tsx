@@ -266,7 +266,7 @@ export function ChartCard({ kind, height = 196, periodFilter=false, data, record
         return <ChartDataInspector records={heat}>{active=><div className="overflow-x-auto p-1"><Heatmap values={heat.map(r=>r.value)} activeIndex={active}/></div>}</ChartDataInspector>;
       case "contributions":
         return (
-          <div className="overflow-x-auto pb-1">
+          <div role="region" aria-label="贡献记录滚动区域" tabIndex={0} className="overflow-x-auto pb-1 outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-border-focus-ring">
             <Heatmap weeks={20} seed={11} />
           </div>
         );

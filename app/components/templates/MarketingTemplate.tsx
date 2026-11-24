@@ -115,7 +115,7 @@ export function MarketingTemplate() {
             <span className="text-body-2-medium text-text-primary">活动列表</span>
             <TemplateSegments values={["全部","进行中","已结束"] as const} value={filter} onChange={setFilter}/>
           </div>
-          <div className="min-w-0 overflow-x-auto overscroll-x-contain">
+          <div tabIndex={0} role="region" aria-label="营销数据表格" className="min-w-0 overflow-x-auto overscroll-x-contain outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-border-focus-ring">
             <table className="bui-table bui-table-sm">
               <thead>
                 <tr className="text-caption-1-semibold text-text-secondary">

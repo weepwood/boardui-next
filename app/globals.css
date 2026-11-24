@@ -3,6 +3,7 @@
 @import "@fontsource-variable/inter/opsz.css";
 @import "@fontsource-variable/jetbrains-mono";
 @import "./styles/tokens.css";
+@import "./styles/palette-primitives.css";
 @import "./styles/keyframes.css";
 @import "./styles/typography.css";
 @import "../packages/styles/button.css";
@@ -188,8 +189,12 @@
 }
 
 @keyframes bui-progress-sweep {
-  0% { transform: translateX(-120%); }
-  100% { transform: translateX(420%); }
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(300%); }
+}
+@keyframes bui-progress-sweep-rtl {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-300%); }
 }
 
 /* Tailwind expands shadow utilities into `--tw-shadow` at build time. Point
@@ -523,6 +528,12 @@ aside nav [data-nav-pending="true"] {
 [data-motion-active="false"] .bui-composer-loader-rect,
 [data-motion-active="false"] .bui-search-spinner,
 [data-spinner][data-motion-active="false"],
+[data-progress-motion][data-motion-active="false"] [data-progress-sweep],
 [data-skeleton][data-motion-active="false"]::before {
   animation-play-state: paused !important;
+}
+
+/* Keep a visible, static indicator when motion is reduced, including RTL. */
+@media (prefers-reduced-motion: reduce) {
+  [data-progress-sweep] { animation: none !important; transform: none; inset-inline-start: 33.333333%; }
 }

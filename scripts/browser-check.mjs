@@ -514,6 +514,7 @@ try{
           const panel=page.locator('#preview [role=tabpanel]');
           const control=panel.getByRole('combobox',{name:'查看图表数据点'});
           await control.selectOption('0');await panel.locator('[data-chart-tooltip]').waitFor();
+          assert.equal(await panel.locator('[data-chart-announcement]').textContent(),await panel.locator('[data-chart-tooltip] p').evaluateAll(es=>es.map(e=>e.textContent).join('：')));
           const record=page.locator('#records [role=tabpanel]');
           await record.getByRole('radio',{name:'更新数据'}).click();
           await record.getByRole('combobox',{name:'查看图表数据点'}).selectOption('0');
@@ -606,10 +607,13 @@ try{
           const position=await chart.evaluate(svg=>{const p=new DOMPoint(37,40).matrixTransform(svg.getScreenCTM());return {x:p.x,y:p.y}});
           await page.mouse.move(position.x,position.y);
           await demo.locator('[data-chart-tooltip]').getByText('3,400',{exact:true}).waitFor();
+          assert.equal(await demo.locator('[data-chart-announcement]').textContent(),'');
           await page.mouse.move(0,0);await demo.locator('[data-chart-tooltip]').waitFor({state:'hidden'});
           await point.selectOption('0');await demo.locator('[data-chart-tooltip]').getByText('3,400',{exact:true}).waitFor();
+          const announcement=await demo.locator('[data-chart-announcement]').textContent();assert.ok(announcement.includes('3,400'));
           const later=await chart.evaluate(svg=>{const p=new DOMPoint(svg.viewBox.baseVal.width*.75,40).matrixTransform(svg.getScreenCTM());return {x:p.x,y:p.y}});
           await page.mouse.move(later.x,later.y);
+          assert.equal(await demo.locator('[data-chart-announcement]').textContent(),announcement);
           await page.mouse.move(0,0);
           assert.equal(await point.inputValue(),'0');
           await demo.locator('[data-chart-tooltip]').getByText('3,400',{exact:true}).waitFor();
@@ -859,14 +863,37 @@ try{
           assert.equal(await table.locator('tbody tr').count(),1);
 
         }
+        if(route==='/zh-hans/components/color/'){
+          stage='palette: runtime primitive values';
+          const swatches=await page.locator('#palette [title^="--color-"]').evaluateAll(es=>es.map(e=>({token:e.title,background:getComputedStyle(e).backgroundColor})));
+          assert.equal(swatches.length,69);
+          const semantic=await page.locator('[data-semantic-color]').evaluateAll(es=>es.map(e=>({token:e.dataset.semanticColor,value:getComputedStyle(e).backgroundColor})));
+          assert.equal(semantic.length,10);assert.ok(semantic.every(x=>x.value!=='rgba(0, 0, 0, 0)'),JSON.stringify(semantic));
+          assert.ok(swatches.every(s=>s.background!=='rgba(0, 0, 0, 0)'),JSON.stringify(swatches.filter(s=>s.background==='rgba(0, 0, 0, 0)')));
+        }
+        if(route==='/zh-hans/components/typography/'){
+          stage='typography: actual size and weight tokens';
+          const sizes=await page.locator('[data-typography-size]').evaluateAll(es=>es.map(e=>[e.dataset.typographySize,getComputedStyle(e).fontSize]));
+          assert.equal(sizes.length,11);assert.ok(sizes.every(([a,b])=>a===b),JSON.stringify(sizes));
+          const weights=await page.locator('[data-typography-weight]').evaluateAll(es=>es.map(e=>[e.dataset.typographyWeight,getComputedStyle(e).fontWeight]));
+          assert.equal(weights.length,4);assert.ok(weights.every(([a,b])=>a===b),JSON.stringify(weights));
+        }
         if(route==='/zh-hans/components/data-grid/'){
           const demo=page.locator('#preview');
           await demo.getByRole('button',{name:'数量'}).click();
           assert.ok((await demo.locator('tbody tr').first().textContent()).includes('IT-002'));
           await demo.getByRole('checkbox',{name:'全选'}).press('Space');
           await demo.getByText('已选 3 项').waitFor();
-          await demo.getByRole('button',{name:'清除选择'}).click();
-          assert.ok(!(await demo.getByRole('checkbox',{name:'全选'}).isChecked()));
+          await demo.getByRole('button',{name:'清除选择'}).press('Enter');
+          const selectAll=demo.getByRole('checkbox',{name:'全选'});
+          assert.ok(!(await selectAll.isChecked()));
+          assert.ok(await selectAll.evaluate(e=>document.activeElement===e));
+          assert.equal(await demo.getByRole('columnheader',{name:'数量'}).getAttribute('aria-sort'),'ascending');
+          const scroll=demo.getByRole('region',{name:'数据表格滚动区域'});
+          await scroll.focus();assert.ok(await scroll.evaluate(e=>e===document.activeElement));
+          const empty=page.locator('#empty-grid [role=tabpanel]');
+          assert.ok(await empty.getByRole('checkbox',{name:'全选'}).isDisabled());
+          await empty.getByText('没有数据',{exact:true}).waitFor();
         }
         if(route==='/zh-hans/components/data-table/'){
           const demo=page.locator('#preview');
@@ -1234,6 +1261,28 @@ try{
             await radioB.press('ArrowUp');
             await page.waitForFunction(()=>document.querySelector('[data-testid="controlled-selection"] output')?.textContent==='false / false / a');
           }
+        }
+        if(route==='/zh-hans/components/button/'){
+          stage='button family: square, inherited size and RTL';
+          const demo=page.getByTestId('button-contract');
+          await demo.scrollIntoViewIfNeeded();
+          const direction=demo.getByRole('button',{name:'方向操作'}),aria=demo.getByRole('button',{name:'ARIA 操作'}),disabled=demo.getByRole('button',{name:'禁用图标'});
+          for(const b of [direction,aria]){const size=await b.boundingBox();assert.equal(size?.width,36);assert.equal(size?.height,36);}
+          assert.equal(await disabled.isDisabled(),true);
+          await disabled.evaluate(e=>e.click());
+          await direction.press('Enter');await aria.press('Space');
+          assert.equal(await demo.locator('output').textContent(),'2 / false');
+          const group=demo.getByRole('group',{name:'继承尺寸'}),toggle=group.getByRole('button',{name:'切换'});
+          assert.equal((await group.boundingBox())?.height,32);
+          assert.equal((await toggle.boundingBox())?.height,30);
+          await toggle.press('Space');assert.equal(await toggle.getAttribute('aria-pressed'),'true');
+          await toggle.press('Tab');assert.ok(await group.getByRole('button',{name:'组方向'}).evaluate(e=>e===document.activeElement));
+          assert.equal(await demo.getByRole('link',{name:'返回预览'}).getAttribute('href'),'#preview');
+          const before=await direction.locator('svg').evaluate(e=>getComputedStyle(e).rotate);
+          await demo.getByRole('checkbox',{name:'RTL'}).check();
+          const after=await direction.locator('svg').evaluate(e=>getComputedStyle(e).rotate);
+          assert.notEqual(before,after);
+          assert.equal(await demo.locator('output').textContent(),'2 / true');
         }
         if(route==='/zh-hans/components/button-group/'){
           const demo=page.getByTestId('button-family');

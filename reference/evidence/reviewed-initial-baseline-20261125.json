@@ -1,0 +1,545 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "56e0c4a356695535c38e4bf3b2e07062106705b5",
+  "sourceRun": 45452007160,
+  "candidateManifest": "reference/evidence/screenshots/20261125-reviewed-initial-baseline/manifest.json",
+  "candidateManifestSha256": "8c914e580787918f1e2840deb050330d4d76d376081cbf77f9bef0c3d4064e8f",
+  "status": "reviewed-initial-regression-baseline",
+  "method": "AI visual review of 8 contact sheets covering all 44 actual CI screenshots, with dimensions and hashes verified; no human or upstream full-state approval",
+  "scope": "11 fixed routes, initial viewport only, Chromium 141.0.7390.37 Linux x64, 1440x1000 and 390x844, light and dark",
+  "rows": [
+    {
+      "route": "/",
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "file": "light-1440-_.png",
+      "sha256": "eac68cde4636cd83cb11fc3cf401ffdccad13339bac5419146def0af61ab0105",
+      "decision": "retain-for-regression",
+      "note": "首页导航、标题层级与入口卡片；窄屏单列，底部导航入口为固定浮层。"
+    },
+    {
+      "route": "/zh-hans/components/button/",
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "file": "light-1440-_zh-hans_components_button_.png",
+      "sha256": "381e10d5e07c8d15ed636ab792f7e5b78bc348093ef73b73a3b08d49f68f3a35",
+      "decision": "retain-for-regression",
+      "note": "四种主预览按钮可见，窄屏换行；未审核所有禁用、悬停及按压状态。"
+    },
+    {
+      "route": "/zh-hans/components/input/",
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "file": "light-1440-_zh-hans_components_input_.png",
+      "sha256": "576b2286ad791200b679c23335450197662f8df795b7347d7782e7425375503b",
+      "decision": "retain-for-regression",
+      "note": "输入区与错误示例清晰；不包含自动填充及全部错误状态。"
+    },
+    {
+      "route": "/zh-hans/components/select/",
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "file": "light-1440-_zh-hans_components_select_.png",
+      "sha256": "9f755339fe0753838c677e3aa4d5ce75cfb279d60d2950807561f4b68d6720f9",
+      "decision": "retain-for-regression",
+      "note": "初始选择器和安装说明可见；下拉打开态另有专项。"
+    },
+    {
+      "route": "/zh-hans/components/modal/",
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "file": "light-1440-_zh-hans_components_modal_.png",
+      "sha256": "6733e9c53e55d50a97f58a5fc1cc43f0d9afc1ac751fe220d63e71b2d7045b80",
+      "decision": "retain-for-regression",
+      "note": "初始触发按钮居中；打开态不在本批截图内。"
+    },
+    {
+      "route": "/zh-hans/components/area-chart-card/",
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "file": "light-1440-_zh-hans_components_area-chart-card_.png",
+      "sha256": "546e06b91aeb5956e7b57e21dcd5a9d9e9fc2d38998a7d050986f86f0843d7e7",
+      "decision": "retain-for-regression",
+      "note": "面积图与图例随容器布局；未审核全部数据范围与选点。"
+    },
+    {
+      "route": "/workspace/dashboard/",
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "file": "light-1440-_workspace_dashboard_.png",
+      "sha256": "32b89cc1cf28b900c253f78941e490a95e8c4c826a75e22b8cc9a522e8920887",
+      "decision": "retain-for-regression",
+      "note": "指标、图表布局与明暗层级；窄屏指标逐行展示，图表需滚动到下方。"
+    },
+    {
+      "route": "/workspace/finance/",
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "file": "light-1440-_workspace_finance_.png",
+      "sha256": "da77213f254b4795f2c99ab0becae836da502c2e598c2f09c45205faff583730",
+      "decision": "retain-for-regression",
+      "note": "年度指标、现金流与分配分组；窄屏纵向展示。"
+    },
+    {
+      "route": "/workspace/project-board/",
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "file": "light-1440-_workspace_project-board_.png",
+      "sha256": "622713050f368f6bcb3a241d039d67dda02be3a97622c9f947618802cfdce966",
+      "decision": "retain-for-regression",
+      "note": "桌面四列，窄屏保留横向滚动看板，部分后续列需主动滚动。"
+    },
+    {
+      "route": "/workspace/ai-chat/",
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "file": "light-1440-_workspace_ai-chat_.png",
+      "sha256": "bb8533d968ac2cdb9154de61b91fb94ce9bebbedb3f597ece010a72b311069bb",
+      "decision": "retain-for-regression",
+      "note": "桌面三栏，窄屏收起侧栏并保留会话选择与输入区。"
+    },
+    {
+      "route": "/zh-hans/rtl/",
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "file": "light-1440-_zh-hans_rtl_.png",
+      "sha256": "170464fe5e9fdc99ba6aab4e6d1b8767e970d82ce3941951151fe6b773b9e56e",
+      "decision": "retain-for-regression",
+      "note": "RTL 实验区初始状态与页面整体可见性；不是全站逐状态方向验证。"
+    },
+    {
+      "route": "/",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "file": "light-390-_.png",
+      "sha256": "82521ecfb034adefa13c0d517a54f50f59ec54da2e9b9a1fe4b76e87d50eed04",
+      "decision": "retain-for-regression",
+      "note": "首页导航、标题层级与入口卡片；窄屏单列，底部导航入口为固定浮层。"
+    },
+    {
+      "route": "/zh-hans/components/button/",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "file": "light-390-_zh-hans_components_button_.png",
+      "sha256": "02f2a7da75fef5d056c787d0c399308f948ac537b4535ca83952b86b6f20a4eb",
+      "decision": "retain-for-regression",
+      "note": "四种主预览按钮可见，窄屏换行；未审核所有禁用、悬停及按压状态。"
+    },
+    {
+      "route": "/zh-hans/components/input/",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "file": "light-390-_zh-hans_components_input_.png",
+      "sha256": "b052ea2599b1fd92c3c6ea441d71844837213a5af63a902e4ba61313d065c8cf",
+      "decision": "retain-for-regression",
+      "note": "输入区与错误示例清晰；不包含自动填充及全部错误状态。"
+    },
+    {
+      "route": "/zh-hans/components/select/",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "file": "light-390-_zh-hans_components_select_.png",
+      "sha256": "64c6af727974e572a488f86eeb008879ce4f3e3c844930f2053b2a30d2eaad1d",
+      "decision": "retain-for-regression",
+      "note": "初始选择器和安装说明可见；下拉打开态另有专项。"
+    },
+    {
+      "route": "/zh-hans/components/modal/",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "file": "light-390-_zh-hans_components_modal_.png",
+      "sha256": "e64d530ea6f4b2dc3e5a7f771836a46e90f9263d4177304c15719f044e98c335",
+      "decision": "retain-for-regression",
+      "note": "初始触发按钮居中；打开态不在本批截图内。"
+    },
+    {
+      "route": "/zh-hans/components/area-chart-card/",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "file": "light-390-_zh-hans_components_area-chart-card_.png",
+      "sha256": "445e7daa2d98e612db31b37d09099c15ac6a6d804971e04da9bb94db11f06fe4",
+      "decision": "retain-for-regression",
+      "note": "面积图与图例随容器布局；未审核全部数据范围与选点。"
+    },
+    {
+      "route": "/workspace/dashboard/",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "file": "light-390-_workspace_dashboard_.png",
+      "sha256": "3b53a859b75198c101e3cf642ec84c8fcad594d792f744563c51da15c5ad092b",
+      "decision": "retain-for-regression",
+      "note": "指标、图表布局与明暗层级；窄屏指标逐行展示，图表需滚动到下方。"
+    },
+    {
+      "route": "/workspace/finance/",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "file": "light-390-_workspace_finance_.png",
+      "sha256": "8471fba6c58fb3734a22637f0dfa2f99dd59a3f4c5065d99e808b52ebf432064",
+      "decision": "retain-for-regression",
+      "note": "年度指标、现金流与分配分组；窄屏纵向展示。"
+    },
+    {
+      "route": "/workspace/project-board/",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "file": "light-390-_workspace_project-board_.png",
+      "sha256": "b26e9bafe5fcec9960debfc4b2c2bf0c907a4ce20d73e61499718e3fc7e56ecf",
+      "decision": "retain-for-regression",
+      "note": "桌面四列，窄屏保留横向滚动看板，部分后续列需主动滚动。"
+    },
+    {
+      "route": "/workspace/ai-chat/",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "file": "light-390-_workspace_ai-chat_.png",
+      "sha256": "7f824c2f9e6ab986d4a23cddcecc16a9085cb928b8fc23d8ef1ebb94af9bb270",
+      "decision": "retain-for-regression",
+      "note": "桌面三栏，窄屏收起侧栏并保留会话选择与输入区。"
+    },
+    {
+      "route": "/zh-hans/rtl/",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "file": "light-390-_zh-hans_rtl_.png",
+      "sha256": "6ad3d889f970f94b6be8a6c947bb202af6dab43a6d0ec806ce7153c885e96df7",
+      "decision": "retain-for-regression",
+      "note": "RTL 实验区初始状态与页面整体可见性；不是全站逐状态方向验证。"
+    },
+    {
+      "route": "/",
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "file": "dark-1440-_.png",
+      "sha256": "8d8239771d595d8794d24f5c015db153652927bbe3006ff6528c0e2295b419e3",
+      "decision": "retain-for-regression",
+      "note": "首页导航、标题层级与入口卡片；窄屏单列，底部导航入口为固定浮层。"
+    },
+    {
+      "route": "/zh-hans/components/button/",
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "file": "dark-1440-_zh-hans_components_button_.png",
+      "sha256": "cf29f5989576c4998cc4345bf0bd814da2779893f214cb69942e7a2b2f4c4526",
+      "decision": "retain-for-regression",
+      "note": "四种主预览按钮可见，窄屏换行；未审核所有禁用、悬停及按压状态。"
+    },
+    {
+      "route": "/zh-hans/components/input/",
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "file": "dark-1440-_zh-hans_components_input_.png",
+      "sha256": "530a69d5724696e04fdfca3a1dc2e75e9e1e30e69552317dd148e0574c0de491",
+      "decision": "retain-for-regression",
+      "note": "输入区与错误示例清晰；不包含自动填充及全部错误状态。"
+    },
+    {
+      "route": "/zh-hans/components/select/",
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "file": "dark-1440-_zh-hans_components_select_.png",
+      "sha256": "7636028b4f7f671f867e53f3969af2a6aaab136aed8153886d42aae769fb4e5f",
+      "decision": "retain-for-regression",
+      "note": "初始选择器和安装说明可见；下拉打开态另有专项。"
+    },
+    {
+      "route": "/zh-hans/components/modal/",
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "file": "dark-1440-_zh-hans_components_modal_.png",
+      "sha256": "e28b82b6a178c77f391aa9615c2288b97468d21c79e3c19374d10e4936717a57",
+      "decision": "retain-for-regression",
+      "note": "初始触发按钮居中；打开态不在本批截图内。"
+    },
+    {
+      "route": "/zh-hans/components/area-chart-card/",
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "file": "dark-1440-_zh-hans_components_area-chart-card_.png",
+      "sha256": "dba0c089b72c0a08ca19ca7661d7349d15f0b3cfa3ccd7d48fc09d090f0b7526",
+      "decision": "retain-for-regression",
+      "note": "面积图与图例随容器布局；未审核全部数据范围与选点。"
+    },
+    {
+      "route": "/workspace/dashboard/",
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "file": "dark-1440-_workspace_dashboard_.png",
+      "sha256": "db465cac27a3f565534db1891545ce3e80911abc7b94ec266687afd0cadcad6b",
+      "decision": "retain-for-regression",
+      "note": "指标、图表布局与明暗层级；窄屏指标逐行展示，图表需滚动到下方。"
+    },
+    {
+      "route": "/workspace/finance/",
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "file": "dark-1440-_workspace_finance_.png",
+      "sha256": "514e2a1ab13657b27c45782815f1f5f0d7d22b3692c8ff14e75c50c29bc3a7d0",
+      "decision": "retain-for-regression",
+      "note": "年度指标、现金流与分配分组；窄屏纵向展示。"
+    },
+    {
+      "route": "/workspace/project-board/",
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "file": "dark-1440-_workspace_project-board_.png",
+      "sha256": "cd635d4ef098cba55789e28a863b07367b33ed4d7f7967e0c436baeb8ba11d74",
+      "decision": "retain-for-regression",
+      "note": "桌面四列，窄屏保留横向滚动看板，部分后续列需主动滚动。"
+    },
+    {
+      "route": "/workspace/ai-chat/",
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "file": "dark-1440-_workspace_ai-chat_.png",
+      "sha256": "5bf0ada4c6bc0106a1fbec57694309af900f1cbfd2ac7e23acdffe0af71d939d",
+      "decision": "retain-for-regression",
+      "note": "桌面三栏，窄屏收起侧栏并保留会话选择与输入区。"
+    },
+    {
+      "route": "/zh-hans/rtl/",
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "file": "dark-1440-_zh-hans_rtl_.png",
+      "sha256": "05ef7f32087c33b5ad9277d3a89f7e393e9f7d1c43bed2d43a0b4482d3e3db72",
+      "decision": "retain-for-regression",
+      "note": "RTL 实验区初始状态与页面整体可见性；不是全站逐状态方向验证。"
+    },
+    {
+      "route": "/",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "file": "dark-390-_.png",
+      "sha256": "e296634a1380f750d64c1a31c818c0348684418664e69f729dc2ba2390bad108",
+      "decision": "retain-for-regression",
+      "note": "首页导航、标题层级与入口卡片；窄屏单列，底部导航入口为固定浮层。"
+    },
+    {
+      "route": "/zh-hans/components/button/",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "file": "dark-390-_zh-hans_components_button_.png",
+      "sha256": "dfdb57aa607cb328ee32a1c5a23e34a16c3b0f35c14738b9c9bf46d2ab9a8d5e",
+      "decision": "retain-for-regression",
+      "note": "四种主预览按钮可见，窄屏换行；未审核所有禁用、悬停及按压状态。"
+    },
+    {
+      "route": "/zh-hans/components/input/",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "file": "dark-390-_zh-hans_components_input_.png",
+      "sha256": "cc4c1932d73ca1649461f257dad11179e8335d969db04205205959e29f9047b4",
+      "decision": "retain-for-regression",
+      "note": "输入区与错误示例清晰；不包含自动填充及全部错误状态。"
+    },
+    {
+      "route": "/zh-hans/components/select/",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "file": "dark-390-_zh-hans_components_select_.png",
+      "sha256": "71ec51955f726c979ee5ba6d246b936d14e98a7576903e760ff2360382c878ec",
+      "decision": "retain-for-regression",
+      "note": "初始选择器和安装说明可见；下拉打开态另有专项。"
+    },
+    {
+      "route": "/zh-hans/components/modal/",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "file": "dark-390-_zh-hans_components_modal_.png",
+      "sha256": "504550dbc3832ecb61fdcc0729b6a0e28406dc2c10ee5c2462ffb87fb8e386d7",
+      "decision": "retain-for-regression",
+      "note": "初始触发按钮居中；打开态不在本批截图内。"
+    },
+    {
+      "route": "/zh-hans/components/area-chart-card/",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "file": "dark-390-_zh-hans_components_area-chart-card_.png",
+      "sha256": "b203c35a82e500ae0ed357efffc0ed6ffa032f44ca4b14c030f91af18cc833b1",
+      "decision": "retain-for-regression",
+      "note": "面积图与图例随容器布局；未审核全部数据范围与选点。"
+    },
+    {
+      "route": "/workspace/dashboard/",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "file": "dark-390-_workspace_dashboard_.png",
+      "sha256": "55fa3fbd2c36e4501009088f9704e8b5c8df627e34b7d3de969617e94dc9cb3a",
+      "decision": "retain-for-regression",
+      "note": "指标、图表布局与明暗层级；窄屏指标逐行展示，图表需滚动到下方。"
+    },
+    {
+      "route": "/workspace/finance/",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "file": "dark-390-_workspace_finance_.png",
+      "sha256": "8533a68d277d3110f912072134d6e6445292aa11ef8fa5ff7df5c0614cbafb6a",
+      "decision": "retain-for-regression",
+      "note": "年度指标、现金流与分配分组；窄屏纵向展示。"
+    },
+    {
+      "route": "/workspace/project-board/",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "file": "dark-390-_workspace_project-board_.png",
+      "sha256": "1fe8aaa19559d7ecb035da23b453c2bfeb018a619de82fdc3d9416a76079abd6",
+      "decision": "retain-for-regression",
+      "note": "桌面四列，窄屏保留横向滚动看板，部分后续列需主动滚动。"
+    },
+    {
+      "route": "/workspace/ai-chat/",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "file": "dark-390-_workspace_ai-chat_.png",
+      "sha256": "8f5f57d1eef33af847453e631d21ce7e5889aa064f6405f8983875bbecbbc1ce",
+      "decision": "retain-for-regression",
+      "note": "桌面三栏，窄屏收起侧栏并保留会话选择与输入区。"
+    },
+    {
+      "route": "/zh-hans/rtl/",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "file": "dark-390-_zh-hans_rtl_.png",
+      "sha256": "9f920772d0e9c50ab2b6359ff17902eccb55f4c6afcef4dbbba1e2ccc7480178",
+      "decision": "retain-for-regression",
+      "note": "RTL 实验区初始状态与页面整体可见性；不是全站逐状态方向验证。"
+    }
+  ],
+  "limitations": [
+    "Only initial visible viewport reviewed at contact-sheet scale, not every control or offscreen state.",
+    "Local regression reference, not original BoardUI parity certification.",
+    "Do not mark formal component verification passed from this review."
+  ]
+}

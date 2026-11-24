@@ -282,12 +282,15 @@
       "sourcePolicy": "verify-public-source",
       "verification": {
         "visual": "pending",
-        "interaction": "pending",
+        "interaction": "not-applicable",
         "accessibility": "pending",
         "api": "pending",
-        "rtl": "pending"
+        "rtl": "passed"
       },
-      "evidence": []
+      "evidence": [
+        "divider-intrinsic-interaction-na-20261125",
+        "divider-rtl-contract-20261125"
+      ]
     },
     {
       "slug": "dropdown",
@@ -1503,9 +1506,11 @@
         "interaction": "pending",
         "accessibility": "pending",
         "api": "pending",
-        "rtl": "pending"
+        "rtl": "passed"
       },
-      "evidence": [],
+      "evidence": [
+        "progress-rtl-loading-contract-20261125"
+      ],
       "notes": "本地扩展，共享原版表格/进度视觉配方；非直接上游源码移植。"
     },
     {
@@ -1531,10 +1536,12 @@
         "visual": "pending",
         "interaction": "pending",
         "accessibility": "pending",
-        "api": "pending",
+        "api": "passed",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [
+        "skeleton-api-contract-20261125"
+      ]
     },
     {
       "slug": "accordion",
@@ -1692,10 +1699,13 @@
         "visual": "pending",
         "interaction": "pending",
         "accessibility": "pending",
-        "api": "pending",
-        "rtl": "pending"
+        "api": "passed",
+        "rtl": "passed"
       },
-      "evidence": [],
+      "evidence": [
+        "meter-api-contract-20261125",
+        "meter-rtl-contract-20261125"
+      ],
       "notes": "本地扩展，共享原版表格/进度视觉配方；非直接上游源码移植。"
     },
     {

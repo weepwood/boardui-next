@@ -3,7 +3,7 @@ import { DocsLayout } from "@/app/components/docs/DocsLayout";
 
 export const metadata: Metadata = { title: "颜色" };
 
-/** 从 CSS 变量读取实际值并展示（服务端渲染，颜色值直接内联） */
+/** 色阶由 Tailwind v4 原始主题和 BoardUI 覆盖共同提供。动态引用由 palette-primitives.css 保留。 */
 const PALETTES = [
   { name: "accent", label: "强调色", steps: [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950] },
   { name: "neutral", label: "中性色", steps: [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950] },
@@ -22,7 +22,7 @@ const SEMANTIC = [
   { token: "text-primary", label: "主文本" },
   { token: "text-secondary", label: "次文本" },
   { token: "text-tertiary", label: "弱文本" },
-  { token: "border-primary", label: "主描边" },
+  { token: "separator-border", label: "分隔线" },
   { token: "border-button-default", label: "按钮描边" },
   { token: "accent-500", label: "强调色 500" },
 ];
@@ -62,7 +62,7 @@ export default function ColorPage() {
                   style={{ backgroundColor: `var(--color-${p.name}-${s})` }}
                   title={`--color-${p.name}-${s}`}
                 >
-                  <span className="text-[9px] font-medium text-white/80 mix-blend-difference">
+                  <span className="rounded-sm bg-black/70 px-0.5 text-[9px] font-medium text-white">
                     {s}
                   </span>
                 </div>
@@ -84,6 +84,7 @@ export default function ColorPage() {
               className="flex items-center gap-2 rounded-lg border border-separator-border p-2"
             >
               <span
+                data-semantic-color={s.token}
                 className="size-8 shrink-0 rounded-md border border-separator-border"
                 style={{ backgroundColor: `var(--color-${s.token})` }}
               />
@@ -101,7 +102,7 @@ export default function ColorPage() {
       <section id="usage" className="flex scroll-mt-14 flex-col gap-3">
         <h2 className="text-title-3-semibold text-text-primary">使用方式</h2>
         <div className="overflow-hidden rounded-2lg border border-border-button-default bg-background-primary-default">
-          <pre className="overflow-x-auto p-3 font-mono text-body-2-regular text-text-primary">
+          <pre tabIndex={0} dir="ltr" aria-label="代码示例" className="outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-border-focus-ring overflow-x-auto p-3 font-mono text-body-2-regular text-text-primary">
             <code>{`/* Tailwind 工具类，自动生成 bg-* / text-* / border-* */
 <div className="bg-background-primary-default text-text-primary border-separator-border" />
 

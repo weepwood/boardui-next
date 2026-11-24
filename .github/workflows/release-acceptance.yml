@@ -29,6 +29,11 @@ jobs:
       - run: npm run typecheck
       - run: npm run test:api
       - run: npm run test:library
+      - run: node scripts/audit-api-contracts.mjs acceptance/api-contracts.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: acceptance-api-contracts
+          path: acceptance/api-contracts.json
       - run: npm audit --omit=dev --audit-level=high --registry=https://registry.npmjs.org
       - run: npm run test:consumer
       - run: npm install --no-save --package-lock=false playwright@1.56.1
@@ -83,6 +88,24 @@ jobs:
       - name: 关闭按钮双主题方向与状态专项
         if: matrix.browser == 'chromium'
         run: node scripts/audit-close-button.mjs acceptance/close-button
+      - name: 基础按钮双主题方向与状态专项
+        if: matrix.browser == 'chromium'
+        run: node scripts/audit-button-family.mjs acceptance/button-family
+      - name: 剩余交互及展示状态专项
+        if: matrix.browser == 'chromium'
+        run: node scripts/audit-remaining-interactions.mjs acceptance/remaining-interactions
+      - name: 反馈与数据展示双主题视觉专项
+        if: matrix.browser == 'chromium'
+        run: node scripts/audit-feedback-visual.mjs acceptance/feedback-visual
+      - name: 静态分隔线与度量条完整方向和属性专项
+        if: matrix.browser == 'chromium'
+        run: node scripts/audit-passive-contracts.mjs acceptance/passive-contracts
+      - name: 等待状态与图片生命周期专项
+        if: matrix.browser == 'chromium'
+        run: node scripts/audit-loading-contracts.mjs acceptance/loading-contracts
+      - name: 全组件 RTL 初始布局与 axe 审计
+        if: matrix.browser == 'chromium'
+        run: node scripts/audit-all-rtl.mjs acceptance/all-rtl
       - name: 图表与工作区触摸状态
         if: matrix.browser == 'chromium'
         run: node scripts/check-chart-workspace.mjs acceptance/chart-workspace

@@ -230,7 +230,8 @@ export function ChartArea({
     <div className={chartControlRow}>
       <label htmlFor={uid+"-point"}>数据点</label><select id={uid+"-point"} aria-label="查看图表数据点" value={selected??""} onChange={e=>{setHovered(null);setSelected(e.target.value===""?null:Number(e.target.value))}} className={chartControl}><option value="">选择</option>{labels.map((label,i)=><option key={i} value={i}>{label||String(i+1)}</option>)}</select>
     </div>
-    {point!==null&&<div role="status" data-chart-tooltip className={chartTooltip} style={point<labels.length/2?{insetInlineEnd:4}:{insetInlineStart:4}}><p className="mb-1 font-medium">{labels[point]||String(point+1)}</p>{normalized.map((s,i)=><div key={i} className="flex items-center justify-between gap-3"><span className="flex min-w-0 items-center gap-1"><span className="size-2 shrink-0 rounded-sm" style={{backgroundColor:s.color}}/>{s.name}</span><span className="tabular-nums">{Number.isFinite(series[i].data[point])?s.data[point].toLocaleString("en-US"):"—"}</span></div>)}</div>}
+    <span data-chart-announcement className="sr-only" aria-live="polite" aria-atomic="true">{selected!==null&&selected<labels.length?[labels[selected]||String(selected+1),...series.map(s=>s.name+"："+(Number.isFinite(s.data[selected])?s.data[selected].toLocaleString("en-US"):"—"))].join("，"):""}</span>
+    {point!==null&&<div aria-hidden="true" data-chart-tooltip className={chartTooltip} style={point<labels.length/2?{insetInlineEnd:4}:{insetInlineStart:4}}><p className="mb-1 font-medium">{labels[point]||String(point+1)}</p>{normalized.map((s,i)=><div key={i} className="flex items-center justify-between gap-3"><span className="flex min-w-0 items-center gap-1"><span className="size-2 shrink-0 rounded-sm" style={{backgroundColor:s.color}}/>{s.name}</span><span className="tabular-nums">{Number.isFinite(series[i].data[point])?s.data[point].toLocaleString("en-US"):"—"}</span></div>)}</div>}
     </div>
   );
 }

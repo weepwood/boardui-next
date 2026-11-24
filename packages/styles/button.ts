@@ -23,7 +23,7 @@ export const buttonStyles = sortCx({
   //   Xs     → forces 24×24, content-centered — used for the calendar
   //            template's edit-icon buttons (timezone/participants/reminder).
   iconOnlySize: {
-    medium: "",                // base size already produces 36×36 with a 20px icon
+    medium: "size-9 p-0",      // preserve the square even for bordered variants
     small:  "size-8 p-0",      // hard 32×32, content-centered
     xs:     "size-6 p-0",      // hard 24×24, content-centered
   },

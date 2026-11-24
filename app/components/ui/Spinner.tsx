@@ -23,11 +23,12 @@ export function Spinner({
     <RACProgressBar
       {...props}
       isIndeterminate
-      aria-label="加载中"
+      aria-label={props["aria-label"]??(!props["aria-labelledby"]?"加载中":undefined)}
       className={cn("inline-flex", className)}
     >
       <svg
         ref={ref}
+        aria-hidden="true" focusable="false"
         data-motion-active={active?"true":"false"}
         data-spinner
         width={size}
