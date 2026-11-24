@@ -1,0 +1,90 @@
+/* 自动生成：全部 @keyframes，抽取自原站 CSS */
+
+@keyframes ai-chat-text-shimmer {0%{background-position:200%}to{background-position:-100%}}
+
+@keyframes bar-rise {0%{transform:scaleY(0)}to{transform:scaleY(1)}}
+
+@keyframes bui-affiliate-badge-shimmer {0%{transform:translate(0)skew(-12deg)}14%,to{transform:translate(400%)skew(-12deg)}}
+
+@keyframes bui-agent-thinking-dash {to{stroke-dashoffset:-100px}}
+
+@keyframes bui-agent-thinking-star {0%,to{opacity:0;transform:scale(0)}40%{opacity:1;transform:scale(1)}60%{opacity:.9;transform:scale(.8)}}
+
+@keyframes bui-badge-shimmer {0%{transform:translate(0)skew(-12deg)}40%,to{transform:translate(350%)skew(-12deg)}}
+
+@keyframes bui-beam-travel {to{--bui-beam-angle:360deg}}
+
+@keyframes bui-composer-loader-dash {0%{stroke-dashoffset:0}to{stroke-dashoffset:-100px}}
+
+@keyframes bui-composer-mic-bars {0%,to{transform:scaleY(.4)}50%{transform:scaleY(1)}}
+
+@keyframes bui-glitter {0%,to{opacity:0;transform:scale(.2)rotate(-20deg)}50%{opacity:var(--glitter-peak,.6);transform:scale(1)rotate(15deg)}}
+
+@keyframes bui-mcp-char-collapse {0%{max-width:2ch}to{max-width:0}}
+
+@keyframes bui-mcp-char-grow {0%{max-width:0}to{max-width:2ch}}
+
+@keyframes bui-mcp-char-in {0%{opacity:0;rotate:x -88deg}to{opacity:1;rotate:x 0deg}}
+
+@keyframes bui-mcp-char-out {to{opacity:0;rotate:x 88deg}}
+
+@keyframes bui-mcp-prompt-shimmer {0%{background-position:100%}70%,to{background-position:-50%}}
+
+@keyframes bui-metal-sweep {to{transform:rotate(360deg)}}
+
+@keyframes bui-progress-sweep {0%{translate:-100%}to{translate:250%}}
+
+@keyframes bui-skeleton-pulse {50%{opacity:.55}}
+
+@keyframes bui-skeleton-sheen {0%{translate:-600px}to{translate:max(100cqw,640px)}}
+
+@keyframes bui-skeleton-sheen-rtl {0%{translate:600px}to{translate:calc(-1*max(100cqw,640px))}}
+
+@keyframes canvas-banner-module__5XCDcW__canvas-banner-sweep {0%{transform:translate(0)}20%,to{transform:translate(calc(100% + 138px))}}
+
+@keyframes cell-pop {0%{opacity:0;transform:scale(.5)}to{opacity:1;transform:scale(1)}}
+
+@keyframes chart-reveal {0%{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0)}}
+
+@keyframes check-draw {0%{stroke-dashoffset:1px}to{stroke-dashoffset:0}}
+
+@keyframes create-ticket-modal-module__HJdG0q__ticket-presence {0%{opacity:.9999}to{opacity:1}}
+
+@keyframes flap-fall {0%{filter:brightness();transform:rotateX(0)}to{filter:brightness(.86);transform:rotateX(-90deg)}}
+
+@keyframes flap-rise {0%{filter:brightness(.86);transform:rotateX(90deg)}70%{transform:rotateX(-9deg)}86%{transform:rotateX(4deg)}to{filter:brightness();transform:rotateX(0)}}
+
+@keyframes hero-startup-module__HVC83G__hero-shimmer {0%{background-position:200% 0}to{background-position:-200% 0}}
+
+@keyframes label-in {0%{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+@keyframes label-out {0%{opacity:1;transform:translateY(0)}to{opacity:0;transform:translateY(-10px)}}
+
+@keyframes landing-file-drop {0%{opacity:0;transform:translate(-92px,64px)rotate(-10deg)scale(.76)}12%{opacity:1;transform:translate(-76px,52px)rotate(-7deg)scale(.9)}88%{opacity:1;transform:translate(52px,-38px)rotate(6deg)scale(.82)}to{opacity:0;transform:translate(68px,-50px)rotate(8deg)scale(.1)}}
+
+@keyframes landing-marquee {to{translate:var(--landing-marquee-end,-50%) 0}}
+
+@keyframes landing-reveal-clarity {0%{opacity:0;filter:blur(10px)}to{opacity:1;filter:blur()}}
+
+@keyframes landing-reveal-scale {0%{transform:scale(.9)}to{transform:scale(1)}}
+
+@keyframes number-fade {0%{opacity:.35}to{opacity:1}}
+
+@keyframes row-collapse-out {0%{grid-template-rows:1fr}to{grid-template-rows:0fr}}
+
+@keyframes row-fade-in {0%{opacity:0;filter:blur(2px)}}
+
+@keyframes row-fade-out {to{opacity:0;filter:blur(2px)}}
+
+@keyframes row-grow-in {0%{grid-template-rows:0fr}to{grid-template-rows:1fr}}
+
+@keyframes row-slide-in {0%{translate:0 -100%}}
+
+@keyframes row-slide-out {to{translate:0 -100%}}
+
+@keyframes spin {to{transform:rotate(360deg)}}
+
+@keyframes terminal-caret {0%,49%{opacity:1}50%,to{opacity:0}}
+
+@keyframes ticket-detail-modal-module__Qqou_q__detail-presence {0%{opacity:.9999}to{opacity:1}}
+

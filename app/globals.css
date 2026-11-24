@@ -1,0 +1,185 @@
+@import "tailwindcss";
+@import "remixicon/fonts/remixicon.css";
+@import "./styles/tokens.css";
+@import "./styles/keyframes.css";
+@import "./styles/typography.css";
+
+/* ============================================================
+   字体：与配置无关，使用系统字体栈保证离线可用
+   ============================================================ */
+@theme {
+  --font-sans: "Inter", "Noto Sans SC", ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+/* 原站自定义圆角档位：2lg / 3lg（Tailwind 默认没有，需显式注册才能生成工具类） */
+@theme {
+  --radius-2lg: 10px;
+  --radius-3lg: 14px;
+}
+
+/* ============================================================
+   暗色模式：Tailwind v4 使用 .dark 类策略
+   ============================================================ */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ============================================================
+   React Aria 状态变体
+   React Aria Components 通过 data-* 属性暴露状态，映射为 Tailwind 变体：
+     pressed  -> data-[pressed]        （按下 / 激活中）
+     selected -> data-[selected]       （选中）
+     focused  -> data-[focused]        （焦点）
+     focus-visible -> data-[focus-visible]
+     hovered  -> data-[hovered]
+     disabled -> data-[disabled]
+     open     -> data-[open]
+   ============================================================ */
+@custom-variant pressed (&[data-pressed]);
+@custom-variant selected (&[data-selected]);
+@custom-variant hovered (&[data-hovered]);
+@custom-variant focused (&[data-focused]);
+@custom-variant focusring (&[data-focus-visible]);
+@custom-variant disabled-aria (&[data-disabled]);
+@custom-variant open-aria (&[data-open]);
+
+/* ============================================================
+   基础层
+   ============================================================ */
+@layer base {
+  * {
+    border-color: var(--color-border-primary);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: var(--color-background-full);
+    color: var(--color-text-primary);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* 滚动条：与原站一致（细、半透明） */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: color-mix(in srgb, var(--color-text-primary) 18%, transparent);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: color-mix(in srgb, var(--color-text-primary) 28%, transparent);
+  }
+
+  /* 焦点环：React Aria 的 focus-visible 约定 */
+  :focus-visible {
+    outline: 2px solid var(--color-accent-500);
+    outline-offset: 2px;
+  }
+}
+
+/* ============================================================
+   动效工具类（复刻原站缓动曲线）
+   ============================================================ */
+@utility ease-bui {
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* 侧边栏折叠：grid 行高动画（原站使用方式） */
+@utility collapsible {
+  display: grid;
+  transition: grid-template-rows 300ms ease-in-out, opacity 300ms ease-in-out;
+}
+
+/* 减弱动效偏好 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================================
+   View Transitions：主题切换过渡（原站有此配置）
+   ============================================================ */
+::view-transition-old(root) {
+  mix-blend-mode: normal;
+  animation: none;
+}
+::view-transition-new(root) {
+  mix-blend-mode: normal;
+  animation: none;
+}
+
+/* ============================================================
+   浮层通用动画（弹窗 / 下拉 / 弹出层）
+   缓动统一使用原站的 cubic-bezier(0.22, 1, 0.36, 1)
+   ============================================================ */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+@keyframes modal-in {
+  from { opacity: 0; transform: scale(0.96) translateY(6px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes modal-out {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(0.97); }
+}
+@keyframes popover-in {
+  from { opacity: 0; transform: scale(0.96) translateY(-4px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes popover-out {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(0.97); }
+}
+@keyframes slide-in-right {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+@keyframes slide-out-right {
+  from { transform: translateX(0); }
+  to { transform: translateX(100%); }
+}
+
+@keyframes bui-dot-bounce {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.5; }
+  30% { transform: translateY(-4px); opacity: 1; }
+}
+@keyframes bui-skeleton-sheen-x {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes bui-thinking-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -100% 0; }
+}
+.ai-thinking-text {
+  animation: bui-thinking-shimmer 2.2s linear infinite;
+}
+
+@keyframes bui-progress-sweep {
+  0% { transform: translateX(-120%); }
+  100% { transform: translateX(420%); }
+}

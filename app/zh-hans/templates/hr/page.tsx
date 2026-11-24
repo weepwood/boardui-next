@@ -1,0 +1,42 @@
+import type { Metadata } from "next";
+import { DocsLayout } from "@/app/components/docs/DocsLayout";
+import { HrTemplate } from "@/app/components/templates/HrTemplate";
+
+export const metadata: Metadata = { title: "人力资源模板" };
+
+export default function Page() {
+  return (
+    <DocsLayout
+      breadcrumbs={[
+        { label: "BoardUI", href: "/" },
+        { label: "模板", href: "/zh-hans/components" },
+        { label: "人力资源" },
+      ]}
+      toc={[
+        { id: "preview", label: "预览" },
+        { id: "notes", label: "实现说明" },
+      ]}
+    >
+      <header className="flex flex-col gap-2">
+        <h1 className="text-title-1-medium text-text-primary">人力资源</h1>
+        <p className="text-headline-medium text-text-secondary">
+          团队概览、成员负载表、部门分布与负责人，支持按状态筛选。
+        </p>
+      </header>
+
+      <div id="preview" className="scroll-mt-14">
+        <HrTemplate />
+      </div>
+
+      <section id="notes" className="flex scroll-mt-14 flex-col gap-3">
+        <h2 className="text-title-3-semibold text-text-primary">实现说明</h2>
+        <ul className="flex flex-col gap-1.5 text-body-regular text-text-secondary">
+          <li>· 全部使用 BoardUI 组件与语义令牌拼装，无第三方 UI 依赖</li>
+          <li>· 图表为手写 SVG，可离线运行</li>
+          <li>· 交互状态（筛选、切换、加载）均为真实 state 驱动</li>
+          <li>· 暗色模式下自动适配</li>
+        </ul>
+      </section>
+    </DocsLayout>
+  );
+}

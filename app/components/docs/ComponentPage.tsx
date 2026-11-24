@@ -1,0 +1,92 @@
+import { DocsLayout } from "./DocsLayout";
+import { ComponentPreview } from "./ComponentPreview";
+import type { Crumb } from "./Breadcrumbs";
+import type { TocItem } from "./TableOfContents";
+
+export type DemoSection = {
+  id: string;
+  title: string;
+  description?: string;
+  code?: string;
+  minHeight?: number;
+  demo: React.ReactNode;
+};
+
+/**
+ * 组件文档页通用模板。
+ * 结构：面包屑 → 标题 + 描述 → 预览 → 各演示区块 → 安装说明
+ * 与原站组件页信息层级一致。
+ */
+export function ComponentPage({
+  title,
+  description,
+  breadcrumbs,
+  preview,
+  previewCode,
+  sections = [],
+  install,
+}: {
+  title: string;
+  description: string;
+  breadcrumbs: Crumb[];
+  preview: React.ReactNode;
+  previewCode?: string;
+  sections?: DemoSection[];
+  install?: string;
+}) {
+  const toc: TocItem[] = [
+    { id: "preview", label: "预览" },
+    ...(install ? [{ id: "installation", label: "安装" }] : []),
+    ...sections.map((s) => ({ id: s.id, label: s.title })),
+  ];
+
+  return (
+    <DocsLayout breadcrumbs={breadcrumbs} toc={toc}>
+      <header className="flex flex-col gap-2">
+        <h1 className="text-title-1-medium text-text-primary">{title}</h1>
+        <p className="text-headline-medium text-text-secondary">{description}</p>
+      </header>
+
+      <div id="preview" className="scroll-mt-14">
+        <ComponentPreview code={previewCode}>{preview}</ComponentPreview>
+      </div>
+
+      {install && (
+        <section id="installation" className="flex scroll-mt-14 flex-col gap-3">
+          <h2 className="text-title-3-semibold text-text-primary">安装</h2>
+          <div className="overflow-hidden rounded-2lg border border-border-button-default bg-background-primary-default">
+            <div className="flex items-center gap-2 border-b border-border-primary px-3 py-2">
+              <span className="text-caption-1-medium text-text-tertiary">终端</span>
+            </div>
+            <pre className="overflow-x-auto p-3 font-mono text-body-2-regular text-text-primary">
+              <code>{install}</code>
+            </pre>
+          </div>
+        </section>
+      )}
+
+      {sections.map((s) => (
+        <section key={s.id} id={s.id} className="flex scroll-mt-14 flex-col gap-3">
+          <div className="flex flex-col gap-1">
+            <h2 className="text-title-3-semibold text-text-primary">{s.title}</h2>
+            {s.description && (
+              <p className="text-body-regular text-text-secondary">{s.description}</p>
+            )}
+          </div>
+          <ComponentPreview code={s.code} minHeight={s.minHeight}>
+            {s.demo}
+          </ComponentPreview>
+        </section>
+      ))}
+    </DocsLayout>
+  );
+}
+
+/** 生成组件页面包屑 */
+export function componentCrumbs(title: string): Crumb[] {
+  return [
+    { label: "BoardUI", href: "/" },
+    { label: "组件", href: "/zh-hans/components" },
+    { label: title },
+  ];
+}
