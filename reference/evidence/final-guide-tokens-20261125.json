@@ -1,0 +1,134 @@
+{
+  "base": "56e0c4a356695535c38e4bf3b2e07062106705b5",
+  "scope": "实际颜色与排版规范修复，双主题 Edge 专项",
+  "browserTargeted": {
+    "browser": "chromium",
+    "results": [
+      {
+        "theme": "light",
+        "route": "/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/button/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/select/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/modal/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/templates/dashboard/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/color/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/typography/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/rtl/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/button/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/select/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/modal/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/templates/dashboard/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/color/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/typography/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/rtl/",
+        "violations": [],
+        "status": "checked"
+      }
+    ],
+    "errors": []
+  },
+  "assertions": [
+    "69 palette primitives and 10 semantic swatches resolve to visible colors",
+    "11 actual computed font sizes match labels",
+    "4 actual computed font weights match labels",
+    "RTL representative route regression"
+  ],
+  "export": {
+    "pages": 120,
+    "peakGzipJs": 510813,
+    "peakGzipHtml": 26536,
+    "templateCatalogGzipJs": 253900
+  },
+  "limitations": [
+    "初次浏览器启动路径填写错误，未执行测试；更正后18/18通过。",
+    "未宣称人工读屏、上游完整状态或新源码正式三浏览器验收通过。"
+  ]
+}

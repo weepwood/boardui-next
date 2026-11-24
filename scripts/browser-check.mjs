@@ -867,7 +867,16 @@ try{
           stage='palette: runtime primitive values';
           const swatches=await page.locator('#palette [title^="--color-"]').evaluateAll(es=>es.map(e=>({token:e.title,background:getComputedStyle(e).backgroundColor})));
           assert.equal(swatches.length,69);
+          const semantic=await page.locator('[data-semantic-color]').evaluateAll(es=>es.map(e=>({token:e.dataset.semanticColor,value:getComputedStyle(e).backgroundColor})));
+          assert.equal(semantic.length,10);assert.ok(semantic.every(x=>x.value!=='rgba(0, 0, 0, 0)'),JSON.stringify(semantic));
           assert.ok(swatches.every(s=>s.background!=='rgba(0, 0, 0, 0)'),JSON.stringify(swatches.filter(s=>s.background==='rgba(0, 0, 0, 0)')));
+        }
+        if(route==='/zh-hans/components/typography/'){
+          stage='typography: actual size and weight tokens';
+          const sizes=await page.locator('[data-typography-size]').evaluateAll(es=>es.map(e=>[e.dataset.typographySize,getComputedStyle(e).fontSize]));
+          assert.equal(sizes.length,11);assert.ok(sizes.every(([a,b])=>a===b),JSON.stringify(sizes));
+          const weights=await page.locator('[data-typography-weight]').evaluateAll(es=>es.map(e=>[e.dataset.typographyWeight,getComputedStyle(e).fontWeight]));
+          assert.equal(weights.length,4);assert.ok(weights.every(([a,b])=>a===b),JSON.stringify(weights));
         }
         if(route==='/zh-hans/components/data-grid/'){
           const demo=page.locator('#preview');

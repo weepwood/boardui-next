@@ -22,7 +22,7 @@ const SEMANTIC = [
   { token: "text-primary", label: "主文本" },
   { token: "text-secondary", label: "次文本" },
   { token: "text-tertiary", label: "弱文本" },
-  { token: "border-primary", label: "主描边" },
+  { token: "separator-border", label: "分隔线" },
   { token: "border-button-default", label: "按钮描边" },
   { token: "accent-500", label: "强调色 500" },
 ];
@@ -84,6 +84,7 @@ export default function ColorPage() {
               className="flex items-center gap-2 rounded-lg border border-separator-border p-2"
             >
               <span
+                data-semantic-color={s.token}
                 className="size-8 shrink-0 rounded-md border border-separator-border"
                 style={{ backgroundColor: `var(--color-${s.token})` }}
               />

@@ -67,3 +67,7 @@ DatePicker、Slider、InputOtp 直接移植公开 MIT 实现；DateCalendar 复�
 基于已合并 #20；参考公开 ShowcaseCard、DashboardSidebar、AppShell 与主题令牌，保持已有详情页几何基线。首页移除重复的宣传卡片、缩短文案，统一页面栏宽、间距；组件目录保留真实预览与分类筛选，ResizeObserver 按实际画布与内容大小等比缩放预览，固定卡片内的说明与来源不再溢出。统一搜索容器、顶部操作、侧栏固定行高/树线/滚动定位、面包屑、TOC 和命令面板；预览工具条采用可中断 CSS 滑动指示器并支持 reduced-motion，深色画布使用页面背景而非厚重面板背景。未重写业务组件 API。
 
 实际 Edge 截图检查 4 页 × 2 主题 × 2 视口（1440×1000、390×844）16 组合：零横向页面溢出、零卡片说明溢出、零 pageerror；截图人工抽看首页、目录、移动详情。另 10 个专项页面检查和 116 HTML 导出通过。证据 reference/evidence/docs-visual-refinement-20261124.json。仍需逐组件对照动效与设计细节，不将上述抽查视为完整发布验收。
+
+## 初始态回归基线（2026-11-25）
+
+正式 CI 45452007160 的 56e0c4a 提交在 Linux x64 Chromium 141.0.7390.37 捕获 11 路由×双主题×双视口，共44张截图。全部哈希和尺寸经复核，并经 AI 分组视觉检查保留为初始态回归参考，见 reference/evidence/reviewed-initial-baseline-20261125.json；执行 node scripts/verify-reviewed-baseline.mjs 可复验对应截图及审核记录。此基线不等于原站逐状态视觉批准，未审核屏幕外区域和所有动效/打开态，不自动改变 manifest verification。遵循用户已确认的设计风格与交互一致优先标准，而非强制像素一致。
