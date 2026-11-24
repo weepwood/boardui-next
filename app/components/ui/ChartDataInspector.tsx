@@ -1,5 +1,6 @@
 "use client";
 import {useId,useState,type ReactNode} from "react";
+import {chartTooltip,chartControlRow,chartControl} from "./ChartInspectionStyles";
 export type ChartDatum={label:string;value:number;color?:string;x?:number;y?:number;secondary?:number};
 export function ChartDataInspector({records,children,seriesLabels=["柱","线"],renderSummary,resetKey=""}:{records:ChartDatum[];seriesLabels?:[string,string];renderSummary?:(row:ChartDatum|null)=>ReactNode;resetKey?:string;children:(active:number|null)=>ReactNode}){
  const id=useId(),[selected,setSelected]=useState<number|null>(null),[hovered,setHovered]=useState<number|null>(null);
@@ -13,10 +14,10 @@ export function ChartDataInspector({records,children,seriesLabels=["柱","线"],
  if(!records.length)return <div className="flex min-w-0 flex-col gap-3">{renderSummary?.(null)}<div role="status" className="flex min-h-32 items-center justify-center text-body-2-regular text-text-secondary">暂无可展示数据</div></div>;
  return <div className="flex min-w-0 flex-col gap-2" data-chart-inspector>
   {renderSummary?.(row)}
-  <div className="relative min-w-0" onPointerMove={e=>setHovered(targetIndex(e.target))} onPointerLeave={()=>setHovered(null)} onPointerDown={e=>{const n=targetIndex(e.target);if(n!==null){setSelected(n);setHovered(null)}}} onPointerCancel={()=>setHovered(null)}>
+  <div className="relative min-w-0" onPointerMove={e=>{if(e.pointerType!=="touch")setHovered(targetIndex(e.target))}} onPointerLeave={()=>setHovered(null)} onPointerDown={e=>{const n=targetIndex(e.target);if(n!==null){setSelected(n);setHovered(null)}}} onPointerCancel={()=>setHovered(null)}>
    {children(active)}
-   {row&&<div data-chart-tooltip role="status" className="pointer-events-none absolute end-1 top-1 z-10 max-w-[min(200px,100%)] rounded-xl border border-border-button-default bg-background-primary-default p-2.5 text-body-2-regular text-text-primary shadow-dropdown"><p className="font-medium">{row.label}</p><p className="tabular-nums">{row.x!==undefined&&row.y!==undefined?`X: ${row.x} · Y: ${row.y}`:row.secondary!==undefined?`${seriesLabels[0]}：${row.value.toLocaleString("en-US")} · ${seriesLabels[1]}：${row.secondary.toLocaleString("en-US")}`:row.value.toLocaleString("en-US")}</p></div>}
+   {row&&<div data-chart-tooltip role="status" className={chartTooltip} style={active!==null&&active<records.length/2?{insetInlineEnd:4}:{insetInlineStart:4}}><p className="font-medium">{row.label}</p><p className="tabular-nums">{row.x!==undefined&&row.y!==undefined?`X: ${row.x} · Y: ${row.y}`:row.secondary!==undefined?`${seriesLabels[0]}：${row.value.toLocaleString("en-US")} · ${seriesLabels[1]}：${row.secondary.toLocaleString("en-US")}`:row.value.toLocaleString("en-US")}</p></div>}
   </div>
-  <div className="flex flex-wrap items-center justify-end gap-1 text-caption-2-regular text-text-secondary"><label htmlFor={id}>数据点</label><select id={id} aria-label="查看图表数据点" value={selected!==null&&selected<records.length?selected:""} onChange={e=>{setHovered(null);setSelected(e.target.value===""?null:Number(e.target.value))}} className="max-w-full rounded-md border border-border-button-default bg-background-primary-default px-1 py-0.5 text-text-primary focus-visible:outline-2 focus-visible:outline-border-focus-ring"><option value="">选择</option>{records.map((r,i)=><option key={i} value={i}>{r.label}</option>)}</select></div>
+  <div className={chartControlRow}><label htmlFor={id}>数据点</label><select id={id} aria-label="查看图表数据点" value={selected!==null&&selected<records.length?selected:""} onChange={e=>{setHovered(null);setSelected(e.target.value===""?null:Number(e.target.value))}} className={chartControl}><option value="">选择</option>{records.map((r,i)=><option key={i} value={i}>{r.label}</option>)}</select></div>
  </div>
 }

@@ -5,10 +5,10 @@ import {
   Modal,
   ModalOverlay,
   Heading,
-  Text,
   type DialogProps,
   type ModalOverlayProps,
 } from "react-aria-components";
+import { useId } from "react";
 import { cn } from "@/lib/utils";
 import { CloseButton } from "@/packages/react/close-button";
 import { MODAL_BACKDROP, MODAL_SURFACE, MODAL_MOTION } from "@/packages/react/overlay-styles";
@@ -47,10 +47,12 @@ export function Dialog({
 export function DialogHeader({
   title,
   description,
+  descriptionId,
   onClose,
 }: {
   title: string;
   description?: string;
+  descriptionId?: string;
   onClose?: () => void;
 }) {
   return (
@@ -60,7 +62,7 @@ export function DialogHeader({
           {title}
         </Heading>
         {description && (
-          <Text slot="description" className="break-words text-body-regular text-text-secondary">{description}</Text>
+          <p id={descriptionId} className="break-words text-body-regular text-text-secondary">{description}</p>
         )}
       </div>
       {onClose && (
@@ -104,6 +106,7 @@ export function ModalDialog({
   children: React.ReactNode;
   className?: string;
 } & Partial<ModalOverlayProps>) {
+  const descriptionId=useId();
   return (
     <ModalOverlay
       {...overlayProps}
@@ -119,8 +122,8 @@ export function ModalDialog({
           "min-w-0 max-w-full outline-none", MODAL_MOTION
         )}
       >
-        <Dialog className={className}>
-          <DialogHeader title={title} description={description} onClose={() => onOpenChange(false)} />
+        <Dialog className={className} aria-describedby={description?descriptionId:undefined}>
+          <DialogHeader title={title} description={description} descriptionId={descriptionId} onClose={() => onOpenChange(false)} />
           {children}
         </Dialog>
       </Modal>

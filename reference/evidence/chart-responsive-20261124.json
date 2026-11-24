@@ -1,0 +1,126 @@
+{
+  "base": "397c26c",
+  "browser": "Microsoft Edge (Chromium), macOS",
+  "scope": "面积/折线图真实容器宽度、标签间隔、主动选择及双主题双视口；另含弹窗描述关联修复",
+  "visual": [
+    {
+      "theme": "light",
+      "width": 1440,
+      "route": "/zh-hans/components/area-chart-card/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "route": "/zh-hans/components/line-chart-card/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "route": "/workspace/dashboard/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "route": "/workspace/finance/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "route": "/zh-hans/components/area-chart-card/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "route": "/zh-hans/components/line-chart-card/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "route": "/workspace/dashboard/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "route": "/workspace/finance/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "route": "/zh-hans/components/area-chart-card/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "route": "/zh-hans/components/line-chart-card/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "route": "/workspace/dashboard/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "route": "/workspace/finance/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "route": "/zh-hans/components/area-chart-card/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "route": "/zh-hans/components/line-chart-card/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "route": "/workspace/dashboard/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "route": "/workspace/finance/",
+      "status": "passed"
+    }
+  ],
+  "browserTargeted": {
+    "count": 28,
+    "failures": 0
+  },
+  "export": {
+    "pages": 120,
+    "maxGzipJs": 508893,
+    "maxGzipHtml": 26527,
+    "templateCatalogGzipJs": 253673
+  },
+  "screenshots": [
+    "reference/evidence/screenshots/20261124-chart-responsive/light-1440-_workspace_dashboard_.jpg",
+    "reference/evidence/screenshots/20261124-chart-responsive/dark-1440-_workspace_dashboard_selected.jpg",
+    "reference/evidence/screenshots/20261124-chart-responsive/light-390-_zh-hans_components_area-chart-card_selected.jpg",
+    "reference/evidence/screenshots/20261124-chart-responsive/dark-390-_zh-hans_components_area-chart-card_selected.jpg",
+    "reference/evidence/screenshots/20261124-chart-responsive/light-1440-_zh-hans_components_line-chart-card_selected.jpg",
+    "reference/evidence/screenshots/20261124-chart-responsive/dark-1440-_zh-hans_components_area-chart-card_selected.jpg"
+  ],
+  "limitations": [
+    "本地 Edge 专项不是完整跨浏览器或真机触摸验收",
+    "仅修改 ChartArea 与 ChartDataInspector 共用样式和交互；其他 SVG 类型仍需逐项验证",
+    "图例不再通过全局透明度降低文字对比度，隐藏状态通过边框和删除线表达"
+  ]
+}

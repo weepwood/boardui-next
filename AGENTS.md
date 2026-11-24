@@ -165,3 +165,9 @@
 - #36 run 45418826956 全部成功，Squash 合并 58db993；Pages 45419821532 成功，线上 Input 焦点样式已核对。#37 同步与候选完全相同的主分支文件树，head 5de1f61，需复验最新 CI。
 - 参照固定上游公开 app/dashboard/page.tsx 及 stat-cards/revenue-chart-card：核心指标优先、主要分析图表其次，招聘保留并下移；收入趋势复用 ChartArea，收入样本复用 ChartDataInspector，统计卡统一状态语义颜色及长值换行。Finance 年度固定指标与现金流范围隔离，桑基图与分配比例并排、窄屏堆叠，月度收入示例不再标为收支；保留原 CSV 与本地示例数据。Finance 不声称还原未公开模板源码。
 - 最终本地 Edge 22/22 页面主题专项（含 RTL）、16/16 文档/独立工作区双主题双视口布局与操作、类型、单测、120 页导出与预算通过。首次手动测试命令错误 stat-card 路径，最终已使用 stat-cards 重跑。六张真实截图、报告 reference/evidence/analytics-layout-20261124.json 与 scripts/audit-analytics-visual.mjs。尚待正式三浏览器、逐状态 axe、人工验收与五维门禁。
+
+### 图表响应式绘图区与数据提示专项（2026-11-24）
+
+- #37 run 45419854225 通过，Squash 合并 bf0a009；Pages 45420799872 成功，线上 320×420 弹窗边界、Escape 与焦点恢复实际通过，但发现 slot description 未生成 aria-describedby。候选使用稳定 ID 显式关联描述并增加真实 DOM 断言，已本地通过，尚未部署。#38 同步经文件树核对一致的主分支，head 397c26c，需复验 45420833631。
+- ChartArea 使用容器 ResizeObserver 调整绘图宽度、端点保留与刻度抽稀（最终检测文字不重叠），主动选择与临时 hover 分离；触摸点选保留，范围标签改变重置。统一 ChartArea/ChartDataInspector 数据提示位置、键盘选择样式；图例响应式排列与隐藏删除线，保持文字对比。未增加依赖，不更换图表库。
+- 最终本地 Edge 28/28 双主题交互（含 RTL、弹窗描述关联）、16/16 双主题双视口布局和选点、120 静态页与预算、类型、单测全部通过。六张真实截图、reference/evidence/chart-responsive-20261124.json 与 scripts/audit-chart-responsive.mjs。正式 Firefox/WebKit、真机触摸、逐状态无障碍和五维门禁未完成。
