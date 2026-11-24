@@ -40,7 +40,7 @@ export function TaskList({
         className
       )}
     >
-      <div className="flex items-center justify-between gap-2 border-b border-border-primary px-3 py-2">
+      <div className="flex items-center justify-between gap-2 border-b border-separator-border px-3 py-2">
         <span className="text-body-2-medium text-text-primary">任务</span>
         <span className="text-caption-2-regular tabular-nums text-text-tertiary">
           {done} / {tasks.length} 已完成

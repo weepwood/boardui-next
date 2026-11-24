@@ -115,7 +115,7 @@ export function ProjectBoardTemplate() {
   return (
     <div className="flex min-h-[680px] w-full flex-col overflow-hidden rounded-3xl border border-border-button-default bg-background-primary-default shadow-sidebar">
       {/* 头部 */}
-      <header className="flex flex-col gap-3 border-b border-border-primary p-4">
+      <header className="flex flex-col gap-3 border-b border-separator-border p-4">
         <div className="flex flex-wrap items-start justify-between gap-2">
           <div className="flex flex-col gap-1">
             <div className="flex items-center gap-2">
@@ -259,7 +259,7 @@ export function ProjectBoardTemplate() {
           ))}
         </div>
       ) : (
-        <div className="flex flex-col divide-y divide-border-primary">
+        <div className="flex flex-col divide-y divide-separator-border">
           {columns.flatMap((col) =>
             col.cards.map((card) => (
               <div

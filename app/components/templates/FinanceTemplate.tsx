@@ -25,7 +25,7 @@ export function FinanceTemplate() {
 
   return (
     <div className="flex min-h-[680px] w-full flex-col overflow-hidden rounded-3xl border border-border-button-default bg-background-primary-default shadow-sidebar">
-      <header className="flex flex-wrap items-center justify-between gap-2 border-b border-border-primary px-4 py-3">
+      <header className="flex flex-wrap items-center justify-between gap-2 border-b border-separator-border px-4 py-3">
         <div className="flex flex-col gap-0.5">
           <h3 className="text-title-3-semibold text-text-primary">财务</h3>
           <span className="text-caption-2-regular text-text-tertiary">2026 财年 · 示例数据</span>
@@ -108,7 +108,7 @@ export function FinanceTemplate() {
               </thead>
               <tbody>
                 {TRANSACTIONS.map((t) => (
-                  <tr key={t.id} className="border-t border-border-primary">
+                  <tr key={t.id} className="border-t border-separator-border">
                     <td className="px-2 py-1.5 font-mono text-caption-1-medium text-text-primary">{t.id}</td>
                     <td className="px-2 py-1.5 text-text-primary">{t.name}</td>
                     <td className="px-2 py-1.5 text-text-secondary">{t.category}</td>

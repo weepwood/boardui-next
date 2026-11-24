@@ -88,7 +88,7 @@ export function FileUpload({
           {files.map((f, i) => (
             <li
               key={`${f.name}-${i}`}
-              className="flex items-center gap-2 rounded-lg border border-border-primary px-2 py-1.5"
+              className="flex items-center gap-2 rounded-lg border border-separator-border px-2 py-1.5"
             >
               <Icon name="file-line" className="size-4 shrink-0 text-foreground-icon-secondary" />
               <span className="min-w-0 flex-1 truncate text-caption-1-medium text-text-primary">

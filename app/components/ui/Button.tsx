@@ -61,7 +61,7 @@ const variants: Record<ButtonVariant, string> = {
     "pressed:bg-[linear-gradient(180deg,var(--color-red-600)_0%,var(--color-red-700)_100%)]"
   ),
   outline: cn(
-    "bg-transparent text-text-primary border border-border-primary",
+    "bg-transparent text-text-primary border border-separator-border",
     "hover:bg-background-secondary-hover"
   ),
 };

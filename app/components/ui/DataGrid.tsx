@@ -144,7 +144,7 @@ export function DataGrid({
                   <tr
                     key={r.id}
                     className={cn(
-                      "border-t border-border-primary transition-colors duration-150",
+                      "border-t border-separator-border transition-colors duration-150",
                       on ? "bg-background-secondary-hover" : "hover:bg-background-secondary-hover"
                     )}
                   >
@@ -189,7 +189,7 @@ export function DataGrid({
       </div>
 
       {selectable && selected.length > 0 && (
-        <div className="flex items-center gap-2 border-t border-border-primary bg-background-secondary-default px-3 py-1.5">
+        <div className="flex items-center gap-2 border-t border-separator-border bg-background-secondary-default px-3 py-1.5">
           <span className="text-caption-2-medium text-text-secondary">
             已选 {selected.length} 项
           </span>

@@ -38,7 +38,7 @@ export function NotificationCenter({
         className
       )}
     >
-      <div className="flex items-center justify-between gap-2 border-b border-border-primary px-3 py-2">
+      <div className="flex items-center justify-between gap-2 border-b border-separator-border px-3 py-2">
         <div className="flex items-center gap-1.5">
           <span className="text-body-2-medium text-text-primary">通知</span>
           {unread > 0 && (
@@ -83,7 +83,7 @@ export function NotificationCenter({
                 setItems((p) => p.map((i) => (i.id === n.id ? { ...i, unread: false } : i)))
               }
               className={cn(
-                "flex w-full gap-2 border-b border-border-primary p-2.5 text-start last:border-0",
+                "flex w-full gap-2 border-b border-separator-border p-2.5 text-start last:border-0",
                 "transition-colors duration-150 hover:bg-background-secondary-hover"
               )}
             >
@@ -111,7 +111,7 @@ export function NotificationCenter({
                 <span className="line-clamp-2 text-[10px] leading-snug text-text-tertiary">
                   {n.body}
                 </span>
-                <span className="text-[10px] text-text-quaternary">{n.time}</span>
+                <span className="text-[10px] text-text-tertiary">{n.time}</span>
               </div>
             </button>
           ))

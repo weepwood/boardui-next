@@ -44,7 +44,7 @@ export function HrTemplate() {
 
   return (
     <div className="flex min-h-[660px] w-full flex-col overflow-hidden rounded-3xl border border-border-button-default bg-background-primary-default shadow-sidebar">
-      <header className="flex flex-wrap items-center justify-between gap-2 border-b border-border-primary px-4 py-3">
+      <header className="flex flex-wrap items-center justify-between gap-2 border-b border-separator-border px-4 py-3">
         <div className="flex flex-col gap-0.5">
           <h3 className="text-title-3-semibold text-text-primary">人力资源团队</h3>
           <span className="text-caption-2-regular text-text-tertiary">
@@ -75,7 +75,7 @@ export function HrTemplate() {
               <TemplateSegments values={["全部","在职","休假","试用"] as const} value={filter} onChange={setFilter}/>
             </div>
 
-            <div className="flex flex-col divide-y divide-border-primary">
+            <div className="flex flex-col divide-y divide-separator-border">
               {shown.map((m) => (
                 <div key={m.id} className="flex items-center gap-2.5 py-2">
                   <Avatar name={m.name} size="sm" />
@@ -117,7 +117,7 @@ export function HrTemplate() {
             {DEPARTMENTS.map((d) => (
               <div
                 key={d.id}
-                className="flex items-center gap-2 rounded-lg border border-border-primary p-2"
+                className="flex items-center gap-2 rounded-lg border border-separator-border p-2"
               >
                 <Avatar name={d.lead} size="sm" />
                 <div className="flex min-w-0 flex-1 flex-col">

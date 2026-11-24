@@ -47,9 +47,9 @@ export function AuthCard({ className }: { className?: string }) {
       </div>
 
       <div className="flex items-center gap-2">
-        <Separator className="h-px flex-1 bg-border-primary" />
+        <Separator className="h-px flex-1 bg-separator-border" />
         <span className="text-[10px] text-text-tertiary">或</span>
-        <Separator className="h-px flex-1 bg-border-primary" />
+        <Separator className="h-px flex-1 bg-separator-border" />
       </div>
 
       <div className="flex flex-col gap-2.5">

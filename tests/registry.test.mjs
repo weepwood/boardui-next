@@ -25,3 +25,5 @@ test('上游固定版本、目录无重复、授权与验收状态有效',()=>{
     }
   }
 });
+
+test('侧栏导航使用唯一独立路由',()=>{const links=[...read('lib/navigation.ts').matchAll(/href:\s*"([^"]+)"/g)].map(m=>m[1].replace(/\/$/,""));assert.equal(new Set(links).size,links.length);assert.ok(links.every(x=>!x.includes("#")));assert.ok(links.includes("/zh-hans/templates"));});
