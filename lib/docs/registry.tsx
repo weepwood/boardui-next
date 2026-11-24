@@ -9,7 +9,7 @@ import { useState } from "react";
 import type { ReactNode } from "react";
 
 import { Button } from "@/app/components/ui/Button";
-import { AriaButton, Button as NativeButton, ButtonLink } from "@/packages/react";
+import { AriaButton, Button as NativeButton, ButtonLink, IconButton as CoreIconButton, ButtonGroup as CoreButtonGroup, ButtonGroupItem, CloseButton as CoreCloseButton } from "@/packages/react";
 import { IconButton } from "@/app/components/ui/IconButton";
 import { Chip } from "@/app/components/ui/Chip";
 import { Input } from "@/app/components/ui/Input";
@@ -181,6 +181,14 @@ function ControlledSelectionDemo() {
   return <div className="flex flex-col gap-3" data-testid="controlled-selection"><Checkbox isSelected={checked} onChange={setChecked}>受控复选框</Checkbox><Switch isSelected={enabled} onChange={setEnabled}>受控开关</Switch><RadioGroup value={choice} onChange={setChoice} label="受控单选"><Radio value="a">选项 A</Radio><Radio value="b">选项 B</Radio></RadioGroup><output aria-live="polite">{String(checked)} / {String(enabled)} / {choice}</output></div>;
 }
 
+function AddGlyph({className}: {className?: string}) {return <Icon name="add-line" className={className}/>;}
+function EditGlyph({className}: {className?: string}) {return <Icon name="edit-line" className={className}/>;}
+function ButtonFamilyDemo() {
+  const [selection,setSelection]=useState("left");
+  const [count,setCount]=useState(0);
+  return <div className="flex flex-col gap-3" data-testid="button-family"><CoreButtonGroup aria-label="对齐方式"><ButtonGroupItem selected={selection==="left"} onClick={()=>setSelection("left")}>左</ButtonGroupItem><ButtonGroupItem selected={selection==="center"} onClick={()=>setSelection("center")}>中</ButtonGroupItem><ButtonGroupItem selected={selection==="right"} onClick={()=>setSelection("right")}>右</ButtonGroupItem></CoreButtonGroup><div className="flex items-center gap-2"><CoreIconButton icon={AddGlyph} aria-label="增加计数" onClick={()=>setCount(n=>n+1)}/><CoreCloseButton aria-label="重置计数" onClick={()=>setCount(0)}/><output aria-live="polite">{selection} / {count}</output></div></div>;
+}
+
 export const docs: Record<string, Doc> = {
   button: {
     title: "按钮",
@@ -210,39 +218,11 @@ export const docs: Record<string, Doc> = {
 
   "icon-button": {
     title: "图标按钮",
-    description: "纯图标按钮，用于工具栏与紧凑操作区。必须提供无障碍标签。",
-    install: "npx boardui@latest add icon-button",
-    preview: (
-      <>
-        <IconButton icon="add-line" label="新建" />
-        <IconButton icon="edit-line" label="编辑" />
-        <IconButton icon="delete-bin-line" label="删除" />
-        <IconButton icon="more-2-fill" label="更多" />
-      </>
-    ),
+    description: "原版 secondary 样式，36 / 32px 方形容器，10px 圆角，20 / 16px 图标。旧版扩展变体保留在兼容示例。",
+    preview: <><CoreIconButton icon={AddGlyph} aria-label="新建"/><CoreIconButton icon={EditGlyph} aria-label="编辑" size="small"/><CoreIconButton icon={AddGlyph} aria-label="禁用新建" disabled/></>,
     demos: [
-      {
-        id: "variants",
-        title: "变体",
-        node: (
-          <>
-            <IconButton icon="settings-3-line" label="设置" variant="ghost" />
-            <IconButton icon="settings-3-line" label="设置" variant="outline" />
-            <IconButton icon="settings-3-line" label="设置" variant="filled" />
-          </>
-        ),
-      },
-      {
-        id: "sizes",
-        title: "尺寸",
-        node: (
-          <>
-            <IconButton icon="star-line" label="收藏" size="sm" variant="outline" />
-            <IconButton icon="star-line" label="收藏" size="md" variant="outline" />
-            <IconButton icon="star-line" label="收藏" size="lg" variant="outline" />
-          </>
-        ),
-      },
+      {id:"sizes",title:"原版尺寸",node:<><CoreIconButton icon={AddGlyph} aria-label="中尺寸" size="medium"/><CoreIconButton icon={AddGlyph} aria-label="小尺寸" size="small"/></>},
+      {id:"legacy",title:"旧版兼容变体",node:<><IconButton icon="settings-3-line" label="设置" variant="ghost"/><IconButton icon="settings-3-line" label="设置" variant="outline"/><IconButton icon="settings-3-line" label="设置" variant="filled"/></>},
     ],
   },
 
@@ -858,43 +838,19 @@ export const docs: Record<string, Doc> = {
 
   "button-group": {
     title: "按钮组",
-    description: "相邻按钮合并为整体，仅首尾保留圆角，用于并列操作。",
-    install: "npx boardui@latest add button-group",
-    preview: (
-      <ButtonGroup>
-        <Button variant="secondary">左</Button>
-        <Button variant="secondary">中</Button>
-        <Button variant="secondary">右</Button>
-      </ButtonGroup>
-    ),
+    description: "原版共用边框、阴影和分隔线；支持独立操作、受控选中、图标及键盘焦点。",
+    preview: <ButtonFamilyDemo/>,
     demos: [
-      {
-        id: "vertical",
-        title: "垂直方向",
-        node: (
-          <ButtonGroup orientation="vertical">
-            <Button variant="secondary">复制</Button>
-            <Button variant="secondary">移动</Button>
-            <Button variant="secondary">删除</Button>
-          </ButtonGroup>
-        ),
-      },
+      {id:"small",title:"小尺寸",node:<CoreButtonGroup size="small" aria-label="小按钮组"><ButtonGroupItem size="small">复制</ButtonGroupItem><ButtonGroupItem size="small" leadingIcon={EditGlyph}>编辑</ButtonGroupItem><ButtonGroupItem size="small" disabled>删除</ButtonGroupItem></CoreButtonGroup>},
+      {id:"vertical",title:"旧版垂直扩展",node:<ButtonGroup orientation="vertical"><Button variant="secondary">复制</Button><Button variant="secondary">移动</Button><Button variant="secondary">删除</Button></ButtonGroup>},
     ],
   },
 
   "close-button": {
     title: "关闭按钮",
-    description: "弹窗、标签、提示等场景的统一关闭控件。",
-    install: "npx boardui@latest add close-button",
-    preview: (
-      <>
-        <CloseButton size="sm" />
-        <CloseButton />
-        <CloseButton size="lg" />
-        <CloseButton variant="filled" />
-      </>
-    ),
-    demos: [],
+    description: "原版独立 SVG 路径：16 / 20 / 24 / 32px 容器及各自精确线宽。",
+    preview: <><CoreCloseButton size="2xs" aria-label="关闭 16"/><CoreCloseButton size="xs" aria-label="关闭 20"/><CoreCloseButton size="sm" aria-label="关闭 24"/><CoreCloseButton size="md" aria-label="关闭 32"/></>,
+    demos: [{id:"legacy",title:"旧版兼容样式",node:<><CloseButton size="sm"/><CloseButton size="lg"/><CloseButton variant="filled"/></>}],
   },
 
   "link-button": {

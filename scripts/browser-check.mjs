@@ -72,6 +72,26 @@ try{
             await page.waitForFunction(()=>document.querySelector('[data-testid="controlled-selection"] output')?.textContent==='false / false / a');
           }
         }
+        if(route==='/zh-hans/components/button-group/'){
+          const demo=page.getByTestId('button-family');
+          await demo.waitFor({state:'visible'});
+          await demo.getByRole('button',{name:'中',exact:true}).press('Space');
+          await demo.getByRole('button',{name:'增加计数'}).press('Enter');
+          assert.equal(await demo.locator('output').textContent(),'center / 1');
+          assert.equal(await demo.getByRole('button',{name:'中',exact:true}).getAttribute('aria-pressed'),'true');
+          await demo.getByRole('button',{name:'重置计数'}).click();
+          assert.equal(await demo.locator('output').textContent(),'center / 0');
+        }
+        if(route==='/zh-hans/components/icon-button/'){
+          const box=await page.getByRole('button',{name:'新建',exact:true}).boundingBox();
+          assert.equal(box?.width,36);assert.equal(box?.height,36);
+        }
+        if(route==='/zh-hans/components/close-button/'){
+          for(const size of [16,20,24,32]){
+            const box=await page.getByRole('button',{name:'关闭 '+size,exact:true}).boundingBox();
+            assert.equal(box?.width,size);assert.equal(box?.height,size);
+          }
+        }
         let violations=[];
         if(full){
           await page.addScriptTag({path:resolve('node_modules/axe-core/axe.min.js')});

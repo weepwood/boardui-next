@@ -11,3 +11,10 @@ export { Radio, RadioGroup, RadioDot } from "./radio";
 export type { RadioProps, RadioGroupProps, RadioSize, RadioDotProps } from "./radio";
 export { Switch, SwitchTrack, switchSizes } from "./switch";
 export type { SwitchProps, SwitchSize, SwitchShape, SwitchVisualState } from "./switch";
+
+export { IconButton, IconLinkButton } from "./icon-button";
+export type { IconButtonProps, IconLinkButtonProps, IconButtonSize } from "./icon-button";
+export { ButtonGroup, ButtonGroupItem } from "./button-group";
+export type { ButtonGroupProps, ButtonGroupItemProps, ButtonGroupSize } from "./button-group";
+export { CloseButton } from "./close-button";
+export type { CloseButtonProps, CloseButtonSize } from "./close-button";
