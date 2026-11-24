@@ -342,6 +342,1260 @@
       "scope": "本地 Edge 1440×1000 浅色/深色专项通过。点击选择每月，选中语义。 尚未覆盖全部变体、指针与跨浏览器。",
       "source": "scripts/browser-check.mjs",
       "route": "/zh-hans/components/segmented-control/"
+    },
+    {
+      "id": "compound-visual-accordion-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "accordion"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/accordion/"
+    },
+    {
+      "id": "compound-interaction-accordion-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "accordion"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/accordion/"
+    },
+    {
+      "id": "compound-visual-activity-rings-card-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "activity-rings-card"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/activity-rings-card/"
+    },
+    {
+      "id": "compound-visual-agent-creator-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "agent-creator"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/agent-creator/"
+    },
+    {
+      "id": "compound-interaction-agent-creator-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "agent-creator"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/agent-creator/"
+    },
+    {
+      "id": "compound-visual-agent-limits-card-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "agent-limits-card"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/agent-limits-card/"
+    },
+    {
+      "id": "compound-visual-agent-progress-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "agent-progress"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/agent-progress/"
+    },
+    {
+      "id": "compound-interaction-agent-progress-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "agent-progress"
+      ],
+      "scope": "本地 Edge 双主题 aria-current 状态断言通过；非完整操作验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/agent-progress/"
+    },
+    {
+      "id": "compound-visual-agent-thinking-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "agent-thinking"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/agent-thinking/"
+    },
+    {
+      "id": "compound-interaction-agent-thinking-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "agent-thinking"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/agent-thinking/"
+    },
+    {
+      "id": "compound-visual-ai-chat-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "ai-chat"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/templates/ai-chat/"
+    },
+    {
+      "id": "compound-interaction-ai-chat-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "ai-chat"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/templates/ai-chat/"
+    },
+    {
+      "id": "compound-visual-ai-image-generation-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "ai-image-generation"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/templates/ai-image-generation/"
+    },
+    {
+      "id": "compound-interaction-ai-image-generation-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "ai-image-generation"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/templates/ai-image-generation/"
+    },
+    {
+      "id": "compound-visual-ai-profile-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "ai-profile"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/templates/ai-profile/"
+    },
+    {
+      "id": "compound-interaction-ai-profile-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "ai-profile"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/templates/ai-profile/"
+    },
+    {
+      "id": "compound-visual-area-chart-card-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "area-chart-card"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/area-chart-card/"
+    },
+    {
+      "id": "compound-interaction-area-chart-card-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "area-chart-card"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/area-chart-card/"
+    },
+    {
+      "id": "compound-visual-bar-list-card-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "bar-list-card"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/bar-list-card/"
+    },
+    {
+      "id": "compound-interaction-bar-list-card-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "bar-list-card"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/bar-list-card/"
+    },
+    {
+      "id": "compound-visual-breadcrumb-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "breadcrumb"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/breadcrumb/"
+    },
+    {
+      "id": "compound-interaction-breadcrumb-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "breadcrumb"
+      ],
+      "scope": "本地 Edge 双主题 aria-current 状态断言通过；非完整操作验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/breadcrumb/"
+    },
+    {
+      "id": "compound-visual-calendar-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "calendar"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/calendar/"
+    },
+    {
+      "id": "compound-interaction-calendar-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "calendar"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/calendar/"
+    },
+    {
+      "id": "compound-visual-chat-starter-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "chat-starter"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/templates/chat-starter/"
+    },
+    {
+      "id": "compound-interaction-chat-starter-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "chat-starter"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/templates/chat-starter/"
+    },
+    {
+      "id": "compound-visual-color-picker-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "color-picker"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/color-picker/"
+    },
+    {
+      "id": "compound-interaction-color-picker-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "color-picker"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/color-picker/"
+    },
+    {
+      "id": "compound-visual-combo-chart-card-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "combo-chart-card"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/combo-chart-card/"
+    },
+    {
+      "id": "compound-visual-command-palette-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "command-palette"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/command-palette/"
+    },
+    {
+      "id": "compound-interaction-command-palette-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "command-palette"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/command-palette/"
+    },
+    {
+      "id": "compound-visual-composer-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "composer"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/composer/"
+    },
+    {
+      "id": "compound-interaction-composer-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "composer"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/composer/"
+    },
+    {
+      "id": "compound-visual-composer-attachments-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "composer-attachments"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/composer-attachments/"
+    },
+    {
+      "id": "compound-interaction-composer-attachments-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "composer-attachments"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/composer-attachments/"
+    },
+    {
+      "id": "compound-visual-composer-loader-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "composer-loader"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/composer-loader/"
+    },
+    {
+      "id": "compound-interaction-composer-loader-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "composer-loader"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/composer-loader/"
+    },
+    {
+      "id": "compound-visual-composer-panel-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "composer-panel"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/composer-panel/"
+    },
+    {
+      "id": "compound-interaction-composer-panel-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "composer-panel"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/composer-panel/"
+    },
+    {
+      "id": "compound-visual-context-menu-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "context-menu"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/context-menu/"
+    },
+    {
+      "id": "compound-interaction-context-menu-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "context-menu"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/context-menu/"
+    },
+    {
+      "id": "compound-visual-contributions-card-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "contributions-card"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/contributions-card/"
+    },
+    {
+      "id": "compound-visual-data-grid-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "data-grid"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/data-grid/"
+    },
+    {
+      "id": "compound-interaction-data-grid-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "data-grid"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/data-grid/"
+    },
+    {
+      "id": "compound-visual-data-table-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "data-table"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/data-table/"
+    },
+    {
+      "id": "compound-interaction-data-table-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "data-table"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/data-table/"
+    },
+    {
+      "id": "compound-visual-date-calendar-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "date-calendar"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/date-calendar/"
+    },
+    {
+      "id": "compound-interaction-date-calendar-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "date-calendar"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/date-calendar/"
+    },
+    {
+      "id": "compound-visual-date-picker-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "date-picker"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/date-picker/"
+    },
+    {
+      "id": "compound-interaction-date-picker-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "date-picker"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/date-picker/"
+    },
+    {
+      "id": "compound-visual-drawer-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "drawer"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/drawer/"
+    },
+    {
+      "id": "compound-interaction-drawer-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "drawer"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/drawer/"
+    },
+    {
+      "id": "compound-visual-dropdown-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "dropdown"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/dropdown/"
+    },
+    {
+      "id": "compound-interaction-dropdown-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "dropdown"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/dropdown/"
+    },
+    {
+      "id": "compound-visual-earnings-chart-card-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "earnings-chart-card"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/earnings-chart-card/"
+    },
+    {
+      "id": "compound-interaction-earnings-chart-card-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "earnings-chart-card"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/earnings-chart-card/"
+    },
+    {
+      "id": "compound-visual-file-upload-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "file-upload"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/file-upload/"
+    },
+    {
+      "id": "compound-interaction-file-upload-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "file-upload"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/file-upload/"
+    },
+    {
+      "id": "compound-visual-finance-dashboard-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "finance-dashboard"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/templates/finance/"
+    },
+    {
+      "id": "compound-interaction-finance-dashboard-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "finance-dashboard"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/templates/finance/"
+    },
+    {
+      "id": "compound-visual-funnel-chart-card-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "funnel-chart-card"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/funnel-chart-card/"
+    },
+    {
+      "id": "compound-visual-heatmap-chart-card-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "heatmap-chart-card"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/heatmap-chart-card/"
+    },
+    {
+      "id": "compound-visual-home-dashboard-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "home-dashboard"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/templates/dashboard/"
+    },
+    {
+      "id": "compound-interaction-home-dashboard-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "home-dashboard"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/templates/dashboard/"
+    },
+    {
+      "id": "compound-visual-input-otp-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "input-otp"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/input-otp/"
+    },
+    {
+      "id": "compound-interaction-input-otp-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "input-otp"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/input-otp/"
+    },
+    {
+      "id": "compound-visual-line-chart-card-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "line-chart-card"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/line-chart-card/"
+    },
+    {
+      "id": "compound-interaction-line-chart-card-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "line-chart-card"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/line-chart-card/"
+    },
+    {
+      "id": "compound-visual-marketing-dashboard-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "marketing-dashboard"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/templates/marketing/"
+    },
+    {
+      "id": "compound-interaction-marketing-dashboard-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "marketing-dashboard"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/templates/marketing/"
+    },
+    {
+      "id": "compound-visual-medical-profile-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "medical-profile"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/templates/medical-profile/"
+    },
+    {
+      "id": "compound-interaction-medical-profile-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "medical-profile"
+      ],
+      "scope": "本地 Edge 双主题虚构医疗档案只读及禁用状态断言通过；未声明真实业务操作或完整交互验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/templates/medical-profile/"
+    },
+    {
+      "id": "compound-visual-modal-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "modal"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/modal/"
+    },
+    {
+      "id": "compound-interaction-modal-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "modal"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/modal/"
+    },
+    {
+      "id": "compound-visual-most-active-days-card-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "most-active-days-card"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/most-active-days-card/"
+    },
+    {
+      "id": "compound-visual-multi-agent-chat-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "multi-agent-chat"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/templates/multi-agent-chat/"
+    },
+    {
+      "id": "compound-interaction-multi-agent-chat-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "multi-agent-chat"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/templates/multi-agent-chat/"
+    },
+    {
+      "id": "compound-visual-notification-center-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "notification-center"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/notification-center/"
+    },
+    {
+      "id": "compound-interaction-notification-center-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "notification-center"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/notification-center/"
+    },
+    {
+      "id": "compound-visual-number-field-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "number-field"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/number-field/"
+    },
+    {
+      "id": "compound-interaction-number-field-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "number-field"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/number-field/"
+    },
+    {
+      "id": "compound-visual-orders-chart-card-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "orders-chart-card"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/orders-chart-card/"
+    },
+    {
+      "id": "compound-interaction-orders-chart-card-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "orders-chart-card"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/orders-chart-card/"
+    },
+    {
+      "id": "compound-visual-pagination-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "pagination"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/pagination/"
+    },
+    {
+      "id": "compound-interaction-pagination-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "pagination"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/pagination/"
+    },
+    {
+      "id": "compound-visual-popover-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "popover"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/popover/"
+    },
+    {
+      "id": "compound-interaction-popover-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "popover"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/popover/"
+    },
+    {
+      "id": "compound-visual-project-board-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "project-board"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/templates/project-board/"
+    },
+    {
+      "id": "compound-interaction-project-board-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "project-board"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/templates/project-board/"
+    },
+    {
+      "id": "compound-visual-radar-chart-card-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "radar-chart-card"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/radar-chart-card/"
+    },
+    {
+      "id": "compound-visual-radial-chart-card-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "radial-chart-card"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/radial-chart-card/"
+    },
+    {
+      "id": "compound-visual-revenue-chart-card-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "revenue-chart-card"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/revenue-chart-card/"
+    },
+    {
+      "id": "compound-interaction-revenue-chart-card-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "revenue-chart-card"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/revenue-chart-card/"
+    },
+    {
+      "id": "compound-visual-sankey-chart-card-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "sankey-chart-card"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/sankey-chart-card/"
+    },
+    {
+      "id": "compound-visual-scatter-chart-card-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "scatter-chart-card"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/scatter-chart-card/"
+    },
+    {
+      "id": "compound-visual-sidebar-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "sidebar"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/sidebar/"
+    },
+    {
+      "id": "compound-interaction-sidebar-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "sidebar"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/sidebar/"
+    },
+    {
+      "id": "compound-visual-sleep-score-card-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "sleep-score-card"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/sleep-score-card/"
+    },
+    {
+      "id": "compound-visual-slider-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "slider"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/slider/"
+    },
+    {
+      "id": "compound-interaction-slider-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "slider"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/slider/"
+    },
+    {
+      "id": "compound-visual-stage-bars-card-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "stage-bars-card"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/stage-bars-card/"
+    },
+    {
+      "id": "compound-visual-steps-card-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "steps-card"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/steps-card/"
+    },
+    {
+      "id": "compound-visual-table-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "table"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/table/"
+    },
+    {
+      "id": "compound-interaction-table-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "table"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/table/"
+    },
+    {
+      "id": "compound-visual-template-calendar-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "template:calendar"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/templates/calendar/"
+    },
+    {
+      "id": "compound-interaction-template-calendar-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "template:calendar"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/templates/calendar/"
+    },
+    {
+      "id": "compound-visual-template-hr-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "template:hr"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/templates/hr/"
+    },
+    {
+      "id": "compound-interaction-template-hr-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "template:hr"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/templates/hr/"
+    },
+    {
+      "id": "compound-visual-time-field-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "time-field"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/time-field/"
+    },
+    {
+      "id": "compound-interaction-time-field-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "time-field"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/time-field/"
+    },
+    {
+      "id": "compound-visual-tooltip-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "tooltip"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/tooltip/"
+    },
+    {
+      "id": "compound-interaction-tooltip-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "tooltip"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/tooltip/"
+    },
+    {
+      "id": "compound-visual-tree-view-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "tree-view"
+      ],
+      "scope": "本地 Edge 1440×1000 双主题实际截图、布局与运行错误采样；不代表全部变体、响应式或像素验收。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/tree-view/"
+    },
+    {
+      "id": "compound-interaction-tree-view-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "tree-view"
+      ],
+      "scope": "本地 Edge 双主题 route-specific 操作或状态断言通过；完整行为、浏览器兼容性与无障碍验收仍待执行。",
+      "source": "reference/evidence/compound-visual-interaction-20261124.json",
+      "route": "/zh-hans/components/tree-view/"
     }
   ]
 }

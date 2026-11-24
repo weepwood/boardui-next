@@ -24,7 +24,15 @@ for(const p of files){
   const tpl=p.match(/^app\/components\/templates\/([^/]+)Template\.tsx$/);
   if(tpl&&existsSync('app/zh-hans/templates/'+kebab(tpl[1])+'/page.tsx'))routes.add('/zh-hans/templates/'+kebab(tpl[1])+'/');
 }
+const matrix=files.includes("scripts/audit-component-matrix.mjs");
+const rtlCompat=matrix||files.some(p=>/^(app\/components\/(docs\/DirectionLab|ui\/(Accordion|Collapsible))|packages\/react\/(direction|slider|tabs|segmented-control))/.test(p));
+if(matrix){
+  const m=JSON.parse(readFileSync("reference/upstream-manifest.json","utf8"));
+  const selected=new Set("dropdown popover tooltip modal drawer context-menu accordion breadcrumb pagination sidebar date-picker date-calendar calendar slider number-field time-field color-picker input-otp table data-table data-grid tree-view file-upload composer composer-panel composer-attachments composer-loader agent-thinking agent-creator agent-progress agent-limits-card command-palette notification-center".split(" "));
+  for(const e of [...m.components,...m.localOnly])if(selected.has(e.slug)||e.localRoute.includes("/templates/")||e.slug.endsWith("-card")&&/chart|rings|contributions|active-days|stage-bars|steps|sleep-score|bar-list/.test(e.slug))routes.add(e.localRoute+"/");
+  routes.add("/zh-hans/rtl/");
+}
 const navRisk=files.some(p=>/^(app\/(layout\.tsx|globals\.css|components\/docs\/(DocsShell|Sidebar|navigation-context|CatalogCard|catalog-observers))|scripts\/(prepare-fonts|check-navigation-compat)|package(-lock)?\.json)/.test(p))||FORCE_RISK==='true';
 const risk=FORCE_RISK==='true'||!BASE_SHA||!HEAD_SHA||risky.length>0;
 console.log(JSON.stringify({risk,files:risky},null,2));
-if(GITHUB_OUTPUT) appendFileSync(GITHUB_OUTPUT,'risk='+risk+'\n'+'navigation='+navRisk+'\n'+'routes='+JSON.stringify([...routes])+'\n');
+if(GITHUB_OUTPUT) appendFileSync(GITHUB_OUTPUT,'risk='+risk+'\n'+'navigation='+navRisk+'\n'+'matrix='+matrix+'\n'+'rtlCompat='+rtlCompat+'\n'+'routes='+JSON.stringify([...routes])+'\n');

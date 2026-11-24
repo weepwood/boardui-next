@@ -89,7 +89,7 @@ import { AuthCard } from "@/app/components/ui/AuthCard";
 import { CalendarCard } from "@/app/components/ui/CalendarCard";
 import { DataTable } from "@/app/components/ui/DataTable";
 import { DataGrid } from "@/app/components/ui/DataGrid";
-import { NotificationCenter } from "@/app/components/ui/NotificationCenter";
+import { NotificationCenter,type NoticeItem } from "@/app/components/ui/NotificationCenter";
 import { Questionnaire } from "@/app/components/ui/Questionnaire";
 import { SettingsModal } from "@/app/components/ui/SettingsModal";
 import { AppSidebar } from "@/app/components/ui/AppSidebar";
@@ -147,24 +147,8 @@ function ModalDemo() {
 }
 
 function MenuDemo() {
-  return (
-    <MenuTrigger>
-      <Button
-        variant="secondary"
-        trailing={<Icon name="arrow-down-s-line" className="size-4" />}
-      >
-        操作菜单
-      </Button>
-      <Popover>
-        <Menu aria-label="操作菜单">
-          <BMenuItem id="edit" label="编辑" icon="edit-line" shortcut="⌘E" />
-          <BMenuItem id="copy" label="复制链接" icon="link" shortcut="⌘C" />
-          <BMenuItem id="share" label="分享" icon="share-line" />
-          <BMenuItem id="delete" label="删除" icon="delete-bin-line" danger />
-        </Menu>
-      </Popover>
-    </MenuTrigger>
-  );
+ const [action,setAction]=useState("—");
+ return <div className="flex flex-col items-center gap-3"><MenuTrigger><Button variant="secondary" aria-label="添加到聊天" leading={<Icon name="add-line" className="size-5"/>} className="size-9 p-0"/><Popover><Menu aria-label="添加到聊天" onAction={key=>setAction(String(key))}><BMenuItem id="文件" label="添加文件" icon="attachment-line"/><BMenuItem id="图片" label="添加图片" icon="image-line"/><BMenuItem id="链接" label="添加链接" icon="link"/></Menu></Popover></MenuTrigger><output className="text-caption-2-regular text-text-secondary" aria-live="polite">上次操作：{action}</output></div>;
 }
 
 function SelectDemo() {
@@ -564,13 +548,8 @@ import { RiArrowRightLine } from "@remixicon/react";
     title: "提示气泡",
     description: "原版浅色语义卡片、方向感知箭头、淡入缩放及模糊过渡。",
     install: "npx boardui@latest add tooltip",
-    preview: () => ((
-      <TooltipTrigger delay={120}>
-        <AriaButton variant="secondary">悬停查看提示</AriaButton>
-        <Tooltip>这是一个提示气泡</Tooltip>
-      </TooltipTrigger>
-    )),
-    demos: () => ([]),
+    preview: () => (<div className="flex flex-wrap items-center justify-center gap-3"><TooltipTrigger delay={120}><AriaButton variant="secondary" aria-label="小">小</AriaButton><Tooltip size="sm">小尺寸提示</Tooltip></TooltipTrigger><TooltipTrigger delay={120}><AriaButton variant="secondary" aria-label="中">中</AriaButton><Tooltip size="md">中尺寸提示</Tooltip></TooltipTrigger><TooltipTrigger delay={120}><AriaButton variant="secondary">无箭头</AriaButton><Tooltip showArrow={false}>无箭头提示</Tooltip></TooltipTrigger></div>),
+    demos: () => ([{id:"hover",title:"悬停与键盘焦点",node:<TooltipTrigger delay={120}><AriaButton variant="secondary">悬停查看提示</AriaButton><Tooltip>这是一个提示气泡</Tooltip></TooltipTrigger>}]),
   },
 
   "toggle-button": {
@@ -746,23 +725,7 @@ import { RiArrowRightLine } from "@remixicon/react";
     title: "表格",
     description: "原版表格配方，语义表头、键盘导航与统一行分隔线。",
     install: "npx boardui@latest add table",
-    preview: () => ((
-      <div className="w-full">
-        <Table
-          aria-label="成员列表"
-          columns={[
-            { id: "name", label: "姓名", isRowHeader: true },
-            { id: "role", label: "角色" },
-            { id: "status", label: "状态" },
-          ]}
-          rows={[
-            { id: "1", cells: { name: "张三", role: "前端工程师", status: "在职" } },
-            { id: "2", cells: { name: "李四", role: "设计师", status: "在职" } },
-            { id: "3", cells: { name: "王五", role: "产品经理", status: "休假" } },
-          ]}
-        />
-      </div>
-    )),
+    preview: () => (<MemberTableDemo/>),
     demos: () => ([]),
   },
 
@@ -1033,9 +996,7 @@ import { RiArrowRightLine } from "@remixicon/react";
             { id: "prompts", label: "提示词", icon: "sparkling-line" },
           ]}
         >
-          <span className="text-caption-1-regular text-text-tertiary">
-            选中标签后显示对应工具内容
-          </span>
+          {id=><span className="text-caption-1-regular text-text-tertiary">{({tools:"可用工具：检索网页、执行代码",files:"文件：选择需要引用的附件",prompts:"提示词：选择预设工作流"} as Record<string,string>)[id]}</span>}
         </ComposerPanel>
       </div>
     )),
@@ -1243,7 +1204,7 @@ import { RiArrowRightLine } from "@remixicon/react";
     install: "npx boardui@latest add area-chart-card",
     preview: () => ((
       <div className="w-full max-w-[420px]">
-        <ChartCard kind="area" title="访客" value="94,700" delta="+8.2%" height={180} />
+        <ChartCard periodFilter kind="area" title="访客" value="94,700" delta="+8.2%" height={180} />
       </div>
     )),
     demos: () => ([]),
@@ -1291,7 +1252,7 @@ import { RiArrowRightLine } from "@remixicon/react";
     install: "npx boardui@latest add earnings-chart-card",
     preview: () => ((
       <div className="w-full max-w-[420px]">
-        <ChartCard kind="earnings" title="本月收入" height={120} />
+        <ChartCard periodFilter kind="earnings" title="本月收入" height={120} />
       </div>
     )),
     demos: () => ([]),
@@ -1327,7 +1288,7 @@ import { RiArrowRightLine } from "@remixicon/react";
     install: "npx boardui@latest add line-chart-card",
     preview: () => ((
       <div className="w-full max-w-[420px]">
-        <ChartCard kind="line" title="流量对比" value="24,860" delta="+12.6%" height={180} />
+        <ChartCard periodFilter kind="line" title="流量对比" value="24,860" delta="+12.6%" height={180} />
       </div>
     )),
     demos: () => ([]),
@@ -1351,7 +1312,7 @@ import { RiArrowRightLine } from "@remixicon/react";
     install: "npx boardui@latest add orders-chart-card",
     preview: () => ((
       <div className="w-full max-w-[420px]">
-        <ChartCard kind="orders" title="订单量"
+        <ChartCard periodFilter kind="orders" title="订单量"
             delta="+8.2%" height={120} />
       </div>
     )),
@@ -1388,7 +1349,7 @@ import { RiArrowRightLine } from "@remixicon/react";
     install: "npx boardui@latest add revenue-chart-card",
     preview: () => ((
       <div className="w-full max-w-[420px]">
-        <ChartCard kind="revenue" title="累计营收" height={120} />
+        <ChartCard periodFilter kind="revenue" title="累计营收" height={120} />
       </div>
     )),
     demos: () => ([]),
@@ -1733,7 +1694,7 @@ function AgentCreatorDemo() {
   const [msg, setMsg] = useState("—");
   return (
     <div className="w-full max-w-[380px]">
-      <AgentCreator onSubmit={(d) => setMsg(d.name)} />
+      <AgentCreator onSubmit={(d) => setMsg(d.name+" / "+d.model+" / "+d.temperature+" / "+d.capabilities.join("、")+" / "+String(d.stream))} />
       <span className="mt-1 block text-center text-caption-2-regular text-text-tertiary">
         上次创建：{msg}
       </span>
@@ -1741,6 +1702,12 @@ function AgentCreatorDemo() {
   );
 }
 
+function MemberTableDemo(){
+ const [query,setQuery]=useState(""),[status,setStatus]=useState("all");
+ const members=[{id:"1",cells:{name:"张三",role:"前端工程师",status:"在职"}},{id:"2",cells:{name:"李四",role:"设计师",status:"在职"}},{id:"3",cells:{name:"王五",role:"产品经理",status:"休假"}}];
+ const rows=members.filter(r=>(status==="all"||r.cells.status===status)&&Object.values(r.cells).join(" ").toLowerCase().includes(query.trim().toLowerCase()));
+ return <div className="flex w-full min-w-0 flex-col gap-3"><div className="flex flex-wrap items-center justify-between gap-2"><FilterSelect aria-label="筛选成员状态" selectedKey={status} onSelectionChange={key=>setStatus(String(key))}><FilterOption id="all">所有状态</FilterOption><FilterOption id="在职">在职</FilterOption><FilterOption id="休假">休假</FilterOption></FilterSelect><SearchField aria-label="搜索成员" placeholder="搜索成员" value={query} onChange={setQuery} className="w-full max-w-[220px]"/></div><Table aria-label="成员列表" columns={[{id:"name",label:"姓名",isRowHeader:true},{id:"role",label:"角色"},{id:"status",label:"状态"}]} rows={rows}/><output aria-live="polite" className="text-caption-2-regular text-text-secondary">共 {rows.length} 位成员</output></div>;
+}
 function DataTableDemo() {
   return (
     <div className="w-full">
@@ -1781,18 +1748,13 @@ function DataGridDemo() {
   );
 }
 
-function NoticeDemo() {
-  return (
-    <div className="flex w-full justify-center">
-      <NotificationCenter
-        items={[
-          { id: "1", title: "构建已完成", body: "生产环境部署成功，耗时 42 秒。", time: "2 分钟前", unread: true, avatar: "李四" },
-          { id: "2", title: "新评论", body: "王五在「手风琴」文档下留了言。", time: "1 小时前", unread: true, avatar: "王五" },
-          { id: "3", title: "额度提醒", body: "本月 Token 用量已达 93%。", time: "昨天", icon: "alert-line" },
-        ]}
-      />
-    </div>
-  );
+function NoticeDemo(){
+ const [items,setItems]=useState<NoticeItem[]>([
+  {id:"1",title:"构建已完成",body:"生产环境部署成功，耗时 42 秒。",time:"2 分钟前",unread:true,avatar:"李四",category:"system"},
+  {id:"2",title:"新评论",body:"王五在「手风琴」文档下留了言。",time:"1 小时前",unread:true,avatar:"王五",category:"mention"},
+  {id:"3",title:"额度提醒",body:"本月 Token 用量已达 93%。",time:"昨天",unread:false,icon:"alert-line",category:"system"}
+ ]);
+ return <div className="flex w-full flex-col items-center gap-2"><NotificationCenter items={items}/><Button size="sm" variant="secondary" onClick={()=>setItems(p=>[{id:"new-"+p.length,title:"新通知 "+p.length,body:"本地模拟通知",time:"刚刚",unread:true,category:"system"},...p])}>添加示例通知</Button></div>;
 }
 
 function QuestionnaireDemo() {

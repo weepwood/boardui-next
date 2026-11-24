@@ -19,6 +19,8 @@ const MODELS = [
 
 const CAPS = ["检索网页", "执行代码", "读写文件", "调用 API"];
 
+export type AgentConfiguration={name:string;role:string;model:string;temperature:number;capabilities:string[];stream:boolean};
+
 /**
  * 智能体创建器：名称、角色、模型、能力与温度设置。
  * 分步骤表单，带预览摘要。
@@ -27,7 +29,7 @@ export function AgentCreator({
   onSubmit,
   className,
 }: {
-  onSubmit?: (data: { name: string; role: string }) => void;
+  onSubmit?: (data:AgentConfiguration) => void;
   className?: string;
 }) {
   const [name, setName] = useState("研究助手");
@@ -99,7 +101,7 @@ export function AgentCreator({
         <span className="text-caption-2-regular text-text-secondary">
           已选 {caps.length} 项能力 · 模型 {MODELS.find((m) => m.id === model)?.label}
         </span>
-        <Button size="sm" onClick={() => onSubmit?.({ name, role })}>
+        <Button size="sm" isDisabled={!name.trim()||!role.trim()} onClick={() => onSubmit?.({name:name.trim(),role:role.trim(),model,temperature:temp,capabilities:[...caps],stream})}>
           创建
         </Button>
       </div>

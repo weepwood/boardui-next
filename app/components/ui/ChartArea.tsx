@@ -26,7 +26,7 @@ export type Series = {
 /** 取一个能被 (ticks-1) 整除的整齐上限 */
 function niceMax(values: number[], ticks = 4) {
   const max = values.reduce((max,value)=>Math.max(max,value),1);
-  const seg = ticks - 1;
+  const seg = Math.max(1,ticks - 1);
   const raw = max / seg;
   const mag = Math.pow(10, Math.floor(Math.log10(raw)));
   const n = raw / mag;
@@ -52,6 +52,8 @@ export function ChartArea({
   showGrid = true,
   showAxis = true,
   smooth = true,
+  stacked = true,
+  showFill = true,
 }: {
   series: Series[];
   labels: string[];
@@ -61,6 +63,8 @@ export function ChartArea({
   showGrid?: boolean;
   showAxis?: boolean;
   smooth?: boolean;
+  stacked?: boolean;
+  showFill?: boolean;
 }) {
   const uid=useId().replace(/[^a-zA-Z0-9_-]/g,"");
   const W = 544;
@@ -69,16 +73,21 @@ export function ChartArea({
   const innerH = H - PAD.top - PAD.bottom;
 
   // 计算 Y 轴最大值（取所有系列之和，模拟叠加）
-  const {baselines:cumulative,total:sums}=stackSeries(series,labels.length);
-  const max = niceMax(sums, yTicks);
+  const normalized=series.map(s=>({...s,data:labels.map((_,i)=>Number.isFinite(s.data[i])?s.data[i]:0)}));
+  const stack=stacked?stackSeries(normalized,labels.length):null;
+  const cumulative=stack?.baselines??normalized.map(()=>labels.map(()=>0));
+  const domainRows=stack?[stack.total,...stack.baselines]:normalized.map(s=>s.data);
+  const ticks=Math.max(2,Math.min(20,Math.trunc(yTicks)||4));
+  const peak=domainRows.reduce((hi,row)=>row.reduce((n,v)=>Math.max(n,v),hi),1);
+  const max=niceMax([peak],ticks);
+  const min=domainRows.reduce((lo,row)=>row.reduce((n,v)=>Math.min(n,v),lo),0);
 
   const xAt = (i: number) =>
     labels.length <= 1 ? PAD.left : PAD.left + (i / (labels.length - 1)) * innerW;
-  const yAt = (v: number) => PAD.top + innerH - (v / max) * innerH;
+  const yAt = (v: number) => PAD.top + innerH - ((v-min) / (max-min)) * innerH;
 
   // 生成路径（可平滑）
-  const buildLine = (data: number[], cumulative: number[]) => {
-    const pts = data.map((v, i) => [xAt(i), yAt((cumulative[i]??0) + v)] as const);
+  const buildLine = (pts: (readonly [number,number])[]) => {
     if (!smooth || pts.length < 3) {
       return pts.map(([x, y], i) => `${i === 0 ? "M" : "L"}${x.toFixed(1)},${y.toFixed(1)}`).join(" ");
     }
@@ -117,8 +126,8 @@ export function ChartArea({
 
       {/* 网格线 */}
       {showGrid &&
-        Array.from({ length: yTicks }).map((_, i) => {
-          const y = PAD.top + (i / (yTicks - 1)) * innerH;
+        Array.from({ length: ticks }).map((_, i) => {
+          const y = PAD.top + (i / (ticks - 1)) * innerH;
           return (
             <line
               key={i}
@@ -135,9 +144,9 @@ export function ChartArea({
 
       {/* Y 轴刻度 */}
       {showAxis &&
-        Array.from({ length: yTicks }).map((_, i) => {
-          const y = PAD.top + (i / (yTicks - 1)) * innerH;
-          const v = max - (i / (yTicks - 1)) * max;
+        Array.from({ length: ticks }).map((_, i) => {
+          const y = PAD.top + (i / (ticks - 1)) * innerH;
+          const v = max - (i / (ticks - 1)) * (max-min);
           return (
             <text
               key={i}
@@ -153,17 +162,18 @@ export function ChartArea({
         })}
 
       {/* 面积 + 曲线（从最上层往下画，保证下层可见） */}
-      {series
+      {normalized
         .map((s, i) => ({ s, i }))
         .reverse()
         .map(({ s, i }) => {
-          const line = buildLine(s.data, cumulative[i]);
-          const first = xAt(0);
-          const lastX = xAt(labels.length - 1);
-          const area = `${line} L${lastX.toFixed(1)},${yAt(cumulative[i][labels.length - 1] ?? 0).toFixed(1)} L${first.toFixed(1)},${yAt(cumulative[i][0] ?? 0).toFixed(1)} Z`;
+          if(!labels.length)return null;
+          const upper=s.data.map((v,k)=>[xAt(k),yAt(cumulative[i][k]+v)] as const);
+          const lower=cumulative[i].map((v,k)=>[xAt(k),yAt(v)] as const).reverse();
+          const line=buildLine(upper);
+          const area=line+" "+buildLine(lower).replace(/^M/,"L")+" Z";
           return (
-            <g key={s.name}>
-              <path d={area} fill={`url(#grad-${uid}-${i})`} />
+            <g key={i}>
+              {showFill&&<path d={area} fill={`url(#grad-${uid}-${i})`} />}
               <path
                 d={line}
                 fill="none"

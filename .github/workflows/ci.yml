@@ -16,6 +16,8 @@ jobs:
       risk: ${{ steps.risk.outputs.risk }}
       routes: ${{ steps.risk.outputs.routes }}
       navigation: ${{ steps.risk.outputs.navigation }}
+      matrix: ${{ steps.risk.outputs.matrix }}
+      rtlCompat: ${{ steps.risk.outputs.rtlCompat }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -58,7 +60,7 @@ jobs:
       - run: npm run test:export
       - run: npm install --no-save --package-lock=false playwright@1.56.1
       - run: npx playwright install --with-deps chromium
-      - run: npm run test:browser -- --targeted
+      - run: npm run test:browser -- --targeted ${{ needs.quick.outputs.matrix == 'true' && '--both-themes' || '' }}
         env:
           TARGET_ROUTES: ${{ needs.quick.outputs.routes }}
       - name: 持续动效资源释放专项
@@ -70,3 +72,17 @@ jobs:
           npx playwright install --with-deps firefox webkit
           BROWSER=firefox node scripts/check-navigation-compat.mjs
           BROWSER=webkit node scripts/check-navigation-compat.mjs
+      - name: WebKit 折叠与 RTL 回归
+        if: needs.quick.outputs.rtlCompat == 'true'
+        run: |
+          npx playwright install --with-deps webkit
+          BROWSER=webkit TARGET_ROUTES='["/zh-hans/components/accordion/","/zh-hans/rtl/"]' npm run test:browser -- --targeted --both-themes
+      - name: 逐组件双主题视觉截图
+        if: needs.quick.outputs.matrix == 'true'
+        run: node scripts/audit-component-matrix.mjs acceptance/component-matrix --local-only
+      - uses: actions/upload-artifact@v4
+        if: always() && needs.quick.outputs.matrix == 'true'
+        with:
+          name: component-visual-matrix
+          path: acceptance/component-matrix/
+          if-no-files-found: warn
