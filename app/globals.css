@@ -1,5 +1,8 @@
 @import "tailwindcss";
 @import "remixicon/fonts/remixicon.css";
+@import "@fontsource-variable/noto-sans-sc";
+@import "@fontsource-variable/inter/opsz.css";
+@import "@fontsource-variable/jetbrains-mono";
 @import "./styles/tokens.css";
 @import "./styles/keyframes.css";
 @import "./styles/typography.css";
@@ -10,9 +13,8 @@
    字体：与配置无关，使用系统字体栈保证离线可用
    ============================================================ */
 @theme {
-  --font-sans: "Inter", "Noto Sans SC", ui-sans-serif, system-ui, -apple-system,
-    "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --font-sans: "Noto Sans SC Variable", "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono Variable", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 
 /* 原站自定义圆角档位：2lg / 3lg（Tailwind 默认没有，需显式注册才能生成工具类） */
@@ -25,6 +27,8 @@
    暗色模式：Tailwind v4 使用 .dark 类策略
    ============================================================ */
 @custom-variant dark (&:where(.dark, .dark *));
+@custom-variant rtl (&:dir(rtl));
+@custom-variant ltr (&:dir(ltr));
 
 /* ============================================================
    React Aria 状态变体
@@ -49,20 +53,23 @@
    基础层
    ============================================================ */
 @layer base {
-  * {
-    border-color: var(--color-border-primary);
-  }
 
   html {
+    color-scheme: light;
+    background-color: var(--color-background-full);
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
   }
 
+  html.dark { color-scheme: dark; }
   body {
     background-color: var(--color-background-full);
     color: var(--color-text-primary);
     font-family: var(--font-sans);
+    font-optical-sizing: auto;
+    font-kerning: normal;
+    font-variant-ligatures: contextual;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -185,3 +192,38 @@
   0% { transform: translateX(-120%); }
   100% { transform: translateX(420%); }
 }
+
+/* Tailwind expands shadow utilities into `--tw-shadow` at build time. Point
+ * those generated utilities back to the live dark elevation tokens so the
+ * class-based theme can adjust opacity without component-level overrides. */
+.dark .shadow-2xs {
+  --tw-shadow: var(--shadow-2xs);
+}
+.dark .shadow-xs {
+  --tw-shadow: var(--shadow-xs);
+}
+.dark .shadow-sm {
+  --tw-shadow: var(--shadow-sm);
+}
+.dark .shadow-md {
+  --tw-shadow: var(--shadow-md);
+}
+.dark .shadow-lg {
+  --tw-shadow: var(--shadow-lg);
+}
+.dark .shadow-xl {
+  --tw-shadow: var(--shadow-xl);
+}
+.dark .shadow-card {
+  --tw-shadow: var(--shadow-card);
+}
+.dark .shadow-dropdown {
+  --tw-shadow: var(--shadow-dropdown);
+}
+.dark .shadow-sidebar {
+  --tw-shadow: var(--shadow-sidebar);
+}
+.dark .shadow-waitlist {
+  --tw-shadow: var(--shadow-waitlist);
+}
+

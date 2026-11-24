@@ -13,7 +13,7 @@ import { Icon } from "../ui/Icon";
 export function ComponentPreview({
   children,
   code,
-  minHeight = 220,
+  minHeight = 260,
 }: {
   children: React.ReactNode;
   code?: string;
@@ -34,7 +34,7 @@ export function ComponentPreview({
   };
 
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-4">
       {/* 工具条 */}
       <div className="flex items-center justify-between gap-2">
         {/* 分段控件 */}
@@ -62,7 +62,7 @@ export function ComponentPreview({
                 onClick={() => setTab(t.key)}
                 className={cn(
                   "inline-flex cursor-pointer items-center gap-1.5 rounded-md px-[10px] py-1",
-                  "text-body-2-medium transition-colors duration-150 ease-out",
+                  "text-body-medium transition-colors duration-150 ease-out",
                   active
                     ? "bg-segmented-control-selected-background text-text-primary shadow-xs"
                     : "text-text-secondary hover:text-text-primary"
@@ -98,8 +98,8 @@ export function ComponentPreview({
       <div
         className={cn(
           "relative flex items-center justify-center overflow-hidden",
-          "rounded-3xl border border-border-button-default",
-          "bg-background-primary-default p-8"
+          "rounded-3xl border border-border-component-detail-container",
+          "p-8"
         )}
         style={{ minHeight }}
       >

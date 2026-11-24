@@ -1,0 +1,60 @@
+{
+  "source": "https://www.boardui.com/zh-hans/components/button",
+  "upstreamCommit": "ec5c5eb3e29c2441be63b9422cd54f411ef23466",
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "theme": "light",
+  "measurements": {
+    "sidebar": {
+      "x": 12,
+      "y": 12,
+      "width": 260,
+      "height": 976
+    },
+    "main": {
+      "x": 324,
+      "y": 40,
+      "width": 808
+    },
+    "heading": {
+      "x": 324,
+      "y": 108,
+      "height": 34
+    },
+    "toc": {
+      "x": 1180,
+      "y": 40,
+      "width": 220
+    },
+    "preview": {
+      "minHeight": 327,
+      "radius": 24
+    },
+    "outer": {
+      "gap": 48,
+      "paddingTop": 40,
+      "paddingInline": 40
+    }
+  },
+  "catalog": {
+    "source": "https://www.boardui.com/zh-hans/components",
+    "main": {
+      "x": 284,
+      "y": 0,
+      "width": 1156
+    },
+    "heading": {
+      "x": 324,
+      "y": 108
+    },
+    "card": {
+      "width": 304,
+      "height": 299,
+      "radius": 28,
+      "previewHeight": 197
+    }
+  },
+  "status": "geometry-sampled; screenshot and state parity pending"
+}

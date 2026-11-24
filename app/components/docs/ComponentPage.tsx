@@ -41,19 +41,19 @@ export function ComponentPage({
   ];
 
   return (
-    <DocsLayout breadcrumbs={breadcrumbs} toc={toc}>
-      <header className="flex flex-col gap-2">
+    <DocsLayout breadcrumbs={breadcrumbs} toc={toc} header={
+      <header className="flex flex-col gap-3">
         <h1 className="text-title-1-medium text-text-primary">{title}</h1>
-        <p className="text-headline-medium text-text-secondary">{description}</p>
-      </header>
+        <p className="text-headline-regular text-text-secondary">{description}</p>
+      </header>}>
 
-      <div id="preview" className="scroll-mt-14">
-        <ComponentPreview code={previewCode}>{preview}</ComponentPreview>
+      <div id="preview" className="scroll-mt-14 pt-4">
+        <ComponentPreview code={previewCode} minHeight={327}>{preview}</ComponentPreview>
       </div>
 
       {install && (
-        <section id="installation" className="flex scroll-mt-14 flex-col gap-3">
-          <h2 className="text-title-3-semibold text-text-primary">安装</h2>
+        <section id="installation" className="flex scroll-mt-14 flex-col gap-2 pt-10">
+          <h2 className="text-title-2-medium text-text-primary">安装</h2>
           <div className="overflow-hidden rounded-2lg border border-border-button-default bg-background-primary-default">
             <div className="flex items-center gap-2 border-b border-border-primary px-3 py-2">
               <span className="text-caption-1-medium text-text-tertiary">终端</span>
@@ -66,9 +66,9 @@ export function ComponentPage({
       )}
 
       {sections.map((s) => (
-        <section key={s.id} id={s.id} className="flex scroll-mt-14 flex-col gap-3">
+        <section key={s.id} id={s.id} className="flex scroll-mt-14 flex-col gap-2 pt-10">
           <div className="flex flex-col gap-1">
-            <h2 className="text-title-3-semibold text-text-primary">{s.title}</h2>
+            <h2 className="text-title-2-medium text-text-primary">{s.title}</h2>
             {s.description && (
               <p className="text-body-regular text-text-secondary">{s.description}</p>
             )}

@@ -203,7 +203,7 @@ export function Sidebar() {
         aria-label="元件库"
         className={cn(
           "-mr-1 flex min-h-0 flex-1 flex-col gap-2 overflow-y-auto pe-1",
-          "[scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          "[scrollbar-width:thin]"
         )}
       >
         <p className="sr-only" aria-live="polite">
