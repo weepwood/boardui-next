@@ -99,6 +99,51 @@ try{
           await link.waitFor({state:'visible'});
           assert.ok((await link.getAttribute('href')).startsWith(base+'/'));
         }
+        if(route==='/zh-hans/components/tabs/'){
+          const tab=page.locator('#preview').getByRole('tab',{name:/横幅/});
+          await tab.press('ArrowRight');
+          assert.equal(await page.locator('#preview').getByRole('tab',{name:/帖子/}).getAttribute('aria-selected'),'true');
+        }
+        if(route==='/zh-hans/components/segmented-control/'){
+          const demo=page.locator('#preview');
+          await demo.getByRole('button',{name:'月',exact:true}).click();
+          assert.equal(await demo.getByRole('button',{name:'月',exact:true}).getAttribute('aria-pressed'),'true');
+        }
+        if(route==='/zh-hans/components/select/'){
+          const trigger=page.locator('#preview').getByRole('button',{name:/框架/});
+          await trigger.click();
+          await page.getByRole('option',{name:'Vue',exact:true}).click();
+          assert.ok((await trigger.textContent()).includes('Vue'));
+          await trigger.click();
+          await page.keyboard.press('Escape');
+          await page.getByRole('listbox').waitFor({state:'hidden'});
+        }
+        if(route==='/zh-hans/components/combobox/'){
+          const field=page.locator('#preview').getByRole('combobox',{name:'城市'});
+          await field.fill('北京');
+          await page.getByRole('option',{name:'北京',exact:true}).waitFor();
+          assert.equal(await page.getByRole('option',{name:'上海',exact:true}).count(),0);
+          await page.getByRole('option',{name:'北京',exact:true}).click();
+          assert.equal(await field.inputValue(),'北京');
+        }
+        if(route==='/zh-hans/components/dropdown/'){
+          await page.getByRole('button',{name:'打开分组菜单'}).click();
+          await page.getByRole('dialog',{name:'分组操作'}).getByRole('button',{name:'编辑',exact:true}).click();
+          await page.getByRole('dialog',{name:'分组操作'}).waitFor({state:'hidden'});
+        }
+        if(route==='/zh-hans/components/tooltip/'){
+          const trigger=page.getByRole('button',{name:'悬停查看提示'});
+          await trigger.hover();
+          await page.getByRole('tooltip').waitFor({state:'visible'});
+          await page.mouse.move(0,0);
+          await page.getByRole('tooltip').waitFor({state:'hidden'});
+        }
+        if(route==='/zh-hans/components/popover/'){
+          await page.getByRole('button',{name:'打开浮层'}).click();
+          await page.getByRole('dialog',{name:'设置浮层'}).waitFor({state:'visible'});
+          await page.keyboard.press('Escape');
+          await page.getByRole('dialog',{name:'设置浮层'}).waitFor({state:'hidden'});
+        }
         if(route==='/zh-hans/components/input/'){
           const demo=page.getByTestId('form-fields');
           const input=demo.getByRole('textbox',{name:'受控邮箱'});

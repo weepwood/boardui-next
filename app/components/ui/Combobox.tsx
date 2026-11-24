@@ -1,81 +1,18 @@
 "use client";
-
-import {
-  ComboBox,
-  Input,
-  Button,
-  Popover,
-  ListBox,
-  ListBoxItem,
-  Label,
-  type ComboBoxProps,
-} from "react-aria-components";
-import { cn } from "@/lib/utils";
+import { ComboBox, Input, Button, Group, ListBox, ListBoxItem, Label, type ComboBoxProps } from "react-aria-components";
+import { cx } from "@/packages/react/cx";
+import { MENU_ITEM, MENU_ITEMS_CONTAINER } from "@/packages/react/menu-styles";
+import { Popover } from "./Popover";
 import { Icon } from "./Icon";
-
-export interface BComboboxProps extends Omit<ComboBoxProps<object>, "className" | "children"> {
-  label?: string;
-  placeholder?: string;
-  options: { id: string; label: string }[];
-  className?: string;
-}
-
-/** 组合框：可输入过滤的下拉选择 */
-export function Combobox({
-  label,
-  placeholder = "搜索或选择…",
-  options,
-  className,
-  ...props
-}: BComboboxProps) {
-  return (
-    <ComboBox {...props} className={cn("flex w-full flex-col gap-1.5", className)}>
-      {label && <Label className="text-body-2-medium text-text-primary">{label}</Label>}
-      <div
-        className={cn(
-          "flex h-9 w-full items-center gap-1 rounded-2lg px-2",
-          "bg-background-tertiary-default",
-          "ring-2 ring-inset ring-transparent",
-          "transition-[background-color,box-shadow] duration-150 ease-out",
-          "hover:bg-background-tertiary-hover",
-          "focus-within:ring-border-focus-ring"
-        )}
-      >
-        <Icon name="search-line" className="size-4 shrink-0 text-foreground-icon-secondary" />
-        <Input
-          placeholder={placeholder}
-          className="min-w-0 flex-1 bg-transparent text-body-medium text-text-primary outline-none placeholder:text-text-placeholder"
-        />
-        <Button className="flex size-5 cursor-pointer items-center justify-center rounded text-foreground-icon-secondary">
-          <Icon name="arrow-down-s-line" className="size-4" />
-        </Button>
-      </div>
-      <Popover className="min-w-[var(--trigger-width)] rounded-2lg border border-border-button-default bg-background-primary-default p-1.5 shadow-lg outline-none">
-        <ListBox
-          className="flex max-h-56 flex-col gap-0.5 overflow-y-auto outline-none"
-          renderEmptyState={() => (
-            <span className="px-2 py-1.5 text-caption-1-regular text-text-tertiary">
-              无匹配项
-            </span>
-          )}
-        >
-          {options.map((o) => (
-            <ListBoxItem
-              key={o.id}
-              id={o.id}
-              textValue={o.label}
-              className={cn(
-                "cursor-pointer rounded-md px-2 py-1.5 text-body-2-medium text-text-primary",
-                "outline-none transition-colors duration-150",
-                "hovered:bg-background-secondary-hover focus:bg-background-secondary-hover",
-                "selected:font-medium"
-              )}
-            >
-              {o.label}
-            </ListBoxItem>
-          ))}
-        </ListBox>
-      </Popover>
-    </ComboBox>
-  );
+import { ChevronDownSmall } from "@/packages/react/chevrons";
+type Option={id:string;label:string};
+export interface BComboboxProps extends Omit<ComboBoxProps<Option>,"className"|"children"> {label?:string;placeholder?:string;options:Option[];className?:string}
+export function Combobox({label,placeholder="搜索或选择…",options,className,...props}:BComboboxProps){
+ return <ComboBox {...props} defaultItems={options} aria-label={props["aria-label"]??(!label?placeholder:undefined)} className={cx("group flex w-full flex-col gap-1",className)}>
+ {label&&<Label className="text-body-medium text-text-primary">{label}</Label>}
+ <Group className={({isFocusWithin,isHovered,isDisabled,isInvalid})=>cx("flex h-9 min-w-0 items-center gap-2 rounded-2lg bg-background-tertiary-default p-2 ring-2 ring-inset ring-transparent transition-[background-color,box-shadow] duration-150",isHovered&&!isFocusWithin&&!isDisabled&&!isInvalid&&"ring-border-button-hover",isFocusWithin&&!isDisabled&&!isInvalid&&"ring-border-button-active",isDisabled&&"bg-input-disabled-background",isInvalid&&"bg-background-tertiary-error")}>
+ <Icon name="search-line" className="size-5 text-foreground-icon-tertiary"/>
+ <Input placeholder={placeholder} className="min-w-0 flex-1 bg-transparent text-body-regular text-text-primary outline-none focus-visible:outline-none placeholder:text-text-tertiary disabled:cursor-not-allowed"/>
+ <Button aria-label="展开选项" className="flex size-5 shrink-0 cursor-pointer items-center justify-center rounded text-text-secondary outline-none focus-visible:ring-2 focus-visible:ring-border-focus-ring"><ChevronDownSmall className="size-4 transition-transform duration-200 group-data-[open]:rotate-180"/></Button>
+ </Group><Popover className="w-[var(--trigger-width)]"><ListBox<Option> className={cx(MENU_ITEMS_CONTAINER,"max-h-60 overflow-auto")} renderEmptyState={()=> <span className="p-2 text-body-regular text-text-tertiary">无匹配项</span>}>{o=><ListBoxItem id={o.id} textValue={o.label} className={cx(MENU_ITEM,"text-body-medium data-[focused]:bg-dropdown-item-hover-background data-[selected]:bg-dropdown-item-hover-background data-[disabled]:opacity-50")}>{o.label}</ListBoxItem>}</ListBox></Popover></ComboBox>;
 }

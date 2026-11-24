@@ -6,6 +6,8 @@
  * 演示内容用 JSX 直接定义，保证可交互。
  */
 import { useState } from "react";
+import { DialogTrigger, Dialog } from "react-aria-components";
+import { Dropdown, DropdownTrigger, DropdownPopover, DropdownGroup, DropdownItem, DropdownDivider } from "@/packages/react/dropdown";
 import { RiMailLine, RiSearchLine, RiAddLine as AddGlyph, RiEditLine as EditGlyph, RiArrowRightLine as ArrowGlyph } from "@remixicon/react";
 import type { ReactNode } from "react";
 
@@ -144,7 +146,7 @@ function MenuDemo() {
         操作菜单
       </Button>
       <Popover>
-        <Menu>
+        <Menu aria-label="操作菜单">
           <BMenuItem id="edit" label="编辑" icon="edit-line" shortcut="⌘E" />
           <BMenuItem id="copy" label="复制链接" icon="link" shortcut="⌘C" />
           <BMenuItem id="share" label="分享" icon="share-line" />
@@ -161,8 +163,8 @@ function SelectDemo() {
     <div className="w-full max-w-xs">
       <Select
         label="框架"
-        value={v}
-        onChange={(x) => setV(String(x))}
+        selectedKey={v}
+        onSelectionChange={(x) => setV(String(x))}
         options={[
           { id: "react", label: "React", icon: "reactjs-line" },
           { id: "vue", label: "Vue", icon: "vuejs-line" },
@@ -198,6 +200,17 @@ function ControlledFormDemo() {
     <SearchField aria-label="受控搜索" value={search} onChange={setSearch} />
     <output aria-live="polite">{value} / {notes.length} / {search}</output>
   </div>;
+}
+function DropdownSurfaceDemo(){
+  const [open,setOpen]=useState(false);
+  const [action,setAction]=useState("尚未操作");
+  return <div className="flex flex-col items-center gap-3"><Dropdown isOpen={open} onOpenChange={setOpen}>
+    <DropdownTrigger className="rounded-2lg border border-border-button-default bg-background-primary-default px-3 py-2 text-body-medium shadow-xs">打开分组菜单</DropdownTrigger>
+    <DropdownPopover aria-label="分组操作"><DropdownGroup label="项目"><DropdownItem onSelect={()=>{setAction("编辑");setOpen(false)}}><Icon name="edit-line" className="size-5"/>编辑</DropdownItem><DropdownItem onSelect={()=>{setAction("分享");setOpen(false)}}><Icon name="share-line" className="size-5"/>分享</DropdownItem></DropdownGroup><DropdownDivider/><DropdownItem onSelect={()=>{setAction("删除");setOpen(false)}} className="text-text-error-primary">删除</DropdownItem></DropdownPopover>
+  </Dropdown><output aria-live="polite">{action}</output></div>;
+}
+function PopoverDemo(){
+  return <DialogTrigger><Button variant="secondary">打开浮层</Button><Popover className="w-64"><Dialog aria-label="设置浮层" className="flex flex-col gap-3 outline-none"><p className="text-body-medium">快速设置</p><Input label="名称" placeholder="输入名称"/><Button slot="close" variant="secondary">关闭</Button></Dialog></Popover></DialogTrigger>;
 }
 export const docs: Record<string, Doc> = {
   button: {
@@ -379,7 +392,7 @@ export const docs: Record<string, Doc> = {
 
   select: {
     title: "选择器",
-    description: "下拉单选，触发按钮白底描边，面板带选中对勾。",
+    description: "原版单选触发器与共享浮层，支持旋转箭头、键盘选择和外部点击关闭。",
     install: "npx boardui@latest add select",
     preview: <SelectDemo />,
     demos: [],
@@ -521,7 +534,7 @@ export const docs: Record<string, Doc> = {
 
   tabs: {
     title: "标签页",
-    description: "分段式切换视图，选中项白底带细阴影，切换时内容淡入。",
+    description: "原版下划线标签页，动态测量选中项并平滑移动指示线。",
     install: "npx boardui@latest add tabs",
     preview: <TabsDemo />,
     demos: [],
@@ -537,7 +550,7 @@ export const docs: Record<string, Doc> = {
 
   tooltip: {
     title: "提示气泡",
-    description: "悬停或聚焦时显示的简短说明。",
+    description: "原版浅色语义卡片、方向感知箭头、淡入缩放及模糊过渡。",
     install: "npx boardui@latest add tooltip",
     preview: (
       <TooltipTrigger>
@@ -588,7 +601,7 @@ export const docs: Record<string, Doc> = {
     description: "触发式操作菜单，支持图标、快捷键与危险项。",
     install: "npx boardui@latest add dropdown",
     preview: <MenuDemo />,
-    demos: [],
+    demos: [{id:"grouped",title:"分组菜单",node:<DropdownSurfaceDemo/>}],
   },
 
   modal: {
@@ -603,7 +616,7 @@ export const docs: Record<string, Doc> = {
     title: "弹出层",
     description: "锚定于触发元素的浮层面板。",
     install: "npx boardui@latest add popover",
-    preview: <MenuDemo />,
+    preview: <PopoverDemo />,
     demos: [],
   },
 
@@ -1463,7 +1476,7 @@ function TabsDemo() {
             id={it.id}
             className="rounded-2lg border border-border-primary p-4 text-body-regular text-text-secondary"
           >
-            {it.label}面板内容。切换标签时内容淡入，底部指示线随选中项移动。
+            {it.label}面板内容。底部指示线随选中项移动。
           </TabPanel>
         ))}
       </Tabs>

@@ -257,7 +257,7 @@
       "tier": "free",
       "upstreamStatus": "shipped",
       "localRoute": "/zh-hans/components/dropdown",
-      "implementation": "existing-unverified",
+      "implementation": "ported-unverified",
       "sourcePolicy": "verify-public-source",
       "verification": {
         "visual": "pending",
@@ -266,7 +266,14 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "sourcePaths": [
+        "components/base/dropdown/dropdown.tsx"
+      ],
+      "localPaths": [
+        "packages/react/dropdown.tsx"
+      ],
+      "notes": "原版公开 MIT 组件及共享视觉配方已移植，保持旧接口；专项验收待通过。"
     },
     {
       "slug": "file-upload",
@@ -426,7 +433,7 @@
       "tier": "free",
       "upstreamStatus": "shipped",
       "localRoute": "/zh-hans/components/segmented-control",
-      "implementation": "existing-unverified",
+      "implementation": "ported-unverified",
       "sourcePolicy": "verify-public-source",
       "verification": {
         "visual": "pending",
@@ -435,14 +442,21 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "sourcePaths": [
+        "components/base/segmented-control/segmented-control.tsx"
+      ],
+      "localPaths": [
+        "packages/react/segmented-control.tsx"
+      ],
+      "notes": "原版公开 MIT 组件及共享视觉配方已移植，保持旧接口；专项验收待通过。"
     },
     {
       "slug": "select",
       "tier": "free",
       "upstreamStatus": "shipped",
       "localRoute": "/zh-hans/components/select",
-      "implementation": "existing-unverified",
+      "implementation": "ported-unverified",
       "sourcePolicy": "verify-public-source",
       "verification": {
         "visual": "pending",
@@ -451,7 +465,14 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "sourcePaths": [
+        "components/base/select/select.tsx"
+      ],
+      "localPaths": [
+        "packages/react/select.tsx"
+      ],
+      "notes": "原版公开 MIT 组件及共享视觉配方已移植，保持旧接口；专项验收待通过。"
     },
     {
       "slug": "slider",
@@ -529,7 +550,7 @@
       "tier": "free",
       "upstreamStatus": "shipped",
       "localRoute": "/zh-hans/components/tabs",
-      "implementation": "existing-unverified",
+      "implementation": "ported-unverified",
       "sourcePolicy": "verify-public-source",
       "verification": {
         "visual": "pending",
@@ -538,7 +559,14 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "sourcePaths": [
+        "components/base/tabs/tabs.tsx"
+      ],
+      "localPaths": [
+        "packages/react/tabs.tsx"
+      ],
+      "notes": "原版公开 MIT 组件及共享视觉配方已移植，保持旧接口；专项验收待通过。"
     },
     {
       "slug": "textarea",
@@ -586,7 +614,7 @@
       "tier": "free",
       "upstreamStatus": "shipped",
       "localRoute": "/zh-hans/components/tooltip",
-      "implementation": "existing-unverified",
+      "implementation": "ported-unverified",
       "sourcePolicy": "verify-public-source",
       "verification": {
         "visual": "pending",
@@ -595,7 +623,14 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "sourcePaths": [
+        "components/base/tooltip/tooltip.tsx"
+      ],
+      "localPaths": [
+        "packages/react/tooltip.tsx"
+      ],
+      "notes": "原版公开 MIT 组件及共享视觉配方已移植，保持旧接口；专项验收待通过。"
     },
     {
       "slug": "agent-thinking",
@@ -1474,7 +1509,8 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "notes": "本地扩展，沿用原版下拉菜单/输入状态配方及 React Aria 行为，非直接原版源码移植。"
     },
     {
       "slug": "counter",
@@ -1544,7 +1580,8 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "notes": "本地扩展，沿用原版下拉菜单/输入状态配方及 React Aria 行为，非直接原版源码移植。"
     },
     {
       "slug": "meter",

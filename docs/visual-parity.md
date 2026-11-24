@@ -25,3 +25,7 @@ Button 按压反馈兼容原生 :active 与 React Aria data-pressed；使用浏�
 ### 输入控件
 
 Input 与 Textarea 接入固定上游 MIT React Aria 组件，复用 Label/HintText、TextFieldContext 和语义状态。旧 icon/suffix/description 与四行默认 textarea 保留。SearchField 为本地扩展，修复非空清除按钮不可见问题，使用同一套灰底与状态反馈。新增受控输入、说明关联、自动增高和清除搜索专项检查。
+
+### 批量导航与浮层重构
+
+移植 Tabs、PillTab、SegmentedControl、Select、Dropdown、Tooltip 及方向/chevron/菜单配方；Combobox 与 Popover 为本地扩展，复用原版共享配方。保留现有数组式适配器及原有 Menu 语义，补齐键盘、过滤、关闭与选中状态测试。

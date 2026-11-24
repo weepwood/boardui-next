@@ -1,3 +1,4 @@
+import { DirectionProvider } from "@/packages/react/direction";
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "./components/ThemeProvider";
@@ -25,7 +26,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full antialiased">
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider><DirectionProvider locale="zh-CN">{children}</DirectionProvider></ThemeProvider>
       </body>
     </html>
   );

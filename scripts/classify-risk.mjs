@@ -7,6 +7,7 @@ const known=new Set([...readFileSync('lib/docs/meta.ts','utf8').matchAll(/slug:\
 const kebab=s=>s.replace(/([a-z0-9])([A-Z])/g,'$1-$2').toLowerCase();
 const aliases={menu:'dropdown',dialog:'modal','app-sidebar':'sidebar'};
 const routes=new Set();
+if(files.some(p=>/^(packages\/react\/(tabs|segmented-control|select|dropdown|menu-styles|tooltip|direction|chevrons)|app\/components\/ui\/(Tabs|SegmentedControl|Select|Combobox|Menu|Tooltip|Popover))/.test(p)))for(const slug of ['tabs','segmented-control','select','combobox','dropdown','tooltip','popover'])if(known.has(slug))routes.add('/zh-hans/components/'+slug+'/');
 if(files.some(p=>/^(packages\/react\/(svg-icon|icon-registry|directional-icon)|app\/components\/ui\/Icon\.tsx)/.test(p))) for(const slug of ['button','icon-button','button-group','close-button','checkbox','radio','switch','input','date-calendar'])if(known.has(slug))routes.add('/zh-hans/components/'+slug+'/');
 for(const p of files){const core=p.match(/^packages\/react\/([^/]+)\.tsx$/);if(core&&known.has(core[1]))routes.add('/zh-hans/components/'+core[1]+'/');}
 for(const p of files){
