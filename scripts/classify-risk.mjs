@@ -24,6 +24,7 @@ for(const p of files){
   const tpl=p.match(/^app\/components\/templates\/([^/]+)Template\.tsx$/);
   if(tpl&&existsSync('app/zh-hans/templates/'+kebab(tpl[1])+'/page.tsx'))routes.add('/zh-hans/templates/'+kebab(tpl[1])+'/');
 }
+const navRisk=files.some(p=>/^(app\/(layout\.tsx|globals\.css|components\/docs\/(DocsShell|Sidebar|navigation-context|CatalogCard|catalog-observers))|scripts\/(prepare-fonts|check-navigation-compat)|package(-lock)?\.json)/.test(p))||FORCE_RISK==='true';
 const risk=FORCE_RISK==='true'||!BASE_SHA||!HEAD_SHA||risky.length>0;
 console.log(JSON.stringify({risk,files:risky},null,2));
-if(GITHUB_OUTPUT) appendFileSync(GITHUB_OUTPUT,'risk='+risk+'\n'+'routes='+JSON.stringify([...routes])+'\n');
+if(GITHUB_OUTPUT) appendFileSync(GITHUB_OUTPUT,'risk='+risk+'\n'+'navigation='+navRisk+'\n'+'routes='+JSON.stringify([...routes])+'\n');

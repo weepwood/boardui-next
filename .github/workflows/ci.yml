@@ -15,6 +15,7 @@ jobs:
     outputs:
       risk: ${{ steps.risk.outputs.risk }}
       routes: ${{ steps.risk.outputs.routes }}
+      navigation: ${{ steps.risk.outputs.navigation }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -60,3 +61,10 @@ jobs:
       - run: npm run test:browser -- --targeted
         env:
           TARGET_ROUTES: ${{ needs.quick.outputs.routes }}
+      - name: 导航与字体跨浏览器专项
+        if: needs.quick.outputs.navigation == 'true'
+        run: |
+          node scripts/check-navigation-compat.mjs
+          npx playwright install --with-deps firefox webkit
+          BROWSER=firefox node scripts/check-navigation-compat.mjs
+          BROWSER=webkit node scripts/check-navigation-compat.mjs

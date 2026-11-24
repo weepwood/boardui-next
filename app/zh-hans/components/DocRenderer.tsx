@@ -4,14 +4,13 @@
  * 组件文档页客户端渲染器。
  * 服务端只负责路由与 metadata，实际内容（含交互演示）在此渲染。
  */
-import apiReference from "@/lib/docs/api-reference.generated.json";
 import type { ApiEntry } from "@/app/components/docs/ApiReference";
 import { notFound } from "next/navigation";
 import { ComponentPage, componentCrumbs } from "@/app/components/docs/ComponentPage";
 import { docs } from "@/lib/docs/registry";
 import { docMetaMap } from "@/lib/docs/meta";
 
-export function DocRenderer({ slug }: { slug: string }) {
+export function DocRenderer({slug,api,acceptance}:{slug:string;api?:ApiEntry[];acceptance:React.ReactNode}) {
   const doc = docs[slug];
   const meta = docMetaMap.get(slug);
 
@@ -28,7 +27,8 @@ export function DocRenderer({ slug }: { slug: string }) {
       preview={doc.preview}
       previewCode={doc.previewCode}
       install={doc.install}
-      api={(apiReference as Record<string,ApiEntry[]>)[slug]}
+      api={api}
+      acceptance={acceptance}
       sections={doc.demos.map((d) => ({
         id: d.id,
         title: d.title,

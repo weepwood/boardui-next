@@ -1,4 +1,3 @@
-import { AcceptanceStatus } from "./AcceptanceStatus";
 import { DocsLayout } from "./DocsLayout";
 import { ApiReference,type ApiEntry } from "./ApiReference";
 import { ComponentPreview } from "./ComponentPreview";
@@ -26,7 +25,7 @@ export function ComponentPage({
   preview,
   previewCode,
   sections = [],
-  install,api,slug,
+  install,api,slug,acceptance,
 }: {
   title: string;
   description: string;
@@ -37,6 +36,7 @@ export function ComponentPage({
   install?: string;
   api?:ApiEntry[];
   slug?:string;
+  acceptance?:React.ReactNode;
 }) {
   const toc: TocItem[] = [
     { id: "preview", label: "预览" },
@@ -86,7 +86,7 @@ export function ComponentPage({
         </section>
       ))}
       {!!api?.length&&<ApiReference entries={api}/>}
-      {slug&&<AcceptanceStatus slug={slug}/>}
+      {acceptance}
     </DocsLayout>
   );
 }

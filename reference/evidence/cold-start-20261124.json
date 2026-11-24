@@ -1,0 +1,820 @@
+{
+  "baseline": "8fa4dd101b66dcc3a1d089d1a02d9f57f90c623a",
+  "environment": "Local Edge Chromium, 1440x1000, fresh context per route, production static export served with gzip for textual resources and no-store, CDP 120 ms latency, 750000 bytes/s, 4x CPU slowdown. Single runs; no claim of statistical timing significance. Font and JS bytes measured through Resource Timing.",
+  "before": [
+    {
+      "path": "/",
+      "stats": {
+        "css": {
+          "count": 1,
+          "encoded": 59421,
+          "decoded": 272468
+        },
+        "js": {
+          "count": 36,
+          "encoded": 477391,
+          "decoded": 1620233
+        },
+        "font": {
+          "count": 18,
+          "encoded": 1015684,
+          "decoded": 1015684
+        },
+        "other": {
+          "count": 6,
+          "encoded": 14560,
+          "decoded": 75063
+        }
+      },
+      "htmlEncoded": 14449,
+      "domContentLoaded": 488,
+      "longTasks": 3,
+      "longTaskMs": 219,
+      "fcp": 568,
+      "fontFiles": [
+        {
+          "name": "noto-sans-sc-latin-wght-normal.47cf7aa1.woff2",
+          "bytes": 24880
+        },
+        {
+          "name": "noto-sans-sc-117-wght-normal.7ccc6c8e.woff2",
+          "bytes": 52228
+        },
+        {
+          "name": "noto-sans-sc-116-wght-normal.55ba5a3b.woff2",
+          "bytes": 52796
+        },
+        {
+          "name": "jetbrains-mono-latin-wght-normal.a865edea.woff2",
+          "bytes": 40404
+        },
+        {
+          "name": "noto-sans-sc-118-wght-normal.1c305adf.woff2",
+          "bytes": 45992
+        },
+        {
+          "name": "noto-sans-sc-115-wght-normal.c7dfe641.woff2",
+          "bytes": 56264
+        },
+        {
+          "name": "noto-sans-sc-119-wght-normal.997d75ef.woff2",
+          "bytes": 76324
+        },
+        {
+          "name": "noto-sans-sc-113-wght-normal.46ea6a96.woff2",
+          "bytes": 58428
+        },
+        {
+          "name": "noto-sans-sc-109-wght-normal.0dbf2ec3.woff2",
+          "bytes": 60208
+        },
+        {
+          "name": "noto-sans-sc-103-wght-normal.213f195d.woff2",
+          "bytes": 63732
+        },
+        {
+          "name": "noto-sans-sc-108-wght-normal.7f95fe8b.woff2",
+          "bytes": 64340
+        },
+        {
+          "name": "noto-sans-sc-110-wght-normal.65723fbf.woff2",
+          "bytes": 61188
+        },
+        {
+          "name": "noto-sans-sc-112-wght-normal.4a74ca77.woff2",
+          "bytes": 57460
+        },
+        {
+          "name": "noto-sans-sc-101-wght-normal.7d6f42aa.woff2",
+          "bytes": 58028
+        },
+        {
+          "name": "noto-sans-sc-114-wght-normal.b599701d.woff2",
+          "bytes": 57740
+        },
+        {
+          "name": "noto-sans-sc-111-wght-normal.7a7c150e.woff2",
+          "bytes": 62400
+        },
+        {
+          "name": "noto-sans-sc-107-wght-normal.76aa7028.woff2",
+          "bytes": 60828
+        },
+        {
+          "name": "noto-sans-sc-106-wght-normal.9cb39613.woff2",
+          "bytes": 62444
+        }
+      ]
+    },
+    {
+      "path": "/zh-hans/components/button/",
+      "stats": {
+        "css": {
+          "count": 1,
+          "encoded": 59421,
+          "decoded": 272468
+        },
+        "js": {
+          "count": 32,
+          "encoded": 472105,
+          "decoded": 1672040
+        },
+        "font": {
+          "count": 17,
+          "encoded": 953240,
+          "decoded": 953240
+        }
+      },
+      "htmlEncoded": 17811,
+      "domContentLoaded": 495,
+      "longTasks": 2,
+      "longTaskMs": 122,
+      "fcp": 500,
+      "fontFiles": [
+        {
+          "name": "noto-sans-sc-latin-wght-normal.47cf7aa1.woff2",
+          "bytes": 24880
+        },
+        {
+          "name": "noto-sans-sc-117-wght-normal.7ccc6c8e.woff2",
+          "bytes": 52228
+        },
+        {
+          "name": "noto-sans-sc-116-wght-normal.55ba5a3b.woff2",
+          "bytes": 52796
+        },
+        {
+          "name": "jetbrains-mono-latin-wght-normal.a865edea.woff2",
+          "bytes": 40404
+        },
+        {
+          "name": "noto-sans-sc-118-wght-normal.1c305adf.woff2",
+          "bytes": 45992
+        },
+        {
+          "name": "noto-sans-sc-115-wght-normal.c7dfe641.woff2",
+          "bytes": 56264
+        },
+        {
+          "name": "noto-sans-sc-119-wght-normal.997d75ef.woff2",
+          "bytes": 76324
+        },
+        {
+          "name": "noto-sans-sc-113-wght-normal.46ea6a96.woff2",
+          "bytes": 58428
+        },
+        {
+          "name": "noto-sans-sc-109-wght-normal.0dbf2ec3.woff2",
+          "bytes": 60208
+        },
+        {
+          "name": "noto-sans-sc-103-wght-normal.213f195d.woff2",
+          "bytes": 63732
+        },
+        {
+          "name": "noto-sans-sc-108-wght-normal.7f95fe8b.woff2",
+          "bytes": 64340
+        },
+        {
+          "name": "noto-sans-sc-110-wght-normal.65723fbf.woff2",
+          "bytes": 61188
+        },
+        {
+          "name": "noto-sans-sc-112-wght-normal.4a74ca77.woff2",
+          "bytes": 57460
+        },
+        {
+          "name": "noto-sans-sc-101-wght-normal.7d6f42aa.woff2",
+          "bytes": 58028
+        },
+        {
+          "name": "noto-sans-sc-114-wght-normal.b599701d.woff2",
+          "bytes": 57740
+        },
+        {
+          "name": "noto-sans-sc-111-wght-normal.7a7c150e.woff2",
+          "bytes": 62400
+        },
+        {
+          "name": "noto-sans-sc-107-wght-normal.76aa7028.woff2",
+          "bytes": 60828
+        }
+      ]
+    },
+    {
+      "path": "/zh-hans/components/data-grid/",
+      "stats": {
+        "css": {
+          "count": 1,
+          "encoded": 59421,
+          "decoded": 272468
+        },
+        "js": {
+          "count": 32,
+          "encoded": 472105,
+          "decoded": 1672040
+        },
+        "font": {
+          "count": 17,
+          "encoded": 954856,
+          "decoded": 954856
+        }
+      },
+      "htmlEncoded": 14691,
+      "domContentLoaded": 519,
+      "longTasks": 2,
+      "longTaskMs": 121,
+      "fcp": 548,
+      "fontFiles": [
+        {
+          "name": "noto-sans-sc-latin-wght-normal.47cf7aa1.woff2",
+          "bytes": 24880
+        },
+        {
+          "name": "noto-sans-sc-117-wght-normal.7ccc6c8e.woff2",
+          "bytes": 52228
+        },
+        {
+          "name": "noto-sans-sc-116-wght-normal.55ba5a3b.woff2",
+          "bytes": 52796
+        },
+        {
+          "name": "jetbrains-mono-latin-wght-normal.a865edea.woff2",
+          "bytes": 40404
+        },
+        {
+          "name": "noto-sans-sc-118-wght-normal.1c305adf.woff2",
+          "bytes": 45992
+        },
+        {
+          "name": "noto-sans-sc-115-wght-normal.c7dfe641.woff2",
+          "bytes": 56264
+        },
+        {
+          "name": "noto-sans-sc-119-wght-normal.997d75ef.woff2",
+          "bytes": 76324
+        },
+        {
+          "name": "noto-sans-sc-113-wght-normal.46ea6a96.woff2",
+          "bytes": 58428
+        },
+        {
+          "name": "noto-sans-sc-109-wght-normal.0dbf2ec3.woff2",
+          "bytes": 60208
+        },
+        {
+          "name": "noto-sans-sc-103-wght-normal.213f195d.woff2",
+          "bytes": 63732
+        },
+        {
+          "name": "noto-sans-sc-108-wght-normal.7f95fe8b.woff2",
+          "bytes": 64340
+        },
+        {
+          "name": "noto-sans-sc-110-wght-normal.65723fbf.woff2",
+          "bytes": 61188
+        },
+        {
+          "name": "noto-sans-sc-112-wght-normal.4a74ca77.woff2",
+          "bytes": 57460
+        },
+        {
+          "name": "noto-sans-sc-101-wght-normal.7d6f42aa.woff2",
+          "bytes": 58028
+        },
+        {
+          "name": "noto-sans-sc-114-wght-normal.b599701d.woff2",
+          "bytes": 57740
+        },
+        {
+          "name": "noto-sans-sc-111-wght-normal.7a7c150e.woff2",
+          "bytes": 62400
+        },
+        {
+          "name": "noto-sans-sc-106-wght-normal.9cb39613.woff2",
+          "bytes": 62444
+        }
+      ]
+    },
+    {
+      "path": "/zh-hans/components/",
+      "stats": {
+        "css": {
+          "count": 1,
+          "encoded": 59421,
+          "decoded": 272468
+        },
+        "js": {
+          "count": 32,
+          "encoded": 463661,
+          "decoded": 1577369
+        },
+        "font": {
+          "count": 20,
+          "encoded": 1074924,
+          "decoded": 1074924
+        }
+      },
+      "htmlEncoded": 20775,
+      "domContentLoaded": 656,
+      "longTasks": 4,
+      "longTaskMs": 270,
+      "fcp": 596,
+      "fontFiles": [
+        {
+          "name": "noto-sans-sc-latin-wght-normal.47cf7aa1.woff2",
+          "bytes": 24880
+        },
+        {
+          "name": "noto-sans-sc-117-wght-normal.7ccc6c8e.woff2",
+          "bytes": 52228
+        },
+        {
+          "name": "noto-sans-sc-116-wght-normal.55ba5a3b.woff2",
+          "bytes": 52796
+        },
+        {
+          "name": "jetbrains-mono-latin-wght-normal.a865edea.woff2",
+          "bytes": 40404
+        },
+        {
+          "name": "noto-sans-sc-118-wght-normal.1c305adf.woff2",
+          "bytes": 45992
+        },
+        {
+          "name": "noto-sans-sc-115-wght-normal.c7dfe641.woff2",
+          "bytes": 56264
+        },
+        {
+          "name": "noto-sans-sc-119-wght-normal.997d75ef.woff2",
+          "bytes": 76324
+        },
+        {
+          "name": "noto-sans-sc-113-wght-normal.46ea6a96.woff2",
+          "bytes": 58428
+        },
+        {
+          "name": "noto-sans-sc-109-wght-normal.0dbf2ec3.woff2",
+          "bytes": 60208
+        },
+        {
+          "name": "noto-sans-sc-103-wght-normal.213f195d.woff2",
+          "bytes": 63732
+        },
+        {
+          "name": "noto-sans-sc-108-wght-normal.7f95fe8b.woff2",
+          "bytes": 64340
+        },
+        {
+          "name": "noto-sans-sc-110-wght-normal.65723fbf.woff2",
+          "bytes": 61188
+        },
+        {
+          "name": "noto-sans-sc-112-wght-normal.4a74ca77.woff2",
+          "bytes": 57460
+        },
+        {
+          "name": "noto-sans-sc-101-wght-normal.7d6f42aa.woff2",
+          "bytes": 58028
+        },
+        {
+          "name": "noto-sans-sc-114-wght-normal.b599701d.woff2",
+          "bytes": 57740
+        },
+        {
+          "name": "noto-sans-sc-111-wght-normal.7a7c150e.woff2",
+          "bytes": 62400
+        },
+        {
+          "name": "noto-sans-sc-107-wght-normal.76aa7028.woff2",
+          "bytes": 60828
+        },
+        {
+          "name": "noto-sans-sc-106-wght-normal.9cb39613.woff2",
+          "bytes": 62444
+        },
+        {
+          "name": "noto-sans-sc-90-wght-normal.0c63f53b.woff2",
+          "bytes": 9224
+        },
+        {
+          "name": "noto-sans-sc-28-wght-normal.2f5f101e.woff2",
+          "bytes": 50016
+        }
+      ]
+    }
+  ],
+  "after": [
+    {
+      "path": "/",
+      "stats": {
+        "css": {
+          "count": 1,
+          "encoded": 59835,
+          "decoded": 277099
+        },
+        "js": {
+          "count": 36,
+          "encoded": 467477,
+          "decoded": 1560696
+        },
+        "font": {
+          "count": 18,
+          "encoded": 372504,
+          "decoded": 372504
+        },
+        "other": {
+          "count": 6,
+          "encoded": 19541,
+          "decoded": 95749
+        }
+      },
+      "htmlEncoded": 14453,
+      "domContentLoaded": 479,
+      "longTasks": 2,
+      "longTaskMs": 107,
+      "fcp": 512,
+      "fontFiles": [
+        {
+          "name": "noto-sans-sc-latin-wght-normal.47cf7aa1.woff2",
+          "bytes": 24880
+        },
+        {
+          "name": "noto-sans-sc-117-wght-normal.7ccc6c8e.woff2",
+          "bytes": 52228
+        },
+        {
+          "name": "ui-noto-sans-sc-116-wght-normal.9361e6de.woff2",
+          "bytes": 38496
+        },
+        {
+          "name": "jetbrains-mono-latin-wght-normal.a865edea.woff2",
+          "bytes": 40404
+        },
+        {
+          "name": "noto-sans-sc-118-wght-normal.1c305adf.woff2",
+          "bytes": 45992
+        },
+        {
+          "name": "ui-noto-sans-sc-115-wght-normal.86a988bd.woff2",
+          "bytes": 36524
+        },
+        {
+          "name": "ui-noto-sans-sc-119-wght-normal.b85868a5.woff2",
+          "bytes": 3884
+        },
+        {
+          "name": "ui-noto-sans-sc-113-wght-normal.ea761f56.woff2",
+          "bytes": 21228
+        },
+        {
+          "name": "ui-noto-sans-sc-109-wght-normal.8df7e370.woff2",
+          "bytes": 8204
+        },
+        {
+          "name": "ui-noto-sans-sc-103-wght-normal.735fb157.woff2",
+          "bytes": 2596
+        },
+        {
+          "name": "ui-noto-sans-sc-108-wght-normal.4dbd96cd.woff2",
+          "bytes": 10904
+        },
+        {
+          "name": "ui-noto-sans-sc-110-wght-normal.1e103276.woff2",
+          "bytes": 11772
+        },
+        {
+          "name": "ui-noto-sans-sc-112-wght-normal.6fe6dc5e.woff2",
+          "bytes": 19240
+        },
+        {
+          "name": "ui-noto-sans-sc-101-wght-normal.f151b46a.woff2",
+          "bytes": 2524
+        },
+        {
+          "name": "ui-noto-sans-sc-114-wght-normal.03087008.woff2",
+          "bytes": 26764
+        },
+        {
+          "name": "ui-noto-sans-sc-111-wght-normal.cdbacef0.woff2",
+          "bytes": 17440
+        },
+        {
+          "name": "ui-noto-sans-sc-107-wght-normal.dac58988.woff2",
+          "bytes": 5236
+        },
+        {
+          "name": "ui-noto-sans-sc-106-wght-normal.0a31832f.woff2",
+          "bytes": 4188
+        }
+      ]
+    },
+    {
+      "path": "/zh-hans/components/button/",
+      "stats": {
+        "css": {
+          "count": 1,
+          "encoded": 59835,
+          "decoded": 277099
+        },
+        "js": {
+          "count": 32,
+          "encoded": 457770,
+          "decoded": 1530097
+        },
+        "font": {
+          "count": 17,
+          "encoded": 368316,
+          "decoded": 368316
+        }
+      },
+      "htmlEncoded": 18619,
+      "domContentLoaded": 498,
+      "longTasks": 2,
+      "longTaskMs": 113,
+      "fcp": 504,
+      "fontFiles": [
+        {
+          "name": "noto-sans-sc-latin-wght-normal.47cf7aa1.woff2",
+          "bytes": 24880
+        },
+        {
+          "name": "noto-sans-sc-117-wght-normal.7ccc6c8e.woff2",
+          "bytes": 52228
+        },
+        {
+          "name": "ui-noto-sans-sc-116-wght-normal.9361e6de.woff2",
+          "bytes": 38496
+        },
+        {
+          "name": "jetbrains-mono-latin-wght-normal.a865edea.woff2",
+          "bytes": 40404
+        },
+        {
+          "name": "noto-sans-sc-118-wght-normal.1c305adf.woff2",
+          "bytes": 45992
+        },
+        {
+          "name": "ui-noto-sans-sc-115-wght-normal.86a988bd.woff2",
+          "bytes": 36524
+        },
+        {
+          "name": "ui-noto-sans-sc-119-wght-normal.b85868a5.woff2",
+          "bytes": 3884
+        },
+        {
+          "name": "ui-noto-sans-sc-113-wght-normal.ea761f56.woff2",
+          "bytes": 21228
+        },
+        {
+          "name": "ui-noto-sans-sc-109-wght-normal.8df7e370.woff2",
+          "bytes": 8204
+        },
+        {
+          "name": "ui-noto-sans-sc-103-wght-normal.735fb157.woff2",
+          "bytes": 2596
+        },
+        {
+          "name": "ui-noto-sans-sc-108-wght-normal.4dbd96cd.woff2",
+          "bytes": 10904
+        },
+        {
+          "name": "ui-noto-sans-sc-110-wght-normal.1e103276.woff2",
+          "bytes": 11772
+        },
+        {
+          "name": "ui-noto-sans-sc-112-wght-normal.6fe6dc5e.woff2",
+          "bytes": 19240
+        },
+        {
+          "name": "ui-noto-sans-sc-101-wght-normal.f151b46a.woff2",
+          "bytes": 2524
+        },
+        {
+          "name": "ui-noto-sans-sc-114-wght-normal.03087008.woff2",
+          "bytes": 26764
+        },
+        {
+          "name": "ui-noto-sans-sc-111-wght-normal.cdbacef0.woff2",
+          "bytes": 17440
+        },
+        {
+          "name": "ui-noto-sans-sc-107-wght-normal.dac58988.woff2",
+          "bytes": 5236
+        }
+      ]
+    },
+    {
+      "path": "/zh-hans/components/data-grid/",
+      "stats": {
+        "css": {
+          "count": 1,
+          "encoded": 59835,
+          "decoded": 277099
+        },
+        "js": {
+          "count": 32,
+          "encoded": 457770,
+          "decoded": 1530097
+        },
+        "font": {
+          "count": 17,
+          "encoded": 367268,
+          "decoded": 367268
+        }
+      },
+      "htmlEncoded": 14885,
+      "domContentLoaded": 473,
+      "longTasks": 1,
+      "longTaskMs": 56,
+      "fcp": 488,
+      "fontFiles": [
+        {
+          "name": "noto-sans-sc-latin-wght-normal.47cf7aa1.woff2",
+          "bytes": 24880
+        },
+        {
+          "name": "noto-sans-sc-117-wght-normal.7ccc6c8e.woff2",
+          "bytes": 52228
+        },
+        {
+          "name": "ui-noto-sans-sc-116-wght-normal.9361e6de.woff2",
+          "bytes": 38496
+        },
+        {
+          "name": "jetbrains-mono-latin-wght-normal.a865edea.woff2",
+          "bytes": 40404
+        },
+        {
+          "name": "noto-sans-sc-118-wght-normal.1c305adf.woff2",
+          "bytes": 45992
+        },
+        {
+          "name": "ui-noto-sans-sc-115-wght-normal.86a988bd.woff2",
+          "bytes": 36524
+        },
+        {
+          "name": "ui-noto-sans-sc-119-wght-normal.b85868a5.woff2",
+          "bytes": 3884
+        },
+        {
+          "name": "ui-noto-sans-sc-113-wght-normal.ea761f56.woff2",
+          "bytes": 21228
+        },
+        {
+          "name": "ui-noto-sans-sc-109-wght-normal.8df7e370.woff2",
+          "bytes": 8204
+        },
+        {
+          "name": "ui-noto-sans-sc-103-wght-normal.735fb157.woff2",
+          "bytes": 2596
+        },
+        {
+          "name": "ui-noto-sans-sc-108-wght-normal.4dbd96cd.woff2",
+          "bytes": 10904
+        },
+        {
+          "name": "ui-noto-sans-sc-110-wght-normal.1e103276.woff2",
+          "bytes": 11772
+        },
+        {
+          "name": "ui-noto-sans-sc-112-wght-normal.6fe6dc5e.woff2",
+          "bytes": 19240
+        },
+        {
+          "name": "ui-noto-sans-sc-101-wght-normal.f151b46a.woff2",
+          "bytes": 2524
+        },
+        {
+          "name": "ui-noto-sans-sc-114-wght-normal.03087008.woff2",
+          "bytes": 26764
+        },
+        {
+          "name": "ui-noto-sans-sc-111-wght-normal.cdbacef0.woff2",
+          "bytes": 17440
+        },
+        {
+          "name": "ui-noto-sans-sc-106-wght-normal.0a31832f.woff2",
+          "bytes": 4188
+        }
+      ]
+    },
+    {
+      "path": "/zh-hans/components/",
+      "stats": {
+        "css": {
+          "count": 1,
+          "encoded": 59835,
+          "decoded": 277099
+        },
+        "js": {
+          "count": 32,
+          "encoded": 453747,
+          "decoded": 1517832
+        },
+        "font": {
+          "count": 20,
+          "encoded": 383112,
+          "decoded": 383112
+        }
+      },
+      "htmlEncoded": 25778,
+      "domContentLoaded": 517,
+      "longTasks": 3,
+      "longTaskMs": 194,
+      "fcp": 524,
+      "fontFiles": [
+        {
+          "name": "noto-sans-sc-latin-wght-normal.47cf7aa1.woff2",
+          "bytes": 24880
+        },
+        {
+          "name": "noto-sans-sc-117-wght-normal.7ccc6c8e.woff2",
+          "bytes": 52228
+        },
+        {
+          "name": "ui-noto-sans-sc-116-wght-normal.9361e6de.woff2",
+          "bytes": 38496
+        },
+        {
+          "name": "jetbrains-mono-latin-wght-normal.a865edea.woff2",
+          "bytes": 40404
+        },
+        {
+          "name": "noto-sans-sc-118-wght-normal.1c305adf.woff2",
+          "bytes": 45992
+        },
+        {
+          "name": "ui-noto-sans-sc-115-wght-normal.86a988bd.woff2",
+          "bytes": 36524
+        },
+        {
+          "name": "ui-noto-sans-sc-119-wght-normal.b85868a5.woff2",
+          "bytes": 3884
+        },
+        {
+          "name": "ui-noto-sans-sc-113-wght-normal.ea761f56.woff2",
+          "bytes": 21228
+        },
+        {
+          "name": "ui-noto-sans-sc-109-wght-normal.8df7e370.woff2",
+          "bytes": 8204
+        },
+        {
+          "name": "ui-noto-sans-sc-103-wght-normal.735fb157.woff2",
+          "bytes": 2596
+        },
+        {
+          "name": "ui-noto-sans-sc-108-wght-normal.4dbd96cd.woff2",
+          "bytes": 10904
+        },
+        {
+          "name": "ui-noto-sans-sc-110-wght-normal.1e103276.woff2",
+          "bytes": 11772
+        },
+        {
+          "name": "ui-noto-sans-sc-101-wght-normal.f151b46a.woff2",
+          "bytes": 2524
+        },
+        {
+          "name": "ui-noto-sans-sc-112-wght-normal.6fe6dc5e.woff2",
+          "bytes": 19240
+        },
+        {
+          "name": "ui-noto-sans-sc-114-wght-normal.03087008.woff2",
+          "bytes": 26764
+        },
+        {
+          "name": "ui-noto-sans-sc-111-wght-normal.cdbacef0.woff2",
+          "bytes": 17440
+        },
+        {
+          "name": "ui-noto-sans-sc-107-wght-normal.dac58988.woff2",
+          "bytes": 5236
+        },
+        {
+          "name": "ui-noto-sans-sc-106-wght-normal.0a31832f.woff2",
+          "bytes": 4188
+        },
+        {
+          "name": "noto-sans-sc-90-wght-normal.0c63f53b.woff2",
+          "bytes": 9224
+        },
+        {
+          "name": "ui-noto-sans-sc-28-wght-normal.e1ad3044.woff2",
+          "bytes": 1384
+        }
+      ]
+    }
+  ],
+  "fontPreparation": {
+    "subsets": 20,
+    "sourceStaticCodepoints": 948,
+    "selectedOriginalBytes": 1191392,
+    "compactBytes": 219592,
+    "sampleAdvanceWidthDifferenceAt400And700": [
+      0,
+      0
+    ]
+  }
+}
