@@ -34,7 +34,8 @@ const HISTORY = [
 /** 医疗档案模板：患者概览、生命体征、用药、就诊记录 */
 export function MedicalProfileTemplate() {
   return (
-    <div className="flex min-h-[680px] w-full flex-col overflow-hidden rounded-3xl border border-border-button-default bg-background-primary-default shadow-card">
+    <div className="flex min-h-[680px] w-full flex-col overflow-hidden rounded-3xl border border-border-button-default bg-background-primary-default shadow-sidebar">
+      <p className="border-b border-border-primary px-4 py-2 text-body-2-regular text-text-secondary">虚构医疗资料，仅用于界面演示；不用于诊疗或风险评估。</p>
       {/* 患者头部 */}
       <header className="flex flex-wrap items-center gap-3 border-b border-border-primary p-4">
         <Avatar name="陈静" size="xl" />
@@ -49,10 +50,10 @@ export function MedicalProfileTemplate() {
           </span>
         </div>
         <div className="flex items-center gap-2">
-          <Button size="sm" variant="secondary" leading={<Icon name="file-list-3-line" className="size-3.5" />}>
+          <Button isDisabled size="sm" variant="secondary" leading={<Icon name="file-list-3-line" className="size-3.5" />}>
             导出档案
           </Button>
-          <Button size="sm" leading={<Icon name="calendar-schedule-line" className="size-3.5" />}>
+          <Button isDisabled size="sm" leading={<Icon name="calendar-schedule-line" className="size-3.5" />}>
             预约复诊
           </Button>
         </div>
@@ -60,11 +61,11 @@ export function MedicalProfileTemplate() {
 
       <div className="flex flex-col gap-3 p-4">
         {/* 生命体征 */}
-        <div className="grid grid-cols-2 gap-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
           {VITALS.map((v) => (
             <div
               key={v.label}
-              className="flex flex-col gap-1 rounded-2lg border border-border-button-default p-3"
+              className="flex flex-col gap-1 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4"
             >
               <div className="flex items-center gap-1.5">
                 <Icon name={v.icon} className={cn("size-3.5", v.tone)} />
@@ -86,7 +87,7 @@ export function MedicalProfileTemplate() {
 
         <div className="grid grid-cols-1 gap-2 lg:grid-cols-3">
           {/* 健康环 */}
-          <div className="flex flex-col items-center gap-2 rounded-2lg border border-border-button-default p-3">
+          <div className="flex flex-col items-center gap-2 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
             <span className="self-start text-body-2-medium text-text-primary">今日目标</span>
             <ActivityRings
               size={130}
@@ -113,7 +114,7 @@ export function MedicalProfileTemplate() {
           </div>
 
           {/* 心率趋势 */}
-          <div className="flex flex-col gap-2 rounded-2lg border border-border-button-default p-3 lg:col-span-2">
+          <div className="flex flex-col gap-2 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4 lg:col-span-2">
             <div className="flex items-center justify-between">
               <span className="text-body-2-medium text-text-primary">近 7 日静息心率</span>
               <span className="text-caption-2-regular text-text-tertiary">平均 71 bpm</span>
@@ -136,7 +137,7 @@ export function MedicalProfileTemplate() {
 
         <div className="grid grid-cols-1 gap-2 lg:grid-cols-2">
           {/* 用药 */}
-          <div className="flex flex-col gap-2 rounded-2lg border border-border-button-default p-3">
+          <div className="flex flex-col gap-2 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
             <div className="flex items-center justify-between">
               <span className="text-body-2-medium text-text-primary">当前用药</span>
               <Badge variant="accent">{MEDICATIONS.filter((m) => m.active).length} 项在用</Badge>
@@ -188,7 +189,7 @@ export function MedicalProfileTemplate() {
           </div>
 
           {/* 就诊记录 */}
-          <div className="flex flex-col gap-2 rounded-2lg border border-border-button-default p-3">
+          <div className="flex flex-col gap-2 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
             <span className="text-body-2-medium text-text-primary">就诊记录</span>
             <div className="flex flex-col">
               {HISTORY.map((h, i) => (
@@ -216,8 +217,8 @@ export function MedicalProfileTemplate() {
             <Divider />
             <div className="flex flex-col gap-1.5">
               <span className="text-caption-2-semibold text-text-tertiary">健康指标</span>
-              <Meter label="BMI" value={62} max={100} tone="success" />
-              <Meter label="体脂率" value={48} max={100} tone="accent" />
+              <Meter label="示例指标 A" value={62} max={100} tone="accent" />
+              <Meter label="示例指标 B" value={48} max={100} tone="accent" />
             </div>
           </div>
         </div>

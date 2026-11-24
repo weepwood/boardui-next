@@ -36,7 +36,7 @@ export function AiProfileTemplate() {
   const [followed, setFollowed] = useState(false);
 
   return (
-    <div className="flex min-h-[620px] w-full flex-col overflow-hidden rounded-3xl border border-border-button-default bg-background-primary-default shadow-card">
+    <div className="flex min-h-[620px] w-full flex-col overflow-hidden rounded-3xl border border-border-button-default bg-background-primary-default shadow-sidebar">
       {/* 封面 */}
       <div
         className="h-28 w-full shrink-0"
@@ -58,7 +58,7 @@ export function AiProfileTemplate() {
             <Badge variant="success">已验证</Badge>
           </div>
           <span className="text-caption-1-regular text-text-secondary">
-            产品设计师 · 设计中心 · 上海
+            虚构个人资料 · 产品设计师
           </span>
         </div>
         <div className="flex items-center gap-2 pb-1">
@@ -72,17 +72,17 @@ export function AiProfileTemplate() {
           >
             {followed ? "已关注" : "关注"}
           </Button>
-          <Button size="sm" variant="secondary" aria-label="更多">
+          <Button size="sm" variant="secondary" aria-label="更多（未配置）" isDisabled>
             <Icon name="more-2-line" className="size-3.5" />
           </Button>
         </div>
       </div>
 
       {/* 数据条 */}
-      <div className="mx-4 mt-3 grid grid-cols-4 gap-2 rounded-2lg bg-background-secondary-default p-2">
+      <div className="mx-4 mt-3 grid grid-cols-2 sm:grid-cols-4 gap-2 rounded-2lg bg-background-secondary-default p-2">
         {[
           { label: "作品", v: "24" },
-          { label: "关注者", v: "1.2k" },
+          { label: "关注者", v: followed?"1,201":"1,200" },
           { label: "获赞", v: "8.6k" },
           { label: "使用次数", v: "412" },
         ].map((s) => (
@@ -94,7 +94,7 @@ export function AiProfileTemplate() {
       </div>
 
       <div className="flex flex-col gap-3 p-4">
-        <Tabs defaultSelectedKey="about">
+        <Tabs aria-label="个人资料" defaultSelectedKey="about">
           <TabList>
             <Tab id="about">简介</Tab>
             <Tab id="skills">能力</Tab>

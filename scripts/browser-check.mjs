@@ -100,6 +100,46 @@ try{
           await link.waitFor({state:'visible'});
           assert.ok((await link.getAttribute('href')).startsWith(base+'/'));
         }
+        if(route==='/zh-hans/templates/marketing/'){
+          const demo=page.locator('#preview');
+          await demo.getByRole('radio',{name:'已结束',exact:true}).click();
+          await page.waitForFunction(()=>document.querySelectorAll('#preview tbody tr').length===2);
+          assert.ok((await demo.locator('tbody').textContent()).includes('邮件唤醒计划'));
+        }
+        if(route==='/zh-hans/templates/ai-image-generation/'){
+          const demo=page.locator('#preview');
+          await demo.getByRole('textbox',{name:'提示词'}).fill('本地预览测试');
+          await demo.getByRole('button',{name:'更新本地预览'}).click();
+          await demo.getByText(/本地预览测试 ·/).waitFor();
+          await demo.getByRole('button',{name:'放大 方案 1'}).click();
+          await demo.getByRole('button',{name:'关闭放大预览'}).click();
+        }
+        if(route==='/zh-hans/templates/ai-profile/'){
+          const demo=page.locator('#preview');
+          await demo.getByRole('button',{name:'关注',exact:true}).click();
+          await demo.getByText('1,201',{exact:true}).waitFor();
+          await demo.getByRole('tab',{name:'作品'}).click();
+          await demo.getByText('仪表盘套件',{exact:true}).waitFor();
+        }
+        if(route==='/zh-hans/templates/medical-profile/'){
+          await page.locator('#preview').getByText(/虚构医疗资料/).waitFor();
+          assert.ok((await page.locator('#preview button:disabled').count())>=2);
+        }
+        if(route==='/zh-hans/templates/multi-agent-chat/'){
+          const demo=page.locator('#preview');
+          await demo.getByRole('button',{name:/安全智能体/}).click();
+          await demo.getByText('生成审计报告',{exact:false}).waitFor();
+          await demo.getByRole('textbox',{name:'消息'}).fill('本地指令');
+          await demo.getByRole('button',{name:'发送',exact:true}).click();
+          await demo.getByText('本地记录：本地指令',{exact:true}).waitFor();
+        }
+        if(route==='/zh-hans/templates/chat-starter/'){
+          const demo=page.locator('#preview');
+          await demo.getByRole('button',{name:/写一段代码/}).click();
+          assert.equal(await demo.getByRole('textbox',{name:'消息'}).inputValue(),'写一段代码');
+          await demo.getByRole('button',{name:'发送',exact:true}).click();
+          await demo.getByText('本地记录：写一段代码',{exact:true}).waitFor();
+        }
         if(route==='/zh-hans/templates/dashboard/'){
           const demo=page.locator('#preview');
           await demo.getByRole('button',{name:'分析',exact:true}).click();

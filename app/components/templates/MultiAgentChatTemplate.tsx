@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { AgentProgress } from "@/app/components/ui/AgentProgress";
+import { Composer } from "@/app/components/ui/Composer";
 import { Avatar } from "@/app/components/ui/Avatar";
 import { Badge } from "@/app/components/ui/Badge";
 import { Button } from "@/app/components/ui/Button";
@@ -69,14 +71,15 @@ const STATUS_META: Record<AgentStatus, { label: string; cls: string; dot: string
 /** 多智能体聊天模板：智能体协作面板 + 任务流 */
 export function MultiAgentChatTemplate() {
   const [selected, setSelected] = useState("a2");
+ const [commands,setCommands]=useState<string[]>([]);
   const current = AGENTS.find((a) => a.id === selected)!;
 
   return (
-    <div className="flex min-h-[640px] w-full flex-col overflow-hidden rounded-3xl border border-border-button-default bg-background-primary-default shadow-card lg:flex-row">
+    <div className="flex min-h-[640px] w-full flex-col overflow-hidden rounded-3xl border border-border-button-default bg-background-primary-default shadow-sidebar lg:flex-row">
       {/* 智能体列表 */}
       <aside className="flex w-full shrink-0 flex-col gap-2 border-b border-border-primary p-3 lg:w-[220px] lg:border-b-0 lg:border-e">
         <div className="flex items-center justify-between px-1">
-          <span className="text-body-2-medium text-text-primary">智能体</span>
+          <span className="text-body-2-medium text-text-primary">智能体 · 示例</span>
           <Badge variant="accent">{AGENTS.filter((a) => a.status !== "idle").length} 活跃</Badge>
         </div>
 
@@ -86,7 +89,7 @@ export function MultiAgentChatTemplate() {
             <button
               key={a.id}
               type="button"
-              onClick={() => setSelected(a.id)}
+              onClick={() => setSelected(a.id)} aria-pressed={selected===a.id}
               className={cn(
                 "flex items-start gap-2 rounded-xl border p-2 text-start",
                 "transition-[border-color,background-color] duration-150 ease-out",
@@ -100,7 +103,7 @@ export function MultiAgentChatTemplate() {
                 <span className="truncate text-caption-1-medium text-text-primary">{a.name}</span>
                 <span className="truncate text-[10px] text-text-tertiary">{a.role}</span>
                 <span className={cn("flex items-center gap-1 text-[10px]", meta.cls)}>
-                  <span className={cn("size-1.5 rounded-full", meta.dot, a.status === "running" && "animate-pulse")} />
+                  <span className={cn("size-1.5 rounded-full", meta.dot, a.status === "running" && "animate-pulse motion-reduce:animate-none")} />
                   {meta.label}
                 </span>
               </div>
@@ -143,43 +146,7 @@ export function MultiAgentChatTemplate() {
             <Avatar name="张三" size="sm" />
           </div>
 
-          {/* 执行步骤 */}
-          <div className="flex flex-col gap-1.5 rounded-2xl bg-background-secondary-default p-3">
-            <span className="flex items-center gap-1.5 text-caption-2-semibold text-text-tertiary">
-              <Icon
-                name={current.status === "running" ? "loader-4-line" : "task-line"}
-                className={cn("size-3.5", current.status === "running" && "animate-spin")}
-              />
-              执行步骤
-            </span>
-            {current.steps.map((s, i) => (
-              <div key={i} className="flex items-center gap-2">
-                <span
-                  className={cn(
-                    "flex size-4 shrink-0 items-center justify-center rounded-full",
-                    s.done
-                      ? "bg-lime-500 text-white"
-                      : "border border-border-button-default bg-background-primary-default text-text-tertiary"
-                  )}
-                >
-                  {s.done ? (
-                    <Icon name="check-line" className="size-2.5" />
-                  ) : (
-                    <span className="text-[8px]">{i + 1}</span>
-                  )}
-                </span>
-                <span
-                  className={cn(
-                    "text-caption-1-regular",
-                    s.done ? "text-text-secondary line-through" : "text-text-primary"
-                  )}
-                >
-                  {s.text}
-                </span>
-              </div>
-            ))}
-          </div>
-
+          <AgentProgress title="示例执行步骤" steps={current.steps.map((s,i)=>({id:current.id+"-"+i,label:s.text,state:s.done?"done":current.status==="running"&&i===current.steps.findIndex(t=>!t.done)?"active":"pending"}))}/>
           {/* 协作记录 */}
           <div className="flex flex-col gap-2">
             <span className="text-caption-2-semibold text-text-tertiary">协作记录</span>
@@ -206,14 +173,10 @@ export function MultiAgentChatTemplate() {
           </div>
         </div>
 
-        {/* 输入 */}
-        <div className="flex shrink-0 items-center gap-2 border-t border-border-primary p-3">
-          <div className="flex h-9 flex-1 items-center rounded-full bg-background-secondary-default px-3 text-body-2-medium text-text-placeholder">
-            给智能体团队发送指令…
-          </div>
-          <Button size="sm" aria-label="发送" className="w-9 px-0">
-            <Icon name="arrow-up-line" className="size-4" />
-          </Button>
+        <div className="flex flex-col gap-2 border-t border-border-primary p-3">
+          {commands.map((c,i)=><p key={i} className="break-words text-body-2-regular text-text-secondary">本地记录：{c}</p>)}
+          <Composer tools={false} onSend={c=>setCommands(prev=>[...prev,c])} placeholder="记录示例指令…"/>
+          <p className="text-caption-1-regular text-text-tertiary">静态协作记录，未连接智能体服务。</p>
         </div>
       </div>
     </div>
