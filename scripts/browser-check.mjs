@@ -441,7 +441,27 @@ try{
           assert.equal(await page.locator('#preview [aria-current=page]').textContent(),'面包屑导航');
         }
         if(route==='/zh-hans/components/agent-thinking/'){
-          assert.equal(await page.locator('#preview').getByRole('status').count(),4);
+          const preview=page.locator('#preview');
+          assert.equal(await preview.getByRole('status').count(),4);
+          await preview.scrollIntoViewIfNeeded();
+          await page.waitForFunction(()=>document.querySelectorAll('#preview [data-motion-active="true"]').length===4);
+          const elapsed=preview.getByRole('status').first().locator('span.tabular-nums');
+          const time=async()=>parseFloat(await elapsed.textContent());
+          const started=await time();
+          await page.waitForFunction(t=>parseFloat(document.querySelector('#preview [role=status] .tabular-nums').textContent)>t,started);
+          const before=await time();
+          await page.evaluate(()=>window.scrollTo(0,document.documentElement.scrollHeight));
+          await page.waitForFunction(()=>document.querySelectorAll('#preview [data-motion-active="false"]').length===4);
+          const stopped=await time();
+          await page.waitForTimeout(350);
+          assert.equal(await time(),stopped,'offscreen timer must stop updating');
+          assert.ok(stopped>=before);
+          await preview.scrollIntoViewIfNeeded();
+          await page.waitForFunction(()=>document.querySelectorAll('#preview [data-motion-active="true"]').length===4);
+          await page.waitForFunction(t=>parseFloat(document.querySelector('#preview [role=status] .tabular-nums').textContent)>=t+.2,stopped);
+          // Reduced motion does not freeze elapsed time, but removes decorative animation.
+          await page.emulateMedia({reducedMotion:'reduce'});
+          assert.equal(await preview.locator('.bui-agent-thinking-label').first().evaluate(e=>getComputedStyle(e).animationName),'none');
         }
         if(route==='/zh-hans/components/agent-progress/'){
           assert.equal(await page.locator('#preview [aria-current=step]').count(),1);

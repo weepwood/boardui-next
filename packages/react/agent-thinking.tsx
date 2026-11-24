@@ -3,8 +3,9 @@
 
 
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { CSSProperties } from "react";
+import { useVisibleActivity } from "./use-visible-activity";
 import { cx } from "./cx";
 
 /**
@@ -91,19 +92,27 @@ function dotOpacities(variant: "wave" | "spin", phase: number) {
   });
 }
 
-function DotsIndicator({ variant }: { variant: "wave" | "spin" }) {
+function DotsIndicator({ variant,active }: { variant: "wave" | "spin";active:boolean }) {
 
   const [opacities, setOpacities] = useState<number[]>(DOTS_SEED);
 
+  const phase=useRef(0);
   useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    let phase = 0;
-    const id = window.setInterval(() => {
-      phase = (phase + DOTS_PHASE_STEP) % 1;
-      setOpacities(dotOpacities(variant, phase));
-    }, DOTS_TICK_MS);
-    return () => window.clearInterval(id);
-  }, [variant]);
+    const media=window.matchMedia("(prefers-reduced-motion: reduce)");
+    let id:number|undefined;
+    const stop=()=>{if(id!==undefined){window.clearInterval(id);id=undefined;}};
+    const sync=()=>{
+      stop();
+      if(media.matches){setOpacities(DOTS_SEED);return;}
+      if(!active)return;
+      id=window.setInterval(()=>{
+        phase.current=(phase.current+DOTS_PHASE_STEP)%1;
+        setOpacities(dotOpacities(variant,phase.current));
+      },DOTS_TICK_MS);
+    };
+    sync();media.addEventListener("change",sync);
+    return ()=>{stop();media.removeEventListener("change",sync);};
+  }, [variant,active]);
 
   return (
     <span
@@ -224,18 +233,19 @@ function InfinityIndicator() {
 
 /* ------------------------------------------------------------------ timer */
 
-function ElapsedTimer() {
+function ElapsedTimer({active}:{active:boolean}) {
 
   const [elapsed, setElapsed] = useState(0);
 
+  const started=useRef<number|null>(null);
+  useEffect(()=>{if(started.current===null)started.current=performance.now()},[]);
   useEffect(() => {
-    const started = performance.now();
-    const id = window.setInterval(
-      () => setElapsed((performance.now() - started) / 1000),
-      100,
-    );
-    return () => window.clearInterval(id);
-  }, []);
+    if(!active)return;
+    const update=()=>setElapsed((performance.now()-(started.current??performance.now()))/1000);
+    update();
+    const id=window.setInterval(update,100);
+    return ()=>window.clearInterval(id);
+  }, [active]);
 
   return (
     <span aria-hidden="true" className="font-mono text-caption-1-regular text-text-tertiary tabular-nums">
@@ -255,15 +265,19 @@ export function AgentThinking({
   className,
 }: AgentThinkingProps) {
 
+  const activityRef=useRef<HTMLDivElement>(null);
+  const active=useVisibleActivity(activityRef);
   const color = TONE_COLORS[tone ?? VARIANT_TONE[variant]];
 
   return (
     <div
+      ref={activityRef}
+      data-motion-active={active?"true":"false"}
       role="status"
       className={cx("flex items-center gap-2.5", className)}
       style={{ color, "--bui-agent-thinking-tone": color } as CSSProperties}
     >
-      {(variant === "wave" || variant === "spin") && <DotsIndicator variant={variant} />}
+      {(variant === "wave" || variant === "spin") && <DotsIndicator variant={variant} active={active} />}
       {variant === "stars" && <StarsIndicator />}
       {variant === "infinity" && <InfinityIndicator />}
       <span
@@ -272,7 +286,7 @@ export function AgentThinking({
       >
         {label}
       </span>
-      {showTimer && <ElapsedTimer />}
+      {showTimer && <ElapsedTimer active={active} />}
     </div>
   );
 }

@@ -64,3 +64,10 @@
 - CommandPalette 预计算检索文本，分组线性构造，缓存可选项索引，Memo 结果行与稳定回调，保留全部 109 条结果、键盘循环、无匹配状态和 ARIA。三次本地 Edge 降速测量 20 次方向键的脚本时间中位数 60→44ms，端到端操作时间有波动。复现 node scripts/benchmark-search.mjs /tmp/search.json（Playwright，可设 BROWSER_EXECUTABLE）。
 - DataGrid/DataTable 预计算排序键、复用 Intl.Collator、Set 选择查询；千行测试取值 17130→1000 次，数值/自然排序/稳定性回归通过。未增加虚拟列表，也不把取值次数减少等同整体渲染加速。
 - 已撤销静态 API 表格服务端 slot 候选：压缩 HTML 增大且测量收益不稳定。长文档整体优化与复杂组件首屏初始化仍待继续测量，保留共享文档缓存和原有 API 内容。证据 reference/evidence/docs-render-performance-20261124.json。不要为了拆包或架构指标盲目引入性能回归。
+
+### 演示初始化与不可见动效专项
+
+- #26 已通过 CI 并合并至 main b8afb2e。新批次：90 个文档的 preview/demos 变为惰性工厂，328 处 JSX 表达式不再随整个共享 registry 顶层构造；目录只调用可见卡片的工厂。共享模块与静态文档保留，未采用虚拟化或网络分包。
+- AgentThinking 使用共享 IntersectionObserver 与页面 visibilitychange，仅在可见时运行 80ms 波纹/旋转和 100ms 计时回调，CSS 装饰动画暂停；恢复时按实际经过时间更新，实时响应 reduced-motion。独立包 API 不变。1.2s Edge 采样：可见 30+48，离开视口 30+48→0+0，恢复 30+48。
+- 证据 reference/evidence/preview-initialization-motion-20261124.json，复现 scripts/benchmark-preview-initialization.mjs 与 scripts/benchmark-motion-visibility.mjs（Playwright，BROWSER_EXECUTABLE 可选）。三轮冷启动脚本中位数 button 824→798ms、agent-thinking 755→754ms、catalog 772→727ms；部分 FCP/长任务反而上升，部分测量并行执行其他本地检查，只视为诊断数据，不承诺整页提速。保留真实静态文档、锚点及预览行为。
+- npm test 新增文档惰性工厂结构门禁，浏览器专项验证离屏计时暂停、恢复连续性、减少动效。12 个本地组合、116 HTML 导出、独立包构建/SSR/类型消费、类型与 API 检查通过。后续优先隔离环境重复测量长文档布局和其他持续动画；逐组件验收门禁保持不变。

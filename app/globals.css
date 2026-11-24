@@ -508,3 +508,12 @@ aside nav [data-nav-pending="true"] {
 [data-navigation-pending][hidden] {
   display: none;
 }
+
+
+/* Keep invisible AgentThinking mounted, but pause its decorative loops. */
+[data-motion-active="false"] :is(.bui-agent-thinking-label,.bui-agent-thinking-star,.bui-agent-thinking-comet) {
+  animation-play-state: paused;
+}
+[data-motion-active="false"] .bui-agent-thinking-label {
+  will-change: auto;
+}

@@ -24,12 +24,12 @@ export function DocRenderer({slug,api,acceptance}:{slug:string;api?:ApiEntry[];a
       title={doc.title}
       description={doc.description}
       breadcrumbs={componentCrumbs(doc.title)}
-      preview={doc.preview}
+      preview={doc.preview()}
       previewCode={doc.previewCode}
       install={doc.install}
       api={api}
       acceptance={acceptance}
-      sections={doc.demos.map((d) => ({
+      sections={doc.demos().map((d) => ({
         id: d.id,
         title: d.title,
         description: d.description,
