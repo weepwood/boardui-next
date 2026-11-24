@@ -48,6 +48,14 @@ try{
           await page.waitForFunction(d=>document.documentElement.classList.contains('dark')===d,theme==='dark');
         }
         if(route==='/zh-hans/components/button/'){
+          const geometry=await page.evaluate(()=>{const r=s=>{const e=document.querySelector(s);const b=e.getBoundingClientRect();return [b.x,b.y,b.width,b.height].map(Math.round)};return {main:r('main'),heading:r('main h1'),sidebar:r('aside'),toc:r('main+aside'),canvas:r('#preview > div > div:last-child'),shadow:getComputedStyle(document.documentElement).getPropertyValue('--shadow-sidebar').trim(),font:document.fonts.check('14px "Noto Sans SC Variable"','按钮')}});
+          assert.deepEqual(geometry.main.slice(0,3),[324,40,808]);
+          assert.deepEqual(geometry.heading.slice(0,2),[324,108]);
+          assert.deepEqual(geometry.sidebar,[12,12,260,976]);
+          assert.deepEqual(geometry.toc.slice(0,3),[1180,40,220]);
+          assert.ok(geometry.canvas[3]>=327);
+          assert.ok(geometry.shadow,'runtime sidebar elevation token');
+          assert.ok(geometry.font,'self-hosted Chinese font');
           const link=page.getByRole('link',{name:'查看组件',exact:true});
           await link.waitFor({state:'visible'});
           assert.ok((await link.getAttribute('href')).startsWith(base+'/'));
