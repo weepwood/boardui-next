@@ -35,7 +35,7 @@ export function TaskList({
   return (
     <div
       className={cn(
-        "flex w-full flex-col overflow-hidden rounded-2lg border border-border-button-default",
+        "flex w-full flex-col overflow-hidden rounded-2xl border border-border-component-detail-container",
         "bg-background-primary-default",
         className
       )}
@@ -86,7 +86,7 @@ export function TaskList({
               <Badge variant={prioVariant[t.priority]}>{t.priority}</Badge>
             )}
             {t.due && (
-              <span className="shrink-0 text-[10px] tabular-nums text-text-tertiary">
+              <span className="shrink-0 text-caption-2-regular tabular-nums text-text-secondary">
                 {t.due}
               </span>
             )}

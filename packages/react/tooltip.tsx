@@ -92,7 +92,7 @@ export function Tooltip({ children, className, size = "sm", showArrow = true, of
           // removes it (transition to base), and holds the element mounted while
           // `data-exiting` is set so the same transition plays in reverse. The
           // `transition` utility covers scale, filter (blur) and opacity.
-          "transition duration-200 ease-out",
+          "transition duration-200 ease-out motion-reduce:transition-none",
           "data-[entering]:scale-90 data-[entering]:opacity-0 data-[entering]:blur-[4px]",
           "data-[exiting]:scale-90 data-[exiting]:opacity-0 data-[exiting]:blur-[4px]",
           typeof className === "function" ? className(state) : className,

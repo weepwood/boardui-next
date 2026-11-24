@@ -44,7 +44,7 @@ export function ChatStarterTemplate() {
  const [sent,setSent]=useState("");
 
   return (
-    <div className="flex min-h-[560px] w-full flex-col items-center justify-center overflow-hidden rounded-3xl border border-border-button-default bg-background-primary-default p-6 shadow-sidebar">
+    <div className="flex min-h-[560px] w-full flex-col items-center justify-center overflow-hidden bui-template-shell rounded-3xl border border-border-component-detail-container bg-background-full p-4 @lg:p-6 ">
       <div className="flex w-full max-w-lg flex-col items-center gap-6">
         {/* 品牌标记 */}
         <span className="flex size-12 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,#a855f7,#6366f1)] text-white shadow-md">
@@ -59,7 +59,7 @@ export function ChatStarterTemplate() {
         </div>
 
         {/* 建议卡片 */}
-        <div className="grid w-full grid-cols-1 gap-2 sm:grid-cols-2">
+        <div className="grid w-full grid-cols-1 gap-2 @sm:grid-cols-2">
           {SUGGESTIONS.map((s) => (
             <button
               key={s.id}

@@ -59,7 +59,7 @@ export function CalendarCard() {
   const today = 12;
 
   return (
-    <div className="flex min-h-[620px] w-full flex-col overflow-hidden rounded-3xl border border-border-button-default bg-background-primary-default shadow-card lg:flex-row">
+    <div className="flex min-h-[620px] w-full flex-col overflow-hidden rounded-3xl border border-border-component-detail-container bg-background-primary-default lg:flex-row">
       {/* 日历主体 */}
       <div className="flex min-w-0 flex-1 flex-col">
         <header className="flex flex-wrap items-center justify-between gap-2 border-b border-separator-border px-4 py-3">
@@ -104,7 +104,7 @@ export function CalendarCard() {
         </div>
 
         {/* 日期网格 */}
-        <div className="grid flex-1 grid-cols-7 auto-rows-fr">
+        <div className="grid min-w-0 flex-1 grid-cols-7 auto-rows-fr">
           {cells.map((day, i) => {
             if (day === null) {
               return (
@@ -123,7 +123,7 @@ export function CalendarCard() {
                 type="button"
                 onClick={() => setSelected(day)}
                 className={cn(
-                  "flex min-h-[84px] cursor-pointer flex-col gap-1 border-b border-e border-separator-border p-1.5 text-start",
+                  "flex min-w-0 min-h-[84px] cursor-pointer flex-col gap-1 border-b border-e border-separator-border p-1.5 text-start",
                   "transition-colors duration-150 ease-out",
                   isSel ? "bg-badge-new-background" : "hover:bg-background-secondary-hover"
                 )}
@@ -152,7 +152,7 @@ export function CalendarCard() {
                     </span>
                   ))}
                   {evs.length > 2 && (
-                    <span className="px-1 text-[10px] text-text-tertiary">
+                    <span className="px-1 text-caption-2-regular text-text-secondary">
                       +{evs.length - 2} 更多
                     </span>
                   )}

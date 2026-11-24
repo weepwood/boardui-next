@@ -113,13 +113,13 @@ export function ProjectBoardTemplate() {
   const [view, setView] = useState<"board" | "list">("board");
 
   return (
-    <div className="flex min-h-[680px] w-full flex-col overflow-hidden rounded-3xl border border-border-button-default bg-background-primary-default shadow-sidebar">
+    <div className="flex min-h-[680px] w-full flex-col overflow-hidden bui-template-shell rounded-3xl border border-border-component-detail-container bg-background-full">
       {/* 头部 */}
       <header className="flex flex-col gap-3 border-b border-separator-border p-4">
         <div className="flex flex-wrap items-start justify-between gap-2">
           <div className="flex flex-col gap-1">
             <div className="flex items-center gap-2">
-              <h3 className="text-title-3-semibold text-text-primary">BoardUI 设计任务</h3>
+              <h3 className="text-headline-medium text-text-primary">BoardUI 设计任务</h3>
               <Badge variant="accent">进行中</Badge>
             </div>
             <span className="text-caption-1-regular text-text-tertiary">
@@ -165,14 +165,14 @@ export function ProjectBoardTemplate() {
         </div>
       </header>
 
-      {target&&<form className="flex flex-wrap items-center gap-2 p-3" onSubmit={e=>{e.preventDefault();add()}}><input autoFocus aria-label="任务标题" value={draft} onChange={e=>setDraft(e.target.value)} className="min-w-0 flex-1 rounded-2lg bg-background-tertiary-default p-2 text-body-medium" placeholder="任务标题"/><button type="submit" disabled={!draft.trim()} className="rounded-2lg bg-button-primary px-3 py-2 text-white disabled:opacity-40">添加</button><Button variant="secondary" onPress={()=>setTarget(null)}>取消</Button></form>}
+      {target&&<form className="flex flex-wrap items-center gap-2 p-3" onSubmit={e=>{e.preventDefault();add()}}><input autoFocus aria-label="任务标题" value={draft} onChange={e=>setDraft(e.target.value)} className="min-w-0 flex-1 rounded-2lg bg-background-tertiary-default p-2 text-body-medium outline-none focus-visible:ring-2 focus-visible:ring-border-focus-ring" placeholder="任务标题"/><button type="submit" disabled={!draft.trim()} className="rounded-2lg bg-button-primary px-3 py-2 text-white disabled:opacity-40">添加</button><Button variant="secondary" onPress={()=>setTarget(null)}>取消</Button></form>}
       {/* 看板 */}
       {view === "board" ? (
         <div className="flex min-h-0 flex-1 gap-2 overflow-x-auto p-3 [scrollbar-width:thin]">
           {columns.map((col) => (
             <div
               key={col.id}
-              className="flex w-[196px] shrink-0 flex-col gap-2 rounded-2lg bg-background-secondary-default p-2"
+              className="flex w-[196px] shrink-0 flex-col gap-2 rounded-2xl bg-background-secondary-default p-3"
             >
               <div className="flex items-center justify-between px-1">
                 <div className="flex items-center gap-1.5">
@@ -234,7 +234,7 @@ export function ProjectBoardTemplate() {
                         ))}
                       </div>
                       {card.comments ? (
-                        <span className="flex items-center gap-1 text-[10px] text-text-tertiary">
+                        <span className="flex items-center gap-1 text-caption-2-regular text-text-secondary">
                           <Icon name="chat-3-line" className="size-3" />
                           {card.comments}
                         </span>

@@ -32,7 +32,7 @@ export function WebSearch({
   return (
     <div
       className={cn(
-        "flex w-full flex-col overflow-hidden rounded-2lg border border-border-button-default",
+        "flex w-full flex-col overflow-hidden rounded-2xl border border-border-component-detail-container",
         "bg-background-primary-default",
         className
       )}
@@ -59,7 +59,7 @@ export function WebSearch({
           <span className="truncate text-caption-1-medium text-text-primary">
             {status === "searching" ? "正在检索网页…" : `检索到 ${sources.length} 个来源`}
           </span>
-          <span className="truncate text-[10px] text-text-tertiary">{query}</span>
+          <span className="truncate text-caption-2-regular text-text-secondary">{query}</span>
         </div>
         <Icon
           name="arrow-down-s-line"

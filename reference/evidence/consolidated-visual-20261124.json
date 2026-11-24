@@ -1,0 +1,630 @@
+{
+  "baseline": "2b62b8d76808359c8d5d22d172b713495ffe697c",
+  "scope": "Local Edge: 12 templates, 1440x1000 and 390x844, both themes; page and shell overflow, runtime errors. Screenshot spot-check of dashboard and mobile calendar; not full visual parity.",
+  "results": [
+    {
+      "theme": "light",
+      "width": 1440,
+      "name": "dashboard",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 1074,
+      "shellOverflow": false,
+      "selected": [
+        "主页仪表盘Pro"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "name": "ai-chat",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 1074,
+      "shellOverflow": false,
+      "selected": [
+        "AI 聊天Pro"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "name": "finance",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 1074,
+      "shellOverflow": false,
+      "selected": [
+        "财务仪表盘Pro"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "name": "hr",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 1074,
+      "shellOverflow": false,
+      "selected": [
+        "人力资源"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "name": "calendar",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 1074,
+      "shellOverflow": false,
+      "selected": [
+        "日历模板"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "name": "project-board",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 1074,
+      "shellOverflow": false,
+      "selected": [
+        "项目看板Pro"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "name": "marketing",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 1074,
+      "shellOverflow": false,
+      "selected": [
+        "营销仪表盘Pro"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "name": "ai-image-generation",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 1074,
+      "shellOverflow": false,
+      "selected": [
+        "AI 图像生成Pro"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "name": "ai-profile",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 1074,
+      "shellOverflow": false,
+      "selected": [
+        "AI 个人资料Pro"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "name": "medical-profile",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 1074,
+      "shellOverflow": false,
+      "selected": [
+        "医疗档案Pro"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "name": "multi-agent-chat",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 1074,
+      "shellOverflow": false,
+      "selected": [
+        "多智能体聊天Pro"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "name": "chat-starter",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 1074,
+      "shellOverflow": false,
+      "selected": [
+        "聊天入门模板全新"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "name": "dashboard",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 340,
+      "shellOverflow": false,
+      "selected": [
+        "主页仪表盘Pro"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "name": "ai-chat",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 340,
+      "shellOverflow": false,
+      "selected": [
+        "AI 聊天Pro"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "name": "finance",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 340,
+      "shellOverflow": false,
+      "selected": [
+        "财务仪表盘Pro"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "name": "hr",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 340,
+      "shellOverflow": false,
+      "selected": [
+        "人力资源"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "name": "calendar",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 340,
+      "shellOverflow": false,
+      "selected": [
+        "日历模板"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "name": "project-board",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 340,
+      "shellOverflow": false,
+      "selected": [
+        "项目看板Pro"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "name": "marketing",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 340,
+      "shellOverflow": false,
+      "selected": [
+        "营销仪表盘Pro"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "name": "ai-image-generation",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 340,
+      "shellOverflow": false,
+      "selected": [
+        "AI 图像生成Pro"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "name": "ai-profile",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 340,
+      "shellOverflow": false,
+      "selected": [
+        "AI 个人资料Pro"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "name": "medical-profile",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 340,
+      "shellOverflow": false,
+      "selected": [
+        "医疗档案Pro"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "name": "multi-agent-chat",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 340,
+      "shellOverflow": false,
+      "selected": [
+        "多智能体聊天Pro"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "name": "chat-starter",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 340,
+      "shellOverflow": false,
+      "selected": [
+        "聊天入门模板全新"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "name": "dashboard",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 1074,
+      "shellOverflow": false,
+      "selected": [
+        "主页仪表盘Pro"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "name": "ai-chat",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 1074,
+      "shellOverflow": false,
+      "selected": [
+        "AI 聊天Pro"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "name": "finance",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 1074,
+      "shellOverflow": false,
+      "selected": [
+        "财务仪表盘Pro"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "name": "hr",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 1074,
+      "shellOverflow": false,
+      "selected": [
+        "人力资源"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "name": "calendar",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 1074,
+      "shellOverflow": false,
+      "selected": [
+        "日历模板"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "name": "project-board",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 1074,
+      "shellOverflow": false,
+      "selected": [
+        "项目看板Pro"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "name": "marketing",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 1074,
+      "shellOverflow": false,
+      "selected": [
+        "营销仪表盘Pro"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "name": "ai-image-generation",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 1074,
+      "shellOverflow": false,
+      "selected": [
+        "AI 图像生成Pro"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "name": "ai-profile",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 1074,
+      "shellOverflow": false,
+      "selected": [
+        "AI 个人资料Pro"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "name": "medical-profile",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 1074,
+      "shellOverflow": false,
+      "selected": [
+        "医疗档案Pro"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "name": "multi-agent-chat",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 1074,
+      "shellOverflow": false,
+      "selected": [
+        "多智能体聊天Pro"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "name": "chat-starter",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 1074,
+      "shellOverflow": false,
+      "selected": [
+        "聊天入门模板全新"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "name": "dashboard",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 340,
+      "shellOverflow": false,
+      "selected": [
+        "主页仪表盘Pro"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "name": "ai-chat",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 340,
+      "shellOverflow": false,
+      "selected": [
+        "AI 聊天Pro"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "name": "finance",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 340,
+      "shellOverflow": false,
+      "selected": [
+        "财务仪表盘Pro"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "name": "hr",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 340,
+      "shellOverflow": false,
+      "selected": [
+        "人力资源"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "name": "calendar",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 340,
+      "shellOverflow": false,
+      "selected": [
+        "日历模板"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "name": "project-board",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 340,
+      "shellOverflow": false,
+      "selected": [
+        "项目看板Pro"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "name": "marketing",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 340,
+      "shellOverflow": false,
+      "selected": [
+        "营销仪表盘Pro"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "name": "ai-image-generation",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 340,
+      "shellOverflow": false,
+      "selected": [
+        "AI 图像生成Pro"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "name": "ai-profile",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 340,
+      "shellOverflow": false,
+      "selected": [
+        "AI 个人资料Pro"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "name": "medical-profile",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 340,
+      "shellOverflow": false,
+      "selected": [
+        "医疗档案Pro"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "name": "multi-agent-chat",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 340,
+      "shellOverflow": false,
+      "selected": [
+        "多智能体聊天Pro"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "name": "chat-starter",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "shellWidth": 340,
+      "shellOverflow": false,
+      "selected": [
+        "聊天入门模板全新"
+      ],
+      "errors": []
+    }
+  ]
+}

@@ -36,7 +36,7 @@ export function AiProfileTemplate() {
   const [followed, setFollowed] = useState(false);
 
   return (
-    <div className="flex min-h-[620px] w-full flex-col overflow-hidden rounded-3xl border border-border-button-default bg-background-primary-default shadow-sidebar">
+    <div className="flex min-h-[620px] w-full flex-col overflow-hidden bui-template-shell rounded-3xl border border-border-component-detail-container bg-background-full">
       {/* 封面 */}
       <div
         className="h-28 w-full shrink-0"
@@ -53,7 +53,7 @@ export function AiProfileTemplate() {
         </div>
         <div className="flex min-w-0 flex-1 flex-col gap-0.5 pb-1">
           <div className="flex flex-wrap items-center gap-2">
-            <h3 className="text-title-3-semibold text-text-primary">张三</h3>
+            <h3 className="text-headline-medium text-text-primary">张三</h3>
             <Badge variant="pro">Pro</Badge>
             <Badge variant="success">已验证</Badge>
           </div>
@@ -79,7 +79,7 @@ export function AiProfileTemplate() {
       </div>
 
       {/* 数据条 */}
-      <div className="mx-4 mt-3 grid grid-cols-2 sm:grid-cols-4 gap-2 rounded-2lg bg-background-secondary-default p-2">
+      <div className="mx-4 mt-3 grid grid-cols-2 @lg:grid-cols-4 gap-2 rounded-2lg bg-background-secondary-default p-2">
         {[
           { label: "作品", v: "24" },
           { label: "关注者", v: followed?"1,201":"1,200" },
@@ -88,7 +88,7 @@ export function AiProfileTemplate() {
         ].map((s) => (
           <div key={s.label} className="flex flex-col items-center">
             <span className="text-body-medium tabular-nums text-text-primary">{s.v}</span>
-            <span className="text-[10px] text-text-tertiary">{s.label}</span>
+            <span className="text-caption-2-regular text-text-secondary">{s.label}</span>
           </div>
         ))}
       </div>
@@ -117,7 +117,7 @@ export function AiProfileTemplate() {
                   <span className="min-w-0 flex-1 truncate text-caption-1-regular text-text-secondary">
                     {a.text}
                   </span>
-                  <span className="shrink-0 text-[10px] text-text-tertiary">{a.time}</span>
+                  <span className="shrink-0 text-caption-2-regular text-text-secondary">{a.time}</span>
                 </div>
               ))}
             </div>
@@ -150,11 +150,11 @@ export function AiProfileTemplate() {
                     background: `linear-gradient(135deg, hsl(${a.hue} 90% 94%), hsl(${a.hue} 80% 84%))`,
                   }}
                 />
-                <div className="flex items-center justify-between gap-1 px-2 pb-2">
+                <div className="flex flex-wrap items-center justify-between gap-1 px-2 pb-2">
                   <span className="truncate text-caption-1-medium text-text-primary">
                     {a.name}
                   </span>
-                  <span className="shrink-0 text-[10px] text-text-tertiary">{a.type}</span>
+                  <span className="shrink-0 text-caption-2-regular text-text-secondary">{a.type}</span>
                 </div>
               </div>
             ))}

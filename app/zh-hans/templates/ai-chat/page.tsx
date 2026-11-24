@@ -7,9 +7,10 @@ export const metadata: Metadata = { title: "AI 聊天模板" };
 export default function ChatTemplatePage() {
   return (
     <DocsLayout
+      variant="catalog"
       breadcrumbs={[
         { label: "BoardUI", href: "/" },
-        { label: "模板", href: "/zh-hans/components" },
+        { label: "模板", href: "/zh-hans/templates" },
         { label: "AI 聊天" },
       ]}
       toc={[
@@ -19,12 +20,12 @@ export default function ChatTemplatePage() {
     >
       <header className="flex flex-col gap-2">
         <h1 className="text-title-1-medium text-text-primary">AI 聊天</h1>
-        <p className="text-headline-medium text-text-secondary">
+        <p className="text-headline-regular text-text-secondary">
           三段式 AI 对话界面：左侧会话列表、中间消息流、底部输入区。支持 Enter 发送、快捷提示胶囊与在线状态指示。
         </p>
       </header>
 
-      <div id="preview" className="scroll-mt-14">
+      <div id="preview" className="@container min-w-0 scroll-mt-14">
         <ChatTemplate />
       </div>
 

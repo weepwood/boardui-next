@@ -38,9 +38,9 @@ export function DashboardTemplate() {
   const [count, setCount] = useState(3);
 
   return (
-    <div className="flex min-h-[720px] w-full overflow-hidden rounded-3xl border border-border-button-default bg-background-primary-default shadow-sidebar">
+    <div className="flex min-h-[720px] w-full overflow-hidden bui-template-shell rounded-3xl border border-border-component-detail-container bg-background-full">
       {/* 侧边导航 */}
-      <aside className="hidden w-[60px] shrink-0 flex-col items-center gap-1 bg-background-secondary-default p-3 sm:flex">
+      <aside className="hidden w-[60px] shrink-0 flex-col items-center gap-1 bg-background-secondary-default p-2 @sm:flex">
         <span className="mb-2 flex size-7 items-center justify-center rounded-lg bg-text-primary text-[12px] font-bold text-background-full">
           A
         </span>
@@ -50,7 +50,7 @@ export function DashboardTemplate() {
       {/* 主内容 */}
       <div className="flex min-w-0 flex-1 flex-col">
         {/* 顶栏 */}
-        <header className="flex items-center justify-between gap-3 border-b border-separator-border px-4 py-3">
+        <header className="flex flex-wrap items-center justify-between gap-3 border-b border-separator-border px-4 py-3">
           <div className="flex flex-col">
             <h3 className="text-body-large-medium text-text-primary">{active}</h3>
             <span className="text-caption-2-regular text-text-tertiary">2026 年 11 月 · 演示数据</span>
@@ -64,9 +64,9 @@ export function DashboardTemplate() {
           </div>
         </header>
 
-        <div className="flex flex-col gap-3 p-4">
+        <div className="flex min-w-0 flex-col gap-3 p-3 @lg:p-4">
           {/* 统计卡 */}
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
+          <div className="grid min-w-0 grid-cols-1 gap-3 @sm:grid-cols-2 @3xl:grid-cols-4">
             <StatCard label="总收入" value="¥128,430" delta="+12.5%" trend="up" icon="money-dollar-circle-line" spark={REVENUE} />
             <StatCard label="订单数" value="1,284" delta="+8.2%" trend="up" icon="shopping-bag-3-line" spark={[8, 12, 10, 16, 14, 19, 22]} />
             <StatCard label="活跃用户" value="8,621" delta="-2.4%" trend="down" icon="user-line" spark={[22, 20, 21, 18, 17, 16, 15]} />
@@ -74,8 +74,8 @@ export function DashboardTemplate() {
           </div>
 
           {/* 主图表 + 环形 */}
-          <div className="grid grid-cols-1 gap-2 lg:grid-cols-3">
-            <div className="flex flex-col gap-2 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4 lg:col-span-2">
+          <div className="grid min-w-0 grid-cols-1 gap-3 @3xl:grid-cols-3">
+            <div className="flex flex-col gap-2 bui-template-panel min-w-0 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4 @3xl:col-span-2">
               <div className="flex items-center justify-between">
                 <span className="text-body-2-medium text-text-primary">收入趋势</span>
                 <span className="text-caption-2-regular text-text-tertiary">近 12 周</span>
@@ -83,7 +83,7 @@ export function DashboardTemplate() {
               <AreaChart data={REVENUE} height={140} gradientId="dash-revenue" />
             </div>
 
-            <div className="flex flex-col items-center justify-center gap-2 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
+            <div className="flex flex-col items-center justify-center gap-2 bui-template-panel min-w-0 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
               <span className="self-start text-body-2-medium text-text-primary">目标完成度</span>
               <RadialChart value={72} size={100} label="72%" />
               <span className="text-caption-2-regular text-text-tertiary">距年终目标还差 ¥32,000</span>
@@ -91,8 +91,8 @@ export function DashboardTemplate() {
           </div>
 
           {/* 渠道 + 热力图 */}
-          <div className="grid grid-cols-1 gap-2 lg:grid-cols-2">
-            <div className="flex flex-col gap-2 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
+          <div className="grid min-w-0 grid-cols-1 gap-3 @2xl:grid-cols-2">
+            <div className="flex flex-col gap-2 bui-template-panel min-w-0 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
               <span className="text-body-2-medium text-text-primary">流量来源</span>
               <BarList
                 items={[
@@ -104,7 +104,7 @@ export function DashboardTemplate() {
               />
             </div>
 
-            <div className="flex flex-col gap-2 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
+            <div className="flex flex-col gap-2 bui-template-panel min-w-0 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
               <div className="flex items-center justify-between">
                 <span className="text-body-2-medium text-text-primary">活跃热力图</span>
                 <span className="text-caption-2-regular text-text-tertiary">近 20 周</span>
@@ -123,7 +123,7 @@ export function DashboardTemplate() {
           </div>
 
           {/* 最近订单 */}
-          <div className="flex flex-col gap-2 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
+          <div className="flex flex-col gap-2 bui-template-panel min-w-0 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
             <div className="flex items-center justify-between">
               <span className="text-body-2-medium text-text-primary">最近订单</span>
               <div className="flex items-center gap-2">
@@ -131,7 +131,7 @@ export function DashboardTemplate() {
                 <Button size="sm" variant="ghost" onPress={()=>setCount(ORDERS.length)}>查看全部</Button>
               </div>
             </div>
-            <div className="overflow-x-auto">
+            <div className="min-w-0 overflow-x-auto overscroll-x-contain">
               <table className="bui-table bui-table-sm">
                 <thead>
                   <tr className="text-caption-1-semibold text-text-secondary">

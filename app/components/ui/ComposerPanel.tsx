@@ -26,7 +26,7 @@ export function ComposerPanel({
   return (
     <div
       className={cn(
-        "flex w-full flex-col overflow-hidden rounded-2lg border border-border-button-default",
+        "flex w-full flex-col overflow-hidden rounded-2xl border border-border-component-detail-container",
         "bg-background-secondary-default",
         className
       )}

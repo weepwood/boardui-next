@@ -85,11 +85,11 @@ export function AgentComposer({
         <form
           onSubmit={submit}
           className={cx(
-            "flex h-[52px] w-full items-center gap-2.5 rounded-full p-2",
+            "flex h-[52px] w-full items-center gap-2.5 rounded-full p-2 transition-shadow duration-150 motion-reduce:transition-none",
             // ComposerLoader paints its own pill surface and runs the light
             // behind its children, so an opaque form would cover the light
             // entirely. While busy the form steps aside and lets it show.
-            busy ? "bg-transparent" : "bg-background-primary-default shadow-xs",
+            busy ? "bg-transparent" : "bg-background-primary-default shadow-xs ring-1 ring-inset ring-border-button-default focus-within:ring-border-button-active",
           )}
         >
           {/* Attachment slot. Plain on purpose — the plugin panel behind this
@@ -148,7 +148,7 @@ export function AgentComposer({
                 type="submit"
                 aria-label="发送消息"
                 disabled={value.trim().length === 0}
-                className="flex size-9 cursor-pointer items-center justify-center rounded-full bg-button-primary text-white transition-opacity disabled:cursor-not-allowed disabled:opacity-40"
+                className="flex size-9 cursor-pointer items-center justify-center rounded-full bg-button-primary text-white transition-opacity focus-visible:ring-2 focus-visible:ring-border-focus-ring disabled:cursor-not-allowed disabled:opacity-40"
               >
                 <RiArrowUpLine className="size-5" aria-hidden />
               </button>

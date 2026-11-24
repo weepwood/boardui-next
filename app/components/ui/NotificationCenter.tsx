@@ -38,9 +38,9 @@ export function NotificationCenter({
         className
       )}
     >
-      <div className="flex items-center justify-between gap-2 border-b border-separator-border px-3 py-2">
+      <div className="flex items-center justify-between gap-2 border-b border-separator-border px-4 py-3">
         <div className="flex items-center gap-1.5">
-          <span className="text-body-2-medium text-text-primary">通知</span>
+          <span className="text-headline-medium text-text-primary">通知</span>
           {unread > 0 && (
             <span className="rounded-full bg-accent-500 px-1.5 text-[10px] font-medium text-white">
               {unread}
@@ -51,7 +51,7 @@ export function NotificationCenter({
           <button
             type="button"
             onClick={() => setItems((p) => p.map((i) => ({ ...i, unread: false })))}
-            className="cursor-pointer rounded px-1.5 py-0.5 text-[10px] text-text-tertiary hover:bg-background-secondary-hover hover:text-text-primary"
+            className="cursor-pointer rounded px-1.5 py-0.5 text-caption-2-regular text-text-secondary hover:bg-background-secondary-hover hover:text-text-primary"
           >
             全部已读
           </button>
@@ -111,7 +111,7 @@ export function NotificationCenter({
                 <span className="line-clamp-2 text-[10px] leading-snug text-text-tertiary">
                   {n.body}
                 </span>
-                <span className="text-[10px] text-text-tertiary">{n.time}</span>
+                <span className="text-caption-2-regular text-text-secondary">{n.time}</span>
               </div>
             </button>
           ))

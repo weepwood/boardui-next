@@ -65,12 +65,12 @@ export function CalendarTemplate() {
   const now=new Date();const today=now.getFullYear()===cursor.year&&now.getMonth()===cursor.month?now.getDate():0;
 
   return (
-    <div className="flex min-h-[620px] w-full flex-col overflow-hidden rounded-3xl border border-border-button-default bg-background-primary-default shadow-sidebar lg:flex-row">
+    <div className="flex min-h-[620px] w-full flex-col overflow-hidden bui-template-shell rounded-3xl border border-border-component-detail-container bg-background-full  @3xl:flex-row">
       {/* 日历主体 */}
       <div className="flex min-w-0 flex-1 flex-col">
         <header className="flex flex-wrap items-center justify-between gap-2 border-b border-separator-border px-4 py-3">
           <div className="flex items-center gap-2">
-            <h3 className="text-title-3-semibold text-text-primary">{month}</h3>
+            <h3 className="text-headline-medium text-text-primary">{month}</h3>
             <span className="text-caption-1-regular text-text-tertiary">{monthEvents.length} 个日程 · 示例</span>
           </div>
           <div className="flex items-center gap-1">
@@ -110,13 +110,13 @@ export function CalendarTemplate() {
         </div>
 
         {/* 日期网格 */}
-        <div className="grid flex-1 grid-cols-7 auto-rows-fr min-w-0">
+        <div className="grid min-w-0 flex-1 grid-cols-7 auto-rows-fr">
           {cells.map((day, i) => {
             if (day === null) {
               return (
                 <div
                   key={`e${i}`}
-                  className="min-h-[84px] border-b border-e border-separator-border bg-background-secondary-default/40"
+                  className="min-h-[52px] @lg:min-h-[84px] border-b border-e border-separator-border bg-background-secondary-default/40"
                 />
               );
             }
@@ -129,7 +129,7 @@ export function CalendarTemplate() {
                 type="button"
                 onClick={() => setSelected(day)} aria-label={month+day+"日"} aria-pressed={isSel}
                 className={cn(
-                  "flex min-w-0 min-h-[84px] cursor-pointer flex-col gap-1 border-b border-e border-separator-border p-1.5 text-start",
+                  "flex min-w-0 min-h-[52px] @lg:min-h-[84px] cursor-pointer flex-col gap-1 border-b border-e border-separator-border p-1.5 text-start",
                   "transition-colors duration-150 ease-out",
                   isSel ? "bg-badge-new-background" : "hover:bg-background-secondary-hover"
                 )}
@@ -158,7 +158,7 @@ export function CalendarTemplate() {
                     </span>
                   ))}
                   {evs.length > 2 && (
-                    <span className="px-1 text-[10px] text-text-tertiary">
+                    <span className="truncate px-1 text-caption-2-regular text-text-secondary">
                       +{evs.length - 2} 更多
                     </span>
                   )}
@@ -170,7 +170,7 @@ export function CalendarTemplate() {
       </div>
 
       {/* 侧栏日程 */}
-      <aside className="flex w-full shrink-0 flex-col gap-3 border-t border-separator-border p-4 lg:w-[240px] lg:border-s lg:border-t-0">
+      <aside className="flex w-full shrink-0 flex-col gap-3 border-t border-separator-border p-4 @3xl:w-[240px] @3xl:border-s @3xl:border-t-0">
         <div className="flex flex-col gap-0.5">
           <span className="text-body-2-medium text-text-primary">{cursor.month+1}月{selected}日</span>
           <span className="text-caption-2-regular text-text-tertiary">

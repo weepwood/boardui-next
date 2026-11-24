@@ -49,9 +49,9 @@ export function AiImageTemplate() {
   };
 
   return (
-    <div className="flex min-h-[640px] w-full flex-col overflow-hidden rounded-3xl border border-border-button-default bg-background-primary-default shadow-sidebar lg:flex-row">
+    <div className="flex min-h-[640px] w-full flex-col overflow-hidden bui-template-shell rounded-3xl border border-border-component-detail-container bg-background-full  @3xl:flex-row">
       {/* 控制面板 */}
-      <aside className="flex w-full shrink-0 flex-col gap-3 border-b border-separator-border p-4 lg:w-[280px] lg:border-b-0 lg:border-e">
+      <aside className="flex w-full shrink-0 flex-col gap-3 border-b border-separator-border bg-background-secondary-default p-4 @3xl:w-[280px] @3xl:border-b-0 @3xl:border-e">
         <div className="flex items-center gap-2">
           <span className="flex size-7 items-center justify-center rounded-lg bg-[linear-gradient(135deg,#a855f7,#6366f1)] text-white">
             <Icon name="magic-line" className="size-4" />
@@ -94,7 +94,7 @@ export function AiImageTemplate() {
 
       {/* 结果区 */}
       <div className="flex min-w-0 flex-1 flex-col">
-        <header className="flex items-center justify-between gap-2 border-b border-separator-border px-4 py-2.5">
+        <header className="flex flex-wrap items-center justify-between gap-2 border-b border-separator-border px-4 py-2.5">
           <span className="text-body-2-medium text-text-primary">渐变样例 · {preview.ratio}</span>
           <div className="flex items-center gap-1">
             <Button size="sm" variant="ghost" onPress={()=>save(RESULTS[0])} leading={<Icon name="download-line" className="size-3.5" />}>
@@ -104,7 +104,7 @@ export function AiImageTemplate() {
         </header>
 
         <p className="px-4 pt-3 text-body-2-regular text-text-secondary break-words">{preview.prompt} · {STYLES.find(s=>s.id===preview.style)?.label}</p>
-        <div className="grid flex-1 grid-cols-1 items-start gap-3 p-3 sm:grid-cols-2">
+        <div className="grid flex-1 grid-cols-1 items-start gap-3 p-3 @sm:grid-cols-2">
           {RESULTS.map((r) => (
                 <div
                   key={r.id}

@@ -48,7 +48,7 @@ export function AuthCard({ className }: { className?: string }) {
 
       <div className="flex items-center gap-2">
         <Separator className="h-px flex-1 bg-separator-border" />
-        <span className="text-[10px] text-text-tertiary">或</span>
+        <span className="text-caption-2-regular text-text-secondary">或</span>
         <Separator className="h-px flex-1 bg-separator-border" />
       </div>
 

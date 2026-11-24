@@ -40,18 +40,18 @@ export function AgentCreator({
   return (
     <div
       className={cn(
-        "flex w-full flex-col gap-3 rounded-2lg border border-border-button-default",
+        "flex w-full flex-col gap-3 rounded-2xl border border-border-component-detail-container",
         "bg-background-primary-default p-4 shadow-card",
         className
       )}
     >
       <div className="flex items-center gap-2">
-        <span className="flex size-8 items-center justify-center rounded-lg bg-[linear-gradient(135deg,#a855f7,#6366f1)] text-white">
+        <span className="flex size-8 items-center justify-center rounded-lg bg-background-tertiary-default text-foreground-icon-secondary">
           <Icon name="robot-2-line" className="size-4" />
         </span>
         <div className="flex flex-col">
           <span className="text-body-2-medium text-text-primary">创建智能体</span>
-          <span className="text-[10px] text-text-tertiary">配置名称、角色与能力</span>
+          <span className="text-caption-2-regular text-text-secondary">配置名称、角色与能力</span>
         </div>
       </div>
 
@@ -96,7 +96,7 @@ export function AgentCreator({
       </Switch>
 
       <div className="flex items-center justify-between gap-2 border-t border-separator-border pt-3">
-        <span className="text-[10px] text-text-tertiary">
+        <span className="text-caption-2-regular text-text-secondary">
           已选 {caps.length} 项能力 · 模型 {MODELS.find((m) => m.id === model)?.label}
         </span>
         <Button size="sm" onClick={() => onSubmit?.({ name, role })}>

@@ -485,6 +485,26 @@ try{
           await dialog.waitFor({state:'hidden'});
           await page.waitForFunction(e=>document.activeElement===e,await trigger.elementHandle());
         }
+        if(route==='/zh-hans/components/settings-modal/'){
+          const trigger=page.locator('#preview').getByRole('button',{name:'打开设置'});
+          await trigger.click();
+          const dialog=page.getByRole('dialog',{name:'设置',exact:true});
+          await dialog.waitFor();
+          await dialog.getByRole('button',{name:'外观',exact:true}).click();
+          assert.equal(await dialog.getByRole('button',{name:'外观',exact:true}).getAttribute('aria-pressed'),'true');
+          assert.equal(await dialog.getByRole('button',{name:'通用',exact:true}).getAttribute('aria-pressed'),'false');
+          await page.keyboard.press('Escape');
+          await dialog.waitFor({state:'hidden'});
+          await page.waitForFunction(e=>document.activeElement===e,await trigger.elementHandle());
+          await page.setViewportSize({width:390,height:844});
+          try{
+            await trigger.click();
+            await dialog.waitFor();
+            assert.ok(await dialog.evaluate(e=>{const r=e.getBoundingClientRect();return r.left>=0&&r.right<=innerWidth&&r.top>=0&&r.bottom<=innerHeight}));
+            await dialog.getByRole('button',{name:'关闭',exact:true}).click();
+            await dialog.waitFor({state:'hidden'});
+          }finally{await page.setViewportSize({width:1440,height:1000});}
+        }
         if(route==='/zh-hans/components/drawer/'){
           await page.getByRole('button',{name:'打开抽屉'}).click();
           const dialog=page.getByRole('dialog',{name:'项目设置'});

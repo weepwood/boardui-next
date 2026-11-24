@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { createPortal } from "react-dom";
+import {ModalOverlay,Modal,Dialog} from "react-aria-components";
+import {MODAL_BACKDROP,MODAL_MOTION,MODAL_SURFACE} from "@/packages/react/overlay-styles";
 import { cn } from "@/lib/utils";
 import { Icon } from "./Icon";
 import { Switch } from "./Switch";
@@ -30,38 +31,23 @@ export function SettingsModal({
   const [s2, setS2] = useState(false);
   const [lang, setLang] = useState("zh");
 
-  if (!isOpen || typeof document === "undefined") return null;
-
-  return createPortal(
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-      <div
-        className="absolute inset-0 bg-black/40 animate-[fade-in_180ms_ease-out]"
-        onClick={onClose}
-        aria-hidden="true"
-      />
-      <div
-        role="dialog"
-        aria-modal="true"
-        aria-label="设置"
-        className={cn(
-          "relative z-10 flex h-[420px] w-[min(620px,calc(100vw-2rem))] overflow-hidden rounded-3xl",
-          "border border-border-button-default bg-background-full shadow-lg",
-          "animate-[modal-in_220ms_cubic-bezier(0.22,1,0.36,1)]"
-        )}
-      >
-        <aside className="flex w-[150px] shrink-0 flex-col gap-0.5 border-e border-separator-border bg-background-secondary-default p-2">
-          <div className="px-2 py-1.5 text-body-2-medium text-text-primary">设置</div>
+  return (
+    <ModalOverlay isOpen={isOpen} onOpenChange={open=>{if(!open)onClose()}} isDismissable className={cn(MODAL_BACKDROP,"flex items-center justify-center p-4")}>
+      <Modal className={cn("w-[min(640px,calc(100vw-2rem))] outline-none",MODAL_MOTION)}>
+      <Dialog aria-label="设置" className={cn(MODAL_SURFACE,"flex h-[min(460px,calc(100dvh-2rem))] min-w-0 flex-col overflow-hidden outline-none sm:flex-row")}>
+        <aside className="flex shrink-0 flex-wrap gap-1 border-b border-separator-border bg-background-secondary-default p-3 sm:w-[156px] sm:flex-col sm:border-b-0 sm:border-e">
+          <div className="hidden px-2 py-1.5 text-body-medium text-text-primary sm:block">设置</div>
           {NAV.map((n) => (
             <button
               key={n.id}
               type="button"
-              onClick={() => setTab(n.id)}
+              onClick={() => setTab(n.id)} aria-pressed={tab===n.id}
               className={cn(
-                "flex items-center gap-2 rounded-md px-2 py-1.5 text-start text-body-2-medium",
+                "flex items-center gap-2 rounded-2lg px-2.5 py-2 text-start text-body-medium",
                 "transition-colors duration-150 ease-out",
                 tab === n.id
                   ? "bg-background-primary-default text-text-primary shadow-xs"
-                  : "text-text-secondary hover:text-text-primary"
+                  : "text-text-secondary hover:bg-background-secondary-hover hover:text-text-primary"
               )}
             >
               <Icon name={n.icon} className="size-3.5 shrink-0" />
@@ -70,15 +56,15 @@ export function SettingsModal({
           ))}
         </aside>
 
-        <div className="flex min-w-0 flex-1 flex-col">
+        <div className="flex min-h-0 min-w-0 flex-1 flex-col">
           <div className="flex items-center justify-between border-b border-separator-border px-4 py-2.5">
             <span className="text-body-2-medium text-text-primary">
               {NAV.find((n) => n.id === tab)?.label}
             </span>
-            <CloseButton onClick={onClose} />
+            <CloseButton aria-label="关闭" onClick={onClose} />
           </div>
 
-          <div className="flex flex-1 flex-col gap-4 overflow-y-auto p-4">
+          <div className="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto overscroll-contain p-5">
             {tab === "general" && (
               <>
                 <Select
@@ -128,8 +114,7 @@ export function SettingsModal({
             )}
           </div>
         </div>
-      </div>
-    </div>,
-    document.body
+      </Dialog></Modal>
+    </ModalOverlay>
   );
 }

@@ -24,10 +24,10 @@ export function FinanceTemplate() {
   const [range, setRange] = useState<"月" | "季" | "年">("月");
 
   return (
-    <div className="flex min-h-[680px] w-full flex-col overflow-hidden rounded-3xl border border-border-button-default bg-background-primary-default shadow-sidebar">
+    <div className="flex min-h-[680px] w-full flex-col overflow-hidden bui-template-shell rounded-3xl border border-border-component-detail-container bg-background-full">
       <header className="flex flex-wrap items-center justify-between gap-2 border-b border-separator-border px-4 py-3">
         <div className="flex flex-col gap-0.5">
-          <h3 className="text-title-3-semibold text-text-primary">财务</h3>
+          <h3 className="text-headline-medium text-text-primary">财务</h3>
           <span className="text-caption-2-regular text-text-tertiary">2026 财年 · 示例数据</span>
         </div>
         <div className="flex items-center gap-2">
@@ -39,15 +39,15 @@ export function FinanceTemplate() {
       </header>
 
       <div className="flex flex-col gap-3 p-4">
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="grid min-w-0 grid-cols-1 gap-3 @sm:grid-cols-2 @3xl:grid-cols-4">
           <StatCard label="营业收入" value="¥2,486,320" delta="+18.4%" trend="up" icon="line-chart-line" spark={CASH_FLOW} />
           <StatCard label="运营支出" value="¥1,142,800" delta="+6.2%" trend="up" icon="wallet-3-line" spark={[30, 32, 31, 36, 34, 38, 40]} />
           <StatCard label="净利润" value="¥1,343,520" delta="+21.7%" trend="up" icon="money-dollar-circle-line" spark={[20, 24, 26, 28, 32, 36, 42]} />
           <StatCard label="应收账款" value="¥384,200" delta="-4.1%" trend="down" icon="file-list-3-line" spark={[45, 43, 44, 41, 40, 38, 36]} />
         </div>
 
-        <div className="grid grid-cols-1 gap-2 lg:grid-cols-3">
-          <div className="flex flex-col gap-2 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4 lg:col-span-2">
+        <div className="grid min-w-0 grid-cols-1 gap-3 @3xl:grid-cols-3">
+          <div className="flex flex-col gap-2 bui-template-panel min-w-0 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4 @3xl:col-span-2">
             <div className="flex items-center justify-between">
               <span className="text-body-2-medium text-text-primary">现金流趋势</span>
               <span className="text-caption-2-regular text-text-tertiary">{range==="月"?"月度样本":range==="季"?"季度样本":"年度样本"}</span>
@@ -55,15 +55,15 @@ export function FinanceTemplate() {
             <AreaChart data={range==="月"?CASH_FLOW.slice(-4):range==="季"?CASH_FLOW.filter((_,i)=>i%3===2):CASH_FLOW} height={150} gradientId="fin-cash" />
           </div>
 
-          <div className="flex flex-col items-center justify-center gap-2 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
+          <div className="flex flex-col items-center justify-center gap-2 bui-template-panel min-w-0 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
             <span className="self-start text-body-2-medium text-text-primary">毛利率</span>
             <RadialChart value={54} size={110} label="54%" color="var(--color-lime-500)" />
             <span className="text-caption-2-regular text-text-tertiary">行业平均 42%</span>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-2 lg:grid-cols-2">
-          <div className="flex flex-col gap-2 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
+        <div className="grid min-w-0 grid-cols-1 gap-3 @2xl:grid-cols-2">
+          <div className="flex flex-col gap-2 bui-template-panel min-w-0 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
             <span className="text-body-2-medium text-text-primary">月度收支</span>
             <BarChart data={[62, 48, 71, 55, 80, 63, 88, 72]} height={130} />
             <div className="flex items-center gap-3 text-caption-2-regular text-text-tertiary">
@@ -75,7 +75,7 @@ export function FinanceTemplate() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-2 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
+          <div className="flex flex-col gap-2 bui-template-panel min-w-0 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
             <span className="text-body-2-medium text-text-primary">支出结构</span>
             <BarList
               items={[
@@ -89,12 +89,12 @@ export function FinanceTemplate() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-2 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
+        <div className="flex flex-col gap-2 bui-template-panel min-w-0 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4">
           <div className="flex items-center justify-between">
             <span className="text-body-2-medium text-text-primary">交易明细</span>
             <DemoNotice/>
           </div>
-          <div className="overflow-x-auto">
+          <div className="min-w-0 overflow-x-auto overscroll-x-contain">
             <table className="bui-table bui-table-sm">
               <thead>
                 <tr className="text-caption-1-semibold text-text-secondary">
