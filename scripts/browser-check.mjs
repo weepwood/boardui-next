@@ -54,7 +54,7 @@ try{
           assert.equal(await card.evaluate(e=>getComputedStyle(e).borderRadius),'28px');
           assert.equal(await card.locator(':scope > div').first().evaluate(e=>e.getBoundingClientRect().height),197);
         }
-        assert.equal(await page.locator('[data-icon-fallback="true"]').count(),0,'unknown SVG name on '+route);
+        assert.deepEqual(await page.locator('[data-icon-fallback="true"]').evaluateAll(es=>es.map(e=>e.getAttribute('data-icon'))),[],'unknown SVG name on '+route);
         if(route==='/zh-hans/components/button/'){
           const svg=page.locator('main svg[data-icon]');
           assert.ok(await svg.count()>0,'shared SVG icons rendered');

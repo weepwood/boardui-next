@@ -3,7 +3,8 @@ import { readFileSync, writeFileSync } from "node:fs";
 import * as icons from "@remixicon/react";
 const aliases={"calendar-blank-line":"RiCalendarLine","calendar-week-line":"RiCalendarScheduleLine"};
 const directional=["arrow-left-line","arrow-left-s-line","arrow-right-line","arrow-right-s-line","sidebar-fold-line","sidebar-unfold-line"];
-const names=new Set([...directional,"question-line"]);
+// Remix has several glyphs without the usual line/fill suffix.
+const names=new Set([...directional,"question-line","translate-2","list-check","list-unordered","attachment-2"]);
 const files=execFileSync("git",["ls-files","app","lib","packages"],{encoding:"utf8"}).trim().split("\n").filter(f=>/\.[jt]sx?$/.test(f)&&!f.endsWith("/icon-registry.ts"));
 for(const file of files)for(const m of readFileSync(file,"utf8").matchAll(/["']([a-z0-9]+(?:-[a-z0-9]+)*-(?:line|fill))["']/g))names.add(m[1]);
 const entries=[...names].sort().map(name=>[name,aliases[name]??"Ri"+name.split("-").map(s=>s[0].toUpperCase()+s.slice(1)).join("")]);
