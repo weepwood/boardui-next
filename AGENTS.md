@@ -141,3 +141,9 @@
 - 最终本地 Edge：22/22 页面主题专项、14/14 触摸/交互态、20/20 双主题双视口布局与截图；120 静态 HTML，最大 gzip JS 506471B、HTML 26491B，模板目录 253422B；类型检查通过。初次候选单测通过，最终 CI 尚待执行。证据 reference/evidence/orders-workspace-polish-20261124.json 与六张代表实际截图；复现 node scripts/audit-workspace-visual.mjs [输出目录]（Playwright，可设 BROWSER_EXECUTABLE）。
 - 实际截图仍显示深色次级文字/去年柱对比偏弱；应先测量具体对比度再做令牌兼容治理，不擅自整体改色。正式三浏览器、RTL、人工无障碍和五维门禁不变。
 - #33 run 45412098773：Xvfb Firefox hover 不再报错，浅色 Button 页目录跳转超时。目录显式锚点意图不再被延迟布局的 IntersectionObserver 竞争覆盖，用户主动滚动后恢复跟踪；细分 hash/选中断言，保留测试严格性。新 CI 待验证根因。
+
+### 语义颜色可读性专项（2026-11-24）
+
+- #35 f585bc1 原 CI 45412923661 全部通过；依赖 #33 的新锚点修复后已同步 5dccdf5，不能将旧 CI 当作最新通过。
+- 实际浏览器测量：浅色三级文字/白背景 2.58→4.90；深色次级文字/主卡片 3.19→7.22，三级文字 1.94→5.86；深色中性数据柱/图表背景 1.18→3.78。14/14 语义组合达到设定阈值；保留原始 upstream/theme.css、原版强调色与表面层级。仅局部令牌验收，不代表整站 WCAG 合规。
+- 本地类型、单元测试、120 静态页与资源预算通过，20/20 双主题双视口布局检查通过。四张实际截图及报告见 reference/evidence/semantic-contrast-20261124.json；新增 scripts/audit-contrast.mjs 至风险 CI。需检查最新 CI、正式三浏览器及人工无障碍，五维门禁不变。

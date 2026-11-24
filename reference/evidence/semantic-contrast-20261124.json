@@ -1,0 +1,611 @@
+{
+  "base": "5dccdf5",
+  "browser": "Microsoft Edge (Chromium), macOS",
+  "method": "浏览器实际解析 CSS 颜色并转换到 sRGB，通过 WCAG 相对亮度公式计算不透明语义令牌组合；非全站逐像素/透明混合/无障碍验收",
+  "before": [
+    {
+      "theme": "light",
+      "values": [
+        {
+          "fg": "text-secondary",
+          "bg": "background-full",
+          "foreground": [
+            115,
+            115,
+            115
+          ],
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 4.74,
+          "target": 4.5
+        },
+        {
+          "fg": "text-secondary",
+          "bg": "background-primary-default",
+          "foreground": [
+            115,
+            115,
+            115
+          ],
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 4.74,
+          "target": 4.5
+        },
+        {
+          "fg": "text-secondary",
+          "bg": "background-secondary-default",
+          "foreground": [
+            115,
+            115,
+            115
+          ],
+          "background": [
+            247,
+            247,
+            247
+          ],
+          "ratio": 4.43,
+          "target": 4.5
+        },
+        {
+          "fg": "text-tertiary",
+          "bg": "background-full",
+          "foreground": [
+            161,
+            161,
+            161
+          ],
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 2.58,
+          "target": 4.5
+        },
+        {
+          "fg": "text-tertiary",
+          "bg": "background-primary-default",
+          "foreground": [
+            161,
+            161,
+            161
+          ],
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 2.58,
+          "target": 4.5
+        },
+        {
+          "fg": "text-tertiary",
+          "bg": "background-secondary-default",
+          "foreground": [
+            161,
+            161,
+            161
+          ],
+          "background": [
+            247,
+            247,
+            247
+          ],
+          "ratio": 2.41,
+          "target": 4.5
+        },
+        {
+          "fg": "chart-neutral",
+          "bg": "background-secondary-default",
+          "foreground": [
+            212,
+            212,
+            212
+          ],
+          "background": [
+            247,
+            247,
+            247
+          ],
+          "ratio": 1.38,
+          "target": 3
+        }
+      ]
+    },
+    {
+      "theme": "dark",
+      "values": [
+        {
+          "fg": "text-secondary",
+          "bg": "background-full",
+          "foreground": [
+            115,
+            115,
+            115
+          ],
+          "background": [
+            18,
+            18,
+            18
+          ],
+          "ratio": 3.95,
+          "target": 4.5
+        },
+        {
+          "fg": "text-secondary",
+          "bg": "background-primary-default",
+          "foreground": [
+            115,
+            115,
+            115
+          ],
+          "background": [
+            38,
+            38,
+            38
+          ],
+          "ratio": 3.19,
+          "target": 4.5
+        },
+        {
+          "fg": "text-secondary",
+          "bg": "background-secondary-default",
+          "foreground": [
+            115,
+            115,
+            115
+          ],
+          "background": [
+            23,
+            23,
+            23
+          ],
+          "ratio": 3.78,
+          "target": 4.5
+        },
+        {
+          "fg": "text-tertiary",
+          "bg": "background-full",
+          "foreground": [
+            82,
+            82,
+            82
+          ],
+          "background": [
+            18,
+            18,
+            18
+          ],
+          "ratio": 2.4,
+          "target": 4.5
+        },
+        {
+          "fg": "text-tertiary",
+          "bg": "background-primary-default",
+          "foreground": [
+            82,
+            82,
+            82
+          ],
+          "background": [
+            38,
+            38,
+            38
+          ],
+          "ratio": 1.94,
+          "target": 4.5
+        },
+        {
+          "fg": "text-tertiary",
+          "bg": "background-secondary-default",
+          "foreground": [
+            82,
+            82,
+            82
+          ],
+          "background": [
+            23,
+            23,
+            23
+          ],
+          "ratio": 2.29,
+          "target": 4.5
+        },
+        {
+          "fg": "chart-neutral",
+          "bg": "background-secondary-default",
+          "foreground": [
+            38,
+            38,
+            38
+          ],
+          "background": [
+            23,
+            23,
+            23
+          ],
+          "ratio": 1.18,
+          "target": 3
+        }
+      ]
+    }
+  ],
+  "after": [
+    {
+      "theme": "light",
+      "values": [
+        {
+          "fg": "text-secondary",
+          "bg": "background-full",
+          "foreground": [
+            104,
+            104,
+            104
+          ],
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 5.572313328732911,
+          "target": 4.5
+        },
+        {
+          "fg": "text-secondary",
+          "bg": "background-primary-default",
+          "foreground": [
+            104,
+            104,
+            104
+          ],
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 5.572313328732911,
+          "target": 4.5
+        },
+        {
+          "fg": "text-secondary",
+          "bg": "background-secondary-default",
+          "foreground": [
+            104,
+            104,
+            104
+          ],
+          "background": [
+            247,
+            247,
+            247
+          ],
+          "ratio": 5.201414095010693,
+          "target": 4.5
+        },
+        {
+          "fg": "text-tertiary",
+          "bg": "background-full",
+          "foreground": [
+            112,
+            113,
+            113
+          ],
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 4.895731749357144,
+          "target": 4.5
+        },
+        {
+          "fg": "text-tertiary",
+          "bg": "background-primary-default",
+          "foreground": [
+            112,
+            113,
+            113
+          ],
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 4.895731749357144,
+          "target": 4.5
+        },
+        {
+          "fg": "text-tertiary",
+          "bg": "background-secondary-default",
+          "foreground": [
+            112,
+            113,
+            113
+          ],
+          "background": [
+            247,
+            247,
+            247
+          ],
+          "ratio": 4.56986652117928,
+          "target": 4.5
+        },
+        {
+          "fg": "chart-neutral",
+          "bg": "background-secondary-default",
+          "foreground": [
+            138,
+            138,
+            138
+          ],
+          "background": [
+            247,
+            247,
+            247
+          ],
+          "ratio": 3.2224366579878145,
+          "target": 3
+        }
+      ]
+    },
+    {
+      "theme": "dark",
+      "values": [
+        {
+          "fg": "text-secondary",
+          "bg": "background-full",
+          "foreground": [
+            179,
+            179,
+            179
+          ],
+          "background": [
+            18,
+            18,
+            18
+          ],
+          "ratio": 8.934811945754518,
+          "target": 4.5
+        },
+        {
+          "fg": "text-secondary",
+          "bg": "background-primary-default",
+          "foreground": [
+            179,
+            179,
+            179
+          ],
+          "background": [
+            38,
+            38,
+            38
+          ],
+          "ratio": 7.2177679734630455,
+          "target": 4.5
+        },
+        {
+          "fg": "text-secondary",
+          "bg": "background-secondary-default",
+          "foreground": [
+            179,
+            179,
+            179
+          ],
+          "background": [
+            23,
+            23,
+            23
+          ],
+          "ratio": 8.55048334829623,
+          "target": 4.5
+        },
+        {
+          "fg": "text-tertiary",
+          "bg": "background-full",
+          "foreground": [
+            161,
+            161,
+            161
+          ],
+          "background": [
+            18,
+            18,
+            18
+          ],
+          "ratio": 7.250822581448056,
+          "target": 4.5
+        },
+        {
+          "fg": "text-tertiary",
+          "bg": "background-primary-default",
+          "foreground": [
+            161,
+            161,
+            161
+          ],
+          "background": [
+            38,
+            38,
+            38
+          ],
+          "ratio": 5.857398603056878,
+          "target": 4.5
+        },
+        {
+          "fg": "text-tertiary",
+          "bg": "background-secondary-default",
+          "foreground": [
+            161,
+            161,
+            161
+          ],
+          "background": [
+            23,
+            23,
+            23
+          ],
+          "ratio": 6.938930345767489,
+          "target": 4.5
+        },
+        {
+          "fg": "chart-neutral",
+          "bg": "background-secondary-default",
+          "foreground": [
+            115,
+            115,
+            115
+          ],
+          "background": [
+            23,
+            23,
+            23
+          ],
+          "ratio": 3.7809149327548917,
+          "target": 3
+        }
+      ]
+    }
+  ],
+  "visual": [
+    {
+      "theme": "light",
+      "width": 1440,
+      "route": "/zh-hans/components/orders-chart-card/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "route": "/workspace/dashboard/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "route": "/workspace/finance/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "route": "/workspace/project-board/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "route": "/workspace/ai-chat/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "route": "/zh-hans/components/orders-chart-card/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "route": "/workspace/dashboard/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "route": "/workspace/finance/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "route": "/workspace/project-board/",
+      "status": "passed"
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "route": "/workspace/ai-chat/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "route": "/zh-hans/components/orders-chart-card/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "route": "/workspace/dashboard/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "route": "/workspace/finance/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "route": "/workspace/project-board/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "route": "/workspace/ai-chat/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "route": "/zh-hans/components/orders-chart-card/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "route": "/workspace/dashboard/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "route": "/workspace/finance/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "route": "/workspace/project-board/",
+      "status": "passed"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "route": "/workspace/ai-chat/",
+      "status": "passed"
+    }
+  ],
+  "screenshots": [
+    "reference/evidence/screenshots/20261124-semantic-contrast/dark-1440-_zh-hans_components_orders-chart-card_active.jpg",
+    "reference/evidence/screenshots/20261124-semantic-contrast/light-1440-_zh-hans_components_orders-chart-card_active.jpg",
+    "reference/evidence/screenshots/20261124-semantic-contrast/dark-1440-_workspace_finance_.jpg",
+    "reference/evidence/screenshots/20261124-semantic-contrast/light-1440-_workspace_dashboard_.jpg"
+  ],
+  "export": {
+    "pages": 120,
+    "maxGzipJs": 506720,
+    "maxGzipHtml": 26497,
+    "templateCatalogGzipJs": 253671
+  }
+}
