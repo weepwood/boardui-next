@@ -57,6 +57,26 @@ try{
         }
         assert.deepEqual(await page.locator('[data-icon-fallback="true"]').evaluateAll(es=>es.map(e=>e.getAttribute('data-icon'))),[],'unknown SVG name on '+route);
         if(route==='/zh-hans/components/button/'){
+          const api=page.locator('#api');
+          await api.getByRole('heading',{name:'组件 API'}).waitFor();
+          assert.ok(await api.getByRole('table',{name:'Button 属性'}).count());
+          const mobile=await context.newPage();
+          try{
+            await mobile.setViewportSize({width:390,height:844});
+            await mobile.goto(origin+route,{waitUntil:'networkidle'});
+            assert.ok(await mobile.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'mobile horizontal overflow');
+            const trigger=mobile.getByRole('button',{name:'打开文档导航'});
+            await trigger.click();
+            const navigation=mobile.getByRole('dialog',{name:'文档导航'});
+            await navigation.waitFor();
+            await mobile.keyboard.press('Escape');
+            await navigation.waitFor({state:'hidden'});
+            await trigger.click();
+            await navigation.getByRole('link',{name:'输入框',exact:true}).click();
+            await mobile.waitForURL(/components\/input\/?$/);
+            await navigation.waitFor({state:'hidden'});
+          }finally{await mobile.close();}
+
           const svg=page.locator('main svg[data-icon]');
           assert.ok(await svg.count()>0,'shared SVG icons rendered');
           assert.equal(await page.locator('i[class*="ri-"]').count(),0,'no icon font elements');
@@ -524,6 +544,8 @@ try{
         }
         let violations=[];
         if(full){
+          // Assert selected tab-panel references after the actual DOM has settled.
+          await page.waitForFunction(()=>[...document.querySelectorAll('[role=tab][aria-selected=true][aria-controls]')].every(t=>!!document.getElementById(t.getAttribute('aria-controls'))));
           await page.addScriptTag({path:resolve('node_modules/axe-core/axe.min.js')});
           violations=await page.evaluate(async()=> (await window.axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa']}})).violations.map(v=>({id:v.id,impact:v.impact,nodes:v.nodes.length})));
           await page.screenshot({path:'acceptance/'+theme+'-'+(route.replace(/[^a-z0-9-]/g,'_')||'home')+'.png',animations:'disabled'});

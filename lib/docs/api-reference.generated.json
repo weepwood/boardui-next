@@ -1,0 +1,5090 @@
+{
+  "button": [
+    {
+      "name": "Button",
+      "source": "packages/react/button.tsx",
+      "props": [
+        {
+          "name": "aria-describedby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that describes the object."
+        },
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": true,
+          "description": "Defines a string value that labels the current element."
+        },
+        {
+          "name": "aria-labelledby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that labels the current element."
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "defaultValue",
+          "type": "string | number | readonly string[]",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "iconOnly",
+          "type": "boolean",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "id",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "leadingIcon",
+          "type": "IconComponent",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "onChange",
+          "type": "ChangeEventHandler<HTMLButtonElement, Element>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "onClick",
+          "type": "MouseEventHandler<HTMLButtonElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ref",
+          "type": "Ref<HTMLButtonElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "size",
+          "type": "ButtonSize",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "trailingIcon",
+          "type": "IconComponent",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "type",
+          "type": "\"submit\" | \"reset\" | \"button\"",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "value",
+          "type": "string | number | readonly string[]",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "variant",
+          "type": "ButtonVariant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ButtonLink",
+      "source": "packages/react/button.tsx",
+      "props": [
+        {
+          "name": "aria-describedby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that describes the object."
+        },
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": true,
+          "description": "Defines a string value that labels the current element."
+        },
+        {
+          "name": "aria-labelledby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that labels the current element."
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "defaultValue",
+          "type": "string | number | readonly string[]",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "href",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "iconOnly",
+          "type": "boolean",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "id",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "leadingIcon",
+          "type": "IconComponent",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "onChange",
+          "type": "ChangeEventHandler<HTMLAnchorElement, Element>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "onClick",
+          "type": "MouseEventHandler<HTMLAnchorElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ref",
+          "type": "Ref<HTMLAnchorElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "size",
+          "type": "ButtonSize",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "trailingIcon",
+          "type": "IconComponent",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "type",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "variant",
+          "type": "ButtonVariant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AriaButton",
+      "source": "packages/react/aria-button.tsx",
+      "props": [
+        {
+          "name": "aria-describedby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that describes the object."
+        },
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": true,
+          "description": "Defines a string value that labels the current element."
+        },
+        {
+          "name": "aria-labelledby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that labels the current element."
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "iconOnly",
+          "type": "boolean",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "id",
+          "type": "string",
+          "optional": true,
+          "description": "The element's unique identifier. See\n[MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id)."
+        },
+        {
+          "name": "isDisabled",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the button is disabled."
+        },
+        {
+          "name": "leadingIcon",
+          "type": "IconComponent",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "optional": true,
+          "description": "Submitted as a pair with the button's value as part of the form data."
+        },
+        {
+          "name": "onClick",
+          "type": "((e: MouseEvent<FocusableElement>) => void)",
+          "optional": true,
+          "description": "**Not recommended – use `onPress` instead.** `onClick` is an alias for `onPress`\nprovided for compatibility with other libraries. `onPress` provides\nadditional event details for non-mouse interactions."
+        },
+        {
+          "name": "onPress",
+          "type": "((e: PressEvent) => void)",
+          "optional": true,
+          "description": "Handler that is called when the press is released over the target."
+        },
+        {
+          "name": "ref",
+          "type": "Ref<HTMLButtonElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "size",
+          "type": "ButtonSize",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "trailingIcon",
+          "type": "IconComponent",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "type",
+          "type": "\"submit\" | \"reset\" | \"button\"",
+          "optional": true,
+          "description": "The behavior of the button when used in an HTML form."
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "optional": true,
+          "description": "The value associated with the button's name when it's submitted with the form data."
+        },
+        {
+          "name": "variant",
+          "type": "ButtonVariant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "icon-button": [
+    {
+      "name": "IconButton",
+      "source": "packages/react/icon-button.tsx",
+      "props": [
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": false,
+          "description": "Accessible name — required since there is no visible label."
+        },
+        {
+          "name": "icon",
+          "type": "IconComponent",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "aria-describedby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that describes the object."
+        },
+        {
+          "name": "aria-labelledby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that labels the current element."
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "defaultValue",
+          "type": "string | number | readonly string[]",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "id",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "onChange",
+          "type": "ChangeEventHandler<HTMLButtonElement, Element>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "onClick",
+          "type": "MouseEventHandler<HTMLButtonElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ref",
+          "type": "Ref<HTMLButtonElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "size",
+          "type": "IconButtonSize",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "type",
+          "type": "\"submit\" | \"reset\" | \"button\"",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "value",
+          "type": "string | number | readonly string[]",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "IconLinkButton",
+      "source": "packages/react/icon-button.tsx",
+      "props": [
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": false,
+          "description": "Accessible name — required since there is no visible label."
+        },
+        {
+          "name": "icon",
+          "type": "IconComponent",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "aria-describedby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that describes the object."
+        },
+        {
+          "name": "aria-labelledby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that labels the current element."
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "defaultValue",
+          "type": "string | number | readonly string[]",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "href",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "id",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "onChange",
+          "type": "ChangeEventHandler<HTMLAnchorElement, Element>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "onClick",
+          "type": "MouseEventHandler<HTMLAnchorElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ref",
+          "type": "Ref<HTMLAnchorElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "size",
+          "type": "IconButtonSize",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "type",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "button-group": [
+    {
+      "name": "ButtonGroup",
+      "source": "packages/react/button-group.tsx",
+      "props": [
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "optional": false,
+          "description": "ButtonGroupItem children."
+        },
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ref",
+          "type": "Ref<HTMLDivElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "size",
+          "type": "ButtonGroupSize",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ButtonGroupItem",
+      "source": "packages/react/button-group.tsx",
+      "props": [
+        {
+          "name": "aria-describedby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that describes the object."
+        },
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": true,
+          "description": "Defines a string value that labels the current element."
+        },
+        {
+          "name": "aria-labelledby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that labels the current element."
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "defaultValue",
+          "type": "string | number | readonly string[]",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "iconOnly",
+          "type": "boolean",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "id",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "leadingIcon",
+          "type": "IconComponent",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "onChange",
+          "type": "ChangeEventHandler<HTMLButtonElement, Element>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "onClick",
+          "type": "MouseEventHandler<HTMLButtonElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ref",
+          "type": "Ref<HTMLButtonElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "selected",
+          "type": "boolean",
+          "optional": true,
+          "description": "Highlights the item like its hover state; sets aria-pressed."
+        },
+        {
+          "name": "size",
+          "type": "ButtonGroupSize",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "trailingIcon",
+          "type": "IconComponent",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "type",
+          "type": "\"submit\" | \"reset\" | \"button\"",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "value",
+          "type": "string | number | readonly string[]",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "close-button": [
+    {
+      "name": "CloseButton",
+      "source": "packages/react/close-button.tsx",
+      "props": [
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": false,
+          "description": "Accessible name — required since there is no visible label."
+        },
+        {
+          "name": "aria-describedby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that describes the object."
+        },
+        {
+          "name": "aria-labelledby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that labels the current element."
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "defaultValue",
+          "type": "string | number | readonly string[]",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "id",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "onChange",
+          "type": "ChangeEventHandler<HTMLButtonElement, Element>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "onClick",
+          "type": "MouseEventHandler<HTMLButtonElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ref",
+          "type": "Ref<HTMLButtonElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "size",
+          "type": "CloseButtonSize",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "type",
+          "type": "\"submit\" | \"reset\" | \"button\"",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "value",
+          "type": "string | number | readonly string[]",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "checkbox": [
+    {
+      "name": "Checkbox",
+      "source": "packages/react/checkbox.tsx",
+      "props": [
+        {
+          "name": "aria-describedby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that describes the object."
+        },
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": true,
+          "description": "Defines a string value that labels the current element."
+        },
+        {
+          "name": "aria-labelledby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that labels the current element."
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "className",
+          "type": "ClassNameOrFunction<CheckboxRenderProps>",
+          "optional": true,
+          "description": "The CSS [className](https://developer.mozilla.org/en-US/docs/Web/API/Element/className) for the\nelement. A function may be provided to compute the class based on component state."
+        },
+        {
+          "name": "defaultSelected",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the element should be selected (uncontrolled)."
+        },
+        {
+          "name": "id",
+          "type": "string",
+          "optional": true,
+          "description": "The element's unique identifier. See\n[MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id)."
+        },
+        {
+          "name": "isDisabled",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the input is disabled."
+        },
+        {
+          "name": "isInvalid",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the input value is invalid."
+        },
+        {
+          "name": "isReadOnly",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the input can be selected but not changed by the user."
+        },
+        {
+          "name": "isRequired",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether user input is required on the input before form submission."
+        },
+        {
+          "name": "isSelected",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the element should be selected (controlled)."
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "optional": true,
+          "description": "The name of the input element, used when submitting an HTML form. See\n[MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#htmlattrdefname)."
+        },
+        {
+          "name": "onChange",
+          "type": "((isSelected: boolean) => void)",
+          "optional": true,
+          "description": "Handler that is called when the element's selection state changes."
+        },
+        {
+          "name": "onClick",
+          "type": "((e: MouseEvent<FocusableElement>) => void)",
+          "optional": true,
+          "description": "**Not recommended – use `onPress` instead.** `onClick` is an alias for `onPress`\nprovided for compatibility with other libraries. `onPress` provides\nadditional event details for non-mouse interactions."
+        },
+        {
+          "name": "onPress",
+          "type": "((e: PressEvent) => void)",
+          "optional": true,
+          "description": "Handler that is called when the press is released over the target."
+        },
+        {
+          "name": "ref",
+          "type": "Ref<HTMLLabelElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "size",
+          "type": "CheckboxSize",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "optional": true,
+          "description": "The value of the input element, used when submitting an HTML form. See\n[MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#htmlattrdefvalue)."
+        }
+      ]
+    }
+  ],
+  "radio": [
+    {
+      "name": "Radio",
+      "source": "packages/react/radio.tsx",
+      "props": [
+        {
+          "name": "value",
+          "type": "string",
+          "optional": false,
+          "description": "The value of the radio button, used when submitting an HTML form.\nSee [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio#Value)."
+        },
+        {
+          "name": "aria-describedby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that describes the object."
+        },
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": true,
+          "description": "Defines a string value that labels the current element."
+        },
+        {
+          "name": "aria-labelledby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that labels the current element."
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "className",
+          "type": "ClassNameOrFunction<RadioRenderProps>",
+          "optional": true,
+          "description": "The CSS [className](https://developer.mozilla.org/en-US/docs/Web/API/Element/className) for the\nelement. A function may be provided to compute the class based on component state."
+        },
+        {
+          "name": "id",
+          "type": "string",
+          "optional": true,
+          "description": "The element's unique identifier. See\n[MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id)."
+        },
+        {
+          "name": "isDisabled",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the radio button is disabled or not.\nShows that a selection exists, but is not available in that circumstance."
+        },
+        {
+          "name": "onClick",
+          "type": "((e: MouseEvent<FocusableElement>) => void)",
+          "optional": true,
+          "description": "**Not recommended – use `onPress` instead.** `onClick` is an alias for `onPress`\nprovided for compatibility with other libraries. `onPress` provides\nadditional event details for non-mouse interactions."
+        },
+        {
+          "name": "onPress",
+          "type": "((e: PressEvent) => void)",
+          "optional": true,
+          "description": "Handler that is called when the press is released over the target."
+        },
+        {
+          "name": "ref",
+          "type": "Ref<HTMLLabelElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "size",
+          "type": "RadioSize",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "RadioGroup",
+      "source": "packages/react/radio.tsx",
+      "props": [
+        {
+          "name": "aria-describedby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that describes the object."
+        },
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": true,
+          "description": "Defines a string value that labels the current element."
+        },
+        {
+          "name": "aria-labelledby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that labels the current element."
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "className",
+          "type": "ClassNameOrFunction<RadioGroupRenderProps>",
+          "optional": true,
+          "description": "The CSS [className](https://developer.mozilla.org/en-US/docs/Web/API/Element/className) for the\nelement. A function may be provided to compute the class based on component state."
+        },
+        {
+          "name": "defaultValue",
+          "type": "string | null",
+          "optional": true,
+          "description": "The default value (uncontrolled)."
+        },
+        {
+          "name": "id",
+          "type": "string",
+          "optional": true,
+          "description": "The element's unique identifier. See\n[MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id)."
+        },
+        {
+          "name": "isDisabled",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the input is disabled."
+        },
+        {
+          "name": "isInvalid",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the input value is invalid."
+        },
+        {
+          "name": "isReadOnly",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the input can be selected but not changed by the user."
+        },
+        {
+          "name": "isRequired",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether user input is required on the input before form submission."
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "optional": true,
+          "description": "The name of the input element, used when submitting an HTML form. See\n[MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#htmlattrdefname)."
+        },
+        {
+          "name": "onChange",
+          "type": "((value: string) => void)",
+          "optional": true,
+          "description": "Handler that is called when the value changes."
+        },
+        {
+          "name": "onClick",
+          "type": "MouseEventHandler<HTMLDivElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "orientation",
+          "type": "Orientation",
+          "optional": true,
+          "description": "The axis the Radio Button(s) should align with."
+        },
+        {
+          "name": "ref",
+          "type": "Ref<HTMLDivElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "value",
+          "type": "string | null",
+          "optional": true,
+          "description": "The current value (controlled)."
+        }
+      ]
+    }
+  ],
+  "switch": [
+    {
+      "name": "Switch",
+      "source": "packages/react/switch.tsx",
+      "props": [
+        {
+          "name": "aria-describedby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that describes the object."
+        },
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": true,
+          "description": "Defines a string value that labels the current element."
+        },
+        {
+          "name": "aria-labelledby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that labels the current element."
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "className",
+          "type": "ClassNameOrFunction<SwitchRenderProps>",
+          "optional": true,
+          "description": "The CSS [className](https://developer.mozilla.org/en-US/docs/Web/API/Element/className) for the\nelement. A function may be provided to compute the class based on component state."
+        },
+        {
+          "name": "defaultSelected",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the element should be selected (uncontrolled)."
+        },
+        {
+          "name": "id",
+          "type": "string",
+          "optional": true,
+          "description": "The element's unique identifier. See\n[MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id)."
+        },
+        {
+          "name": "isDisabled",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the input is disabled."
+        },
+        {
+          "name": "isReadOnly",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the input can be selected but not changed by the user."
+        },
+        {
+          "name": "isSelected",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the element should be selected (controlled)."
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "optional": true,
+          "description": "The name of the input element, used when submitting an HTML form. See\n[MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#htmlattrdefname)."
+        },
+        {
+          "name": "onChange",
+          "type": "((isSelected: boolean) => void)",
+          "optional": true,
+          "description": "Handler that is called when the element's selection state changes."
+        },
+        {
+          "name": "onClick",
+          "type": "((e: MouseEvent<FocusableElement>) => void)",
+          "optional": true,
+          "description": "**Not recommended – use `onPress` instead.** `onClick` is an alias for `onPress`\nprovided for compatibility with other libraries. `onPress` provides\nadditional event details for non-mouse interactions."
+        },
+        {
+          "name": "onPress",
+          "type": "((e: PressEvent) => void)",
+          "optional": true,
+          "description": "Handler that is called when the press is released over the target."
+        },
+        {
+          "name": "ref",
+          "type": "Ref<HTMLLabelElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "shape",
+          "type": "SwitchShape",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "size",
+          "type": "SwitchSize",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "optional": true,
+          "description": "The value of the input element, used when submitting an HTML form. See\n[MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#htmlattrdefvalue)."
+        }
+      ]
+    }
+  ],
+  "input": [
+    {
+      "name": "Input",
+      "source": "packages/react/input.tsx",
+      "props": [
+        {
+          "name": "aria-describedby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that describes the object."
+        },
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": true,
+          "description": "Defines a string value that labels the current element."
+        },
+        {
+          "name": "aria-labelledby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that labels the current element."
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "defaultValue",
+          "type": "string",
+          "optional": true,
+          "description": "The default value (uncontrolled)."
+        },
+        {
+          "name": "fieldClassName",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "groupRef",
+          "type": "Ref<HTMLDivElement>",
+          "optional": true,
+          "description": "Ref to the field shell wrapper."
+        },
+        {
+          "name": "hint",
+          "type": "ReactNode",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "id",
+          "type": "string",
+          "optional": true,
+          "description": "The element's unique identifier. See\n[MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id)."
+        },
+        {
+          "name": "inputClassName",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "inputDir",
+          "type": "\"ltr\" | \"rtl\" | \"auto\"",
+          "optional": true,
+          "description": "Direction of the editable value, independent of the label and adornments.\nEmail, URL and telephone inputs default to LTR inside RTL forms."
+        },
+        {
+          "name": "isDisabled",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the input is disabled."
+        },
+        {
+          "name": "isInvalid",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the value is invalid."
+        },
+        {
+          "name": "isReadOnly",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the input can be selected but not changed by the user."
+        },
+        {
+          "name": "isRequired",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether user input is required on the input before form submission."
+        },
+        {
+          "name": "label",
+          "type": "ReactNode",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "leadingAddon",
+          "type": "ReactNode",
+          "optional": true,
+          "description": "Custom element rendered in the leading slot (Phone basic uses this)."
+        },
+        {
+          "name": "leadingIcon",
+          "type": "IconComponent",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "optional": true,
+          "description": "The name of the input element, used when submitting an HTML form. See\n[MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#htmlattrdefname)."
+        },
+        {
+          "name": "onChange",
+          "type": "((value: string) => void)",
+          "optional": true,
+          "description": "Handler that is called when the value changes."
+        },
+        {
+          "name": "onClick",
+          "type": "MouseEventHandler<HTMLDivElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "placeholder",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ref",
+          "type": "Ref<HTMLInputElement>",
+          "optional": true,
+          "description": "Ref to the <input> element."
+        },
+        {
+          "name": "size",
+          "type": "InputSize",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "tooltip",
+          "type": "string | boolean",
+          "optional": true,
+          "description": "Show an info icon next to the label. Replace with tooltip when Tooltip lands."
+        },
+        {
+          "name": "trailingAddon",
+          "type": "ReactNode",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "trailingIcon",
+          "type": "IconComponent",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "type",
+          "type": "\"text\" | \"search\" | \"url\" | \"tel\" | \"email\" | \"password\" | (string & {})",
+          "optional": true,
+          "description": "The type of input to render. See\n[MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#htmlattrdeftype)."
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "optional": true,
+          "description": "The current value (controlled)."
+        }
+      ]
+    },
+    {
+      "name": "InputBase",
+      "source": "packages/react/input.tsx",
+      "props": [
+        {
+          "name": "aria-describedby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that describes the object."
+        },
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": true,
+          "description": "Defines a string value that labels the current element."
+        },
+        {
+          "name": "aria-labelledby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that labels the current element."
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "defaultValue",
+          "type": "string | number | readonly string[]",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "fieldClassName",
+          "type": "string",
+          "optional": true,
+          "description": "Class for the field shell."
+        },
+        {
+          "name": "groupRef",
+          "type": "Ref<HTMLDivElement>",
+          "optional": true,
+          "description": "Ref to the field shell wrapper."
+        },
+        {
+          "name": "id",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "leadingAddon",
+          "type": "ReactNode",
+          "optional": true,
+          "description": "Custom element rendered in the leading slot (Phone basic uses this)."
+        },
+        {
+          "name": "leadingIcon",
+          "type": "IconComponent",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "onChange",
+          "type": "ChangeEventHandler<HTMLInputElement, HTMLInputElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "onClick",
+          "type": "MouseEventHandler<HTMLInputElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ref",
+          "type": "Ref<HTMLInputElement>",
+          "optional": true,
+          "description": "Ref to the <input> element."
+        },
+        {
+          "name": "size",
+          "type": "InputSize",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "step",
+          "type": "string | number",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "trailingAddon",
+          "type": "ReactNode",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "trailingIcon",
+          "type": "IconComponent",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "type",
+          "type": "HTMLInputTypeAttribute",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "value",
+          "type": "string | number | readonly string[]",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "TextField",
+      "source": "packages/react/input.tsx",
+      "props": [
+        {
+          "name": "aria-describedby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that describes the object."
+        },
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": true,
+          "description": "Defines a string value that labels the current element."
+        },
+        {
+          "name": "aria-labelledby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that labels the current element."
+        },
+        {
+          "name": "children",
+          "type": "ReactNode | ((state: { isRequired: boolean; isInvalid: boolean; isDisabled: boolean; isReadOnly: boolean; }) => ReactNode)",
+          "optional": true,
+          "description": "The children of the component. A function may be provided to alter the children based on\ncomponent state."
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "defaultValue",
+          "type": "string",
+          "optional": true,
+          "description": "The default value (uncontrolled)."
+        },
+        {
+          "name": "fieldClassName",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "id",
+          "type": "string",
+          "optional": true,
+          "description": "The element's unique identifier. See\n[MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id)."
+        },
+        {
+          "name": "inputClassName",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "isDisabled",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the input is disabled."
+        },
+        {
+          "name": "isInvalid",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the value is invalid."
+        },
+        {
+          "name": "isReadOnly",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the input can be selected but not changed by the user."
+        },
+        {
+          "name": "isRequired",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether user input is required on the input before form submission."
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "optional": true,
+          "description": "The name of the input element, used when submitting an HTML form. See\n[MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#htmlattrdefname)."
+        },
+        {
+          "name": "onChange",
+          "type": "((value: string) => void)",
+          "optional": true,
+          "description": "Handler that is called when the value changes."
+        },
+        {
+          "name": "onClick",
+          "type": "MouseEventHandler<HTMLDivElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "size",
+          "type": "InputSize",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "type",
+          "type": "\"text\" | \"search\" | \"url\" | \"tel\" | \"email\" | \"password\" | (string & {})",
+          "optional": true,
+          "description": "The type of input to render. See\n[MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#htmlattrdeftype)."
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "optional": true,
+          "description": "The current value (controlled)."
+        }
+      ]
+    }
+  ],
+  "textarea": [
+    {
+      "name": "Textarea",
+      "source": "packages/react/textarea.tsx",
+      "props": [
+        {
+          "name": "aria-describedby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that describes the object."
+        },
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": true,
+          "description": "Defines a string value that labels the current element."
+        },
+        {
+          "name": "aria-labelledby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that labels the current element."
+        },
+        {
+          "name": "autoResize",
+          "type": "boolean",
+          "optional": true,
+          "description": "Grow with the content instead of scrolling at `rows`."
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "defaultValue",
+          "type": "string",
+          "optional": true,
+          "description": "The default value (uncontrolled)."
+        },
+        {
+          "name": "fieldClassName",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "groupRef",
+          "type": "Ref<HTMLDivElement>",
+          "optional": true,
+          "description": "Ref to the field shell wrapper."
+        },
+        {
+          "name": "hint",
+          "type": "ReactNode",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "id",
+          "type": "string",
+          "optional": true,
+          "description": "The element's unique identifier. See\n[MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id)."
+        },
+        {
+          "name": "inputClassName",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "isDisabled",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the input is disabled."
+        },
+        {
+          "name": "isInvalid",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the value is invalid."
+        },
+        {
+          "name": "isReadOnly",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the input can be selected but not changed by the user."
+        },
+        {
+          "name": "isRequired",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether user input is required on the input before form submission."
+        },
+        {
+          "name": "label",
+          "type": "ReactNode",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "maxLength",
+          "type": "number",
+          "optional": true,
+          "description": "Hard character limit, enforced by the browser."
+        },
+        {
+          "name": "maxRows",
+          "type": "number",
+          "optional": true,
+          "description": "Ceiling for `autoResize`, in lines. Past it the field scrolls."
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "optional": true,
+          "description": "The name of the input element, used when submitting an HTML form. See\n[MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#htmlattrdefname)."
+        },
+        {
+          "name": "onChange",
+          "type": "((value: string) => void)",
+          "optional": true,
+          "description": "Handler that is called when the value changes."
+        },
+        {
+          "name": "onClick",
+          "type": "MouseEventHandler<HTMLDivElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "placeholder",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ref",
+          "type": "Ref<HTMLTextAreaElement>",
+          "optional": true,
+          "description": "Ref to the <textarea> element."
+        },
+        {
+          "name": "resize",
+          "type": "TextareaResize",
+          "optional": true,
+          "description": "Native resize handle. Ignored (forced `none`) while `autoResize` is on."
+        },
+        {
+          "name": "rows",
+          "type": "number",
+          "optional": true,
+          "description": "Resting height, in lines. Also the floor when `autoResize` is on."
+        },
+        {
+          "name": "showCount",
+          "type": "boolean",
+          "optional": true,
+          "description": "Show the character counter under the field (`12/280` with `maxLength`)."
+        },
+        {
+          "name": "size",
+          "type": "InputSize",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "tooltip",
+          "type": "string | boolean",
+          "optional": true,
+          "description": "Show an info icon next to the label. Replace with tooltip when Tooltip lands."
+        },
+        {
+          "name": "type",
+          "type": "\"text\" | \"search\" | \"url\" | \"tel\" | \"email\" | \"password\" | (string & {})",
+          "optional": true,
+          "description": "The type of input to render. See\n[MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#htmlattrdeftype)."
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "optional": true,
+          "description": "The current value (controlled)."
+        }
+      ]
+    },
+    {
+      "name": "TextareaBase",
+      "source": "packages/react/textarea.tsx",
+      "props": [
+        {
+          "name": "aria-describedby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that describes the object."
+        },
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": true,
+          "description": "Defines a string value that labels the current element."
+        },
+        {
+          "name": "aria-labelledby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that labels the current element."
+        },
+        {
+          "name": "autoResize",
+          "type": "boolean",
+          "optional": true,
+          "description": "Grow with the content instead of scrolling at `rows`."
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "defaultValue",
+          "type": "string | number | readonly string[]",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "fieldClassName",
+          "type": "string",
+          "optional": true,
+          "description": "Class for the field shell."
+        },
+        {
+          "name": "groupRef",
+          "type": "Ref<HTMLDivElement>",
+          "optional": true,
+          "description": "Ref to the field shell wrapper."
+        },
+        {
+          "name": "id",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "maxRows",
+          "type": "number",
+          "optional": true,
+          "description": "Ceiling for `autoResize`, in lines. Past it the field scrolls."
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "onChange",
+          "type": "ChangeEventHandler<HTMLTextAreaElement, HTMLTextAreaElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "onClick",
+          "type": "MouseEventHandler<HTMLTextAreaElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ref",
+          "type": "Ref<HTMLTextAreaElement>",
+          "optional": true,
+          "description": "Ref to the <textarea> element."
+        },
+        {
+          "name": "resize",
+          "type": "TextareaResize",
+          "optional": true,
+          "description": "Native resize handle. Ignored (forced `none`) while `autoResize` is on."
+        },
+        {
+          "name": "rows",
+          "type": "number",
+          "optional": true,
+          "description": "Resting height, in lines. Also the floor when `autoResize` is on."
+        },
+        {
+          "name": "size",
+          "type": "InputSize",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "value",
+          "type": "string | number | readonly string[]",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "tabs": [
+    {
+      "name": "Tabs",
+      "source": "packages/react/tabs.tsx",
+      "props": [
+        {
+          "name": "aria-describedby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that describes the object."
+        },
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": true,
+          "description": "Defines a string value that labels the current element."
+        },
+        {
+          "name": "aria-labelledby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that labels the current element."
+        },
+        {
+          "name": "children",
+          "type": "ChildrenOrFunction<import(\"react-aria-components/dist/types/src/Tabs\").TabsRenderProps>",
+          "optional": true,
+          "description": "The children of the component. A function may be provided to alter the children based on\ncomponent state."
+        },
+        {
+          "name": "className",
+          "type": "ClassNameOrFunction<TabsRenderProps>",
+          "optional": true,
+          "description": "The CSS [className](https://developer.mozilla.org/en-US/docs/Web/API/Element/className) for the\nelement. A function may be provided to compute the class based on component state."
+        },
+        {
+          "name": "defaultSelectedKey",
+          "type": "Key",
+          "optional": true,
+          "description": "The initial selected keys in the collection (uncontrolled)."
+        },
+        {
+          "name": "id",
+          "type": "string",
+          "optional": true,
+          "description": "The element's unique identifier. See\n[MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id)."
+        },
+        {
+          "name": "isDisabled",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the TabList is disabled.\nShows that a selection exists, but is not available in that circumstance."
+        },
+        {
+          "name": "onClick",
+          "type": "MouseEventHandler<HTMLDivElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "onSelectionChange",
+          "type": "((key: Key) => void)",
+          "optional": true,
+          "description": "Handler that is called when the selection changes."
+        },
+        {
+          "name": "orientation",
+          "type": "Orientation",
+          "optional": true,
+          "description": "The orientation of the tabs."
+        },
+        {
+          "name": "ref",
+          "type": "Ref<HTMLDivElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "selectedKey",
+          "type": "Key",
+          "optional": true,
+          "description": "The currently selected key in the collection (controlled)."
+        }
+      ]
+    },
+    {
+      "name": "TabList",
+      "source": "packages/react/tabs.tsx",
+      "props": [
+        {
+          "name": "aria-describedby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that describes the object."
+        },
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": true,
+          "description": "Defines a string value that labels the current element."
+        },
+        {
+          "name": "aria-labelledby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that labels the current element."
+        },
+        {
+          "name": "children",
+          "type": "React.ReactNode | ((item: T) => ReactNode)",
+          "optional": true,
+          "description": "The contents of the collection."
+        },
+        {
+          "name": "className",
+          "type": "ClassNameOrFunction<TabListRenderProps>",
+          "optional": true,
+          "description": "The CSS [className](https://developer.mozilla.org/en-US/docs/Web/API/Element/className) for the\nelement. A function may be provided to compute the class based on component state."
+        },
+        {
+          "name": "onClick",
+          "type": "MouseEventHandler<HTMLDivElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ref",
+          "type": "Ref<HTMLDivElement>",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Tab",
+      "source": "packages/react/tabs.tsx",
+      "props": [
+        {
+          "name": "aria-describedby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that describes the object."
+        },
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": true,
+          "description": "Defines a string value that labels the current element."
+        },
+        {
+          "name": "aria-labelledby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that labels the current element."
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "className",
+          "type": "ClassNameOrFunction<TabRenderProps>",
+          "optional": true,
+          "description": "The CSS [className](https://developer.mozilla.org/en-US/docs/Web/API/Element/className) for the\nelement. A function may be provided to compute the class based on component state."
+        },
+        {
+          "name": "count",
+          "type": "ReactNode",
+          "optional": true,
+          "description": "Optional trailing count badge."
+        },
+        {
+          "name": "href",
+          "type": "string",
+          "optional": true,
+          "description": "A URL to link to. See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#href)."
+        },
+        {
+          "name": "icon",
+          "type": "IconComponent",
+          "optional": true,
+          "description": "Optional leading icon (16px). Inherits the label color."
+        },
+        {
+          "name": "id",
+          "type": "Key",
+          "optional": true,
+          "description": "The unique id of the tab."
+        },
+        {
+          "name": "isDisabled",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the tab is disabled."
+        },
+        {
+          "name": "onClick",
+          "type": "((e: MouseEvent<FocusableElement>) => void)",
+          "optional": true,
+          "description": "**Not recommended – use `onPress` instead.** `onClick` is an alias for `onPress`\nprovided for compatibility with other libraries. `onPress` provides\nadditional event details for non-mouse interactions."
+        },
+        {
+          "name": "onPress",
+          "type": "((e: PressEvent) => void)",
+          "optional": true,
+          "description": "Handler that is called when the press is released over the target."
+        },
+        {
+          "name": "ref",
+          "type": "Ref<HTMLDivElement>",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "TabPanel",
+      "source": "packages/react/tabs.tsx",
+      "props": [
+        {
+          "name": "aria-describedby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that describes the object."
+        },
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": true,
+          "description": "Defines a string value that labels the current element."
+        },
+        {
+          "name": "aria-labelledby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that labels the current element."
+        },
+        {
+          "name": "children",
+          "type": "ChildrenOrFunction<import(\"react-aria-components/dist/types/src/Tabs\").TabPanelRenderProps>",
+          "optional": true,
+          "description": "The children of the component. A function may be provided to alter the children based on\ncomponent state."
+        },
+        {
+          "name": "className",
+          "type": "ClassNameOrFunction<TabPanelRenderProps>",
+          "optional": true,
+          "description": "The CSS [className](https://developer.mozilla.org/en-US/docs/Web/API/Element/className) for the\nelement. A function may be provided to compute the class based on component state."
+        },
+        {
+          "name": "id",
+          "type": "Key",
+          "optional": true,
+          "description": "The unique id of the tab."
+        },
+        {
+          "name": "onClick",
+          "type": "MouseEventHandler<HTMLDivElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ref",
+          "type": "Ref<HTMLDivElement>",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "segmented-control": [
+    {
+      "name": "SegmentedControl",
+      "source": "packages/react/segmented-control.tsx",
+      "props": [
+        {
+          "name": "aria-describedby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that describes the object."
+        },
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": true,
+          "description": "Defines a string value that labels the current element."
+        },
+        {
+          "name": "aria-labelledby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that labels the current element."
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "optional": true,
+          "description": "The children of the component. A function may be provided to alter the children based on\ncomponent state."
+        },
+        {
+          "name": "className",
+          "type": "ClassNameOrFunction<ToggleButtonGroupRenderProps>",
+          "optional": true,
+          "description": "The CSS [className](https://developer.mozilla.org/en-US/docs/Web/API/Element/className) for the\nelement. A function may be provided to compute the class based on component state."
+        },
+        {
+          "name": "defaultSelectedKeys",
+          "type": "Iterable<Key>",
+          "optional": true,
+          "description": "The initial selected keys in the collection (uncontrolled)."
+        },
+        {
+          "name": "isDisabled",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether all items are disabled."
+        },
+        {
+          "name": "onClick",
+          "type": "MouseEventHandler<HTMLDivElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "onSelectionChange",
+          "type": "((keys: Set<Key>) => void)",
+          "optional": true,
+          "description": "Handler that is called when the selection changes."
+        },
+        {
+          "name": "orientation",
+          "type": "Orientation",
+          "optional": true,
+          "description": "The orientation of the the toggle button group."
+        },
+        {
+          "name": "ref",
+          "type": "Ref<HTMLDivElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "selectedKeys",
+          "type": "Iterable<Key>",
+          "optional": true,
+          "description": "The currently selected keys in the collection (controlled)."
+        },
+        {
+          "name": "variant",
+          "type": "SegmentedControlVariant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SegmentedControlItem",
+      "source": "packages/react/segmented-control.tsx",
+      "props": [
+        {
+          "name": "aria-describedby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that describes the object."
+        },
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": true,
+          "description": "Defines a string value that labels the current element."
+        },
+        {
+          "name": "aria-labelledby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that labels the current element."
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "className",
+          "type": "ClassNameOrFunction<ToggleButtonRenderProps>",
+          "optional": true,
+          "description": "The CSS [className](https://developer.mozilla.org/en-US/docs/Web/API/Element/className) for the\nelement. A function may be provided to compute the class based on component state."
+        },
+        {
+          "name": "defaultSelected",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the element should be selected (uncontrolled)."
+        },
+        {
+          "name": "id",
+          "type": "Key",
+          "optional": true,
+          "description": "When used in a ToggleButtonGroup, an identifier for the item in `selectedKeys`. When used\nstandalone, a DOM id."
+        },
+        {
+          "name": "isDisabled",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the button is disabled."
+        },
+        {
+          "name": "isSelected",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the element should be selected (controlled)."
+        },
+        {
+          "name": "onChange",
+          "type": "((isSelected: boolean) => void)",
+          "optional": true,
+          "description": "Handler that is called when the element's selection state changes."
+        },
+        {
+          "name": "onClick",
+          "type": "((e: MouseEvent<FocusableElement>) => void)",
+          "optional": true,
+          "description": "**Not recommended – use `onPress` instead.** `onClick` is an alias for `onPress`\nprovided for compatibility with other libraries. `onPress` provides\nadditional event details for non-mouse interactions."
+        },
+        {
+          "name": "onPress",
+          "type": "((e: PressEvent) => void)",
+          "optional": true,
+          "description": "Handler that is called when the press is released over the target."
+        },
+        {
+          "name": "ref",
+          "type": "Ref<HTMLButtonElement>",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "select": [
+    {
+      "name": "Select",
+      "source": "packages/react/select.tsx",
+      "props": [
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "aria-describedby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that describes the object."
+        },
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": true,
+          "description": "Defines a string value that labels the current element."
+        },
+        {
+          "name": "aria-labelledby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that labels the current element."
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "description": "Trigger width. Defaults to hug content; the menu uses the shared 266px width."
+        },
+        {
+          "name": "defaultOpen",
+          "type": "boolean",
+          "optional": true,
+          "description": "Sets the default open state of the menu."
+        },
+        {
+          "name": "defaultSelectedKey",
+          "type": "Key | null",
+          "optional": true,
+          "description": "The initial selected key in the collection (uncontrolled)."
+        },
+        {
+          "name": "defaultValue",
+          "type": "import(\"@react-types/shared/src/key\").Key | null",
+          "optional": true,
+          "description": "The default value (uncontrolled)."
+        },
+        {
+          "name": "id",
+          "type": "string",
+          "optional": true,
+          "description": "The element's unique identifier. See\n[MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id)."
+        },
+        {
+          "name": "isDisabled",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the input is disabled."
+        },
+        {
+          "name": "isInvalid",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the input value is invalid."
+        },
+        {
+          "name": "isOpen",
+          "type": "boolean",
+          "optional": true,
+          "description": "Sets the open state of the menu."
+        },
+        {
+          "name": "isRequired",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether user input is required on the input before form submission."
+        },
+        {
+          "name": "items",
+          "type": "Iterable<T>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "optional": true,
+          "description": "The name of the input, used when submitting an HTML form."
+        },
+        {
+          "name": "onChange",
+          "type": "((value: import(\"@react-types/shared/src/key\").Key | null) => void)",
+          "optional": true,
+          "description": "Handler that is called when the value changes."
+        },
+        {
+          "name": "onClick",
+          "type": "MouseEventHandler<HTMLDivElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "onOpenChange",
+          "type": "((isOpen: boolean) => void)",
+          "optional": true,
+          "description": "Method that is called when the open state of the menu changes."
+        },
+        {
+          "name": "onSelectionChange",
+          "type": "((key: Key | null) => void)",
+          "optional": true,
+          "description": "Handler that is called when the selection changes."
+        },
+        {
+          "name": "popoverClassName",
+          "type": "string",
+          "optional": true,
+          "description": "Classes for the open popover (e.g. constrain its width)."
+        },
+        {
+          "name": "ref",
+          "type": "Ref<HTMLDivElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "renderValue",
+          "type": "ReactNode | ((values: AriaSelectValueRenderProps<T>) => ReactNode)",
+          "optional": true,
+          "description": "Customise the trigger's rendered value (e.g. a compact flag + dial code).\nFalls back to the selected item's own content when omitted."
+        },
+        {
+          "name": "selectedKey",
+          "type": "Key | null",
+          "optional": true,
+          "description": "The currently selected key in the collection (controlled)."
+        },
+        {
+          "name": "selectionMode",
+          "type": "\"single\"",
+          "optional": true,
+          "description": "Whether single or multiple selection is enabled."
+        },
+        {
+          "name": "size",
+          "type": "SelectSize",
+          "optional": true,
+          "description": "`md` (default) or `sm` for compact/dense contexts (e.g. compact tables)."
+        },
+        {
+          "name": "triggerClassName",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "value",
+          "type": "import(\"@react-types/shared/src/key\").Key | null",
+          "optional": true,
+          "description": "The current value (controlled)."
+        }
+      ]
+    },
+    {
+      "name": "SelectItem",
+      "source": "packages/react/select.tsx",
+      "props": [
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": true,
+          "description": "An accessibility label for this item."
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "className",
+          "type": "ClassNameOrFunction<ListBoxItemRenderProps>",
+          "optional": true,
+          "description": "The CSS [className](https://developer.mozilla.org/en-US/docs/Web/API/Element/className) for the\nelement. A function may be provided to compute the class based on component state."
+        },
+        {
+          "name": "href",
+          "type": "string",
+          "optional": true,
+          "description": "A URL to link to. See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#href)."
+        },
+        {
+          "name": "id",
+          "type": "Key",
+          "optional": true,
+          "description": "The unique id of the item."
+        },
+        {
+          "name": "isDisabled",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the item is disabled."
+        },
+        {
+          "name": "onClick",
+          "type": "((e: MouseEvent<FocusableElement>) => void)",
+          "optional": true,
+          "description": "**Not recommended – use `onPress` instead.** `onClick` is an alias for `onPress`\nprovided for compatibility with other libraries. `onPress` provides\nadditional event details for non-mouse interactions."
+        },
+        {
+          "name": "onPress",
+          "type": "((e: PressEvent) => void)",
+          "optional": true,
+          "description": "Handler that is called when the press is released over the target."
+        },
+        {
+          "name": "value",
+          "type": "object",
+          "optional": true,
+          "description": "The object value that this item represents. When using dynamic collections, this is set\nautomatically."
+        }
+      ]
+    }
+  ],
+  "dropdown": [
+    {
+      "name": "Dropdown",
+      "source": "packages/react/dropdown.tsx",
+      "props": [
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "optional": false,
+          "description": "Trigger (a DropdownTrigger) followed by a DropdownPopover."
+        },
+        {
+          "name": "isOpen",
+          "type": "boolean",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "onOpenChange",
+          "type": "((isOpen: boolean) => void)",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DropdownTrigger",
+      "source": "packages/react/dropdown.tsx",
+      "props": [
+        {
+          "name": "aria-describedby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that describes the object."
+        },
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": true,
+          "description": "Defines a string value that labels the current element."
+        },
+        {
+          "name": "aria-labelledby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that labels the current element."
+        },
+        {
+          "name": "children",
+          "type": "ChildrenOrFunction<import(\"react-aria-components/dist/types/src/Button\").ButtonRenderProps>",
+          "optional": true,
+          "description": "The children of the component. A function may be provided to alter the children based on\ncomponent state."
+        },
+        {
+          "name": "className",
+          "type": "ClassNameOrFunction<ButtonRenderProps>",
+          "optional": true,
+          "description": "The CSS [className](https://developer.mozilla.org/en-US/docs/Web/API/Element/className) for the\nelement. A function may be provided to compute the class based on component state."
+        },
+        {
+          "name": "id",
+          "type": "string",
+          "optional": true,
+          "description": "The element's unique identifier. See\n[MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id)."
+        },
+        {
+          "name": "isDisabled",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the button is disabled."
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "optional": true,
+          "description": "Submitted as a pair with the button's value as part of the form data."
+        },
+        {
+          "name": "onClick",
+          "type": "((e: MouseEvent<FocusableElement>) => void)",
+          "optional": true,
+          "description": "**Not recommended – use `onPress` instead.** `onClick` is an alias for `onPress`\nprovided for compatibility with other libraries. `onPress` provides\nadditional event details for non-mouse interactions."
+        },
+        {
+          "name": "onPress",
+          "type": "((e: PressEvent) => void)",
+          "optional": true,
+          "description": "Handler that is called when the press is released over the target."
+        },
+        {
+          "name": "ref",
+          "type": "Ref<HTMLButtonElement>",
+          "optional": true,
+          "description": "Allows getting a ref to the component instance.\nOnce the component unmounts, React will set `ref.current` to `null`\n(or call the ref with `null` if you passed a callback ref)."
+        },
+        {
+          "name": "type",
+          "type": "\"submit\" | \"reset\" | \"button\"",
+          "optional": true,
+          "description": "The behavior of the button when used in an HTML form."
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "optional": true,
+          "description": "The value associated with the button's name when it's submitted with the form data."
+        }
+      ]
+    },
+    {
+      "name": "DropdownPopover",
+      "source": "packages/react/dropdown.tsx",
+      "props": [
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "description": "Extra classes on the panel — e.g. a width override (default w-[266px])."
+        },
+        {
+          "name": "dialogClassName",
+          "type": "string",
+          "optional": true,
+          "description": "Classes on the inner dialog (the flex column), e.g. gap between groups."
+        }
+      ]
+    },
+    {
+      "name": "DropdownGroup",
+      "source": "packages/react/dropdown.tsx",
+      "props": [
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "label",
+          "type": "string",
+          "optional": true,
+          "description": "Muted body-medium heading above the rows."
+        }
+      ]
+    },
+    {
+      "name": "DropdownItem",
+      "source": "packages/react/dropdown.tsx",
+      "props": [
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "description": "Row padding defaults to p-2 — override for denser rows (px-2 py-1.5)."
+        },
+        {
+          "name": "onSelect",
+          "type": "(() => void)",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "selected",
+          "type": "boolean",
+          "optional": true,
+          "description": "Highlights the row like the hover state (current selection)."
+        }
+      ]
+    }
+  ],
+  "tooltip": [
+    {
+      "name": "Tooltip",
+      "source": "packages/react/tooltip.tsx",
+      "props": [
+        {
+          "name": "aria-describedby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that describes the object."
+        },
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": true,
+          "description": "Defines a string value that labels the current element."
+        },
+        {
+          "name": "aria-labelledby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that labels the current element."
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "className",
+          "type": "ClassNameOrFunction<TooltipRenderProps>",
+          "optional": true,
+          "description": "The CSS [className](https://developer.mozilla.org/en-US/docs/Web/API/Element/className) for the\nelement. A function may be provided to compute the class based on component state."
+        },
+        {
+          "name": "defaultOpen",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the overlay is open by default (uncontrolled)."
+        },
+        {
+          "name": "isOpen",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the element is rendered."
+        },
+        {
+          "name": "onClick",
+          "type": "MouseEventHandler<HTMLDivElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "onOpenChange",
+          "type": "((isOpen: boolean) => void)",
+          "optional": true,
+          "description": "Handler that is called when the overlay's open state changes."
+        },
+        {
+          "name": "showArrow",
+          "type": "boolean",
+          "optional": true,
+          "description": "Show the little caret pointing at the trigger. Default `true`."
+        },
+        {
+          "name": "size",
+          "type": "TooltipSize",
+          "optional": true,
+          "description": "Surface size. `sm` → 12px Caption 1, `md` → 14px Body 1. Default `sm`."
+        }
+      ]
+    },
+    {
+      "name": "TooltipTrigger",
+      "source": "packages/react/tooltip.tsx",
+      "props": [
+        {
+          "name": "children",
+          "type": "React.ReactNode",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "defaultOpen",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the overlay is open by default (uncontrolled)."
+        },
+        {
+          "name": "isDisabled",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the tooltip should be disabled, independent from the trigger."
+        },
+        {
+          "name": "isOpen",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the overlay is open by default (controlled)."
+        },
+        {
+          "name": "onOpenChange",
+          "type": "((isOpen: boolean) => void)",
+          "optional": true,
+          "description": "Handler that is called when the overlay's open state changes."
+        }
+      ]
+    }
+  ],
+  "notification": [
+    {
+      "name": "Notification",
+      "source": "packages/react/notification.tsx",
+      "props": [
+        {
+          "name": "title",
+          "type": "ReactNode",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "actions",
+          "type": "NotificationAction[]",
+          "optional": true,
+          "description": "Optional small BoardUI action buttons rendered below the message."
+        },
+        {
+          "name": "aria-describedby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that describes the object."
+        },
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": true,
+          "description": "Defines a string value that labels the current element."
+        },
+        {
+          "name": "aria-labelledby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that labels the current element."
+        },
+        {
+          "name": "autoDismissDuration",
+          "type": "number",
+          "optional": true,
+          "description": "Automatically dismiss after this many milliseconds. A 3px blue countdown\nbar is rendered along the full bottom edge for the same duration."
+        },
+        {
+          "name": "avatar",
+          "type": "NotificationAvatar",
+          "optional": true,
+          "description": "Avatar leading visual. When set, it takes precedence over `icon`."
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "closeLabel",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "defaultValue",
+          "type": "string | number | readonly string[]",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "description",
+          "type": "ReactNode",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "dismissible",
+          "type": "boolean",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "extraAction",
+          "type": "ReactNode",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "icon",
+          "type": "IconComponent",
+          "optional": true,
+          "description": "Custom leading icon. Defaults to the icon associated with `status`."
+        },
+        {
+          "name": "id",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "introDelay",
+          "type": "number",
+          "optional": true,
+          "description": "Optional entrance delay in seconds."
+        },
+        {
+          "name": "onChange",
+          "type": "ChangeEventHandler<HTMLDivElement, Element>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "onClick",
+          "type": "MouseEventHandler<HTMLDivElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "onDismiss",
+          "type": "(() => void)",
+          "optional": true,
+          "description": "Called after the dismiss animation completes."
+        },
+        {
+          "name": "ref",
+          "type": "Ref<HTMLDivElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "status",
+          "type": "NotificationStatus",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "timestamp",
+          "type": "ReactNode",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "NotificationViewport",
+      "source": "packages/react/notification.tsx",
+      "props": [
+        {
+          "name": "aria-describedby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that describes the object."
+        },
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": true,
+          "description": "Defines a string value that labels the current element."
+        },
+        {
+          "name": "aria-labelledby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that labels the current element."
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "defaultValue",
+          "type": "string | number | readonly string[]",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "id",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "onChange",
+          "type": "ChangeEventHandler<HTMLDivElement, Element>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "onClick",
+          "type": "MouseEventHandler<HTMLDivElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "placement",
+          "type": "\"bottom-left\" | \"bottom-right\"",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "position",
+          "type": "NotificationPosition",
+          "optional": true,
+          "description": "Edge or corner where the notification stack is anchored."
+        }
+      ]
+    }
+  ],
+  "announcement": [
+    {
+      "name": "Announcement",
+      "source": "packages/react/announcement.tsx",
+      "props": [
+        {
+          "name": "title",
+          "type": "ReactNode",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "actionLabel",
+          "type": "ReactNode",
+          "optional": true,
+          "description": "CTA label. When set, a full-width secondary button is rendered."
+        },
+        {
+          "name": "aria-describedby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that describes the object."
+        },
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": true,
+          "description": "Defines a string value that labels the current element."
+        },
+        {
+          "name": "aria-labelledby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that labels the current element."
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "closeLabel",
+          "type": "string",
+          "optional": true,
+          "description": "Accessible name for the dismiss button."
+        },
+        {
+          "name": "defaultValue",
+          "type": "string | number | readonly string[]",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "description",
+          "type": "ReactNode",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "dismissible",
+          "type": "boolean",
+          "optional": true,
+          "description": "Show a dismiss button in the top-right corner."
+        },
+        {
+          "name": "extraAction",
+          "type": "ReactNode",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "icon",
+          "type": "IconComponent",
+          "optional": true,
+          "description": "Leading icon. Defaults to the shield-star from the Figma frame."
+        },
+        {
+          "name": "id",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "introDelay",
+          "type": "number",
+          "optional": true,
+          "description": "Seconds to wait before playing the blur/fade/scale-up entrance. Omit to\nskip the entrance entirely (card just appears)."
+        },
+        {
+          "name": "onAction",
+          "type": "(() => void)",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "onChange",
+          "type": "ChangeEventHandler<HTMLDivElement, Element>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "onClick",
+          "type": "MouseEventHandler<HTMLDivElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "onClose",
+          "type": "(() => void)",
+          "optional": true,
+          "description": "Called once the dismiss exit animation finishes."
+        },
+        {
+          "name": "ref",
+          "type": "Ref<HTMLDivElement>",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "date-picker": [
+    {
+      "name": "DatePicker",
+      "source": "packages/react/date-picker.tsx",
+      "props": [
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "defaultValue",
+          "type": "CalendarDate | null",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "isDisabled",
+          "type": "boolean",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "isOpen",
+          "type": "boolean",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "maxValue",
+          "type": "CalendarDate",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "minValue",
+          "type": "CalendarDate",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "onChange",
+          "type": "((value: CalendarDate | null) => void)",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "onOpenChange",
+          "type": "((isOpen: boolean) => void)",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "placeholder",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "triggerRef",
+          "type": "RefObject<HTMLElement | null>",
+          "optional": true,
+          "description": "Anchor the popover to an external element instead of DatePicker's own\ntrigger button (which is hidden when this is provided). Pair with\n`isOpen`/`onOpenChange` for full external control."
+        },
+        {
+          "name": "value",
+          "type": "CalendarDate | null",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "slider": [
+    {
+      "name": "Slider",
+      "source": "packages/react/slider.tsx",
+      "props": [
+        {
+          "name": "aria-describedby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that describes the object."
+        },
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": true,
+          "description": "Defines a string value that labels the current element."
+        },
+        {
+          "name": "aria-labelledby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that labels the current element."
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "defaultValue",
+          "type": "number",
+          "optional": true,
+          "description": "The default value (uncontrolled)."
+        },
+        {
+          "name": "formatValue",
+          "type": "((value: number, index: number) => ReactNode)",
+          "optional": true,
+          "description": "Custom visual formatter for the value bubbles."
+        },
+        {
+          "name": "id",
+          "type": "string",
+          "optional": true,
+          "description": "The element's unique identifier. See\n[MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id)."
+        },
+        {
+          "name": "isDisabled",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the whole Slider is disabled."
+        },
+        {
+          "name": "label",
+          "type": "ReactNode",
+          "optional": true,
+          "description": "Optional visible label associated with every thumb."
+        },
+        {
+          "name": "maxValue",
+          "type": "number",
+          "optional": true,
+          "description": "The slider's maximum value."
+        },
+        {
+          "name": "minValue",
+          "type": "number",
+          "optional": true,
+          "description": "The slider's minimum value."
+        },
+        {
+          "name": "onChange",
+          "type": "((value: number) => void)",
+          "optional": true,
+          "description": "Handler that is called when the value changes."
+        },
+        {
+          "name": "onClick",
+          "type": "MouseEventHandler<HTMLDivElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "showTooltip",
+          "type": "boolean",
+          "optional": true,
+          "description": "Show the exact value in a persistent bubble above each thumb. Default `true`."
+        },
+        {
+          "name": "step",
+          "type": "number",
+          "optional": true,
+          "description": "The slider's step value."
+        },
+        {
+          "name": "thumbLabel",
+          "type": "string",
+          "optional": true,
+          "description": "Accessible name for the single thumb."
+        },
+        {
+          "name": "value",
+          "type": "number",
+          "optional": true,
+          "description": "The current value (controlled)."
+        }
+      ]
+    },
+    {
+      "name": "RangeSlider",
+      "source": "packages/react/slider.tsx",
+      "props": [
+        {
+          "name": "aria-describedby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that describes the object."
+        },
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": true,
+          "description": "Defines a string value that labels the current element."
+        },
+        {
+          "name": "aria-labelledby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that labels the current element."
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "defaultValue",
+          "type": "number[]",
+          "optional": true,
+          "description": "The default value (uncontrolled)."
+        },
+        {
+          "name": "formatValue",
+          "type": "((value: number, index: number) => ReactNode)",
+          "optional": true,
+          "description": "Custom visual formatter for the value bubbles."
+        },
+        {
+          "name": "id",
+          "type": "string",
+          "optional": true,
+          "description": "The element's unique identifier. See\n[MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id)."
+        },
+        {
+          "name": "isDisabled",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the whole Slider is disabled."
+        },
+        {
+          "name": "label",
+          "type": "ReactNode",
+          "optional": true,
+          "description": "Optional visible label associated with every thumb."
+        },
+        {
+          "name": "maxValue",
+          "type": "number",
+          "optional": true,
+          "description": "The slider's maximum value."
+        },
+        {
+          "name": "minValue",
+          "type": "number",
+          "optional": true,
+          "description": "The slider's minimum value."
+        },
+        {
+          "name": "onChange",
+          "type": "((value: number[]) => void)",
+          "optional": true,
+          "description": "Handler that is called when the value changes."
+        },
+        {
+          "name": "onClick",
+          "type": "MouseEventHandler<HTMLDivElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "showTooltip",
+          "type": "boolean",
+          "optional": true,
+          "description": "Show the exact value in a persistent bubble above each thumb. Default `true`."
+        },
+        {
+          "name": "step",
+          "type": "number",
+          "optional": true,
+          "description": "The slider's step value."
+        },
+        {
+          "name": "thumbLabels",
+          "type": "[string, string]",
+          "optional": true,
+          "description": "Accessible names for the lower and upper thumbs."
+        },
+        {
+          "name": "value",
+          "type": "number[]",
+          "optional": true,
+          "description": "The current value (controlled)."
+        }
+      ]
+    }
+  ],
+  "input-otp": [
+    {
+      "name": "InputOtp",
+      "source": "packages/react/input-otp.tsx",
+      "props": [
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "defaultValue",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "groupEvery",
+          "type": "number",
+          "optional": true,
+          "description": "Renders a gap between groups, e.g. `3` gives 000 000."
+        },
+        {
+          "name": "isDisabled",
+          "type": "boolean",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "isInvalid",
+          "type": "boolean",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "length",
+          "type": "number",
+          "optional": true,
+          "description": "Number of digit boxes."
+        },
+        {
+          "name": "onChange",
+          "type": "((value: string) => void)",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "onComplete",
+          "type": "((value: string) => void)",
+          "optional": true,
+          "description": "Fires once the last box is filled."
+        },
+        {
+          "name": "ref",
+          "type": "Ref<HTMLDivElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "optional": true,
+          "description": "Controlled value. Longer strings are truncated to `length`."
+        }
+      ]
+    }
+  ],
+  "avatar": [
+    {
+      "name": "Avatar",
+      "source": "packages/react/avatar.tsx",
+      "props": [
+        {
+          "name": "alt",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "aria-describedby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that describes the object."
+        },
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": true,
+          "description": "Defines a string value that labels the current element."
+        },
+        {
+          "name": "aria-labelledby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that labels the current element."
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "color",
+          "type": "AvatarColor",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "defaultValue",
+          "type": "string | number | readonly string[]",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "id",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "initials",
+          "type": "string",
+          "optional": true,
+          "description": "Fallback initials, e.g. \"M\"."
+        },
+        {
+          "name": "onChange",
+          "type": "ChangeEventHandler<HTMLSpanElement, Element>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "onClick",
+          "type": "MouseEventHandler<HTMLSpanElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ref",
+          "type": "Ref<HTMLSpanElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "size",
+          "type": "AvatarSize",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "src",
+          "type": "string",
+          "optional": true,
+          "description": "Photo URL. Wins over `initials`."
+        }
+      ]
+    }
+  ],
+  "badge": [
+    {
+      "name": "Badge",
+      "source": "packages/react/badge.tsx",
+      "props": [
+        {
+          "name": "aria-describedby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that describes the object."
+        },
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": true,
+          "description": "Defines a string value that labels the current element."
+        },
+        {
+          "name": "aria-labelledby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that labels the current element."
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "color",
+          "type": "BadgeColor",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "defaultValue",
+          "type": "string | number | readonly string[]",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "id",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "onChange",
+          "type": "ChangeEventHandler<HTMLSpanElement, Element>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "onClick",
+          "type": "MouseEventHandler<HTMLSpanElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ref",
+          "type": "Ref<HTMLSpanElement>",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "chip": [
+    {
+      "name": "Chip",
+      "source": "packages/react/chip.tsx",
+      "props": [
+        {
+          "name": "aria-describedby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that describes the object."
+        },
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": true,
+          "description": "Defines a string value that labels the current element."
+        },
+        {
+          "name": "aria-labelledby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that labels the current element."
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "color",
+          "type": "ChipColor",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "defaultValue",
+          "type": "string | number | readonly string[]",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "id",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "onChange",
+          "type": "ChangeEventHandler<HTMLSpanElement, Element>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "onClick",
+          "type": "MouseEventHandler<HTMLSpanElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ref",
+          "type": "Ref<HTMLSpanElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "variant",
+          "type": "ChipVariant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "pagination": [
+    {
+      "name": "Pagination",
+      "source": "packages/react/pagination.tsx",
+      "props": [
+        {
+          "name": "onChange",
+          "type": "(page: number) => void",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "page",
+          "type": "number",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "totalPages",
+          "type": "number",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "nextLabel",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "previousLabel",
+          "type": "string",
+          "optional": true,
+          "description": "Visible and accessible navigation labels for the application's locale."
+        },
+        {
+          "name": "siblingCount",
+          "type": "number",
+          "optional": true,
+          "description": "Page numbers shown on each side of the current page. Default 1."
+        }
+      ]
+    }
+  ],
+  "table": [
+    {
+      "name": "Table",
+      "source": "packages/react/table.tsx",
+      "props": [
+        {
+          "name": "aria-describedby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that describes the object."
+        },
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": true,
+          "description": "Defines a string value that labels the current element."
+        },
+        {
+          "name": "aria-labelledby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that labels the current element."
+        },
+        {
+          "name": "children",
+          "type": "React.ReactNode",
+          "optional": true,
+          "description": "The elements that make up the table. Includes the TableHeader, TableBody, Columns, and Rows."
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "containerClassName",
+          "type": "string",
+          "optional": true,
+          "description": "Class for the scroll container that wraps the table."
+        },
+        {
+          "name": "defaultSelectedKeys",
+          "type": "Iterable<Key> | \"all\"",
+          "optional": true,
+          "description": "The initial selected keys in the collection (uncontrolled)."
+        },
+        {
+          "name": "onClick",
+          "type": "MouseEventHandler<HTMLTableElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "onSelectionChange",
+          "type": "((keys: Selection) => void)",
+          "optional": true,
+          "description": "Handler that is called when the selection changes."
+        },
+        {
+          "name": "ref",
+          "type": "Ref<HTMLTableElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "selectedKeys",
+          "type": "Iterable<Key> | \"all\"",
+          "optional": true,
+          "description": "The currently selected keys in the collection (controlled)."
+        },
+        {
+          "name": "selectionMode",
+          "type": "SelectionMode",
+          "optional": true,
+          "description": "The type of selection that is allowed in the collection."
+        },
+        {
+          "name": "size",
+          "type": "TableSize",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "TableHeader",
+      "source": "packages/react/index.ts",
+      "props": [
+        {
+          "name": "children",
+          "type": "React.ReactNode | ((item: T) => ReactElement)",
+          "optional": true,
+          "description": "A list of `Column(s)` or a function. If the latter, a list of columns must be provided using\nthe `columns` prop."
+        },
+        {
+          "name": "className",
+          "type": "ClassNameOrFunction<TableHeaderRenderProps>",
+          "optional": true,
+          "description": "The CSS [className](https://developer.mozilla.org/en-US/docs/Web/API/Element/className) for the\nelement. A function may be provided to compute the class based on component state."
+        },
+        {
+          "name": "onClick",
+          "type": "MouseEventHandler<HTMLTableSectionElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ref",
+          "type": "Ref<HTMLDivElement | HTMLTableSectionElement>",
+          "optional": true,
+          "description": "Allows getting a ref to the component instance.\nOnce the component unmounts, React will set `ref.current` to `null`\n(or call the ref with `null` if you passed a callback ref)."
+        }
+      ]
+    },
+    {
+      "name": "TableColumn",
+      "source": "packages/react/index.ts",
+      "props": [
+        {
+          "name": "children",
+          "type": "ChildrenOrFunction<import(\"react-aria-components/dist/types/src/Table\").ColumnRenderProps>",
+          "optional": true,
+          "description": "The children of the component. A function may be provided to alter the children based on\ncomponent state."
+        },
+        {
+          "name": "className",
+          "type": "ClassNameOrFunction<ColumnRenderProps>",
+          "optional": true,
+          "description": "The CSS [className](https://developer.mozilla.org/en-US/docs/Web/API/Element/className) for the\nelement. A function may be provided to compute the class based on component state."
+        },
+        {
+          "name": "id",
+          "type": "Key",
+          "optional": true,
+          "description": "The unique id of the column."
+        },
+        {
+          "name": "onClick",
+          "type": "MouseEventHandler<HTMLTableHeaderCellElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ref",
+          "type": "Ref<HTMLDivElement | HTMLTableCellElement>",
+          "optional": true,
+          "description": "Allows getting a ref to the component instance.\nOnce the component unmounts, React will set `ref.current` to `null`\n(or call the ref with `null` if you passed a callback ref)."
+        }
+      ]
+    },
+    {
+      "name": "TableBody",
+      "source": "packages/react/index.ts",
+      "props": [
+        {
+          "name": "children",
+          "type": "React.ReactNode | ((item: T) => ReactNode)",
+          "optional": true,
+          "description": "The contents of the collection."
+        },
+        {
+          "name": "className",
+          "type": "ClassNameOrFunction<TableBodyRenderProps>",
+          "optional": true,
+          "description": "The CSS [className](https://developer.mozilla.org/en-US/docs/Web/API/Element/className) for the\nelement. A function may be provided to compute the class based on component state."
+        },
+        {
+          "name": "onClick",
+          "type": "MouseEventHandler<HTMLTableSectionElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ref",
+          "type": "Ref<HTMLDivElement | HTMLTableSectionElement>",
+          "optional": true,
+          "description": "Allows getting a ref to the component instance.\nOnce the component unmounts, React will set `ref.current` to `null`\n(or call the ref with `null` if you passed a callback ref)."
+        }
+      ]
+    },
+    {
+      "name": "TableRow",
+      "source": "packages/react/index.ts",
+      "props": [
+        {
+          "name": "children",
+          "type": "React.ReactNode | ((item: T) => ReactElement)",
+          "optional": true,
+          "description": "The cells within the row. Supports static items or a function for dynamic rendering."
+        },
+        {
+          "name": "className",
+          "type": "ClassNameOrFunction<RowRenderProps>",
+          "optional": true,
+          "description": "The CSS [className](https://developer.mozilla.org/en-US/docs/Web/API/Element/className) for the\nelement. A function may be provided to compute the class based on component state."
+        },
+        {
+          "name": "href",
+          "type": "string",
+          "optional": true,
+          "description": "A URL to link to. See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#href)."
+        },
+        {
+          "name": "id",
+          "type": "Key",
+          "optional": true,
+          "description": "The unique id of the row."
+        },
+        {
+          "name": "isDisabled",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the row is disabled."
+        },
+        {
+          "name": "onClick",
+          "type": "((e: MouseEvent<FocusableElement>) => void)",
+          "optional": true,
+          "description": "**Not recommended – use `onPress` instead.** `onClick` is an alias for `onPress`\nprovided for compatibility with other libraries. `onPress` provides\nadditional event details for non-mouse interactions."
+        },
+        {
+          "name": "onPress",
+          "type": "((e: PressEvent) => void)",
+          "optional": true,
+          "description": "Handler that is called when the press is released over the target."
+        },
+        {
+          "name": "ref",
+          "type": "Ref<HTMLDivElement | HTMLTableRowElement>",
+          "optional": true,
+          "description": "Allows getting a ref to the component instance.\nOnce the component unmounts, React will set `ref.current` to `null`\n(or call the ref with `null` if you passed a callback ref)."
+        },
+        {
+          "name": "value",
+          "type": "T",
+          "optional": true,
+          "description": "The object value that this row represents. When using dynamic collections, this is set\nautomatically."
+        }
+      ]
+    },
+    {
+      "name": "TableCell",
+      "source": "packages/react/index.ts",
+      "props": [
+        {
+          "name": "children",
+          "type": "ChildrenOrFunction<import(\"react-aria-components/dist/types/src/Table\").CellRenderProps>",
+          "optional": true,
+          "description": "The children of the component. A function may be provided to alter the children based on\ncomponent state."
+        },
+        {
+          "name": "className",
+          "type": "ClassNameOrFunction<CellRenderProps>",
+          "optional": true,
+          "description": "The CSS [className](https://developer.mozilla.org/en-US/docs/Web/API/Element/className) for the\nelement. A function may be provided to compute the class based on component state."
+        },
+        {
+          "name": "id",
+          "type": "Key",
+          "optional": true,
+          "description": "The unique id of the cell."
+        },
+        {
+          "name": "onClick",
+          "type": "MouseEventHandler<HTMLTableCellElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ref",
+          "type": "Ref<HTMLDivElement | HTMLTableCellElement>",
+          "optional": true,
+          "description": "Allows getting a ref to the component instance.\nOnce the component unmounts, React will set `ref.current` to `null`\n(or call the ref with `null` if you passed a callback ref)."
+        }
+      ]
+    }
+  ],
+  "tree-view": [
+    {
+      "name": "TreeView",
+      "source": "packages/react/tree-view.tsx",
+      "props": [
+        {
+          "name": "aria-describedby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that describes the object."
+        },
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": true,
+          "description": "Defines a string value that labels the current element."
+        },
+        {
+          "name": "aria-labelledby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that labels the current element."
+        },
+        {
+          "name": "children",
+          "type": "React.ReactNode | ((item: T) => ReactNode)",
+          "optional": true,
+          "description": "The contents of the collection."
+        },
+        {
+          "name": "className",
+          "type": "ClassNameOrFunction<TreeRenderProps>",
+          "optional": true,
+          "description": "The CSS [className](https://developer.mozilla.org/en-US/docs/Web/API/Element/className) for the\nelement. A function may be provided to compute the class based on component state."
+        },
+        {
+          "name": "defaultSelectedKeys",
+          "type": "Iterable<Key> | \"all\"",
+          "optional": true,
+          "description": "The initial selected keys in the collection (uncontrolled)."
+        },
+        {
+          "name": "id",
+          "type": "string",
+          "optional": true,
+          "description": "The element's unique identifier. See\n[MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id)."
+        },
+        {
+          "name": "onClick",
+          "type": "MouseEventHandler<HTMLDivElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "onKeyDownCapture",
+          "type": "KeyboardEventHandler<HTMLDivElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "onSelectionChange",
+          "type": "((keys: Selection) => void)",
+          "optional": true,
+          "description": "Handler that is called when the selection changes."
+        },
+        {
+          "name": "ref",
+          "type": "Ref<HTMLDivElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "selectedKeys",
+          "type": "Iterable<Key> | \"all\"",
+          "optional": true,
+          "description": "The currently selected keys in the collection (controlled)."
+        },
+        {
+          "name": "selectionMode",
+          "type": "SelectionMode",
+          "optional": true,
+          "description": "The type of selection that is allowed in the collection."
+        },
+        {
+          "name": "showGuides",
+          "type": "boolean",
+          "optional": true,
+          "description": "Show connected trunks and curved branches beside nested rows."
+        },
+        {
+          "name": "size",
+          "type": "\"sm\" | \"md\"",
+          "optional": true,
+          "description": "Medium rows are 36px tall; small rows are 32px."
+        }
+      ]
+    },
+    {
+      "name": "TreeViewItem",
+      "source": "packages/react/tree-view.tsx",
+      "props": [
+        {
+          "name": "label",
+          "type": "string",
+          "optional": false,
+          "description": "Visible label, also used for accessible naming and typeahead by default."
+        },
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": true,
+          "description": "An accessibility label for this tree item."
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "optional": true,
+          "description": "Nested TreeViewItem elements or a TreeViewCollection."
+        },
+        {
+          "name": "className",
+          "type": "ClassNameOrFunction<TreeItemRenderProps>",
+          "optional": true,
+          "description": "The CSS [className](https://developer.mozilla.org/en-US/docs/Web/API/Element/className) for the\nelement. A function may be provided to compute the class based on component state."
+        },
+        {
+          "name": "expandedIcon",
+          "type": "IconComponent",
+          "optional": true,
+          "description": "Optional replacement icon while a branch is open."
+        },
+        {
+          "name": "href",
+          "type": "string",
+          "optional": true,
+          "description": "A URL to link to. See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#href)."
+        },
+        {
+          "name": "icon",
+          "type": "IconComponent | null",
+          "optional": true,
+          "description": "Defaults to a folder for branches and a file for leaves. null hides it."
+        },
+        {
+          "name": "iconClassName",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "id",
+          "type": "Key",
+          "optional": true,
+          "description": "The unique id of the tree row."
+        },
+        {
+          "name": "isDisabled",
+          "type": "boolean",
+          "optional": true,
+          "description": "Whether the item is disabled."
+        },
+        {
+          "name": "onClick",
+          "type": "((e: MouseEvent<FocusableElement>) => void)",
+          "optional": true,
+          "description": "**Not recommended – use `onPress` instead.** `onClick` is an alias for `onPress`\nprovided for compatibility with other libraries. `onPress` provides\nadditional event details for non-mouse interactions."
+        },
+        {
+          "name": "onPress",
+          "type": "((e: PressEvent) => void)",
+          "optional": true,
+          "description": "Handler that is called when the press is released over the target."
+        },
+        {
+          "name": "ref",
+          "type": "Ref<HTMLDivElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "textValue",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "trailingContent",
+          "type": "ReactNode",
+          "optional": true,
+          "description": "Optional metadata or a badge at the end of the row."
+        },
+        {
+          "name": "value",
+          "type": "T",
+          "optional": true,
+          "description": "The object value that this tree item represents. When using dynamic collections, this is set\nautomatically."
+        }
+      ]
+    }
+  ],
+  "breadcrumb": [
+    {
+      "name": "Breadcrumb",
+      "source": "packages/react/breadcrumb.tsx",
+      "props": [
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ref",
+          "type": "Ref<HTMLElement>",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "BreadcrumbItem",
+      "source": "packages/react/breadcrumb.tsx",
+      "props": [
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "current",
+          "type": "boolean",
+          "optional": true,
+          "description": "Marks the active page: not interactive, darker text."
+        },
+        {
+          "name": "href",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "icon",
+          "type": "IconComponent",
+          "optional": true,
+          "description": "Optional leading icon (16px), inherits the item color."
+        },
+        {
+          "name": "onClick",
+          "type": "(() => void)",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "agent-thinking": [
+    {
+      "name": "AgentThinking",
+      "source": "packages/react/agent-thinking.tsx",
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "label",
+          "type": "string",
+          "optional": true,
+          "description": "Status label, e.g. \"Thinking\" or \"Searching the docs\"."
+        },
+        {
+          "name": "shimmer",
+          "type": "boolean",
+          "optional": true,
+          "description": "Animated highlight traveling across the label."
+        },
+        {
+          "name": "showTimer",
+          "type": "boolean",
+          "optional": true,
+          "description": "Elapsed seconds since mount, rendered after the label."
+        },
+        {
+          "name": "tone",
+          "type": "AgentThinkingTone",
+          "optional": true,
+          "description": "Tone of the indicator + label. Defaults per variant (`stars` is subtle)."
+        },
+        {
+          "name": "variant",
+          "type": "AgentThinkingVariant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "composer-loader": [
+    {
+      "name": "ComposerLoader",
+      "source": "packages/react/composer-loader.tsx",
+      "props": [
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "active",
+          "type": "boolean",
+          "optional": true,
+          "description": "Show the light. Fades in/out — flip it while awaiting a response."
+        },
+        {
+          "name": "arc",
+          "type": "number",
+          "optional": true,
+          "description": "How much of the perimeter the band occupies, degrees (of 360)."
+        },
+        {
+          "name": "blend",
+          "type": "import(\"csstype/index\").Property.MixBlendMode",
+          "optional": true,
+          "description": "How the light composites over what's beneath, e.g. `screen` to read as light on a surface."
+        },
+        {
+          "name": "bloom",
+          "type": "number",
+          "optional": true,
+          "description": "How far the bloom bleeds inward from the rim, px."
+        },
+        {
+          "name": "bloomOnly",
+          "type": "boolean",
+          "optional": true,
+          "description": "Draw the wide bloom alone, no line or tight glow: a soft wash for a beam to lead."
+        },
+        {
+          "name": "bloomStrength",
+          "type": "number",
+          "optional": true,
+          "description": "Bloom layer opacity."
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "colors",
+          "type": "[string, string, string, string]",
+          "optional": true,
+          "description": "Four gradient colors, spread across the pill left → right."
+        },
+        {
+          "name": "intensity",
+          "type": "number",
+          "optional": true,
+          "description": "Overall light opacity."
+        },
+        {
+          "name": "line",
+          "type": "number",
+          "optional": true,
+          "description": "Width of the crisp line, px; the tight glow scales with it."
+        },
+        {
+          "name": "offset",
+          "type": "number",
+          "optional": true,
+          "description": "Moves the band forward along the lap, as a fraction of the perimeter\n(0–1). Lets two loaders on one pill line up: a short beam with\n`offset` equal to the difference of the two arcs (as fractions) leads\na wider glow tip to tip."
+        },
+        {
+          "name": "radius",
+          "type": "number",
+          "optional": true,
+          "description": "Corner radius, px. Defaults to a full pill."
+        },
+        {
+          "name": "reverse",
+          "type": "boolean",
+          "optional": true,
+          "description": "Reverse the travel direction."
+        },
+        {
+          "name": "speed",
+          "type": "number",
+          "optional": true,
+          "description": "Seconds per full lap."
+        },
+        {
+          "name": "surface",
+          "type": "boolean",
+          "optional": true,
+          "description": "Paint the pill surface behind the light (on by default)."
+        },
+        {
+          "name": "taper",
+          "type": "number",
+          "optional": true,
+          "description": "Fade the band's two ends instead of cutting them, 0–1: the fraction of\nthe band's length that ramps. Each layer is stacked as shorter, centred\ncopies at a fraction of its opacity; the blur melts the steps together."
+        }
+      ]
+    }
+  ],
+  "composer": [
+    {
+      "name": "AgentComposer",
+      "source": "packages/react/agent-composer.tsx",
+      "props": [
+        {
+          "name": "busy",
+          "type": "boolean",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "messageCount",
+          "type": "number",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "onStop",
+          "type": "() => void",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "onSubmit",
+          "type": "() => void",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "onValueChange",
+          "type": "(value: string) => void",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "model",
+          "type": "string | null",
+          "optional": true,
+          "description": "Model id reported by the runtime, e.g. \"openai/gpt-5-nano\"."
+        },
+        {
+          "name": "onAttach",
+          "type": "(() => void)",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "provider",
+          "type": "string | null",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "agent-progress": [
+    {
+      "name": "AgentProgress",
+      "source": "packages/react/agent-progress.tsx",
+      "props": [
+        {
+          "name": "steps",
+          "type": "AgentStep[]",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "progress": [
+    {
+      "name": "Progress",
+      "source": "packages/react/progress.tsx",
+      "props": [
+        {
+          "name": "aria-describedby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that describes the object."
+        },
+        {
+          "name": "aria-label",
+          "type": "string",
+          "optional": true,
+          "description": "Defines a string value that labels the current element."
+        },
+        {
+          "name": "aria-labelledby",
+          "type": "string",
+          "optional": true,
+          "description": "Identifies the element (or elements) that labels the current element."
+        },
+        {
+          "name": "children",
+          "type": "ChildrenOrFunction<import(\"react-aria-components/dist/types/src/ProgressBar\").ProgressBarRenderProps>",
+          "optional": true,
+          "description": "The children of the component. A function may be provided to alter the children based on\ncomponent state."
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "id",
+          "type": "string",
+          "optional": true,
+          "description": "The element's unique identifier. See\n[MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id)."
+        },
+        {
+          "name": "maxValue",
+          "type": "number",
+          "optional": true,
+          "description": "The largest value allowed for the input."
+        },
+        {
+          "name": "minValue",
+          "type": "number",
+          "optional": true,
+          "description": "The smallest value allowed for the input."
+        },
+        {
+          "name": "onClick",
+          "type": "MouseEventHandler<HTMLDivElement>",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "size",
+          "type": "\"sm\" | \"md\"",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "value",
+          "type": "number",
+          "optional": true,
+          "description": "The current value (controlled)."
+        }
+      ]
+    }
+  ],
+  "meter": [
+    {
+      "name": "Meter",
+      "source": "packages/react/meter.tsx",
+      "props": [
+        {
+          "name": "value",
+          "type": "number",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "label",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "max",
+          "type": "number",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "tone",
+          "type": "\"danger\" | \"success\" | \"accent\" | \"warning\"",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "stat-cards": [
+    {
+      "name": "StatCard",
+      "source": "packages/react/stat-card.tsx",
+      "props": [
+        {
+          "name": "label",
+          "type": "string",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "delta",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "icon",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "spark",
+          "type": "number[]",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "trend",
+          "type": "\"up\" | \"down\" | \"flat\"",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "area-chart-card": [
+    {
+      "name": "AreaChart",
+      "source": "packages/react/chart.tsx",
+      "props": [
+        {
+          "name": "data",
+          "type": "number[]",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "gradientId",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "height",
+          "type": "number",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "stroke",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "line-chart-card": [
+    {
+      "name": "LineChart",
+      "source": "packages/react/chart.tsx",
+      "props": [
+        {
+          "name": "series",
+          "type": "{ data: number[]; color: string; }[]",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "height",
+          "type": "number",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "bar-chart-card": [
+    {
+      "name": "BarChart",
+      "source": "packages/react/chart.tsx",
+      "props": [
+        {
+          "name": "data",
+          "type": "number[]",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "color",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "height",
+          "type": "number",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "radar-chart": [
+    {
+      "name": "RadarChart",
+      "source": "packages/react/chart.tsx",
+      "props": [
+        {
+          "name": "axes",
+          "type": "string[]",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "values",
+          "type": "number[]",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "size",
+          "type": "number",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "radial-chart": [
+    {
+      "name": "RadialChart",
+      "source": "packages/react/chart.tsx",
+      "props": [
+        {
+          "name": "value",
+          "type": "number",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "color",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "label",
+          "type": "string",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "size",
+          "type": "number",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "funnel-chart": [
+    {
+      "name": "FunnelChart",
+      "source": "packages/react/chart.tsx",
+      "props": [
+        {
+          "name": "steps",
+          "type": "{ label: string; value: number; }[]",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "height",
+          "type": "number",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "FunnelLegend",
+      "source": "packages/react/chart.tsx",
+      "props": [
+        {
+          "name": "items",
+          "type": "{ name: string; value: string; color: string; }[]",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ]
+}

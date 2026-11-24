@@ -1,6 +1,6 @@
 "use client";
 
-import { useId, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { Icon } from "../ui/Icon";
 
@@ -22,15 +22,18 @@ export function ComponentPreview({
   const id = useId();
   const [tab, setTab] = useState<"preview" | "code">("preview");
   const [copied, setCopied] = useState(false);
+  const [copyError,setCopyError]=useState(false);
+  const timer=useRef<ReturnType<typeof setTimeout>|null>(null);
+  useEffect(()=>()=>{if(timer.current)clearTimeout(timer.current)},[]);
 
   const copy = async () => {
     if (!code) return;
     try {
       await navigator.clipboard.writeText(code);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 1600);
+      setCopied(true);setCopyError(false);
+      if(timer.current)clearTimeout(timer.current);timer.current=setTimeout(() => setCopied(false), 1600);
     } catch {
-      /* ignore */
+      setCopyError(true);
     }
   };
 
@@ -100,17 +103,18 @@ export function ComponentPreview({
             )}
           >
             <Icon name={copied ? "check-line" : "file-copy-line"} className="size-3.5" />
-            {copied ? "已复制" : "复制代码"}
+            {copied ? "已复制" : copyError ? "复制失败" : "复制代码"}
           </button>
         </div>
       </div>
 
+      {(copied||copyError)&&<span role="status" className="sr-only">{copied?"代码已复制":"复制失败，请打开代码视图手动复制"}</span>}
       {/* 画布 */}
       <div
         className={cn(
           "relative flex items-center justify-center overflow-hidden",
           "rounded-3xl border border-border-component-detail-container",
-          "p-8"
+          "p-4 sm:p-8"
         )}
         role="tabpanel"
         id={`${id}-panel`}

@@ -1,4 +1,5 @@
 import { DocsLayout } from "./DocsLayout";
+import { ApiReference,type ApiEntry } from "./ApiReference";
 import { ComponentPreview } from "./ComponentPreview";
 import type { Crumb } from "./Breadcrumbs";
 import type { TocItem } from "./TableOfContents";
@@ -24,7 +25,7 @@ export function ComponentPage({
   preview,
   previewCode,
   sections = [],
-  install,
+  install,api,
 }: {
   title: string;
   description: string;
@@ -33,11 +34,13 @@ export function ComponentPage({
   previewCode?: string;
   sections?: DemoSection[];
   install?: string;
+  api?:ApiEntry[];
 }) {
   const toc: TocItem[] = [
     { id: "preview", label: "预览" },
     ...(install ? [{ id: "installation", label: "安装" }] : []),
     ...sections.map((s) => ({ id: s.id, label: s.title })),
+    ...(api?.length?[{id:"api",label:"组件 API"}]:[]),
   ];
 
   return (
@@ -79,6 +82,7 @@ export function ComponentPage({
           </ComponentPreview>
         </section>
       ))}
+      {!!api?.length&&<ApiReference entries={api}/>}
     </DocsLayout>
   );
 }

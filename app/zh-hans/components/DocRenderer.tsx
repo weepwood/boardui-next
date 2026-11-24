@@ -4,7 +4,8 @@
  * 组件文档页客户端渲染器。
  * 服务端只负责路由与 metadata，实际内容（含交互演示）在此渲染。
  */
-import { use } from "react";
+import apiReference from "@/lib/docs/api-reference.generated.json";
+import type { ApiEntry } from "@/app/components/docs/ApiReference";
 import { notFound } from "next/navigation";
 import { ComponentPage, componentCrumbs } from "@/app/components/docs/ComponentPage";
 import { docs } from "@/lib/docs/registry";
@@ -26,6 +27,7 @@ export function DocRenderer({ slug }: { slug: string }) {
       preview={doc.preview}
       previewCode={doc.previewCode}
       install={doc.install}
+      api={(apiReference as Record<string,ApiEntry[]>)[slug]}
       sections={doc.demos.map((d) => ({
         id: d.id,
         title: d.title,
