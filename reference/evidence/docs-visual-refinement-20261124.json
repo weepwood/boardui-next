@@ -1,0 +1,174 @@
+{
+  "baseline": "54ee0e519b471343f7c548828f8799b03439e7da",
+  "scope": "Local Edge screenshot and layout audit, four pages, two viewport widths, two themes. Not full visual parity.",
+  "results": [
+    {
+      "theme": "light",
+      "width": 1440,
+      "name": "home",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "selected": [],
+      "errors": []
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "name": "catalog",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "selected": [
+        "组件"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "name": "button",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "selected": [
+        "按钮"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "name": "templates",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "selected": [
+        "模板"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "name": "home",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "selected": [],
+      "errors": []
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "name": "catalog",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "selected": [
+        "组件"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "name": "button",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "selected": [
+        "按钮"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "name": "templates",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "selected": [
+        "模板"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "name": "home",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "selected": [],
+      "errors": []
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "name": "catalog",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "selected": [
+        "组件"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "name": "button",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "selected": [
+        "按钮"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "name": "templates",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "selected": [
+        "模板"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "name": "home",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "selected": [],
+      "errors": []
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "name": "catalog",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "selected": [
+        "组件"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "name": "button",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "selected": [
+        "按钮"
+      ],
+      "errors": []
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "name": "templates",
+      "overflow": false,
+      "clippedCaptions": 0,
+      "selected": [
+        "模板"
+      ],
+      "errors": []
+    }
+  ]
+}

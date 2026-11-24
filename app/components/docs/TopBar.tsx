@@ -40,16 +40,16 @@ function IconLink({
 
 export function TopBar({ breadcrumbs }: { breadcrumbs: Crumb[] }) {
   return (
-    <div className="flex w-full flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+    <div className="flex min-w-0 w-full items-center justify-between gap-3">
       <Breadcrumbs items={breadcrumbs} />
 
       <div className="flex shrink-0 items-center gap-1">
         {/* 语言切换 */}
         <span
           className={cn(
-            "hidden h-8 items-center gap-1.5 rounded-2lg px-2 sm:inline-flex",
+            "hidden h-9 items-center gap-1.5 rounded-2lg px-2 md:inline-flex",
             "text-caption-1-medium text-text-secondary",
-            "transition-colors duration-150 ease-out hover:bg-background-secondary-hover"
+            "transition-colors duration-150 ease-out"
           )}
         >
           <Icon name="translate-2" className="size-4" />
@@ -74,13 +74,13 @@ export function TopBar({ breadcrumbs }: { breadcrumbs: Crumb[] }) {
         {/* Pro 按钮 */}
         <a href="https://www.boardui.com/" target="_blank" rel="noreferrer" aria-label="原版 BoardUI 官网"
           className={cn(
-            "ms-1 flex h-8 cursor-pointer items-center gap-1 rounded-2lg px-2",
+            "ms-1 hidden h-9 cursor-pointer sm:flex items-center gap-1 rounded-2lg px-2",
             "border border-border-button-default bg-background-primary-default",
             "text-caption-1-medium text-text-primary shadow-xs",
             "transition-colors duration-150 ease-out hover:bg-background-primary-hover"
           )}
         >
-          <Icon name="vip-crown-2-line" className="size-4 text-amber-500" />
+          <Icon name="arrow-right-up-line" className="size-4 text-foreground-icon-secondary" />
           <span className="shrink-0 px-1">原版官网</span>
         </a>
       </div>

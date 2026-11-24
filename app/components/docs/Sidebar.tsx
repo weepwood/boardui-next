@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useId, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { navigation, type NavItem } from "@/lib/navigation";
@@ -36,9 +36,9 @@ function TreeGuide({ active,last }: { active: boolean;last:boolean }) {
   return (
     <span
       aria-hidden="true"
-      className="pointer-events-none absolute inset-y-0 start-[12.5px] w-3 text-foreground-icon-secondary"
+      className="pointer-events-none absolute inset-y-0 start-[12.5px] w-3 text-separator-border-strong"
     >
-      <span className={cn("absolute top-0 start-0 w-px bg-current opacity-40",last?"bottom-1/2":"-bottom-0.5")} />
+      <span className={cn("absolute top-0 start-0 w-px bg-current",last?"bottom-1/2":"-bottom-0.5")} />
       <svg
         width="12"
         height="6"
@@ -48,9 +48,9 @@ function TreeGuide({ active,last }: { active: boolean;last:boolean }) {
       >
         <path
           d="M0.5 0 Q0.5 5 5.5 5 H11.5"
-          stroke="currentColor"
+          stroke={active?"var(--color-foreground-icon-secondary)":"currentColor"}
           strokeWidth="1"
-          opacity={active ? 1 : 0.4}
+          opacity={1}
         />
       </svg>
     </span>
@@ -65,11 +65,11 @@ function NavLink({ item,active,last }: { item: NavItem;active:boolean;last:boole
       aria-current={active ? "page" : undefined}
       data-nav-selected={active?"true":undefined}
       className={cn(
-        "relative flex min-h-8 items-center gap-2 rounded-lg py-1.5 pe-2.5 ps-8 outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-border-focus-ring",
-        "text-body-regular transition-colors duration-150 ease-out motion-reduce:transition-none",
+        "relative flex h-8 shrink-0 items-center gap-2 rounded-lg pe-2.5 ps-8 outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-border-focus-ring",
+        "text-body-medium transition-colors duration-150 ease-out motion-reduce:transition-none",
         active
-          ? "bg-background-secondary-hover text-body-medium text-text-primary"
-          : "text-text-secondary hover:bg-background-primary-hover hover:text-text-primary"
+          ? "bg-background-secondary-hover text-text-primary"
+          : "text-text-secondary hover:bg-background-tertiary-hover hover:text-text-primary"
       )}
     >
       <TreeGuide active={active} last={last}/>
@@ -107,8 +107,8 @@ function NavGroupSection({
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open} aria-controls={id}
         className={cn(
-          "flex w-full cursor-pointer items-center justify-between rounded-md px-2.5 pt-2 pb-1",
-          "text-caption-1-semibold tracking-wide text-text-tertiary uppercase",
+          "flex w-full cursor-pointer items-center justify-between rounded-lg px-2.5 pt-2 pb-1.5",
+          "text-caption-1-medium text-text-secondary",
           "transition-colors duration-150 ease-out hover:bg-background-secondary-hover",
           "outline-none focus-visible:ring-2 focus-visible:ring-accent-500"
         )}
@@ -118,13 +118,13 @@ function NavGroupSection({
           name="arrow-down-s-line"
           className={cn(
             "size-3.5 transition-transform duration-200 ease-bui",
-            !open && "-rotate-90"
+            !open && "-rotate-90 rtl:rotate-90"
           )}
         />
       </button>
 
       <div
-        id={id} inert={!open} aria-hidden={!open} className="grid transition-[grid-template-rows,opacity] duration-300 ease-in-out motion-reduce:transition-none"
+        id={id} inert={!open} aria-hidden={!open} className="grid transition-[grid-template-rows,opacity] duration-300 ease-bui motion-reduce:transition-none"
         style={{
           gridTemplateRows: open ? "1fr" : "0fr",
           opacity: open ? 1 : 0,
@@ -147,9 +147,11 @@ export function Sidebar() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [mobileOpen,setMobileOpen]=useState(false);
   const pathname=usePathname();
+  const desktopNav=useRef<HTMLElement>(null);
   const normalized=(pathname??"").replace(/\/$/,"");
   const activeHref=navigation.flatMap(g=>g.items).find(i=>i.href.replace(/\/$/,"")===normalized)?.href;
   useEffect(()=>setMobileOpen(false),[pathname]);
+  useEffect(()=>{const nav=desktopNav.current;const active=nav?.querySelector<HTMLElement>('[aria-current="page"]');if(!nav||!active)return;const n=nav.getBoundingClientRect(),a=active.getBoundingClientRect();if(a.top<n.top||a.bottom>n.bottom)nav.scrollTop+=a.top-n.top-n.height/3;},[activeHref]);
 
   // ⌘K / Ctrl+K 唤起搜索
   useEffect(() => {
@@ -165,11 +167,11 @@ export function Sidebar() {
 
   const content=(mobile:boolean)=><>
       {/* 品牌 */}
-      <Link href="/" prefetch={false} className="flex w-full items-center gap-2 px-1">
+      <Link href="/" prefetch={false} className="flex h-8 w-full shrink-0 items-center gap-2 px-1">
         <span className="flex size-6 shrink-0 items-center justify-center rounded-md bg-text-primary text-[13px] font-bold text-background-full">
           B
         </span>
-        <span className="text-title-3-semibold text-text-primary">BoardUI</span>
+        <span className="text-headline-medium text-text-primary">BoardUI</span>
       </Link>
 
       {/* 快速搜索 */}
@@ -178,8 +180,8 @@ export function Sidebar() {
         aria-label="快速搜索"
         onClick={() => {if(mobile)setMobileOpen(false);setSearchOpen(true)}}
         className={cn(
-          "flex w-full cursor-pointer items-center gap-2 rounded-full",
-          "bg-background-tertiary-default px-3 py-1.5 text-start",
+          "docs-search-field flex h-9 w-full shrink-0 cursor-pointer items-center gap-2 rounded-full",
+          "px-3 text-start",
           "transition-colors duration-150 ease-out hover:bg-background-tertiary-hover"
         )}
       >
@@ -201,7 +203,7 @@ export function Sidebar() {
       </button>
 
       {/* 导航树 */}
-      <nav
+      <nav ref={mobile?undefined:desktopNav}
         aria-label="元件库"
         className={cn(
           "-me-1 flex min-h-0 flex-1 flex-col gap-2 overflow-y-auto pe-1",
@@ -221,7 +223,7 @@ export function Sidebar() {
     <>
     <aside
       className={cn(
-        "sticky top-3 m-3 hidden h-[calc(100vh-24px)] w-[260px] shrink-0",
+        "sticky top-3 m-3 hidden h-[calc(100dvh-24px)] w-[260px] shrink-0",
         "flex-col gap-3 overflow-hidden rounded-3xl border border-border-button-white",
         "bg-background-secondary-default p-3 shadow-sidebar lg:flex"
       )}
@@ -230,7 +232,7 @@ export function Sidebar() {
     </aside>
     <button type="button" aria-label="打开文档导航" aria-haspopup="dialog" aria-expanded={mobileOpen} onClick={()=>setMobileOpen(true)} className="fixed bottom-4 start-4 z-40 flex h-10 items-center gap-2 rounded-full border border-border-button-default bg-background-primary-default px-3 text-body-medium text-text-primary shadow-dropdown lg:hidden"><Icon name="menu-line" className="size-5"/>导航</button>
     <ModalOverlay isOpen={mobileOpen} onOpenChange={setMobileOpen} isDismissable className="fixed inset-0 z-[70] flex bg-black/30 dark:bg-black/60 lg:hidden">
-      <Modal className="h-full w-[min(300px,calc(100vw-24px))] p-3 outline-none"><Dialog aria-label="文档导航" className="flex h-full min-h-0 flex-col gap-3 overflow-hidden rounded-3xl border border-border-button-default bg-background-secondary-default p-3 shadow-sidebar outline-none"><div className="flex justify-end"><CloseButton size="md" aria-label="关闭文档导航" onClick={()=>setMobileOpen(false)}/></div>{content(true)}</Dialog></Modal>
+      <Modal className="h-full w-[min(300px,calc(100vw-24px))] p-3 outline-none"><Dialog aria-label="文档导航" className="flex h-full min-h-0 flex-col gap-3 overflow-hidden rounded-3xl border border-border-button-white bg-background-secondary-default p-3 shadow-sidebar outline-none"><div className="flex justify-end"><CloseButton size="md" aria-label="关闭文档导航" onClick={()=>setMobileOpen(false)}/></div>{content(true)}</Dialog></Modal>
     </ModalOverlay>
     <CommandSearch open={searchOpen} onClose={() => setSearchOpen(false)} />
     </>
