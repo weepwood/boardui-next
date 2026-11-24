@@ -92,7 +92,7 @@
       "tier": "free",
       "upstreamStatus": "shipped",
       "localRoute": "/zh-hans/components/button",
-      "implementation": "existing-unverified",
+      "implementation": "ported-unverified",
       "sourcePolicy": "verify-public-source",
       "verification": {
         "visual": "pending",
@@ -101,7 +101,19 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "sourcePaths": [
+        "components/base/buttons/button.tsx",
+        "styles/theme.css",
+        "utils/cx.ts"
+      ],
+      "localPaths": [
+        "packages/react/button.tsx",
+        "packages/react/aria-button.tsx",
+        "packages/styles/button.ts",
+        "packages/styles/button.css"
+      ],
+      "notes": "原版样式配方、原生 Button/ButtonLink 和 React Aria 适配已落地；图标 RTL 自动识别未移植，所有验证项待执行。"
     },
     {
       "slug": "button-group",
