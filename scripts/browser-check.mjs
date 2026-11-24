@@ -104,7 +104,7 @@ try{
           const input=demo.getByRole('textbox',{name:'受控邮箱'});
           await input.fill('demo@example.com');
           assert.equal(await input.inputValue(),'demo@example.com');
-          assert.equal(await input.getAttribute('aria-required'),'true');
+          assert.ok(await input.evaluate(e=>e.required || e.getAttribute('aria-required')==='true'),'required field semantics');
           assert.ok(await input.getAttribute('aria-describedby'));
           const notes=demo.getByRole('textbox',{name:'受控备注'});
           const before=(await notes.boundingBox()).height;
