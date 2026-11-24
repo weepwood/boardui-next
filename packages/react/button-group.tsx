@@ -101,7 +101,7 @@ export interface ButtonGroupItemProps
 
 export function ButtonGroupItem({
   size = "medium",
-  selected = false,
+  selected,
   iconOnly = false,
   leadingIcon: Leading,
   trailingIcon: Trailing,
