@@ -25,7 +25,7 @@ import {
 } from "./menu-styles";
 import { ChevronDownSmall } from "./chevrons";
 import { cx } from "./cx";
-import { useDismissOnOutsidePress, useTriggerToggle } from "./use-dismiss-on-outside-press";
+
 
 /**
  * Figma source: Board UI → dashboard 1 dropdown triggers ("All prices" filter
@@ -77,29 +77,20 @@ export function Select<T extends object>({
   isOpen: controlledOpen, onOpenChange, defaultOpen,
   ...props
 }: SelectProps<T>) {
-  // The popover is `isNonModal`: react-aria's modal scroll lock puts
-  // `overflow: hidden` on <html>, which — with this app's `h-full` root —
-  // collapses the page scroll position and visibly yanks the sticky
-  // sidebar upward every time a select opens. Non-modal skips the lock,
-  // but also disables react-aria's outside-press dismissal (`isDismissable`
-  // is hard-coupled to `!isNonModal` in usePopover), so open state is
-  // controlled here and dismissal restored manually — the same fix as the
-  // date-picker family (see utils/use-dismiss-on-outside-press.ts).
+  // React Aria owns outside dismissal and focus restoration, as in Dropdown.
   const triggerRef = useRef<HTMLButtonElement>(null);
   const popoverRef = useRef<HTMLElement>(null);
   const [innerOpen, setInnerOpen] = useState(defaultOpen ?? false);
   const isOpen = controlledOpen ?? innerOpen;
   const setIsOpen = (next:boolean) => { setInnerOpen(next); onOpenChange?.(next); };
-  useDismissOnOutsidePress(isOpen, () => setIsOpen(false), [triggerRef, popoverRef]);
-  // Pressing the trigger while open closes the popover instead of reopening
-  const allowOpenChange = useTriggerToggle(isOpen, triggerRef);
+
 
   return (
     <AriaSelect
       ref={ref}
       {...props}
       isOpen={isOpen}
-      onOpenChange={(o) => allowOpenChange(o) && setIsOpen(o)}
+      onOpenChange={setIsOpen}
       className={cx("group flex flex-col", className)}
     >
       {({ isOpen }) => (
@@ -138,7 +129,6 @@ export function Select<T extends object>({
           </AriaButton>
           <AriaPopover
             ref={popoverRef}
-            isNonModal
             offset={4}
             className={cx(
               MENU_POPOVER_WIDTH,
