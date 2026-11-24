@@ -3,7 +3,7 @@
 /**
  * 组件文档注册表。
  * 每个条目包含：标题、描述、预览演示、分节演示、代码示例。
- * 演示内容用 JSX 直接定义，保证可交互。
+ * 演示通过惰性工厂创建：共享模块保留缓存，只创建当前需要的 JSX。
  */
 import { useState } from "react";
 import { Select as FilterSelect, SelectItem as FilterOption } from "@/packages/react/select";
@@ -112,8 +112,8 @@ export type Doc = {
   description: string;
   install?: string;
   previewCode?: string;
-  preview: ReactNode;
-  demos: Demo[];
+  preview: () => ReactNode;
+  demos: () => Demo[];
 };
 
 /* ---------------- 交互式包装组件 ---------------- */
@@ -237,8 +237,8 @@ import { RiArrowRightLine } from "@remixicon/react";
 <Button variant="secondary" trailingIcon={RiArrowRightLine}>继续</Button>
 <Button variant="ghost">标记为已完成</Button>
 <Button variant="danger">删除</Button>`,
-    preview: <><NativeButton>开始使用</NativeButton><NativeButton variant="secondary" trailingIcon={ArrowGlyph}>继续</NativeButton><NativeButton variant="ghost">标记为已完成</NativeButton><NativeButton variant="danger">删除</NativeButton></>,
-    demos: [
+    preview: () => (<><NativeButton>开始使用</NativeButton><NativeButton variant="secondary" trailingIcon={ArrowGlyph}>继续</NativeButton><NativeButton variant="ghost">标记为已完成</NativeButton><NativeButton variant="danger">删除</NativeButton></>),
+    demos: () => ([
       {id:"variants",title:"变体",code:`<Button>按钮文字</Button>
 <Button variant="secondary">按钮文字</Button>
 <Button variant="ghost">按钮文字</Button>
@@ -253,25 +253,25 @@ import { RiArrowRightLine } from "@remixicon/react";
 <Button variant="secondary" disabled>按钮文字</Button>`,node:<><NativeButton disabled>按钮文字</NativeButton><NativeButton variant="secondary" disabled>按钮文字</NativeButton><NativeButton variant="ghost" disabled>按钮文字</NativeButton><NativeButton variant="danger" disabled>按钮文字</NativeButton></>},
       {id:"native",title:"扩展接口：原生链接和 React Aria",node:<><AriaButton>AriaButton</AriaButton><ButtonLink href={(process.env.NEXT_PUBLIC_BASE_PATH ?? "") + "/zh-hans/components/"} variant="secondary">查看组件</ButtonLink></>},
       {id:"legacy",title:"旧版兼容接口",description:"保留既有业务页面调用方式。",node:<><Button size="sm">小号</Button><Button variant="outline">描边</Button><Button variant="destructive">危险</Button></>},
-    ],
+    ]),
   },
 
   "icon-button": {
     title: "图标按钮",
     description: "原版 secondary 样式，36 / 32px 方形容器，10px 圆角，20 / 16px 图标。旧版扩展变体保留在兼容示例。",
-    preview: <><CoreIconButton icon={AddGlyph} aria-label="新建"/><CoreIconButton icon={EditGlyph} aria-label="编辑" size="small"/><CoreIconButton icon={AddGlyph} aria-label="禁用新建" disabled/></>,
-    demos: [
+    preview: () => (<><CoreIconButton icon={AddGlyph} aria-label="新建"/><CoreIconButton icon={EditGlyph} aria-label="编辑" size="small"/><CoreIconButton icon={AddGlyph} aria-label="禁用新建" disabled/></>),
+    demos: () => ([
       {id:"sizes",title:"原版尺寸",node:<><CoreIconButton icon={AddGlyph} aria-label="中尺寸" size="medium"/><CoreIconButton icon={AddGlyph} aria-label="小尺寸" size="small"/></>},
       {id:"legacy",title:"旧版兼容变体",node:<><IconButton icon="settings-3-line" label="设置" variant="ghost"/><IconButton icon="settings-3-line" label="设置" variant="outline"/><IconButton icon="settings-3-line" label="设置" variant="filled"/></>},
-    ],
+    ]),
   },
 
   chip: {
     title: "状态与筛选标签",
     description: "可切换的紧凑筛选标签，用于过滤列表与多选场景。",
     install: "npx boardui@latest add chip",
-    preview: <><StatusChip color="lime">完成</StatusChip><StatusChip color="rose">失败</StatusChip><StatusChip color="blue" variant="subtle">处理中</StatusChip><StatusChip color="neutral" variant="caption">成员</StatusChip></>,
-    demos: [
+    preview: () => (<><StatusChip color="lime">完成</StatusChip><StatusChip color="rose">失败</StatusChip><StatusChip color="blue" variant="subtle">处理中</StatusChip><StatusChip color="neutral" variant="caption">成员</StatusChip></>),
+    demos: () => ([
       {id:"filters",title:"交互筛选（兼容扩展）",node:<ChipDemo/>},
       {
         id: "with-icon",
@@ -284,34 +284,34 @@ import { RiArrowRightLine } from "@remixicon/react";
           </>
         ),
       },
-    ],
+    ]),
   },
 
   input: {
     title: "输入框",
     description: "原版 React Aria 输入框：统一 32/36px 灰底容器、标签、辅助说明与语义状态，聚焦时使用内描边。",
-    preview: <div className="w-[250px] max-w-full"><Input label="电子邮箱" placeholder="输入您的电子邮件" type="email" leadingIcon={RiMailLine} isRequired tooltip="输入有效电子邮箱" hint="请输入有效的邮箱地址"/></div>,
-    demos: [
+    preview: () => (<div className="w-[250px] max-w-full"><Input label="电子邮箱" placeholder="输入您的电子邮件" type="email" leadingIcon={RiMailLine} isRequired tooltip="输入有效电子邮箱" hint="请输入有效的邮箱地址"/></div>),
+    demos: () => ([
       {id:"states",title:"状态",node:<div className="flex w-full max-w-sm flex-col gap-4"><Input label="默认" placeholder="请输入"/><Input label="禁用" defaultValue="不可编辑" isDisabled/><Input label="错误" placeholder="请输入邮箱" isInvalid invalidMessage="邮箱格式有误"/><Input label="只读" defaultValue="只读内容" isReadOnly/></div>},
       {id:"controlled",title:"受控表单",node:<ControlledFormDemo/>},
-    ],
+    ]),
   },
 
   textarea: {
     title: "多行文本框",
     description: "复用 Input 的标签、辅助文字、语义状态与灰底容器。支持自动增高、最大行数、字符统计及原生调整高度。",
-    preview: <div className="w-full max-w-sm"><Textarea label="备注" placeholder="输入备注…" rows={3} maxLength={500} showCount description="填写补充说明"/></div>,
-    demos: [
+    preview: () => (<div className="w-full max-w-sm"><Textarea label="备注" placeholder="输入备注…" rows={3} maxLength={500} showCount description="填写补充说明"/></div>),
+    demos: () => ([
       {id:"auto-resize",title:"自动增高",node:<div className="w-full max-w-sm"><Textarea label="自适应文本域" rows={2} autoResize maxRows={5} maxLength={200} showCount placeholder="输入多行文本…"/></div>},
       {id:"states",title:"状态",node:<div className="flex w-full max-w-sm flex-col gap-4"><Textarea label="禁用" isDisabled defaultValue="不可编辑" rows={2}/><Textarea label="错误" isInvalid hint="请填写备注" rows={2}/></div>},
-    ],
+    ]),
   },
 
   "search-field": {
     title: "搜索框",
     description: "沿用 BoardUI 输入框的语义令牌与交互节奏，保留胶囊形态、搜索图标及可访问的清除按钮。此项为本地扩展。",
-    preview: <div className="w-full max-w-sm"><SearchField placeholder="搜索组件…"/></div>,
-    demos: [{id:"states",title:"状态",node:<div className="flex w-full max-w-sm flex-col gap-4"><SearchField aria-label="已有搜索内容" defaultValue="BoardUI"/><SearchField aria-label="禁用搜索" defaultValue="不可编辑" isDisabled/></div>}],
+    preview: () => (<div className="w-full max-w-sm"><SearchField placeholder="搜索组件…"/></div>),
+    demos: () => ([{id:"states",title:"状态",node:<div className="flex w-full max-w-sm flex-col gap-4"><SearchField aria-label="已有搜索内容" defaultValue="BoardUI"/><SearchField aria-label="禁用搜索" defaultValue="不可编辑" isDisabled/></div>}]),
   },
 
   switch: {
@@ -319,13 +319,13 @@ import { RiArrowRightLine } from "@remixicon/react";
     description:
       "二元状态切换控件。三层结构：渐变轨道 + 白灰渐变圆钮 + 蓝色内芯，支持胶囊与矩形两种形状。",
     install: "npx boardui@latest add switch",
-    preview: (
+    preview: () => ((
       <>
         <Switch defaultSelected>开启</Switch>
         <Switch>关闭</Switch>
       </>
-    ),
-    demos: [
+    )),
+    demos: () => ([
       {
         id: "sizes",
         title: "胶囊",
@@ -360,15 +360,15 @@ import { RiArrowRightLine } from "@remixicon/react";
           </>
         ),
       },
-    ],
+    ]),
   },
 
   checkbox: {
     title: "复选框",
     description: "多选控件，支持选中、未选中、不确定三种状态。",
     install: "npx boardui@latest add checkbox",
-    preview: <div className="flex flex-wrap items-center justify-center gap-6"><Checkbox aria-label="未选中"/><Checkbox aria-label="已选中" defaultSelected/><Checkbox aria-label="不确定" isIndeterminate/><Checkbox aria-label="禁用" isDisabled/><Checkbox aria-label="禁用且选中" isDisabled defaultSelected/></div>,
-    demos: [
+    preview: () => (<div className="flex flex-wrap items-center justify-center gap-6"><Checkbox aria-label="未选中"/><Checkbox aria-label="已选中" defaultSelected/><Checkbox aria-label="不确定" isIndeterminate/><Checkbox aria-label="禁用" isDisabled/><Checkbox aria-label="禁用且选中" isDisabled defaultSelected/></div>),
+    demos: () => ([
       { id: "controlled", title: "受控状态", node: <ControlledSelectionDemo /> },
       {
         id: "disabled",
@@ -380,29 +380,29 @@ import { RiArrowRightLine } from "@remixicon/react";
           </>
         ),
       },
-    ],
+    ]),
   },
 
   radio: {
     title: "单选框",
     description: "互斥单选控件，配合单选组使用。",
     install: "npx boardui@latest add radio",
-    preview: (
+    preview: () => ((
       <RadioGroup defaultValue="a" label="选择方案">
         <Radio value="a">方案 A</Radio>
         <Radio value="b">方案 B</Radio>
         <Radio value="c" size="sm">方案 C</Radio>
       </RadioGroup>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   select: {
     title: "选择器",
     description: "原版单选触发器与共享浮层，支持旋转箭头、键盘选择和外部点击关闭。",
     install: "npx boardui@latest add select",
-    preview: <div className="flex flex-wrap items-center justify-center gap-3"><FilterSelect aria-label="按价格过滤" defaultSelectedKey="all"><FilterOption id="all">所有价格</FilterOption><FilterOption id="low">100 元以内</FilterOption><FilterOption id="high">100 元以上</FilterOption></FilterSelect><FilterSelect aria-label="按地区过滤" defaultSelectedKey="all"><FilterOption id="all">所有地区</FilterOption><FilterOption id="europe">欧洲</FilterOption><FilterOption id="americas">美洲</FilterOption></FilterSelect></div>,
-    demos: [{id:"framework",title:"受控选择与图标",node:<SelectDemo/>}],
+    preview: () => (<div className="flex flex-wrap items-center justify-center gap-3"><FilterSelect aria-label="按价格过滤" defaultSelectedKey="all"><FilterOption id="all">所有价格</FilterOption><FilterOption id="low">100 元以内</FilterOption><FilterOption id="high">100 元以上</FilterOption></FilterSelect><FilterSelect aria-label="按地区过滤" defaultSelectedKey="all"><FilterOption id="all">所有地区</FilterOption><FilterOption id="europe">欧洲</FilterOption><FilterOption id="americas">美洲</FilterOption></FilterSelect></div>),
+    demos: () => ([{id:"framework",title:"受控选择与图标",node:<SelectDemo/>}]),
 
   },
 
@@ -410,12 +410,12 @@ import { RiArrowRightLine } from "@remixicon/react";
     title: "滑块",
     description: "沿轨道拖动的数值选择控件。",
     install: "npx boardui@latest add slider",
-    preview: (
+    preview: () => ((
       <div className="w-full max-w-sm">
         <Slider label="音量" defaultValue={60} minValue={0} maxValue={100} />
       </div>
-    ),
-    demos: [
+    )),
+    demos: () => ([
       {
         id: "range",
         title: "范围滑块",
@@ -426,14 +426,14 @@ import { RiArrowRightLine } from "@remixicon/react";
           </div>
         ),
       },
-    ],
+    ]),
   },
 
   badge: {
     title: "徽标",
     description: "状态标记小胶囊，用于标注分类、状态或计数。",
     install: "npx boardui@latest add badge",
-    preview: (
+    preview: () => ((
       <>
         <Badge>默认</Badge>
         <Badge variant="accent">全新</Badge>
@@ -442,22 +442,22 @@ import { RiArrowRightLine } from "@remixicon/react";
         <Badge variant="danger">错误</Badge>
         <Badge variant="pro">Pro</Badge>
       </>
-    ),
-    demos: [{id:"status",title:"状态指示",node:<><StatusDot color="green"/><StatusDot color="yellow"/><StatusDot color="indigo"/></>}],
+    )),
+    demos: () => ([{id:"status",title:"状态指示",node:<><StatusDot color="green"/><StatusDot color="yellow"/><StatusDot color="indigo"/></>}]),
   },
 
   avatar: {
     title: "头像",
     description: "用户或实体的图形标识。无图片时以首字母着色展示。",
     install: "npx boardui@latest add avatar",
-    preview: (
+    preview: () => ((
       <>
         <Avatar name="张三" size="lg" />
         <Avatar name="李四" size="lg" />
         <Avatar name="王五" size="lg" />
       </>
-    ),
-    demos: [
+    )),
+    demos: () => ([
       {id:"fallback",title:"图片加载失败回退",node:<CoreAvatar src="data:image/png;base64,broken" alt="测试头像" initials="A" aria-label="回退头像"/>},
       {
         id: "sizes",
@@ -472,19 +472,19 @@ import { RiArrowRightLine } from "@remixicon/react";
           </>
         ),
       },
-    ],
+    ]),
   },
 
   progress: {
     title: "进度条",
     description: "线性进度指示，蓝色渐变填充。",
     install: "npx boardui@latest add progress",
-    preview: (
+    preview: () => ((
       <div className="w-full max-w-sm">
         <Progress aria-label="任务进度" value={45} />
       </div>
-    ),
-    demos: [
+    )),
+    demos: () => ([
       {
         id: "sizes",
         title: "尺寸",
@@ -496,27 +496,27 @@ import { RiArrowRightLine } from "@remixicon/react";
           </div>
         ),
       },
-    ],
+    ]),
   },
 
   spinner: {
     title: "加载圈",
     description: "不确定进度指示器，用于等待态。",
     install: "npx boardui@latest add spinner",
-    preview: (
+    preview: () => ((
       <>
         <Spinner className="text-accent-500" size={20} />
         <Spinner className="text-accent-500" size={28} />
       </>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   skeleton: {
     title: "骨架屏",
     description: "内容加载占位，带微光扫过动画。",
     install: "npx boardui@latest add skeleton",
-    preview: (
+    preview: () => ((
       <div className="flex w-full max-w-sm items-center gap-3">
         <Skeleton className="size-10" rounded="full" />
         <div className="flex flex-1 flex-col gap-2">
@@ -524,58 +524,58 @@ import { RiArrowRightLine } from "@remixicon/react";
           <Skeleton className="h-3 w-44" />
         </div>
       </div>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   divider: {
     title: "分隔线",
     description: "内容分隔，支持水平与垂直方向。",
     install: "npx boardui@latest add divider",
-    preview: (
+    preview: () => ((
       <div className="flex w-full max-w-sm flex-col gap-3">
         <span className="text-body-regular text-text-secondary">上方内容</span>
         <Divider />
         <span className="text-body-regular text-text-secondary">下方内容</span>
       </div>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   tabs: {
     title: "标签页",
     description: "原版下划线标签页，动态测量选中项并平滑移动指示线。",
     install: "npx boardui@latest add tabs",
-    preview: <TabsDemo />,
-    demos: [],
+    preview: () => (<TabsDemo />),
+    demos: () => ([]),
   },
 
   accordion: {
     title: "手风琴",
     description: "把内容折叠进原地展开的面板，使用 grid 行高动画。",
     install: "npx boardui@latest add accordion",
-    preview: <AccordionDemo />,
-    demos: [{id:"single",title:"单项展开与禁用",node:<div className="w-full max-w-sm"><Accordion allowsMultiple={false} defaultExpandedKeys={["first"]}><AccordionItem id="first" title="第一项">第一项内容</AccordionItem><AccordionItem id="second" title="第二项">第二项内容</AccordionItem><AccordionItem id="disabled" title="禁用项" isDisabled>不可展开</AccordionItem></Accordion><Collapsible title="更多设置"><Input label="折叠内输入框"/></Collapsible></div>}],
+    preview: () => (<AccordionDemo />),
+    demos: () => ([{id:"single",title:"单项展开与禁用",node:<div className="w-full max-w-sm"><Accordion allowsMultiple={false} defaultExpandedKeys={["first"]}><AccordionItem id="first" title="第一项">第一项内容</AccordionItem><AccordionItem id="second" title="第二项">第二项内容</AccordionItem><AccordionItem id="disabled" title="禁用项" isDisabled>不可展开</AccordionItem></Accordion><Collapsible title="更多设置"><Input label="折叠内输入框"/></Collapsible></div>}]),
   },
 
   tooltip: {
     title: "提示气泡",
     description: "原版浅色语义卡片、方向感知箭头、淡入缩放及模糊过渡。",
     install: "npx boardui@latest add tooltip",
-    preview: (
+    preview: () => ((
       <TooltipTrigger delay={120}>
         <AriaButton variant="secondary">悬停查看提示</AriaButton>
         <Tooltip>这是一个提示气泡</Tooltip>
       </TooltipTrigger>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   "toggle-button": {
     title: "切换按钮",
     description: "分段式切换组，选中项白底高亮。",
     install: "npx boardui@latest add toggle-button",
-    preview: (
+    preview: () => ((
       <ToggleButtonGroup defaultSelectedKeys={["list"]} selectionMode="single">
         <ToggleButton id="list">
           <Icon name="list-unordered" className="size-4" />
@@ -586,15 +586,15 @@ import { RiArrowRightLine } from "@remixicon/react";
           网格
         </ToggleButton>
       </ToggleButtonGroup>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   "tag-group": {
     title: "标签组",
     description: "可移除的标签集合，用于展示已选项。",
     install: "npx boardui@latest add tag-group",
-    preview: (
+    preview: () => ((
       <div className="w-full max-w-md">
         <TagGroup label="技术栈">
           <Tag>React</Tag>
@@ -602,39 +602,39 @@ import { RiArrowRightLine } from "@remixicon/react";
           <Tag>Tailwind</Tag>
         </TagGroup>
       </div>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   dropdown: {
     title: "下拉菜单",
     description: "触发式操作菜单，支持图标、快捷键与危险项。",
     install: "npx boardui@latest add dropdown",
-    preview: <MenuDemo />,
-    demos: [{id:"grouped",title:"分组菜单",node:<DropdownSurfaceDemo/>}],
+    preview: () => (<MenuDemo />),
+    demos: () => ([{id:"grouped",title:"分组菜单",node:<DropdownSurfaceDemo/>}]),
   },
 
   modal: {
     title: "弹窗",
     description: "居中模态对话框，480px 宽、24px 圆角，带遮罩与缩放进入动效。",
     install: "npx boardui@latest add modal",
-    preview: <ModalDemo />,
-    demos: [],
+    preview: () => (<ModalDemo />),
+    demos: () => ([]),
   },
 
   popover: {
     title: "弹出层",
     description: "锚定于触发元素的浮层面板。",
     install: "npx boardui@latest add popover",
-    preview: <PopoverDemo />,
-    demos: [],
+    preview: () => (<PopoverDemo />),
+    demos: () => ([]),
   },
 
   breadcrumb: {
     title: "面包屑导航",
     description: "层级路径指示，末项为当前页不可点击。",
     install: "npx boardui@latest add breadcrumb",
-    preview: (
+    preview: () => ((
       <Breadcrumb
         items={[
           { id: "1", label: "BoardUI", href: (process.env.NEXT_PUBLIC_BASE_PATH ?? "") + "/" },
@@ -642,88 +642,88 @@ import { RiArrowRightLine } from "@remixicon/react";
           { id: "3", label: "面包屑导航" },
         ]}
       />
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   pagination: {
     title: "分页",
     description: "原版分页，当前页白底描边与细阴影，窄容器自动切换紧凑布局。",
     install: "npx boardui@latest add pagination",
-    preview: <PaginationDemo />,
-    demos: [],
+    preview: () => (<PaginationDemo />),
+    demos: () => ([]),
   },
 
   counter: {
     title: "计数器",
     description: "带步进按钮的数值控件。",
     install: "npx boardui@latest add counter",
-    preview: <CounterDemo />,
-    demos: [],
+    preview: () => (<CounterDemo />),
+    demos: () => ([]),
   },
 
   announcement: {
     title: "公告",
     description: "原版紧凑卡片结构，支持语义图标、操作和柔和关闭动画。",
     install: "npx boardui@latest add announcement",
-    preview: (
+    preview: () => ((
       <div className="flex w-full flex-col gap-2">
         <Announcement variant="info" title="新版本已发布" description="BoardUI 1.2 带来了 12 个新组件。" />
         <Announcement variant="success" title="部署成功" description="构建产物已发布到生产环境。" />
         <Announcement variant="warning" title="额度即将用完" description="本月剩余 12% 的调用额度。" />
         <Announcement variant="error" title="同步失败" description="无法连接到远端仓库，请检查网络。" />
       </div>
-    ),
-    demos: [{id:"dismiss",title:"操作与关闭",node:<div className="w-full max-w-xs"><CoreAnnouncement title="完善工作区" description="管理工作区设置。" actionLabel="查看设置" dismissible closeLabel="关闭示例公告"/></div>}],
+    )),
+    demos: () => ([{id:"dismiss",title:"操作与关闭",node:<div className="w-full max-w-xs"><CoreAnnouncement title="完善工作区" description="管理工作区设置。" actionLabel="查看设置" dismissible closeLabel="关闭示例公告"/></div>}]),
   },
 
   notification: {
     title: "通知",
     description: "带色块图标的高强调提示，常用于操作结果反馈。",
     install: "npx boardui@latest add notification",
-    preview: (
+    preview: () => ((
       <div className="flex w-full flex-col gap-2">
         <Notification variant="information" title="有新版本可用" description="刷新页面即可加载最新内容。" />
         <Notification variant="success" title="保存成功" description="你的修改已自动保存。" />
         <Notification variant="error" title="上传失败" description="文件大小超过限制，请压缩后重试。" />
       </div>
-    ),
-    demos: [{id:"dismiss",title:"关闭与操作",node:<div className="w-full max-w-sm"><CoreNotification title="任务已完成" description="可手动关闭通知。" status="success" closeLabel="关闭示例通知" actions={[{label:"查看详情",variant:"secondary"}]}/></div>}],
+    )),
+    demos: () => ([{id:"dismiss",title:"关闭与操作",node:<div className="w-full max-w-sm"><CoreNotification title="任务已完成" description="可手动关闭通知。" status="success" closeLabel="关闭示例通知" actions={[{label:"查看详情",variant:"secondary"}]}/></div>}]),
   },
 
   toast: {
     title: "轻提示",
     description: "底部浮出的短暂提示，2.6 秒自动消失。",
     install: "npx boardui@latest add toast",
-    preview: <ToastDemo />,
-    demos: [],
+    preview: () => (<ToastDemo />),
+    demos: () => ([]),
   },
 
   drawer: {
     title: "抽屉",
     description: "从侧边滑入的面板，适合承载次要表单与详情。",
     install: "npx boardui@latest add drawer",
-    preview: <DrawerDemo />,
-    demos: [],
+    preview: () => (<DrawerDemo />),
+    demos: () => ([]),
   },
 
   "number-field": {
     title: "数字输入",
     description: "带上下步进的数值输入框。",
     install: "npx boardui@latest add number-field",
-    preview: (
+    preview: () => ((
       <div className="w-full max-w-xs">
         <NumberField label="数量" defaultValue={3} minValue={0} maxValue={99} />
       </div>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   combobox: {
     title: "组合框",
     description: "可输入过滤的下拉选择，适合长选项列表。",
     install: "npx boardui@latest add combobox",
-    preview: (
+    preview: () => ((
       <div className="w-full max-w-xs">
         <Combobox
           label="城市"
@@ -736,15 +736,15 @@ import { RiArrowRightLine } from "@remixicon/react";
           ]}
         />
       </div>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   table: {
     title: "表格",
     description: "原版表格配方，语义表头、键盘导航与统一行分隔线。",
     install: "npx boardui@latest add table",
-    preview: (
+    preview: () => ((
       <div className="w-full">
         <Table
           aria-label="成员列表"
@@ -760,15 +760,15 @@ import { RiArrowRightLine } from "@remixicon/react";
           ]}
         />
       </div>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   "tree-view": {
     title: "树形视图",
     description: "可展开的层级结构导航。",
     install: "npx boardui@latest add tree-view",
-    preview: (
+    preview: () => ((
       <div className="w-full max-w-sm">
         <TreeView
           defaultSelected="b1"
@@ -794,15 +794,15 @@ import { RiArrowRightLine } from "@remixicon/react";
           ]}
         />
       </div>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   carousel: {
     title: "轮播",
     description: "横向切换的卡片容器，带箭头与指示点。",
     install: "npx boardui@latest add carousel",
-    preview: (
+    preview: () => ((
       <div className="w-full max-w-md">
         <Carousel
           items={[
@@ -812,59 +812,59 @@ import { RiArrowRightLine } from "@remixicon/react";
           ]}
         />
       </div>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   meter: {
     title: "度量条",
     description: "展示容量、健康度等比例指标，支持四种色调。",
     install: "npx boardui@latest add meter",
-    preview: (
+    preview: () => ((
       <div className="flex w-full max-w-sm flex-col gap-3">
         <Meter label="存储空间" value={68} tone="accent" />
         <Meter label="内存使用" value={42} tone="success" />
         <Meter label="CPU" value={81} tone="warning" />
         <Meter label="磁盘" value={93} tone="danger" />
       </div>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   "file-upload": {
     title: "文件上传",
     description: "拖拽或点击选择文件，支持格式与大小验证、去重和删除；上传由应用接入。",
     install: "npx boardui@latest add file-upload",
-    preview: (
+    preview: () => ((
       <div className="w-full max-w-md">
         <FileUpload accept=".png,.jpg,.pdf" />
       </div>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   "button-group": {
     title: "按钮组",
     description: "原版共用边框、阴影和分隔线；支持独立操作、受控选中、图标及键盘焦点。",
-    preview: <ButtonFamilyDemo/>,
-    demos: [
+    preview: () => (<ButtonFamilyDemo/>),
+    demos: () => ([
       {id:"small",title:"小尺寸",node:<CoreButtonGroup size="small" aria-label="小按钮组"><ButtonGroupItem size="small">复制</ButtonGroupItem><ButtonGroupItem size="small" leadingIcon={EditGlyph}>编辑</ButtonGroupItem><ButtonGroupItem size="small" disabled>删除</ButtonGroupItem></CoreButtonGroup>},
       {id:"vertical",title:"旧版垂直扩展",node:<ButtonGroup orientation="vertical"><Button variant="secondary">复制</Button><Button variant="secondary">移动</Button><Button variant="secondary">删除</Button></ButtonGroup>},
-    ],
+    ]),
   },
 
   "close-button": {
     title: "关闭按钮",
     description: "原版独立 SVG 路径：16 / 20 / 24 / 32px 容器及各自精确线宽。",
-    preview: <><CoreCloseButton size="2xs" aria-label="关闭 16"/><CoreCloseButton size="xs" aria-label="关闭 20"/><CoreCloseButton size="sm" aria-label="关闭 24"/><CoreCloseButton size="md" aria-label="关闭 32"/></>,
-    demos: [{id:"legacy",title:"旧版兼容样式",node:<><CloseButton size="sm"/><CloseButton size="lg"/><CloseButton variant="filled"/></>}],
+    preview: () => (<><CoreCloseButton size="2xs" aria-label="关闭 16"/><CoreCloseButton size="xs" aria-label="关闭 20"/><CoreCloseButton size="sm" aria-label="关闭 24"/><CoreCloseButton size="md" aria-label="关闭 32"/></>),
+    demos: () => ([{id:"legacy",title:"旧版兼容样式",node:<><CloseButton size="sm"/><CloseButton size="lg"/><CloseButton variant="filled"/></>}]),
   },
 
   "link-button": {
     title: "链接按钮",
     description: "外观像内联链接，带图标与下划线展开动效。",
     install: "npx boardui@latest add link-button",
-    preview: (
+    preview: () => ((
       <div className="flex flex-col gap-2">
         <LinkButton href="/zh-hans/components" trailingIcon="arrow-right-line">
           浏览全部组件
@@ -876,16 +876,16 @@ import { RiArrowRightLine } from "@remixicon/react";
           弱化样式链接
         </LinkButton>
       </div>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   "segmented-control": {
     title: "分段控件",
     description: "灰底容器 + 白底选中项 + 滑动指示器。",
     install: "npx boardui@latest add segmented-control",
-    preview: <SegmentedDemo />,
-    demos: [
+    preview: () => (<SegmentedDemo />),
+    demos: () => ([
       {
         id: "small",
         title: "小尺寸",
@@ -900,128 +900,128 @@ import { RiArrowRightLine } from "@remixicon/react";
           />
         ),
       },
-    ],
+    ]),
   },
 
   "input-otp": {
     title: "验证码输入框",
     description: "分格输入，自动跳格、退格回退、粘贴自动分发。",
     install: "npx boardui@latest add input-otp",
-    preview: <OtpDemo />,
-    demos: [
+    preview: () => (<OtpDemo />),
+    demos: () => ([
       {
         id: "four",
         title: "4 位",
         node: <InputOtp length={4} />,
       },
-    ],
+    ]),
   },
 
   "time-field": {
     title: "时间输入框",
     description: "基于 React Aria 时间分段输入，支持受控时分、键盘步进和本地化。",
     install: "npx boardui@latest add time-field",
-    preview: <TimeDemo />,
-    demos: [],
+    preview: () => (<TimeDemo />),
+    demos: () => ([]),
   },
 
   "social-button": {
     title: "第三方登录",
     description: "内置 Google、GitHub、Apple、X、微信的品牌图形。",
     install: "npx boardui@latest add social-button",
-    preview: (
+    preview: () => ((
       <div className="flex w-full max-w-[260px] flex-col gap-2">
         <SocialButton provider="google" />
         <SocialButton provider="github" />
         <SocialButton provider="apple" />
         <SocialButton provider="wechat" />
       </div>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   "context-menu": {
     title: "右键菜单",
     description: "右键或 Shift+F10 打开，支持键盘方向导航、边界避让及焦点恢复。",
     install: "npx boardui@latest add context-menu",
-    preview: <ContextMenuDemo />,
-    demos: [],
+    preview: () => (<ContextMenuDemo />),
+    demos: () => ([]),
   },
 
   "date-calendar": {
     title: "日期日历",
     description: "月视图日期选择，支持上下月切换、今日高亮、禁用过去日期。",
     install: "npx boardui@latest add date-calendar",
-    preview: <CalendarDemo />,
-    demos: [],
+    preview: () => (<CalendarDemo />),
+    demos: () => ([]),
   },
 
   "date-picker": {
     title: "日期选择器",
     description: "原版日期弹层，支持月导航、日期编辑、取消和应用。未应用时不修改已选值。",
     install: "npx boardui@latest add date-picker",
-    preview: <DatePickerDemo />,
-    demos: [],
+    preview: () => (<DatePickerDemo />),
+    demos: () => ([]),
   },
 
   "color-picker": {
     title: "颜色选择器",
     description: "预设色板与 HEX 草稿；只提交有效六位颜色，支持键盘操作。",
     install: "npx boardui@latest add color-picker",
-    preview: <ColorDemo />,
-    demos: [],
+    preview: () => (<ColorDemo />),
+    demos: () => ([]),
   },
 
   "token-input": {
     title: "Token 输入框",
     description: "多值标签输入，支持 Enter、逗号、批量粘贴、去重与校验；输入法组词期间不会误提交。",
     install: "npx boardui@latest add token-input",
-    preview: <TokenDemo />,
-    demos: [],
+    preview: () => (<TokenDemo />),
+    demos: () => ([]),
   },
 
   "command-palette": {
     title: "命令面板",
     description: "⌘K 风格快捷操作面板，支持分组、过滤与键盘导航。",
     install: "npx boardui@latest add command-palette",
-    preview: <CommandDemo />,
-    demos: [],
+    preview: () => (<CommandDemo />),
+    demos: () => ([]),
   },
 
   composer: {
     title: "对话输入框",
     description: "多行自适应输入，Enter 发送、Shift+Enter 换行，带工具按钮与发送态。",
     install: "npx boardui@latest add composer",
-    preview: <ComposerDemo />,
-    demos: [{id:"free-composer",title:"原版免费对话输入",node:<FreeComposerDemo/>},{id:"toolbar",title:"键盘工具栏",node:<ToolbarDemo/>}],
+    preview: () => (<ComposerDemo />),
+    demos: () => ([{id:"free-composer",title:"原版免费对话输入",node:<FreeComposerDemo/>},{id:"toolbar",title:"键盘工具栏",node:<ToolbarDemo/>}]),
   },
 
   "composer-attachments": {
     title: "输入框附件",
     description: "待发送文件以横向卡片展示，可单个移除。",
     install: "npx boardui@latest add composer-attachments",
-    preview: <AttachmentsDemo />,
-    demos: [],
+    preview: () => (<AttachmentsDemo />),
+    demos: () => ([]),
   },
 
   "composer-loader": {
     title: "输入框加载",
     description: "原版 SVG 环绕光带、渐变辉光及淡入淡出，支持减少动效。",
     install: "npx boardui@latest add composer-loader",
-    preview: (
+    preview: () => ((
       <div className="flex w-full max-w-sm flex-col gap-2">
         <ComposerLoader text="正在思考" />
         <ComposerLoader text="正在检索网页" />
       </div>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   "composer-panel": {
     title: "对话输入面板",
     description: "带标签页的工具面板，可嵌入输入框上方。",
     install: "npx boardui@latest add composer-panel",
-    preview: (
+    preview: () => ((
       <div className="w-full max-w-md">
         <ComposerPanel
           tabs={[
@@ -1035,23 +1035,23 @@ import { RiArrowRightLine } from "@remixicon/react";
           </span>
         </ComposerPanel>
       </div>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   "agent-creator": {
     title: "智能体创建器",
     description: "名称、角色设定、模型、温度与能力配置的一体化表单。",
     install: "npx boardui@latest add agent-creator",
-    preview: <AgentCreatorDemo />,
-    demos: [],
+    preview: () => (<AgentCreatorDemo />),
+    demos: () => ([]),
   },
 
   "agent-limits-card": {
     title: "智能体额度",
     description: "多项用量进度，接近上限自动转为警告色。",
     install: "npx boardui@latest add agent-limits-card",
-    preview: (
+    preview: () => ((
       <div className="w-full max-w-[300px]">
         <AgentLimitsCard
           resetText="12 月 1 日重置"
@@ -1062,15 +1062,15 @@ import { RiArrowRightLine } from "@remixicon/react";
           ]}
         />
       </div>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   "agent-progress": {
     title: "智能体任务进度",
     description: "垂直步骤条，当前步骤脉冲高亮，完成步骤连线变绿。",
     install: "npx boardui@latest add agent-progress",
-    preview: (
+    preview: () => ((
       <div className="w-full max-w-[320px]">
         <AgentProgress
           title="重构 Button 组件"
@@ -1082,94 +1082,94 @@ import { RiArrowRightLine } from "@remixicon/react";
           ]}
         />
       </div>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   "agent-thinking": {
     title: "智能体思考状态",
     description: "原版四种思考动画（波浪、旋转、星光、无穷），支持主题语义色、流光与计时。",
     install: "npx boardui@latest add agent-thinking",
-    preview: (
+    preview: () => ((
       <div className="flex flex-col items-start gap-2">
         <AgentThinking text="正在分析你的请求" />
         <AgentThinking text="正在整理 12 个来源" variant="spin" />
         <AgentThinking text="正在构思方案" variant="stars" />
         <AgentThinking text="正在生成回复" variant="infinity" tone="accent" />
       </div>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   "auth-card": {
     title: "身份验证卡片",
     description: "登录 / 注册双模式，含第三方登录与协议勾选。",
     install: "npx boardui@latest add auth-card",
-    preview: <AuthCard />,
-    demos: [],
+    preview: () => (<AuthCard />),
+    demos: () => ([]),
   },
 
   calendar: {
     title: "日历",
     description: "月视图 + 事件色块 + 侧栏日程详情的完整日历。",
     install: "npx boardui@latest add calendar",
-    preview: <CalendarCard />,
-    demos: [],
+    preview: () => (<CalendarCard />),
+    demos: () => ([]),
   },
 
   "data-table": {
     title: "数据表格",
     description: "排序 + 多选 + 空状态 + 选中计数。",
     install: "npx boardui@latest add data-table",
-    preview: <DataTableDemo />,
-    demos: [],
+    preview: () => (<DataTableDemo />),
+    demos: () => ([]),
   },
 
   "data-grid": {
     title: "数据网格",
     description: "紧凑行高的数据表格变体，适合后台批量处理。",
     install: "npx boardui@latest add data-grid",
-    preview: <DataGridDemo />,
-    demos: [],
+    preview: () => (<DataGridDemo />),
+    demos: () => ([]),
   },
 
   "notification-center": {
     title: "通知中心",
     description: "通知列表 + 未读气泡 + 全部已读。",
     install: "npx boardui@latest add notification-center",
-    preview: <NoticeDemo />,
-    demos: [],
+    preview: () => (<NoticeDemo />),
+    demos: () => ([]),
   },
 
   questionnaire: {
     title: "问卷",
     description: "分步问答，单选/多选/文本，带进度与回退。",
     install: "npx boardui@latest add questionnaire",
-    preview: <QuestionnaireDemo />,
-    demos: [],
+    preview: () => (<QuestionnaireDemo />),
+    demos: () => ([]),
   },
 
   "settings-modal": {
     title: "设置对话框",
     description: "左侧分类导航 + 右侧表单的完整设置面板。",
     install: "npx boardui@latest add settings-modal",
-    preview: <SettingsDemo />,
-    demos: [],
+    preview: () => (<SettingsDemo />),
+    demos: () => ([]),
   },
 
   sidebar: {
     title: "侧边栏",
     description: "260/60px 浮动侧栏，固定图标位置、渐变选中态及文字渐隐，支持二级导航。",
     install: "npx boardui@latest add sidebar",
-    preview: <AppSidebarDemo />,
-    demos: [],
+    preview: () => (<AppSidebarDemo />),
+    demos: () => ([]),
   },
 
   "stat-cards": {
     title: "指标卡片",
     description: "统一响应式网格的统计卡组。",
     install: "npx boardui@latest add stat-cards",
-    preview: (
+    preview: () => ((
       <div className="w-full">
         <StatCards
           items={[
@@ -1180,15 +1180,15 @@ import { RiArrowRightLine } from "@remixicon/react";
           ]}
         />
       </div>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   "task-list": {
     title: "任务列表",
     description: "可勾选清单，带优先级徽标与截止时间，完成项划线。",
     install: "npx boardui@latest add task-list",
-    preview: (
+    preview: () => ((
       <div className="w-full max-w-[400px]">
         <TaskList
           tasks={[
@@ -1199,15 +1199,15 @@ import { RiArrowRightLine } from "@remixicon/react";
           ]}
         />
       </div>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   "web-search": {
     title: "网页搜索",
     description: "检索状态卡 + 可展开的引用来源列表。",
     install: "npx boardui@latest add web-search",
-    preview: (
+    preview: () => ((
       <div className="w-full max-w-[400px]">
         <WebSearch
           query="React Aria Components 如何实现可访问的下拉菜单"
@@ -1217,238 +1217,238 @@ import { RiArrowRightLine } from "@remixicon/react";
           ]}
         />
       </div>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   "activity-rings-card": {
     title: "活动圆环",
     description: "带标题与指标的图表卡片，可直接嵌入仪表盘。",
     install: "npx boardui@latest add activity-rings-card",
-    preview: (
+    preview: () => ((
       <div className="w-full max-w-[420px]">
         <ChartCard kind="rings" title="今日目标完成度"
             delta="完成 78%" height={120} />
       </div>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   "area-chart-card": {
     title: "面积图",
     description: "带标题与指标的图表卡片，可直接嵌入仪表盘。",
     install: "npx boardui@latest add area-chart-card",
-    preview: (
+    preview: () => ((
       <div className="w-full max-w-[420px]">
         <ChartCard kind="area" title="访客" value="94,700" delta="+8.2%" height={180} />
       </div>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   "bar-list-card": {
     title: "条形列表",
     description: "带标题与指标的图表卡片，可直接嵌入仪表盘。",
     install: "npx boardui@latest add bar-list-card",
-    preview: (
+    preview: () => ((
       <div className="w-full max-w-[420px]">
         <ChartCard kind="bar-list" title="流量来源" height={120} />
       </div>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   "combo-chart-card": {
     title: "组合图表",
     description: "带标题与指标的图表卡片，可直接嵌入仪表盘。",
     install: "npx boardui@latest add combo-chart-card",
-    preview: (
+    preview: () => ((
       <div className="w-full max-w-[420px]">
         <ChartCard kind="combo" title="收入与订单" height={120} />
       </div>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   "contributions-card": {
     title: "贡献记录",
     description: "带标题与指标的图表卡片，可直接嵌入仪表盘。",
     install: "npx boardui@latest add contributions-card",
-    preview: (
+    preview: () => ((
       <div className="w-full max-w-[420px]">
         <ChartCard kind="contributions" title="提交记录" height={120} />
       </div>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   "earnings-chart-card": {
     title: "收入图表",
     description: "带标题与指标的图表卡片，可直接嵌入仪表盘。",
     install: "npx boardui@latest add earnings-chart-card",
-    preview: (
+    preview: () => ((
       <div className="w-full max-w-[420px]">
         <ChartCard kind="earnings" title="本月收入" height={120} />
       </div>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   "funnel-chart-card": {
     title: "漏斗图",
     description: "水平流动漏斗，四阶段平滑相连，段内白底胶囊标注占比，底部图例卡给出各阶段数值。",
     install: "npx boardui@latest add funnel-chart-card",
-    preview: (
+    preview: () => ((
       <div className="w-full max-w-[460px]">
         <ChartCard kind="funnel" title="注册漏斗" value="197" delta="+5.2%" height={150} />
       </div>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   "heatmap-chart-card": {
     title: "热力图",
     description: "带标题与指标的图表卡片，可直接嵌入仪表盘。",
     install: "npx boardui@latest add heatmap-chart-card",
-    preview: (
+    preview: () => ((
       <div className="w-full max-w-[420px]">
         <ChartCard kind="heatmap" title="活跃热力图" height={120} />
       </div>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   "line-chart-card": {
     title: "折线图",
     description: "带标题与指标的图表卡片，可直接嵌入仪表盘。",
     install: "npx boardui@latest add line-chart-card",
-    preview: (
+    preview: () => ((
       <div className="w-full max-w-[420px]">
         <ChartCard kind="line" title="流量对比" value="24,860" delta="+12.6%" height={180} />
       </div>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   "most-active-days-card": {
     title: "最活跃的日期",
     description: "带标题与指标的图表卡片，可直接嵌入仪表盘。",
     install: "npx boardui@latest add most-active-days-card",
-    preview: (
+    preview: () => ((
       <div className="w-full max-w-[420px]">
         <ChartCard kind="active-days" title="一周活跃分布" height={120} />
       </div>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   "orders-chart-card": {
     title: "订单图表",
     description: "带标题与指标的图表卡片，可直接嵌入仪表盘。",
     install: "npx boardui@latest add orders-chart-card",
-    preview: (
+    preview: () => ((
       <div className="w-full max-w-[420px]">
         <ChartCard kind="orders" title="订单量"
             delta="+8.2%" height={120} />
       </div>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   "radar-chart-card": {
     title: "雷达图",
     description: "带标题与指标的图表卡片，可直接嵌入仪表盘。",
     install: "npx boardui@latest add radar-chart-card",
-    preview: (
+    preview: () => ((
       <div className="w-full max-w-[420px]">
         <ChartCard kind="radar" title="能力评估" height={120} />
       </div>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   "radial-chart-card": {
     title: "径向图",
     description: "带标题与指标的图表卡片，可直接嵌入仪表盘。",
     install: "npx boardui@latest add radial-chart-card",
-    preview: (
+    preview: () => ((
       <div className="w-full max-w-[420px]">
         <ChartCard kind="radial" title="目标完成度" height={120} />
       </div>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   "revenue-chart-card": {
     title: "营收图表",
     description: "带标题与指标的图表卡片，可直接嵌入仪表盘。",
     install: "npx boardui@latest add revenue-chart-card",
-    preview: (
+    preview: () => ((
       <div className="w-full max-w-[420px]">
         <ChartCard kind="revenue" title="累计营收" height={120} />
       </div>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   "sankey-chart-card": {
     title: "桑基图",
     description: "带标题与指标的图表卡片，可直接嵌入仪表盘。",
     install: "npx boardui@latest add sankey-chart-card",
-    preview: (
+    preview: () => ((
       <div className="w-full max-w-[420px]">
         <ChartCard kind="sankey" title="用户流转" height={120} />
       </div>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   "scatter-chart-card": {
     title: "散点图",
     description: "带标题与指标的图表卡片，可直接嵌入仪表盘。",
     install: "npx boardui@latest add scatter-chart-card",
-    preview: (
+    preview: () => ((
       <div className="w-full max-w-[420px]">
         <ChartCard kind="scatter" title="相关性分布" height={120} />
       </div>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   "sleep-score-card": {
     title: "睡眠评分",
     description: "带标题与指标的图表卡片，可直接嵌入仪表盘。",
     install: "npx boardui@latest add sleep-score-card",
-    preview: (
+    preview: () => ((
       <div className="w-full max-w-[420px]">
         <ChartCard kind="sleep" title="睡眠评分" height={120} />
       </div>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   "stage-bars-card": {
     title: "阶段条形图",
     description: "带标题与指标的图表卡片，可直接嵌入仪表盘。",
     install: "npx boardui@latest add stage-bars-card",
-    preview: (
+    preview: () => ((
       <div className="w-full max-w-[420px]">
         <ChartCard kind="stage-bars" title="各阶段进度" height={120} />
       </div>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 
   "steps-card": {
     title: "步数图表",
     description: "带标题与指标的图表卡片，可直接嵌入仪表盘。",
     install: "npx boardui@latest add steps-card",
-    preview: (
+    preview: () => ((
       <div className="w-full max-w-[420px]">
         <ChartCard kind="steps" title="今日步数" height={120} />
       </div>
-    ),
-    demos: [],
+    )),
+    demos: () => ([]),
   },
 };
 /* ---------------- 内部演示组件 ---------------- */

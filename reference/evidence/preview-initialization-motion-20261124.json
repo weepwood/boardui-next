@@ -1,0 +1,286 @@
+{
+  "baseline": "52d728c6645129a44e8f230e67e077190c67f88a",
+  "environment": "Local Edge Chromium production static export, 1440×1000. Three fresh contexts per cold-start route, reduced motion, CDP 120ms latency, 750000 bytes/s and 4x CPU slowdown. Other local checks overlapped some trials; timings are diagnostic, not controlled proof of speedup. Motion sample uses no-preference, visible/offscreen/resumed windows of 1200ms after settling; counts intervals at 80ms and 100ms.",
+  "lazyFactories": {
+    "docs": 90,
+    "previewFactories": 90,
+    "demoFactories": 90,
+    "jsxExpressionsInFactories": 328
+  },
+  "coldStart": {
+    "before": [
+      {
+        "trial": 1,
+        "path": "/zh-hans/components/button/",
+        "scriptMs": 829,
+        "nodes": 2165,
+        "longTasks": 3,
+        "longTaskMs": 180,
+        "fcp": 528,
+        "domContentLoaded": 510,
+        "htmlEncoded": 18618,
+        "jsBytes": 457857,
+        "fontBytes": 368316
+      },
+      {
+        "trial": 1,
+        "path": "/zh-hans/components/agent-thinking/",
+        "scriptMs": 759,
+        "nodes": 1452,
+        "longTasks": 2,
+        "longTaskMs": 120,
+        "fcp": 512,
+        "domContentLoaded": 499,
+        "htmlEncoded": 16084,
+        "jsBytes": 457857,
+        "fontBytes": 363080
+      },
+      {
+        "trial": 1,
+        "path": "/zh-hans/components/",
+        "scriptMs": 797,
+        "nodes": 3320,
+        "longTasks": 3,
+        "longTaskMs": 193,
+        "fcp": 548,
+        "domContentLoaded": 546,
+        "htmlEncoded": 25779,
+        "jsBytes": 453956,
+        "fontBytes": 383112
+      },
+      {
+        "trial": 2,
+        "path": "/zh-hans/components/button/",
+        "scriptMs": 803,
+        "nodes": 2165,
+        "longTasks": 2,
+        "longTaskMs": 118,
+        "fcp": 484,
+        "domContentLoaded": 479,
+        "htmlEncoded": 18618,
+        "jsBytes": 457857,
+        "fontBytes": 368316
+      },
+      {
+        "trial": 2,
+        "path": "/zh-hans/components/agent-thinking/",
+        "scriptMs": 755,
+        "nodes": 1452,
+        "longTasks": 1,
+        "longTaskMs": 68,
+        "fcp": 484,
+        "domContentLoaded": 475,
+        "htmlEncoded": 16084,
+        "jsBytes": 457857,
+        "fontBytes": 363080
+      },
+      {
+        "trial": 2,
+        "path": "/zh-hans/components/",
+        "scriptMs": 772,
+        "nodes": 3320,
+        "longTasks": 2,
+        "longTaskMs": 129,
+        "fcp": 524,
+        "domContentLoaded": 515,
+        "htmlEncoded": 25779,
+        "jsBytes": 453956,
+        "fontBytes": 383112
+      },
+      {
+        "trial": 3,
+        "path": "/zh-hans/components/button/",
+        "scriptMs": 824,
+        "nodes": 2165,
+        "longTasks": 2,
+        "longTaskMs": 124,
+        "fcp": 488,
+        "domContentLoaded": 484,
+        "htmlEncoded": 18618,
+        "jsBytes": 457857,
+        "fontBytes": 368316
+      },
+      {
+        "trial": 3,
+        "path": "/zh-hans/components/agent-thinking/",
+        "scriptMs": 734,
+        "nodes": 1452,
+        "longTasks": 2,
+        "longTaskMs": 130,
+        "fcp": 532,
+        "domContentLoaded": 522,
+        "htmlEncoded": 16084,
+        "jsBytes": 457857,
+        "fontBytes": 363080
+      },
+      {
+        "trial": 3,
+        "path": "/zh-hans/components/",
+        "scriptMs": 758,
+        "nodes": 3320,
+        "longTasks": 3,
+        "longTaskMs": 179,
+        "fcp": 548,
+        "domContentLoaded": 541,
+        "htmlEncoded": 25779,
+        "jsBytes": 453956,
+        "fontBytes": 383112
+      }
+    ],
+    "after": [
+      {
+        "trial": 1,
+        "path": "/zh-hans/components/button/",
+        "scriptMs": 844,
+        "nodes": 2165,
+        "longTasks": 2,
+        "longTaskMs": 109,
+        "fcp": 508,
+        "domContentLoaded": 478,
+        "htmlEncoded": 18618,
+        "jsBytes": 457645,
+        "fontBytes": 368356
+      },
+      {
+        "trial": 1,
+        "path": "/zh-hans/components/agent-thinking/",
+        "scriptMs": 754,
+        "nodes": 1452,
+        "longTasks": 2,
+        "longTaskMs": 122,
+        "fcp": 512,
+        "domContentLoaded": 501,
+        "htmlEncoded": 16096,
+        "jsBytes": 457645,
+        "fontBytes": 363120
+      },
+      {
+        "trial": 1,
+        "path": "/zh-hans/components/",
+        "scriptMs": 786,
+        "nodes": 3320,
+        "longTasks": 3,
+        "longTaskMs": 190,
+        "fcp": 544,
+        "domContentLoaded": 537,
+        "htmlEncoded": 25781,
+        "jsBytes": 453752,
+        "fontBytes": 383152
+      },
+      {
+        "trial": 2,
+        "path": "/zh-hans/components/button/",
+        "scriptMs": 798,
+        "nodes": 2165,
+        "longTasks": 2,
+        "longTaskMs": 150,
+        "fcp": 608,
+        "domContentLoaded": 603,
+        "htmlEncoded": 18618,
+        "jsBytes": 457645,
+        "fontBytes": 368356
+      },
+      {
+        "trial": 2,
+        "path": "/zh-hans/components/agent-thinking/",
+        "scriptMs": 710,
+        "nodes": 1452,
+        "longTasks": 2,
+        "longTaskMs": 140,
+        "fcp": 580,
+        "domContentLoaded": 562,
+        "htmlEncoded": 16096,
+        "jsBytes": 457645,
+        "fontBytes": 363120
+      },
+      {
+        "trial": 2,
+        "path": "/zh-hans/components/",
+        "scriptMs": 727,
+        "nodes": 3320,
+        "longTasks": 3,
+        "longTaskMs": 182,
+        "fcp": 612,
+        "domContentLoaded": 623,
+        "htmlEncoded": 25781,
+        "jsBytes": 453752,
+        "fontBytes": 383152
+      },
+      {
+        "trial": 3,
+        "path": "/zh-hans/components/button/",
+        "scriptMs": 798,
+        "nodes": 2165,
+        "longTasks": 2,
+        "longTaskMs": 129,
+        "fcp": 516,
+        "domContentLoaded": 518,
+        "htmlEncoded": 18618,
+        "jsBytes": 457645,
+        "fontBytes": 368356
+      },
+      {
+        "trial": 3,
+        "path": "/zh-hans/components/agent-thinking/",
+        "scriptMs": 780,
+        "nodes": 1452,
+        "longTasks": 3,
+        "longTaskMs": 167,
+        "fcp": 524,
+        "domContentLoaded": 508,
+        "htmlEncoded": 16096,
+        "jsBytes": 457645,
+        "fontBytes": 363120
+      },
+      {
+        "trial": 3,
+        "path": "/zh-hans/components/",
+        "scriptMs": 679,
+        "nodes": 3320,
+        "longTasks": 3,
+        "longTaskMs": 191,
+        "fcp": 588,
+        "domContentLoaded": 583,
+        "htmlEncoded": 25781,
+        "jsBytes": 453752,
+        "fontBytes": 383152
+      }
+    ]
+  },
+  "motion": {
+    "before": [
+      {
+        "label": "visible",
+        "dots": 30,
+        "timers": 48
+      },
+      {
+        "label": "offscreen",
+        "dots": 30,
+        "timers": 48
+      },
+      {
+        "label": "resumed",
+        "dots": 30,
+        "timers": 48
+      }
+    ],
+    "after": [
+      {
+        "label": "visible",
+        "dots": 30,
+        "timers": 48
+      },
+      {
+        "label": "offscreen",
+        "dots": 0,
+        "timers": 0
+      },
+      {
+        "label": "resumed",
+        "dots": 30,
+        "timers": 48
+      }
+    ]
+  }
+}
