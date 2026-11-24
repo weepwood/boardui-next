@@ -77,6 +77,7 @@ try{
           assert.equal(await card.evaluate(e=>getComputedStyle(e).borderRadius),'28px');
           assert.equal(await card.locator(':scope > div').first().evaluate(e=>e.getBoundingClientRect().height),197);
           await card.locator('[data-live-preview]').waitFor();
+          await page.waitForFunction(()=>[...document.querySelectorAll('[data-card-caption]')].every(e=>e.getBoundingClientRect().bottom<=e.closest('article').getBoundingClientRect().bottom+1));
           const search=page.getByRole('textbox',{name:'搜索组件目录'});
           await search.fill('date-picker');
           await page.waitForFunction(()=>document.querySelectorAll('[data-catalog-slug]').length===1);
@@ -143,6 +144,8 @@ try{
           for(const button of await buttons.all())assert.equal((await button.boundingBox())?.height,36);
           await demo.getByRole('tab',{name:'预览'}).press('ArrowRight');
           assert.equal(await demo.getByRole('tab',{name:'代码'}).getAttribute('aria-selected'),'true');
+          const indicator=demo.locator('[data-preview-indicator]');
+          await page.waitForFunction(({a,b})=>Math.abs(a.getBoundingClientRect().left-b.getBoundingClientRect().left)<2,{a:await indicator.elementHandle(),b:await demo.getByRole('tab',{name:'代码'}).elementHandle()});
           await demo.getByRole('tab',{name:'代码'}).press('ArrowLeft');
           assert.equal(await demo.getByRole('tab',{name:'预览'}).getAttribute('aria-selected'),'true');
           const pressTarget=demo.getByRole('tabpanel').getByRole('button',{name:'开始使用',exact:true});

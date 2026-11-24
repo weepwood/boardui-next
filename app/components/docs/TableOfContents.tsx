@@ -59,11 +59,11 @@ export function TableOfContents({ items }: { items: TocItem[] }) {
                     href={`#${item.id}`}
                     aria-current={active ? "location" : undefined}
                     className={cn(
-                      "-ml-px border-s-2 py-1.5 ps-4 text-body-medium",
+                      "-ms-px w-full border-s-2 py-1.5 ps-3 text-body-2-regular",
                       "transition-colors duration-150 ease-out",
                       active
                         ? "border-accent-500 text-text-primary"
-                        : "border-transparent text-text-tertiary hover:text-text-secondary"
+                        : "border-transparent text-text-secondary hover:text-text-primary"
                     )}
                   >
                     {item.label}

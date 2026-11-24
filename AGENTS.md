@@ -27,3 +27,5 @@
 - 用户明确要求优先解决肉眼可见的视觉缺陷，而不是继续扩充验收文档。对照固定上游公开主题与 ShowcaseCard 样式，维护语义令牌，不允许未经定义的颜色类；不得用全局边框覆盖掩盖具体令牌错误。
 - #19 已合并；当前 fix/docs-visual-foundation 修复首页、全局旧 border-primary、树状侧栏重复激活和独立模板路由。证据见 reference/evidence/docs-shell-regression-20261124.json。
 - 下一轮优先实际查看浅色/深色、桌面/移动的页面截图，审计细边界、文本层级、圆角、hover 与 focus；确保新 PR CI 通过后合并。旧完整验收仍失败，不能视为正式发布通过。
+
+- 视觉重构第一批：#20 已合并（main 54ee0e5），当前 feat/docs-visual-refinement；完成首页、目录预览自适应、文档侧栏/顶栏/搜索/预览工具条，16 个双主题/双视口截图布局组合与 10 个专项组合通过。下一批优先弹窗、Select/Dropdown/Popover/Tooltip、表单细节、应用模板实际截图，不继续堆叠验收 UI。

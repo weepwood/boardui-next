@@ -46,10 +46,11 @@ export function ComponentPreview({
           role="tablist"
           aria-label="视图切换"
           className={cn(
-            "relative inline-flex items-center gap-0.5 rounded-2lg p-1",
+            "docs-preview-switch relative isolate inline-grid grid-cols-2 items-center gap-0.5 rounded-2lg p-1",
             "bg-segmented-control-background"
           )}
         >
+          <span aria-hidden="true" data-preview-indicator className="docs-preview-indicator" data-view={tab}/>
           {(
             [
               { key: "preview", label: "预览", icon: "eye-line" },
@@ -75,10 +76,10 @@ export function ComponentPreview({
                 type="button"
                 onClick={() => setTab(t.key)}
                 className={cn(
-                  "inline-flex cursor-pointer items-center gap-1.5 rounded-md px-[10px] py-1",
+                  "relative z-10 inline-flex cursor-pointer items-center justify-center gap-1.5 rounded-md px-[10px] py-1 outline-none focus-visible:ring-2 focus-visible:ring-border-focus-ring",
                   "text-body-medium transition-colors duration-150 ease-out",
                   active
-                    ? "bg-segmented-control-selected-background text-text-primary shadow-xs"
+                    ? "text-text-primary"
                     : "text-text-secondary hover:text-text-primary"
                 )}
               >
@@ -96,14 +97,14 @@ export function ComponentPreview({
             onClick={copy}
             disabled={!code}
             className={cn(
-              "inline-flex h-[38px] cursor-pointer items-center gap-1.5 rounded-2lg border border-border-button-default bg-background-primary-default px-3 shadow-xs",
+              "inline-flex h-[38px] cursor-pointer items-center gap-1.5 whitespace-nowrap rounded-2lg border border-border-button-default bg-background-primary-default px-3 shadow-xs",
               "text-body-medium text-text-primary",
-              "transition-colors duration-150 ease-out hover:bg-background-primary-hover",
+              "transition-colors duration-150 ease-out hover:bg-background-primary-hover hover:border-border-button-hover",
               "disabled:cursor-default disabled:opacity-50"
             )}
           >
             <Icon name={copied ? "check-line" : "file-copy-line"} className="size-3.5" />
-            {copied ? "已复制" : copyError ? "复制失败" : "复制代码"}
+            <span className="min-w-[4em] text-center">{copied ? "已复制" : copyError ? "复制失败" : "复制代码"}</span>
           </button>
         </div>
       </div>
@@ -112,7 +113,7 @@ export function ComponentPreview({
       {/* 画布 */}
       <div
         className={cn(
-          "relative flex items-center justify-center overflow-hidden",
+          "docs-preview-canvas relative flex min-w-0 items-center justify-center overflow-hidden",
           "rounded-3xl border border-border-component-detail-container",
           "p-4 sm:p-8"
         )}
@@ -128,7 +129,7 @@ export function ComponentPreview({
         ) : (
           <pre
             className={cn(
-              "w-full overflow-x-auto rounded-xl p-4 text-left",
+              "w-full min-w-0 overflow-x-auto rounded-xl p-4 text-start",
               "bg-docs-code-background font-mono text-body-2-regular"
             )}
           >

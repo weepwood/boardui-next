@@ -61,3 +61,9 @@ DatePicker、Slider、InputOtp 直接移植公开 MIT 实现；DateCalendar 复�
 实测旧 border-border-primary 未定义，边框使用 currentColor（浅色近黑、深色近白）；迁移所有 border/bg/divide 的旧 border-primary 引用至真实 separator-border 或卡片对应的 border-button-default；修复 text-quaternary 旧引用。首页紧凑入口统一圆角、边界、字号、间距、焦点及悬停，主操作使用 Next Link 按钮样式，不再嵌套按钮。侧栏用唯一标准路径选中，组件与模板分独立页面；保留旧 #templates 锚点；末端树线在最后一项停止，悬停与选中分离。
 
 实测结果 reference/evidence/docs-shell-regression-20261124.json：浅色边框 rgb(235,235,235)，深色 oklch(0.371 0 none)，两种主题均仅选中组件一个菜单。新增静态语义令牌检查、唯一导航路由及首页实际边框/组件模板跳转回归测试。静态检查仅覆盖可识别的语义类名，不能替代人工视觉复核。14 个本地专项组合、116 HTML 导出通过。
+
+## 文档视觉重构第一批
+
+基于已合并 #20；参考公开 ShowcaseCard、DashboardSidebar、AppShell 与主题令牌，保持已有详情页几何基线。首页移除重复的宣传卡片、缩短文案，统一页面栏宽、间距；组件目录保留真实预览与分类筛选，ResizeObserver 按实际画布与内容大小等比缩放预览，固定卡片内的说明与来源不再溢出。统一搜索容器、顶部操作、侧栏固定行高/树线/滚动定位、面包屑、TOC 和命令面板；预览工具条采用可中断 CSS 滑动指示器并支持 reduced-motion，深色画布使用页面背景而非厚重面板背景。未重写业务组件 API。
+
+实际 Edge 截图检查 4 页 × 2 主题 × 2 视口（1440×1000、390×844）16 组合：零横向页面溢出、零卡片说明溢出、零 pageerror；截图人工抽看首页、目录、移动详情。另 10 个专项页面检查和 116 HTML 导出通过。证据 reference/evidence/docs-visual-refinement-20261124.json。仍需逐组件对照动效与设计细节，不将上述抽查视为完整发布验收。
