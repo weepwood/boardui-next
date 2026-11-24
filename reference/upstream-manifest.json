@@ -67,7 +67,7 @@
       "tier": "free",
       "upstreamStatus": "shipped",
       "localRoute": "/zh-hans/components/avatar",
-      "implementation": "existing-unverified",
+      "implementation": "ported-unverified",
       "sourcePolicy": "verify-public-source",
       "verification": {
         "visual": "pending",
@@ -76,7 +76,14 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "sourcePaths": [
+        "components/base/avatar/avatar.tsx"
+      ],
+      "localPaths": [
+        "packages/react/avatar.tsx"
+      ],
+      "notes": "已移植固定上游公开 MIT 实现，保留兼容接口；专项验收待完成。"
     },
     {
       "slug": "breadcrumb",
@@ -193,7 +200,7 @@
       "tier": "free",
       "upstreamStatus": "shipped",
       "localRoute": "/zh-hans/components/chip",
-      "implementation": "existing-unverified",
+      "implementation": "ported-unverified",
       "sourcePolicy": "verify-public-source",
       "verification": {
         "visual": "pending",
@@ -202,7 +209,14 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "sourcePaths": [
+        "components/base/badges/chip.tsx"
+      ],
+      "localPaths": [
+        "packages/react/chip.tsx"
+      ],
+      "notes": "已移植固定上游公开 MIT 实现，保留兼容接口；专项验收待完成。"
     },
     {
       "slug": "close-button",
@@ -305,7 +319,8 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "notes": "本地多文件选择与校验适配，借鉴原版视觉令牌；不模拟真实上传，不标为上游源码移植。"
     },
     {
       "slug": "icon-button",
@@ -424,7 +439,7 @@
       "tier": "free",
       "upstreamStatus": "shipped",
       "localRoute": "/zh-hans/components/pagination",
-      "implementation": "existing-unverified",
+      "implementation": "ported-unverified",
       "sourcePolicy": "verify-public-source",
       "verification": {
         "visual": "pending",
@@ -433,7 +448,14 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "sourcePaths": [
+        "components/base/pagination/pagination.tsx"
+      ],
+      "localPaths": [
+        "packages/react/pagination.tsx"
+      ],
+      "notes": "已移植固定上游公开 MIT 实现，保留兼容接口；专项验收待完成。"
     },
     {
       "slug": "radio",
@@ -571,7 +593,7 @@
       "tier": "free",
       "upstreamStatus": "shipped",
       "localRoute": "/zh-hans/components/table",
-      "implementation": "existing-unverified",
+      "implementation": "ported-unverified",
       "sourcePolicy": "verify-public-source",
       "verification": {
         "visual": "pending",
@@ -580,7 +602,14 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "sourcePaths": [
+        "components/base/table/table.tsx"
+      ],
+      "localPaths": [
+        "packages/react/table.tsx"
+      ],
+      "notes": "已移植固定上游公开 MIT 实现，保留兼容接口；专项验收待完成。"
     },
     {
       "slug": "tabs",
@@ -635,7 +664,7 @@
       "tier": "free",
       "upstreamStatus": "shipped",
       "localRoute": "/zh-hans/components/tree-view",
-      "implementation": "existing-unverified",
+      "implementation": "ported-unverified",
       "sourcePolicy": "verify-public-source",
       "verification": {
         "visual": "pending",
@@ -644,7 +673,14 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "sourcePaths": [
+        "components/base/tree-view/tree-view.tsx"
+      ],
+      "localPaths": [
+        "packages/react/tree-view.tsx"
+      ],
+      "notes": "已移植固定上游公开 MIT 实现，保留兼容接口；专项验收待完成。"
     },
     {
       "slug": "tooltip",
@@ -1448,7 +1484,8 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "notes": "本地扩展，共享原版表格/进度视觉配方；非直接上游源码移植。"
     },
     {
       "slug": "spinner",
@@ -1637,7 +1674,8 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "notes": "本地扩展，共享原版表格/进度视觉配方；非直接上游源码移植。"
     },
     {
       "slug": "time-field",

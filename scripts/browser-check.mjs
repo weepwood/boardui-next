@@ -100,6 +100,66 @@ try{
           await link.waitFor({state:'visible'});
           assert.ok((await link.getAttribute('href')).startsWith(base+'/'));
         }
+        if(route==='/zh-hans/components/table/'){
+          const table=page.locator('#preview').getByRole('grid',{name:'成员列表'});
+          assert.equal(await table.getByRole('row').count(),4);
+          assert.ok(await table.locator('tbody tr').first().getByRole('rowheader').count());
+        }
+        if(route==='/zh-hans/components/data-grid/'){
+          const demo=page.locator('#preview');
+          await demo.getByRole('button',{name:'数量'}).click();
+          assert.ok((await demo.locator('tbody tr').first().textContent()).includes('IT-002'));
+          await demo.getByRole('checkbox',{name:'全选'}).click();
+          await demo.getByText('已选 3 项').waitFor();
+          await demo.getByRole('button',{name:'清除选择'}).click();
+          assert.ok(!(await demo.getByRole('checkbox',{name:'全选'}).isChecked()));
+        }
+        if(route==='/zh-hans/components/data-table/'){
+          const demo=page.locator('#preview');
+          await demo.getByRole('button',{name:'金额'}).click();
+          assert.ok((await demo.locator('tbody tr').first().textContent()).includes('李四'));
+        }
+        if(route==='/zh-hans/components/pagination/'){
+          const nav=page.locator('#preview').getByRole('navigation',{name:'分页'});
+          await nav.getByRole('button',{name:'下一页'}).click();
+          assert.equal(await nav.locator('[aria-current=page]').textContent(),'4');
+        }
+        if(route==='/zh-hans/components/tree-view/'){
+          const tree=page.locator('#preview').getByRole('treegrid',{name:'树形导航'});
+          const branch=tree.getByRole('row',{name:/src/});
+          await branch.press('ArrowLeft');
+          assert.equal(await branch.getAttribute('aria-expanded'),'false');
+          await branch.press('ArrowRight');
+          assert.equal(await branch.getAttribute('aria-expanded'),'true');
+          await tree.getByRole('row',{name:/utils.ts/}).click();
+          assert.equal(await tree.getByRole('row',{name:/utils.ts/}).getAttribute('aria-selected'),'true');
+        }
+        if(route==='/zh-hans/components/file-upload/'){
+          const demo=page.locator('#preview');
+          const input=demo.locator('input[type=file]');
+          await input.setInputFiles({name:'bad.exe',mimeType:'application/octet-stream',buffer:Buffer.from('x')});
+          await demo.getByRole('alert').waitFor();
+          await input.setInputFiles({name:'sample.pdf',mimeType:'application/pdf',buffer:Buffer.from('sample')});
+          await demo.getByText('sample.pdf',{exact:true}).waitFor();
+          await demo.getByRole('button',{name:'移除 sample.pdf'}).click();
+          await demo.getByText('sample.pdf',{exact:true}).waitFor({state:'hidden'});
+        }
+        if(route==='/zh-hans/components/avatar/'){
+          await page.getByLabel('回退头像',{exact:true}).getByText('A',{exact:true}).waitFor();
+        }
+        if(route==='/zh-hans/components/chip/'){
+          const filters=page.locator('#filters');
+          const btn=filters.getByRole('button').first();
+          const prev=await btn.getAttribute('aria-pressed');
+          await btn.click();
+          assert.notEqual(await btn.getAttribute('aria-pressed'),prev);
+        }
+        if(route==='/zh-hans/components/progress/'){
+          assert.equal(await page.getByRole('progressbar',{name:'任务进度'}).getAttribute('aria-valuenow'),'45');
+        }
+        if(route==='/zh-hans/components/meter/'){
+          assert.equal(await page.getByRole('meter',{name:'存储空间'}).getAttribute('aria-valuenow'),'68');
+        }
         if(route==='/zh-hans/components/date-picker/'){
           const trigger=page.locator('#preview').getByRole('button',{name:'开始日期'});
           const committed=page.getByTestId('date-committed');
