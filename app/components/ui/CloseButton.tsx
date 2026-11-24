@@ -27,9 +27,9 @@ export function CloseButton({
       aria-label={props["aria-label"] ?? "关闭"}
       className={cn(
         "inline-flex shrink-0 cursor-pointer items-center justify-center rounded-full",
-        "transition-[background-color,color,scale] duration-150 ease-out",
+        "transition-[background-color,color,scale] duration-150 ease-out motion-reduce:transition-none motion-reduce:pressed:scale-100",
         "pressed:scale-90 outline-none",
-        "focus-visible:ring-2 focus-visible:ring-accent-500 focus-visible:ring-offset-2",
+        "focus-visible:ring-2 focus-visible:ring-border-focus-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background-full",
         "disabled:cursor-not-allowed disabled:opacity-40",
         sizes[size],
         variant === "filled"

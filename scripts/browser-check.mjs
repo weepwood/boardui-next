@@ -1253,10 +1253,43 @@ try{
           }
         }
         if(route==='/zh-hans/components/close-button/'){
-          for(const size of [16,20,24,32]){
-            const box=await page.getByRole('button',{name:'关闭 '+size,exact:true}).boundingBox();
+          stage='close button: source geometry and state contract';
+          const geometry=[[16,6.8,1.6],[20,10.8,2],[24,12.6,2],[32,16.2,2.5]];
+          for(const [size,glyph,stroke] of geometry){
+            const button=page.getByRole('button',{name:'关闭 '+size,exact:true});
+            const box=await button.boundingBox();
             assert.equal(box?.width,size);assert.equal(box?.height,size);
+            assert.equal(Number(await button.locator('svg').getAttribute('width')),glyph);
+            assert.equal(Number(await button.locator('path').first().getAttribute('stroke-width')),stroke);
           }
+          const demo=page.getByTestId('close-button-states');
+          await demo.scrollIntoViewIfNeeded();
+          const close=demo.getByRole('button',{name:'关闭可用',exact:true}),disabled=demo.getByRole('button',{name:'关闭禁用',exact:true});
+          const output=demo.locator('output');
+          assert.equal(await close.getAttribute('type'),'button');
+          assert.equal(await disabled.isDisabled(),true);
+          assert.equal(await disabled.evaluate(e=>getComputedStyle(e).cursor),'not-allowed');
+          assert.ok(await close.evaluate(e=>getComputedStyle(e).transitionProperty==='none'&&parseFloat(getComputedStyle(e).transitionDuration)<=.00001),'reduced motion must disable transitions and preserve global duration cap');
+          await close.click();await close.press('Enter');await close.press('Space');
+          assert.equal(await output.textContent(),'3 / 0 / false');
+          await disabled.evaluate(e=>e.click());
+          assert.equal(await output.textContent(),'3 / 0 / false');
+          await demo.getByRole('button',{name:'提交表单'}).click();
+          assert.equal(await output.textContent(),'3 / 1 / false');
+          await demo.getByRole('button',{name:'聚焦关闭按钮'}).click();
+          assert.equal(await output.textContent(),'3 / 1 / true');
+          await page.waitForFunction(e=>document.activeElement===e,await close.elementHandle());
+          await close.press('Tab');
+          assert.ok(await demo.getByRole('button',{name:'提交表单'}).evaluate(e=>e===document.activeElement));
+          await demo.getByRole('button',{name:'关闭兼容按钮'}).press('Space');
+          assert.equal(await output.textContent(),'4 / 1 / true');
+          assert.ok(await demo.getByRole('button',{name:'兼容禁用'}).isDisabled());
+          const before=await close.locator('svg').evaluate(e=>e.outerHTML);
+          await demo.getByRole('checkbox',{name:'RTL'}).check();
+          assert.equal(await demo.getByTestId('close-button-direction').getAttribute('dir'),'rtl');
+          assert.equal(await close.locator('svg').evaluate(e=>e.outerHTML),before);
+          await close.press('Space');
+          assert.equal(await output.textContent(),'5 / 1 / true');
         }
         stage="accessibility and page errors";
         let violations=[];

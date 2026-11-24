@@ -186,3 +186,8 @@
 - 报告 reference/evidence/formal-preparation-20261124.json；新增三条 partial 证据，未改变任何 verification 状态。npm run test:release 仍阻止 104 项未闭合的正式发布；完整三浏览器、原版差异、逐组件五维、真机触摸和人工读屏不能由截图生成自动替代。
 
 - 全站扩展 Edge 审计完成 455/455（238 个双主题桌面 axe/布局、119 个 390px 浅色、98 个 320/2560px 重点页面；119 条 index.html 路由，区别于 120 个 HTML 导出文件）；无所检查的溢出、页面错误、axe 违规。报告 reference/evidence/formal-responsive-20261124.json；仅登记实际映射的部分无障碍证据，未改变五维门禁。
+
+### 正式三浏览器报告及逐组件收口（2026-11-25）
+
+- #41 run 45427115892 全部通过，Squash 合并 9b04fcd；Pages 45434367661 成功。正式运行 45426162052 源提交 acec795 的 build、Chromium/Firefox/WebKit、report 全部成功，三浏览器各 238/238，总计 714/714，Chromium 图表/工作区触摸专项 14/14。最终 release-gate 失败仅因逐组件五维未闭合；下载原始报告并逐条核对身份、覆盖、无重复/缺失、axe 后保存在 reference/evidence/formal-45426162052/。历史报告仍绑定 acec795，不冒充新源码通过。
+- 冻结新增功能，优先逐组件验收。关闭按钮保留固定上游四档 SVG 几何，补齐禁用样式、减少动效、焦点主题令牌；旧 React Aria 兼容层也继承减少动效。新增真实点击、Enter、Space、Tab 跳过禁用、ref、默认 button/显式 submit、兼容 onPress 与 RTL 断言。首次 duration=0s 断言不符合全局 0.01ms 规则，最终同时要求 transition-property:none 与时长上限。本地 Edge 20/20 页面专项，8/8 双主题双视口 LTR/RTL 状态截图和局部 axe，类型、单测、120 HTML 导出及预算通过。报告 reference/evidence/close-button-20261125.json。正式 CI 新增 Chromium 状态专项，五维记录仍为 partial，保留人工审查、独立包全 API 与真机限制。

@@ -65,10 +65,10 @@ const styles = sortCx({
   base: [
     "inline-flex shrink-0 items-center justify-center rounded-full",
     "bg-background-tertiary-default text-foreground-icon-secondary",
-    "select-none cursor-pointer",
-    "transition-colors duration-150 ease",
-    "hover:text-text-primary",
-    "outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-border-focus-ring",
+    "select-none cursor-pointer disabled:cursor-not-allowed disabled:opacity-40",
+    "transition-colors duration-150 ease motion-reduce:transition-none",
+    "enabled:hover:text-text-primary",
+    "outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-background-full focus-visible:ring-border-focus-ring",
   ].join(" "),
   container: {
     "2xs": "size-4",
