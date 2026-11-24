@@ -641,8 +641,8 @@ export const docs: Record<string, Doc> = {
     preview: (
       <Breadcrumb
         items={[
-          { id: "1", label: "BoardUI", href: "/" },
-          { id: "2", label: "组件", href: "/zh-hans/components" },
+          { id: "1", label: "BoardUI", href: (process.env.NEXT_PUBLIC_BASE_PATH ?? "") + "/" },
+          { id: "2", label: "组件", href: (process.env.NEXT_PUBLIC_BASE_PATH ?? "") + "/zh-hans/components/" },
           { id: "3", label: "面包屑导航" },
         ]}
       />
