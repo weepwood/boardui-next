@@ -409,7 +409,7 @@ try{
           await demo.getByRole('button',{name:'查看全部'}).click();
           assert.equal(await demo.locator('tbody tr').count(),4);
         }
-        if(route==='/zh-hans/templates/ai-chat/'){
+        if(route==='/zh-hans/templates/ai-chat/'||route==='/workspace/ai-chat/'){
           const demo=page.locator('#preview');
           await demo.getByRole('textbox',{name:'消息'}).fill('模板测试');
           await demo.getByRole('button',{name:'发送',exact:true}).click();
@@ -418,6 +418,17 @@ try{
           assert.equal(await demo.getByRole('log').getByText('模板测试').count(),0);
           await demo.getByRole('button',{name:'数据看板搭建',exact:true}).click();
           await demo.getByRole('log').getByText('模板测试').waitFor();
+          const composer=demo.getByRole('textbox',{name:'消息'});
+          await composer.fill('尚未发送的草稿');
+          await demo.getByRole('button',{name:'表单校验方案',exact:true}).click();
+          assert.equal(await composer.inputValue(),'');
+          await composer.fill('第二个会话草稿');
+          await demo.getByRole('button',{name:'数据看板搭建',exact:true}).click();
+          assert.equal(await composer.inputValue(),'尚未发送的草稿');
+          await demo.getByRole('searchbox',{name:'搜索会话'}).fill('暗色');
+          assert.equal(await demo.getByRole('navigation',{name:'会话列表'}).getByRole('button').count(),1);
+          await demo.getByRole('searchbox',{name:'搜索会话'}).fill('');
+
           const mobile=await context.newPage();
           try{await mobile.setViewportSize({width:390,height:844});await mobile.goto(origin+route,{waitUntil:'networkidle'});const panel=mobile.locator('#preview');await panel.getByRole('button',{name:'新建对话',exact:true}).click();await panel.getByRole('combobox',{name:'切换会话'}).selectOption('1');await panel.getByRole('log').getByText('帮我用 BoardUI 搭一个数据看板').waitFor();}finally{await mobile.close()}
 
@@ -457,6 +468,17 @@ try{
         }
         if(route==='/zh-hans/templates/project-board/'||route==='/workspace/project-board/'){
           const demo=page.locator('#preview');
+          await demo.getByRole('radio',{name:'看板',exact:true}).click();
+          const backlog=demo.locator('[data-board-column="backlog"]');
+          const before=await backlog.locator('[data-board-card]').evaluateAll(es=>es.map(e=>e.getAttribute('data-board-card')));
+          await backlog.getByRole('button',{name:'编辑任务 探索智能体移交的批准卡'}).click();
+          await page.getByRole('dialog',{name:'编辑任务'}).getByRole('button',{name:'保存任务'}).click();
+          await page.getByRole('dialog',{name:'编辑任务'}).waitFor({state:'hidden'});
+          assert.deepEqual(await backlog.locator('[data-board-card]').evaluateAll(es=>es.map(e=>e.getAttribute('data-board-card'))),before);
+          await backlog.locator('[data-board-card="c2"] [draggable=true]').dragTo(demo.locator('[data-board-column="doing"] h4'));
+          await demo.locator('[data-board-column="doing"] [data-board-card="c2"]').waitFor();
+          assert.equal(await backlog.locator('[data-board-card="c2"]').count(),0);
+
           await demo.getByRole('searchbox',{name:'搜索任务'}).fill('审计跟踪');
           await demo.getByText('记录智能体操作的审计跟踪',{exact:true}).waitFor();
           assert.equal(await demo.getByText('定义高架表面的语义变量',{exact:true}).count(),0);
@@ -478,6 +500,8 @@ try{
           assert.equal(await demo.locator('[data-board-column="backlog"]').getByText('记录智能体操作的审计跟踪',{exact:true}).count(),0);
           await demo.getByRole('searchbox',{name:'搜索任务'}).fill('不存在的任务-验收');
           assert.equal(await demo.getByText('暂无匹配任务').count(),4);
+          await demo.getByRole('button',{name:'清除筛选'}).click();
+          assert.equal(await demo.getByRole('searchbox',{name:'搜索任务'}).inputValue(),'');
         }
         if(route.startsWith('/workspace/')){
           assert.equal(await page.locator('[data-workspace]').count(),1);
