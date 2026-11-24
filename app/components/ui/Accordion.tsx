@@ -26,22 +26,27 @@ const Ctx = createContext<AccordionCtx>({
 export function Accordion({
   children,
   defaultExpandedKeys = [],
+  allowsMultiple = true,
+  expandedKeys: controlledKeys,
+  onExpandedChange,
   className,
 }: {
   children: React.ReactNode;
   allowsMultiple?: boolean;
   defaultExpandedKeys?: string[];
+  expandedKeys?: string[];
+  onExpandedChange?: (keys:string[])=>void;
   className?: string;
 }) {
-  const [expandedKeys, setExpandedKeys] = useState(new Set(defaultExpandedKeys));
+  const [innerKeys, setExpandedKeys] = useState(new Set(defaultExpandedKeys));
+  const expandedKeys = controlledKeys ? new Set(controlledKeys) : innerKeys;
 
   const toggle = (key: string) => {
-    setExpandedKeys((prev) => {
-      const next = new Set(prev);
-      if (prev.has(key)) next.delete(key);
-      else next.add(key);
-      return next;
-    });
+    const next = new Set(expandedKeys);
+    if(next.has(key)) next.delete(key);
+    else { if(!allowsMultiple)next.clear(); next.add(key); }
+    if(controlledKeys===undefined)setExpandedKeys(next);
+    onExpandedChange?.([...next]);
   };
 
   return (
@@ -57,8 +62,10 @@ export function AccordionItem({
   subtitle,
   children,
   className,
+  isDisabled=false,
 }: {
   id?: string;
+  isDisabled?: boolean;
   title: string;
   subtitle?: string;
   children: React.ReactNode;
@@ -76,12 +83,15 @@ export function AccordionItem({
           type="button"
           onClick={() => toggle(id)}
           aria-expanded={isExpanded}
+          aria-controls={autoId+"-panel"}
+          id={autoId+"-trigger"}
+          disabled={isDisabled}
           className={cn(
             "group/trigger flex w-full cursor-pointer items-center gap-3 rounded-lg py-4",
             "text-start outline-none",
             "transition-colors duration-150 ease-out",
             "hover:bg-background-secondary-hover",
-            "focus-visible:ring-2 focus-visible:ring-border-focus-ring"
+            "focus-visible:ring-2 focus-visible:ring-border-focus-ring disabled:cursor-not-allowed disabled:opacity-50"
           )}
         >
           <span className="flex min-w-0 flex-1 flex-col gap-0.5">
@@ -94,7 +104,7 @@ export function AccordionItem({
             name="arrow-down-s-line"
             className={cn(
               "size-5 shrink-0 text-foreground-icon-secondary",
-              "transition-transform duration-300 ease-in-out",
+              "transition-transform duration-300 ease-in-out motion-reduce:transition-none",
               isExpanded && "rotate-180"
             )}
           />
@@ -103,13 +113,14 @@ export function AccordionItem({
 
       {/* 展开区 */}
       <div
-        className="grid transition-[grid-template-rows,opacity] duration-300 ease-in-out"
+        id={autoId+"-panel"} role="region" aria-labelledby={autoId+"-trigger"} inert={!isExpanded} aria-hidden={!isExpanded}
+        className="grid transition-[grid-template-rows,opacity] duration-300 ease-in-out motion-reduce:transition-none"
         style={{
           gridTemplateRows: isExpanded ? "1fr" : "0fr",
           opacity: isExpanded ? 1 : 0,
         }}
       >
-        <div className="overflow-hidden">
+        <div className="min-h-0 overflow-hidden">
           <div className="pb-4 text-body-regular text-text-secondary">{children}</div>
         </div>
       </div>

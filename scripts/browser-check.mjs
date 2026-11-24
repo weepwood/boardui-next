@@ -99,6 +99,42 @@ try{
           await link.waitFor({state:'visible'});
           assert.ok((await link.getAttribute('href')).startsWith(base+'/'));
         }
+        if(route==='/zh-hans/components/modal/'){
+          const trigger=page.getByRole('button',{name:'打开弹窗'});
+          await trigger.click();
+          const dialog=page.getByRole('dialog',{name:'邀请团队成员'});
+          await dialog.waitFor();
+          await dialog.getByRole('textbox',{name:'邮箱地址'}).fill('demo@example.com');
+          await page.keyboard.press('Escape');
+          await dialog.waitFor({state:'hidden'});
+          assert.ok(await trigger.evaluate(e=>document.activeElement===e));
+        }
+        if(route==='/zh-hans/components/drawer/'){
+          await page.getByRole('button',{name:'打开抽屉'}).click();
+          const dialog=page.getByRole('dialog',{name:'项目设置'});
+          await dialog.waitFor();
+          await dialog.getByRole('button',{name:'关闭',exact:true}).click();
+          await dialog.waitFor({state:'hidden'});
+        }
+        if(route==='/zh-hans/components/accordion/'){
+          const first=page.getByRole('button',{name:'第一项',exact:true});
+          const second=page.getByRole('button',{name:'第二项',exact:true});
+          await second.click();
+          assert.equal(await first.getAttribute('aria-expanded'),'false');
+          assert.equal(await second.getAttribute('aria-expanded'),'true');
+          assert.ok(await page.getByRole('button',{name:'禁用项'}).isDisabled());
+          const more=page.getByRole('button',{name:'更多设置'});
+          await more.click();await page.getByRole('textbox',{name:'折叠内输入框'}).fill('test');
+          await more.click();assert.equal(await more.getAttribute('aria-expanded'),'false');
+        }
+        if(route==='/zh-hans/components/notification/'){
+          await page.getByRole('button',{name:'关闭示例通知'}).click();
+          await page.getByText('任务已完成',{exact:true}).waitFor({state:'hidden'});
+        }
+        if(route==='/zh-hans/components/announcement/'){
+          await page.getByRole('button',{name:'关闭示例公告'}).click();
+          await page.getByText('完善工作区',{exact:true}).waitFor({state:'hidden'});
+        }
         if(route==='/zh-hans/components/tabs/'){
           const tab=page.locator('#preview').getByRole('tab',{name:/横幅/});
           await tab.press('ArrowRight');

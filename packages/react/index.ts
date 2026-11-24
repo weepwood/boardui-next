@@ -39,3 +39,8 @@ export { Dropdown, DropdownTrigger, DropdownPopover, DropdownGroup, DropdownItem
 export { Tooltip, TooltipTrigger } from "./tooltip";
 export { DirectionProvider, useDirection } from "./direction";
 export { ChevronDownSmall, ChevronRightSmall, ChevronUpDownSmall, ChevronSortDown } from "./chevrons";
+
+export { Notification, NotificationViewport } from "./notification";
+export type { NotificationProps, NotificationViewportProps, NotificationPosition, NotificationStatus, NotificationAction } from "./notification";
+export { Announcement } from "./announcement";
+export type { AnnouncementProps } from "./announcement";

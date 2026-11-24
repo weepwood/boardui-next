@@ -31,6 +31,9 @@ import { Skeleton } from "@/app/components/ui/Skeleton";
 import { Divider } from "@/app/components/ui/Divider";
 import { Icon } from "@/app/components/ui/Icon";
 import { Tabs, TabList, Tab, TabPanel, TabCount } from "@/app/components/ui/Tabs";
+import { Collapsible } from "@/app/components/ui/Collapsible";
+import { Notification as CoreNotification } from "@/packages/react/notification";
+import { Announcement as CoreAnnouncement } from "@/packages/react/announcement";
 import { Accordion, AccordionItem } from "@/app/components/ui/Accordion";
 import { Tooltip, TooltipTrigger } from "@/app/components/ui/Tooltip";
 import { ToggleButtonGroup, ToggleButton } from "@/app/components/ui/ToggleButton";
@@ -121,9 +124,7 @@ function ModalDemo() {
         description="他们会收到一封电子邮件，其中包含加入工作区的链接。"
       >
         <DialogBody>
-          <div className="flex h-9 items-center rounded-2lg bg-background-secondary-default px-3 text-body-medium text-text-placeholder">
-            输入邮箱地址…
-          </div>
+          <Input label="邮箱地址" type="email" placeholder="输入邮箱地址…"/>
         </DialogBody>
         <DialogFooter>
           <Button variant="secondary" onClick={() => setOpen(false)}>
@@ -545,7 +546,7 @@ export const docs: Record<string, Doc> = {
     description: "把内容折叠进原地展开的面板，使用 grid 行高动画。",
     install: "npx boardui@latest add accordion",
     preview: <AccordionDemo />,
-    demos: [],
+    demos: [{id:"single",title:"单项展开与禁用",node:<div className="w-full max-w-sm"><Accordion allowsMultiple={false} defaultExpandedKeys={["first"]}><AccordionItem id="first" title="第一项">第一项内容</AccordionItem><AccordionItem id="second" title="第二项">第二项内容</AccordionItem><AccordionItem id="disabled" title="禁用项" isDisabled>不可展开</AccordionItem></Accordion><Collapsible title="更多设置"><Input label="折叠内输入框"/></Collapsible></div>}],
   },
 
   tooltip: {
@@ -654,7 +655,7 @@ export const docs: Record<string, Doc> = {
 
   announcement: {
     title: "公告",
-    description: "页面级提示条，四种语义变体，可关闭。",
+    description: "原版紧凑卡片结构，支持语义图标、操作和柔和关闭动画。",
     install: "npx boardui@latest add announcement",
     preview: (
       <div className="flex w-full flex-col gap-2">
@@ -664,7 +665,7 @@ export const docs: Record<string, Doc> = {
         <Announcement variant="error" title="同步失败" description="无法连接到远端仓库，请检查网络。" />
       </div>
     ),
-    demos: [],
+    demos: [{id:"dismiss",title:"操作与关闭",node:<div className="w-full max-w-xs"><CoreAnnouncement title="完善工作区" description="管理工作区设置。" actionLabel="查看设置" dismissible closeLabel="关闭示例公告"/></div>}],
   },
 
   notification: {
@@ -678,7 +679,7 @@ export const docs: Record<string, Doc> = {
         <Notification variant="error" title="上传失败" description="文件大小超过限制，请压缩后重试。" />
       </div>
     ),
-    demos: [],
+    demos: [{id:"dismiss",title:"关闭与操作",node:<div className="w-full max-w-sm"><CoreNotification title="任务已完成" description="可手动关闭通知。" status="success" closeLabel="关闭示例通知" actions={[{label:"查看详情",variant:"secondary"}]}/></div>}],
   },
 
   toast: {

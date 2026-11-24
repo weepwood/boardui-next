@@ -29,3 +29,7 @@ Input 与 Textarea 接入固定上游 MIT React Aria 组件，复用 Label/HintT
 ### 批量导航与浮层重构
 
 移植 Tabs、PillTab、SegmentedControl、Select、Dropdown、Tooltip 及方向/chevron/菜单配方；Combobox 与 Popover 为本地扩展，复用原版共享配方。保留现有数组式适配器及原有 Menu 语义，补齐键盘、过滤、关闭与选中状态测试。
+
+### 第四批：反馈与模态组件
+
+Notification/Announcement 移植上游 MIT 源与 Motion，保留历史调用；Dialog/Drawer/Accordion/Collapsible/Toast 为独立本地扩展，采用原版主题、关闭控件与过渡风格。Drawer 迁移至 React Aria 模态管理；折叠内容关闭时 inert，避免键盘访问不可见内容。新增单选折叠、关闭和焦点测试。Avatar 暂时使用兼容适配器，后续单独迁移。

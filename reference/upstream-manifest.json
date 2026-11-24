@@ -44,7 +44,7 @@
       "tier": "free",
       "upstreamStatus": "shipped",
       "localRoute": "/zh-hans/components/announcement",
-      "implementation": "existing-unverified",
+      "implementation": "ported-unverified",
       "sourcePolicy": "verify-public-source",
       "verification": {
         "visual": "pending",
@@ -53,7 +53,14 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "sourcePaths": [
+        "components/base/announcement/announcement.tsx"
+      ],
+      "localPaths": [
+        "packages/react/announcement.tsx"
+      ],
+      "notes": "MIT 原版视觉结构与 Motion 动效移植；兼容既有接口，专项验证待完成。"
     },
     {
       "slug": "avatar",
@@ -378,7 +385,7 @@
       "tier": "free",
       "upstreamStatus": "shipped",
       "localRoute": "/zh-hans/components/notification",
-      "implementation": "existing-unverified",
+      "implementation": "ported-unverified",
       "sourcePolicy": "verify-public-source",
       "verification": {
         "visual": "pending",
@@ -387,7 +394,14 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "sourcePaths": [
+        "components/base/notification/notification.tsx"
+      ],
+      "localPaths": [
+        "packages/react/notification.tsx"
+      ],
+      "notes": "MIT 原版视觉结构与 Motion 动效移植；兼容既有接口，专项验证待完成。"
     },
     {
       "slug": "pagination",
@@ -1453,7 +1467,8 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "notes": "独立本地扩展：沿用原版语义令牌、关闭按钮、浮层与动效风格。"
     },
     {
       "slug": "toggle-button",
@@ -1495,7 +1510,8 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "notes": "独立本地扩展：沿用原版语义令牌、关闭按钮、浮层与动效风格。"
     },
     {
       "slug": "popover",
@@ -1538,7 +1554,8 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "notes": "独立本地扩展：沿用原版语义令牌、关闭按钮、浮层与动效风格。"
     },
     {
       "slug": "drawer",
@@ -1552,7 +1569,8 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "notes": "独立本地扩展：沿用原版语义令牌、关闭按钮、浮层与动效风格。"
     },
     {
       "slug": "number-field",
