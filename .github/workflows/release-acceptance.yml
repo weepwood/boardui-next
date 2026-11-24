@@ -67,9 +67,17 @@ jobs:
           path: out
       - run: npm install --no-save --package-lock=false playwright@1.56.1 axe-core@4.10.3
       - run: npx playwright install --with-deps ${{ matrix.browser }}
-      - run: npm run test:browser -- --full
+      - run: |
+          if [ "$BROWSER" = firefox ]; then
+            BROWSER_HEADED=1 xvfb-run -a npm run test:browser -- --full
+          else
+            npm run test:browser -- --full
+          fi
         env:
           BROWSER: ${{ matrix.browser }}
+      - name: 图表与工作区触摸状态
+        if: matrix.browser == 'chromium'
+        run: node scripts/check-chart-workspace.mjs acceptance/chart-workspace
       - uses: actions/upload-artifact@v4
         if: always()
         with:

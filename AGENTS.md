@@ -119,3 +119,19 @@
 - 本地 Edge 初始基线 230 个桌面双主题 axe、193 个布局组合、11 个官网采样。新候选全扫 423 组合有 9 项失败（8 hydration、1 暗色 composer-panel 选中 tab aria-controls 瞬态引用）。修复 SVG title 与 axe 前等待真实选中 tabpanel 引用，相关 21 组合复验 0 问题；首轮交互 94/106，修正实际 DOM 角色/名称、保留断言后相关 28/28，按钮 hover/focus/disabled/pressed 等 12/12。不要把不同构建结果拼成单次最终全量成功。最终 CI 另设 423 组合完整复跑并上传 artifact。自动 axe 初始状态不等同人工读屏。
 - 116 静态 HTML、类型/API/单测、独立包 SSR/类型消费通过；最大 gzip JS 503239B、HTML 25773B，模板目录 253310B。证据 reference/evidence/responsive-accessibility-20261124.json 与代表截图目录。剩余 20 个条目补齐部分证据，104 项均有范围受限的证据，正式五维验收门禁未升级。下一轮先核查本批 PR CI 的最终全站复扫、实际失败项与部署，再执行真正完整三浏览器/交互态及人工无障碍验收。
 - 最后补充图表指针实测：14/14 双主题专项通过；以 SVG 实际屏幕坐标触发数据点，检查 3,400 数值、离开隐藏、键盘选择、图例全部隐藏/恢复、动态更新与空状态。新增两张数据提示截图。共 197 条部分验收记录、104/104 条目覆盖；保留全站复扫与完整正式验收门禁。
+
+### 图表、独立工作区及三浏览器验收
+
+- #32 全部 quick/targeted（423 响应式/axe 组合）成功并合并 main 16c1575；Pages 45408765489 build/deploy 成功，生产面积图 HTTP 200，包含数据点及动态演示。
+- 正式基线 run 45408057518 精确 SHA b01522c，Chromium 230/230，Firefox 228/230，WebKit 227/230，合计 685/690；release gate 跳过。Firefox Button 双主题及 WebKit Button 浅色等待超时（旧日志未细分具体断言），WebKit Input 双主题 ResizeObserver 警告。真实报告保存于本批 evidence。Button 改实际 Tab 路径并记录阶段与已访问焦点；Textarea 尺寸观察改下一帧写入，卸载取消，未过滤 pageerror。该候选待 Firefox/WebKit 真实验证，本地官方 Firefox 下载至 100% 但未完成安装，不能宣称已解决。
+- 对照固定公开 MIT 源 ec5c5eb 的 app/dashboard/page.tsx、orders-chart-card.tsx、dashboard-sidebar.tsx 与此前官网实际截图。原版订单图是双柱对比，本地改为本年/去年并列柱、两者真实数值、总量和期间选择；保留近4/8月示例而非完整12个月原版。Pro 图表仅独立参考公开表现，不复制未授权源码。
+- ChartCard 增量 records 接口（label/value/color/x/y/secondary），雷达、径向、热力、散点、组合及独立柱状演示共享 ChartDataInspector。触摸/鼠标高亮、可键盘选择、实际数据、动态更新、空状态；散点真实负值域/刻度，径向多圈边界，热力实际值，组合柱宽防负。核心包 BarChart/RadarChart/Heatmap 可选 activeIndex 等，API 文档别名校正，41组69导出；应用 ChartCard 不宣称已成为 npm 公共 API。
+- 四条独立 /workspace/{dashboard,finance,ai-chat,project-board}/ 静态路由不占文档导航，返回文档/工作区切换/主题；看板搜索、标签筛选、任务标题/状态修改、筛选后 CSV、空态、焦点恢复；不是可拖拽看板，数据仅本地实例，刷新恢复样本。宽屏/移动端实际截图。
+- 本地 Edge 36/36 双主题交互（最后 Textarea/Button 修复前），修复后相关 18/18，14/14 双主题触摸与打开态 axe（最后修复前），最终 61/61 布局/初始态 axe。120 HTML、类型/API/单测/独立包 SSR 与类型检查通过；最大 gzip JS 505356 B，HTML 25780 B。保留真实无障碍树、截图及报告 reference/evidence/chart-workspace-20261124.json，不将抽样当成单次完整通过。未进行人工读屏，全站最终三浏览器待验证。
+- 新 CI 高风险添加 Firefox/WebKit Button/Input/textarea 双主题专项、工作区/图表触摸状态、全站响应式截图；正式 workflow Chromium 增加触摸检查，原严格门禁保留。下一轮先检查本批 PR CI 和正式工作流实际报告，按失败阶段修复、通过后合并部署。
+
+### PR #33 / #34 收口（2026-11-24）
+
+- #34 quick/targeted 全部成功，合并至 main 9ff45fd。#33 run 45410366059 的 Chromium 专项与 Firefox/WebKit 导航字体均通过，但 Firefox 双主题 button hover 样式超时；Mozilla Bug 2037020 记录 Linux headless Firefox 错报 hover/pointer 能力，当前根因仍需通过真实 CI 验证。Firefox 桌面验收改用 Xvfb headed，增加能力断言，保留真实 hover、焦点及按压检查，不修改发布门禁。已纳入 #34 主分支，需重跑全部必要 CI。
+
+- #33 run 45412098773：Xvfb Firefox hover 不再报错，浅色 Button 页目录跳转超时。目录显式锚点意图不再被延迟布局的 IntersectionObserver 竞争覆盖，用户主动滚动后恢复跟踪；细分 hash/选中断言，保留测试严格性。新 CI 待验证根因。

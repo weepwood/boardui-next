@@ -1,0 +1,6577 @@
+{
+  "baselineCommit": "16c1575d5fe2596984eaef162f5a5620ef184485",
+  "formalRun": 45408057518,
+  "formalReports": {
+    "webkit": {
+      "sha": "b01522ca2c9ed52aadb679639cb24e48b2706895",
+      "browser": "webkit",
+      "report": [
+        {
+          "theme": "light",
+          "route": "/404/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/advanced/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/accordion/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/activity-rings-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/agent-creator/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/agent-limits-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/agent-progress/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/agent-thinking/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/announcement/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/area-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/auth-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/avatar/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/badge/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/bar-list-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/breadcrumb/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/button/",
+          "status": "failed",
+          "stage": "navigation",
+          "error": "page.waitForFunction: Timeout 10000ms exceeded."
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/button-group/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/calendar/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/carousel/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/checkbox/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/chip/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/close-button/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/color/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/color-picker/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/combo-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/combobox/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/command-palette/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/composer/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/composer-attachments/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/composer-loader/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/composer-panel/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/context-menu/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/contributions-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/counter/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/data-grid/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/data-table/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/date-calendar/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/date-picker/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/divider/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/drawer/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/dropdown/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/earnings-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/file-upload/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/funnel-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/heatmap-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/icon-button/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/input/",
+          "status": "failed",
+          "stage": "accessibility and page errors",
+          "error": "ResizeObserver loop completed with undelivered notifications."
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/input-otp/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/line-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/link-button/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/meter/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/modal/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/most-active-days-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/notification/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/notification-center/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/number-field/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/orders-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/pagination/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/popover/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/progress/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/questionnaire/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/radar-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/radial-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/radio/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/revenue-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/sankey-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/scatter-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/search-field/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/segmented-control/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/select/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/settings-modal/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/sidebar/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/skeleton/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/sleep-score-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/slider/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/social-button/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/spinner/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/stage-bars-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/stat-cards/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/steps-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/switch/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/table/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/tabs/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/tag-group/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/task-list/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/textarea/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/time-field/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/toast/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/toggle-button/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/token-input/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/tooltip/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/tree-view/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/typography/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/web-search/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/getting-started/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/installation/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/kitchen-sink/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/mcp/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/rtl/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/skill/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/templates/ai-chat/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/templates/ai-image-generation/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/templates/ai-profile/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/templates/calendar/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/templates/chat-starter/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/templates/dashboard/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/templates/finance/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/templates/hr/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/templates/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/templates/marketing/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/templates/medical-profile/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/templates/multi-agent-chat/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/templates/project-board/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/404/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/advanced/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/accordion/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/activity-rings-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/agent-creator/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/agent-limits-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/agent-progress/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/agent-thinking/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/announcement/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/area-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/auth-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/avatar/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/badge/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/bar-list-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/breadcrumb/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/button/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/button-group/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/calendar/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/carousel/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/checkbox/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/chip/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/close-button/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/color/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/color-picker/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/combo-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/combobox/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/command-palette/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/composer/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/composer-attachments/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/composer-loader/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/composer-panel/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/context-menu/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/contributions-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/counter/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/data-grid/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/data-table/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/date-calendar/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/date-picker/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/divider/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/drawer/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/dropdown/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/earnings-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/file-upload/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/funnel-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/heatmap-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/icon-button/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/input/",
+          "status": "failed",
+          "stage": "accessibility and page errors",
+          "error": "ResizeObserver loop completed with undelivered notifications."
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/input-otp/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/line-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/link-button/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/meter/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/modal/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/most-active-days-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/notification/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/notification-center/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/number-field/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/orders-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/pagination/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/popover/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/progress/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/questionnaire/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/radar-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/radial-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/radio/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/revenue-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/sankey-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/scatter-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/search-field/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/segmented-control/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/select/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/settings-modal/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/sidebar/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/skeleton/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/sleep-score-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/slider/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/social-button/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/spinner/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/stage-bars-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/stat-cards/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/steps-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/switch/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/table/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/tabs/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/tag-group/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/task-list/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/textarea/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/time-field/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/toast/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/toggle-button/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/token-input/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/tooltip/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/tree-view/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/typography/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/web-search/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/getting-started/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/installation/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/kitchen-sink/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/mcp/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/rtl/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/skill/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/templates/ai-chat/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/templates/ai-image-generation/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/templates/ai-profile/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/templates/calendar/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/templates/chat-starter/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/templates/dashboard/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/templates/finance/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/templates/hr/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/templates/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/templates/marketing/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/templates/medical-profile/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/templates/multi-agent-chat/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/templates/project-board/",
+          "violations": [],
+          "status": "checked"
+        }
+      ],
+      "errors": [
+        "light /zh-hans/components/button/ [navigation]: page.waitForFunction: Timeout 10000ms exceeded.",
+        "light /zh-hans/components/input/ [accessibility and page errors]: ResizeObserver loop completed with undelivered notifications.",
+        "dark /zh-hans/components/input/ [accessibility and page errors]: ResizeObserver loop completed with undelivered notifications."
+      ]
+    },
+    "firefox": {
+      "sha": "b01522ca2c9ed52aadb679639cb24e48b2706895",
+      "browser": "firefox",
+      "report": [
+        {
+          "theme": "light",
+          "route": "/404/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/advanced/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/accordion/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/activity-rings-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/agent-creator/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/agent-limits-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/agent-progress/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/agent-thinking/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/announcement/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/area-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/auth-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/avatar/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/badge/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/bar-list-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/breadcrumb/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/button/",
+          "status": "failed",
+          "stage": "navigation",
+          "error": "page.waitForFunction: Timeout 10000ms exceeded."
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/button-group/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/calendar/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/carousel/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/checkbox/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/chip/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/close-button/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/color/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/color-picker/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/combo-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/combobox/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/command-palette/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/composer/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/composer-attachments/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/composer-loader/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/composer-panel/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/context-menu/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/contributions-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/counter/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/data-grid/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/data-table/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/date-calendar/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/date-picker/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/divider/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/drawer/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/dropdown/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/earnings-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/file-upload/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/funnel-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/heatmap-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/icon-button/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/input/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/input-otp/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/line-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/link-button/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/meter/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/modal/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/most-active-days-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/notification/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/notification-center/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/number-field/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/orders-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/pagination/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/popover/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/progress/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/questionnaire/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/radar-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/radial-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/radio/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/revenue-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/sankey-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/scatter-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/search-field/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/segmented-control/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/select/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/settings-modal/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/sidebar/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/skeleton/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/sleep-score-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/slider/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/social-button/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/spinner/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/stage-bars-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/stat-cards/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/steps-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/switch/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/table/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/tabs/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/tag-group/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/task-list/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/textarea/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/time-field/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/toast/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/toggle-button/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/token-input/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/tooltip/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/tree-view/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/typography/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/web-search/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/getting-started/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/installation/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/kitchen-sink/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/mcp/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/rtl/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/skill/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/templates/ai-chat/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/templates/ai-image-generation/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/templates/ai-profile/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/templates/calendar/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/templates/chat-starter/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/templates/dashboard/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/templates/finance/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/templates/hr/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/templates/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/templates/marketing/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/templates/medical-profile/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/templates/multi-agent-chat/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/templates/project-board/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/404/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/advanced/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/accordion/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/activity-rings-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/agent-creator/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/agent-limits-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/agent-progress/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/agent-thinking/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/announcement/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/area-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/auth-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/avatar/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/badge/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/bar-list-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/breadcrumb/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/button/",
+          "status": "failed",
+          "stage": "navigation",
+          "error": "page.waitForFunction: Timeout 10000ms exceeded."
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/button-group/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/calendar/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/carousel/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/checkbox/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/chip/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/close-button/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/color/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/color-picker/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/combo-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/combobox/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/command-palette/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/composer/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/composer-attachments/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/composer-loader/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/composer-panel/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/context-menu/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/contributions-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/counter/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/data-grid/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/data-table/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/date-calendar/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/date-picker/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/divider/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/drawer/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/dropdown/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/earnings-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/file-upload/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/funnel-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/heatmap-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/icon-button/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/input/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/input-otp/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/line-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/link-button/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/meter/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/modal/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/most-active-days-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/notification/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/notification-center/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/number-field/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/orders-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/pagination/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/popover/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/progress/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/questionnaire/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/radar-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/radial-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/radio/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/revenue-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/sankey-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/scatter-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/search-field/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/segmented-control/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/select/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/settings-modal/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/sidebar/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/skeleton/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/sleep-score-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/slider/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/social-button/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/spinner/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/stage-bars-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/stat-cards/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/steps-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/switch/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/table/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/tabs/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/tag-group/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/task-list/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/textarea/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/time-field/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/toast/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/toggle-button/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/token-input/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/tooltip/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/tree-view/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/typography/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/web-search/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/getting-started/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/installation/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/kitchen-sink/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/mcp/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/rtl/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/skill/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/templates/ai-chat/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/templates/ai-image-generation/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/templates/ai-profile/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/templates/calendar/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/templates/chat-starter/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/templates/dashboard/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/templates/finance/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/templates/hr/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/templates/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/templates/marketing/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/templates/medical-profile/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/templates/multi-agent-chat/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/templates/project-board/",
+          "violations": [],
+          "status": "checked"
+        }
+      ],
+      "errors": [
+        "light /zh-hans/components/button/ [navigation]: page.waitForFunction: Timeout 10000ms exceeded.",
+        "dark /zh-hans/components/button/ [navigation]: page.waitForFunction: Timeout 10000ms exceeded."
+      ]
+    },
+    "chromium": {
+      "sha": "b01522ca2c9ed52aadb679639cb24e48b2706895",
+      "browser": "chromium",
+      "report": [
+        {
+          "theme": "light",
+          "route": "/404/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/advanced/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/accordion/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/activity-rings-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/agent-creator/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/agent-limits-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/agent-progress/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/agent-thinking/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/announcement/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/area-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/auth-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/avatar/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/badge/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/bar-list-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/breadcrumb/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/button/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/button-group/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/calendar/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/carousel/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/checkbox/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/chip/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/close-button/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/color/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/color-picker/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/combo-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/combobox/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/command-palette/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/composer/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/composer-attachments/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/composer-loader/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/composer-panel/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/context-menu/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/contributions-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/counter/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/data-grid/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/data-table/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/date-calendar/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/date-picker/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/divider/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/drawer/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/dropdown/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/earnings-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/file-upload/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/funnel-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/heatmap-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/icon-button/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/input/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/input-otp/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/line-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/link-button/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/meter/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/modal/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/most-active-days-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/notification/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/notification-center/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/number-field/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/orders-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/pagination/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/popover/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/progress/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/questionnaire/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/radar-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/radial-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/radio/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/revenue-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/sankey-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/scatter-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/search-field/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/segmented-control/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/select/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/settings-modal/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/sidebar/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/skeleton/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/sleep-score-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/slider/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/social-button/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/spinner/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/stage-bars-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/stat-cards/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/steps-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/switch/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/table/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/tabs/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/tag-group/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/task-list/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/textarea/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/time-field/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/toast/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/toggle-button/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/token-input/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/tooltip/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/tree-view/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/typography/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/components/web-search/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/getting-started/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/installation/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/kitchen-sink/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/mcp/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/rtl/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/skill/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/templates/ai-chat/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/templates/ai-image-generation/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/templates/ai-profile/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/templates/calendar/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/templates/chat-starter/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/templates/dashboard/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/templates/finance/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/templates/hr/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/templates/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/templates/marketing/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/templates/medical-profile/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/templates/multi-agent-chat/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "light",
+          "route": "/zh-hans/templates/project-board/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/404/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/advanced/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/accordion/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/activity-rings-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/agent-creator/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/agent-limits-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/agent-progress/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/agent-thinking/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/announcement/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/area-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/auth-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/avatar/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/badge/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/bar-list-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/breadcrumb/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/button/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/button-group/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/calendar/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/carousel/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/checkbox/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/chip/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/close-button/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/color/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/color-picker/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/combo-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/combobox/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/command-palette/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/composer/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/composer-attachments/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/composer-loader/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/composer-panel/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/context-menu/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/contributions-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/counter/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/data-grid/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/data-table/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/date-calendar/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/date-picker/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/divider/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/drawer/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/dropdown/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/earnings-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/file-upload/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/funnel-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/heatmap-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/icon-button/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/input/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/input-otp/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/line-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/link-button/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/meter/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/modal/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/most-active-days-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/notification/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/notification-center/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/number-field/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/orders-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/pagination/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/popover/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/progress/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/questionnaire/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/radar-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/radial-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/radio/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/revenue-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/sankey-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/scatter-chart-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/search-field/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/segmented-control/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/select/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/settings-modal/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/sidebar/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/skeleton/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/sleep-score-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/slider/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/social-button/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/spinner/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/stage-bars-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/stat-cards/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/steps-card/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/switch/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/table/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/tabs/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/tag-group/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/task-list/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/textarea/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/time-field/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/toast/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/toggle-button/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/token-input/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/tooltip/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/tree-view/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/typography/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/components/web-search/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/getting-started/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/installation/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/kitchen-sink/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/mcp/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/rtl/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/skill/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/templates/ai-chat/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/templates/ai-image-generation/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/templates/ai-profile/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/templates/calendar/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/templates/chat-starter/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/templates/dashboard/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/templates/finance/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/templates/hr/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/templates/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/templates/marketing/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/templates/medical-profile/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/templates/multi-agent-chat/",
+          "violations": [],
+          "status": "checked"
+        },
+        {
+          "theme": "dark",
+          "route": "/zh-hans/templates/project-board/",
+          "violations": [],
+          "status": "checked"
+        }
+      ],
+      "errors": []
+    }
+  },
+  "upstreamPinned": "ec5c5eb3e29c2441be63b9422cd54f411ef23466",
+  "sourceRead": [
+    "app/dashboard/page.tsx",
+    "components/application/dashboard/orders-chart-card.tsx",
+    "components/application/dashboard/dashboard-sidebar.tsx"
+  ],
+  "comparison": "Re-read prior real captures of official Project Board, AI Chat, Finance, Radar public pages; Pro charts not in public MIT tree; some earlier public captures have blur, no pixel parity claim.",
+  "production": {
+    "run": 45408765489,
+    "http": 200,
+    "route": "/zh-hans/components/area-chart-card/",
+    "matched": [
+      "查看图表数据点",
+      "动态数据与空状态"
+    ]
+  },
+  "localInteractionBeforeTextareaAndButtonFix": {
+    "browser": "chromium",
+    "results": [
+      {
+        "theme": "light",
+        "route": "/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/button/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/select/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/modal/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/templates/dashboard/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/orders-chart-card/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/combo-chart-card/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/scatter-chart-card/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/heatmap-chart-card/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/radar-chart-card/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/radial-chart-card/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/templates/project-board/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/rtl/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/workspace/dashboard/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/workspace/finance/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/workspace/ai-chat/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/workspace/project-board/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/button/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/select/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/modal/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/templates/dashboard/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/orders-chart-card/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/combo-chart-card/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/scatter-chart-card/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/heatmap-chart-card/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/radar-chart-card/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/radial-chart-card/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/templates/project-board/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/rtl/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/workspace/dashboard/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/workspace/finance/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/workspace/ai-chat/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/workspace/project-board/",
+        "violations": [],
+        "status": "checked"
+      }
+    ],
+    "errors": []
+  },
+  "localTargetedAfterTextareaAndButtonFix": {
+    "browser": "chromium",
+    "results": [
+      {
+        "theme": "light",
+        "route": "/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/button/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/select/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/modal/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/templates/dashboard/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/input/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/textarea/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/orders-chart-card/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/button/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/select/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/modal/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/templates/dashboard/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/input/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/textarea/",
+        "violations": [],
+        "status": "checked"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/orders-chart-card/",
+        "violations": [],
+        "status": "checked"
+      }
+    ],
+    "errors": []
+  },
+  "localTouchBeforeTextareaAndButtonFix": {
+    "browser": "chromium",
+    "results": [
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/radar-chart-card/",
+        "name": "触摸数据点、动态值、可访问状态",
+        "browser": "chromium",
+        "details": {
+          "initial": "速度85",
+          "violations": [],
+          "aria": "- combobox \"查看图表数据点\":\n  - option \"选择\"\n  - option \"速度\" [selected]\n  - option \"体积\"\n  - option \"复用\"\n  - option \"文档\"\n  - option \"无障碍\""
+        },
+        "status": "passed"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/radial-chart-card/",
+        "name": "触摸数据点、动态值、可访问状态",
+        "browser": "chromium",
+        "details": {
+          "initial": "铬镀275",
+          "violations": [],
+          "aria": "- combobox \"查看图表数据点\":\n  - option \"选择\"\n  - option \"铬镀\" [selected]\n  - option \"狩猎之旅\"\n  - option \"火狐浏览器\"\n  - option \"边缘\"\n  - option \"其他\""
+        },
+        "status": "passed"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/heatmap-chart-card/",
+        "name": "触摸数据点、动态值、可访问状态",
+        "browser": "chromium",
+        "details": {
+          "initial": "第 1 周 第 1 天3",
+          "violations": [],
+          "aria": "- combobox \"查看图表数据点\":\n  - option \"选择\"\n  - option \"第 1 周 第 1 天\" [selected]\n  - option \"第 1 周 第 2 天\"\n  - option \"第 1 周 第 3 天\"\n  - option \"第 1 周 第 4 天\"\n  - option \"第 1 周 第 5 天\"\n  - option \"第 1 周 第 6 天\"\n  - option \"第 1 周 第 7 天\"\n  - option \"第 2 周 第 1 天\"\n  - option \"第 2 周 第 2 天\"\n  - option \"第 2 周 第 3 天\"\n  - option \"第 2 周 第 4 天\"\n  - option \"第 2 周 第 5 天\"\n  - option \"第 2 周 第 6 天\"\n  - option \"第 2 周 第 7 天\"\n  - option \"第 3 周 第 1 天\"\n  - option \"第 3 周 第 2 天\"\n  - option \"第 3 周 第 3 天\"\n  - option \"第 3 周 第 4 天\"\n  - option \"第 3 周 第 5 天\"\n  - option \"第 3 周 第 6 天\"\n  - option \"第 3 周 第 7 天\"\n  - option \"第 4 周 第 1 天\"\n  - option \"第 4 周 第 2 天\"\n  - option \"第 4 周 第 3 天\"\n  - option \"第 4 周 第 4 天\"\n  - option \"第 4 周 第 5 天\"\n  - option \"第 4 周 第 6 天\"\n  - option \"第 4 周 第 7 天\"\n  - option \"第 5 周 第 1 天\"\n  - option \"第 5 周 第 2 天\"\n  - option \"第 5 周 第 3 天\"\n  - option \"第 5 周 第 4 天\"\n  - option \"第 5 周 第 5 天\"\n  - option \"第 5 周 第 6 天\"\n  - option \"第 5 周 第 7 天\"\n  - option \"第 6 周 第 1 天\"\n  - option \"第 6 周 第 2 天\"\n  - option \"第 6 周 第 3 天\"\n  - option \"第 6 周 第 4 天\"\n  - option \"第 6 周 第 5 天\"\n  - option \"第 6 周 第 6 天\"\n  - option \"第 6 周 第 7 天\"\n  - option \"第 7 周 第 1 天\"\n  - option \"第 7 周 第 2 天\"\n  - option \"第 7 周 第 3 天\"\n  - option \"第 7 周 第 4 天\"\n  - option \"第 7 周 第 5 天\"\n  - option \"第 7 周 第 6 天\"\n  - option \"第 7 周 第 7 天\"\n  - option \"第 8 周 第 1 天\"\n  - option \"第 8 周 第 2 天\"\n  - option \"第 8 周 第 3 天\"\n  - option \"第 8 周 第 4 天\"\n  - option \"第 8 周 第 5 天\"\n  - option \"第 8 周 第 6 天\"\n  - option \"第 8 周 第 7 天\"\n  - option \"第 9 周 第 1 天\"\n  - option \"第 9 周 第 2 天\"\n  - option \"第 9 周 第 3 天\"\n  - option \"第 9 周 第 4 天\"\n  - option \"第 9 周 第 5 天\"\n  - option \"第 9 周 第 6 天\"\n  - option \"第 9 周 第 7 天\"\n  - option \"第 10 周 第 1 天\"\n  - option \"第 10 周 第 2 天\"\n  - option \"第 10 周 第 3 天\"\n  - option \"第 10 周 第 4 天\"\n  - option \"第 10 周 第 5 天\"\n  - option \"第 10 周 第 6 天\"\n  - option \"第 10 周 第 7 天\"\n  - option \"第 11 周 第 1 天\"\n  - option \"第 11 周 第 2 天\"\n  - option \"第 11 周 第 3 天\"\n  - option \"第 11 周 第 4 天\"\n  - option \"第 11 周 第 5 天\"\n  - option \"第 11 周 第 6 天\"\n  - option \"第 11 周 第 7 天\"\n  - option \"第 12 周 第 1 天\"\n  - option \"第 12 周 第 2 天\"\n  - option \"第 12 周 第 3 天\"\n  - option \"第 12 周 第 4 天\"\n  - option \"第 12 周 第 5 天\"\n  - option \"第 12 周 第 6 天\"\n  - option \"第 12 周 第 7 天\"\n  - option \"第 13 周 第 1 天\"\n  - option \"第 13 周 第 2 天\"\n  - option \"第 13 周 第 3 天\"\n  - option \"第 13 周 第 4 天\"\n  - option \"第 13 周 第 5 天\"\n  - option \"第 13 周 第 6 天\"\n  - option \"第 13 周 第 7 天\"\n  - option \"第 14 周 第 1 天\"\n  - option \"第 14 周 第 2 天\"\n  - option \"第 14 周 第 3 天\"\n  - option \"第 14 周 第 4 天\"\n  - option \"第 14 周 第 5 天\"\n  - option \"第 14 周 第 6 天\"\n  - option \"第 14 周 第 7 天\"\n  - option \"第 15 周 第 1 天\"\n  - option \"第 15 周 第 2 天\"\n  - option \"第 15 周 第 3 天\"\n  - option \"第 15 周 第 4 天\"\n  - option \"第 15 周 第 5 天\"\n  - option \"第 15 周 第 6 天\"\n  - option \"第 15 周 第 7 天\"\n  - option \"第 16 周 第 1 天\"\n  - option \"第 16 周 第 2 天\"\n  - option \"第 16 周 第 3 天\"\n  - option \"第 16 周 第 4 天\"\n  - option \"第 16 周 第 5 天\"\n  - option \"第 16 周 第 6 天\"\n  - option \"第 16 周 第 7 天\""
+        },
+        "status": "passed"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/scatter-chart-card/",
+        "name": "触摸数据点、动态值、可访问状态",
+        "browser": "chromium",
+        "details": {
+          "initial": "样本 1X: 12 · Y: 24",
+          "violations": [],
+          "aria": "- combobox \"查看图表数据点\":\n  - option \"选择\"\n  - option \"样本 1\" [selected]\n  - option \"样本 2\"\n  - option \"样本 3\"\n  - option \"样本 4\"\n  - option \"样本 5\"\n  - option \"样本 6\"\n  - option \"样本 7\"\n  - option \"样本 8\"\n  - option \"样本 9\"\n  - option \"样本 10\"\n  - option \"样本 11\"\n  - option \"样本 12\""
+        },
+        "status": "passed"
+      },
+      {
+        "theme": "light",
+        "route": "/zh-hans/components/combo-chart-card/",
+        "name": "触摸数据点、动态值、可访问状态",
+        "browser": "chromium",
+        "details": {
+          "initial": "第 1 期柱：42 · 线：24",
+          "violations": [],
+          "aria": "- combobox \"查看图表数据点\":\n  - option \"选择\"\n  - option \"第 1 期\" [selected]\n  - option \"第 2 期\"\n  - option \"第 3 期\"\n  - option \"第 4 期\"\n  - option \"第 5 期\"\n  - option \"第 6 期\"\n  - option \"第 7 期\""
+        },
+        "status": "passed"
+      },
+      {
+        "theme": "light",
+        "route": "/workspace/project-board/",
+        "name": "独立看板移动端表单与打开弹窗 axe",
+        "browser": "chromium",
+        "details": {
+          "violations": [],
+          "aria": "- dialog \"编辑任务\":\n  - heading \"编辑任务\" [level=2]\n  - button \"关闭\"\n  - text: 任务标题\n  - textbox \"编辑任务标题\": 记录智能体操作的审计跟踪\n  - text: 任务状态\n  - combobox \"移动至\":\n    - option \"积压\" [selected]\n    - option \"要做的事\"\n    - option \"进行中\"\n    - option \"已完成\"\n  - button \"取消\"\n  - button \"保存任务\""
+        },
+        "status": "passed"
+      },
+      {
+        "theme": "light",
+        "route": "/workspace/ai-chat/",
+        "name": "移动端会话操作",
+        "browser": "chromium",
+        "details": {
+          "violations": []
+        },
+        "status": "passed"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/radar-chart-card/",
+        "name": "触摸数据点、动态值、可访问状态",
+        "browser": "chromium",
+        "details": {
+          "initial": "速度85",
+          "violations": [],
+          "aria": "- combobox \"查看图表数据点\":\n  - option \"选择\"\n  - option \"速度\" [selected]\n  - option \"体积\"\n  - option \"复用\"\n  - option \"文档\"\n  - option \"无障碍\""
+        },
+        "status": "passed"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/radial-chart-card/",
+        "name": "触摸数据点、动态值、可访问状态",
+        "browser": "chromium",
+        "details": {
+          "initial": "铬镀275",
+          "violations": [],
+          "aria": "- combobox \"查看图表数据点\":\n  - option \"选择\"\n  - option \"铬镀\" [selected]\n  - option \"狩猎之旅\"\n  - option \"火狐浏览器\"\n  - option \"边缘\"\n  - option \"其他\""
+        },
+        "status": "passed"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/heatmap-chart-card/",
+        "name": "触摸数据点、动态值、可访问状态",
+        "browser": "chromium",
+        "details": {
+          "initial": "第 1 周 第 1 天3",
+          "violations": [],
+          "aria": "- combobox \"查看图表数据点\":\n  - option \"选择\"\n  - option \"第 1 周 第 1 天\" [selected]\n  - option \"第 1 周 第 2 天\"\n  - option \"第 1 周 第 3 天\"\n  - option \"第 1 周 第 4 天\"\n  - option \"第 1 周 第 5 天\"\n  - option \"第 1 周 第 6 天\"\n  - option \"第 1 周 第 7 天\"\n  - option \"第 2 周 第 1 天\"\n  - option \"第 2 周 第 2 天\"\n  - option \"第 2 周 第 3 天\"\n  - option \"第 2 周 第 4 天\"\n  - option \"第 2 周 第 5 天\"\n  - option \"第 2 周 第 6 天\"\n  - option \"第 2 周 第 7 天\"\n  - option \"第 3 周 第 1 天\"\n  - option \"第 3 周 第 2 天\"\n  - option \"第 3 周 第 3 天\"\n  - option \"第 3 周 第 4 天\"\n  - option \"第 3 周 第 5 天\"\n  - option \"第 3 周 第 6 天\"\n  - option \"第 3 周 第 7 天\"\n  - option \"第 4 周 第 1 天\"\n  - option \"第 4 周 第 2 天\"\n  - option \"第 4 周 第 3 天\"\n  - option \"第 4 周 第 4 天\"\n  - option \"第 4 周 第 5 天\"\n  - option \"第 4 周 第 6 天\"\n  - option \"第 4 周 第 7 天\"\n  - option \"第 5 周 第 1 天\"\n  - option \"第 5 周 第 2 天\"\n  - option \"第 5 周 第 3 天\"\n  - option \"第 5 周 第 4 天\"\n  - option \"第 5 周 第 5 天\"\n  - option \"第 5 周 第 6 天\"\n  - option \"第 5 周 第 7 天\"\n  - option \"第 6 周 第 1 天\"\n  - option \"第 6 周 第 2 天\"\n  - option \"第 6 周 第 3 天\"\n  - option \"第 6 周 第 4 天\"\n  - option \"第 6 周 第 5 天\"\n  - option \"第 6 周 第 6 天\"\n  - option \"第 6 周 第 7 天\"\n  - option \"第 7 周 第 1 天\"\n  - option \"第 7 周 第 2 天\"\n  - option \"第 7 周 第 3 天\"\n  - option \"第 7 周 第 4 天\"\n  - option \"第 7 周 第 5 天\"\n  - option \"第 7 周 第 6 天\"\n  - option \"第 7 周 第 7 天\"\n  - option \"第 8 周 第 1 天\"\n  - option \"第 8 周 第 2 天\"\n  - option \"第 8 周 第 3 天\"\n  - option \"第 8 周 第 4 天\"\n  - option \"第 8 周 第 5 天\"\n  - option \"第 8 周 第 6 天\"\n  - option \"第 8 周 第 7 天\"\n  - option \"第 9 周 第 1 天\"\n  - option \"第 9 周 第 2 天\"\n  - option \"第 9 周 第 3 天\"\n  - option \"第 9 周 第 4 天\"\n  - option \"第 9 周 第 5 天\"\n  - option \"第 9 周 第 6 天\"\n  - option \"第 9 周 第 7 天\"\n  - option \"第 10 周 第 1 天\"\n  - option \"第 10 周 第 2 天\"\n  - option \"第 10 周 第 3 天\"\n  - option \"第 10 周 第 4 天\"\n  - option \"第 10 周 第 5 天\"\n  - option \"第 10 周 第 6 天\"\n  - option \"第 10 周 第 7 天\"\n  - option \"第 11 周 第 1 天\"\n  - option \"第 11 周 第 2 天\"\n  - option \"第 11 周 第 3 天\"\n  - option \"第 11 周 第 4 天\"\n  - option \"第 11 周 第 5 天\"\n  - option \"第 11 周 第 6 天\"\n  - option \"第 11 周 第 7 天\"\n  - option \"第 12 周 第 1 天\"\n  - option \"第 12 周 第 2 天\"\n  - option \"第 12 周 第 3 天\"\n  - option \"第 12 周 第 4 天\"\n  - option \"第 12 周 第 5 天\"\n  - option \"第 12 周 第 6 天\"\n  - option \"第 12 周 第 7 天\"\n  - option \"第 13 周 第 1 天\"\n  - option \"第 13 周 第 2 天\"\n  - option \"第 13 周 第 3 天\"\n  - option \"第 13 周 第 4 天\"\n  - option \"第 13 周 第 5 天\"\n  - option \"第 13 周 第 6 天\"\n  - option \"第 13 周 第 7 天\"\n  - option \"第 14 周 第 1 天\"\n  - option \"第 14 周 第 2 天\"\n  - option \"第 14 周 第 3 天\"\n  - option \"第 14 周 第 4 天\"\n  - option \"第 14 周 第 5 天\"\n  - option \"第 14 周 第 6 天\"\n  - option \"第 14 周 第 7 天\"\n  - option \"第 15 周 第 1 天\"\n  - option \"第 15 周 第 2 天\"\n  - option \"第 15 周 第 3 天\"\n  - option \"第 15 周 第 4 天\"\n  - option \"第 15 周 第 5 天\"\n  - option \"第 15 周 第 6 天\"\n  - option \"第 15 周 第 7 天\"\n  - option \"第 16 周 第 1 天\"\n  - option \"第 16 周 第 2 天\"\n  - option \"第 16 周 第 3 天\"\n  - option \"第 16 周 第 4 天\"\n  - option \"第 16 周 第 5 天\"\n  - option \"第 16 周 第 6 天\"\n  - option \"第 16 周 第 7 天\""
+        },
+        "status": "passed"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/scatter-chart-card/",
+        "name": "触摸数据点、动态值、可访问状态",
+        "browser": "chromium",
+        "details": {
+          "initial": "样本 1X: 12 · Y: 24",
+          "violations": [],
+          "aria": "- combobox \"查看图表数据点\":\n  - option \"选择\"\n  - option \"样本 1\" [selected]\n  - option \"样本 2\"\n  - option \"样本 3\"\n  - option \"样本 4\"\n  - option \"样本 5\"\n  - option \"样本 6\"\n  - option \"样本 7\"\n  - option \"样本 8\"\n  - option \"样本 9\"\n  - option \"样本 10\"\n  - option \"样本 11\"\n  - option \"样本 12\""
+        },
+        "status": "passed"
+      },
+      {
+        "theme": "dark",
+        "route": "/zh-hans/components/combo-chart-card/",
+        "name": "触摸数据点、动态值、可访问状态",
+        "browser": "chromium",
+        "details": {
+          "initial": "第 1 期柱：42 · 线：24",
+          "violations": [],
+          "aria": "- combobox \"查看图表数据点\":\n  - option \"选择\"\n  - option \"第 1 期\" [selected]\n  - option \"第 2 期\"\n  - option \"第 3 期\"\n  - option \"第 4 期\"\n  - option \"第 5 期\"\n  - option \"第 6 期\"\n  - option \"第 7 期\""
+        },
+        "status": "passed"
+      },
+      {
+        "theme": "dark",
+        "route": "/workspace/project-board/",
+        "name": "独立看板移动端表单与打开弹窗 axe",
+        "browser": "chromium",
+        "details": {
+          "violations": [],
+          "aria": "- dialog \"编辑任务\":\n  - heading \"编辑任务\" [level=2]\n  - button \"关闭\"\n  - text: 任务标题\n  - textbox \"编辑任务标题\": 记录智能体操作的审计跟踪\n  - text: 任务状态\n  - combobox \"移动至\":\n    - option \"积压\" [selected]\n    - option \"要做的事\"\n    - option \"进行中\"\n    - option \"已完成\"\n  - button \"取消\"\n  - button \"保存任务\""
+        },
+        "status": "passed"
+      },
+      {
+        "theme": "dark",
+        "route": "/workspace/ai-chat/",
+        "name": "移动端会话操作",
+        "browser": "chromium",
+        "details": {
+          "violations": []
+        },
+        "status": "passed"
+      }
+    ]
+  },
+  "localFinalAudit": [
+    {
+      "route": "/workspace/dashboard/",
+      "theme": "light",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "仪表盘独立工作区 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        0,
+        0,
+        1440,
+        1241
+      ],
+      "preview": [
+        16,
+        114,
+        1408,
+        1083
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/workspace/finance/",
+      "theme": "light",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "财务独立工作区 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        0,
+        0,
+        1440,
+        1311
+      ],
+      "preview": [
+        16,
+        114,
+        1408,
+        1153
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/workspace/project-board/",
+      "theme": "light",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "项目看板独立工作区 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        0,
+        0,
+        1440,
+        1000
+      ],
+      "preview": [
+        16,
+        114,
+        1408,
+        708
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/workspace/ai-chat/",
+      "theme": "light",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "AI 聊天独立工作区 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        0,
+        0,
+        1440,
+        1000
+      ],
+      "preview": [
+        16,
+        114,
+        1408,
+        760
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/templates/project-board/",
+      "theme": "light",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "项目看板模板 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        284,
+        0,
+        1156,
+        1270
+      ],
+      "preview": [
+        324,
+        322,
+        1076,
+        708
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/radar-chart-card/",
+      "theme": "light",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "雷达图 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        324,
+        40,
+        808,
+        2007
+      ],
+      "preview": [
+        324,
+        188,
+        808,
+        405
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/radial-chart-card/",
+      "theme": "light",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "径向图 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        324,
+        40,
+        808,
+        2072
+      ],
+      "preview": [
+        324,
+        188,
+        808,
+        450
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/heatmap-chart-card/",
+      "theme": "light",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "热力图 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        324,
+        40,
+        808,
+        1871
+      ],
+      "preview": [
+        324,
+        188,
+        808,
+        405
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/combo-chart-card/",
+      "theme": "light",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "组合图表 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        324,
+        40,
+        808,
+        2441
+      ],
+      "preview": [
+        324,
+        188,
+        808,
+        405
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/scatter-chart-card/",
+      "theme": "light",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "散点图 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        324,
+        40,
+        808,
+        1526
+      ],
+      "preview": [
+        324,
+        188,
+        808,
+        405
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/textarea/",
+      "theme": "light",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "多行文本框 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        324,
+        40,
+        808,
+        3444
+      ],
+      "preview": [
+        324,
+        188,
+        808,
+        405
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/input/",
+      "theme": "light",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "输入框 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        324,
+        40,
+        808,
+        3670
+      ],
+      "preview": [
+        324,
+        188,
+        808,
+        405
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/orders-chart-card/",
+      "theme": "light",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "订单图表 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        324,
+        40,
+        808,
+        1079
+      ],
+      "preview": [
+        324,
+        188,
+        808,
+        442
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/workspace/finance/",
+      "theme": "dark",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "财务独立工作区 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        0,
+        0,
+        1440,
+        1311
+      ],
+      "preview": [
+        16,
+        114,
+        1408,
+        1153
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/workspace/project-board/",
+      "theme": "dark",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "项目看板独立工作区 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        0,
+        0,
+        1440,
+        1000
+      ],
+      "preview": [
+        16,
+        114,
+        1408,
+        708
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/workspace/ai-chat/",
+      "theme": "dark",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "AI 聊天独立工作区 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        0,
+        0,
+        1440,
+        1000
+      ],
+      "preview": [
+        16,
+        114,
+        1408,
+        760
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/workspace/dashboard/",
+      "theme": "dark",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "仪表盘独立工作区 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        0,
+        0,
+        1440,
+        1241
+      ],
+      "preview": [
+        16,
+        114,
+        1408,
+        1083
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/templates/project-board/",
+      "theme": "dark",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "项目看板模板 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        284,
+        0,
+        1156,
+        1270
+      ],
+      "preview": [
+        324,
+        322,
+        1076,
+        708
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/radial-chart-card/",
+      "theme": "dark",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "径向图 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        324,
+        40,
+        808,
+        2072
+      ],
+      "preview": [
+        324,
+        188,
+        808,
+        450
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/radar-chart-card/",
+      "theme": "dark",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "雷达图 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        324,
+        40,
+        808,
+        2007
+      ],
+      "preview": [
+        324,
+        188,
+        808,
+        405
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/combo-chart-card/",
+      "theme": "dark",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "组合图表 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        324,
+        40,
+        808,
+        2441
+      ],
+      "preview": [
+        324,
+        188,
+        808,
+        405
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/heatmap-chart-card/",
+      "theme": "dark",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "热力图 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        324,
+        40,
+        808,
+        1871
+      ],
+      "preview": [
+        324,
+        188,
+        808,
+        405
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/scatter-chart-card/",
+      "theme": "dark",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "散点图 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        324,
+        40,
+        808,
+        1526
+      ],
+      "preview": [
+        324,
+        188,
+        808,
+        405
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/input/",
+      "theme": "dark",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "输入框 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        324,
+        40,
+        808,
+        3670
+      ],
+      "preview": [
+        324,
+        188,
+        808,
+        405
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/textarea/",
+      "theme": "dark",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "多行文本框 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        324,
+        40,
+        808,
+        3444
+      ],
+      "preview": [
+        324,
+        188,
+        808,
+        405
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/orders-chart-card/",
+      "theme": "dark",
+      "profile": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "axe": true,
+      "upstream": false,
+      "http": 200,
+      "title": "订单图表 — BoardUI",
+      "width": 1440,
+      "viewport": 1440,
+      "main": [
+        324,
+        40,
+        808,
+        1079
+      ],
+      "preview": [
+        324,
+        188,
+        808,
+        442
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "violations": [],
+      "errors": []
+    },
+    {
+      "route": "/workspace/dashboard/",
+      "theme": "light",
+      "profile": {
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 2
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "仪表盘独立工作区 — BoardUI",
+      "width": 390,
+      "viewport": 390,
+      "main": [
+        0,
+        0,
+        390,
+        2371
+      ],
+      "preview": [
+        12,
+        110,
+        366,
+        2221
+      ],
+      "dpr": 2,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/workspace/ai-chat/",
+      "theme": "light",
+      "profile": {
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 2
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "AI 聊天独立工作区 — BoardUI",
+      "width": 390,
+      "viewport": 390,
+      "main": [
+        0,
+        0,
+        390,
+        893
+      ],
+      "preview": [
+        12,
+        110,
+        366,
+        743
+      ],
+      "dpr": 2,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/workspace/finance/",
+      "theme": "light",
+      "profile": {
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 2
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "财务独立工作区 — BoardUI",
+      "width": 390,
+      "viewport": 390,
+      "main": [
+        0,
+        0,
+        390,
+        2159
+      ],
+      "preview": [
+        12,
+        110,
+        366,
+        2009
+      ],
+      "dpr": 2,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/workspace/project-board/",
+      "theme": "light",
+      "profile": {
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 2
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "项目看板独立工作区 — BoardUI",
+      "width": 390,
+      "viewport": 390,
+      "main": [
+        0,
+        0,
+        390,
+        947
+      ],
+      "preview": [
+        12,
+        110,
+        366,
+        797
+      ],
+      "dpr": 2,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/templates/project-board/",
+      "theme": "light",
+      "profile": {
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 2
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "项目看板模板 — BoardUI",
+      "width": 390,
+      "viewport": 390,
+      "main": [
+        0,
+        0,
+        390,
+        1405
+      ],
+      "preview": [
+        24,
+        344,
+        342,
+        801
+      ],
+      "dpr": 2,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/heatmap-chart-card/",
+      "theme": "light",
+      "profile": {
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 2
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "热力图 — BoardUI",
+      "width": 390,
+      "viewport": 390,
+      "main": [
+        24,
+        40,
+        342,
+        2115
+      ],
+      "preview": [
+        24,
+        188,
+        342,
+        405
+      ],
+      "dpr": 2,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/radar-chart-card/",
+      "theme": "light",
+      "profile": {
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 2
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "雷达图 — BoardUI",
+      "width": 390,
+      "viewport": 390,
+      "main": [
+        24,
+        40,
+        342,
+        2219
+      ],
+      "preview": [
+        24,
+        188,
+        342,
+        405
+      ],
+      "dpr": 2,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/scatter-chart-card/",
+      "theme": "light",
+      "profile": {
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 2
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "散点图 — BoardUI",
+      "width": 390,
+      "viewport": 390,
+      "main": [
+        24,
+        40,
+        342,
+        1698
+      ],
+      "preview": [
+        24,
+        188,
+        342,
+        405
+      ],
+      "dpr": 2,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/radial-chart-card/",
+      "theme": "light",
+      "profile": {
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 2
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "径向图 — BoardUI",
+      "width": 390,
+      "viewport": 390,
+      "main": [
+        24,
+        40,
+        342,
+        2252
+      ],
+      "preview": [
+        24,
+        188,
+        342,
+        418
+      ],
+      "dpr": 2,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/combo-chart-card/",
+      "theme": "light",
+      "profile": {
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 2
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "组合图表 — BoardUI",
+      "width": 390,
+      "viewport": 390,
+      "main": [
+        24,
+        40,
+        342,
+        2625
+      ],
+      "preview": [
+        24,
+        188,
+        342,
+        405
+      ],
+      "dpr": 2,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/input/",
+      "theme": "light",
+      "profile": {
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 2
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "输入框 — BoardUI",
+      "width": 390,
+      "viewport": 390,
+      "main": [
+        24,
+        40,
+        342,
+        4014
+      ],
+      "preview": [
+        24,
+        232,
+        342,
+        405
+      ],
+      "dpr": 2,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/textarea/",
+      "theme": "light",
+      "profile": {
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 2
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "多行文本框 — BoardUI",
+      "width": 390,
+      "viewport": 390,
+      "main": [
+        24,
+        40,
+        342,
+        3865
+      ],
+      "preview": [
+        24,
+        232,
+        342,
+        405
+      ],
+      "dpr": 2,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/orders-chart-card/",
+      "theme": "light",
+      "profile": {
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 2
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "订单图表 — BoardUI",
+      "width": 390,
+      "viewport": 390,
+      "main": [
+        24,
+        40,
+        342,
+        1251
+      ],
+      "preview": [
+        24,
+        188,
+        342,
+        410
+      ],
+      "dpr": 2,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/workspace/finance/",
+      "theme": "light",
+      "profile": {
+        "width": 320,
+        "height": 720,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "财务独立工作区 — BoardUI",
+      "width": 320,
+      "viewport": 320,
+      "main": [
+        0,
+        0,
+        320,
+        2195
+      ],
+      "preview": [
+        12,
+        146,
+        296,
+        2009
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/workspace/dashboard/",
+      "theme": "light",
+      "profile": {
+        "width": 320,
+        "height": 720,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "仪表盘独立工作区 — BoardUI",
+      "width": 320,
+      "viewport": 320,
+      "main": [
+        0,
+        0,
+        320,
+        2451
+      ],
+      "preview": [
+        12,
+        146,
+        296,
+        2265
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/workspace/ai-chat/",
+      "theme": "light",
+      "profile": {
+        "width": 320,
+        "height": 720,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "AI 聊天独立工作区 — BoardUI",
+      "width": 320,
+      "viewport": 320,
+      "main": [
+        0,
+        0,
+        320,
+        820
+      ],
+      "preview": [
+        12,
+        146,
+        296,
+        634
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/workspace/project-board/",
+      "theme": "light",
+      "profile": {
+        "width": 320,
+        "height": 720,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "项目看板独立工作区 — BoardUI",
+      "width": 320,
+      "viewport": 320,
+      "main": [
+        0,
+        0,
+        320,
+        987
+      ],
+      "preview": [
+        12,
+        146,
+        296,
+        801
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/templates/project-board/",
+      "theme": "light",
+      "profile": {
+        "width": 320,
+        "height": 720,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "项目看板模板 — BoardUI",
+      "width": 320,
+      "viewport": 320,
+      "main": [
+        0,
+        0,
+        320,
+        1461
+      ],
+      "preview": [
+        24,
+        344,
+        272,
+        837
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/radar-chart-card/",
+      "theme": "light",
+      "profile": {
+        "width": 320,
+        "height": 720,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "雷达图 — BoardUI",
+      "width": 320,
+      "viewport": 320,
+      "main": [
+        24,
+        40,
+        272,
+        2245
+      ],
+      "preview": [
+        24,
+        210,
+        272,
+        405
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/heatmap-chart-card/",
+      "theme": "light",
+      "profile": {
+        "width": 320,
+        "height": 720,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "热力图 — BoardUI",
+      "width": 320,
+      "viewport": 320,
+      "main": [
+        24,
+        40,
+        272,
+        2137
+      ],
+      "preview": [
+        24,
+        210,
+        272,
+        405
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/scatter-chart-card/",
+      "theme": "light",
+      "profile": {
+        "width": 320,
+        "height": 720,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "散点图 — BoardUI",
+      "width": 320,
+      "viewport": 320,
+      "main": [
+        24,
+        40,
+        272,
+        1720
+      ],
+      "preview": [
+        24,
+        210,
+        272,
+        405
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/radial-chart-card/",
+      "theme": "light",
+      "profile": {
+        "width": 320,
+        "height": 720,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "径向图 — BoardUI",
+      "width": 320,
+      "viewport": 320,
+      "main": [
+        24,
+        40,
+        272,
+        2278
+      ],
+      "preview": [
+        24,
+        210,
+        272,
+        418
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/combo-chart-card/",
+      "theme": "light",
+      "profile": {
+        "width": 320,
+        "height": 720,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "组合图表 — BoardUI",
+      "width": 320,
+      "viewport": 320,
+      "main": [
+        24,
+        40,
+        272,
+        2598
+      ],
+      "preview": [
+        24,
+        210,
+        272,
+        405
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/orders-chart-card/",
+      "theme": "light",
+      "profile": {
+        "width": 320,
+        "height": 720,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "订单图表 — BoardUI",
+      "width": 320,
+      "viewport": 320,
+      "main": [
+        24,
+        40,
+        272,
+        1273
+      ],
+      "preview": [
+        24,
+        210,
+        272,
+        410
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/workspace/dashboard/",
+      "theme": "light",
+      "profile": {
+        "width": 2560,
+        "height": 1440,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "仪表盘独立工作区 — BoardUI",
+      "width": 2560,
+      "viewport": 2560,
+      "main": [
+        0,
+        0,
+        2560,
+        1440
+      ],
+      "preview": [
+        440,
+        114,
+        1680,
+        1083
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/workspace/ai-chat/",
+      "theme": "light",
+      "profile": {
+        "width": 2560,
+        "height": 1440,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "AI 聊天独立工作区 — BoardUI",
+      "width": 2560,
+      "viewport": 2560,
+      "main": [
+        0,
+        0,
+        2560,
+        1440
+      ],
+      "preview": [
+        440,
+        114,
+        1680,
+        760
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/templates/project-board/",
+      "theme": "light",
+      "profile": {
+        "width": 2560,
+        "height": 1440,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "项目看板模板 — BoardUI",
+      "width": 2560,
+      "viewport": 2560,
+      "main": [
+        822,
+        0,
+        1200,
+        1270
+      ],
+      "preview": [
+        862,
+        322,
+        1120,
+        708
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/workspace/project-board/",
+      "theme": "light",
+      "profile": {
+        "width": 2560,
+        "height": 1440,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "项目看板独立工作区 — BoardUI",
+      "width": 2560,
+      "viewport": 2560,
+      "main": [
+        0,
+        0,
+        2560,
+        1440
+      ],
+      "preview": [
+        440,
+        114,
+        1680,
+        708
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/workspace/finance/",
+      "theme": "light",
+      "profile": {
+        "width": 2560,
+        "height": 1440,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "财务独立工作区 — BoardUI",
+      "width": 2560,
+      "viewport": 2560,
+      "main": [
+        0,
+        0,
+        2560,
+        1440
+      ],
+      "preview": [
+        440,
+        114,
+        1680,
+        1153
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/radial-chart-card/",
+      "theme": "light",
+      "profile": {
+        "width": 2560,
+        "height": 1440,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "径向图 — BoardUI",
+      "width": 2560,
+      "viewport": 2560,
+      "main": [
+        862,
+        40,
+        852,
+        2072
+      ],
+      "preview": [
+        862,
+        188,
+        852,
+        450
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/radar-chart-card/",
+      "theme": "light",
+      "profile": {
+        "width": 2560,
+        "height": 1440,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "雷达图 — BoardUI",
+      "width": 2560,
+      "viewport": 2560,
+      "main": [
+        862,
+        40,
+        852,
+        2007
+      ],
+      "preview": [
+        862,
+        188,
+        852,
+        405
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/scatter-chart-card/",
+      "theme": "light",
+      "profile": {
+        "width": 2560,
+        "height": 1440,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "散点图 — BoardUI",
+      "width": 2560,
+      "viewport": 2560,
+      "main": [
+        862,
+        40,
+        852,
+        1526
+      ],
+      "preview": [
+        862,
+        188,
+        852,
+        405
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/heatmap-chart-card/",
+      "theme": "light",
+      "profile": {
+        "width": 2560,
+        "height": 1440,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "热力图 — BoardUI",
+      "width": 2560,
+      "viewport": 2560,
+      "main": [
+        862,
+        40,
+        852,
+        1871
+      ],
+      "preview": [
+        862,
+        188,
+        852,
+        405
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/combo-chart-card/",
+      "theme": "light",
+      "profile": {
+        "width": 2560,
+        "height": 1440,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "组合图表 — BoardUI",
+      "width": 2560,
+      "viewport": 2560,
+      "main": [
+        862,
+        40,
+        852,
+        2441
+      ],
+      "preview": [
+        862,
+        188,
+        852,
+        405
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "route": "/zh-hans/components/orders-chart-card/",
+      "theme": "light",
+      "profile": {
+        "width": 2560,
+        "height": 1440,
+        "deviceScaleFactor": 1
+      },
+      "axe": false,
+      "upstream": false,
+      "http": 200,
+      "title": "订单图表 — BoardUI",
+      "width": 2560,
+      "viewport": 2560,
+      "main": [
+        862,
+        40,
+        852,
+        1079
+      ],
+      "preview": [
+        862,
+        188,
+        852,
+        442
+      ],
+      "dpr": 1,
+      "overflow": false,
+      "errors": []
+    }
+  ],
+  "screenshots": [
+    "reference/evidence/screenshots/20261124-chart-workspace/dark-1440-_workspace_ai-chat_.jpg",
+    "reference/evidence/screenshots/20261124-chart-workspace/dark-1440-_zh-hans_components_radial-chart-card_.jpg",
+    "reference/evidence/screenshots/20261124-chart-workspace/dark-board-dialog.jpg",
+    "reference/evidence/screenshots/20261124-chart-workspace/dark-scatter-touch.jpg",
+    "reference/evidence/screenshots/20261124-chart-workspace/light-1440-_workspace_dashboard_.jpg",
+    "reference/evidence/screenshots/20261124-chart-workspace/light-1440-_workspace_finance_.jpg",
+    "reference/evidence/screenshots/20261124-chart-workspace/light-1440-_workspace_project-board_.jpg",
+    "reference/evidence/screenshots/20261124-chart-workspace/light-1440-_zh-hans_components_orders-chart-card_.jpg",
+    "reference/evidence/screenshots/20261124-chart-workspace/light-320-_workspace_project-board_.jpg",
+    "reference/evidence/screenshots/20261124-chart-workspace/light-chat.jpg",
+    "reference/evidence/screenshots/20261124-chart-workspace/light-heatmap-touch.jpg",
+    "reference/evidence/screenshots/20261124-chart-workspace/light-radar-touch.jpg"
+  ],
+  "limitations": [
+    "正式基线 685/690，Firefox Button 两个主题超时、WebKit Button 浅色超时及 Input 两主题 ResizeObserver 警告；未确定 Button 具体失败断言，增强阶段日志和真实 Tab 路径；Textarea 延迟尺寸写入为候选，待真实跨浏览器复验。",
+    "本地 Edge 36 组合在最后 textarea/button 修改前，18 组合为其后专项；14 个移动触摸/打开态 axe 组合在该修改前；61 个最终布局/初始态 axe 组合，不合并为一次全量测试。",
+    "无障碍树是 Playwright 记录，非真实 VoiceOver/NVDA 人工读屏；RTL 现有实验室回归，不声明所有新图表 RTL 变体完成。",
+    "独立工作区为四条静态路由，示例状态不跨路由/刷新持久化；看板使用编辑弹窗移动，不支持拖拽；Pro 独立实现。",
+    "records 是应用级 ChartCard 接口；核心包 BarChart/RadarChart/Heatmap 增量属性保持兼容；非全套图表 SDK。"
+  ]
+}

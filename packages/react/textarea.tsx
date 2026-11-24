@@ -166,19 +166,25 @@ export function TextareaBase({
   useLayoutEffect(()=>{
     const field=innerRef.current;
     if(!autoResize||!field)return;
-    let width=field.clientWidth,alive=true;
+    let width=field.clientWidth,alive=true,frame:number|null=null;
+    // Never write the observed element's height inside ResizeObserver delivery.
+    // WebKit may report undelivered notifications if the resize causes reflow.
+    const scheduleFit=()=>{
+      if(!alive||frame!==null)return;
+      frame=requestAnimationFrame(()=>{frame=null;if(alive&&field.isConnected&&field.clientWidth>0)fit()});
+    };
     const stop=observeSize(field,()=>{
       const next=field.clientWidth;
       if(next===width)return;
       width=next;
-      if(next>0)fit();
+      if(next>0)scheduleFit();
     });
     // Font metrics can change without changing the container width.
     const fonts=document.fonts;
-    const onFonts=()=>{if(alive)fit()};
+    const onFonts=scheduleFit;
     fonts?.addEventListener("loadingdone",onFonts);
     if(fonts?.status==="loading")void fonts.ready.then(onFonts);
-    return ()=>{alive=false;stop();fonts?.removeEventListener("loadingdone",onFonts)};
+    return ()=>{alive=false;if(frame!==null)cancelAnimationFrame(frame);stop();fonts?.removeEventListener("loadingdone",onFonts)};
   },[autoResize,fit]);
 
   return (

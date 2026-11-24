@@ -1222,7 +1222,7 @@ import { RiArrowRightLine } from "@remixicon/react";
         <ChartCard kind="combo" title="收入与订单" height={120} />
       </div>
     )),
-    demos: () => ([]),
+    demos: () => ([{id:"records",title:"外部数据与空状态",node:<ChartRecordsDemo kind="combo"/>},{id:"bars",title:"独立柱状图",node:<ChartRecordsDemo kind="bar"/>}]),
   },
 
   "contributions-card": {
@@ -1270,7 +1270,7 @@ import { RiArrowRightLine } from "@remixicon/react";
         <ChartCard kind="heatmap" title="活跃热力图" height={120} />
       </div>
     )),
-    demos: () => ([]),
+    demos: () => ([{id:"records",title:"外部数据与空状态",node:<ChartRecordsDemo kind="heatmap"/>}]),
   },
 
   "line-chart-card": {
@@ -1319,7 +1319,7 @@ import { RiArrowRightLine } from "@remixicon/react";
         <ChartCard kind="radar" title="能力评估" height={120} />
       </div>
     )),
-    demos: () => ([]),
+    demos: () => ([{id:"records",title:"外部数据与空状态",node:<ChartRecordsDemo kind="radar"/>}]),
   },
 
   "radial-chart-card": {
@@ -1331,7 +1331,7 @@ import { RiArrowRightLine } from "@remixicon/react";
         <ChartCard kind="radial" title="目标完成度" height={120} />
       </div>
     )),
-    demos: () => ([]),
+    demos: () => ([{id:"records",title:"外部数据与空状态",node:<ChartRecordsDemo kind="radial"/>}]),
   },
 
   "revenue-chart-card": {
@@ -1367,7 +1367,7 @@ import { RiArrowRightLine } from "@remixicon/react";
         <ChartCard kind="scatter" title="相关性分布" height={120} />
       </div>
     )),
-    demos: () => ([]),
+    demos: () => ([{id:"records",title:"外部数据与空状态",node:<ChartRecordsDemo kind="scatter"/>}]),
   },
 
   "sleep-score-card": {
@@ -1750,6 +1750,7 @@ function NoticeDemo(){
 
 function SocialDemo(){const [last,setLast]=useState("尚未选择");return <div className="flex w-full max-w-[300px] flex-col gap-2">{(["google","github","apple","wechat"] as const).map(provider=><SocialButton key={provider} provider={provider} onClick={()=>setLast(provider+" · 本地演示，未连接认证")}/>)}<output aria-live="polite" className="text-center text-caption-1-regular text-text-secondary">{last}</output></div>}
 
+function ChartRecordsDemo({kind}:{kind:"radar"|"radial"|"heatmap"|"scatter"|"combo"|"bar"}){const [mode,setMode]=useState("normal");const records=mode==="empty"?[]:[{label:"A",value:mode==="updated"?65:25,x:10,y:mode==="updated"?65:25,secondary:15},{label:"B",value:45,x:25,y:45,secondary:35},{label:"C",value:35,x:40,y:35,secondary:25}].map(({x,y,secondary,...r})=>kind==="scatter"?{...r,x,y}:kind==="combo"?{...r,secondary}:r);return <div className="flex w-full max-w-[420px] flex-col gap-2"><SegmentedControl value={mode} onChange={setMode} options={[{id:"normal",label:"初始"},{id:"updated",label:"更新数据"},{id:"empty",label:"空数据"}]}/><ChartCard title="自定义记录" kind={kind} records={records} height={150}/></div>}
 function DynamicChartDemo(){const [mode,setMode]=useState("normal");const labels=mode==="empty"?[]:["周一","周二","周三"];const series=[{name:"访问",color:"var(--color-accent-500)",data:mode==="updated"?[12,25,36]:[10,20,30]}];return <div className="flex w-full max-w-[420px] flex-col gap-2"><SegmentedControl value={mode} onChange={setMode} options={[{id:"normal",label:"初始"},{id:"updated",label:"更新数据"},{id:"empty",label:"空数据"}]}/><ChartCard kind="area" title="动态示例" data={{labels,series}} height={160}/></div>}
 
 function RemovableTagsDemo(){const [items,setItems]=useState(["React","TypeScript","Tailwind"]);return <><TagGroup label="技术栈" onRemove={keys=>setItems(p=>p.filter(x=>!keys.has(x)))}>{items.map(item=><Tag key={item} id={item} textValue={item}>{item}</Tag>)}</TagGroup><Button size="sm" variant="secondary" onPress={()=>setItems(["React","TypeScript","Tailwind"])}>重置标签</Button></>}

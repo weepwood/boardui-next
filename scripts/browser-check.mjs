@@ -26,7 +26,9 @@ if(!full)for(const route of JSON.parse(process.env.TARGET_ROUTES||'[]'))if(!rout
 const report=[],errors=[];
 let browser;
 try{
-  browser=await ({chromium,firefox,webkit}[browserName]).launch(process.env.BROWSER_EXECUTABLE?{executablePath:process.env.BROWSER_EXECUTABLE}:{});
+  // Linux headless Firefox reports no hover-capable pointer (Mozilla #2037020).
+  // The CI desktop Firefox lane uses Xvfb, not a weaker hover assertion.
+  browser=await ({chromium,firefox,webkit}[browserName]).launch({...(process.env.BROWSER_EXECUTABLE?{executablePath:process.env.BROWSER_EXECUTABLE}:{}),headless:process.env.BROWSER_HEADED!=='1'});
   if(full)mkdirSync('acceptance',{recursive:true});
   for(const theme of full||process.argv.includes('--both-themes')?['light','dark']:['light']){
     const context=await browser.newContext({viewport:{width:1440,height:1000},colorScheme:theme,reducedMotion:'reduce'});
@@ -199,16 +201,22 @@ try{
         }
         assert.deepEqual(await page.locator('[data-icon-fallback="true"]').evaluateAll(es=>es.map(e=>e.getAttribute('data-icon'))),[],'unknown SVG name on '+route);
         if(route==='/zh-hans/components/button/'){
+          stage='button: table of contents navigation';
           const toc=page.getByRole('navigation',{name:'在此页面上'});
+          stage='button: TOC API hash';
           await toc.getByRole('link',{name:'组件 API',exact:true}).click();
           await page.waitForFunction(()=>location.hash==='#api');
+          stage='button: TOC API selection';
           await page.waitForFunction(()=>document.querySelector('nav[aria-label="在此页面上"] a[href="#api"]')?.getAttribute('aria-current')==='location');
+          stage='button: TOC preview hash';
           await toc.getByRole('link',{name:'预览',exact:true}).click();
           await page.waitForFunction(()=>location.hash==='#preview');
+          stage='button: TOC preview selection';
           await page.waitForFunction(()=>document.querySelector('nav[aria-label="在此页面上"] a[href="#preview"]')?.getAttribute('aria-current')==='location');
           const api=page.locator('#api');
           await api.getByRole('heading',{name:'组件 API'}).waitFor();
           assert.ok(await api.getByRole('table',{name:'Button 属性'}).count());
+          stage='button: mobile navigation';
           const mobile=await context.newPage();
           try{
             await mobile.setViewportSize({width:390,height:844});
@@ -230,6 +238,7 @@ try{
           assert.ok(await svg.count()>0,'shared SVG icons rendered');
           assert.equal(await page.locator('i[class*="ri-"]').count(),0,'no icon font elements');
           assert.equal(await page.locator('[data-icon-fallback="true"]').count(),0,'no unknown icon on button page');
+          stage='button: directional icon';
           const arrow=page.locator('#preview button').filter({hasText:'继续'}).locator('svg').first();
           assert.equal(await arrow.evaluate(e=>e.getAttribute('viewBox')),'0 0 24 24');
           assert.ok((await arrow.evaluate(e=>getComputedStyle(e).rotate))==='none');
@@ -238,6 +247,7 @@ try{
           await arrow.evaluate(e=>e.closest('[dir]').dir='ltr');
           await page.evaluate(()=>window.scrollTo({top:0,behavior:"instant"}));
           await page.waitForFunction(()=>window.scrollY===0);
+          stage='button: desktop geometry';
           const geometry=await page.evaluate(()=>{const r=s=>{const e=document.querySelector(s);const b=e.getBoundingClientRect();return [b.x,b.y,b.width,b.height].map(Math.round)};return {main:r('main'),heading:r('main h1'),sidebar:r('aside'),toc:r('main+aside'),canvas:r('#preview > div > div:last-child'),shadow:getComputedStyle(document.documentElement).getPropertyValue('--shadow-sidebar').trim(),font:document.fonts.check('14px "Noto Sans SC Variable"','按钮')}});
           const near=(actual,expected,tolerance=12)=>assert.ok(actual.every((n,i)=>Math.abs(n-expected[i])<=tolerance), JSON.stringify({actual,expected,tolerance}));
           near(geometry.main.slice(0,3),[324,40,808]);
@@ -251,6 +261,7 @@ try{
           const buttons=demo.getByRole('tabpanel').getByRole('button');
           assert.equal(await buttons.count(),4);
           for(const button of await buttons.all())assert.equal((await button.boundingBox())?.height,36);
+          stage='button: preview tab indicator';
           await demo.getByRole('tab',{name:'预览'}).press('ArrowRight');
           assert.equal(await demo.getByRole('tab',{name:'代码'}).getAttribute('aria-selected'),'true');
           const indicator=demo.locator('[data-preview-indicator]');
@@ -259,18 +270,31 @@ try{
           assert.equal(await demo.getByRole('tab',{name:'预览'}).getAttribute('aria-selected'),'true');
           const pressTarget=demo.getByRole('tabpanel').getByRole('button',{name:'开始使用',exact:true});
           const secondary=demo.getByRole('tabpanel').getByRole('button',{name:'继续',exact:true});
+          stage='button: hover style';
+          const pointer=await page.evaluate(()=>({hover:matchMedia('(hover: hover)').matches,fine:matchMedia('(pointer: fine)').matches}));
+          assert.ok(pointer.hover,'desktop browser must advertise hover: '+JSON.stringify(pointer));
           await page.mouse.move(0,0);
+          await page.waitForFunction(e=>!e.matches(':hover'),await secondary.elementHandle());
           const resting=await secondary.evaluate(e=>getComputedStyle(e).backgroundColor);
           await secondary.hover();
           await page.waitForFunction(({e,resting})=>getComputedStyle(e).backgroundColor!==resting,{e:await secondary.elementHandle(),resting});
           await page.mouse.move(0,0);
-          await pressTarget.focus();await page.keyboard.press('Tab');
-          await page.waitForFunction(e=>e===document.activeElement&&e.matches(':focus-visible'),await secondary.elementHandle());
+          stage='button: keyboard focus';
+          await demo.getByRole('tab',{name:'预览'}).focus();
+          const visited=[];
+          for(let i=0;i<12;i++){
+            await page.keyboard.press('Tab');
+            visited.push(await page.evaluate(()=>({text:document.activeElement?.textContent?.trim().slice(0,60),role:document.activeElement?.getAttribute('role')})));
+            if(await secondary.evaluate(e=>document.activeElement===e))break;
+          }
+          assert.ok(await secondary.evaluate(e=>document.activeElement===e&&e.matches(':focus-visible')),'keyboard focus path: '+JSON.stringify(visited));
           assert.ok(await secondary.evaluate(e=>getComputedStyle(e).boxShadow!=='none'));
+          stage='button: disabled variants';
           const disabled=page.locator('#disabled [role=tabpanel]').getByRole('button');
           assert.equal(await disabled.count(),4);
           for(const b of await disabled.all())assert.ok(await b.isDisabled());
 
+          stage='button: pressed transform';
           await page.emulateMedia({reducedMotion:'no-preference'});
           await pressTarget.scrollIntoViewIfNeeded();
           const box=await pressTarget.boundingBox();
@@ -427,6 +451,58 @@ try{
           await demo.getByRole('radio',{name:'列表',exact:true}).click();
           await demo.getByText('模板测试任务',{exact:true}).waitFor();
         }
+        if(route==='/zh-hans/templates/project-board/'||route==='/workspace/project-board/'){
+          const demo=page.locator('#preview');
+          await demo.getByRole('searchbox',{name:'搜索任务'}).fill('审计跟踪');
+          await demo.getByText('记录智能体操作的审计跟踪',{exact:true}).waitFor();
+          assert.equal(await demo.getByText('定义高架表面的语义变量',{exact:true}).count(),0);
+          const edit=demo.getByRole('button',{name:'编辑任务 记录智能体操作的审计跟踪'});
+          if(route.startsWith('/workspace/')){
+            assert.equal(await page.locator('[data-workspace=project-board]').count(),1);
+            assert.equal(await page.locator('nav[aria-label="元件库"]').count(),0);
+          }
+          // The documentation route has already switched to list view.
+          const listEdit=demo.getByRole('button',{name:'记录智能体操作的审计跟踪',exact:true});
+          const trigger=await edit.isVisible()?edit:listEdit;
+          await trigger.click();const dialog=page.getByRole('dialog',{name:'编辑任务'});await dialog.waitFor();
+          await page.keyboard.press('Escape');await dialog.waitFor({state:'hidden'});
+          await page.waitForFunction(e=>document.activeElement===e,await trigger.elementHandle());
+          await trigger.click();await dialog.getByRole('combobox',{name:'移动至'}).selectOption('done');
+          await dialog.getByRole('button',{name:'保存任务'}).click();await dialog.waitFor({state:'hidden'});
+          await demo.getByRole('radio',{name:'看板',exact:true}).click();
+          await demo.locator('[data-board-column="done"]').getByText('记录智能体操作的审计跟踪',{exact:true}).waitFor();
+          assert.equal(await demo.locator('[data-board-column="backlog"]').getByText('记录智能体操作的审计跟踪',{exact:true}).count(),0);
+          await demo.getByRole('searchbox',{name:'搜索任务'}).fill('不存在的任务-验收');
+          assert.equal(await demo.getByText('暂无匹配任务').count(),4);
+        }
+        if(route.startsWith('/workspace/')){
+          assert.equal(await page.locator('[data-workspace]').count(),1);
+          assert.equal(await page.locator('nav[aria-label="元件库"]').count(),0);
+          assert.equal(await page.locator('nav[aria-label="工作区导航"] [aria-current=page]').count(),1);
+          assert.ok(await page.getByRole('link',{name:'返回文档'}).count());
+          assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+        }
+        if(['/zh-hans/components/radar-chart-card/','/zh-hans/components/radial-chart-card/','/zh-hans/components/heatmap-chart-card/','/zh-hans/components/scatter-chart-card/','/zh-hans/components/combo-chart-card/'].includes(route)){
+          const panel=page.locator('#preview [role=tabpanel]');
+          const control=panel.getByRole('combobox',{name:'查看图表数据点'});
+          await control.selectOption('0');await panel.locator('[data-chart-tooltip]').waitFor();
+          const record=page.locator('#records [role=tabpanel]');
+          await record.getByRole('radio',{name:'更新数据'}).click();
+          await record.getByRole('combobox',{name:'查看图表数据点'}).selectOption('0');
+          await record.locator('[data-chart-tooltip]').getByText(/65/).waitFor();
+          await record.getByRole('radio',{name:'空数据'}).click();await record.getByText('暂无可展示数据').waitFor();
+          await record.getByRole('radio',{name:'初始'}).click();
+          const target=record.locator('[data-chart-index="0"]').first();
+          await target.scrollIntoViewIfNeeded();
+          // Data-point select is the reliable keyboard path; visible marks also receive pointer/touch.
+          await record.getByRole('combobox',{name:'查看图表数据点'}).selectOption('0');
+          await record.locator('[data-chart-tooltip]').getByText(/25/).waitFor();
+          if(route.includes('combo-chart')){
+            const bars=page.locator('#bars [role=tabpanel]');
+            await bars.getByRole('combobox',{name:'查看图表数据点'}).selectOption('1');
+            await bars.locator('[data-chart-tooltip]').getByText('45',{exact:true}).waitFor();
+          }
+        }
         if(route==='/zh-hans/components/carousel/'){
           const demo=page.locator('#preview'),next=demo.getByRole('button',{name:'下一张'}),prev=demo.getByRole('button',{name:'上一张'});
           assert.ok(await prev.isDisabled());await next.click();
@@ -579,6 +655,13 @@ try{
           const demo=page.locator('#preview'),svg=demo.getByRole('img',{name:/趋势图/});
           const axisCount=()=>svg.locator('text').filter({hasText:/^[1-8]月$/}).count();
           assert.equal(await axisCount(),8);
+          if(route.includes('orders-chart')){
+            assert.equal(await svg.locator('[data-series=current]').count(),8);
+            assert.equal(await svg.locator('[data-series=previous]').count(),8);
+            await demo.getByRole('combobox',{name:'查看图表数据点'}).selectOption('0');
+            await demo.locator('[data-chart-tooltip]').getByText('今年：1,680 · 去年：1,510',{exact:true}).waitFor();
+          }
+
           await demo.getByRole('radio',{name:'近4月'}).click();
           await page.waitForFunction(()=>document.querySelectorAll('#preview svg[role=img] text').length>0&&[...document.querySelectorAll('#preview svg[role=img] text')].filter(e=>/^[1-8]月$/.test(e.textContent)).length===4);
           assert.ok(!(await svg.locator('path').evaluateAll(es=>es.some(e=>/NaN|Infinity/.test(e.getAttribute('d')??'')))));
@@ -853,6 +936,9 @@ try{
           const dialog=page.getByRole('dialog',{name:'邀请团队成员'});
           await dialog.waitFor();
           await dialog.getByRole('textbox',{name:'邮箱地址'}).fill('demo@example.com');
+          for(let i=0;i<8;i++){await page.keyboard.press('Tab');assert.ok(await dialog.evaluate(e=>e.contains(document.activeElement)),'dialog forward focus containment');}
+          for(let i=0;i<8;i++){await page.keyboard.press('Shift+Tab');assert.ok(await dialog.evaluate(e=>e.contains(document.activeElement)),'dialog backward focus containment');}
+
           await page.keyboard.press('Escape');
           await dialog.waitFor({state:'hidden'});
           await page.waitForFunction(e=>document.activeElement===e,await trigger.elementHandle());

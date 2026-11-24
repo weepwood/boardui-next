@@ -10,37 +10,38 @@
  *   - 每圈端点带一个圆头（strokeLinecap round）
  */
 export function RadialRings({
-  items,
+  items,activeIndex,
   size = 200,
 }: {
   items: { name: string; value: number; color: string }[];
+  activeIndex?:number|null;
   size?: number;
 }) {
   const n = items.length;
-  const max = Math.max(...items.map((i) => i.value), 1);
+  const max = items.reduce((n,i)=>Number.isFinite(i.value)?Math.max(n,i.value):n,1);
   const VB = 200;
   const cx = VB / 2;
   const cy = VB / 2;
 
   // 半径：最外圈给到 82，向内每圈缩 12
   const outerR = 82;
-  const step = 11;
-  const ringW = 8;
+  const step = Math.min(11,70/Math.max(1,n));
+  const ringW = Math.min(8,step*.72);
 
   const C = 2 * Math.PI;
 
   return (
     <svg
       viewBox={`0 0 ${VB} ${VB}`}
-      style={{ width: size, height: size }}
+      style={{ width: size,maxWidth:"100%",height:"auto",aspectRatio:"1" }}
       aria-hidden="true"
     >
       {items.map((it, i) => {
         // i=0 画最外圈，依次向内
         const r = outerR - i * step;
-        const ratio = it.value / max;
+        const ratio = Number.isFinite(it.value)?Math.max(0,Math.min(1,it.value/max)):0;
         return (
-          <g key={it.name}>
+          <g key={i} data-chart-index={i} opacity={activeIndex==null||activeIndex===i?1:.4}>
             {/* 背景轨道：完整圆环，浅灰 */}
             <circle
               cx={cx}

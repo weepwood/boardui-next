@@ -70,6 +70,7 @@ export function DocsShell({children}:{children:ReactNode}){
    router.prefetch(href);
  },[router]);
  const value=useMemo(()=>({begin,warm}),[begin,warm]);
+ if(pathname.startsWith("/workspace/"))return <NavContext.Provider value={value}>{children}</NavContext.Provider>;
  return <NavContext.Provider value={value}><div ref={shell} className="flex min-h-screen w-full bg-background-full"><Sidebar/><div ref={content} data-doc-content className="relative min-w-0 flex-1">
   <div ref={routeContent} data-doc-route>{children}</div>
   <div ref={feedback} hidden data-navigation-pending className="absolute inset-0 bg-background-full" role="status" aria-live="polite"><div className="sticky top-0 mx-auto flex w-full max-w-[1200px] flex-col gap-8 px-6 pt-10 sm:px-10"><p ref={targetCrumb} className="text-body-2-regular text-text-secondary"/><h2 ref={targetLabel} className="text-title-1-medium text-text-primary"/><div className="flex max-w-[900px] flex-col gap-4"><div className="h-4 w-3/5 rounded-md bg-background-tertiary-default"/><div className="h-[327px] rounded-3xl border border-border-component-detail-container"/><span className="sr-only">正在加载页面</span></div></div></div>
