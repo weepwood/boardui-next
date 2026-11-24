@@ -9,6 +9,7 @@ import { useState } from "react";
 import type { ReactNode } from "react";
 
 import { Button } from "@/app/components/ui/Button";
+import { AriaButton, Button as NativeButton, ButtonLink } from "@/packages/react";
 import { IconButton } from "@/app/components/ui/IconButton";
 import { Chip } from "@/app/components/ui/Chip";
 import { Input } from "@/app/components/ui/Input";
@@ -176,84 +177,27 @@ function SelectDemo() {
 export const docs: Record<string, Doc> = {
   button: {
     title: "按钮",
-    description:
-      "与 BoardUI 设计系统相匹配的按钮——三种尺寸的主要、次要、幽灵和危险变体，具有前导/尾随图标槽以及语义悬停、按下和禁用状态。",
-    install: "npx boardui@latest add button",
-    previewCode: `<Button>开始使用</Button>
-<Button variant="secondary">继续</Button>
-<Button variant="ghost">标记为已完成</Button>
-<Button variant="destructive">删除</Button>`,
+    description: "原版尺寸、变体、标签及渐变交互配方已移植；浏览器像素、键盘和 RTL 一致性仍待验收。",
+    previewCode: `import { AriaButton } from "@/packages/react";
+<AriaButton>开始使用</AriaButton>
+<AriaButton variant="secondary">继续</AriaButton>
+<AriaButton variant="ghost">标记为已完成</AriaButton>
+<AriaButton variant="danger">删除</AriaButton>`,
     preview: (
       <>
-        <Button>开始使用</Button>
-        <Button variant="secondary" trailing={<Icon name="arrow-right-line" className="size-4" />}>
-          继续
-        </Button>
-        <Button variant="ghost">标记为已完成</Button>
-        <Button variant="destructive">删除</Button>
+        <AriaButton>开始使用</AriaButton>
+        <AriaButton variant="secondary">继续</AriaButton>
+        <AriaButton variant="ghost">标记为已完成</AriaButton>
+        <AriaButton variant="danger">删除</AriaButton>
       </>
     ),
     demos: [
-      {
-        id: "variants",
-        title: "变体",
-        description: "五种语义变体覆盖主要操作、次要操作与破坏性操作。",
-        code: `<Button>主要</Button>
-<Button variant="secondary">次要</Button>
-<Button variant="ghost">幽灵</Button>
-<Button variant="destructive">危险</Button>
-<Button variant="outline">描边</Button>`,
-        node: (
-          <>
-            <Button>主要</Button>
-            <Button variant="secondary">次要</Button>
-            <Button variant="ghost">幽灵</Button>
-            <Button variant="destructive">危险</Button>
-            <Button variant="outline">描边</Button>
-          </>
-        ),
-      },
-      {
-        id: "sizes",
-        title: "尺寸",
-        code: `<Button size="sm">小号</Button>
-<Button size="md">中号</Button>
-<Button size="lg">大号</Button>`,
-        node: (
-          <>
-            <Button size="sm">小号</Button>
-            <Button size="md">中号</Button>
-            <Button size="lg">大号</Button>
-          </>
-        ),
-      },
-      {
-        id: "icons",
-        title: "图标",
-        code: `<Button leading={<Icon name="add-line" />}>新建</Button>
-<Button trailing={<Icon name="arrow-right-line" />}>继续</Button>`,
-        node: (
-          <>
-            <Button leading={<Icon name="add-line" className="size-4" />}>新建</Button>
-            <Button variant="secondary" trailing={<Icon name="arrow-right-line" className="size-4" />}>
-              继续
-            </Button>
-            <IconButton icon="settings-3-line" label="设置" variant="outline" />
-          </>
-        ),
-      },
-      {
-        id: "disabled",
-        title: "禁用",
-        node: (
-          <>
-            <Button isDisabled>主要</Button>
-            <Button variant="secondary" isDisabled>次要</Button>
-            <Button variant="ghost" isDisabled>幽灵</Button>
-            <Button variant="destructive" isDisabled>危险</Button>
-          </>
-        ),
-      },
+      { id:"sizes", title:"原版尺寸", code:`<AriaButton size="medium">Medium</AriaButton>
+<AriaButton size="small">Small</AriaButton>
+<AriaButton size="xs">XS</AriaButton>`, node:<><AriaButton size="medium">Medium</AriaButton><AriaButton size="small">Small</AriaButton><AriaButton size="xs">XS</AriaButton></> },
+      { id:"disabled", title:"禁用", node:<><AriaButton isDisabled>主要</AriaButton><AriaButton variant="secondary" isDisabled>次要</AriaButton><AriaButton variant="ghost" isDisabled>幽灵</AriaButton><AriaButton variant="danger" isDisabled>危险</AriaButton></> },
+      { id:"native",title:"原生按钮与链接",node:<><NativeButton>原生按钮</NativeButton><ButtonLink href="/zh-hans/components" variant="secondary">查看组件</ButtonLink></> },
+      { id:"legacy",title:"旧版兼容接口",description:"现有应用仍可使用旧的 size、leading 和 destructive 等属性；尚未进行全站切换。",node:<><Button size="sm">小号</Button><Button variant="outline">描边</Button><Button variant="destructive">危险</Button></> },
     ],
   },
 
