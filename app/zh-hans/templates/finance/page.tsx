@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import { DocsLayout } from "@/app/components/docs/DocsLayout";
 import { FinanceTemplate } from "@/app/components/templates/FinanceTemplate";
@@ -25,6 +26,7 @@ export default function Page() {
         </p>
       </header>
 
+      <Link href="/workspace/finance/" className="self-start rounded-2lg border border-border-button-default bg-background-primary-default px-3 py-2 text-body-medium text-text-primary hover:bg-background-primary-hover">打开独立工作区</Link>
       <div id="preview" className="@container min-w-0 scroll-mt-14">
         <FinanceTemplate />
       </div>

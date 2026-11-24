@@ -2212,6 +2212,292 @@
       "scope": "本地双主题指定操作、状态或加载动效断言；未覆盖所有变体与跨浏览器完整操作。",
       "source": "reference/evidence/responsive-accessibility-20261124.json",
       "route": "/zh-hans/components/token-input/"
+    },
+    {
+      "id": "chart-workspace-visual-radar-chart-card-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "radar-chart-card"
+      ],
+      "scope": "本地 Edge 双主题及 320/390/2560px 页面级截图/布局采样；独立工作区或组件预览真实截图，非像素验收。",
+      "source": "reference/evidence/chart-workspace-20261124.json",
+      "route": "/zh-hans/components/radar-chart-card/"
+    },
+    {
+      "id": "chart-workspace-interaction-radar-chart-card-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "radar-chart-card"
+      ],
+      "scope": "本地 Edge 指定数据点、筛选/更新/空状态或工作区真实操作与触摸检查；正式三浏览器未通过。",
+      "source": "reference/evidence/chart-workspace-20261124.json",
+      "route": "/zh-hans/components/radar-chart-card/"
+    },
+    {
+      "id": "chart-workspace-accessibility-radar-chart-card-20261124",
+      "dimension": "accessibility",
+      "result": "partial",
+      "components": [
+        "radar-chart-card"
+      ],
+      "scope": "本地 Edge 初始状态 axe、指定图表触摸或看板打开态 axe/无障碍树抽样；非人工读屏及所有状态。",
+      "source": "reference/evidence/chart-workspace-20261124.json",
+      "route": "/zh-hans/components/radar-chart-card/"
+    },
+    {
+      "id": "chart-workspace-visual-radial-chart-card-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "radial-chart-card"
+      ],
+      "scope": "本地 Edge 双主题及 320/390/2560px 页面级截图/布局采样；独立工作区或组件预览真实截图，非像素验收。",
+      "source": "reference/evidence/chart-workspace-20261124.json",
+      "route": "/zh-hans/components/radial-chart-card/"
+    },
+    {
+      "id": "chart-workspace-interaction-radial-chart-card-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "radial-chart-card"
+      ],
+      "scope": "本地 Edge 指定数据点、筛选/更新/空状态或工作区真实操作与触摸检查；正式三浏览器未通过。",
+      "source": "reference/evidence/chart-workspace-20261124.json",
+      "route": "/zh-hans/components/radial-chart-card/"
+    },
+    {
+      "id": "chart-workspace-accessibility-radial-chart-card-20261124",
+      "dimension": "accessibility",
+      "result": "partial",
+      "components": [
+        "radial-chart-card"
+      ],
+      "scope": "本地 Edge 初始状态 axe、指定图表触摸或看板打开态 axe/无障碍树抽样；非人工读屏及所有状态。",
+      "source": "reference/evidence/chart-workspace-20261124.json",
+      "route": "/zh-hans/components/radial-chart-card/"
+    },
+    {
+      "id": "chart-workspace-visual-heatmap-chart-card-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "heatmap-chart-card"
+      ],
+      "scope": "本地 Edge 双主题及 320/390/2560px 页面级截图/布局采样；独立工作区或组件预览真实截图，非像素验收。",
+      "source": "reference/evidence/chart-workspace-20261124.json",
+      "route": "/zh-hans/components/heatmap-chart-card/"
+    },
+    {
+      "id": "chart-workspace-interaction-heatmap-chart-card-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "heatmap-chart-card"
+      ],
+      "scope": "本地 Edge 指定数据点、筛选/更新/空状态或工作区真实操作与触摸检查；正式三浏览器未通过。",
+      "source": "reference/evidence/chart-workspace-20261124.json",
+      "route": "/zh-hans/components/heatmap-chart-card/"
+    },
+    {
+      "id": "chart-workspace-accessibility-heatmap-chart-card-20261124",
+      "dimension": "accessibility",
+      "result": "partial",
+      "components": [
+        "heatmap-chart-card"
+      ],
+      "scope": "本地 Edge 初始状态 axe、指定图表触摸或看板打开态 axe/无障碍树抽样；非人工读屏及所有状态。",
+      "source": "reference/evidence/chart-workspace-20261124.json",
+      "route": "/zh-hans/components/heatmap-chart-card/"
+    },
+    {
+      "id": "chart-workspace-visual-scatter-chart-card-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "scatter-chart-card"
+      ],
+      "scope": "本地 Edge 双主题及 320/390/2560px 页面级截图/布局采样；独立工作区或组件预览真实截图，非像素验收。",
+      "source": "reference/evidence/chart-workspace-20261124.json",
+      "route": "/zh-hans/components/scatter-chart-card/"
+    },
+    {
+      "id": "chart-workspace-interaction-scatter-chart-card-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "scatter-chart-card"
+      ],
+      "scope": "本地 Edge 指定数据点、筛选/更新/空状态或工作区真实操作与触摸检查；正式三浏览器未通过。",
+      "source": "reference/evidence/chart-workspace-20261124.json",
+      "route": "/zh-hans/components/scatter-chart-card/"
+    },
+    {
+      "id": "chart-workspace-accessibility-scatter-chart-card-20261124",
+      "dimension": "accessibility",
+      "result": "partial",
+      "components": [
+        "scatter-chart-card"
+      ],
+      "scope": "本地 Edge 初始状态 axe、指定图表触摸或看板打开态 axe/无障碍树抽样；非人工读屏及所有状态。",
+      "source": "reference/evidence/chart-workspace-20261124.json",
+      "route": "/zh-hans/components/scatter-chart-card/"
+    },
+    {
+      "id": "chart-workspace-visual-combo-chart-card-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "combo-chart-card"
+      ],
+      "scope": "本地 Edge 双主题及 320/390/2560px 页面级截图/布局采样；独立工作区或组件预览真实截图，非像素验收。",
+      "source": "reference/evidence/chart-workspace-20261124.json",
+      "route": "/zh-hans/components/combo-chart-card/"
+    },
+    {
+      "id": "chart-workspace-interaction-combo-chart-card-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "combo-chart-card"
+      ],
+      "scope": "本地 Edge 指定数据点、筛选/更新/空状态或工作区真实操作与触摸检查；正式三浏览器未通过。",
+      "source": "reference/evidence/chart-workspace-20261124.json",
+      "route": "/zh-hans/components/combo-chart-card/"
+    },
+    {
+      "id": "chart-workspace-accessibility-combo-chart-card-20261124",
+      "dimension": "accessibility",
+      "result": "partial",
+      "components": [
+        "combo-chart-card"
+      ],
+      "scope": "本地 Edge 初始状态 axe、指定图表触摸或看板打开态 axe/无障碍树抽样；非人工读屏及所有状态。",
+      "source": "reference/evidence/chart-workspace-20261124.json",
+      "route": "/zh-hans/components/combo-chart-card/"
+    },
+    {
+      "id": "chart-workspace-visual-orders-chart-card-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "orders-chart-card"
+      ],
+      "scope": "本地 Edge 双主题及 320/390/2560px 页面级截图/布局采样；独立工作区或组件预览真实截图，非像素验收。",
+      "source": "reference/evidence/chart-workspace-20261124.json",
+      "route": "/zh-hans/components/orders-chart-card/"
+    },
+    {
+      "id": "chart-workspace-interaction-orders-chart-card-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "orders-chart-card"
+      ],
+      "scope": "本地 Edge 指定数据点、筛选/更新/空状态或工作区真实操作与触摸检查；正式三浏览器未通过。",
+      "source": "reference/evidence/chart-workspace-20261124.json",
+      "route": "/zh-hans/components/orders-chart-card/"
+    },
+    {
+      "id": "chart-workspace-accessibility-orders-chart-card-20261124",
+      "dimension": "accessibility",
+      "result": "partial",
+      "components": [
+        "orders-chart-card"
+      ],
+      "scope": "本地 Edge 初始状态 axe、指定图表触摸或看板打开态 axe/无障碍树抽样；非人工读屏及所有状态。",
+      "source": "reference/evidence/chart-workspace-20261124.json",
+      "route": "/zh-hans/components/orders-chart-card/"
+    },
+    {
+      "id": "chart-workspace-visual-home-dashboard-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "home-dashboard"
+      ],
+      "scope": "本地 Edge 双主题及 320/390/2560px 页面级截图/布局采样；独立工作区或组件预览真实截图，非像素验收。",
+      "source": "reference/evidence/chart-workspace-20261124.json",
+      "route": "/zh-hans/templates/dashboard/"
+    },
+    {
+      "id": "chart-workspace-visual-finance-dashboard-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "finance-dashboard"
+      ],
+      "scope": "本地 Edge 双主题及 320/390/2560px 页面级截图/布局采样；独立工作区或组件预览真实截图，非像素验收。",
+      "source": "reference/evidence/chart-workspace-20261124.json",
+      "route": "/zh-hans/templates/finance/"
+    },
+    {
+      "id": "chart-workspace-visual-ai-chat-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "ai-chat"
+      ],
+      "scope": "本地 Edge 双主题及 320/390/2560px 页面级截图/布局采样；独立工作区或组件预览真实截图，非像素验收。",
+      "source": "reference/evidence/chart-workspace-20261124.json",
+      "route": "/zh-hans/templates/ai-chat/"
+    },
+    {
+      "id": "chart-workspace-interaction-ai-chat-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "ai-chat"
+      ],
+      "scope": "本地 Edge 指定数据点、筛选/更新/空状态或工作区真实操作与触摸检查；正式三浏览器未通过。",
+      "source": "reference/evidence/chart-workspace-20261124.json",
+      "route": "/zh-hans/templates/ai-chat/"
+    },
+    {
+      "id": "chart-workspace-accessibility-ai-chat-20261124",
+      "dimension": "accessibility",
+      "result": "partial",
+      "components": [
+        "ai-chat"
+      ],
+      "scope": "本地 Edge 初始状态 axe、指定图表触摸或看板打开态 axe/无障碍树抽样；非人工读屏及所有状态。",
+      "source": "reference/evidence/chart-workspace-20261124.json",
+      "route": "/zh-hans/templates/ai-chat/"
+    },
+    {
+      "id": "chart-workspace-visual-project-board-20261124",
+      "dimension": "visual",
+      "result": "partial",
+      "components": [
+        "project-board"
+      ],
+      "scope": "本地 Edge 双主题及 320/390/2560px 页面级截图/布局采样；独立工作区或组件预览真实截图，非像素验收。",
+      "source": "reference/evidence/chart-workspace-20261124.json",
+      "route": "/zh-hans/templates/project-board/"
+    },
+    {
+      "id": "chart-workspace-interaction-project-board-20261124",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "project-board"
+      ],
+      "scope": "本地 Edge 指定数据点、筛选/更新/空状态或工作区真实操作与触摸检查；正式三浏览器未通过。",
+      "source": "reference/evidence/chart-workspace-20261124.json",
+      "route": "/zh-hans/templates/project-board/"
+    },
+    {
+      "id": "chart-workspace-accessibility-project-board-20261124",
+      "dimension": "accessibility",
+      "result": "partial",
+      "components": [
+        "project-board"
+      ],
+      "scope": "本地 Edge 初始状态 axe、指定图表触摸或看板打开态 axe/无障碍树抽样；非人工读屏及所有状态。",
+      "source": "reference/evidence/chart-workspace-20261124.json",
+      "route": "/zh-hans/templates/project-board/"
     }
   ]
 }

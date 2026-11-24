@@ -4977,7 +4977,7 @@
       ]
     }
   ],
-  "bar-chart-card": [
+  "combo-chart-card": [
     {
       "name": "BarChart",
       "source": "packages/react/chart.tsx",
@@ -4986,6 +4986,12 @@
           "name": "data",
           "type": "number[]",
           "optional": false,
+          "description": ""
+        },
+        {
+          "name": "activeIndex",
+          "type": "number | null",
+          "optional": true,
           "description": ""
         },
         {
@@ -5003,7 +5009,7 @@
       ]
     }
   ],
-  "radar-chart": [
+  "radar-chart-card": [
     {
       "name": "RadarChart",
       "source": "packages/react/chart.tsx",
@@ -5021,6 +5027,12 @@
           "description": ""
         },
         {
+          "name": "activeIndex",
+          "type": "number | null",
+          "optional": true,
+          "description": ""
+        },
+        {
           "name": "size",
           "type": "number",
           "optional": true,
@@ -5029,7 +5041,7 @@
       ]
     }
   ],
-  "radial-chart": [
+  "radial-chart-card": [
     {
       "name": "RadialChart",
       "source": "packages/react/chart.tsx",
@@ -5061,7 +5073,7 @@
       ]
     }
   ],
-  "funnel-chart": [
+  "funnel-chart-card": [
     {
       "name": "FunnelChart",
       "source": "packages/react/chart.tsx",
@@ -5087,6 +5099,52 @@
         {
           "name": "items",
           "type": "{ name: string; value: string; color: string; }[]",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "heatmap-chart-card": [
+    {
+      "name": "Heatmap",
+      "source": "packages/react/chart.tsx",
+      "props": [
+        {
+          "name": "activeIndex",
+          "type": "number | null",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "seed",
+          "type": "number",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "values",
+          "type": "number[]",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "weeks",
+          "type": "number",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "bar-list-card": [
+    {
+      "name": "BarList",
+      "source": "packages/react/chart.tsx",
+      "props": [
+        {
+          "name": "items",
+          "type": "{ label: string; value: number; color?: string; }[]",
           "optional": false,
           "description": ""
         }

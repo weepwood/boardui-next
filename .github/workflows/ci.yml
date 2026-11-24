@@ -73,6 +73,8 @@ jobs:
           npx playwright install --with-deps firefox webkit
           BROWSER=firefox node scripts/check-navigation-compat.mjs
           BROWSER=webkit node scripts/check-navigation-compat.mjs
+          BROWSER=firefox TARGET_ROUTES='["/zh-hans/components/input/","/zh-hans/components/textarea/"]' npm run test:browser -- --targeted --both-themes
+          BROWSER=webkit TARGET_ROUTES='["/zh-hans/components/input/","/zh-hans/components/textarea/"]' npm run test:browser -- --targeted --both-themes
       - name: WebKit 折叠与 RTL 回归
         if: needs.quick.outputs.rtlCompat == 'true'
         run: |
@@ -97,4 +99,13 @@ jobs:
         with:
           name: responsive-accessibility
           path: acceptance/responsive/
+          if-no-files-found: warn
+      - name: 图表与独立工作区触摸及交互态 axe
+        if: needs.quick.outputs.responsive == 'true'
+        run: node scripts/check-chart-workspace.mjs acceptance/chart-workspace
+      - uses: actions/upload-artifact@v4
+        if: always() && needs.quick.outputs.responsive == 'true'
+        with:
+          name: chart-workspace-interaction
+          path: acceptance/chart-workspace/
           if-no-files-found: warn

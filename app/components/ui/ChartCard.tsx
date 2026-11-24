@@ -5,10 +5,11 @@ import {SegmentedControl} from "./SegmentedControl";
 import { cn } from "@/lib/utils";
 import { Icon } from "./Icon";
 import { ChartArea, ChartLegend, type Series } from "./ChartArea";
-import { BarList, RadarChart, Heatmap, FunnelChart, FunnelLegend } from "./Chart";
+import { BarChart, BarList, RadarChart, Heatmap, FunnelChart, FunnelLegend } from "./Chart";
 import { RadialRings } from "./RadialRings";
 import { BarListCard } from "./BarListCard";
-import { SankeyChart, ScatterChart, ComboChart } from "./ChartExtra";
+import { SankeyChart, ScatterChart, ComboChart, OrdersBars } from "./ChartExtra";
+import {ChartDataInspector,type ChartDatum} from "./ChartDataInspector";
 import { ActivityRings } from "./ActivityRings";
 
 export type ChartCardKind =
@@ -30,6 +31,8 @@ export type ChartCardProps = {
   periodFilter?: boolean;
   /** External data for area/line charts. */
   data?:{labels:string[];series:Series[]};
+  /** Named records for bar, radar, radial, heatmap and scatter charts. Scatter uses x/y coordinates. */
+  records?:ChartDatum[];
 };
 
 const MONTHS = ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月"];
@@ -115,7 +118,7 @@ function Card({
  * 通用图表卡片：20 种图表类型。
  * 折线/面积类使用 ChartArea（含网格、双轴、图例），其余复用基础图表。
  */
-export function ChartCard({ kind, height = 196, periodFilter=false, data, ...rest }: ChartCardProps) {
+export function ChartCard({ kind, height = 196, periodFilter=false, data, records, ...rest }: ChartCardProps) {
   const { title, subtitle, value, delta, trend, className } = rest;
   void rest.icon;
   const [period,setPeriod]=useState("8");
@@ -132,8 +135,19 @@ export function ChartCard({ kind, height = 196, periodFilter=false, data, ...res
   const shown=all.filter(s=>!hidden.includes(s.name));
   const sum=(s:Series)=>s.data.reduce((a,b)=>a+(Number.isFinite(b)?b:0),0);
   const displayLegend=all.map(s=>({name:s.name,color:s.color,value:format(sum(s))}));
-  const total=["area","line"].includes(kind)?format(shown.reduce((n,s)=>n+sum(s),0)):value;
+  const orderRows=(records??MONTHS.map((label,i)=>({label,value:[1680,1740,1920,1850,2040,2110,2290,2180][i],secondary:[1510,1480,1650,1620,1710,1760,1840,1890][i]}))).filter(r=>Number.isFinite(r.value)&&r.value>=0&&Number.isFinite(r.secondary)&&r.secondary!>=0).slice(showPeriods?-range:0);
+  const orderTotal=orderRows.reduce((n,r)=>n+r.value,0);
+  const orderPrevious=orderRows.reduce((n,r)=>n+(r.secondary??0),0);
+  const total=["area","line"].includes(kind)?format(shown.reduce((n,s)=>n+sum(s),0)):kind==="orders"?format(orderTotal):value;
 
+  const sample=(rows:ChartDatum[])=>records??rows;
+  const prepare=(rows:ChartDatum[],predicate:(r:ChartDatum)=>boolean=()=>true)=>rows.filter(r=>Number.isFinite(r.value)&&predicate(r));
+  const radar=prepare(sample(["速度","体积","复用","文档","无障碍"].map((label,i)=>({label,value:[85,62,78,90,72][i]}))),r=>r.value>=0&&r.value<=100);
+  const radial=prepare(sample(RADIAL_ITEMS.map(r=>({label:r.name,value:r.value,color:r.color}))),r=>r.value>=0);
+  const scatter=prepare(sample([[12,24],[18,32],[24,28],[30,44],[38,40],[44,52],[52,48],[58,62],[65,56],[72,70],[80,66],[88,78]].map(([x,y],i)=>({label:"样本 "+(i+1),value:y,x,y}))),r=>Number.isFinite(r.x)&&Number.isFinite(r.y));
+  const bars=prepare(sample([42,58,36,64,48,72,55].map((value,i)=>({label:"第 "+(i+1)+" 期",value}))));
+  const heat=prepare(sample(Array.from({length:16*7},(_,i)=>({label:"第 "+(Math.floor(i/7)+1)+" 周 第 "+(i%7+1)+" 天",value:Math.floor(Math.abs(Math.sin((i+7)*1.7))*5)}))),r=>r.value>=0);
+  const colors=["var(--color-amber-400)","var(--color-pink-400)","var(--color-purple-400)","var(--color-accent-500)","var(--color-lime-500)"];
   const body = (() => {
     switch (kind) {
       case "area":
@@ -169,13 +183,7 @@ export function ChartCard({ kind, height = 196, periodFilter=false, data, ...res
           />
         );
       case "orders":
-        return (
-          <ChartArea
-            series={windowSeries([{ name: "订单", data: [24, 38, 31, 52, 44, 66, 58, 72].map((v) => v * 40), color: "var(--color-amber-500)" }])}
-            labels={months}
-            height={height}
-          />
-        );
+        return <><div className="flex flex-wrap items-center justify-between gap-2 text-caption-1-regular text-text-secondary"><span>去年同期 {format(orderPrevious)}</span><span className="flex gap-2"><span className="flex items-center gap-1"><i className="size-2 rounded-sm bg-chart-9-active"/>今年</span><span className="flex items-center gap-1"><i className="size-2 rounded-sm bg-chart-neutral"/>去年</span></span></div><ChartDataInspector records={orderRows} seriesLabels={["今年","去年"]}>{active=><OrdersBars rows={orderRows} height={height} activeIndex={active}/>}</ChartDataInspector></>;
       case "steps":
         return (
           <ChartArea
@@ -195,7 +203,7 @@ export function ChartCard({ kind, height = 196, periodFilter=false, data, ...res
           />
         );
       case "bar":
-        return <BarList items={[{ label: "一", value: 42 }, { label: "二", value: 58 }, { label: "三", value: 36 }, { label: "四", value: 64 }, { label: "五", value: 48 }]} />;
+        return <ChartDataInspector records={bars}>{active=><BarChart data={bars.map(r=>r.value)} activeIndex={active} height={height}/>}</ChartDataInspector>;
       case "bar-list":
         return (
           <BarListCard
@@ -231,26 +239,11 @@ export function ChartCard({ kind, height = 196, periodFilter=false, data, ...res
           />
         );
       case "radial":
-        return (
-          <>
-            <div className="flex justify-center py-2">
-              <RadialRings items={RADIAL_ITEMS} size={Math.max(140, height - 40)} />
-            </div>
-            <FunnelLegend items={RADIAL_ITEMS.map((r) => ({ name: r.name, value: String(r.value), color: r.color }))} />
-          </>
-        );
+        return <ChartDataInspector records={radial}>{active=><><div className="flex justify-center py-2"><RadialRings items={radial.map((r,i)=>({name:r.label,value:r.value,color:r.color??colors[i%colors.length]}))} activeIndex={active} size={Math.max(140,height-40)}/></div><FunnelLegend items={radial.map((r,i)=>({name:r.label,value:String(r.value),color:r.color??colors[i%colors.length]}))}/></>}</ChartDataInspector>;
       case "radar":
-        return (
-          <div className="flex justify-center">
-            <RadarChart axes={["速度", "体积", "复用", "文档", "无障碍"]} values={[85, 62, 78, 90, 72]} size={height + 40} />
-          </div>
-        );
+        return <ChartDataInspector records={radar}>{active=><div className="flex justify-center"><RadarChart axes={radar.map(r=>r.label)} values={radar.map(r=>r.value)} size={height+40} activeIndex={active}/></div>}</ChartDataInspector>;
       case "heatmap":
-        return (
-          <div className="overflow-x-auto pb-1">
-            <Heatmap weeks={16} />
-          </div>
-        );
+        return <ChartDataInspector records={heat}>{active=><div className="overflow-x-auto p-1"><Heatmap values={heat.map(r=>r.value)} activeIndex={active}/></div>}</ChartDataInspector>;
       case "contributions":
         return (
           <div className="overflow-x-auto pb-1">
@@ -303,19 +296,9 @@ export function ChartCard({ kind, height = 196, periodFilter=false, data, ...res
           />
         );
       case "scatter":
-        return (
-          <ScatterChart
-            height={height - 20}
-            color="var(--color-lime-500)"
-            points={[
-              { x: 12, y: 24 }, { x: 18, y: 32 }, { x: 24, y: 28 }, { x: 30, y: 44 },
-              { x: 38, y: 40 }, { x: 44, y: 52 }, { x: 52, y: 48 }, { x: 58, y: 62 },
-              { x: 65, y: 56 }, { x: 72, y: 70 }, { x: 80, y: 66 }, { x: 88, y: 78 },
-            ]}
-          />
-        );
+        return <ChartDataInspector records={scatter}>{active=><ScatterChart points={scatter.map(r=>({x:r.x!,y:r.y!,color:r.color}))} color="var(--color-lime-500)" activeIndex={active} height={height-20}/>}</ChartDataInspector>;
       case "combo":
-        return <ComboChart bars={[42, 58, 36, 64, 48, 72, 55]} line={[24, 38, 32, 52, 44, 66, 58]} height={height - 30} />;
+        return <ChartDataInspector records={bars.map((r,i)=>({...r,secondary:records?r.secondary??r.value:[24,38,32,52,44,66,58][i]}))}>{active=><ComboChart bars={bars.map(r=>r.value)} line={records?bars.map(r=>r.secondary??r.value):[24,38,32,52,44,66,58]} activeIndex={active} height={height-30}/>}</ChartDataInspector>;
       case "rings":
         return (
           <>

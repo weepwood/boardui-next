@@ -24,6 +24,7 @@ for(const p of files){
   const tpl=p.match(/^app\/components\/templates\/([^/]+)Template\.tsx$/);
   if(tpl&&existsSync('app/zh-hans/templates/'+kebab(tpl[1])+'/page.tsx'))routes.add('/zh-hans/templates/'+kebab(tpl[1])+'/');
 }
+if(files.some(p=>p.startsWith("app/workspace/")||p.startsWith("app/components/templates/")))for(const slug of ["dashboard","finance","project-board","ai-chat"])routes.add("/workspace/"+slug+"/");
 const matrix=files.includes("scripts/audit-component-matrix.mjs");
 const responsive=files.includes("scripts/audit-responsive-accessibility.mjs");
 if(responsive){

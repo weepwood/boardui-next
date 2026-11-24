@@ -70,6 +70,9 @@ jobs:
       - run: npm run test:browser -- --full
         env:
           BROWSER: ${{ matrix.browser }}
+      - name: 图表与工作区触摸状态
+        if: matrix.browser == 'chromium'
+        run: node scripts/check-chart-workspace.mjs acceptance/chart-workspace
       - uses: actions/upload-artifact@v4
         if: always()
         with:

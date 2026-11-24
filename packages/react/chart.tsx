@@ -102,11 +102,12 @@ export function LineChart({
 
 /** 柱状图 */
 export function BarChart({
-  data,
+  data,activeIndex,
   height = 120,
   color = "var(--color-accent-500)",
 }: {
   data: number[];
+  activeIndex?:number|null;
   height?: number;
   color?: string;
 }) {
@@ -127,7 +128,7 @@ export function BarChart({
         const h=Math.abs(end-baseline);
         return (
           <rect
-            key={i}
+            key={i} data-chart-index={i} opacity={activeIndex==null||activeIndex===i?1:.35}
             x={i * (bw + gap)}
             y={Math.min(end,baseline)}
             width={bw}
@@ -210,15 +211,17 @@ export function RadialChart({
 
 /** 雷达图：含轴线、同心网格、轴标签（复刻原站 6 轴结构） */
 export function RadarChart({
-  axes,
+  axes,activeIndex,
   values,
   size = 200,
 }: {
   axes: string[];
+  activeIndex?:number|null;
   values: number[];
   size?: number;
 }) {
   const n = axes.length;
+  const normalized=axes.map((_,i)=>Number.isFinite(values[i])?Math.max(0,Math.min(100,values[i])):0);
   const cx = 50;
   const cy = 50;
   const R = 32;
@@ -226,12 +229,12 @@ export function RadarChart({
     const angle = (Math.PI * 2 * i) / n - Math.PI / 2;
     return [cx + Math.cos(angle) * R * ratio, cy + Math.sin(angle) * R * ratio];
   };
-  const polygon = values
+  const polygon = normalized
     .map((v, i) => point(i, v / 100).map((x) => x.toFixed(2)).join(","))
     .join(" ");
 
   return (
-    <svg viewBox="0 0 100 100" style={{ width: size, height: size }} aria-hidden="true">
+    <svg viewBox="0 0 100 100" style={{ width: size, maxWidth:"100%", height: "auto", aspectRatio:"1" }} aria-hidden="true">
       {/* 同心网格 */}
       {[0.25, 0.5, 0.75, 1].map((ratio) => (
         <polygon
@@ -269,21 +272,21 @@ export function RadarChart({
         strokeLinejoin="round"
       />
       {/* 数据点 */}
-      {values.map((v, i) => {
+      {normalized.map((v, i) => {
         const [x, y] = point(i, v / 100);
-        return <circle key={i} cx={x} cy={y} r="1.1" fill="var(--color-accent-500)" />;
+        return <circle key={i} data-chart-index={i} cx={x} cy={y} r={activeIndex===i?2.2:1.5} fill="var(--color-accent-500)" />;
       })}
       {/* 轴标签 */}
       {axes.map((label, i) => {
         const [x, y] = point(i, 1.18);
         return (
           <text
-            key={label}
+            key={i} data-chart-index={i}
             x={x}
             y={y}
             textAnchor="middle"
             dominantBaseline="middle"
-            fontSize="4.2"
+            fontSize="4.2" fontWeight={activeIndex===i?"bold":"normal"}
             fill="var(--color-text-tertiary)"
           >
             {label}
@@ -295,35 +298,16 @@ export function RadarChart({
 }
 
 /** 热力图 */
-export function Heatmap({
-  weeks = 20,
-  seed = 7,
-}: {
-  weeks?: number;
-  seed?: number;
-}) {
-  const levels = ["bg-background-tertiary-default", "bg-lime-200", "bg-lime-300", "bg-lime-500", "bg-lime-700"];
-  const cells = Array.from({ length: weeks * 7 }, (_, i) => {
-    const v = Math.abs(Math.sin((i + seed) * 1.7)) * 5;
-    return levels[Math.min(4, Math.floor(v))];
-  });
-  return (
-    <div className="flex gap-[3px]">
-      {Array.from({ length: weeks }).map((_, w) => (
-        <div key={w} className="flex flex-col gap-[3px]">
-          {Array.from({ length: 7 }).map((_, d) => (
-            <span
-              key={d}
-              className={`size-2.5 rounded-[2px] ${cells[w * 7 + d]}`}
-              title={`第 ${w + 1} 周 第 ${d + 1} 天`}
-            />
-          ))}
-        </div>
-      ))}
-    </div>
-  );
+export function Heatmap({weeks=20,seed=7,values,activeIndex}:{
+ weeks?:number;seed?:number;values?:number[];activeIndex?:number|null;
+}){
+ const levels=["bg-background-tertiary-default","bg-lime-200","bg-lime-300","bg-lime-500","bg-lime-700"];
+ const cells=values??Array.from({length:Math.max(0,Math.min(104,Math.trunc(weeks)||0))*7},(_,i)=>Math.floor(Math.abs(Math.sin((i+seed)*1.7))*5));
+ const max=cells.reduce((n,v)=>Number.isFinite(v)?Math.max(n,v):n,1);
+ return <div className="flex w-max max-w-none gap-[3px]" aria-label="热力图">
+ {Array.from({length:Math.ceil(cells.length/7)},(_,w)=><div key={w} className="flex flex-col gap-[3px]">{cells.slice(w*7,w*7+7).map((v,d)=>{const i=w*7+d,valid=Number.isFinite(v)&&v>=0,level=valid?Math.min(4,Math.ceil(v/max*4)):0;return <span key={d} data-chart-index={i} className={`size-2.5 rounded-[2px] ${levels[level]} ${activeIndex===i?"ring-2 ring-border-focus-ring":""}`} title={`第 ${w+1} 周 第 ${d+1} 天：${valid?v:"—"}`}/>})}</div>)}
+ </div>
 }
-
 /**
  * 漏斗图：水平流向（严格复刻原站结构）
  *

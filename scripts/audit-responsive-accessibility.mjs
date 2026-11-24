@@ -32,7 +32,7 @@ async function run(ctx,route,theme,profile,axe,upstream=false){
    return {title:document.title,width:root.scrollWidth,viewport:innerWidth,main:main?r(main):null,preview:preview?r(preview):null,dpr:devicePixelRatio,overflow:root.scrollWidth>innerWidth+1};
   }));
   if(axe){await p.waitForFunction(()=>[...document.querySelectorAll('[role=tab][aria-selected=true][aria-controls]')].every(t=>!!document.getElementById(t.getAttribute("aria-controls"))),{},{timeout:10000});await p.addScriptTag({path:axePath});row.violations=await p.evaluate(async()=> (await window.axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa']}})).violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>({target:n.target,summary:n.failureSummary}))})))}
-  if(upstream||extra.some(e=>route===e.localRoute+'/')||route.includes('/templates/')&&route!='/zh-hans/templates/')await p.screenshot({path:join(dir,(upstream?'original':theme)+'-'+profile.width+'-'+route.replace(/[^a-z0-9-]/g,'_')+'.png'),timeout:10000});
+  if(upstream||extra.some(e=>route===e.localRoute+'/')||route.startsWith('/workspace/')||/\/(radar|radial|heatmap|scatter|combo|orders)-chart-card\/$/.test(route)||route.includes('/templates/')&&route!='/zh-hans/templates/')await p.screenshot({path:join(dir,(upstream?'original':theme)+'-'+profile.width+'-'+route.replace(/[^a-z0-9-]/g,'_')+'.png'),timeout:10000});
  }catch(e){row.error=e.message.slice(0,500)}finally{row.errors=errors;results.push(row);await p.close()}
 }
 try{
@@ -44,7 +44,7 @@ try{
  }
  for(const profile of profiles){
   const ctx=await browser.newContext({viewport:{width:profile.width,height:profile.height},deviceScaleFactor:profile.deviceScaleFactor,colorScheme:'light',reducedMotion:'reduce'});
-  const subset=profile.width===390?routes:routes.filter(r=>r.includes('/templates/')||extra.some(e=>r===e.localRoute+'/')||['/','/zh-hans/components/','/zh-hans/rtl/','/zh-hans/components/data-grid/','/zh-hans/components/area-chart-card/','/zh-hans/components/input-otp/'].includes(r));
+  const subset=profile.width===390?routes:routes.filter(r=>r.startsWith('/workspace/')||/\/(radar|radial|heatmap|scatter|combo|orders)-chart-card\/$/.test(r)||r.includes('/templates/')||extra.some(e=>r===e.localRoute+'/')||['/','/zh-hans/components/','/zh-hans/rtl/','/zh-hans/components/data-grid/','/zh-hans/components/area-chart-card/','/zh-hans/components/input-otp/'].includes(r));
   for(let i=0;i<subset.length;i+=5)await Promise.all(subset.slice(i,i+5).map(r=>run(ctx,r,'light',profile,false)));
   await ctx.close();
  }
