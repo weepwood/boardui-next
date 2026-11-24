@@ -7,6 +7,7 @@ const known=new Set([...readFileSync('lib/docs/meta.ts','utf8').matchAll(/slug:\
 const kebab=s=>s.replace(/([a-z0-9])([A-Z])/g,'$1-$2').toLowerCase();
 const aliases={menu:'dropdown',dialog:'modal','app-sidebar':'sidebar'};
 const routes=new Set();
+if(files.some(p=>p==="app/page.tsx"||p==="lib/navigation.ts"||p==="app/globals.css"||p.startsWith("app/components/docs/")||p==="app/zh-hans/templates/page.tsx"))routes.add("/zh-hans/templates/");
 if(files.some(p=>/^(packages\/react\/(direction|tabs|segmented-control|slider|select|dropdown|pagination|breadcrumb|radio|input|button)|app\/components\/docs\/DirectionLab|app\/zh-hans\/\[guide\]\/)/.test(p)))routes.add("/zh-hans/rtl/");
 if(files.some(p=>/^(packages\/react\/(chart|stat-card|progress|meter)|app\/components\/ui\/(Chart|StatCard|Progress|Meter))/.test(p)))for(const slug of known)if(/chart|stat-card|progress|meter|activity-rings|contributions|stage-bars|sleep-score/.test(slug))routes.add("/zh-hans/components/"+slug+"/");
 if(files.some(p=>p.startsWith("app/components/templates/")))for(const slug of ["dashboard","ai-chat","finance","hr","calendar","project-board","marketing","ai-image-generation","ai-profile","medical-profile","multi-agent-chat","chat-starter"])routes.add("/zh-hans/templates/"+slug+"/");

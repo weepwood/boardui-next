@@ -35,9 +35,9 @@ const HISTORY = [
 export function MedicalProfileTemplate() {
   return (
     <div className="flex min-h-[680px] w-full flex-col overflow-hidden rounded-3xl border border-border-button-default bg-background-primary-default shadow-sidebar">
-      <p className="border-b border-border-primary px-4 py-2 text-body-2-regular text-text-secondary">虚构医疗资料，仅用于界面演示；不用于诊疗或风险评估。</p>
+      <p className="border-b border-separator-border px-4 py-2 text-body-2-regular text-text-secondary">虚构医疗资料，仅用于界面演示；不用于诊疗或风险评估。</p>
       {/* 患者头部 */}
-      <header className="flex flex-wrap items-center gap-3 border-b border-border-primary p-4">
+      <header className="flex flex-wrap items-center gap-3 border-b border-separator-border p-4">
         <Avatar name="陈静" size="xl" />
         <div className="flex min-w-0 flex-1 flex-col gap-1">
           <div className="flex flex-wrap items-center gap-2">
@@ -142,7 +142,7 @@ export function MedicalProfileTemplate() {
               <span className="text-body-2-medium text-text-primary">当前用药</span>
               <Badge variant="accent">{MEDICATIONS.filter((m) => m.active).length} 项在用</Badge>
             </div>
-            <div className="flex flex-col divide-y divide-border-primary">
+            <div className="flex flex-col divide-y divide-separator-border">
               {MEDICATIONS.map((m) => (
                 <div key={m.id} className="flex items-center gap-2 py-2">
                   <span
@@ -197,7 +197,7 @@ export function MedicalProfileTemplate() {
                   <div className="flex flex-col items-center">
                     <span className="mt-1 size-1.5 shrink-0 rounded-full bg-accent-500" />
                     {i < HISTORY.length - 1 && (
-                      <span className="my-0.5 w-px flex-1 bg-border-primary" />
+                      <span className="my-0.5 w-px flex-1 bg-separator-border" />
                     )}
                   </div>
                   <div className="flex flex-1 flex-col gap-0.5 pb-3">

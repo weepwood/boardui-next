@@ -44,12 +44,33 @@ try{
         await page.evaluate(()=>document.fonts.ready);
         assert.equal(await page.locator('html').evaluate(e=>e.classList.contains('dark')),theme==='dark');
         if(route==='/'){
+          const cards=page.locator('[data-home-card]');
+          assert.equal(await cards.count(),12);
+          const colorMatches=await cards.first().evaluate(e=>{const sample=document.createElement('span');sample.style.color='var(--color-border-button-default)';e.append(sample);const expected=getComputedStyle(sample).color;sample.remove();const style=getComputedStyle(e);return {actual:style.borderTopColor,expected,text:style.color,width:style.borderTopWidth}});
+          assert.equal(colorMatches.actual,colorMatches.expected);
+          assert.notEqual(colorMatches.actual,colorMatches.text);
+          assert.equal(colorMatches.width,'1px');
+          assert.equal(await page.locator('main a button').count(),0);
+
           await page.getByRole('button',{name:theme==='light'?'切换到暗色模式':'切换到亮色模式'}).click();
           await page.waitForFunction(d=>document.documentElement.classList.contains('dark')===d,theme==='light');
           await page.getByRole('button',{name:theme==='light'?'切换到亮色模式':'切换到暗色模式'}).click();
           await page.waitForFunction(d=>document.documentElement.classList.contains('dark')===d,theme==='dark');
         }
         if(route==='/zh-hans/components/'){
+          const nav=page.locator('aside nav[aria-label="元件库"]');
+          const selected=nav.locator('[data-nav-selected="true"]');
+          await selected.getByText('组件',{exact:true}).waitFor();
+          assert.equal(await selected.count(),1);
+          await nav.getByRole('link',{name:'模板',exact:true}).click();
+          await page.waitForURL(/\/zh-hans\/templates\/?$/);
+          await nav.locator('[data-nav-selected="true"]').getByText('模板',{exact:true}).waitFor();
+          assert.equal(await nav.locator('[aria-current="page"]').count(),1);
+          assert.equal(await page.locator('[data-catalog-slug]').count(),12);
+          await page.goBack({waitUntil:'networkidle'});
+          await nav.locator('[data-nav-selected="true"]').getByText('组件',{exact:true}).waitFor();
+          assert.equal(await nav.locator('[aria-current="page"]').count(),1);
+
           const card=page.locator('main article').first();
           const rect=await card.boundingBox();
           assert.equal(rect?.width,304);assert.equal(rect?.height,299);
@@ -139,6 +160,12 @@ try{
           const link=page.getByRole('link',{name:'查看组件',exact:true});
           await link.waitFor({state:'visible'});
           assert.ok((await link.getAttribute('href')).startsWith(base+'/'));
+        }
+        if(route==='/zh-hans/templates/'){
+          assert.equal(await page.locator('main [data-catalog-slug]').count(),12);
+          const selected=page.locator('aside nav[aria-label="元件库"] [aria-current="page"]');
+          assert.equal(await selected.count(),1);
+          assert.equal((await selected.textContent()).trim(),'模板');
         }
         if(route==='/zh-hans/rtl/'){
           const lab=page.getByTestId('direction-lab');

@@ -1486,7 +1486,7 @@ function TabsDemo() {
           <TabPanel
             key={it.id}
             id={it.id}
-            className="rounded-2lg border border-border-primary p-4 text-body-regular text-text-secondary"
+            className="rounded-2lg border border-separator-border p-4 text-body-regular text-text-secondary"
           >
             {it.label}面板内容。底部指示线随选中项移动。
           </TabPanel>

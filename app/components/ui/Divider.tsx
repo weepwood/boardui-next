@@ -17,7 +17,7 @@ export function Divider({
       {...props}
       orientation={orientation}
       className={cn(
-        "shrink-0 bg-border-primary",
+        "shrink-0 bg-separator-border",
         orientation === "horizontal" ? "h-px w-full" : "h-full w-px",
         className
       )}

@@ -28,7 +28,7 @@ export const navigation: NavGroup[] = [
       { label: "颜色", href: "/zh-hans/components/color" },
       { label: "字体排版", href: "/zh-hans/components/typography" },
       { label: "组件", href: "/zh-hans/components" },
-      { label: "模板", href: "/zh-hans/components#templates" },
+      { label: "模板", href: "/zh-hans/templates" },
     ],
   },
   {

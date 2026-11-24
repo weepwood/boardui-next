@@ -24,7 +24,7 @@ export function MarketingTemplate() {
  const rows=CAMPAIGNS.filter(c=>filter==="全部"||c.status===filter);
   return (
     <div className="flex min-h-[680px] w-full flex-col overflow-hidden rounded-3xl border border-border-button-default bg-background-primary-default shadow-sidebar">
-      <header className="flex flex-wrap items-center justify-between gap-2 border-b border-border-primary px-4 py-3">
+      <header className="flex flex-wrap items-center justify-between gap-2 border-b border-separator-border px-4 py-3">
         <div className="flex flex-col gap-0.5">
           <h3 className="text-title-3-semibold text-text-primary">营销</h3>
           <span className="text-caption-2-regular text-text-tertiary">
@@ -128,7 +128,7 @@ export function MarketingTemplate() {
               </thead>
               <tbody>
                 {rows.map((c) => (
-                  <tr key={c.id} className="border-t border-border-primary">
+                  <tr key={c.id} className="border-t border-separator-border">
                     <td className="px-2 py-1.5 text-text-primary">{c.name}</td>
                     <td className="px-2 py-1.5 text-text-secondary">{c.channel}</td>
                     <td className="px-2 py-1.5 text-end tabular-nums text-text-primary">{c.budget}</td>

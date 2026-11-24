@@ -30,7 +30,7 @@ export function ComposerAttachments({
         <div
           key={a.id}
           className={cn(
-            "group flex items-center gap-1.5 rounded-lg border border-border-primary",
+            "group flex items-center gap-1.5 rounded-lg border border-separator-border",
             "bg-background-secondary-default py-1 pe-1 ps-1.5"
           )}
         >

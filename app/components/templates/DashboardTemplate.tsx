@@ -50,7 +50,7 @@ export function DashboardTemplate() {
       {/* 主内容 */}
       <div className="flex min-w-0 flex-1 flex-col">
         {/* 顶栏 */}
-        <header className="flex items-center justify-between gap-3 border-b border-border-primary px-4 py-3">
+        <header className="flex items-center justify-between gap-3 border-b border-separator-border px-4 py-3">
           <div className="flex flex-col">
             <h3 className="text-body-large-medium text-text-primary">{active}</h3>
             <span className="text-caption-2-regular text-text-tertiary">2026 年 11 月 · 演示数据</span>
@@ -143,7 +143,7 @@ export function DashboardTemplate() {
                 </thead>
                 <tbody>
                   {ORDERS.slice(0,count).map((o) => (
-                    <tr key={o.id} className="border-t border-border-primary">
+                    <tr key={o.id} className="border-t border-separator-border">
                       <td className="px-2 py-1.5 font-mono text-caption-1-medium text-text-primary">{o.id}</td>
                       <td className="px-2 py-1.5 text-text-primary">{o.customer}</td>
                       <td className="px-2 py-1.5 tabular-nums text-text-primary">{o.amount}</td>

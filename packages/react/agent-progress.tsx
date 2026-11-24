@@ -60,7 +60,7 @@ export function AgentProgress({
                   <span
                     className={cn(
                       "my-0.5 w-px flex-1",
-                      s.state === "done" ? "bg-status-lime-background" : "bg-border-primary"
+                      s.state === "done" ? "bg-status-lime-background" : "bg-separator-border"
                     )}
                   />
                 )}

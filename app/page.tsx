@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { DocsLayout } from "./components/docs/DocsLayout";
 import { Icon } from "./components/ui/Icon";
-import { Button } from "./components/ui/Button";
+import { buttonStyles } from "@/packages/styles/button";
 import { Badge } from "./components/ui/Badge";
 import { docMetas } from "@/lib/docs/meta";
 
@@ -48,14 +48,8 @@ export default function HomePage() {
           可复制粘贴的组件集合。基于 React Aria 构建，以原版视觉与交互动效为基准，持续校准每一个组件。
         </p>
         <div className="flex flex-wrap items-center gap-2 pt-1">
-          <Link href="/zh-hans/components">
-            <Button trailing={<Icon name="arrow-right-line" className="size-4" />}>
-              浏览组件
-            </Button>
-          </Link>
-          <Link href="/zh-hans/components/button">
-            <Button variant="secondary">查看按钮示例</Button>
-          </Link>
+          <Link prefetch={false} href="/zh-hans/components" className={buttonStyles.base+" "+buttonStyles.size.medium+" "+buttonStyles.variant.primary}><span className="px-1">浏览组件</span><Icon name="arrow-right-line" className="size-5"/></Link>
+          <Link prefetch={false} href="/zh-hans/components/button" className={buttonStyles.base+" "+buttonStyles.size.medium+" "+buttonStyles.variant.secondary}><span className="px-1">查看按钮示例</span></Link>
         </div>
       </header>
 
@@ -64,13 +58,13 @@ export default function HomePage() {
         {FEATURES.map((f) => (
           <div
             key={f.title}
-            className="flex flex-col gap-1.5 rounded-2lg border border-border-button-default bg-background-primary-default p-3"
+            className="flex flex-col gap-2 rounded-2xl border border-border-component-detail-container bg-background-primary-default p-4"
           >
             <span className="flex size-8 items-center justify-center rounded-lg bg-background-secondary-default text-foreground-icon-secondary">
               <Icon name={f.icon} className="size-4" />
             </span>
             <span className="text-body-medium text-text-primary">{f.title}</span>
-            <span className="text-caption-1-regular text-text-secondary">{f.desc}</span>
+            <span className="text-body-regular text-text-secondary">{f.desc}</span>
           </div>
         ))}
       </section>
@@ -86,21 +80,23 @@ export default function HomePage() {
             查看全部
           </Link>
         </div>
-        <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3">
           {docMetas.slice(0, 12).map((m) => (
             <Link
               key={m.slug}
               href={`/zh-hans/components/${m.slug}`}
-              className="group flex flex-col gap-0.5 rounded-xl border border-border-primary p-2.5 transition-colors duration-150 ease-out hover:bg-background-secondary-hover"
+              data-home-card
+              prefetch={false}
+              className="docs-entry-card group flex min-w-0 flex-col gap-1.5 rounded-2xl bg-background-primary-default p-4"
             >
               <span className="flex items-center justify-between gap-1">
-                <span className="truncate text-body-2-medium text-text-primary">{m.title}</span>
+                <span className="truncate text-headline-medium text-text-primary">{m.title}</span>
                 <Icon
                   name="arrow-right-s-line"
                   className="size-3.5 shrink-0 text-text-tertiary transition-transform duration-200 ease-bui group-hover:translate-x-0.5"
                 />
               </span>
-              <span className="line-clamp-2 text-[11px] leading-snug text-text-tertiary">
+              <span className="line-clamp-2 text-body-regular text-pretty text-text-secondary">
                 {m.description}
               </span>
             </Link>
@@ -110,7 +106,7 @@ export default function HomePage() {
 
       {/* 模板入口 */}
       <section className="flex flex-col gap-3">
-        <h2 className="text-title-3-semibold text-text-primary">模板</h2>
+        <div className="flex items-baseline justify-between"><h2 className="text-title-3-semibold text-text-primary">模板</h2><Link prefetch={false} href="/zh-hans/templates" className="text-caption-1-medium text-accent-600 hover:underline dark:text-accent-400">查看全部</Link></div>
         <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
           {[
             { href: "/zh-hans/templates/dashboard", title: "仪表盘", desc: "统计卡 · 面积图 · 热力图 · 数据表" },
@@ -119,7 +115,8 @@ export default function HomePage() {
             <Link
               key={t.href}
               href={t.href}
-              className="group flex flex-col gap-1 rounded-2lg border border-border-button-default bg-background-primary-default p-3 transition-[background-color,border-color] duration-150 ease-out hover:border-border-button-hover hover:bg-background-secondary-hover"
+              prefetch={false}
+              className="docs-entry-card group flex flex-col gap-1.5 rounded-2xl bg-background-primary-default p-4"
             >
               <span className="flex items-center justify-between">
                 <span className="text-body-medium text-text-primary">{t.title}</span>
@@ -128,7 +125,7 @@ export default function HomePage() {
                   className="size-4 text-text-tertiary transition-transform duration-200 ease-bui group-hover:translate-x-0.5"
                 />
               </span>
-              <span className="text-caption-1-regular text-text-tertiary">{t.desc}</span>
+              <span className="text-body-regular text-text-secondary">{t.desc}</span>
             </Link>
           ))}
         </div>

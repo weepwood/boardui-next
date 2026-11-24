@@ -106,13 +106,13 @@ export default function AdvancedPage() {
               <Tab id="b">设置</Tab>
               <Tab id="c">成员</Tab>
             </TabList>
-            <TabPanel id="a" className="rounded-xl border border-border-primary p-4 text-body-regular text-text-secondary">
+            <TabPanel id="a" className="rounded-xl border border-separator-border p-4 text-body-regular text-text-secondary">
               概览面板内容。切换标签时淡入。
             </TabPanel>
-            <TabPanel id="b" className="rounded-xl border border-border-primary p-4 text-body-regular text-text-secondary">
+            <TabPanel id="b" className="rounded-xl border border-separator-border p-4 text-body-regular text-text-secondary">
               设置面板内容。
             </TabPanel>
-            <TabPanel id="c" className="rounded-xl border border-border-primary p-4 text-body-regular text-text-secondary">
+            <TabPanel id="c" className="rounded-xl border border-separator-border p-4 text-body-regular text-text-secondary">
               成员面板内容。
             </TabPanel>
           </Tabs>

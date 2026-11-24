@@ -77,7 +77,7 @@ export function MultiAgentChatTemplate() {
   return (
     <div className="flex min-h-[640px] w-full flex-col overflow-hidden rounded-3xl border border-border-button-default bg-background-primary-default shadow-sidebar lg:flex-row">
       {/* 智能体列表 */}
-      <aside className="flex w-full shrink-0 flex-col gap-2 border-b border-border-primary p-3 lg:w-[220px] lg:border-b-0 lg:border-e">
+      <aside className="flex w-full shrink-0 flex-col gap-2 border-b border-separator-border p-3 lg:w-[220px] lg:border-b-0 lg:border-e">
         <div className="flex items-center justify-between px-1">
           <span className="text-body-2-medium text-text-primary">智能体 · 示例</span>
           <Badge variant="accent">{AGENTS.filter((a) => a.status !== "idle").length} 活跃</Badge>
@@ -95,7 +95,7 @@ export function MultiAgentChatTemplate() {
                 "transition-[border-color,background-color] duration-150 ease-out",
                 selected === a.id
                   ? "border-accent-400 bg-badge-new-background"
-                  : "border-border-primary hover:bg-background-secondary-hover"
+                  : "border-separator-border hover:bg-background-secondary-hover"
               )}
             >
               <Avatar name={a.name} size="sm" />
@@ -114,7 +114,7 @@ export function MultiAgentChatTemplate() {
 
       {/* 任务流 */}
       <div className="flex min-w-0 flex-1 flex-col">
-        <header className="flex items-center justify-between gap-2 border-b border-border-primary px-4 py-2.5">
+        <header className="flex items-center justify-between gap-2 border-b border-separator-border px-4 py-2.5">
           <div className="flex items-center gap-2">
             <Avatar name={current.name} size="md" />
             <div className="flex flex-col">
@@ -159,7 +159,7 @@ export function MultiAgentChatTemplate() {
                 key={i}
                 className={cn(
                   "flex flex-col gap-1 rounded-xl border p-2",
-                  m.done ? "border-border-primary" : "border-accent-300 bg-badge-new-background"
+                  m.done ? "border-separator-border" : "border-accent-300 bg-badge-new-background"
                 )}
               >
                 <div className="flex items-center gap-1.5 text-[10px] text-text-tertiary">
@@ -173,7 +173,7 @@ export function MultiAgentChatTemplate() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-2 border-t border-border-primary p-3">
+        <div className="flex flex-col gap-2 border-t border-separator-border p-3">
           {commands.map((c,i)=><p key={i} className="break-words text-body-2-regular text-text-secondary">本地记录：{c}</p>)}
           <Composer tools={false} onSend={c=>setCommands(prev=>[...prev,c])} placeholder="记录示例指令…"/>
           <p className="text-caption-1-regular text-text-tertiary">静态协作记录，未连接智能体服务。</p>

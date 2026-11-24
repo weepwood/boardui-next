@@ -31,7 +31,7 @@ export function ComposerPanel({
         className
       )}
     >
-      <div className="flex items-center gap-0.5 border-b border-border-primary p-1.5">
+      <div className="flex items-center gap-0.5 border-b border-separator-border p-1.5">
         {tabs.map((t) => {
           const on = t.id === active;
           return (

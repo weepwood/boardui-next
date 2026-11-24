@@ -83,7 +83,7 @@ export function ColorPicker({
               "hover:scale-105 motion-reduce:transition-none outline-none focus-visible:ring-2 focus-visible:ring-border-focus-ring",
               color.toLowerCase() === c
                 ? "border-accent-500 ring-2 ring-accent-500/30"
-                : "border-border-primary"
+                : "border-separator-border"
             )}
             style={{ backgroundColor: c }}
           >

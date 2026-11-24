@@ -62,7 +62,7 @@ export function CalendarCard() {
     <div className="flex min-h-[620px] w-full flex-col overflow-hidden rounded-3xl border border-border-button-default bg-background-primary-default shadow-card lg:flex-row">
       {/* 日历主体 */}
       <div className="flex min-w-0 flex-1 flex-col">
-        <header className="flex flex-wrap items-center justify-between gap-2 border-b border-border-primary px-4 py-3">
+        <header className="flex flex-wrap items-center justify-between gap-2 border-b border-separator-border px-4 py-3">
           <div className="flex items-center gap-2">
             <h3 className="text-title-3-semibold text-text-primary">{month}</h3>
             <span className="text-caption-1-regular text-text-tertiary">9 个日程</span>
@@ -92,7 +92,7 @@ export function CalendarCard() {
         </header>
 
         {/* 星期表头 */}
-        <div className="grid grid-cols-7 border-b border-border-primary">
+        <div className="grid grid-cols-7 border-b border-separator-border">
           {WEEKDAYS.map((w) => (
             <div
               key={w}
@@ -110,7 +110,7 @@ export function CalendarCard() {
               return (
                 <div
                   key={`e${i}`}
-                  className="min-h-[84px] border-b border-e border-border-primary bg-background-secondary-default/40"
+                  className="min-h-[84px] border-b border-e border-separator-border bg-background-secondary-default/40"
                 />
               );
             }
@@ -123,7 +123,7 @@ export function CalendarCard() {
                 type="button"
                 onClick={() => setSelected(day)}
                 className={cn(
-                  "flex min-h-[84px] cursor-pointer flex-col gap-1 border-b border-e border-border-primary p-1.5 text-start",
+                  "flex min-h-[84px] cursor-pointer flex-col gap-1 border-b border-e border-separator-border p-1.5 text-start",
                   "transition-colors duration-150 ease-out",
                   isSel ? "bg-badge-new-background" : "hover:bg-background-secondary-hover"
                 )}
@@ -164,7 +164,7 @@ export function CalendarCard() {
       </div>
 
       {/* 侧栏日程 */}
-      <aside className="flex w-full shrink-0 flex-col gap-3 border-t border-border-primary p-4 lg:w-[240px] lg:border-s lg:border-t-0">
+      <aside className="flex w-full shrink-0 flex-col gap-3 border-t border-separator-border p-4 lg:w-[240px] lg:border-s lg:border-t-0">
         <div className="flex flex-col gap-0.5">
           <span className="text-body-2-medium text-text-primary">8月{selected}日</span>
           <span className="text-caption-2-regular text-text-tertiary">
@@ -201,7 +201,7 @@ export function CalendarCard() {
           ))
         )}
 
-        <div className="mt-auto flex flex-col gap-1.5 border-t border-border-primary pt-3">
+        <div className="mt-auto flex flex-col gap-1.5 border-t border-separator-border pt-3">
           <span className="text-caption-2-semibold text-text-tertiary">成员</span>
           <div className="flex -space-x-1.5">
             {["张三", "李四", "王五", "赵六"].map((n) => (

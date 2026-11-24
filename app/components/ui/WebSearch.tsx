@@ -75,7 +75,7 @@ export function WebSearch({
         style={{ gridTemplateRows: open ? "1fr" : "0fr", opacity: open ? 1 : 0 }}
       >
         <div className="overflow-hidden">
-          <div className="flex flex-col gap-1.5 border-t border-border-primary p-2.5">
+          <div className="flex flex-col gap-1.5 border-t border-separator-border p-2.5">
             {sources.map((s, i) => (
               <a
                 key={s.id}

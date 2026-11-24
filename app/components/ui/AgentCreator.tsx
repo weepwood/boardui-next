@@ -95,7 +95,7 @@ export function AgentCreator({
         流式输出
       </Switch>
 
-      <div className="flex items-center justify-between gap-2 border-t border-border-primary pt-3">
+      <div className="flex items-center justify-between gap-2 border-t border-separator-border pt-3">
         <span className="text-[10px] text-text-tertiary">
           已选 {caps.length} 项能力 · 模型 {MODELS.find((m) => m.id === model)?.label}
         </span>

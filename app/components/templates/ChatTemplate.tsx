@@ -55,7 +55,7 @@ export function ChatTemplate() {
   return (
     <div className="flex h-[620px] w-full overflow-hidden rounded-3xl border border-border-button-default bg-background-primary-default shadow-sidebar">
       {/* 会话列表 */}
-      <aside className="hidden w-[180px] shrink-0 flex-col gap-2 border-e border-border-primary bg-background-secondary-default p-2 md:flex">
+      <aside className="hidden w-[180px] shrink-0 flex-col gap-2 border-e border-separator-border bg-background-secondary-default p-2 md:flex">
         <Button onPress={()=>{setSaved(prev=>({...prev,[active]:messages}));setActive("new");setMessages([])}} size="sm" leading={<Icon name="add-line" className="size-3.5" />}>
           新建对话
         </Button>
@@ -80,7 +80,7 @@ export function ChatTemplate() {
 
       {/* 对话区 */}
       <div className="flex min-w-0 flex-1 flex-col">
-        <header className="flex shrink-0 items-center gap-2 border-b border-border-primary px-4 py-2.5">
+        <header className="flex shrink-0 items-center gap-2 border-b border-separator-border px-4 py-2.5">
           <span className="flex size-6 items-center justify-center rounded-lg bg-[linear-gradient(135deg,#a855f7,#6366f1)] text-[11px] font-bold text-white">
             AI
           </span>
@@ -112,7 +112,7 @@ export function ChatTemplate() {
           ))}
         </div>
 
-        <div className="shrink-0 border-t border-border-primary p-3">
+        <div className="shrink-0 border-t border-separator-border p-3">
           <Composer value={input} onChange={setInput} onSend={send} tools={false}/>
         </div>
       </div>

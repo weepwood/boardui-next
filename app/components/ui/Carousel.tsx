@@ -77,7 +77,7 @@ export function Carousel({
             onClick={() => setIndex(i)}
             className={cn(
               "h-1.5 cursor-pointer rounded-full transition-[width,background-color] duration-200 ease-bui",
-              i === index ? "w-4 bg-accent-500" : "w-1.5 bg-border-primary hover:bg-text-tertiary"
+              i === index ? "w-4 bg-accent-500" : "w-1.5 bg-separator-border hover:bg-text-tertiary"
             )}
           />
         ))}

@@ -51,7 +51,7 @@ export default function TypographyPage() {
         {SCALE.map((s) => (
           <div
             key={s.token}
-            className="flex flex-col gap-1.5 border-b border-border-primary pb-4 last:border-0"
+            className="flex flex-col gap-1.5 border-b border-separator-border pb-4 last:border-0"
           >
             <div className="flex items-baseline gap-3">
               <span className="font-mono text-caption-1-medium text-text-tertiary">

@@ -32,13 +32,13 @@ function ProBadge() {
  * 树状导引线：原站结构
  * 竖线 + 右下弯角（SVG 路径 M0.5 0 Q0.5 5 5.5 5 H11.5）
  */
-function TreeGuide({ active }: { active: boolean }) {
+function TreeGuide({ active,last }: { active: boolean;last:boolean }) {
   return (
     <span
       aria-hidden="true"
       className="pointer-events-none absolute inset-y-0 start-[12.5px] w-3 text-foreground-icon-secondary"
     >
-      <span className="absolute top-0 start-0 -bottom-0.5 w-px bg-current opacity-40" />
+      <span className={cn("absolute top-0 start-0 w-px bg-current opacity-40",last?"bottom-1/2":"-bottom-0.5")} />
       <svg
         width="12"
         height="6"
@@ -57,23 +57,22 @@ function TreeGuide({ active }: { active: boolean }) {
   );
 }
 
-function NavLink({ item }: { item: NavItem }) {
-  const pathname = usePathname();
-  const active = pathname.replace(/\/$/, "") === item.href.split("#")[0].replace(/\/$/, "");
+function NavLink({ item,active,last }: { item: NavItem;active:boolean;last:boolean }) {
 
   return (
     <Link
       href={item.href} prefetch={false}
       aria-current={active ? "page" : undefined}
+      data-nav-selected={active?"true":undefined}
       className={cn(
-        "relative flex items-center gap-2 rounded-md py-1.5 pe-2.5 ps-8",
-        "text-body-medium transition-colors duration-150 ease-out",
+        "relative flex min-h-8 items-center gap-2 rounded-lg py-1.5 pe-2.5 ps-8 outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-border-focus-ring",
+        "text-body-regular transition-colors duration-150 ease-out motion-reduce:transition-none",
         active
-          ? "bg-background-secondary-hover font-medium text-text-primary"
-          : "text-text-secondary hover:bg-background-secondary-hover hover:text-text-primary"
+          ? "bg-background-secondary-hover text-body-medium text-text-primary"
+          : "text-text-secondary hover:bg-background-primary-hover hover:text-text-primary"
       )}
     >
-      <TreeGuide active={active} />
+      <TreeGuide active={active} last={last}/>
       <span className="truncate">{item.label}</span>
       {(item.isNew || item.isPro) && (
         <span className="ms-auto flex shrink-0 items-center gap-1">
@@ -90,13 +89,16 @@ function NavGroupSection({
   title,
   items,
   defaultOpen = true,
+  activeHref,
 }: {
   title: string;
   items: NavItem[];
   defaultOpen?: boolean;
+  activeHref?:string;
 }) {
   const [open, setOpen] = useState(defaultOpen);
   const id=useId();
+  useEffect(()=>{if(items.some(i=>i.href===activeHref))setOpen(true)},[activeHref,items]);
 
   return (
     <div className="flex flex-col gap-0.5">
@@ -130,8 +132,8 @@ function NavGroupSection({
       >
         <div className="min-h-0 overflow-hidden">
           <div className="relative flex flex-col gap-0.5">
-            {items.map((item) => (
-              <NavLink key={item.href} item={item} />
+            {items.map((item,index) => (
+              <NavLink key={item.href} item={item} active={activeHref===item.href} last={index===items.length-1}/>
             ))}
           </div>
         </div>
@@ -145,6 +147,8 @@ export function Sidebar() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [mobileOpen,setMobileOpen]=useState(false);
   const pathname=usePathname();
+  const normalized=(pathname??"").replace(/\/$/,"");
+  const activeHref=navigation.flatMap(g=>g.items).find(i=>i.href.replace(/\/$/,"")===normalized)?.href;
   useEffect(()=>setMobileOpen(false),[pathname]);
 
   // ⌘K / Ctrl+K 唤起搜索
@@ -200,7 +204,7 @@ export function Sidebar() {
       <nav
         aria-label="元件库"
         className={cn(
-          "-mr-1 flex min-h-0 flex-1 flex-col gap-2 overflow-y-auto pe-1",
+          "-me-1 flex min-h-0 flex-1 flex-col gap-2 overflow-y-auto pe-1",
           "[scrollbar-width:thin]"
         )}
       >
@@ -208,7 +212,7 @@ export function Sidebar() {
           显示 <span className="contents">{total}</span> 项
         </p>
         {navigation.map((group) => (
-          <NavGroupSection key={group.title} title={group.title} items={group.items} />
+          <NavGroupSection key={group.title} title={group.title} items={group.items} activeHref={activeHref}/>
         ))}
       </nav>
   </>;

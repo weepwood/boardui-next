@@ -21,3 +21,9 @@
 - 接手步骤：读 docs/productization.md、docs/visual-parity.md、reference/upstream-manifest.json 和证据清单；先审查当前 PR、完整验收报告，修复真实失败后再合并；按需运行 npm test、npm run typecheck、npm run test:api、npm run test:library。风险改动执行 npm run build:pages、npm run test:export 和定向 browser-check。
 - RTL 实验室 /zh-hans/rtl/，验证真实 DirectionProvider locale 切换、方向键、选中指示器、图标、浮层、数值及状态。后续补日期、树、表格、多尺寸、移动端及独立包的剩余方向检查。
 - 下一阶段：检查第二轮完整验收结果并修复跨浏览器失败；以真实可复验的视觉、交互、无障碍、API、RTL 证据逐批推进，优先公开基础组件。Pro 不复制；正式发布不得跳过证据门禁。默认每次会话更新此交接段落，避免堆叠对话日志。
+
+## 最新视觉修复交接
+
+- 用户明确要求优先解决肉眼可见的视觉缺陷，而不是继续扩充验收文档。对照固定上游公开主题与 ShowcaseCard 样式，维护语义令牌，不允许未经定义的颜色类；不得用全局边框覆盖掩盖具体令牌错误。
+- #19 已合并；当前 fix/docs-visual-foundation 修复首页、全局旧 border-primary、树状侧栏重复激活和独立模板路由。证据见 reference/evidence/docs-shell-regression-20261124.json。
+- 下一轮优先实际查看浅色/深色、桌面/移动的页面截图，审计细边界、文本层级、圆角、hover 与 focus；确保新 PR CI 通过后合并。旧完整验收仍失败，不能视为正式发布通过。

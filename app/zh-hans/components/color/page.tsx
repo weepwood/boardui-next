@@ -81,10 +81,10 @@ export default function ColorPage() {
           {SEMANTIC.map((s) => (
             <div
               key={s.token}
-              className="flex items-center gap-2 rounded-lg border border-border-primary p-2"
+              className="flex items-center gap-2 rounded-lg border border-separator-border p-2"
             >
               <span
-                className="size-8 shrink-0 rounded-md border border-border-primary"
+                className="size-8 shrink-0 rounded-md border border-separator-border"
                 style={{ backgroundColor: `var(--color-${s.token})` }}
               />
               <div className="flex min-w-0 flex-col">
@@ -103,7 +103,7 @@ export default function ColorPage() {
         <div className="overflow-hidden rounded-2lg border border-border-button-default bg-background-primary-default">
           <pre className="overflow-x-auto p-3 font-mono text-body-2-regular text-text-primary">
             <code>{`/* Tailwind 工具类，自动生成 bg-* / text-* / border-* */
-<div className="bg-background-primary-default text-text-primary border-border-primary" />
+<div className="bg-background-primary-default text-text-primary border-separator-border" />
 
 /* 或直接引用变量（图表、内联样式） */
 style={{ stroke: "var(--color-accent-500)" }}`}</code>

@@ -51,7 +51,7 @@ export function AiImageTemplate() {
   return (
     <div className="flex min-h-[640px] w-full flex-col overflow-hidden rounded-3xl border border-border-button-default bg-background-primary-default shadow-sidebar lg:flex-row">
       {/* 控制面板 */}
-      <aside className="flex w-full shrink-0 flex-col gap-3 border-b border-border-primary p-4 lg:w-[280px] lg:border-b-0 lg:border-e">
+      <aside className="flex w-full shrink-0 flex-col gap-3 border-b border-separator-border p-4 lg:w-[280px] lg:border-b-0 lg:border-e">
         <div className="flex items-center gap-2">
           <span className="flex size-7 items-center justify-center rounded-lg bg-[linear-gradient(135deg,#a855f7,#6366f1)] text-white">
             <Icon name="magic-line" className="size-4" />
@@ -94,7 +94,7 @@ export function AiImageTemplate() {
 
       {/* 结果区 */}
       <div className="flex min-w-0 flex-1 flex-col">
-        <header className="flex items-center justify-between gap-2 border-b border-border-primary px-4 py-2.5">
+        <header className="flex items-center justify-between gap-2 border-b border-separator-border px-4 py-2.5">
           <span className="text-body-2-medium text-text-primary">渐变样例 · {preview.ratio}</span>
           <div className="flex items-center gap-1">
             <Button size="sm" variant="ghost" onPress={()=>save(RESULTS[0])} leading={<Icon name="download-line" className="size-3.5" />}>
@@ -109,7 +109,7 @@ export function AiImageTemplate() {
                 <div
                   key={r.id}
                   className={cn(
-                    "group relative min-w-0 overflow-hidden rounded-xl border border-border-primary",
+                    "group relative min-w-0 overflow-hidden rounded-xl border border-separator-border",
                     "transition-[border-color,box-shadow] duration-150 ease-out",
                     "hover:border-border-button-hover hover:shadow-md"
                   )}

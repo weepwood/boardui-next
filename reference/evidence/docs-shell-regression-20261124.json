@@ -1,0 +1,79 @@
+{
+  "upstreamCommit": "ec5c5eb3e29c2441be63b9422cd54f411ef23466",
+  "baseline": "376154a35d32dedf0c10fb7a314f9fd0ffd8ca91",
+  "scope": "Local Edge 1440x1000, before/after computed CSS and exact sidebar active labels. Not complete visual parity.",
+  "before": [
+    {
+      "theme": "light",
+      "route": "home",
+      "border": "oklch(0.145 0 none)",
+      "width": "1px",
+      "text": "oklch(0.145 0 none)",
+      "token": "#ebebeb",
+      "oldToken": "",
+      "description": "按钮\n与 BoardUI 设计系统相匹配的按钮——三种尺寸的主要、次要、幽灵和危险变体。"
+    },
+    {
+      "theme": "light",
+      "route": "catalog",
+      "selected": [
+        "组件",
+        "模板"
+      ]
+    },
+    {
+      "theme": "dark",
+      "route": "home",
+      "border": "oklch(0.985 0 none)",
+      "width": "1px",
+      "text": "oklch(0.985 0 none)",
+      "token": "oklch(37.1% 0 none)",
+      "oldToken": "",
+      "description": "按钮\n与 BoardUI 设计系统相匹配的按钮——三种尺寸的主要、次要、幽灵和危险变体。"
+    },
+    {
+      "theme": "dark",
+      "route": "catalog",
+      "selected": [
+        "组件",
+        "模板"
+      ]
+    }
+  ],
+  "after": [
+    {
+      "theme": "light",
+      "route": "home",
+      "border": "rgb(235, 235, 235)",
+      "width": "1px",
+      "text": "oklch(0.145 0 none)",
+      "token": "#ebebeb",
+      "oldToken": "",
+      "description": "按钮\n与 BoardUI 设计系统相匹配的按钮——三种尺寸的主要、次要、幽灵和危险变体。"
+    },
+    {
+      "theme": "light",
+      "route": "catalog",
+      "selected": [
+        "组件"
+      ]
+    },
+    {
+      "theme": "dark",
+      "route": "home",
+      "border": "oklch(0.371 0 none)",
+      "width": "1px",
+      "text": "oklch(0.985 0 none)",
+      "token": "oklch(37.1% 0 none)",
+      "oldToken": "",
+      "description": "按钮\n与 BoardUI 设计系统相匹配的按钮——三种尺寸的主要、次要、幽灵和危险变体。"
+    },
+    {
+      "theme": "dark",
+      "route": "catalog",
+      "selected": [
+        "组件"
+      ]
+    }
+  ]
+}

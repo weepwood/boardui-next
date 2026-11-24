@@ -49,7 +49,7 @@ export function SettingsModal({
           "animate-[modal-in_220ms_cubic-bezier(0.22,1,0.36,1)]"
         )}
       >
-        <aside className="flex w-[150px] shrink-0 flex-col gap-0.5 border-e border-border-primary bg-background-secondary-default p-2">
+        <aside className="flex w-[150px] shrink-0 flex-col gap-0.5 border-e border-separator-border bg-background-secondary-default p-2">
           <div className="px-2 py-1.5 text-body-2-medium text-text-primary">设置</div>
           {NAV.map((n) => (
             <button
@@ -71,7 +71,7 @@ export function SettingsModal({
         </aside>
 
         <div className="flex min-w-0 flex-1 flex-col">
-          <div className="flex items-center justify-between border-b border-border-primary px-4 py-2.5">
+          <div className="flex items-center justify-between border-b border-separator-border px-4 py-2.5">
             <span className="text-body-2-medium text-text-primary">
               {NAV.find((n) => n.id === tab)?.label}
             </span>

@@ -62,7 +62,7 @@ export function AgentLimitsCard({
       </div>
 
       {resetText && (
-        <div className="flex items-center gap-1 border-t border-border-primary pt-2 text-[10px] text-text-tertiary">
+        <div className="flex items-center gap-1 border-t border-separator-border pt-2 text-[10px] text-text-tertiary">
           <Icon name="refresh-line" className="size-3" />
           {resetText}
         </div>

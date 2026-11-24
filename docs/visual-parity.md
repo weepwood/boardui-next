@@ -53,3 +53,11 @@ DatePicker、Slider、InputOtp 直接移植公开 MIT 实现；DateCalendar 复�
 ### 第八批：产品化第一轮
 
 已增加实际预览包构建与消费端测试，修复安装说明与六个重点模板的交互，统一共享状态控件。详见 docs/productization.md。仍须完成其他模板和逐组件正式验收。
+
+## 文档外壳视觉回归修复
+
+用户反馈首页黑色描边、组件/模板双激活。重新对照固定上游公开源码 styles/theme.css、components/application/docs/showcase-card.tsx、components/application/dashboard/dashboard-sidebar.tsx。上游仓库根页面是 AgentChat starter，并非官网文档首页；站内首页保持原有导航功能，以公开 ShowcaseCard 的语义令牌和单一边界设计为参考，不声称直接复制完整官网外壳。
+
+实测旧 border-border-primary 未定义，边框使用 currentColor（浅色近黑、深色近白）；迁移所有 border/bg/divide 的旧 border-primary 引用至真实 separator-border 或卡片对应的 border-button-default；修复 text-quaternary 旧引用。首页紧凑入口统一圆角、边界、字号、间距、焦点及悬停，主操作使用 Next Link 按钮样式，不再嵌套按钮。侧栏用唯一标准路径选中，组件与模板分独立页面；保留旧 #templates 锚点；末端树线在最后一项停止，悬停与选中分离。
+
+实测结果 reference/evidence/docs-shell-regression-20261124.json：浅色边框 rgb(235,235,235)，深色 oklch(0.371 0 none)，两种主题均仅选中组件一个菜单。新增静态语义令牌检查、唯一导航路由及首页实际边框/组件模板跳转回归测试。静态检查仅覆盖可识别的语义类名，不能替代人工视觉复核。14 个本地专项组合、116 HTML 导出通过。

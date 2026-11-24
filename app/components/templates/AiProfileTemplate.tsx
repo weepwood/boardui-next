@@ -140,7 +140,7 @@ export function AiProfileTemplate() {
               <div
                 key={a.id}
                 className={cn(
-                  "group flex cursor-pointer flex-col gap-1.5 overflow-hidden rounded-xl border border-border-primary",
+                  "group flex cursor-pointer flex-col gap-1.5 overflow-hidden rounded-xl border border-separator-border",
                   "transition-[border-color,box-shadow] duration-150 ease-out hover:border-border-button-hover hover:shadow-sm"
                 )}
               >
