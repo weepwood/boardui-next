@@ -12,6 +12,7 @@ export type Column = {
   align?: "start" | "end";
   sortable?: boolean;
   width?: string;
+  sortValue?: (row:DataRow)=>string|number;
 };
 
 export type DataRow = {
@@ -29,26 +30,33 @@ export function DataGrid({
   rows,
   selectable = true,
   className,
+  density="compact", selectedIds, onSelectionChange,
 }: {
   columns: Column[];
   rows: DataRow[];
   selectable?: boolean;
   className?: string;
+  density?:"compact"|"comfortable";
+  selectedIds?:string[];
+  onSelectionChange?:(ids:string[])=>void;
 }) {
   const [sort, setSort] = useState<{ col: string; dir: "asc" | "desc" } | null>(null);
-  const [selected, setSelected] = useState<string[]>([]);
+  const [inner, setInner] = useState<string[]>([]);
+  const rowIds=new Set(rows.map(r=>r.id));
+  const selected=(selectedIds??inner).filter(id=>rowIds.has(id));
+  const setSelected=(next:string[]|((prev:string[])=>string[]))=>{const ids=typeof next==="function"?next(selected):next;const unique=[...new Set(ids)];if(selectedIds===undefined)setInner(unique);onSelectionChange?.(unique)};
 
   const sorted = useMemo(() => {
     if (!sort) return rows;
     const copy = [...rows];
     copy.sort((a, b) => {
-      const av = String(a.cells[sort.col] ?? "");
-      const bv = String(b.cells[sort.col] ?? "");
-      const r = av.localeCompare(bv, "zh");
+      const accessor=columns.find(c=>c.id===sort.col)?.sortValue;
+      const av=accessor?accessor(a):a.cells[sort.col]; const bv=accessor?accessor(b):b.cells[sort.col];
+      const r=typeof av==="number"&&typeof bv==="number"?av-bv:String(typeof av==="object"?"":av??"").localeCompare(String(typeof bv==="object"?"":bv??""),"zh",{numeric:true});
       return sort.dir === "asc" ? r : -r;
     });
     return copy;
-  }, [rows, sort]);
+  }, [rows, sort, columns]);
 
   const allChecked = selected.length === rows.length && rows.length > 0;
 
@@ -61,11 +69,11 @@ export function DataGrid({
       )}
     >
       <div className="overflow-x-auto">
-        <table className="w-full text-body-2-regular">
+        <table aria-label="数据表格" className={cn("bui-table",density==="compact"&&"bui-table-sm")}>
           <thead>
             <tr className="bg-background-secondary-default">
               {selectable && (
-                <th className="w-9 px-2 py-1.5">
+                <th scope="col" className="w-9 px-2 py-1.5">
                   <Checkbox
                     isSelected={allChecked}
                     isIndeterminate={selected.length > 0 && !allChecked}
@@ -78,6 +86,7 @@ export function DataGrid({
                 <th
                   key={c.id}
                   style={c.width ? { width: c.width } : undefined}
+                  scope="col" aria-sort={c.sortable?(sort?.col===c.id?(sort.dir==="asc"?"ascending":"descending"):"none"):undefined}
                   className={cn(
                     "px-2 py-1.5 text-caption-1-semibold font-medium text-text-secondary",
                     c.align === "end" ? "text-end" : "text-start"
@@ -136,7 +145,7 @@ export function DataGrid({
                     key={r.id}
                     className={cn(
                       "border-t border-border-primary transition-colors duration-150",
-                      on ? "bg-badge-new-background" : "hover:bg-background-secondary-hover"
+                      on ? "bg-background-secondary-hover" : "hover:bg-background-secondary-hover"
                     )}
                   >
                     {selectable && (
@@ -187,7 +196,7 @@ export function DataGrid({
           <button
             type="button"
             onClick={() => setSelected([])}
-            className="ms-auto cursor-pointer text-[10px] text-text-tertiary hover:text-text-primary"
+            className="ms-auto cursor-pointer text-caption-1-medium text-text-tertiary hover:text-text-primary"
           >
             清除选择
           </button>

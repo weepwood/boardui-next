@@ -5,6 +5,7 @@ import {
   type ProgressBarProps,
 } from "react-aria-components";
 import { cn } from "@/lib/utils";
+import { progressTrack,progressFill,progressTones } from "@/packages/react/progress-styles";
 
 /** 进度条：复刻原站，蓝色渐变填充 + 圆角轨道 */
 export function Progress({
@@ -23,7 +24,7 @@ export function Progress({
       {({ percentage, isIndeterminate }) => (
         <div
           className={cn(
-            "relative w-full overflow-hidden rounded-full bg-background-tertiary-default",
+            progressTrack,
             size === "sm" ? "h-1.5" : "h-2"
           )}
         >
@@ -33,15 +34,13 @@ export function Progress({
               className={cn(
                 "absolute inset-y-0 w-1/3 rounded-full",
                 "bg-[linear-gradient(90deg,transparent,var(--color-accent-400),var(--color-accent-600),transparent)]",
-                "animate-[bui-progress-sweep_1.6s_ease-in-out_infinite]"
+                "animate-[bui-progress-sweep_1.6s_ease-in-out_infinite] motion-reduce:animate-none motion-reduce:start-1/3"
               )}
             />
           ) : (
             <div
               className={cn(
-                "h-full rounded-full",
-                "bg-[linear-gradient(90deg,var(--color-accent-400)_0%,var(--color-accent-600)_100%)]",
-                "transition-[width] duration-300 ease-bui"
+                progressFill,progressTones.accent
               )}
               style={{ width: `${percentage ?? 0}%` }}
             />

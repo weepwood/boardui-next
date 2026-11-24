@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import { progressTrack,progressFill,progressTones } from "@/packages/react/progress-styles";
 
 /**
  * 度量条：分段色带，用于容量/健康度展示。
@@ -19,13 +20,10 @@ export function Meter({
   className?: string;
   tone?: "accent" | "success" | "warning" | "danger";
 }) {
-  const pct = Math.min(100, Math.max(0, (value / max) * 100));
-  const fill = {
-    accent: "bg-[linear-gradient(90deg,var(--color-accent-400),var(--color-accent-600))]",
-    success: "bg-[linear-gradient(90deg,var(--color-lime-400),var(--color-lime-600))]",
-    warning: "bg-[linear-gradient(90deg,var(--color-amber-400),var(--color-amber-600))]",
-    danger: "bg-[linear-gradient(90deg,var(--color-red-400),var(--color-red-600))]",
-  }[tone];
+  const safeMax=Number.isFinite(max)&&max>0?max:100;
+  const safeValue=Number.isFinite(value)?Math.min(safeMax,Math.max(0,value)):0;
+  const pct=safeValue/safeMax*100;
+  const fill=progressTones[tone];
 
   return (
     <div className={cn("flex w-full flex-col gap-1.5", className)}>
@@ -33,13 +31,13 @@ export function Meter({
         <div className="flex items-baseline justify-between">
           <span className="text-body-2-medium text-text-primary">{label}</span>
           <span className="text-caption-1-medium tabular-nums text-text-secondary">
-            {value} / {max}
+            {safeValue} / {safeMax}
           </span>
         </div>
       )}
-      <div className="h-2 w-full overflow-hidden rounded-full bg-background-tertiary-default">
+      <div role="meter" aria-label={label??"度量"} aria-valuemin={0} aria-valuemax={safeMax} aria-valuenow={safeValue} className={cn(progressTrack,"h-2")}>
         <div
-          className={cn("h-full rounded-full transition-[width] duration-500 ease-bui", fill)}
+          className={cn(progressFill, fill)}
           style={{ width: `${pct}%` }}
         />
       </div>

@@ -52,3 +52,12 @@ export { Slider, RangeSlider } from "./slider";
 export type { SliderProps, RangeSliderProps } from "./slider";
 export { InputOtp } from "./input-otp";
 export type { InputOtpProps } from "./input-otp";
+
+export { Avatar } from "./avatar";
+export type { AvatarProps } from "./avatar";
+export { Badge } from "./badge";
+export { Chip } from "./chip";
+export { StatusDot } from "./status-dot";
+export { Pagination } from "./pagination";
+export { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell } from "./table";
+export { TreeView, TreeViewItem } from "./tree-view";

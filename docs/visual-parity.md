@@ -41,3 +41,7 @@ DatePicker、Slider、InputOtp 直接移植公开 MIT 实现；DateCalendar 复�
 ### 集中验收与积压清理
 
 将 #9–#12 的依赖链汇总到同一份 main 候选变更，使用单次构建覆盖四个批次，不再等待每个中间分支重复构建。Textarea 自动测量时禁止 height 过渡，避免 reduced-motion 全局规则影响 scrollHeight；Dropdown 交给 React Aria 管理开关、外部关闭和焦点恢复，保留上游视觉配方；NumberField 的键盘测试按实际本地化文本框语义定位。保留原有专项断言及正式发布完整验收。旧 PR 在汇总变更合并前保留，不提前关闭。
+
+### 第六批：数据展示与文件选择
+
+移植 Avatar、Badge、Chip、StatusDot、Pagination、Table、TreeView 的固定上游 MIT 源及表格 CSS；DataGrid 与 DataTable 共用实现，支持数字自然排序、可控选择、行号清理。Progress/Meter 共享轨道与填充，Meter 提供语义值。FileUpload 保留多文件选择接口，接入原版配色，验证扩展名/MIME 与大小、重复项及移除回调；未集成上传服务，不显示伪造上传完成。原版进度上传演示未直接移植。

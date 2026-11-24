@@ -6,6 +6,9 @@
  * 演示内容用 JSX 直接定义，保证可交互。
  */
 import { useState } from "react";
+import { Chip as StatusChip } from "@/packages/react/chip";
+import { StatusDot } from "@/packages/react/status-dot";
+import { Avatar as CoreAvatar } from "@/packages/react/avatar";
 import { DialogTrigger, Dialog } from "react-aria-components";
 import { Dropdown, DropdownTrigger, DropdownPopover, DropdownGroup, DropdownItem, DropdownDivider } from "@/packages/react/dropdown";
 import { RiMailLine, RiSearchLine, RiAddLine as AddGlyph, RiEditLine as EditGlyph, RiArrowRightLine as ArrowGlyph } from "@remixicon/react";
@@ -252,11 +255,12 @@ export const docs: Record<string, Doc> = {
   },
 
   chip: {
-    title: "筛选胶囊",
+    title: "状态与筛选标签",
     description: "可切换的紧凑筛选标签，用于过滤列表与多选场景。",
     install: "npx boardui@latest add chip",
-    preview: <ChipDemo />,
+    preview: <><StatusChip color="lime">完成</StatusChip><StatusChip color="rose">失败</StatusChip><StatusChip color="blue" variant="subtle">处理中</StatusChip><StatusChip color="neutral" variant="caption">成员</StatusChip></>,
     demos: [
+      {id:"filters",title:"交互筛选（兼容扩展）",node:<ChipDemo/>},
       {
         id: "with-icon",
         title: "带图标",
@@ -436,7 +440,7 @@ export const docs: Record<string, Doc> = {
         <Badge variant="pro">Pro</Badge>
       </>
     ),
-    demos: [],
+    demos: [{id:"status",title:"状态指示",node:<><StatusDot color="green"/><StatusDot color="yellow"/><StatusDot color="indigo"/></>}],
   },
 
   avatar: {
@@ -451,6 +455,7 @@ export const docs: Record<string, Doc> = {
       </>
     ),
     demos: [
+      {id:"fallback",title:"图片加载失败回退",node:<CoreAvatar src="data:image/png;base64,broken" alt="测试头像" initials="A" aria-label="回退头像"/>},
       {
         id: "sizes",
         title: "尺寸",
@@ -473,7 +478,7 @@ export const docs: Record<string, Doc> = {
     install: "npx boardui@latest add progress",
     preview: (
       <div className="w-full max-w-sm">
-        <Progress value={45} />
+        <Progress aria-label="任务进度" value={45} />
       </div>
     ),
     demos: [
@@ -482,8 +487,9 @@ export const docs: Record<string, Doc> = {
         title: "尺寸",
         node: (
           <div className="flex w-full max-w-sm flex-col gap-3">
-            <Progress value={70} size="sm" />
-            <Progress value={70} size="md" />
+            <Progress aria-label="小型进度" value={70} size="sm" />
+            <Progress aria-label="中型进度" value={70} size="md" />
+            <Progress aria-label="加载中" isIndeterminate/>
           </div>
         ),
       },
@@ -639,7 +645,7 @@ export const docs: Record<string, Doc> = {
 
   pagination: {
     title: "分页",
-    description: "页码导航，当前页蓝底白字，长列表自动省略中间页。",
+    description: "原版分页，当前页白底描边与细阴影，窄容器自动切换紧凑布局。",
     install: "npx boardui@latest add pagination",
     preview: <PaginationDemo />,
     demos: [],
@@ -733,7 +739,7 @@ export const docs: Record<string, Doc> = {
 
   table: {
     title: "表格",
-    description: "带表头、悬停高亮与行选中态的表格。",
+    description: "原版表格配方，语义表头、键盘导航与统一行分隔线。",
     install: "npx boardui@latest add table",
     preview: (
       <div className="w-full">
@@ -824,7 +830,7 @@ export const docs: Record<string, Doc> = {
 
   "file-upload": {
     title: "文件上传",
-    description: "拖拽或点击上传，支持多文件与列表管理。",
+    description: "拖拽或点击选择文件，支持格式与大小验证、去重和删除；上传由应用接入。",
     install: "npx boardui@latest add file-upload",
     preview: (
       <div className="w-full max-w-md">
