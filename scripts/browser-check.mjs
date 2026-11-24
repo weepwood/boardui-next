@@ -37,6 +37,7 @@ try{
     page.on('response',r=>{if(r.url().startsWith(origin)&&r.status()>=400)failures.push(r.status()+' '+r.url());});
     for(const route of routes){
       failures.length=0;
+      let stage="navigation";
       try{
         const response=await page.goto(origin+route,{waitUntil:'networkidle',timeout:20000});
         assert.equal(response?.status(),200);
@@ -739,18 +740,33 @@ try{
           await page.getByRole('dialog',{name:'设置浮层'}).waitFor({state:'hidden'});
         }
         if(route==='/zh-hans/components/input/'){
+          stage='input: required and description';
           const demo=page.getByTestId('form-fields');
           const input=demo.getByRole('textbox',{name:'受控邮箱'});
           await input.fill('demo@example.com');
           assert.equal(await input.inputValue(),'demo@example.com');
           assert.ok(await input.evaluate(e=>e.required || e.getAttribute('aria-required')==='true'),'required field semantics');
           await page.waitForFunction(el=>{const ids=el.getAttribute('aria-describedby')?.split(/\s+/)||[];return ids.some(id=>document.getElementById(id)?.textContent.includes('输入有效邮箱'))},await input.elementHandle());
+          stage='textarea: auto-resize and shrink';
           const notes=demo.getByRole('textbox',{name:'受控备注'});
+          await notes.scrollIntoViewIfNeeded();
           const before=await notes.evaluate(e=>parseFloat(getComputedStyle(e).lineHeight)*2);
           await notes.fill('one\ntwo\nthree\nfour\nfive\nsix');
           await page.waitForFunction(({el,height})=>el.getBoundingClientRect().height>=height*2,{el:await notes.elementHandle(),height:before});
           await notes.fill('');
           await page.waitForFunction(({el,height})=>Math.abs(el.getBoundingClientRect().height-height)<1,{el:await notes.elementHandle(),height:before});
+          stage='textarea: container width change';
+          const initialWidth=await demo.evaluate(el=>el.style.width);
+          try{
+            await demo.evaluate(el=>{el.style.width='340px'});
+            await notes.fill('This is a long wrapping line of text that should grow taller on a narrow layout.');
+            const wide=await notes.evaluate(el=>el.getBoundingClientRect().height);
+            await demo.evaluate(el=>{el.style.width='150px'});
+            await page.waitForFunction(({el,height})=>el.getBoundingClientRect().height>height,{el:await notes.elementHandle(),height:wide});
+            await demo.evaluate(el=>{el.style.width='340px'});
+            await page.waitForFunction(({el,height})=>Math.abs(el.getBoundingClientRect().height-height)<1,{el:await notes.elementHandle(),height:wide});
+          }finally{await demo.evaluate((el,width)=>{el.style.width=width},initialWidth);await notes.fill('');}
+          stage='input: controlled search';
           const search=demo.getByRole('searchbox',{name:'受控搜索'});
           await search.fill('board');
           await demo.getByRole('button',{name:'清除搜索'}).click();
@@ -808,6 +824,7 @@ try{
             assert.equal(box?.width,size);assert.equal(box?.height,size);
           }
         }
+        stage="accessibility and page errors";
         let violations=[];
         if(full){
           // Assert selected tab-panel references after the actual DOM has settled.
@@ -819,7 +836,7 @@ try{
         }
         if(failures.length)throw Error(failures.join('; '));
         report.push({theme,route,violations,status:'checked'});
-      }catch(e){errors.push(theme+' '+route+': '+e.message);report.push({theme,route,status:'failed',error:e.message});}
+      }catch(e){errors.push(theme+' '+route+' ['+stage+']: '+e.message);report.push({theme,route,status:'failed',stage,error:e.message});}
     }
     await context.close();
   }

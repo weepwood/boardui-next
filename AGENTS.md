@@ -80,3 +80,11 @@
 - 长文档 TOC 按稳定标题 ID 订阅、维护交叉观察集合、锚点即时反馈，保留完整静态文档和 API 表。未虚拟化 API 表格，未证明长文档整体加速。
 - 新增全站静态压缩预算：JS 550 KiB、HTML 40 KiB，模板目录仍 350 KiB；116 页最高 497843/25775 bytes。属于构建估算，不等于网络耗时；共享脚本压缩缓存。
 - 14 个 Edge 专项组合通过；3 次 ComposerLoader 导航往返的相关 IO/RO 观察目标 4/2→0/0，新增 check-activity-cleanup.mjs 风险专项，不等同完整堆内存泄漏审计。证据 reference/evidence/activity-charts-docs-20261124.json。独立包 SSR/类型消费、类型/API、图表单测及静态导出均通过。正式发布门禁不变。
+
+### 质量收口与运行时生命周期审计
+
+- #28 快速/风险专项通过并合并至 main eca3148。正式完整验收 run 45399678321 针对该提交启动，构建/包消费/审计通过，三浏览器矩阵在记录时仍执行。上一份完整报告 run 45387299806 是旧提交 06044e6，683/684 通过，仅 Firefox 浅色 input waitForFunction 超时；旧日志未明确断言，不应臆断根因或当作新版本已通过。
+- 新批次修复 Textarea autoResize 在容器宽度变化、隐藏后恢复和字体加载时没有重测的问题。复用共享尺寸观察器，只在宽度变化时重测，清理观察器与字体事件，保留受控/非受控及 maxRows 行为。浏览器检查增加容器缩窄/恢复、输入相关阶段标记，不降低原有断言要求。
+- 本地 10 个 Edge 专项组合、116 静态页、类型、API、独立包 SSR/类型消费通过；全站 gzip 最大 JS 498093B、HTML 25777B，低于既有预算。Firefox/WebKit 新候选仍待复验。
+- 新增 scripts/audit-runtime-lifecycle.mjs，Chromium CDP 六轮五路由（30 次切换），每轮同一 button 页面 GC 后取 heap/DOM/listeners；后四轮 heap 8373736→8489992B（范围116256B），DOM 2904、监听518保持稳定，文档1、无 pageerror；只证明该场景，不是完整 heap-retainer 审计，不设置脆弱内存绝对门禁。证据 reference/evidence/runtime-lifecycle-20261124.json。
+- 发布清单 104 条、五个维度均待完整验收，0 条全验收；不得将页面自动化、性能测试或部分证据标记为完整通过。下一次先查看完整验收 run 45399678321 与新 PR CI，再按实际失败分类治理。
