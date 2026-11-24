@@ -120,7 +120,7 @@
       "tier": "free",
       "upstreamStatus": "shipped",
       "localRoute": "/zh-hans/components/button-group",
-      "implementation": "existing-unverified",
+      "implementation": "ported-unverified",
       "sourcePolicy": "verify-public-source",
       "verification": {
         "visual": "pending",
@@ -129,7 +129,14 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "sourcePaths": [
+        "components/base/buttons/button-group.tsx"
+      ],
+      "localPaths": [
+        "packages/react/button-group.tsx"
+      ],
+      "notes": "上游原生 HTML 实现移植，文档接入；旧版扩展接口保留。图标方向自动识别和逐组件视觉验收仍待完成。"
     },
     {
       "slug": "carousel",
@@ -195,7 +202,7 @@
       "tier": "free",
       "upstreamStatus": "shipped",
       "localRoute": "/zh-hans/components/close-button",
-      "implementation": "existing-unverified",
+      "implementation": "ported-unverified",
       "sourcePolicy": "verify-public-source",
       "verification": {
         "visual": "pending",
@@ -204,7 +211,14 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "sourcePaths": [
+        "components/base/buttons/close-button.tsx"
+      ],
+      "localPaths": [
+        "packages/react/close-button.tsx"
+      ],
+      "notes": "上游原生 HTML 实现移植，文档接入；旧版扩展接口保留。图标方向自动识别和逐组件视觉验收仍待完成。"
     },
     {
       "slug": "date-picker",
@@ -275,7 +289,7 @@
       "tier": "free",
       "upstreamStatus": "shipped",
       "localRoute": "/zh-hans/components/icon-button",
-      "implementation": "existing-unverified",
+      "implementation": "ported-unverified",
       "sourcePolicy": "verify-public-source",
       "verification": {
         "visual": "pending",
@@ -284,7 +298,14 @@
         "api": "pending",
         "rtl": "pending"
       },
-      "evidence": []
+      "evidence": [],
+      "sourcePaths": [
+        "components/base/buttons/icon-button.tsx"
+      ],
+      "localPaths": [
+        "packages/react/icon-button.tsx"
+      ],
+      "notes": "上游原生 HTML 实现移植，文档接入；旧版扩展接口保留。图标方向自动识别和逐组件视觉验收仍待完成。"
     },
     {
       "slug": "input",
