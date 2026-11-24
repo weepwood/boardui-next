@@ -3909,6 +3909,63 @@
       ],
       "scope": "双主题双视口双方向实际检查各色调及边界值；填充从逻辑起点开始、渐变方向镜像、动态值更新后比例正确，不含浮层。",
       "source": "reference/evidence/passive-contract-decisions-20261125.json"
+    },
+    {
+      "id": "progress-rtl-loading-contract-20261125",
+      "dimension": "rtl",
+      "result": "passed",
+      "components": [
+        "progress"
+      ],
+      "scope": "确定态逻辑起点与75%比例、等待态镜像动画名称、减少动效居中、状态切换在双主题双方向及正常/减少动效的8个组合验证；该组件没有浮层。",
+      "source": "reference/evidence/loading-contract-decisions-20261125.json"
+    },
+    {
+      "id": "skeleton-api-contract-20261125",
+      "dimension": "api",
+      "result": "passed",
+      "components": [
+        "skeleton"
+      ],
+      "scope": "本地 Skeleton 仅两个自有属性 className 和 rounded；默认 md、sm/md/lg/full 五个实例实测尺寸与四种圆角，正常和减少动效均有效；没有 ref、事件、表单或受控接口。",
+      "source": "reference/evidence/loading-contract-decisions-20261125.json"
+    },
+    {
+      "id": "loading-normal-motion-20261125",
+      "dimension": "interaction",
+      "result": "partial",
+      "components": [
+        "progress",
+        "avatar",
+        "skeleton"
+      ],
+      "scope": "8组真实浏览器：进度条离屏暂停恢复、等待态切换、外部值变化，头像两次有效与失败来源切换，骨架正常及减少动效；未涵盖所有动画及后台标签。",
+      "source": "reference/evidence/loading-contract-decisions-20261125.json"
+    },
+    {
+      "id": "loading-api-state-20261125",
+      "dimension": "api",
+      "result": "partial",
+      "components": [
+        "avatar",
+        "spinner",
+        "progress"
+      ],
+      "scope": "Avatar ref、来源与 fallback，Spinner 自定义 label/labelledby，Progress min/max/value、size、等待态；未完成所有继承属性。",
+      "source": "reference/evidence/loading-contract-decisions-20261125.json"
+    },
+    {
+      "id": "loading-accessibility-20261125",
+      "dimension": "accessibility",
+      "result": "partial",
+      "components": [
+        "avatar",
+        "spinner",
+        "progress",
+        "skeleton"
+      ],
+      "scope": "真实浏览器可访问名称、角色、无确定值的等待状态、装饰隐藏及减少动效，非人工读屏或完整状态 axe。",
+      "source": "reference/evidence/loading-contract-decisions-20261125.json"
     }
   ]
 }

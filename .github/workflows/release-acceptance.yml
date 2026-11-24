@@ -100,6 +100,9 @@ jobs:
       - name: 静态分隔线与度量条完整方向和属性专项
         if: matrix.browser == 'chromium'
         run: node scripts/audit-passive-contracts.mjs acceptance/passive-contracts
+      - name: 等待状态与图片生命周期专项
+        if: matrix.browser == 'chromium'
+        run: node scripts/audit-loading-contracts.mjs acceptance/loading-contracts
       - name: 全组件 RTL 初始布局与 axe 审计
         if: matrix.browser == 'chromium'
         run: node scripts/audit-all-rtl.mjs acceptance/all-rtl

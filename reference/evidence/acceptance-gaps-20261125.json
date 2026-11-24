@@ -19,12 +19,12 @@
     },
     "api": {
       "missing": [],
-      "formal": 1,
+      "formal": 2,
       "scoped": 104
     },
     "rtl": {
       "missing": [],
-      "formal": 2,
+      "formal": 3,
       "scoped": 104
     }
   },
@@ -223,7 +223,8 @@
         "interaction": {
           "status": "pending",
           "partial": [
-            "consolidated-remaining-state-fallback-20261125"
+            "consolidated-remaining-state-fallback-20261125",
+            "loading-normal-motion-20261125"
           ],
           "passed": [],
           "notApplicable": [],
@@ -239,7 +240,8 @@
             "formal-three-browser-45439538959",
             "feedback-visual-accessibility-20261125",
             "formal-three-browser-45442604183",
-            "formal-three-browser-45452007160"
+            "formal-three-browser-45452007160",
+            "loading-accessibility-20261125"
           ],
           "passed": [],
           "notApplicable": [],
@@ -249,7 +251,8 @@
           "status": "pending",
           "partial": [
             "api-extraction-20261124",
-            "consolidated-api-contracts-20261125"
+            "consolidated-api-contracts-20261125",
+            "loading-api-state-20261125"
           ],
           "passed": [],
           "notApplicable": [],
@@ -4767,7 +4770,8 @@
         "interaction": {
           "status": "pending",
           "partial": [
-            "consolidated-remaining-passive-presentation-20261125"
+            "consolidated-remaining-passive-presentation-20261125",
+            "loading-normal-motion-20261125"
           ],
           "passed": [],
           "notApplicable": [],
@@ -4783,7 +4787,8 @@
             "formal-three-browser-45439538959",
             "feedback-visual-accessibility-20261125",
             "formal-three-browser-45442604183",
-            "formal-three-browser-45452007160"
+            "formal-three-browser-45452007160",
+            "loading-accessibility-20261125"
           ],
           "passed": [],
           "notApplicable": [],
@@ -4793,18 +4798,21 @@
           "status": "pending",
           "partial": [
             "api-extraction-20261124",
-            "consolidated-api-contracts-20261125"
+            "consolidated-api-contracts-20261125",
+            "loading-api-state-20261125"
           ],
           "passed": [],
           "notApplicable": [],
           "failed": []
         },
         "rtl": {
-          "status": "pending",
+          "status": "passed",
           "partial": [
             "consolidated-full-rtl-rtl-20261125"
           ],
-          "passed": [],
+          "passed": [
+            "progress-rtl-loading-contract-20261125"
+          ],
           "notApplicable": [],
           "failed": []
         }
@@ -4842,7 +4850,8 @@
             "consolidated-full-rtl-accessibility-20261125",
             "formal-three-browser-45439538959",
             "formal-three-browser-45442604183",
-            "formal-three-browser-45452007160"
+            "formal-three-browser-45452007160",
+            "loading-accessibility-20261125"
           ],
           "passed": [],
           "notApplicable": [],
@@ -4851,7 +4860,8 @@
         "api": {
           "status": "pending",
           "partial": [
-            "consolidated-api-contracts-20261125"
+            "consolidated-api-contracts-20261125",
+            "loading-api-state-20261125"
           ],
           "passed": [],
           "notApplicable": [],
@@ -4884,7 +4894,8 @@
         "interaction": {
           "status": "pending",
           "partial": [
-            "responsive-interaction-skeleton-20261124"
+            "responsive-interaction-skeleton-20261124",
+            "loading-normal-motion-20261125"
           ],
           "passed": [],
           "notApplicable": [],
@@ -4900,18 +4911,21 @@
             "consolidated-full-rtl-accessibility-20261125",
             "formal-three-browser-45439538959",
             "formal-three-browser-45442604183",
-            "formal-three-browser-45452007160"
+            "formal-three-browser-45452007160",
+            "loading-accessibility-20261125"
           ],
           "passed": [],
           "notApplicable": [],
           "failed": []
         },
         "api": {
-          "status": "pending",
+          "status": "passed",
           "partial": [
             "consolidated-api-contracts-20261125"
           ],
-          "passed": [],
+          "passed": [
+            "skeleton-api-contract-20261125"
+          ],
           "notApplicable": [],
           "failed": []
         },

@@ -485,6 +485,7 @@ import { RiArrowRightLine } from "@remixicon/react";
       </>
     )),
     demos: () => ([
+      {id:"source-contract",title:"图片来源切换",node:<AvatarContractDemo/>},
       {id:"fallback",title:"图片加载失败回退",node:<CoreAvatar src="data:image/png;base64,broken" alt="测试头像" initials="A" aria-label="回退头像"/>},
       {
         id: "sizes",
@@ -512,6 +513,7 @@ import { RiArrowRightLine } from "@remixicon/react";
       </div>
     )),
     demos: () => ([
+      {id:"loading-contract",title:"等待态与数值更新",node:<LoadingContractDemo/>},
       {
         id: "sizes",
         title: "尺寸",
@@ -536,7 +538,7 @@ import { RiArrowRightLine } from "@remixicon/react";
         <Spinner className="text-accent-500" size={28} />
       </>
     )),
-    demos: () => ([]),
+    demos: () => ([{id:"spinner-contract",title:"可访问名称",node:<div data-testid="spinner-contract" className="flex gap-3"><Spinner aria-label="正在同步" size={24}/><span id="spinner-label">正在读取</span><Spinner aria-labelledby="spinner-label" size={20}/></div>}]),
   },
 
   skeleton: {
@@ -552,7 +554,7 @@ import { RiArrowRightLine } from "@remixicon/react";
         </div>
       </div>
     )),
-    demos: () => ([]),
+    demos: () => ([{id:"radius-contract",title:"圆角变体",node:<div data-testid="skeleton-contract" className="flex flex-wrap gap-2"><Skeleton className="size-10" rounded="sm"/><Skeleton className="size-10" rounded="md"/><Skeleton className="size-10" rounded="lg"/><Skeleton className="size-10" rounded="full"/><Skeleton className="size-10"/></div>}]),
   },
 
   divider: {
@@ -1448,6 +1450,25 @@ import { RiArrowRightLine } from "@remixicon/react";
   },
 };
 /* ---------------- 内部演示组件 ---------------- */
+
+function LoadingContractDemo(){
+ const [pending,setPending]=useState(true),[value,setValue]=useState(25);
+ return <div data-testid="loading-contract" className="flex w-full max-w-sm flex-col gap-3">
+  <Progress aria-label="动态进度" value={value} minValue={20} maxValue={120} size="sm" isIndeterminate={pending}/>
+  <div className="flex flex-wrap gap-2"><Button onPress={()=>setPending(v=>!v)}>切换等待</Button><Button onPress={()=>setValue(95)}>更新进度</Button></div>
+ </div>;
+}
+function AvatarContractDemo(){
+ const [src,setSrc]=useState("data:image/png;base64,broken");
+ const good="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Crect width='24' height='24' fill='blue'/%3E%3C/svg%3E";
+ const ref=useRef<HTMLSpanElement>(null);
+ const [ready,setReady]=useState(false);
+ return <div data-testid="avatar-contract" className="flex flex-col gap-2">
+  <CoreAvatar ref={ref} src={src} initials="A" alt="切换头像" color="blue"/>
+  <div className="flex flex-wrap gap-2"><Button onPress={()=>setSrc(good)}>有效图片</Button><Button onPress={()=>setSrc("data:image/png;base64,broken")}>损坏图片</Button><Button onPress={()=>setReady(ref.current instanceof HTMLSpanElement)}>检查引用</Button></div>
+  <output>{String(ready)}</output>
+ </div>;
+}
 
 function MeterContractDemo(){
  const [value,setValue]=useState(25);

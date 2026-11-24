@@ -2,7 +2,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 /* eslint-disable @next/next/no-img-element */
-import type { HTMLAttributes, Ref } from "react";
+import type { HTMLAttributes, Ref, ReactNode } from "react";
 import { cx, sortCx } from "./cx";
 
 /**
@@ -63,9 +63,6 @@ export function Avatar({
   ref,
   ...props
 }: AvatarProps) {
-  const [failed,setFailed]=useState<string|null>(null);
-  const imageRef=useRef<HTMLImageElement>(null);
-  useEffect(()=>{const image=imageRef.current;if(src&&image?.complete&&image.naturalWidth===0)setFailed(src)},[src]);
   return (
     <span
       ref={ref}
@@ -74,17 +71,16 @@ export function Avatar({
       role={props.role??(props["aria-label"]||props["aria-labelledby"]||alt?"img":undefined)}
       aria-label={props["aria-label"]??(!props["aria-labelledby"]?alt:undefined)}
     >
-      {src && failed!==src ? (
-        <img
-          ref={imageRef} src={src} onError={()=>setFailed(src)}
-          alt=""
-          loading="lazy"
-          decoding="async"
-          className="size-full object-cover"
-        />
-      ) : (
-        <span aria-hidden={!!(props["aria-label"]||props["aria-labelledby"]||alt)}>{initials}</span>
-      )}
+      {src?<AvatarPhoto key={src} src={src} fallback={<span aria-hidden={!!(props["aria-label"]||props["aria-labelledby"]||alt)}>{initials}</span>}/>:<span aria-hidden={!!(props["aria-label"]||props["aria-labelledby"]||alt)}>{initials}</span>}
     </span>
   );
+}
+
+
+function AvatarPhoto({src,fallback}:{src:string;fallback:ReactNode}){
+  const [failed,setFailed]=useState(false);
+  const ref=useRef<HTMLImageElement>(null);
+  useEffect(()=>{const image=ref.current;if(image?.complete&&image.naturalWidth===0)setFailed(true)},[]);
+  if(failed)return fallback;
+  return <img ref={ref} src={src} onError={()=>setFailed(true)} alt="" loading="lazy" decoding="async" className="size-full object-cover"/>;
 }
