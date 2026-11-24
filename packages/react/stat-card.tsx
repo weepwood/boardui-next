@@ -26,23 +26,23 @@ export function StatCard({
   className?: string;
 }) {
   const trendStyle = {
-    up: "text-lime-600 bg-lime-100 dark:bg-lime-950 dark:text-lime-400",
-    down: "text-red-600 bg-red-100 dark:bg-red-950 dark:text-red-400",
+    up: "text-status-lime-text bg-status-lime-background",
+    down: "text-status-rose-text bg-status-rose-background",
     flat: "text-text-secondary bg-background-secondary-default",
   }[trend];
 
   return (
     <div
       className={cn(
-        "flex flex-col gap-2 rounded-2xl border border-border-component-detail-container",
+        "flex min-w-0 flex-col gap-3 rounded-2xl border border-border-component-detail-container",
         "bg-background-primary-default p-4 shadow-xs",
         className
       )}
     >
       <div className="flex items-start justify-between gap-2">
         <div className="flex min-w-0 flex-col gap-0.5">
-          <span className="truncate text-caption-1-regular text-text-tertiary">{label}</span>
-          <span className="text-title-2-semibold break-words tabular-nums text-text-primary">{value}</span>
+          <span className="break-words text-body-2-medium text-text-secondary">{label}</span>
+          <span className="text-title-2-semibold [overflow-wrap:anywhere] tabular-nums text-text-primary">{value}</span>
         </div>
         {icon && (
           <span className="flex size-7 shrink-0 items-center justify-center rounded-lg bg-background-secondary-default text-foreground-icon-secondary">
@@ -51,7 +51,7 @@ export function StatCard({
         )}
       </div>
 
-      <div className="flex items-center justify-between gap-2">
+      <div className="flex flex-wrap items-center justify-between gap-2">
         {delta && (
           <span
             className={cn(

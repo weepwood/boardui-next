@@ -159,3 +159,9 @@
 - #35 run 45417938031 通过，Squash 合并 d1b843d；Pages 45418741827 成功，线上 orders summary 已核对。#36 同步经核对完全相同的主分支文件树，head 508af27，重新验收 45418826956。
 - 浮层候选：共享菜单适配可用高度，16px 碰撞边距，限制触发器最小宽度，保留 React Aria 位置翻转和焦点管理；Modal 标题与描述关联、短视口内部滚动、底部按钮换行、窄屏边距；减少动效取消缩放/模糊。未改变公共组件行为或新增依赖。
 - 本地 Edge 24/24 双主题交互（含 RTL），24/24 四类浮层双主题三视口打开与 Escape 焦点恢复（320×420、390×844、1440×1000），类型、单测、120 页导出及预算通过。六张真实截图与报告 reference/evidence/overlay-layout-20261124.json；复现 scripts/audit-overlay-visual.mjs。软键盘真机、Firefox/WebKit、全站逐状态无障碍与正式五维门禁仍待验收。
+
+### Dashboard / Finance 内部布局专项（2026-11-24）
+
+- #36 run 45418826956 全部成功，Squash 合并 58db993；Pages 45419821532 成功，线上 Input 焦点样式已核对。#37 同步与候选完全相同的主分支文件树，head 5de1f61，需复验最新 CI。
+- 参照固定上游公开 app/dashboard/page.tsx 及 stat-cards/revenue-chart-card：核心指标优先、主要分析图表其次，招聘保留并下移；收入趋势复用 ChartArea，收入样本复用 ChartDataInspector，统计卡统一状态语义颜色及长值换行。Finance 年度固定指标与现金流范围隔离，桑基图与分配比例并排、窄屏堆叠，月度收入示例不再标为收支；保留原 CSV 与本地示例数据。Finance 不声称还原未公开模板源码。
+- 最终本地 Edge 22/22 页面主题专项（含 RTL）、16/16 文档/独立工作区双主题双视口布局与操作、类型、单测、120 页导出与预算通过。首次手动测试命令错误 stat-card 路径，最终已使用 stat-cards 重跑。六张真实截图、报告 reference/evidence/analytics-layout-20261124.json 与 scripts/audit-analytics-visual.mjs。尚待正式三浏览器、逐状态 axe、人工验收与五维门禁。
