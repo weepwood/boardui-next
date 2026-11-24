@@ -27,6 +27,7 @@ jobs:
             next-pages-${{ runner.os }}-${{ hashFiles('package-lock.json') }}-
       - run: npm test
       - run: npm run typecheck
+      - run: npm run test:api
       - run: npm run test:library
       - run: npm audit --omit=dev --audit-level=high --registry=https://registry.npmjs.org
       - run: npm run test:consumer

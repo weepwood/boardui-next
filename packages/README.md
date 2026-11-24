@@ -63,3 +63,7 @@ npm run dev
 | AgentProgress | steps: {id,label,state}[], title? |
 
 图表当前为轻量 SVG 实现，非原版 Pro 图表源码移植；部分图表仍缺少完整可访问数据表和通用交互能力。Heatmap 现有 weeks/seed 为演示模式，不应当作真实活动数据。其余 API 以导出的 TypeScript 声明为准。
+
+## API 文档同步
+
+运行 `npm run docs:api` 根据公共 TypeScript 入口生成网站的 API 参考，`npm run test:api` 检查文档是否过期。API 表包含本地定义及常用继承属性，并非所有原生 DOM 属性的完整清单；以独立包类型声明为准。

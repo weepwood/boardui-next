@@ -45,18 +45,16 @@ export function TopBar({ breadcrumbs }: { breadcrumbs: Crumb[] }) {
 
       <div className="flex shrink-0 items-center gap-1">
         {/* 语言切换 */}
-        <button
-          type="button"
+        <span
           className={cn(
-            "hidden h-8 cursor-pointer items-center gap-1.5 rounded-2lg px-2 sm:inline-flex",
+            "hidden h-8 items-center gap-1.5 rounded-2lg px-2 sm:inline-flex",
             "text-caption-1-medium text-text-secondary",
             "transition-colors duration-150 ease-out hover:bg-background-secondary-hover"
           )}
         >
           <Icon name="translate-2" className="size-4" />
           简体中文
-          <Icon name="arrow-down-s-line" className="size-3.5" />
-        </button>
+        </span>
 
         <ThemeToggle />
 
@@ -74,8 +72,7 @@ export function TopBar({ breadcrumbs }: { breadcrumbs: Crumb[] }) {
         />
 
         {/* Pro 按钮 */}
-        <button
-          type="button"
+        <a href="https://www.boardui.com/" target="_blank" rel="noreferrer" aria-label="原版 BoardUI 官网"
           className={cn(
             "ms-1 flex h-8 cursor-pointer items-center gap-1 rounded-2lg px-2",
             "border border-border-button-default bg-background-primary-default",
@@ -84,8 +81,8 @@ export function TopBar({ breadcrumbs }: { breadcrumbs: Crumb[] }) {
           )}
         >
           <Icon name="vip-crown-2-line" className="size-4 text-amber-500" />
-          <span className="shrink-0 px-1">获取 Pro</span>
-        </button>
+          <span className="shrink-0 px-1">原版官网</span>
+        </a>
       </div>
     </div>
   );

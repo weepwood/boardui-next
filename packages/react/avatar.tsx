@@ -71,17 +71,19 @@ export function Avatar({
       ref={ref}
       className={cx(styles.base, styles.size[size], styles.color[color], className)}
       {...props}
+      role={props.role??(props["aria-label"]||props["aria-labelledby"]||alt?"img":undefined)}
+      aria-label={props["aria-label"]??(!props["aria-labelledby"]?alt:undefined)}
     >
       {src && failed!==src ? (
         <img
           ref={imageRef} src={src} onError={()=>setFailed(src)}
-          alt={alt ?? ""}
+          alt=""
           loading="lazy"
           decoding="async"
           className="size-full object-cover"
         />
       ) : (
-        <span aria-hidden={!!props["aria-label"]}>{initials}</span>
+        <span aria-hidden={!!(props["aria-label"]||props["aria-labelledby"]||alt)}>{initials}</span>
       )}
     </span>
   );

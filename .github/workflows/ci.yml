@@ -50,6 +50,7 @@ jobs:
           key: next-pages-${{ runner.os }}-${{ hashFiles('package-lock.json') }}-${{ github.sha }}
           restore-keys: |
             next-pages-${{ runner.os }}-${{ hashFiles('package-lock.json') }}-
+      - run: npm run test:api
       - run: npm run test:library
       - run: npm audit --omit=dev --audit-level=high --registry=https://registry.npmjs.org
       - run: npm run build:pages

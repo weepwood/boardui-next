@@ -1,11 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useId, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { navigation, type NavItem } from "@/lib/navigation";
 import { cn } from "@/lib/utils";
 import { Icon } from "../ui/Icon";
+import { ModalOverlay,Modal,Dialog } from "react-aria-components";
+import { CloseButton } from "@/packages/react/close-button";
 import { CommandSearch } from "./CommandSearch";
 
 /** 新徽标：原站 bg-badge-new-background px-1 py-px rounded-sm */
@@ -94,13 +96,14 @@ function NavGroupSection({
   defaultOpen?: boolean;
 }) {
   const [open, setOpen] = useState(defaultOpen);
+  const id=useId();
 
   return (
     <div className="flex flex-col gap-0.5">
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
-        aria-expanded={open}
+        aria-expanded={open} aria-controls={id}
         className={cn(
           "flex w-full cursor-pointer items-center justify-between rounded-md px-2.5 pt-2 pb-1",
           "text-caption-1-semibold tracking-wide text-text-tertiary uppercase",
@@ -119,13 +122,13 @@ function NavGroupSection({
       </button>
 
       <div
-        className="grid transition-[grid-template-rows,opacity] duration-300 ease-in-out"
+        id={id} inert={!open} aria-hidden={!open} className="grid transition-[grid-template-rows,opacity] duration-300 ease-in-out motion-reduce:transition-none"
         style={{
           gridTemplateRows: open ? "1fr" : "0fr",
           opacity: open ? 1 : 0,
         }}
       >
-        <div className="overflow-hidden">
+        <div className="min-h-0 overflow-hidden">
           <div className="relative flex flex-col gap-0.5">
             {items.map((item) => (
               <NavLink key={item.href} item={item} />
@@ -140,6 +143,9 @@ function NavGroupSection({
 export function Sidebar() {
   const total = navigation.reduce((n, g) => n + g.items.length, 0);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [mobileOpen,setMobileOpen]=useState(false);
+  const pathname=usePathname();
+  useEffect(()=>setMobileOpen(false),[pathname]);
 
   // ⌘K / Ctrl+K 唤起搜索
   useEffect(() => {
@@ -153,15 +159,7 @@ export function Sidebar() {
     return () => document.removeEventListener("keydown", onKey);
   }, []);
 
-  return (
-    <>
-    <aside
-      className={cn(
-        "sticky top-3 m-3 hidden h-[calc(100vh-24px)] w-[260px] shrink-0",
-        "flex-col gap-3 overflow-hidden rounded-3xl border border-border-button-white",
-        "bg-background-secondary-default p-3 shadow-sidebar lg:flex"
-      )}
-    >
+  const content=(mobile:boolean)=><>
       {/* 品牌 */}
       <Link href="/" className="flex w-full items-center gap-2 px-1">
         <span className="flex size-6 shrink-0 items-center justify-center rounded-md bg-text-primary text-[13px] font-bold text-background-full">
@@ -174,7 +172,7 @@ export function Sidebar() {
       <button
         type="button"
         aria-label="快速搜索"
-        onClick={() => setSearchOpen(true)}
+        onClick={() => {if(mobile)setMobileOpen(false);setSearchOpen(true)}}
         className={cn(
           "flex w-full cursor-pointer items-center gap-2 rounded-full",
           "bg-background-tertiary-default px-3 py-1.5 text-start",
@@ -213,7 +211,23 @@ export function Sidebar() {
           <NavGroupSection key={group.title} title={group.title} items={group.items} />
         ))}
       </nav>
+  </>;
+
+  return (
+    <>
+    <aside
+      className={cn(
+        "sticky top-3 m-3 hidden h-[calc(100vh-24px)] w-[260px] shrink-0",
+        "flex-col gap-3 overflow-hidden rounded-3xl border border-border-button-white",
+        "bg-background-secondary-default p-3 shadow-sidebar lg:flex"
+      )}
+    >
+      {content(false)}
     </aside>
+    <button type="button" aria-label="打开文档导航" aria-haspopup="dialog" aria-expanded={mobileOpen} onClick={()=>setMobileOpen(true)} className="fixed bottom-4 start-4 z-40 flex h-10 items-center gap-2 rounded-full border border-border-button-default bg-background-primary-default px-3 text-body-medium text-text-primary shadow-dropdown lg:hidden"><Icon name="menu-line" className="size-5"/>导航</button>
+    <ModalOverlay isOpen={mobileOpen} onOpenChange={setMobileOpen} isDismissable className="fixed inset-0 z-[70] flex bg-black/30 dark:bg-black/60 lg:hidden">
+      <Modal className="h-full w-[min(300px,calc(100vw-24px))] p-3 outline-none"><Dialog aria-label="文档导航" className="flex h-full min-h-0 flex-col gap-3 overflow-hidden rounded-3xl border border-border-button-default bg-background-secondary-default p-3 shadow-sidebar outline-none"><div className="flex justify-end"><CloseButton size="md" aria-label="关闭文档导航" onClick={()=>setMobileOpen(false)}/></div>{content(true)}</Dialog></Modal>
+    </ModalOverlay>
     <CommandSearch open={searchOpen} onClose={() => setSearchOpen(false)} />
     </>
   );
