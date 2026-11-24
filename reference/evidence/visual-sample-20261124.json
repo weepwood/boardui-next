@@ -1,0 +1,449 @@
+{
+  "date": "2026-11-24",
+  "viewport": [
+    1440,
+    1000
+  ],
+  "theme": "light",
+  "browser": "Edge (Chromium)",
+  "upstream": "https://www.boardui.com/zh-hans/components/",
+  "localBase": "2935c443525e92b9c2b3c4863153fbf2fed92316 + pre-preview-adjustment worktree",
+  "scope": "Four representative pages. Measurements only; not pixel or behavioral acceptance. Input, Checkbox and Select preview composition was adjusted after sampling.",
+  "samples": [
+    {
+      "slug": "input",
+      "upstream": {
+        "title": "输入框",
+        "main": [
+          324,
+          40,
+          808,
+          2822
+        ],
+        "heading": [
+          324,
+          108,
+          808,
+          34
+        ],
+        "canvas": {
+          "rect": [
+            324,
+            286,
+            808,
+            327
+          ],
+          "radius": "24px",
+          "font": "16px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "control": {
+          "rect": [
+            633,
+            441,
+            184,
+            20
+          ],
+          "radius": "0px",
+          "font": "14px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "text": "电子邮箱\n*\nThis is a hint about this input.",
+        "controls": [
+          {
+            "tag": "INPUT",
+            "text": "",
+            "aria": null,
+            "placeholder": "输入您的电子邮件",
+            "box": [
+              633,
+              441,
+              184,
+              20
+            ]
+          }
+        ],
+        "child": "<div class=\"w-[250px]\"><div data-input-size=\"medium\" class=\"group flex h-max w-full flex-col items-start gap-1\" data-rac=\"\" data-required=\"true\"><label class=\"flex cursor-default items-center gap-0.5 text-body-medium text-text-primary\" id=\"react-aria-_R_2h6av5tb9fivbH1_\" for=\"react-aria-_R_2h6av5tb9fivb_\" data-label=\"true\">电子邮箱<span aria-hidden=\"true\" class=\"text-body-medium text-text-error-primary\">*</span><svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" fill=\"currentColor\" aria-hidden=\"true\" class=\"remixicon size-4 shrink-0 text-foreground-icon-quaternary\"><path d=\"M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM11 11V17H13V11H11ZM11 7V9H13V7H11Z\"></path></svg></label><div role=\"presentation\" class=\"relative flex w-full items-center rounded-2lg bg-background-tertiary-default text-foregro"
+      },
+      "local": {
+        "title": "输入框",
+        "main": [
+          324,
+          40,
+          808,
+          3426
+        ],
+        "heading": [
+          324,
+          108,
+          808,
+          34
+        ],
+        "canvas": {
+          "rect": [
+            324,
+            266,
+            808,
+            327
+          ],
+          "radius": "24px",
+          "font": "16px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "control": {
+          "rect": [
+            566,
+            387,
+            346,
+            20
+          ],
+          "radius": "0px",
+          "font": "14px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "text": "电子邮箱\n*\n请输入有效的邮箱地址\n搜索",
+        "controls": [
+          {
+            "tag": "INPUT",
+            "text": "",
+            "aria": null,
+            "placeholder": "输入您的电子邮箱",
+            "box": [
+              566,
+              387,
+              346,
+              20
+            ]
+          },
+          {
+            "tag": "INPUT",
+            "text": "",
+            "aria": null,
+            "placeholder": "搜索组件…",
+            "box": [
+              564,
+              478,
+              350,
+              20
+            ]
+          }
+        ],
+        "child": "<div class=\"flex w-full flex-wrap items-center justify-center gap-3\"><div class=\"flex w-full max-w-sm flex-col gap-3\"><div data-input-size=\"medium\" class=\"group flex h-max w-full flex-col items-start gap-1\" data-rac=\"\" data-required=\"true\"><label class=\"flex cursor-default items-center gap-0.5 text-body-medium text-text-primary\" id=\"react-aria-_R_3pj5fiv5ubtbH1_\" for=\"react-aria-_R_3pj5fiv5ubtb_\" data-label=\"true\">电子邮箱<span aria-hidden=\"true\" class=\"text-body-medium text-text-error-primary\">*</span></label><div role=\"presentation\" class=\"relative flex w-full items-center rounded-2lg bg-background-tertiary-default text-foreground-icon-tertiary ring-2 ring-inset ring-transparent transition-[background-color,box-shadow,color] duration-[var(--input-transition-ms)] ease p-2\" data-rac=\"\"><div class=\"flex w-full items-center gap-2 min-w-0\"><div class=\"flex flex-1 items-center gap-0.5 min-w-0\"><"
+      }
+    },
+    {
+      "slug": "checkbox",
+      "upstream": {
+        "title": "复选框",
+        "main": [
+          324,
+          40,
+          808,
+          2607
+        ],
+        "heading": [
+          324,
+          108,
+          808,
+          34
+        ],
+        "canvas": {
+          "rect": [
+            324,
+            286,
+            808,
+            327
+          ],
+          "radius": "24px",
+          "font": "16px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "control": {
+          "rect": [
+            639,
+            455,
+            13,
+            13
+          ],
+          "radius": "0px",
+          "font": "16px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "text": "",
+        "controls": [
+          {
+            "tag": "INPUT",
+            "text": "",
+            "aria": "未选中",
+            "placeholder": null,
+            "box": [
+              639,
+              455,
+              13,
+              13
+            ]
+          },
+          {
+            "tag": "INPUT",
+            "text": "",
+            "aria": "已检查",
+            "placeholder": null,
+            "box": [
+              679,
+              455,
+              13,
+              13
+            ]
+          },
+          {
+            "tag": "INPUT",
+            "text": "",
+            "aria": "不确定",
+            "placeholder": null,
+            "box": [
+              719,
+              455,
+              13,
+              13
+            ]
+          },
+          {
+            "tag": "INPUT",
+            "text": "",
+            "aria": "禁用",
+            "placeholder": null,
+            "box": [
+              759,
+              455,
+              13,
+              13
+            ]
+          },
+          {
+            "tag": "INPUT",
+            "text": "",
+            "aria": "已禁用选中",
+            "placeholder": null,
+            "box": [
+              799,
+              455,
+              13,
+              13
+            ]
+          }
+        ],
+        "child": "<div class=\"flex items-center gap-6\"><label data-react-aria-pressable=\"true\" class=\"group inline-flex items-center select-none gap-2 cursor-pointer\" data-rac=\"\"><span style=\"border:0;clip:rect(0 0 0 0);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap\"><input aria-label=\"未选中\" type=\"checkbox\" data-react-aria-pressable=\"true\" tabindex=\"0\"></span><span aria-hidden=\"true\" class=\"flex shrink-0 items-center justify-center rounded-sm transition-[background-color,border-color,box-shadow] duration-150 ease size-4 border bg-background-primary-default shadow-xs border-border-checkbox-default\"><svg viewBox=\"0 0 16 16\" fill=\"none\" class=\"size-4\"></svg></span></label><label data-react-aria-pressable=\"true\" class=\"group inline-flex items-center select-none gap-2 cursor-pointer\" data-rac=\"\" data-selected=\"true\"><span style=\"border:0;clip"
+      },
+      "local": {
+        "title": "复选框",
+        "main": [
+          324,
+          40,
+          808,
+          2963
+        ],
+        "heading": [
+          324,
+          108,
+          808,
+          34
+        ],
+        "canvas": {
+          "rect": [
+            324,
+            266,
+            808,
+            327
+          ],
+          "radius": "24px",
+          "font": "16px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "control": {
+          "rect": [
+            574,
+            435,
+            13,
+            13
+          ],
+          "radius": "0px",
+          "font": "16px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "text": "已选中\n未选中\n部分选中\n小尺寸",
+        "controls": [
+          {
+            "tag": "INPUT",
+            "text": "",
+            "aria": null,
+            "placeholder": null,
+            "box": [
+              574,
+              435,
+              13,
+              13
+            ]
+          },
+          {
+            "tag": "INPUT",
+            "text": "",
+            "aria": null,
+            "placeholder": null,
+            "box": [
+              652,
+              435,
+              13,
+              13
+            ]
+          },
+          {
+            "tag": "INPUT",
+            "text": "",
+            "aria": null,
+            "placeholder": null,
+            "box": [
+              730,
+              435,
+              13,
+              13
+            ]
+          },
+          {
+            "tag": "INPUT",
+            "text": "",
+            "aria": null,
+            "placeholder": null,
+            "box": [
+              822,
+              435,
+              13,
+              13
+            ]
+          }
+        ],
+        "child": "<div class=\"flex w-full flex-wrap items-center justify-center gap-3\"><label data-react-aria-pressable=\"true\" class=\"group inline-flex items-center select-none gap-2 cursor-pointer\" data-rac=\"\" data-selected=\"true\"><span style=\"border:0;clip:rect(0 0 0 0);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap\"><input type=\"checkbox\" data-react-aria-pressable=\"true\" tabindex=\"0\" checked=\"\" title=\"\"></span><span aria-hidden=\"true\" class=\"flex shrink-0 items-center justify-center rounded-sm transition-[background-color,border-color,box-shadow] duration-150 ease size-4 bg-linear-to-b shadow-checkbox-selected from-accent-500 to-accent-600\"><svg viewBox=\"0 0 16 16\" fill=\"none\" class=\"size-4\"><path d=\"M4 7.7002L6.64645 10.3466C6.84171 10.5419 7.15829 10.5419 7.35355 10.3466L12 5.7002\" stroke=\"white\" stroke-width=\"2\" stroke-linecap=\"ro"
+      }
+    },
+    {
+      "slug": "select",
+      "upstream": {
+        "title": "选择框",
+        "main": [
+          324,
+          40,
+          808,
+          2993
+        ],
+        "heading": [
+          324,
+          108,
+          808,
+          34
+        ],
+        "canvas": {
+          "rect": [
+            324,
+            286,
+            808,
+            327
+          ],
+          "radius": "24px",
+          "font": "16px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "control": {
+          "rect": [
+            622,
+            431,
+            100,
+            38
+          ],
+          "radius": "10px",
+          "font": "14px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "text": "所有价格\n \nAll prices\nUnder $100\nOver $100\n所有地区\n \nAll regions\nEurope\nAmericas",
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "text": "所有价格",
+            "aria": "按价格过滤",
+            "placeholder": null,
+            "box": [
+              622,
+              431,
+              100,
+              38
+            ]
+          },
+          {
+            "tag": "BUTTON",
+            "text": "所有地区",
+            "aria": "按地区过滤",
+            "placeholder": null,
+            "box": [
+              734,
+              431,
+              100,
+              38
+            ]
+          }
+        ],
+        "child": "<div class=\"flex flex-wrap items-center justify-center gap-3\"><template><div class=\"relative flex min-h-0 flex-col\"><div aria-hidden=\"true\" class=\"pointer-events-none absolute inset-x-0 top-0 z-10 h-6\"><div class=\"absolute inset-0 backdrop-blur-[1px] [mask-image:linear-gradient(to_bottom,black,transparent)]\" style=\"opacity:0\"></div><div class=\"absolute inset-x-0 top-0 h-4 backdrop-blur-[4px] [mask-image:linear-gradient(to_bottom,black,transparent)]\" style=\"opacity:0\"></div><div class=\"absolute inset-0 bg-linear-to-b to-transparent from-background-primary-default\" style=\"opacity:0\"></div></div></div></template><div class=\"group flex flex-col\" data-rac=\"\"><button id=\"react-aria-_R_j96av5tb9fivbH2_\" class=\"flex w-full cursor-pointer items-center justify-between rounded-2lg border border-border-button-default bg-background-primary-default shadow-xs text-text-primary transition-[background-co"
+      },
+      "local": {
+        "title": "选择器",
+        "main": [
+          324,
+          40,
+          808,
+          2482
+        ],
+        "heading": [
+          324,
+          108,
+          808,
+          34
+        ],
+        "canvas": {
+          "rect": [
+            324,
+            266,
+            808,
+            327
+          ],
+          "radius": "24px",
+          "font": "16px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "control": {
+          "rect": [
+            568,
+            424,
+            320,
+            36
+          ],
+          "radius": "10px",
+          "font": "14px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "text": "框架\nReact\n \nReact\nVue\nSvelte",
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "text": "React",
+            "aria": null,
+            "placeholder": null,
+            "box": [
+              568,
+              424,
+              320,
+              36
+            ]
+          }
+        ],
+        "child": "<div class=\"flex w-full flex-wrap items-center justify-center gap-3\"><div class=\"w-full max-w-xs\"><div class=\"flex w-full flex-col gap-1 \"><span id=\"_R_1pj5fiv5ubtb_\" class=\"text-body-medium text-text-primary\">框架</span><template></template><div class=\"group flex flex-col\" data-rac=\"\"><button id=\"react-aria-_R_1bpj5fiv5ubtbH2_\" class=\"flex w-full cursor-pointer items-center justify-between rounded-2lg border border-border-button-default bg-background-primary-default shadow-xs text-text-primary transition-[background-color,border-color,box-shadow,padding,font-size] duration-200 ease motion-reduce:transition-none hover:bg-background-primary-hover hover:border-border-button-hover outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-border-focus-ring disabled:cursor-not-allowed disabled:bg-background-primary-disabled disabled:text-text-tertiary disabled:shadow-none"
+      }
+    }
+  ]
+}

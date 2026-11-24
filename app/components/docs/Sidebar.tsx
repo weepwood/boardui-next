@@ -63,7 +63,7 @@ function NavLink({ item }: { item: NavItem }) {
 
   return (
     <Link
-      href={item.href}
+      href={item.href} prefetch={false}
       aria-current={active ? "page" : undefined}
       className={cn(
         "relative flex items-center gap-2 rounded-md py-1.5 pe-2.5 ps-8",
@@ -161,7 +161,7 @@ export function Sidebar() {
 
   const content=(mobile:boolean)=><>
       {/* 品牌 */}
-      <Link href="/" className="flex w-full items-center gap-2 px-1">
+      <Link href="/" prefetch={false} className="flex w-full items-center gap-2 px-1">
         <span className="flex size-6 shrink-0 items-center justify-center rounded-md bg-text-primary text-[13px] font-bold text-background-full">
           B
         </span>

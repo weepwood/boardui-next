@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: "%s — BoardUI",
   },
   description:
-    "面向 Web 应用与 AI 原生产品的组件库。基于 React Aria 构建，完整对齐原站视觉与交互。",
+    "面向 Web 应用与 AI 原生产品的组件库。基于 React Aria 构建，参考原站设计语言与交互，非官方预览组件库。",
 };
 
 export default function RootLayout({

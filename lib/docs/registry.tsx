@@ -6,6 +6,7 @@
  * 演示内容用 JSX 直接定义，保证可交互。
  */
 import { useState } from "react";
+import { Select as FilterSelect, SelectItem as FilterOption } from "@/packages/react/select";
 import { Toolbar } from "@/packages/react/toolbar";
 import { AgentComposer } from "@/packages/react/agent-composer";
 import { Chip as StatusChip } from "@/packages/react/chip";
@@ -201,7 +202,7 @@ function ControlledFormDemo() {
   const [notes,setNotes]=useState("");
   const [search,setSearch]=useState("");
   return <div data-testid="form-fields" className="flex w-full max-w-sm flex-col gap-4">
-    <Input label="受控邮箱" type="email" value={value} onChange={setValue} isRequired leadingIcon={RiMailLine} description="输入有效邮箱" />
+    <Input label="受控邮箱" type="email" value={value} onChange={setValue} isRequired leadingIcon={RiMailLine} hint="输入有效邮箱" />
     <Textarea label="受控备注" value={notes} onChange={setNotes} rows={2} autoResize maxRows={5} maxLength={100} showCount />
     <SearchField aria-label="受控搜索" value={search} onChange={setSearch} />
     <output aria-live="polite">{value} / {notes.length} / {search}</output>
@@ -230,9 +231,10 @@ export const docs: Record<string, Doc> = {
   button: {
     title: "按钮",
     description: "与 BoardUI 设计系统匹配的按钮，提供主要、次要、幽灵及危险四种变体和三种尺寸，支持前导与尾随图标、纯图标模式，以及悬停、按下、焦点和禁用的语义交互状态。",
-    previewCode: `import { Button } from "@/packages/react";
+    previewCode: `import { Button } from "@weepwood/boardui-next";
+import { RiArrowRightLine } from "@remixicon/react";
 <Button>开始使用</Button>
-<Button variant="secondary" trailingIcon={ArrowGlyph}>继续</Button>
+<Button variant="secondary" trailingIcon={RiArrowRightLine}>继续</Button>
 <Button variant="ghost">标记为已完成</Button>
 <Button variant="danger">删除</Button>`,
     preview: <><NativeButton>开始使用</NativeButton><NativeButton variant="secondary" trailingIcon={ArrowGlyph}>继续</NativeButton><NativeButton variant="ghost">标记为已完成</NativeButton><NativeButton variant="danger">删除</NativeButton></>,
@@ -245,7 +247,7 @@ export const docs: Record<string, Doc> = {
 <Button size="small">小</Button>
 <Button size="xs">Xs</Button>`,node:<><NativeButton size="medium">中</NativeButton><NativeButton size="small">小</NativeButton><NativeButton size="xs">Xs</NativeButton><NativeButton iconOnly leadingIcon={AddGlyph} aria-label="添加" size="medium"/><NativeButton iconOnly leadingIcon={AddGlyph} aria-label="添加" size="small"/><NativeButton iconOnly leadingIcon={AddGlyph} aria-label="添加" size="xs"/></>},
       {id:"icons",title:"图标",code:`<Button leadingIcon={AddGlyph}>新项目</Button>
-<Button variant="secondary" trailingIcon={ArrowGlyph}>继续</Button>
+<Button variant="secondary" trailingIcon={RiArrowRightLine}>继续</Button>
 <Button variant="secondary" iconOnly leadingIcon={AddGlyph} aria-label="添加" />`,node:<><NativeButton leadingIcon={AddGlyph}>新项目</NativeButton><NativeButton variant="secondary" trailingIcon={ArrowGlyph}>继续</NativeButton><NativeButton variant="secondary" iconOnly leadingIcon={AddGlyph} aria-label="添加"/></>},
       {id:"disabled",title:"禁用",code:`<Button disabled>按钮文字</Button>
 <Button variant="secondary" disabled>按钮文字</Button>`,node:<><NativeButton disabled>按钮文字</NativeButton><NativeButton variant="secondary" disabled>按钮文字</NativeButton><NativeButton variant="ghost" disabled>按钮文字</NativeButton><NativeButton variant="danger" disabled>按钮文字</NativeButton></>},
@@ -288,10 +290,7 @@ export const docs: Record<string, Doc> = {
   input: {
     title: "输入框",
     description: "原版 React Aria 输入框：统一 32/36px 灰底容器、标签、辅助说明与语义状态，聚焦时使用内描边。",
-    preview: <div className="flex w-full max-w-sm flex-col gap-3">
-      <Input label="电子邮箱" placeholder="输入您的电子邮箱" type="email" leadingIcon={RiMailLine} isRequired description="请输入有效的邮箱地址"/>
-      <Input label="搜索" placeholder="搜索组件…" leadingIcon={RiSearchLine} size="small"/>
-    </div>,
+    preview: <div className="w-[250px] max-w-full"><Input label="电子邮箱" placeholder="输入您的电子邮件" type="email" leadingIcon={RiMailLine} isRequired tooltip="输入有效电子邮箱" hint="请输入有效的邮箱地址"/></div>,
     demos: [
       {id:"states",title:"状态",node:<div className="flex w-full max-w-sm flex-col gap-4"><Input label="默认" placeholder="请输入"/><Input label="禁用" defaultValue="不可编辑" isDisabled/><Input label="错误" placeholder="请输入邮箱" isInvalid invalidMessage="邮箱格式有误"/><Input label="只读" defaultValue="只读内容" isReadOnly/></div>},
       {id:"controlled",title:"受控表单",node:<ControlledFormDemo/>},
@@ -368,14 +367,7 @@ export const docs: Record<string, Doc> = {
     title: "复选框",
     description: "多选控件，支持选中、未选中、不确定三种状态。",
     install: "npx boardui@latest add checkbox",
-    preview: (
-      <>
-        <Checkbox defaultSelected>已选中</Checkbox>
-        <Checkbox>未选中</Checkbox>
-        <Checkbox isIndeterminate>部分选中</Checkbox>
-        <Checkbox size="sm" defaultSelected>小尺寸</Checkbox>
-      </>
-    ),
+    preview: <div className="flex flex-wrap items-center justify-center gap-6"><Checkbox aria-label="未选中"/><Checkbox aria-label="已选中" defaultSelected/><Checkbox aria-label="不确定" isIndeterminate/><Checkbox aria-label="禁用" isDisabled/><Checkbox aria-label="禁用且选中" isDisabled defaultSelected/></div>,
     demos: [
       { id: "controlled", title: "受控状态", node: <ControlledSelectionDemo /> },
       {
@@ -409,8 +401,9 @@ export const docs: Record<string, Doc> = {
     title: "选择器",
     description: "原版单选触发器与共享浮层，支持旋转箭头、键盘选择和外部点击关闭。",
     install: "npx boardui@latest add select",
-    preview: <SelectDemo />,
-    demos: [],
+    preview: <div className="flex flex-wrap items-center justify-center gap-3"><FilterSelect aria-label="按价格过滤" defaultSelectedKey="all"><FilterOption id="all">所有价格</FilterOption><FilterOption id="low">100 元以内</FilterOption><FilterOption id="high">100 元以上</FilterOption></FilterSelect><FilterSelect aria-label="按地区过滤" defaultSelectedKey="all"><FilterOption id="all">所有地区</FilterOption><FilterOption id="europe">欧洲</FilterOption><FilterOption id="americas">美洲</FilterOption></FilterSelect></div>,
+    demos: [{id:"framework",title:"受控选择与图标",node:<SelectDemo/>}],
+
   },
 
   slider: {

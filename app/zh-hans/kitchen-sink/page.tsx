@@ -82,8 +82,8 @@ export default function KitchenSinkPage() {
       <Row label="开关">
         <Switch defaultSelected>开启</Switch>
         <Switch>关闭</Switch>
-        <Switch size="sm" defaultSelected />
-        <Switch size="lg" defaultSelected />
+        <Switch aria-label="小号开关" size="sm" defaultSelected />
+        <Switch aria-label="大号开关" size="lg" defaultSelected />
       </Row>
 
       <Row label="复选框">

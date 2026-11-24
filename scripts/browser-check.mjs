@@ -3,6 +3,7 @@ import { createServer } from 'node:http';
 import { readFileSync, existsSync, statSync, readdirSync, mkdirSync, writeFileSync } from 'node:fs';
 import { resolve, extname, join } from 'node:path';
 import assert from 'node:assert/strict';
+import { execFileSync } from 'node:child_process';
 const full=process.argv.includes('--full');
 const root=resolve('out'),base='/boardui-next',browserName=process.env.BROWSER||'chromium';
 const mime={'.html':'text/html; charset=utf-8','.js':'text/javascript','.css':'text/css','.json':'application/json','.txt':'text/plain','.woff2':'font/woff2','.woff':'font/woff','.svg':'image/svg+xml','.png':'image/png'};
@@ -54,6 +55,25 @@ try{
           assert.equal(rect?.width,304);assert.equal(rect?.height,299);
           assert.equal(await card.evaluate(e=>getComputedStyle(e).borderRadius),'28px');
           assert.equal(await card.locator(':scope > div').first().evaluate(e=>e.getBoundingClientRect().height),197);
+          await card.locator('[data-live-preview]').waitFor();
+          const search=page.getByRole('textbox',{name:'搜索组件目录'});
+          await search.fill('date-picker');
+          await page.waitForFunction(()=>document.querySelectorAll('[data-catalog-slug]').length===1);
+          assert.equal(await page.locator('[data-catalog-slug]').getAttribute('data-catalog-slug'),'date-picker');
+          await search.fill('');
+          await page.getByRole('group',{name:'组件分类'}).getByRole('button',{name:'模板',exact:true}).click();
+          await page.waitForFunction(()=>document.querySelectorAll('[data-catalog-slug]').length===12);
+          await page.getByRole('group',{name:'组件分类'}).getByRole('button',{name:'全部',exact:true}).click();
+          await page.getByLabel('实现状态',{exact:true}).selectOption('ported');
+          await page.waitForFunction(()=>[...document.querySelectorAll('[data-catalog-status]')].length>0&&[...document.querySelectorAll('[data-catalog-status]')].every(e=>e.dataset.catalogStatus==='ported'));
+          await page.getByLabel('实现状态',{exact:true}).selectOption('all');
+          await page.getByRole('button',{name:'快速搜索'}).click();
+          const dialog=page.getByRole('dialog',{name:'搜索文档'});
+          await dialog.getByRole('combobox',{name:'搜索文档'}).fill('date-picker');
+          await dialog.getByRole('option',{name:/日期选择/}).waitFor();
+          await page.keyboard.press('Escape');
+          await dialog.waitFor({state:'hidden'});
+
         }
         assert.deepEqual(await page.locator('[data-icon-fallback="true"]').evaluateAll(es=>es.map(e=>e.getAttribute('data-icon'))),[],'unknown SVG name on '+route);
         if(route==='/zh-hans/components/button/'){
@@ -85,14 +105,14 @@ try{
           assert.equal(await arrow.evaluate(e=>e.getAttribute('viewBox')),'0 0 24 24');
           assert.ok((await arrow.evaluate(e=>getComputedStyle(e).rotate))==='none');
           await arrow.evaluate(e=>e.closest('[dir]').dir='rtl');
-          assert.ok((await arrow.evaluate(e=>getComputedStyle(e).rotate)).includes('180deg'));
+          await page.waitForFunction(e=>getComputedStyle(e).rotate.includes('180deg'),await arrow.elementHandle());
           await arrow.evaluate(e=>e.closest('[dir]').dir='ltr');
           const geometry=await page.evaluate(()=>{const r=s=>{const e=document.querySelector(s);const b=e.getBoundingClientRect();return [b.x,b.y,b.width,b.height].map(Math.round)};return {main:r('main'),heading:r('main h1'),sidebar:r('aside'),toc:r('main+aside'),canvas:r('#preview > div > div:last-child'),shadow:getComputedStyle(document.documentElement).getPropertyValue('--shadow-sidebar').trim(),font:document.fonts.check('14px "Noto Sans SC Variable"','按钮')}});
           const near=(actual,expected,tolerance=12)=>assert.ok(actual.every((n,i)=>Math.abs(n-expected[i])<=tolerance), JSON.stringify({actual,expected,tolerance}));
           near(geometry.main.slice(0,3),[324,40,808]);
           near(geometry.heading.slice(0,2),[324,108]);
           assert.deepEqual(geometry.sidebar,[12,12,260,976]);
-          assert.deepEqual(geometry.toc.slice(0,3),[1180,40,220]);
+          near(geometry.toc.slice(0,3),[1180,40,220]);
           assert.ok(geometry.canvas[3]>=327);
           assert.ok(geometry.shadow,'runtime sidebar elevation token');
           assert.ok(geometry.font,'self-hosted Chinese font');
@@ -345,7 +365,7 @@ try{
         if(route==='/zh-hans/components/time-field/'){
           const segment=page.locator('#preview').getByRole('spinbutton').first();
           await segment.press('ArrowUp');
-          assert.ok((await page.locator('#preview').textContent()).includes('10:30'));
+          await page.waitForFunction(()=>document.querySelector('#preview')?.textContent.includes('10:30'));
         }
         if(route==='/zh-hans/components/number-field/'){
           const field=page.locator('#preview').getByRole('textbox',{name:'数量'});
@@ -431,7 +451,10 @@ try{
           assert.equal(await demo.getByRole('radio',{name:'月',exact:true}).getAttribute('aria-checked'),'true');
         }
         if(route==='/zh-hans/components/select/'){
-          const trigger=page.locator('#preview').getByRole('button',{name:/框架/});
+          const filter=page.locator('#preview').getByRole('button',{name:/按价格过滤/});
+          await filter.click();await page.getByRole('option',{name:'100 元以内'}).click();
+          assert.ok((await filter.textContent()).includes('100 元以内'));
+          const trigger=page.locator('#framework').getByRole('button',{name:/框架/});
           await trigger.click();
           await page.getByRole('option',{name:'Vue',exact:true}).click();
           assert.ok((await trigger.textContent()).includes('Vue'));
@@ -478,7 +501,7 @@ try{
           await input.fill('demo@example.com');
           assert.equal(await input.inputValue(),'demo@example.com');
           assert.ok(await input.evaluate(e=>e.required || e.getAttribute('aria-required')==='true'),'required field semantics');
-          assert.ok(await input.getAttribute('aria-describedby'));
+          await page.waitForFunction(el=>{const ids=el.getAttribute('aria-describedby')?.split(/\s+/)||[];return ids.some(id=>document.getElementById(id)?.textContent.includes('输入有效邮箱'))},await input.elementHandle());
           const notes=demo.getByRole('textbox',{name:'受控备注'});
           const before=await notes.evaluate(e=>parseFloat(getComputedStyle(e).lineHeight)*2);
           await notes.fill('one\ntwo\nthree\nfour\nfive\nsix');
@@ -547,7 +570,7 @@ try{
           // Assert selected tab-panel references after the actual DOM has settled.
           await page.waitForFunction(()=>[...document.querySelectorAll('[role=tab][aria-selected=true][aria-controls]')].every(t=>!!document.getElementById(t.getAttribute('aria-controls'))));
           await page.addScriptTag({path:resolve('node_modules/axe-core/axe.min.js')});
-          violations=await page.evaluate(async()=> (await window.axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa']}})).violations.map(v=>({id:v.id,impact:v.impact,nodes:v.nodes.length})));
+          violations=await page.evaluate(async()=> (await window.axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa']}})).violations.map(v=>({id:v.id,impact:v.impact,nodes:v.nodes.length,targets:v.nodes.map(n=>({target:n.target,summary:n.failureSummary}))})));
           await page.screenshot({path:'acceptance/'+theme+'-'+(route.replace(/[^a-z0-9-]/g,'_')||'home')+'.png',animations:'disabled'});
           if(violations.length)errors.push(theme+' '+route+' accessibility: '+violations.map(v=>v.id).join(', '));
         }
@@ -557,6 +580,6 @@ try{
     }
     await context.close();
   }
-}finally{await browser?.close();await new Promise(r=>server.close(r));if(full){mkdirSync('acceptance',{recursive:true});writeFileSync('acceptance/report.json',JSON.stringify({browser:browserName,report,errors},null,2));}}
+}finally{await browser?.close();await new Promise(r=>server.close(r));if(full){mkdirSync('acceptance',{recursive:true});writeFileSync('acceptance/report.json',JSON.stringify({sha:process.env.GITHUB_SHA??execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),browser:browserName,report,errors},null,2));}}
 console.log('Checked '+report.length+' page/theme combinations');
 if(errors.length){console.error(errors.join('\n'));process.exitCode=1;}

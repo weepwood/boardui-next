@@ -346,6 +346,7 @@ export function NotificationViewport({
     <motion.div
       layoutRoot={ !reduced }
       dir={direction}
+      role="region"
       aria-label={ariaLabel}
       className={cx(
         "pointer-events-none fixed z-100 flex w-[min(400px,calc(100vw-24px))] flex-col gap-3",
